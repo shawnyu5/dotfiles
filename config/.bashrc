@@ -124,7 +124,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/scripts/for_path:~/scripts/template-file-creation"
+export PATH="$PATH:~/scripts/for_path/template-file-creation"
 
 #remap key cursor speed at startup
 if [ -f /usr/local/bin/remap ]; then	
@@ -135,4 +135,5 @@ fi
 setxkbmap -option caps:swapescape
 
 #setting default editor to neovim 
-export EDITOR='neovim'
+export EDITOR='nvim'
+export VISUAL="$EDITOR"
