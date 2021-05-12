@@ -41,10 +41,10 @@ let g:syntastic_mode_map = { "mode": "passive" }
 set sessionoptions-=blank
 
 "display error message pane only in normal mode
-nnoremap e<leader> :w<Enter>:SyntasticCheck<Enter>
+nnoremap <leader>e :w<Enter>:SyntasticCheck<Enter>
 
 "close error message pane, only in normal mode
-nnoremap c<leader> :lclose<Enter>
+nnoremap <leader>c :lclose<Enter>
 
 "ignoring multiple level headers in a single document warning in md
 let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD013' }
@@ -155,7 +155,7 @@ autocmd FileType h vnoremap k I//<Esc>
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap ;if if [[BBB]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
 
 "k to comment selected lines
 autocmd FileType sh vnoremap k I#<Esc>
