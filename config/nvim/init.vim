@@ -1,3 +1,9 @@
+"__   _(_)_ __ ___  _ __ ___ 
+"\ \ / / | '_ ` _ \| '__/ __|
+" \ V /| | | | | | | | | (__ 
+"  \_/ |_|_| |_| |_|_|  \___|
+"                            
+
 "remaping leader to space
 let mapleader =" "
 
@@ -5,9 +11,13 @@ let mapleader =" "
 call plug#begin('~/.config/nvim/plugged') 
 "vim autocompletion engin
 Plug 'valloric/youcompleteme'
+"status bar
+Plug 'itchyny/lightline.vim'
+"auto paste images into markdown
+Plug 'ferrine/md-img-paste.vim'
 call plug#end() 
 
-"vim inline error messages
+"Synastics settings
 execute pathogen#infect()
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -39,9 +49,16 @@ nnoremap c<leader> :lclose<Enter>
 "ignoring multiple level headers in a single document warning in md
 let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD013' }
 
-"may need to uncomment due to youcompleteme engine turning off syntastic check engien
+"enable error checking in documents running youCompleteMe engin
 let g:ycm_show_diagnostics_ui = 0
-""""""""""""""""""""""""
+"=================================
+
+"markdown image paste settings
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+"default intext name and directory where images are saved
+let g:mdip_imgdir = 'img'
+let g:mdip_imgname = 'image'
+"============================
 
 "turning on syntax highlighting
 syntax enable			
@@ -62,7 +79,7 @@ set wildmode=longest,list,full
 "wait 0ms after pressing the esc key to see if there are any other key presses
 set ttimeoutlen=0		
 
-"setting path to current directory to ficliate searching
+"setting path to current directory to enable searching
 set path+=** 			
 
 "shift up and down arrow keys to scroll without moving cursor
@@ -82,10 +99,10 @@ nnoremap j gj
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o	
 
 "change autocompletion menu color
-highlight PmenuSel ctermbg=black ctermfg=green 
+highlight PmenuSel ctermbg=red	ctermfg=green 
 highlight Pmenu ctermbg=darkblue ctermfg=yellow
 
-"remap substitute command to S
+"shift S to substitute
 nnoremap S :%s///gc<Left><Left><Left><Left>
 
 "oo to add line after current line but stay in normal mode
@@ -98,24 +115,26 @@ filetype plugin on
 "; ; to go to the next <++> place holder
 inoremap ;; <Esc>/<++><Enter>"_c4l
 
-"go to the next place holder and delete that line
-"inoremap ;, <Esc>/<++><Enter>"_c4l<Esc>dd
+"; ' to go to the next <++> place holder and delete that line
+inoremap ;' <Esc>/<++><Enter>ddi
 
+"m leader to run make in current file
+nnoremap m<leader> :make<Enter>
 
 "maps for cpp file 
 "============================
 
-";{ insert {} 
-autocmd Filetype cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><Enter><++><Esc>/BBB<Enter>cw
+"autofill {
+autocmd Filetype cpp inoremap { {}<Left>
+
+"autofill (
+autocmd FileType cpp inoremap ( ()<Left>
 
 ";c insert cout statement
 autocmd Filetype cpp inoremap ;c cout << "" << endl;<Esc>F"i
 
-";( insert ();
-autocmd FileType cpp inoremap ;( (BBB);<Enter><++><Esc>/BBB<Enter>cw
-
 ";if insert if statement
-autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><++><Esc>/BBB<Enter>cw
 
 ";class insert a class
 autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
@@ -136,7 +155,11 @@ autocmd FileType h vnoremap k I//<Esc>
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter><BS>fi<Enter><Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap ;if if [[BBB]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
 
 "k to comment selected lines
 autocmd FileType sh vnoremap k I#<Esc>
+
+"auto fill for {
+autocmd Filetype sh inoremap { {}<Left>
+
