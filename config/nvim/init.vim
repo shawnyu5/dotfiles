@@ -9,15 +9,18 @@ let mapleader =" "
 
 "plugin manager
 call plug#begin('~/.config/nvim/plugged') 
-"vim autocompletion engin
-Plug 'valloric/youcompleteme'
+"you complete me
+"Plug 'valloric/youcompleteme'
 "status bar
 Plug 'itchyny/lightline.vim'
 "auto paste images into markdown
 Plug 'ferrine/md-img-paste.vim'
+"COC auto completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end() 
 
 "Synastics settings
+"===========================
 execute pathogen#infect()
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -47,18 +50,39 @@ nnoremap <leader>e :w<Enter>:SyntasticCheck<Enter>
 nnoremap <leader>c :lclose<Enter>
 
 "ignoring multiple level headers in a single document warning in md
-let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD013' }
+let g:syntastic_quiet_messages = { 'regex': 'MD025' }
 
 "enable error checking in documents running youCompleteMe engin
 let g:ycm_show_diagnostics_ui = 0
 "=================================
 
 "markdown image paste settings
+"====================================
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 "default intext name and directory where images are saved
 let g:mdip_imgdir = 'img'
 let g:mdip_imgname = 'image'
 "============================
+
+"COC settings
+"====================
+set hidden
+set cmdheight=2
+set updatetime=300
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+
+
 
 "turning on syntax highlighting
 syntax enable			
@@ -95,6 +119,8 @@ nnoremap <Down> gj
 nnoremap k gk
 nnoremap j gj
 
+"Q to reformate text
+nnoremap Q gq
 "turn off auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o	
 
@@ -162,4 +188,5 @@ autocmd FileType sh vnoremap k I#<Esc>
 
 "auto fill for {
 autocmd Filetype sh inoremap { {}<Left>
-
+";f creates { for functions
+autocmd Filetype sh inoremap ;{ {<Enter>BBB<Enter>}<Enter><++><Esc>/BBB<Enter>cw
