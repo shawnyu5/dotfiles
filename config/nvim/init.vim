@@ -1,22 +1,33 @@
-"__   _(_)_ __ ___  _ __ ___ 
-"\ \ / / | '_ ` _ \| '__/ __|
-" \ V /| | | | | | | | | (__ 
-"  \_/ |_|_| |_| |_|_|  \___|
-"                            
-
+"(_)_ __ (_) |_      __   _(_)_ __ ___  
+"| | '_ \| | __|     \ \ / / | '_ ` _ \ 
+"| | | | | | |_   _   \ V /| | | | | | |
+"|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
+"                                       
+                                 
 "remaping leader to space
 let mapleader =" "
 
 "plugin manager
 call plug#begin('~/.config/nvim/plugged') 
+
 "you complete me
 "Plug 'valloric/youcompleteme'
+
 "status bar
 Plug 'itchyny/lightline.vim'
+
 "auto paste images into markdown
 Plug 'ferrine/md-img-paste.vim'
+
 "COC auto completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"center current text
+Plug 'junegunn/goyo.vim'
+
+"brower based markdown preview
+Plug 'iamcco/markdown-preview.nvim' 
+
 call plug#end() 
 
 "Synastics settings
@@ -50,7 +61,7 @@ nnoremap <leader>e :w<Enter>:SyntasticCheck<Enter>
 nnoremap <leader>c :lclose<Enter>
 
 "ignoring multiple level headers in a single document warning in md
-let g:syntastic_quiet_messages = { 'regex': 'MD025' }
+let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD029' }
 
 "enable error checking in documents running youCompleteMe engin
 let g:ycm_show_diagnostics_ui = 0
@@ -77,13 +88,33 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+"======================
 
+"markdown preview settings
+"==============================
+" set to 1, nvim will open the preview window after entering the markdown buffer
+let g:mkdp_auto_start = 0
 
+" set to 1, the nvim will auto close current preview window when change
+" from markdown buffer to another buffer
+let g:mkdp_auto_close = 1
 
+" set to 1, the vim will refresh markdown when save the buffer or
+" leave from insert mode, default 0 is auto refresh markdown as you edit or
+" move the cursor
+let g:mkdp_refresh_slow = 1
+
+" specify browser to open preview page
+let g:mkdp_browser = 'google-chrome'
+
+" use a custom markdown style must be absolute path
+" like '/Users/username/markdown.css' or expand('~/markdown.css')
+let g:mkdp_markdown_css = '/home/shawn/scripts/.gitHub_markdown_css.css'
+"===========================
 "turning on syntax highlighting
 syntax enable			
 
