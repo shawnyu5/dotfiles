@@ -37,8 +37,11 @@ urgency.ududa.priority.values = H,M,,L
 urgency.uda.priority.L.coefficent=0
 urgency.uda.priority.L.coefficent=1.8
 
-context.school=project:seneca
 
 #custom defined alias
 alias.con=context
 alias.n=none
+
+#contexts
+context.school=+seneca
+context=school
