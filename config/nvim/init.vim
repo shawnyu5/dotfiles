@@ -28,6 +28,9 @@ Plug 'junegunn/goyo.vim'
 "brower based markdown preview
 Plug 'iamcco/markdown-preview.nvim' 
 
+"error checking
+Plug 'vim-syntastic/syntastic'
+
 call plug#end() 
 
 "Synastics settings
@@ -116,6 +119,7 @@ let g:mkdp_browser = 'google-chrome'
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
 let g:mkdp_markdown_css = '/home/shawn/scripts/.gitHub_markdown_css.css'
 "===========================
+
 "turning on syntax highlighting
 syntax enable			
 
