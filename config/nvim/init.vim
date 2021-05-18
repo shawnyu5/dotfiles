@@ -70,6 +70,7 @@ let g:ycm_show_diagnostics_ui = 0
 "markdown image paste settings
 "====================================
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
 "default intext name and directory where images are saved
 let g:mdip_imgdir = 'img'
 let g:mdip_imgname = 'image'
