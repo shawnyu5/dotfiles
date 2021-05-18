@@ -35,11 +35,18 @@ report.next.columns=id,start.age,depends,priority,project,description,due.relati
 
 report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
 
+#change color on calandar
+color.calendar.overdue=white on red
+color.calendar.due=color0 on green
+color.calendar.due.today=color0 on color11
+
+
 #custom defined alias
 alias.con=context
 alias.n=none
 alias.note=annotate
 alias.denote=dennotate
+alias.cal=calendar
 context=school
 
 #contexts
