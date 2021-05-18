@@ -81,7 +81,7 @@ fi
 alias t="task"
 
 #editing taskrc
-alias taskrc="vim ~/.taskrc"
+alias trc="vim ~/.taskrc"
 
 #==========================
 
