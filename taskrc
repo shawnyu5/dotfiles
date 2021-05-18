@@ -31,6 +31,10 @@ include /usr/share/taskwarrior/dark-blue-256.theme
 
 report.list.labels=ID,Age,Dependency,Priority,Project,Descriptions,Recurr,Sched,Due,Until,Urgency
 
+report.next.columns=id,start.age,depends,priority,project,description,due.relative,tags,recur,scheduled.countdown,until.remaining,urgency
+
+report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
+
 #custom defined alias
 alias.con=context
 alias.n=none
@@ -41,9 +45,9 @@ context=school
 
 
 #change urgency to high, medium, default and low
-#uda.priority.values = H,M,,L
-#
-#urgency.ududa.priority.values = H,M,,L
-#
-#urgency.uda.priority.L.coefficent=0
-#urgency.uda.priority.L.coefficent=1.8
+uda.priority.values = H,M,,L
+
+urgency.ududa.priority.values = H,M,,L
+
+urgency.uda.priority.L.coefficent=0
+urgency.uda.priority.L.coefficent=1.8
