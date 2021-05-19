@@ -34,6 +34,8 @@ Plug 'vim-syntastic/syntastic'
 "table of contents
 Plug 'mzlogin/vim-markdown-toc'
 
+"smooth scrolling
+Plug 'psliwka/vim-smoothie'
 
 call plug#end() 
 
