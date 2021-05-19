@@ -193,14 +193,75 @@ function general_move
 function mvoop
 {
 	if [[ $1 == "-"* ]]; then
-#		echo "if entered"
+#		#echo "if entered"
 		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
 		shift 1
-		general_move "$@" "/home/shawn/seneca/semester_3/OOP_345/$DEST"
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
 	else
-		echo "else entered"
-		DEST="/home/shawn/seneca/semester_3/OOP_345"
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
 		general_move "$@" "$DEST" 
+		cd "$DEST"
 	fi
 }
 
+function mvsyd 
+{
+	if [[ $1 == "-"* ]]; then
+		#echo "if entered"
+		#echo "arugment 1 is $1"
+		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
+		shift 1
+		#echo "dest is $DEST"
+		#echo "everything else is $@"
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+	else
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
+		general_move "$@" "$DEST" 
+		cd "$DEST"
+	fi
+}
+
+function mvcul
+{
+	if [[ $1 == "-"* ]]; then
+#		#echo "if entered"
+		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
+		shift 1
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+	else
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality"
+		general_move "$@" "$DEST" 
+		cd "$DEST"
+	fi
+}
+
+function oopDeclaration
+{
+    declaration="/mnt/c/Users/Shawn/OneDrive - Seneca/FUN/bash/oop_declaration/OOPDeclaration.txt"
+
+
+    for current in "$@"
+    do 
+        touch tmp.txt
+        #put the dest file content into tmp file
+        cat "$current" > tmp.txt
+
+        #adding header
+        cat "$declaration" > "$current" 
+
+        #putting orginal file back after header. 
+        cat tmp.txt >> "$current"
+        rm tmp.txt >/dev/null
+
+        echo "declaration added to file: $current"
+    done
+
+}
