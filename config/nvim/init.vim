@@ -31,6 +31,10 @@ Plug 'iamcco/markdown-preview.nvim'
 "error checking
 Plug 'vim-syntastic/syntastic'
 
+"table of contents
+Plug 'mzlogin/vim-markdown-toc'
+
+
 call plug#end() 
 
 "Synastics settings
@@ -64,7 +68,7 @@ nnoremap <leader>e :w<Enter>:SyntasticCheck<Enter>
 nnoremap <leader>c :lclose<Enter>
 
 "ignoring multiple level headers in a single document warning in md
-let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD029' }
+let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD029\|MD010\|MD007' }
 
 "enable error checking in documents running youCompleteMe engin
 let g:ycm_show_diagnostics_ui = 0
@@ -75,7 +79,8 @@ let g:ycm_show_diagnostics_ui = 0
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 "default intext name and directory where images are saved
-let g:mdip_imgdir = 'img'
+let g:mdip_imgdir_absolute = 'img'
+let g:mdip_imgdir_intext = 'img'
 let g:mdip_imgname = 'image'
 "============================
 
@@ -105,7 +110,7 @@ let g:mkdp_auto_start = 0
 
 " set to 1, the nvim will auto close current preview window when change
 " from markdown buffer to another buffer
-let g:mkdp_auto_close = 1
+let g:mkdp_auto_close = 0
 
 " set to 1, the vim will refresh markdown when save the buffer or
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
@@ -113,12 +118,22 @@ let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'google-chrome'
+let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
 let g:mkdp_markdown_css = '/home/shawn/scripts/.gitHub_markdown_css.css'
+
+"MarkdownPreview mapped to leader m
+autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 "===========================
+
+"markdown table of contents setting
+"===================================
+let g:vmt_auto_update_on_save = 1
+
+
+
 
 "turning on syntax highlighting
 syntax enable			
@@ -145,6 +160,9 @@ set path+=**
 "shift up and down arrow keys to scroll without moving cursor
 map <S-Down> <C-E>	
 map <S-Up> <C-Y>
+
+"leader s to spell check
+nnoremap <leader>s :set spell!<Enter>
 
 "contrl shift A to open all files in tabs
 map <C-S-A> :tab all<Enter>
