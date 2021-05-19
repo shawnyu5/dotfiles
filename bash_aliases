@@ -169,13 +169,13 @@ function excfile
 #mdless any cheatsheet in cheatsheet directory
 function vcheat 
 {
-	du -a ~/cheatsheets/*.md | awk '{print $2}' | fzf | xargs mdless
+	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs mdless
 }
 
 #edit any cheatsheet in cheatsheet directory
 function echeat
 {
-	du -a ~/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
+	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
 
 }
 
@@ -196,11 +196,11 @@ function mvoop
 #		#echo "if entered"
 		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
 		shift 1
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
+		general_move "$@" "/home/shawn/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
+		cd "/home/shawn/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
 	else
 		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
+		DEST="/home/shawn/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
 		general_move "$@" "$DEST" 
 		cd "$DEST"
 	fi
@@ -215,12 +215,12 @@ function mvsyd
 		shift 1
 		#echo "dest is $DEST"
 		#echo "everything else is $@"
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+		general_move "$@" "/home/shawn/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
 
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+		cd "/home/shawn/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
 	else
 		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
+		DEST="/home/shawn/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/"
 		general_move "$@" "$DEST" 
 		cd "$DEST"
 	fi
@@ -232,36 +232,14 @@ function mvcul
 #		#echo "if entered"
 		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
 		shift 1
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+		general_move "$@" "/home/shawn/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
 
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+		cd "/home/shawn/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
 	else
 		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality"
+		DEST="/home/shawn/seneca/semester_3/CUL_485_movies_and_morality/"
 		general_move "$@" "$DEST" 
 		cd "$DEST"
 	fi
 }
 
-function oopDeclaration
-{
-    declaration="/mnt/c/Users/Shawn/OneDrive - Seneca/FUN/bash/oop_declaration/OOPDeclaration.txt"
-
-
-    for current in "$@"
-    do 
-        touch tmp.txt
-        #put the dest file content into tmp file
-        cat "$current" > tmp.txt
-
-        #adding header
-        cat "$declaration" > "$current" 
-
-        #putting orginal file back after header. 
-        cat tmp.txt >> "$current"
-        rm tmp.txt >/dev/null
-
-        echo "declaration added to file: $current"
-    done
-
-}
