@@ -1,3 +1,37 @@
+<!-- vim-markdown-toc GFM -->
+
+* [add a task](#add-a-task)
+* [add a project](#add-a-project)
+	* [showing tasks only from a project](#showing-tasks-only-from-a-project)
+	* [adding tasks to a project](#adding-tasks-to-a-project)
+* [tags](#tags)
+	* [put the wrong tag](#put-the-wrong-tag)
+	* [searching for tags](#searching-for-tags)
+* [assign ID to task](#assign-id-to-task)
+* [delete a task](#delete-a-task)
+* [add due date](#add-due-date)
+* [putting it all together](#putting-it-all-together)
+* [mark you are starting a task](#mark-you-are-starting-a-task)
+* [change priority](#change-priority)
+* [contexts](#contexts)
+	* [creating contexts](#creating-contexts)
+	* [switching between contexts](#switching-between-contexts)
+	* [list all contexts](#list-all-contexts)
+	* [show current context](#show-current-context)
+	* [clear current context](#clear-current-context)
+* [dependencies](#dependencies)
+* [filters](#filters)
+* [reccurring tasks](#reccurring-tasks)
+* [until](#until)
+* [wait](#wait)
+* [schedule](#schedule)
+* [searching for tasks](#searching-for-tasks)
+	* [by name (regular expression)](#by-name-regular-expression)
+* [annotations/ notes](#annotations-notes)
+	* [deleting a annotation](#deleting-a-annotation)
+
+<!-- vim-markdown-toc -->
+
 **NOTE** task has been aliased to t
 
 # add a task
@@ -135,22 +169,22 @@ for a year.
 
 `task <id> modify until:<date>`
 
-will delete the task after that date has passed, if the
+Will delete the task after that date has passed, if the
 task is not complete
 
 # wait
 
 `task <id> modify wait:+5d`
 
-wait 5 days to show me this task
+Wait 5 days to show me this task
 
 `task <id> modify wait:tomorrow`
 
-wait until tomorrow to show me this task
+Wait until tomorrow to show me this task
 
 `task <id> modify wait:2021-05-22`
 
-could also pass in absolute dates
+Could also pass in absolute dates
 
 # schedule
 

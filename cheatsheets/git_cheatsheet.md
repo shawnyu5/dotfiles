@@ -1,3 +1,24 @@
+<!-- vim-markdown-toc GFM -->
+
+* [git init](#git-init)
+* [git status](#git-status)
+* [git add -A](#git-add--a)
+* [git commit -m "MESSAGE"](#git-commit--m-message)
+* [git push origin main](#git-push-origin-main)
+* [git pull](#git-pull)
+* [git branch <new branch name>](#git-branch-new-branch-name)
+* [git branch](#git-branch)
+* [git checkout <existing branch name>](#git-checkout-existing-branch-name)
+* [git push -u origin <branch name>](#git-push--u-origin-branch-name)
+* [to merge a branch with the main](#to-merge-a-branch-with-the-main)
+* [delete a branch](#delete-a-branch)
+* [deleting a branch from remote repository](#deleting-a-branch-from-remote-repository)
+	* [git log](#git-log)
+	* [`git reset <file>`](#git-reset-file)
+* [git clone <repositry URL> <path to clone>](#git-clone-repositry-url-path-to-clone)
+
+<!-- vim-markdown-toc -->
+
 # git init
 
 create a git repository in the current folder
