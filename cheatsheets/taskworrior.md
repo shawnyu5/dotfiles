@@ -21,7 +21,7 @@
 	* [clear current context](#clear-current-context)
 * [dependencies](#dependencies)
 * [filters](#filters)
-* [reccurring tasks](#reccurring-tasks)
+* [recurring tasks](#recurring-tasks)
 * [until](#until)
 * [wait](#wait)
 * [schedule](#schedule)
@@ -29,6 +29,7 @@
 	* [by name (regular expression)](#by-name-regular-expression)
 * [annotations/ notes](#annotations-notes)
 	* [deleting a annotation](#deleting-a-annotation)
+* [Burndown](#burndown)
 
 <!-- vim-markdown-toc -->
 
@@ -139,6 +140,9 @@ switches to the selected context
       achievable, and you can more easily see progress, which can be
       motivating.
 
+Having a task depend on another means the dependencies will have to be complete
+before starting that task
+
 # filters
 
 `task entry.after:today-4days list`
@@ -153,7 +157,7 @@ shows tasks added yesterday
 
 completed tasks in a date range
 
-# reccurring tasks
+# recurring tasks
 
 `task add Do the thing due:2015-06-08T09:00 recur:weekly`
 
@@ -208,3 +212,10 @@ ie:
 ## deleting a annotation
 
 `task <ID> denotate`
+
+# Burndown
+
+Displays a chart shows the completed tasks during that week.
+
+By default, it shows burndown chart for the week. But the command can be
+modified to month `task burndown.monthly` or `task burndown.daily`

@@ -1,14 +1,12 @@
-"(_)_ __ (_) |_      __   _(_)_ __ ___  
-"| | '_ \| | __|     \ \ / / | '_ ` _ \ 
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
-                                       
+"
 
 "remaping leader to space
 let mapleader =" "
 
 "plugin manager
-call plug#begin('~/.config/nvim/plugged') 
+call plug#begin('~/.config/nvim/plugged')
 
 "you complete me
 "Plug 'valloric/youcompleteme'
@@ -26,7 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 
 "brower based markdown preview
-Plug 'iamcco/markdown-preview.nvim' 
+Plug 'iamcco/markdown-preview.nvim'
 
 "error checking
 Plug 'vim-syntastic/syntastic'
@@ -37,7 +35,10 @@ Plug 'mzlogin/vim-markdown-toc'
 "smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
-call plug#end() 
+"opening links in vim
+Plug 'chmp/mdnav'
+
+call plug#end()
 
 "Synastics settings
 "===========================
@@ -54,13 +55,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 
 "check when file is saved. set to true
-let g:syntastic_check_on_wq = 1 
+let g:syntastic_check_on_wq = 1
 
 "sets the height of the error window
 let g:syntastic_loc_list_height = 7
 let g:syntastic_mode_map = { "mode": "passive" }
 
-"prevent vim :mksessions from saving syntastic error window as a blank window 
+"prevent vim :mksessions from saving syntastic error window as a blank window
 set sessionoptions-=blank
 
 "display error message pane only in normal mode
@@ -134,33 +135,38 @@ autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 "===================================
 let g:vmt_auto_update_on_save = 1
 
-
-
+autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
 
 "turning on syntax highlighting
-syntax enable			
+syntax enable
 
 set number relativenumber
-set autoindent 
+set autoindent
 set nohlsearch
 
 "set where the split window appears
-set splitbelow splitright	
+set splitbelow splitright
 
 "disable auto commenting
-set formatoptions-=cro		
+set formatoptions-=cro
 
 "autocompletion while entering vim commands
-set wildmode=longest,list,full	
+set wildmode=longest,list,full
 
 "wait 0ms after pressing the esc key to see if there are any other key presses
-set ttimeoutlen=0		
+set ttimeoutlen=0
 
 "setting path to current directory to enable searching
-set path+=** 			
+set path+=**
+
+"auto enable spellcheck in markdown files
+au BufRead *.md setlocal spell
+
+"autoremove trailing white space everytime vim is saved
+autocmd BufWritePre * %s/\s\+$//e
 
 "shift up and down arrow keys to scroll without moving cursor
-map <S-Down> <C-E>	
+map <S-Down> <C-E>
 map <S-Up> <C-Y>
 
 "leader s to spell check
@@ -169,6 +175,9 @@ nnoremap <leader>s :set spell!<Enter>
 "contrl shift A to open all files in tabs
 map <C-S-A> :tab all<Enter>
 
+"print current date
+autocmd FileType markdown nnoremap <leader>d i# <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A
+
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
 nnoremap <Down> gj
@@ -176,12 +185,13 @@ nnoremap k gk
 nnoremap j gj
 
 "Q to reformate text
-nnoremap Q gq
+autocmd FileType text,markdown nnoremap Q gggqG
+
 "turn off auto commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o	
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "change autocompletion menu color
-highlight PmenuSel ctermbg=red	ctermfg=green 
+highlight PmenuSel ctermbg=red	ctermfg=green
 highlight Pmenu ctermbg=darkblue ctermfg=yellow
 
 "shift S to substitute
@@ -203,7 +213,7 @@ inoremap ;' <Esc>/<++><Enter>ddi
 "m leader to run make in current file
 nnoremap m<leader> :make<Enter>
 
-"maps for cpp file 
+"maps for cpp file
 "============================
 
 "autofill {
