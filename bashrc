@@ -1,6 +1,6 @@
-#| |__   __ _ ___| |__  _ __ ___ 
+#| |__   __ _ ___| |__  _ __ ___
 #| '_ \ / _` / __| '_ \| '__/ __|
-#| |_) | (_| \__ \ | | | | | (__ 
+#| |_) | (_| \__ \ | | | | | (__
 #|_.__/ \__,_|___/_| |_|_|  \___|
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -114,7 +114,7 @@ fi
 
 
 if [ -f ~/.bash_completion ];
-then 
+then
     . ~/.bash_completion
 fi
 
@@ -132,14 +132,14 @@ fi
 export PATH="$PATH:~/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/scripts/adding_tasks"
 #remap key cursor speed at startup
-if [ -f /usr/local/bin/remap ]; then	
+if [ -f /usr/local/bin/remap ]; then
 	/usr/local/bin/remap
 fi
 
 #swaping escape and caps lock
 setxkbmap -option caps:swapescape
 
-#setting default editor to neovim 
+#setting default editor to neovim
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
@@ -149,3 +149,5 @@ alias bd=". bd -si"
 
 #enable vi mode in the shell
 set -o vi
+
+export IGNOREEOF=10
