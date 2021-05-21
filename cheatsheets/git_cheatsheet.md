@@ -29,8 +29,10 @@ shows the untracked files in the current directory
 
 # git add -A
 
-add all files to the *staging area* to get ready to be commited
-    this can also be done on a file by file basis by using `git add <file>`
+add all files to the *staging area* to get ready to be
+committed
+    this can also be done on a file by file basis by
+    using `git add <file>`
 
 # git commit -m "MESSAGE"
 
@@ -44,7 +46,8 @@ main - branch name
 
 # git pull
 
-gets any changes from the repositry to the local machine
+gets any changes from the repository to the local
+machine
 
 # git branch <new branch name>
 
@@ -62,7 +65,8 @@ switch to that branch
 
 pushes current commit into the branch
 -u - associates the current branch to the base branch.
-So in the future, we can just do **git push** and **git pull** from this branch
+So in the future, we can just do **git push** and **git
+pull** from this branch
 
 # to merge a branch with the main
 
@@ -72,7 +76,8 @@ switch to main branch
 
 2. `git merge <branch name>`
 
-will merge the branch named with the current branch (main)
+will merge the branch named with the current branch
+(main)
 
 3. `git push origin main`
 
@@ -97,4 +102,4 @@ remove file from staging area
 
 # git clone <repositry URL> <path to clone>
 
-will clone a git repostory
+will clone a git repository
