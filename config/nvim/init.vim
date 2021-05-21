@@ -84,7 +84,7 @@ let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD029\|MD010\|MD007' }
 let g:ycm_show_diagnostics_ui = 0
 "=================================
 
-"markdown image paste settings
+	"markdown image paste settings
 "====================================
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
@@ -111,6 +111,11 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+"go to function definition
+nnoremap <leader>gd <Plug>(coc-definition)
+"go to function reference
+nnoremap <leader>gr<Plug>(coc-references)
 "======================
 
 "markdown preview settings
@@ -128,7 +133,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
