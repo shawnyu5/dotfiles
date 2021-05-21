@@ -44,8 +44,13 @@ Plug 'tweekmonster/wstrip.vim'
 call plug#end()
 
 "trailing white space setting
+"=============================
+
+"allow no trailing white space
 let b:wstrip_trailing_max = 0
-autocmd FileType markdown let b:wstrip_auto = 1  
+
+"enable stripping white space when writting to buffer
+let g:wstrip_auto = 1  
 
 "Synastics settings
 "===========================
@@ -84,7 +89,7 @@ let g:syntastic_quiet_messages = { 'regex': 'MD025\|MD029\|MD010\|MD007' }
 let g:ycm_show_diagnostics_ui = 0
 "=================================
 
-	"markdown image paste settings
+"markdown image paste settings
 "====================================
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
@@ -113,9 +118,9 @@ function! s:check_back_space() abort
 endfunction
 
 "go to function definition
-nnoremap <leader>gd <Plug>(coc-definition)
+nmap <leader>gd <Plug>(coc-definition)
 "go to function reference
-nnoremap <leader>gr<Plug>(coc-references)
+nmap  <leader>gr <Plug>(coc-references)
 "======================
 
 "markdown preview settings
@@ -148,6 +153,8 @@ autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 let g:vmt_auto_update_on_save = 1
 
 autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
+
+autocmd bufreadpre *.md setlocal textwidth=80
 
 "turning on syntax highlighting
 syntax enable

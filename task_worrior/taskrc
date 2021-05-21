@@ -39,20 +39,19 @@ report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Rec
 color.calendar.overdue=white on red
 color.calendar.due=color0 on green
 color.calendar.due.today=color0 on color11
-
+color.uda.priority.H=red
 
 #custom defined alias
 alias.con=context
 alias.n=none
 alias.note=annotate
-alias.denote=dennotate
+alias.denote=denotate
 alias.cal=calendar
-context=school
 
 #contexts
 context.school=+seneca
-context=school
 
+color.active=black on green
 
 #change urgency to high, medium, default and low
 uda.priority.values = H,M,,L

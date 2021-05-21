@@ -10,5 +10,5 @@ cp ~/.config/nvim/init.vim config/nvim/init.vim
 cp ~/.tmux.conf tmux.config
 
 #taskrc
-cp ~/.task/taskrc task_worrior/taskrc
+cp ~/.taskrc task_worrior/taskrc
 
