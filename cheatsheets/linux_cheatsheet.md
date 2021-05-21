@@ -14,3 +14,5 @@ by default, it waites 1 minute before shutting down
 `date` gets the current time and date
 
 `date +"%T"` gets the current time in 24 hour clock
+
+## Bash debug mode
