@@ -38,7 +38,14 @@ Plug 'psliwka/vim-smoothie'
 "opening links in vim
 Plug 'chmp/mdnav'
 
+"rmove trailing white spaces
+Plug 'tweekmonster/wstrip.vim'
+
 call plug#end()
+
+"trailing white space setting
+let b:wstrip_trailing_max = 0
+autocmd FileType markdown let b:wstrip_auto = 1  
 
 "Synastics settings
 "===========================
@@ -162,12 +169,17 @@ set path+=**
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
 
+" note trailing space at end of next line
+autocmd FileType markdown set showbreak=>\ \ \
+
 "autoremove trailing white space everytime vim is saved
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
 "shift up and down arrow keys to scroll without moving cursor
-map <S-Down> <C-E>
-map <S-Up> <C-Y>
+map <S-j> <C-E>
+map <S-k> <C-Y>
+map <S-down> <C-E>
+map <S-up> <C-Y>
 
 "leader s to spell check
 nnoremap <leader>s :set spell!<Enter>
@@ -176,7 +188,7 @@ nnoremap <leader>s :set spell!<Enter>
 map <C-S-A> :tab all<Enter>
 
 "print current date
-autocmd FileType markdown nnoremap <leader>d i# <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A
+autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Esc>/BBB<Enter>cw
 
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
@@ -185,7 +197,7 @@ nnoremap k gk
 nnoremap j gj
 
 "Q to reformate text
-autocmd FileType text,markdown nnoremap Q gggqG
+autocmd FileType text,markdown nnoremap Q gqq
 
 "turn off auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
