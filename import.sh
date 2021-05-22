@@ -4,11 +4,11 @@
 #---------------------------------
 
 #init.vim
-cp ~/.config/nvim/init.vim config/nvim/init.vim
+cp -v ~/.config/nvim/init.vim config/nvim/init.vim
 
 #tmux config
-cp ~/.tmux.conf tmux.config
+cp -v ~/.tmux.conf tmux.conf
 
 #taskrc
-cp ~/.taskrc task_worrior/taskrc
+cp -v ~/.taskrc task_worrior/taskrc
 

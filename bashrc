@@ -111,8 +111,6 @@ if [ -f ~/.bash_aliases ]; then
 
 fi
 
-
-
 if [ -f ~/.bash_completion ];
 then
     . ~/.bash_completion

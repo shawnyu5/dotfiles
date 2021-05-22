@@ -4,9 +4,9 @@
 #---------------------------------
 
 #init.vim
-cp config/nvim/init.vim ~/.config/nvim/init.vim
+cp -v config/nvim/init.vim ~/.config/nvim/init.vim
 
 #tmux.conf
-cp tmux.conf ~/.tmux.conf
+cp -v tmux.conf ~/.tmux.conf
 
 
