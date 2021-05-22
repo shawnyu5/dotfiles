@@ -90,7 +90,7 @@ instead of **lifestyle**, you meant to type **people**?
 
 `task ID modify priority:M`
 
-priorty are listed as:
+Priory are listed as:
 
 1. High.
 2. Medium.
@@ -99,7 +99,7 @@ priorty are listed as:
 
 # contexts
 
-**context aliased to con**
+**context aliased to c**
 
 ## creating contexts
 
@@ -180,7 +180,7 @@ task is not complete
 
 `task <id> modify wait:+5d`
 
-Wait 5 days to show me this task
+**Wait** 5 days to **show** me this task
 
 `task <id> modify wait:tomorrow`
 
