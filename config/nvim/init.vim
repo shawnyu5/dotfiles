@@ -41,7 +41,20 @@ Plug 'chmp/mdnav'
 "rmove trailing white spaces
 Plug 'tweekmonster/wstrip.vim'
 
+"vim color scheme
+Plug 'morhetz/gruvbox'
+
 call plug#end()
+
+"gruvbox settings
+"=====================
+autocmd vimenter * ++nested colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+
+"improved error messages
+let g:gruvbox_improved_warnings = 1
+
+set background=dark    " Setting dark mode
 
 "trailing white space setting
 "=============================
@@ -241,10 +254,10 @@ nnoremap m<leader> :make<Enter>
 "============================
 
 "autofill {
-autocmd Filetype cpp inoremap { {}<Left>
+"autocmd Filetype cpp inoremap { {}<Left>
 
 "autofill (
-autocmd FileType cpp inoremap ( ()<Left>
+"autocmd FileType cpp inoremap ( ()<Left>
 
 ";c insert cout statement
 autocmd Filetype cpp inoremap ;c cout << "" << endl;<Esc>F"i
@@ -258,25 +271,14 @@ autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter>
 "k to comment selected lines
 autocmd FileType cpp vnoremap k I//<Esc>
 
-"maps for .h file
-"=============================
-
-";class insert a class
-autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
-
-"k to comment selected lines
-autocmd FileType h vnoremap k I//<Esc>
-
 "maping for bash file
 "==============================
 
 ";if insert if statement
 autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
 
-"k to comment selected lines
-autocmd FileType sh vnoremap k I#<Esc>
-
 "auto fill for {
 autocmd Filetype sh inoremap { {}<Left>
-";f creates { for functions
-autocmd Filetype sh inoremap ;{ {<Enter>BBB<Enter>}<Enter><++><Esc>/BBB<Enter>cw
+
+";{ creates { for functions
+autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><++><Esc>/BBB<Enter>cw
