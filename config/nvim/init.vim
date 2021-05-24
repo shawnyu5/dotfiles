@@ -106,11 +106,14 @@ let g:ycm_show_diagnostics_ui = 0
 "====================================
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
+let cwd = $PWD . '/img'
+let g:mdip_imgdir_absolute = cwd
+let g:mdip_imgdir_intext = cwd
+
 "default intext name and directory where images are saved
 let g:mdip_imgdir_absolute = 'img'
 let g:mdip_imgdir_intext = 'img'
 let g:mdip_imgname = 'image'
-"============================
 
 "COC settings
 "====================
@@ -151,7 +154,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'google-chrome'
+let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
