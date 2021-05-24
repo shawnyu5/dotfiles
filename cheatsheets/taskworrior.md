@@ -55,11 +55,11 @@
 
 `task add shopping +lifestyle`
 
-putting + signfies a tag
+Putting + signifies a tag
 
 ## put the wrong tag
 
-instead of **lifestyle**, you meant to type **people**?
+Instead of **lifestyle**, you meant to type **people**?
 
 `tag +LATEST modify -lifestyle +people`
 
@@ -105,17 +105,17 @@ Priory are listed as:
 
 `task context define <context_name> project:<project/ tag name>`
 
-show only tasks from the added projects/ tags
+Show only tasks from the added projects/ tags
 
 `task context define <context_name> project.not:<project_name>`
 
-exclude certain projects
+Exclude certain projects
 
 ## switching between contexts
 
 `task context <context name>`
 
-switches to the selected context
+Switches to the selected context
 
 ## list all contexts
 
@@ -147,15 +147,15 @@ before starting that task
 
 `task entry.after:today-4days list`
 
-shows tasks added from today to 4 days ago
+Shows tasks added from today to 4 days ago
 
 `task entry:yesterday list`
 
-shows tasks added yesterday
+Shows tasks added yesterday
 
 `task end.after:2015-05-01 and end.before:2015-05-31 completed`
 
-completed tasks in a date range
+Completed tasks in a date range
 
 # recurring tasks
 
@@ -194,7 +194,7 @@ Could also pass in absolute dates
 
 `task <id> modify schedule:date`
 
-this task will receive an urgency boost after the scheduled date
+This task will receive an urgency boost after the scheduled date
 
 # searching for tasks
 
