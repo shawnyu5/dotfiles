@@ -157,7 +157,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'google-chrome'
+let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -250,8 +250,8 @@ nnoremap oo o<Esc>
 nnoremap OO O<Esc>
 filetype plugin on
 
-"; ; to go to the next <++> place holder
-nnoremap ;; <Esc>/<++><Enter>"_c4l
+"leader leader to go to the next <++> place holder
+nnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 
 "; ' to go to the next <++> place holder and delete that line
 inoremap ;' <Esc>/<++><Enter>ddi
