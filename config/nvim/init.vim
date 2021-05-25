@@ -221,6 +221,9 @@ map <C-S-A> :tab all<Enter>
 "print current date
 autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Esc>/BBB<Enter>cw
 
+"leader m to compile current file
+autocmd FileType cpp,sh nnoremap <leader>m :!ls<Enter>:nmap <leaders><Left><backspace><Right>m 
+
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
 nnoremap <Down> gj
