@@ -95,7 +95,8 @@ this will only delete the branch on the local machine
 
 ## git log
 
-shows a history of all git commits
+Shows a history of all git commits
+
 `git reset <file>`
 --------------------------
 remove file from staging area

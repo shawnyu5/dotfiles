@@ -21,7 +21,7 @@ Plug 'ferrine/md-img-paste.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "center current text
-Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/goyo.vim'
 
 "brower based markdown preview
 Plug 'iamcco/markdown-preview.nvim'
@@ -43,6 +43,9 @@ Plug 'tweekmonster/wstrip.vim'
 
 "vim color scheme
 Plug 'morhetz/gruvbox'
+
+"block commenting
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
@@ -154,7 +157,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
