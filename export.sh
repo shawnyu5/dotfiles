@@ -9,9 +9,9 @@ cp -v config/nvim/init.vim ~/.config/nvim/init.vim
 #tmux.conf
 cp -v tmux.conf ~/.tmux.conf
 
-read -p "sync bash_alias? (y/n): " ALIAS
-
-if [[ ALIAS == 'y' ]]; then
-	vim -d bash_alias ~/.bash_alias
-fi
+#read -p "sync bash_alias? (y/n): " ALIAS
+#
+#if [[ ALIAS == 'y' ]]; then
+#	vim -d bash_alias ~/.bash_alias
+#fi
 

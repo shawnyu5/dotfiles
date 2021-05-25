@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/.task
+data.location=/mnt/c/Users/Shawn/OneDrive - Seneca/task_worrior_config
 
 # Color theme (uncomment one to use)
 #include /usr/share/taskwarrior/light-16.theme
@@ -29,32 +29,41 @@ include /usr/share/taskwarrior/dark-blue-256.theme
 #include /usr/share/taskwarrior/solarized-light-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
-report.list.labels=ID,Age,Dependency,Priority,Project,Descriptions,Recurr,Sched,Due,Until,Urgency
+#report.list.labels=ID,Age,Dependency,Priority,Project,Descriptions,Recurr,Sched,Due,Until,Urgency
 
 report.next.columns=id,start.age,depends,priority,project,description,due.relative,tags,recur,scheduled.countdown,until.remaining,urgency
 
 report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
+report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
+
+#active report list formate
+report.active.columns=id,start,depends.indicator,priority,project,description,tags,recur,wait,scheduled.remaining,due,until
+
+report.active.labels=ID,Started,Dependency,Priority,Project,Description,Tags,Recur,Wait,Sched,Due,Until
+
+#change active task color
+color.active=white on green
 
 #change color on calandar
 color.calendar.overdue=white on red
 color.calendar.due=color0 on green
 color.calendar.due.today=color0 on color11
-color.uda.priority.H=red
+
 
 #custom defined alias
 alias.c=context
 alias.n=none
 alias.note=annotate
-alias.denote=denotate
+alias.denote=dennotate
 alias.cal=calendar
 
 #contexts
 context.school=+seneca
 
-color.active=black on green
 
 #change urgency to high, medium, default and low
 uda.priority.values = H,M,,L
 urgency.ududa.priority.values = H,M,,L
 urgency.uda.priority.L.coefficent=0
 urgency.uda.priority.L.coefficent=1.8
+context=school

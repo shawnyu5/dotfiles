@@ -222,7 +222,7 @@ map <C-S-A> :tab all<Enter>
 autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Esc>/BBB<Enter>cw
 
 "leader m to compile current file
-autocmd FileType cpp,sh nnoremap <leader>m :!ls<Enter>:nmap <leaders><Left><backspace><Right>m 
+autocmd FileType cpp,sh nnoremap <leader>m :!ls<Enter>:nmap <leaders><Left><backspace><Right>m :!
 
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
@@ -251,7 +251,7 @@ nnoremap OO O<Esc>
 filetype plugin on
 
 "; ; to go to the next <++> place holder
-inoremap ;; <Esc>/<++><Enter>"_c4l
+nnoremap ;; <Esc>/<++><Enter>"_c4l
 
 "; ' to go to the next <++> place holder and delete that line
 inoremap ;' <Esc>/<++><Enter>ddi
