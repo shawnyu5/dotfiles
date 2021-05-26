@@ -12,7 +12,7 @@ task calendar
 if [[ -z $1 ]]; then
 	read -p "task name: " NAME
 else
-	NAME=$1
+	NAME="$1"
 fi
 
 read -p "due date: " DATE
