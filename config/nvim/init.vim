@@ -219,7 +219,7 @@ nnoremap <leader>s :set spell!<Enter>
 map <C-S-A> :tab all<Enter>
 
 "print current date
-autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>cw
 
 "leader m to compile current file
 autocmd FileType cpp,sh nnoremap <leader>m :!ls<Enter>:nmap <leaders><Left><backspace><Right>m :!
@@ -254,11 +254,10 @@ filetype plugin on
 nnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 
 "; ' to go to the next <++> place holder and delete that line
-inoremap ;' <Esc>/<++><Enter>ddi
+inoremap ;; <Esc>/<++><Enter>ddi
 
-"m leader to run make in current file
-nnoremap m<leader> :make<Enter>
-
+"leader fs to quick fix spelling
+nnoremap <leader>fs z=1<Enter><Esc>
 "maps for cpp file
 "============================
 
