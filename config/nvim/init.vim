@@ -1,6 +1,9 @@
+ "_       _ _               _           
+"(_)_ __ (_) |_      __   _(_)_ __ ___  
+"| | '_ \| | __|     \ \ / / | '_ ` _ \ 
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
-"
+                                       
 
 "remaping leader to space
 let mapleader =" "
@@ -47,7 +50,19 @@ Plug 'morhetz/gruvbox'
 "block commenting
 Plug 'preservim/nerdcommenter'
 
+"debugging
+"Plug 'puremourning/vimspector'
+
+"vim maxmizer
+Plug 'szw/vim-maximizer'
+
 call plug#end()
+"vim vimspector setting
+"=======================
+
+
+
+
 
 "gruvbox settings
 "=====================
@@ -275,9 +290,6 @@ autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><++>
 
 ";class insert a class
 autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
-
-"k to comment selected lines
-autocmd FileType cpp vnoremap k I//<Esc>
 
 "maping for bash file
 "==============================
