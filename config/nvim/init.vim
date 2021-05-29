@@ -172,7 +172,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -268,8 +268,8 @@ filetype plugin on
 "leader leader to go to the next <++> place holder
 nnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 
-"; ' to go to the next <++> place holder and delete that line
-inoremap ;; <Esc>/<++><Enter>ddi
+";; to go to the next <++> place holder and delete that line
+inoremap ;; <Esc>/<++><Enter>cw
 
 "leader fs to quick fix spelling
 nnoremap <leader>fs z=1<Enter><Esc>
@@ -286,7 +286,7 @@ nnoremap <leader>fs z=1<Enter><Esc>
 autocmd Filetype cpp inoremap ;c cout << "" << endl;<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>cw
 
 ";class insert a class
 autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
@@ -295,10 +295,10 @@ autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter>
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>cw
 
 "auto fill for {
-autocmd Filetype sh inoremap { {}<Left>
+autocmd Filetype sh inoremap ;{ {}<Left>
 
 ";{ creates { for functions
-autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><++><Esc>/BBB<Enter>cw
+autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>cw
