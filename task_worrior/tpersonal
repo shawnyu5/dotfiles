@@ -17,7 +17,7 @@ fi
 read -p "due date: " DATE
 
 
-task add "$NAME" \
+task add "${NAME}" \
 	project:personal\
 	due:$DATE \
 
