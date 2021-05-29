@@ -28,7 +28,7 @@ elif [[ $CLASS == "3" || $CLASS == "SYD" || $CLASS == "syd" ]]; then
 	CLASS="SYD"
 fi
 
-task add "$NAME" project:$CLASS\
+task add "${NAME}" project:$CLASS\
 	due:$DATE \
 	+seneca
 
