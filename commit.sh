@@ -11,8 +11,7 @@ fi
 
 git add -A
 git commit -m "$MESSAGE"
-git push origin main
-echo -e "\n comitted" 
+git push origin main && echo -e "\n comitted"
 
 
 
