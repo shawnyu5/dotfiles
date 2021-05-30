@@ -11,11 +11,10 @@ task calendar
 if [[ -z $1 ]]; then
 	read -p "task name: " NAME
 else
-	NAME="$1"
+	NAME="$@"
 fi
 
 read -p "due date: " DATE
-
 
 task add "${NAME}" \
 	project:personal\

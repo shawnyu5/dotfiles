@@ -45,6 +45,7 @@ case $CLASS in
 			tmux new-session -d -s cul_essay
 			tmux send-keys -t 0 cdcul Enter
 			tmux send-keys -t 0 "cd essay" Enter
+			tmux send-keys -t 0 "vim outline.md" Enter
 			tmux attach-session -t cul_essay
 		else
 			tmux new-session -d -s cul_weekly_notes
