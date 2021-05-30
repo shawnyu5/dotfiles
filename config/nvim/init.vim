@@ -273,6 +273,10 @@ inoremap ;; <Esc>/<++><Enter>ddi
 
 "leader fs to quick fix spelling
 nnoremap <leader>fs z=1<Enter><Esc>
+
+"control space in insert mode to delete word
+imap <C-d> <Esc>dawa
+
 "maps for cpp file
 "============================
 
@@ -286,7 +290,7 @@ nnoremap <leader>fs z=1<Enter><Esc>
 autocmd Filetype cpp inoremap ;c cout << "" << endl;<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>cw
 
 ";class insert a class
 autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
@@ -295,10 +299,10 @@ autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter>
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><++><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>cw
 
 "auto fill for {
 "autocmd Filetype sh inoremap { {}<Left>
 
 ";{ creates { for functions
-autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><++><Esc>/BBB<Enter>cw
+autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>cw
