@@ -9,7 +9,7 @@ case $CLASS in
 	"OOP"|"1")
 	{
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
-		tmux new-session -d -s oop_$WORKSHOP
+		tmux new-session -d -s oop_$WORKSHOPNUMBER
 		tmux send-keys -t 0 cdoop Enter
 		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
 		tmux attach-session -t oop_$WORKSHOPNUMBER
