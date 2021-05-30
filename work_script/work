@@ -9,10 +9,11 @@ case $CLASS in
 	"OOP"|"1")
 	{
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
-		tmux new-session -d -s oop_$WORKSHOPNUMBER
+		tmux new-session -d -s oop_ws$WORKSHOPNUMBER
 		tmux send-keys -t 0 cdoop Enter
 		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
-		tmux attach-session -t oop_$WORKSHOPNUMBER
+		tmux send-keys -t 0 "clear" Enter
+		tmux attach-session -t oop_ws$WORKSHOPNUMBER
 	};;
 
 	"SYD"|"2")
@@ -24,12 +25,14 @@ case $CLASS in
 			tmux new-session -d -s syd_lab
 			tmux send-keys -t 0 cdsyd Enter
 			tmux send-keys -t 0 "cd labs" Enter
+			tmux send-keys -t 0 "clear" Enter
 			tmux attach-session -t syd_lab
 		elif [[ $DEST == "2" || $DEST == "week" ]]; then
 			read -p "which week? (1-13) week_" WEEKNUMBER
 			tmux new-session -d -s syd_weekly_notes
 			tmux send-keys -t 0 cdsyd Enter
 			tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
+			tmux send-keys -t 0 "clear" Enter
 			tmux attach-session -t syd_weekly_notes
 		fi
 
@@ -50,6 +53,7 @@ case $CLASS in
 			tmux new-session -d -s cul_weekly
 			tmux send-keys -t 0 cdcul Enter
 			tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
+			tmux send-keys -t 0 "clear" Enter
 			tmux attach-session -t cul_weekly
 		fi
 
