@@ -1,3 +1,35 @@
+<!-- vim-markdown-toc GFM -->
+
+* [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
+* [Using tabs](#using-tabs)
+	* [Usage](#usage)
+* [Auto complete](#auto-complete)
+* [vim commands](#vim-commands)
+	* [case switching](#case-switching)
+		* [capilization](#capilization)
+	* [skip a block of code](#skip-a-block-of-code)
+	* [indenting](#indenting)
+	* [auto indent](#auto-indent)
+* [setting markers](#setting-markers)
+	* [folding](#folding)
+* [run vim commands from command line](#run-vim-commands-from-command-line)
+* [format text](#format-text)
+	* [opening another file in vim](#opening-another-file-in-vim)
+	* [reslecting text](#reslecting-text)
+	* [run the last subsutite command globally](#run-the-last-subsutite-command-globally)
+* [markDown preview](#markdown-preview)
+* [diff mode](#diff-mode)
+	* [when files are already open](#when-files-are-already-open)
+	* [disable diff mode](#disable-diff-mode)
+* [running vim commands while opening vim](#running-vim-commands-while-opening-vim)
+* [pip standard input into vim](#pip-standard-input-into-vim)
+* [bring outputs of terminal commands into vim within vim it self](#bring-outputs-of-terminal-commands-into-vim-within-vim-it-self)
+* [Sessions](#sessions)
+	* [Creating sessions](#creating-sessions)
+	* [Opening sessions](#opening-sessions)
+
+<!-- vim-markdown-toc -->
+
 # Customizing vim highlighting colors
 
 go to /usr/share/nvim/runtime/syntax/syncolor.vim to change syntax highlighting colors
@@ -141,3 +173,17 @@ buffer
 Within vim, we know `:! <shell command>` excutes a shell command
 
 But if we want to bring the output of the shell command into vim, we can do `:.! <shell command>`
+
+# Sessions
+
+## Creating sessions
+
+In vim, `:mksession <session name.vim` to create a session
+
+`:mksession` can be shortened to `:mks`
+
+## Opening sessions
+
+When opening vim, do `vim -S <session name>` to open that session
+
+Or within vim, `:source <path to session>` to open session
