@@ -233,9 +233,6 @@ map <S-up> <C-Y>
 "leader s to spell check
 nnoremap <leader>s :set spell!<Enter>
 
-"contrl shift A to open all files in tabs
-map <C-S-A> :tab all<Enter>
-
 "print current date
 autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>cw
 
