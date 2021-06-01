@@ -10,6 +10,7 @@ case $CLASS in
 	{
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
 		tmux new-session -d -s oop_ws$WORKSHOPNUMBER
+		tmux rename-window -t 0 'code'
 		tmux send-keys -t 0 cdoop Enter
 		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
 		tmux send-keys -t 0 "clear" Enter
