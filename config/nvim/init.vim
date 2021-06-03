@@ -59,13 +59,21 @@ Plug 'preservim/nerdcommenter'
 "vim maxmizer
 Plug 'szw/vim-maximizer'
 
+"enhanced cpp highlighting
+Plug 'octol/vim-cpp-enhanced-highlight'
+
 call plug#end()
-"vim vimspector setting
-"=======================
 
+"enhanced cpp highlight settings
+"==============================
+"Highlighting of class scope
+let g:cpp_class_scope_highlight = 1
 
+"Highlighting of member variables
+"let g:cpp_member_variable_highlight = 1
 
-
+"Highlighting of library concepts
+let g:cpp_concepts_highlight = 1
 
 "gruvbox settings
 "=====================
