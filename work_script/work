@@ -9,6 +9,7 @@ case $CLASS in
 	"OOP"|"1")
 	{
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
+		cdoop
 		tmux new-session -d -s oop_ws$WORKSHOPNUMBER
 		tmux rename-window -t 0 'code'
 		tmux send-keys -t 0 cdoop Enter
@@ -23,12 +24,14 @@ case $CLASS in
 		read -p "1.lab or 2.week: " DEST
 
 		if [[ $DEST == "1" || $DEST == "lab" ]]; then
+			cdsyd
 			tmux new-session -d -s syd_lab
 			tmux send-keys -t 0 cdsyd Enter
 			tmux send-keys -t 0 "cd labs" Enter
 			tmux send-keys -t 0 "clear" Enter
 			tmux attach-session -t syd_lab
 		elif [[ $DEST == "2" || $DEST == "week" ]]; then
+			cdsyd
 			read -p "which week? (1-13) week_" WEEKNUMBER
 			tmux new-session -d -s syd_weekly_notes
 			tmux send-keys -t 0 cdsyd Enter
@@ -45,12 +48,14 @@ case $CLASS in
 		read -p "which week? (1-13). For essay, enter 14 or essay. week_" WEEKNUMBERCUL
 		#echo week number is $WEEKNUMBERCUL
 		if [[ "$WEEKNUMBERCUL" == "14" || "$WEEKNUMBERCUL" == "essay" ]]; then
+			cdcul
 			tmux new-session -d -s cul_essay
 			tmux send-keys -t 0 cdcul Enter
 			tmux send-keys -t 0 "cd essay" Enter
 			tmux send-keys -t 0 "vim outline.md" Enter
 			tmux attach-session -t cul_essay
 		else
+			cdcul
 			tmux new-session -d -s cul_weekly
 			tmux send-keys -t 0 cdcul Enter
 			tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
