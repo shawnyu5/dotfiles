@@ -12,3 +12,4 @@ cp -v ~/.tmux.conf tmux.conf
 #taskrc
 cp -v ~/.taskrc task_worrior/taskrc
 
+git status

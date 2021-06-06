@@ -87,7 +87,6 @@ set background=dark    " Setting dark mode
 
 "trailing white space setting
 "=============================
-
 "allow no trailing white space
 let b:wstrip_trailing_max = 0
 
@@ -227,7 +226,7 @@ set path+=**
 au BufRead *.md setlocal spell
 
 " note trailing space at end of next line
-autocmd FileType markdown set showbreak=>\ \ \
+"autocmd FileType markdown set showbreak=>\ \ \
 
 "autoremove trailing white space everytime vim is saved
 "autocmd BufWritePre * %s/\s\+$//e
@@ -245,8 +244,8 @@ nnoremap <leader>s :set spell!<Enter>
 autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>cw
 
 "leader m to compile current file
-autocmd FileType cpp nnoremap <leader>m :!make<CR>
-"autocmd FileType cpp,sh nnoremap <leader>m :!ls<Enter>:nmap <leaders><Left><backspace><Right>m :!
+"autocmd FileType cpp nnoremap <leader>m :!make<CR>
+autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
 
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
@@ -281,10 +280,7 @@ inoremap ;; <Esc>/<++><Enter>"_c4l
 nnoremap <leader><leader> /<++><Enter>ca<
 
 "leader fs to quick fix spelling
-nnoremap <leader>fs z=1<Enter><Esc>
-
-"control space in insert mode to delete word
-imap <C-d> <Esc>dawa
+nnoremap <leader>fs [sz=1<Enter><Esc>
 
 "maps for cpp file
 "============================

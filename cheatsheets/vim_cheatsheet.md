@@ -6,10 +6,11 @@
 * [Auto complete](#auto-complete)
 * [vim commands](#vim-commands)
 	* [case switching](#case-switching)
-		* [capilization](#capilization)
-	* [skip a block of code](#skip-a-block-of-code)
+		* [capitalization](#capitalization)
+	* [skip a block of Code](#skip-a-block-of-code)
 	* [indenting](#indenting)
 	* [auto indent](#auto-indent)
+	* [Screen navigations](#screen-navigations)
 * [setting markers](#setting-markers)
 	* [folding](#folding)
 * [run vim commands from command line](#run-vim-commands-from-command-line)
@@ -49,7 +50,7 @@ open all files in tabs
 
 open a bunch of files via command line
 
-```vim
+```
 vim file1 file2 file3
 ```
 
@@ -67,12 +68,12 @@ control x + f for file name completion
 
 ~ swaps the case of the letter the cursor is currently on
 
-### capilization
+### capitalization
 
 gu changes letters to lowercase
 gU changes letters to capital
 
-## skip a block of code
+## skip a block of Code
 
 { skips a block of code going downwards. } skips upwards
 
@@ -82,7 +83,27 @@ gU changes letters to capital
 
 ## auto indent
 
-=i{ to autoindent a block of code, when the indentation is inconstant
+=i{ to auto indent a block of code, when the indentation is inconstant
+
+## Screen navigations
+
+gg to top of document
+
+G to bottom of document
+
+T(top) to top of screen
+
+M(middle) to middle of screen without moving the text
+
+L(lower) to bottom of screen, without moving the text
+
+^ to the first **non white space character** on that line
+
+0 to the beginning of the current line, **including white space characters.**
+
+g\_ go to the last **non white space character** on that line
+
+$ to the end of the current line, **including white space characters.**
 
 # setting markers
 
