@@ -9,11 +9,12 @@ case $CLASS in
 	"OOP"|"1")
 	{
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
+		read -p "part 1 or 2? " WORKSHOPPART
 		cdoop
 		tmux new-session -d -s oop_ws$WORKSHOPNUMBER
 		tmux rename-window -t 0 'code'
 		tmux send-keys -t 0 cdoop Enter
-		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
+		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER/part_$WORKSHOPPART" Enter
 		tmux send-keys -t 0 "clear" Enter
 		tmux attach-session -t oop_ws$WORKSHOPNUMBER
 	};;
@@ -46,7 +47,6 @@ case $CLASS in
 	{
 		#echo CUL
 		read -p "which week? (1-13). For essay, enter 14 or essay. week_" WEEKNUMBERCUL
-		#echo week number is $WEEKNUMBERCUL
 		if [[ "$WEEKNUMBERCUL" == "14" || "$WEEKNUMBERCUL" == "essay" ]]; then
 			cdcul
 			tmux new-session -d -s cul_essay
