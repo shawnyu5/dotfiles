@@ -182,7 +182,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'google-chrome'
+let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -195,6 +195,8 @@ autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 "markdown table of contents setting
 "===================================
 let g:vmt_auto_update_on_save = 1
+
+autocmd bufreadpre OOP_345_notes.md let g:vmt_auto_update_on_save = 0
 
 autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
 
@@ -273,8 +275,8 @@ nnoremap oo o<Esc>
 nnoremap OO O<Esc>
 filetype plugin on
 
-";; to go to the next <++> place holder
-inoremap ;; <Esc>/<++><Enter>"_c4l
+"'' to go to the next <++> place holder
+inoremap '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line
 nnoremap <leader><leader> /<++><Enter>ca<
@@ -282,6 +284,9 @@ nnoremap <leader><leader> /<++><Enter>ca<
 "leader fs to quick fix spelling
 nnoremap <leader>fs [sz=1<Enter><Esc>
 
+"maps for md files
+"=====================
+inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>cw
 "maps for cpp file
 "============================
 
@@ -291,23 +296,23 @@ nnoremap <leader>fs [sz=1<Enter><Esc>
 "autofill (
 "autocmd FileType cpp inoremap ( ()<Left>
 
-";c insert cout statement
-autocmd Filetype cpp inoremap ;c cout << "" << endl;<Esc>F"i
+"'c insert cout statement
+autocmd Filetype cpp inoremap 'c cout << "" << endl;<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap ;if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>cw
 
 ";class insert a class
-autocmd FileType cpp inoremap ;class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
 
 "maping for bash file
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap ;if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>cw
 
 "auto fill for {
 "autocmd Filetype sh inoremap { {}<Left>
 
 ";{ creates { for functions
-autocmd Filetype sh,cpp inoremap ;{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>cw
+autocmd Filetype sh,cpp inoremap '{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>cw
