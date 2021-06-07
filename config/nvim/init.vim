@@ -14,9 +14,6 @@ let mapleader =" "
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
-"you complete me
-"Plug 'valloric/youcompleteme'
-
 "status bar
 Plug 'itchyny/lightline.vim'
 
@@ -53,14 +50,14 @@ Plug 'morhetz/gruvbox'
 "block commenting
 Plug 'preservim/nerdcommenter'
 
-"debugging
-"Plug 'puremourning/vimspector'
-
 "vim maxmizer
 Plug 'szw/vim-maximizer'
 
 "enhanced cpp highlighting
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+"matchit
+Plug 'adelarsq/vim-matchit'
 
 call plug#end()
 
