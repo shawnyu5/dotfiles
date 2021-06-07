@@ -179,7 +179,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -240,7 +240,7 @@ map <S-up> <C-Y>
 nnoremap <leader>s :set spell!<Enter>
 
 "print current date
-autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>cw
+autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>"_cw
 
 "leader m to compile current file
 "autocmd FileType cpp nnoremap <leader>m :!make<CR>
@@ -283,7 +283,7 @@ nnoremap <leader>fs [sz=1<Enter><Esc>
 
 "maps for md files
 "=====================
-inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>cw
+inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 "maps for cpp file
 "============================
 
@@ -297,19 +297,19 @@ inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>cw
 autocmd Filetype cpp inoremap 'c cout << "" << endl;<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>"_cw
 
 ";class insert a class
-autocmd FileType cpp inoremap 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>cw
+autocmd FileType cpp inoremap 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>"_cw
 
 "maping for bash file
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>cw
+autocmd FileType sh inoremap 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>"_cw
 
 "auto fill for {
 "autocmd Filetype sh inoremap { {}<Left>
 
 ";{ creates { for functions
-autocmd Filetype sh,cpp inoremap '{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>cw
+autocmd Filetype sh,cpp inoremap '{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>"_cw
