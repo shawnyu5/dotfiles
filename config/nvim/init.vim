@@ -129,7 +129,7 @@ let g:ycm_show_diagnostics_ui = 0
 
 "markdown image paste settings
 "====================================
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR><esc>f)i<Space>=500x<Esc>F5
 
 let cwd = $PWD . '/img'
 let g:mdip_imgdir_absolute = cwd
@@ -179,7 +179,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'google-chrome'
+let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -220,6 +220,8 @@ set ttimeoutlen=0
 
 "setting path to current directory to enable searching
 set path+=**
+
+set scrolloff=5
 
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
