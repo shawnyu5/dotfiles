@@ -4,9 +4,9 @@
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
                                        
-set ttimeout
+set nottimeout
 set ttimeoutlen=50
-set timeoutlen=1000
+set timeoutlen=700
 
 "remaping leader to space
 let mapleader =" "
