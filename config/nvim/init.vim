@@ -221,7 +221,7 @@ set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
 
-set scrolloff=5
+set scrolloff=2
 
 "change tab width
 "set tabstop=4 softtabstop=4
