@@ -223,6 +223,9 @@ set path+=**
 
 set scrolloff=5
 
+"change tab width
+"set tabstop=4 softtabstop=4
+
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
 
