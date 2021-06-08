@@ -15,7 +15,11 @@ case $CLASS in
 		tmux new-session -d -s $SESSION_NAME
 		tmux rename-window -t 0 'code'
 		tmux send-keys -t 0 cdoop Enter
-		tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER/part_$WORKSHOPPART" Enter
+		if [[ -z $WORKSHOPPART ]]; then
+			tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
+		else
+			tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER/part_$WORKSHOPPART" Enter
+		fi
 		tmux send-keys -t 0 "clear" Enter
 		tmux new-window -t $SESSION_NAME:1 -n 'notes'
 		tmux send-keys -t 'notes' oopnotes Enter
