@@ -5,14 +5,14 @@
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
                                        
 set nottimeout
-set ttimeoutlen=50
-set timeoutlen=700
+set ttimeoutlen=500
+set timeoutlen=900 
 
 "remaping leader to space
 let mapleader =" "
 
 "plugin manager
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged') 
 
 "status bar
 Plug 'itchyny/lightline.vim'
@@ -45,7 +45,8 @@ Plug 'chmp/mdnav'
 Plug 'tweekmonster/wstrip.vim'
 
 "vim color scheme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 
 "block commenting
 Plug 'preservim/nerdcommenter'
@@ -58,6 +59,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 "matchit
 Plug 'adelarsq/vim-matchit'
+
+"vim in the browser
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
@@ -258,7 +262,7 @@ nnoremap k gk
 nnoremap j gj
 
 "Q to reformate text
-autocmd FileType text,markdown nnoremap Q gqq
+nnoremap Q gqq
 
 "turn off auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
