@@ -262,7 +262,7 @@ nnoremap k gk
 nnoremap j gj
 
 "Q to reformate text
-nnoremap Q gqq
+nnoremap Q mmvapgq`m
 
 "turn off auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
