@@ -3,6 +3,9 @@
 #Date: 2021-05-29
 #---------------------------------
 
+shopt -s expand_aliases
+source ~/.bash_aliases
+
 read -p "What class will this be? (1.OOP, 2.SYD, 3.CUL) " CLASS
 
 case $CLASS in
@@ -59,7 +62,7 @@ case $CLASS in
 			tmux new-session -d -s cul_essay
 			tmux send-keys -t 0 cdcul Enter
 			tmux send-keys -t 0 "cd essay" Enter
-			tmux send-keys -t 0 "vim outline.md" Enter
+			tmux send-keys -t 0 "vim -c \":tab all\" essay.md outline.md" Enter
 			tmux attach-session -t cul_essay
 		else
 			cdcul
