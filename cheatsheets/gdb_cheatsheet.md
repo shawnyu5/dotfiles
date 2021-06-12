@@ -7,6 +7,7 @@
 * [Backtrack](#backtrack)
 * [Print](#print)
 * [List](#list)
+* [Until](#until)
 
 <!-- vim-markdown-toc -->
 
@@ -61,3 +62,7 @@ Prints the value of the variable
 `list`
 
 Shows some of the current code. Can be abbreviated to **l**.
+
+# Until
+
+Jumps to the end of the loop

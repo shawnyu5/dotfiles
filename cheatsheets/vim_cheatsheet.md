@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [FZF plugin](#fzf-plugin)
 * [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
 * [Using tabs](#using-tabs)
 	* [Usage](#usage)
@@ -31,9 +32,20 @@
 
 <!-- vim-markdown-toc -->
 
+# FZF plugin
+
+`:FZF` display a pop up window for fzf
+
+`:Files` same with `fzf` but shows a preview of the selected file (*mapped to
+control-p*)
+
+`:Rg`(ripgrep) search within files for matching string
+
+`:Lines` searches through all the buffers currently open for a matching string
+
 # Customizing vim highlighting colors
 
-go to /usr/share/nvim/runtime/syntax/syncolor.vim to change syntax highlighting colors
+go to `/usr/share/nvim/runtime/syntax/syncolor.vim` to change syntax highlighting colors
 
 # Using tabs
 
