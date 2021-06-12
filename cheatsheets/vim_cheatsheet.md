@@ -34,10 +34,13 @@
 
 # FZF plugin
 
-`:FZF` display a pop up window for fzf
+`:FZF` display a pop up window for fzf, and opens the selected file in the
+current buffer.
 
 `:Files` same with `fzf` but shows a preview of the selected file (*mapped to
 control-p*)
+
+`:Buffer` similar with above 2, but opens the file in a new buffer
 
 `:Rg`(ripgrep) search within files for matching string
 
