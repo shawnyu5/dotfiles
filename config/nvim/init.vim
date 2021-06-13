@@ -69,15 +69,15 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-source $HOME/.config/nvim/plug_settings/fzf.vim
+source ~/.config/nvim/plug_settings/fzf.vim
 
-source $HOME/.config/nvim/plug_settings/syntastic.vim
+source ~/.config/nvim/plug_settings/syntastic.vim
 
-source $HOME/.config/nvim/plug_settings/coc.vim
+source ~/.config/nvim/plug_settings/coc.vim
 
-source $HOME/.config/nvim/plug_settings/markdown-preview.vim
+source ~/.config/nvim/plug_settings/markdown-preview.vim
 
-source $HOME/.config/nvim/plug_settings/maps.vim
+source ~/.config/nvim/plug_settings/maps.vim
 
 "enhanced cpp highlight settings
 "==============================
