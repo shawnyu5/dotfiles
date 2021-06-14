@@ -5,7 +5,7 @@
 
 #init.vim
 cp -v ~/.config/nvim/init.vim config/nvim/init.vim
-cp -vr ~/.config/nvim/plug_settings config/nvim/plug_settings
+cp -vr ~/.config/nvim/plug_settings/ config/nvim
 
 #tmux config
 cp -v ~/.tmux.conf tmux.conf

@@ -3,10 +3,11 @@
 "| | '_ \| | __|     \ \ / / | '_ ` _ \ 
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
-                                       
+
+
 set nottimeout
-set ttimeoutlen=500
-set timeoutlen=900 
+set ttimeoutlen=600
+set timeoutlen=1000 
 
 "remaping leader to space
 let mapleader =" "
@@ -69,6 +70,7 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+
 source ~/.config/nvim/plug_settings/fzf.vim
 
 source ~/.config/nvim/plug_settings/syntastic.vim
@@ -130,7 +132,7 @@ autocmd bufreadpre OOP_345_notes.md let g:vmt_auto_update_on_save = 0
 
 autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
 
-autocmd bufreadpre *.md setlocal textwidth=80
+autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 "turning on syntax highlighting
 syntax enable
@@ -160,4 +162,4 @@ set scrolloff=2
 "set tabstop=4 softtabstop=4
 
 "auto enable spellcheck in markdown files
-au BufRead *.md setlocal spell
+au BufRead *.md,*.txt setlocal spell

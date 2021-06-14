@@ -1,6 +1,5 @@
-"shift up and down arrow keys to scroll without moving cursor
-map <S-j> <C-E>
 map <S-k> <C-Y>
+map <S-J> <C-E>
 map <S-down> <C-E>
 map <S-up> <C-Y>
 
@@ -38,6 +37,7 @@ nnoremap oo o<Esc>
 
 "OO to add line before current line but stay in normal mode
 nnoremap OO O<Esc>
+
 filetype plugin on
 
 "'' to go to the next <++> place holder
@@ -54,7 +54,8 @@ nnoremap <F12> :MaximizerToggle<CR>
 
 "maps for md files
 "=====================
-inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
+autocmd Filetype markdown inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
+"
 "maps for cpp file
 "============================
 
