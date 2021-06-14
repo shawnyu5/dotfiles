@@ -16,16 +16,16 @@ else
 fi
 
 read -p "due date: " DATE
-read -p "class name (1.OOP 2.CUL 3.SYD): " CLASS
+read -p "class name (1.OOP 2.SYD 3.CUL ): " CLASS
 
 if [[ $CLASS == "1" || $CLASS == "OOP" || $CLASS == "oop" ]]; then
 	CLASS="OOP"
 
-elif [[ $CLASS == "2" || $CLASS == "CUL" || $CLASS == "cul" ]]; then
-	CLASS="CUL"
-
-elif [[ $CLASS == "3" || $CLASS == "SYD" || $CLASS == "syd" ]]; then
+elif [[ $CLASS == "2" || $CLASS == "SYD" || $CLASS == "syd" ]]; then
 	CLASS="SYD"
+
+elif [[ $CLASS == "3" || $CLASS == "CUL" || $CLASS == "cul" ]]; then
+	CLASS="CUL"
 fi
 
 task add "${NAME}" project:$CLASS\
