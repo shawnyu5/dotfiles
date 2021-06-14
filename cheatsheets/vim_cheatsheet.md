@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [Spell check](#spell-check)
 * [FZF plugin](#fzf-plugin)
 * [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
 * [Using tabs](#using-tabs)
@@ -31,6 +32,14 @@
 	* [Opening sessions](#opening-sessions)
 
 <!-- vim-markdown-toc -->
+
+# Spell check
+
+`:set spell` to turn on spell check (mapped to leader s)
+
+`zg` to add to personal dictionary
+
+`zug` to delete from personal dictionary
 
 # FZF plugin
 
