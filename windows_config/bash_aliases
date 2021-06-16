@@ -1,0 +1,306 @@
+#| |__   __ _ ___| |__     __ _| (_) __ _ ___
+#| '_ \ / _` / __| '_ \   / _` | | |/ _` / __|
+#| |_) | (_| \__ \ | | | | (_| | | | (_| \__ \
+#|_.__/ \__,_|___/_| |_|  \__,_|_|_|\__,_|___/
+
+#deleteing start alias
+unalias start 2> /dev/null
+
+alias bd=". bd -si"
+
+#r for ranger
+alias r="ranger"
+
+#running valgrind
+alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes"
+
+#opening notepad ++
+alias np="/mnt/c/Program\ Files/Notepad++/notepad++.exe"
+
+#opening notepad++ in a new instance
+alias np-n="/mnt/c/Program\ Files/Notepad++/notepad++.exe--multilnst"
+
+#going to OOP directory
+alias cdoop="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++; ls"
+
+#going to SYD directory
+alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; ls"
+
+#going to CUL directory
+alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality; ls"
+
+#SYD notes
+alias sydnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; vim SYD_366_notes.md; cd - > /dev/null"
+
+#oop notes
+alias oopnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; vim OOP_345_notes.md; cd - > /dev/null"
+
+#CUL notes
+alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; vim CUL_485_notes.md; cd - > /dev/null"
+
+#going to senece onedrive directory
+alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
+
+#opening chrome web browser
+#alias chrome="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
+
+#setting vim to open neovim
+alias vim="nvim"
+
+#going to github directory
+alias cdgit="cd /mnt/c/Users/Shawn/Documents/GitHub"
+
+#make copying always recursive
+alias cp="cp -r"
+
+#make zip always recursive
+alias zip="zip -r"
+
+#make rm-r always prompt
+alias rm="rm -I"
+
+#open gitHub desktop application
+alias gitd="/mnt/c/Users/Shawn/AppData/Local/GitHubDesktop/GitHubDesktop.exe"
+
+#opening vimrc
+alias vimrc="vim ~/.config/nvim/init.vim"
+
+#opening ivm
+alias v="vim"
+
+#opening taskrc
+alias trc="vim ~/.taskrc"
+
+#to open typora
+function typora
+{
+	for current in $@; do
+		"/mnt/c/Program Files/Typora/Typora.exe" "$@";
+	done
+}
+
+#quickly get to the download directory
+alias dl="cd /mnt/c/Users/Shawn/Downloads/; ls -lt | head -7"
+
+#updating the source bashrc file
+alias sr="source ~/.bashrc"
+
+#moving to repos
+alias repos="cd /mnt/c/Users/Shawn/source/repos"
+
+##opening WEB notes
+#alias webnotes="echo opening WEB notes...; cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/WEB_222_Web_Programming_Principles; xdg-open 'WEB 222 notes.docx' 2> /dev/null; cd -"
+
+##opening politics notes
+#alias cannotes="echo opening politics notes...; cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/CAN_190_Canadian_Politics; xdg-open 'CAN 190 politics notes.docx' 2> /dev/null; cd -"
+
+#editing bashrc file via vim
+alias bashrc="vim ~/.bashrc"
+
+#editing .bash_alias file
+alias bash_alias="vim ~/.bash_aliases"
+
+#opening outlook
+alias outlook="echo opening outlook...; /mnt/c/Program\ Files/Microsoft\ Office/root/Office16/OUTLOOK.EXE;"
+
+#compiling all .cpp and .h files
+alias gcc-a="g++ *.cpp *.h"
+
+#opening neomutt
+alias mail="neomutt"
+
+#t for task
+alias t="task"
+
+#print student number
+alias studentNum="echo 160568192"
+
+#auto complete in tmux
+alias tma='tmux attach -t $1'
+
+if [ -f ~/.tmux_completion ]; then
+    . ~/.tmux_completion
+fi
+
+#for starting any file(s)
+function start
+{
+    if [ $# -eq 0 ]; then
+        echo "Opening current directory..."
+        xdg-open . 2> /dev/null
+    else
+        for current in "$@"
+        do
+            echo "opening $current..."
+            xdg-open "$current" 2> /dev/null
+
+        done
+    fi
+}
+
+#to open all .h and .cpp files in a new vs code window
+function codea
+{
+	cpp=(`find ./ -maxdepth 1 -name "*.cpp"`)
+	h=(`find ./ -maxdepth 1 -name "*.h"`)
+
+	if [ ${#cpp[@]} -gt 0 ]; then
+		code -n ${cpp[*]}
+	else
+		echo 'no .cpp file(s) present'
+	fi
+
+	if [ ${#h[@]} -gt 0 ]; then
+		code ${h[*]}
+	else
+		echo 'no .h file(s) found'
+
+	fi
+
+}
+# function mvdest
+# {
+#     for LAST; do true; done
+#     #it would have to take path name as arguement 2.
+#     PATHNAME=$LAST
+
+#     for current in "$@"
+#     do
+
+#     done
+# }
+
+#make a directory and go into that directory
+function mkdirin { mkdir $1 && cd $1; }
+
+#move functions
+
+function general_move
+{
+	#echo "general move sec arugment is $2"
+	#echo "everything else is $@"
+	mv -v "$@"
+
+}
+
+function mvoop
+{
+	if [[ $1 == "-"* ]]; then
+#		#echo "if entered"
+		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
+		shift 1
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
+	else
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
+		general_move "$@" "$DEST"
+		cd "$DEST"
+	fi
+}
+
+function mvsyd
+{
+	if [[ $1 == "-"* ]]; then
+		#echo "if entered"
+		#echo "arugment 1 is $1"
+		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
+		shift 1
+		#echo "dest is $DEST"
+		#echo "everything else is $@"
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
+	else
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
+		general_move "$@" "$DEST"
+		cd "$DEST"
+	fi
+}
+
+function mvcul
+{
+	if [[ $1 == "-"* ]]; then
+#		#echo "if entered"
+		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
+		shift 1
+		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+
+		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
+	else
+		#echo "else entered"
+		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality"
+		general_move "$@" "$DEST"
+		cd "$DEST"
+	fi
+}
+
+function oopDeclaration
+{
+    declaration="/mnt/c/Users/Shawn/OneDrive - Seneca/FUN/bash/oop_declaration/OOPDeclaration.txt"
+
+
+    for current in "$@"
+    do
+        touch tmp.txt
+        #put the dest file content into tmp file
+        cat "$current" > tmp.txt
+
+        #adding header
+        cat "$declaration" > "$current"
+
+        #putting orginal file back after header.
+        cat tmp.txt >> "$current"
+        rm tmp.txt >/dev/null
+
+        echo "declaration added to file: $current"
+    done
+
+}
+
+#creates a Excute bash file to first compile the program files being passed in as arguments
+function excfile
+{
+	read -p "name of the output file: " OUTPUT
+        autoexpect "$1"
+
+        #replace the last line with interact
+        cp script.exp script.exp.tmp
+        sed '$ d' script.exp.tmp > script.exp
+        rm -f script.exp.tmp >/dev/null
+
+        echo "interact" >> script.exp
+
+        mv script.exp "autocompile_$OUTPUT".exp && echo -e "\nscript.exp renamed to "autocompile_$OUTPUT".exp"
+
+}
+
+#this function recompiles the program and runs the previous excute.exp script on a.out
+function updatefile
+{
+    g++ "$@"
+
+    if test -f "./excute.exp"; #checking if previous function has been ran
+    then
+        echo "successfully compiled!"
+
+        ./excute.exp
+
+    else
+        echo 'please run excfile first'
+    fi
+}
+
+#mdless any cheatsheet in cheatsheet directory
+#function vcheat
+#{
+#	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs mdless
+#}
+
+#open cheatsheet in vim
+function cheat
+{
+	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
+
+}
