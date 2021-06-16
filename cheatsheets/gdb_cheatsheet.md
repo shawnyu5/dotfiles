@@ -6,6 +6,7 @@
 * [Next](#next)
 * [Backtrack](#backtrack)
 * [Print](#print)
+* [Watch](#watch)
 * [List](#list)
 * [Until](#until)
 
@@ -13,11 +14,13 @@
 
 `g++ -g <files>`
 
-use -g flag to produce meaningful output debug information
+Use -g flag to produce meaningful output debug information
 
 `gdb <excutable>`
 
-run the executable through through gdb
+Run the executable through through gdb
+
+`layout next` to be able to see our code
 
 # setting breakpoints
 
@@ -56,6 +59,11 @@ Back trace shows the program execution
 `print <variable>`
 
 Prints the value of the variable
+
+# Watch
+
+`watch <variable>` will display the old and new value of a variable as it
+changes
 
 # List
 

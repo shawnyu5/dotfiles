@@ -140,7 +140,7 @@ syntax enable
 set number relativenumber
 set autoindent
 set nohlsearch
-
+set lazyredraw
 "set where the split window appears
 set splitbelow splitright
 

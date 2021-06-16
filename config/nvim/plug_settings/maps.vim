@@ -44,7 +44,7 @@ filetype plugin on
 inoremap '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line
-nnoremap <leader><leader> /<++><Enter>ca<
+nnoremap <leader><leader> /<++><Enter>"_c4l
 
 "leader fs to quick fix spelling
 nnoremap <leader>fs [sz=1<Enter><Esc>
