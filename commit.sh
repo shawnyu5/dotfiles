@@ -4,13 +4,14 @@
 #---------------------------------
 
 read -p "commit message: " MESSAGE
+read -p "commit description: " DESCRIPTION
 
 if [[ -z $MESSAGE ]]; then
 	MESSAGE="update"
 fi
 
 git add -A
-git commit -m "$MESSAGE"
+git commit -m "$MESSAGE" -m "$DESCRIPTION"
 git push origin main && echo -e "\n comitted"
 
 
