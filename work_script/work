@@ -14,6 +14,7 @@ case $CLASS in
 		read -p "which workshop? (1-9): " WORKSHOPNUMBER
 		read -p "part 1 or 2? " WORKSHOPPART
 		cdoop
+		cd workshops/ws_$WORKSHOPNUMBER
 		SESSION_NAME="oop_ws$WORKSHOPNUMBER"
 		tmux new-session -d -s $SESSION_NAME
 		tmux rename-window -t 0 'code'

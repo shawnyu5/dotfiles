@@ -1,6 +1,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [setting breakpoints](#setting-breakpoints)
+* [Start](#start)
 * [Run](#run)
 * [Step](#step)
 * [Next](#next)
@@ -9,6 +10,8 @@
 * [Watch](#watch)
 * [List](#list)
 * [Until](#until)
+* [Continue](#continue)
+* [Refresh](#refresh)
 
 <!-- vim-markdown-toc -->
 
@@ -27,6 +30,10 @@ Run the executable through through gdb
 `b 43`
 
 Sets a breakpoint at line 43
+
+# Start
+
+Sets a temporary breakpoint at main and stops there
 
 # Run
 
@@ -74,3 +81,13 @@ Shows some of the current code. Can be abbreviated to **l**.
 # Until
 
 Jumps to the end of the loop
+
+# Continue 
+
+Continue execution until the next time the break point is hit
+
+Can be shortened to **c**
+
+# Refresh
+
+Refreshes the layout screen
