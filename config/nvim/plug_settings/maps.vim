@@ -41,7 +41,7 @@ nnoremap OO O<Esc>
 filetype plugin on
 
 "'' to go to the next <++> place holder
-inoremap '' <Esc>/<++><Enter>"_c4l
+inoremap <silent> '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line
 nnoremap <leader><leader> /<++><Enter>"_c4l
@@ -50,11 +50,11 @@ nnoremap <leader><leader> /<++><Enter>"_c4l
 nnoremap <leader>fs [sz=1<Enter><Esc>
 
 "f12 to maxmize current screen
-nnoremap <F12> :MaximizerToggle<CR>
+nnoremap <silent> <F12> :MaximizerToggle<CR>
 
 "maps for md files
 "=====================
-autocmd Filetype markdown inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
+autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 "
 "maps for cpp file
 "============================
@@ -66,22 +66,22 @@ autocmd Filetype markdown inoremap '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 "autocmd FileType cpp inoremap ( ()<Left>
 
 "'c insert cout statement
-autocmd Filetype cpp inoremap 'c cout << "" << endl;<Esc>F"i
+autocmd Filetype cpp inoremap <silent> 'c cout << "" << endl;<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>/BBB<Enter>"_cw
+autocmd FileType cpp inoremap <silent> 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>?BBB<Enter>"_cw
 
 ";class insert a class
-autocmd FileType cpp inoremap 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>/BBB<Enter>"_cw
+autocmd FileType cpp inoremap <silent> 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>?BBB<Enter>"_cw
 
 "maping for bash file
 "==============================
 
 ";if insert if statement
-autocmd FileType sh inoremap 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>/BBB<Enter>"_cw
+autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>?BBB<Enter>"_cw
 
 "auto fill for {
 "autocmd Filetype sh inoremap { {}<Left>
 
 ";{ creates { for functions
-autocmd Filetype sh,cpp inoremap '{ {<Enter>BBB<Enter>}<Enter><Esc>/BBB<Enter>"_cw
+autocmd Filetype sh,cpp inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
