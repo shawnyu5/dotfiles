@@ -12,17 +12,17 @@ set timeoutlen=1000
 "remaping leader to space
 let mapleader =" "
 
-source ~/.config/nvim/plugin_manager.vim
+source ~/.config/nvim/settings/plugin_manager.vim
 
-source ~/.config/nvim/plug_settings/fzf.vim
+source ~/.config/nvim/settings/fzf.vim
 
-source ~/.config/nvim/plug_settings/syntastic.vim
+source ~/.config/nvim/settings/syntastic.vim
 
-source ~/.config/nvim/plug_settings/coc.vim
+source ~/.config/nvim/settings/coc.vim
 
-source ~/.config/nvim/plug_settings/markdown-preview.vim
+source ~/.config/nvim/settings/markdown-preview.vim
 
-source ~/.config/nvim/plug_settings/maps.vim
+source ~/.config/nvim/settings/maps.vim
 
 "enhanced cpp highlight settings
 "==============================

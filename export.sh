@@ -3,9 +3,9 @@
 #Date: 2021-05-21
 #---------------------------------
 
-#init.vim
+#vim config
 cp -v config/nvim/init.vim ~/.config/nvim/init.vim
-cp -rv config/nvim/plug_settings ~/.config/nvim/
+cp -rv config/nvim/settings ~/.config/nvim/
 
 #tmux.conf
 cp -v tmux.conf ~/.tmux.conf
