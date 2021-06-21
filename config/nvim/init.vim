@@ -143,6 +143,9 @@ autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 "turning on syntax highlighting
 syntax enable
 
+"allow copying to system clipboard
+set clipboard+=unnamedplus
+
 set number relativenumber
 set autoindent
 set nohlsearch
