@@ -57,23 +57,13 @@ case $CLASS in
 	"CUL"|"3")
 	{
 		#echo CUL
-		read -p "which week? (1-13). For essay, enter 14 or essay. week_" WEEKNUMBERCUL
-		if [[ "$WEEKNUMBERCUL" == "14" || "$WEEKNUMBERCUL" == "essay" ]]; then
-			cdcul
-			tmux new-session -d -s cul_essay
-			tmux send-keys -t 0 cdcul Enter
-			tmux send-keys -t 0 "cd essay" Enter
-			tmux send-keys -t 0 "vim -c \":tab all\" essay.md outline.md" Enter
-			tmux attach-session -t cul_essay
-		else
-			cdcul
-			tmux new-session -d -s cul_weekly
-			tmux send-keys -t 0 cdcul Enter
-			tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
-			tmux send-keys -t 0 "clear" Enter
-			tmux attach-session -t cul_weekly
-		fi
-
+		read -p "which week? (1-13)." WEEKNUMBERCUL
+		cdcul
+		tmux new-session -d -s cul_weekly
+		tmux send-keys -t 0 cdcul Enter
+		tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
+		tmux send-keys -t 0 "clear" Enter
+		tmux attach-session -t cul_weekly
 	};;
 esac
 
