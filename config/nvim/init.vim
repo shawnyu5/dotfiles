@@ -9,6 +9,10 @@ set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000 
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 "remaping leader to space
 let mapleader =" "
 
