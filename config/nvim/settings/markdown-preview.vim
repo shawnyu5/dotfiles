@@ -17,7 +17,7 @@ let g:mkdp_browser = 'chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = '/home/shawn/scripts/.gitHub_markdown_css.css'
+let g:mkdp_markdown_css = '~/personal/gitHub_markdown.css'
 
 "MarkdownPreview mapped to leader m
 autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
