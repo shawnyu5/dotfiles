@@ -28,6 +28,8 @@ source ~/.config/nvim/settings/markdown-preview.vim
 
 source ~/.config/nvim/settings/maps.vim
 
+source ~/.config/nvim/settings/vim-you-autocorrect.vim
+
 "enhanced cpp highlight settings
 "==============================
 "Highlighting of class scope
@@ -119,4 +121,3 @@ set scrolloff=2
 
 "auto enable spellcheck in markdown files
 au BufRead *.md,*.txt setlocal spell
-au BufRead *.md,*.txt :EnableAutocorrect
