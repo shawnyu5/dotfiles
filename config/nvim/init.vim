@@ -97,6 +97,9 @@ set lazyredraw
 "set where the split window appears
 set splitbelow splitright
 
+"highlight current line
+"set cursorline
+
 "disable auto commenting
 set formatoptions-=cro
 
@@ -116,3 +119,4 @@ set scrolloff=2
 
 "auto enable spellcheck in markdown files
 au BufRead *.md,*.txt setlocal spell
+au BufRead *.md,*.txt :EnableAutocorrect

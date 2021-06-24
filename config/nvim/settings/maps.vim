@@ -47,23 +47,19 @@ inoremap <silent> '' <Esc>/<++><Enter>"_c4l
 nnoremap <leader><leader> /<++><Enter>"_c4l
 
 "leader fs to quick fix spelling
-nnoremap <leader>fs [sz=1<Enter><Esc>
+nmap <silent> [s <Plug>VimyouautocorrectJump
+"nnoremap <leader>fs [sz=1<Enter><Esc>
 
 "f12 to maxmize current screen
 nnoremap <silent> <F12> :MaximizerToggle<CR>
 
 "maps for md files
 "=====================
+"create link
 autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 "
 "maps for cpp file
 "============================
-
-"autofill {
-"autocmd Filetype cpp inoremap { {}<Left>
-
-"autofill (
-"autocmd FileType cpp inoremap ( ()<Left>
 
 "'c insert cout statement
 autocmd Filetype cpp inoremap <silent> 'c cout << "" << endl;<Esc>F"i
@@ -74,14 +70,17 @@ autocmd FileType cpp inoremap <silent> 'if if (BBB)<Enter>{<Enter><++><Enter>}<E
 ";class insert a class
 autocmd FileType cpp inoremap <silent> 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>?BBB<Enter>"_cw
 
+"turn a prototype into a function
+autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><Enter>{<Enter>BBB<Enter>}<Esc>?BBB<Enter>cw
+
+"paste text and auto formate
+"autocmd FileType cpp nnoremap <leader>p ]p
+
 "maping for bash file
 "==============================
 
 ";if insert if statement
 autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>?BBB<Enter>"_cw
-
-"auto fill for {
-"autocmd Filetype sh inoremap { {}<Left>
 
 ";{ creates { for functions
 autocmd Filetype sh,cpp inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw

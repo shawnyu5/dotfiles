@@ -12,10 +12,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 nnoremap <C-p> :Files<CR>
 "map <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
-nnoremap <leader>t :Tags<CR>
-nnoremap <leader>m :Marks<CR>
-
+nnoremap <leader>r :Rg<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
@@ -44,7 +41,6 @@ let g:fzf_colors =
 "Get Files
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
-
 
 " Get text in files with Rg
 command! -bang -nargs=* Rg

@@ -57,5 +57,8 @@ Plug 'junegunn/fzf.vim'
 "vim surround
 Plug 'tpope/vim-surround'
 
+"autocorrect spelling
+Plug 'sedm0784/vim-you-autocorrect'
+
 call plug#end()
 
