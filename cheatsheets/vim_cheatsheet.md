@@ -4,32 +4,33 @@
 * [FZF plugin](#fzf-plugin)
 * [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
 * [Using tabs](#using-tabs)
-	* [Usage](#usage)
+    * [Usage](#usage)
 * [Auto complete](#auto-complete)
 * [vim commands](#vim-commands)
-	* [case switching](#case-switching)
-		* [capitalization](#capitalization)
-	* [skip a block of Code](#skip-a-block-of-code)
-	* [indenting](#indenting)
-	* [auto indent](#auto-indent)
-	* [Screen navigations](#screen-navigations)
+    * [case switching](#case-switching)
+        * [capitalization](#capitalization)
+    * [skip a block of Code](#skip-a-block-of-code)
+    * [indenting](#indenting)
+    * [auto indent](#auto-indent)
+    * [detect file type](#detect-file-type)
+    * [Screen navigations](#screen-navigations)
 * [setting markers](#setting-markers)
-	* [folding](#folding)
+    * [folding](#folding)
 * [run vim commands from command line](#run-vim-commands-from-command-line)
 * [format text](#format-text)
-	* [opening another file in vim](#opening-another-file-in-vim)
-	* [reslecting text](#reslecting-text)
-	* [run the last subsutite command globally](#run-the-last-subsutite-command-globally)
+    * [opening another file in vim](#opening-another-file-in-vim)
+    * [reslecting text](#reslecting-text)
+    * [run the last subsutite command globally](#run-the-last-subsutite-command-globally)
 * [markDown preview](#markdown-preview)
 * [diff mode](#diff-mode)
-	* [when files are already open](#when-files-are-already-open)
-	* [disable diff mode](#disable-diff-mode)
+    * [when files are already open](#when-files-are-already-open)
+    * [disable diff mode](#disable-diff-mode)
 * [running vim commands while opening vim](#running-vim-commands-while-opening-vim)
 * [pip standard input into vim](#pip-standard-input-into-vim)
 * [bring outputs of terminal commands into vim within vim it self](#bring-outputs-of-terminal-commands-into-vim-within-vim-it-self)
 * [Sessions](#sessions)
-	* [Creating sessions](#creating-sessions)
-	* [Opening sessions](#opening-sessions)
+    * [Creating sessions](#creating-sessions)
+    * [Opening sessions](#opening-sessions)
 
 <!-- vim-markdown-toc -->
 
@@ -107,7 +108,11 @@ gU changes letters to capital
 
 ## auto indent
 
-=i{ to auto indent a block of code, when the indentation is inconstant
+=i{ to auto indent a block of code in `{}`, when the indentation is inconstant
+
+## detect file type
+
+`:filetype detect` will detect the current file type
 
 ## Screen navigations
 

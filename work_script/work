@@ -11,20 +11,27 @@ read -p "What class will this be? (1.OOP, 2.SYD, 3.CUL) " CLASS
 case $CLASS in
 	"OOP"|"1")
 	{
-		read -p "which workshop? (1-9): " WORKSHOPNUMBER
+		read -p "which workshop? (1-9) For final project, enter 10: " WORKSHOPNUMBER
 		read -p "part 1 or 2? " WORKSHOPPART
 		cdoop
-		cd workshops/ws_$WORKSHOPNUMBER
-		SESSION_NAME="oop_ws$WORKSHOPNUMBER"
-		tmux new-session -d -s $SESSION_NAME
-		tmux rename-window -t 0 'code'
-		tmux send-keys -t 0 cdoop Enter
-		if [[ -z $WORKSHOPPART ]]; then
-			tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
-		else
-			tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER/part_$WORKSHOPPART" Enter
-		fi
-		tmux send-keys -t 0 "clear" Enter
+        if [[ $WORKSHOPNUMBER <= 9 ]]; then
+            cd workshops/ws_$WORKSHOPNUMBER
+
+            SESSION_NAME="oop_ws$WORKSHOPNUMBER"
+            tmux new-session -d -s $SESSION_NAME
+            tmux rename-window -t 0 'code'
+            tmux send-keys -t 0 cdoop Enter
+            if [[ -z $WORKSHOPPART ]]; then
+                tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER" Enter
+            else
+                tmux send-keys -t 0 "cd workshops/ws_$WORKSHOPNUMBER/part_$WORKSHOPPART" Enter
+            fi
+            tmux send-keys -t 0 "clear" Enter
+        else
+            read -p "Which milestone? (1-3)? MS" MILESTONE
+            cd final_project/MS$MILESTONE
+        fi
+
 		tmux new-window -t $SESSION_NAME:1 -n 'notes'
 		tmux send-keys -t 'notes' oopnotes Enter
 		tmux attach-session -t $SESSION_NAME:0
