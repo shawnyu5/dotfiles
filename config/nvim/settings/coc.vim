@@ -21,4 +21,4 @@ nmap <leader>gd <Plug>(coc-definition)
 "go to function reference
 nmap  <leader>gr <Plug>(coc-references)
 
-nnoremap <F3> :CocAction<Enter>
+nnoremap <F2> :CocAction<Enter>

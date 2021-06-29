@@ -2,4 +2,4 @@
 "=========================
 autocmd FileType md nmap [s <Plug>VimyouautocorrectJump
 
-au BufRead *.md,*.txt :EnableAutocorrect
+au BufRead *.md :EnableAutocorrect

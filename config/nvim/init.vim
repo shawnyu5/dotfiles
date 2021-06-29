@@ -100,7 +100,7 @@ set lazyredraw
 set splitbelow splitright
 
 "highlight current line
-"set cursorline
+set cursorline
 
 "disable auto commenting
 set formatoptions-=cro
@@ -120,4 +120,4 @@ set scrolloff=2
 "set tabstop=4 softtabstop=4
 
 "auto enable spellcheck in markdown files
-au BufRead *.md,*.txt setlocal spell
+au BufRead *.md setlocal spell
