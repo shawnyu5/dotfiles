@@ -12,6 +12,8 @@ set timeoutlen=1000
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+"always show tabs
+set showtabline=2
 
 "remaping leader to space
 let mapleader =" "
@@ -20,7 +22,7 @@ source ~/.config/nvim/settings/plugin_manager.vim
 
 source ~/.config/nvim/settings/fzf.vim
 
-source ~/.config/nvim/settings/syntastic.vim
+"source ~/.config/nvim/settings/syntastic.vim
 
 source ~/.config/nvim/settings/coc.vim
 
@@ -29,6 +31,11 @@ source ~/.config/nvim/settings/markdown-preview.vim
 source ~/.config/nvim/settings/maps.vim
 
 source ~/.config/nvim/settings/vim-you-autocorrect.vim
+
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
 
 "enhanced cpp highlight settings
 "==============================

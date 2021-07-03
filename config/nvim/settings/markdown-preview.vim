@@ -13,7 +13,7 @@ let g:mkdp_auto_close = 0
 let g:mkdp_refresh_slow = 1
 
 " specify browser to open preview page
-let g:mkdp_browser = 'chrome'
+let g:mkdp_browser = 'google-chrome'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')

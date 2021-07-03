@@ -14,10 +14,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'junegunn/goyo.vim'
 
 "brower based markdown preview
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 "error checking
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 
 "table of contents
 Plug 'mzlogin/vim-markdown-toc'
@@ -59,6 +59,12 @@ Plug 'tpope/vim-surround'
 
 "autocorrect spelling
 Plug 'sedm0784/vim-you-autocorrect'
+
+"i3config highlighting
+Plug 'mboughaba/i3config.vim'
+
+"nvim native lsp
+"Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 

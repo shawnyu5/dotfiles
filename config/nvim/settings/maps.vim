@@ -33,10 +33,10 @@ highlight Pmenu ctermbg=darkblue ctermfg=yellow
 nnoremap S :%s///gc<Left><Left><Left><Left>
 
 "oo to add line after current line but stay in normal mode
-nnoremap oo o<Esc>
+"nnoremap oo o<Esc>
 
 "OO to add line before current line but stay in normal mode
-nnoremap OO O<Esc>
+"nnoremap OO O<Esc>
 
 filetype plugin on
 
@@ -44,7 +44,7 @@ filetype plugin on
 inoremap <silent> '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line
-nnoremap <leader><leader> /<++><Enter>"_c4l
+nnoremap <silent> <leader><leader> /<++><Enter>"_c4l
 
 "leader fs to quick fix spelling
 nmap <silent> [s <Plug>VimyouautocorrectJump
