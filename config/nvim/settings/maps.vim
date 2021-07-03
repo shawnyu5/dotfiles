@@ -73,6 +73,9 @@ autocmd FileType cpp inoremap <silent> 'class class BBB<Enter>{<Enter><BS>privat
 "turn a prototype into a function
 autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><Enter>{<Enter>BBB<Enter>}<Esc>?BBB<Enter>cw
 
+"auto indent file upon saving
+autocmd FileType cpp autocmd BufWrite mmgg=G`m
+
 "paste text and auto formate
 "autocmd FileType cpp nnoremap <leader>p ]p
 

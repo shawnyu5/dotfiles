@@ -14,6 +14,10 @@ set shiftwidth=4
 set expandtab
 "always show tabs
 set showtabline=2
+set cursorline
+
+"autocmd BufWritePre,BufRead *.cpp :norm! ggOhello
+"autocmd BufWritePre *.cpp :norm! mmgg=G`m
 
 "remaping leader to space
 let mapleader =" "
