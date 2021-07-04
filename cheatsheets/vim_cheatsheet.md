@@ -34,6 +34,10 @@
 
 <!-- vim-markdown-toc -->
 
+# Lunar vim config
+
+To change vim virtual text, to to `default-config.lua`.
+
 # Spell check
 
 `:set spell` to turn on spell check (mapped to leader s)

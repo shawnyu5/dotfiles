@@ -13,11 +13,13 @@ case $CLASS in
 	{
 		read -p "which workshop? (1-9) For final project, enter 10: " WORKSHOPNUMBER
 		cdoop
+        #make sure workshop number is less than 9
         if [[ $WORKSHOPNUMBER -le 9 ]]; then
             read -p "part 1 or 2? " WORKSHOPPART
 
-            cd workshops/ws_$WORKSHOPNUMBER
+            #cd workshops/ws_$WORKSHOPNUMBER
             SESSION_NAME="oop_ws$WORKSHOPNUMBER"
+            #create new session
             tmux new-session -d -s $SESSION_NAME
             tmux rename-window -t 0 'code'
             tmux send-keys -t 0 cdoop Enter
