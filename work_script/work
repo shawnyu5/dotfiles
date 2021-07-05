@@ -17,7 +17,7 @@ case $CLASS in
         if [[ $WORKSHOPNUMBER -le 9 ]]; then
             read -p "part 1 or 2? " WORKSHOPPART
 
-            #cd workshops/ws_$WORKSHOPNUMBER
+            cd workshops/ws_$WORKSHOPNUMBER
             SESSION_NAME="oop_ws$WORKSHOPNUMBER"
             #create new session
             tmux new-session -d -s $SESSION_NAME

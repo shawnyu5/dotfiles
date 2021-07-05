@@ -16,7 +16,6 @@ set expandtab
 set showtabline=2
 set cursorline
 
-"autocmd BufWritePre,BufRead *.cpp :norm! ggOhello
 "autocmd BufWritePre *.cpp :norm! mmgg=G`m
 
 "remaping leader to space
