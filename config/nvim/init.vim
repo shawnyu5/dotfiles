@@ -5,23 +5,14 @@
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
 
-set nottimeout
-set ttimeoutlen=600
-set timeoutlen=1000 
-
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-"always show tabs
-set showtabline=2
-set cursorline
-
 "autocmd BufWritePre *.cpp :norm! mmgg=G`m
 
 "remaping leader to space
 let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
+
+source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/fzf.vim
 
@@ -95,39 +86,6 @@ autocmd bufreadpre OOP_345_notes.md nnoremap  e :norm! df<Space>VguVyI*<Space>[<
 autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
 
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
-
-"turning on syntax highlighting
-syntax enable
-
-"allow copying to system clipboard
-set clipboard+=unnamedplus
-
-set number relativenumber
-set autoindent
-set nohlsearch
-set lazyredraw
-"set where the split window appears
-set splitbelow splitright
-
-"highlight current line
-set cursorline
-
-"disable auto commenting
-set formatoptions-=cro
-
-"autocompletion while entering vim commands
-set wildmode=longest,list,full
-
-"wait 0ms after pressing the esc key to see if there are any other key presses
-set ttimeoutlen=0
-
-"setting path to current directory to enable searching
-set path+=**
-
-set scrolloff=2
-
-"change tab width
-"set tabstop=4 softtabstop=4
 
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
