@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [Git credentials storage](#git-credentials-storage)
 * [git init](#git-init)
 * [git status](#git-status)
 * [git add -A](#git-add--a)
@@ -13,11 +14,16 @@
 * [to merge a branch with the main](#to-merge-a-branch-with-the-main)
 * [delete a branch](#delete-a-branch)
 * [deleting a branch from remote repository](#deleting-a-branch-from-remote-repository)
-	* [git log](#git-log)
-	* [`git reset <file>`](#git-reset-file)
+    * [git log](#git-log)
+    * [`git reset <file>`](#git-reset-file)
 * [git clone <repositry URL> <path to clone>](#git-clone-repositry-url-path-to-clone)
 
 <!-- vim-markdown-toc -->
+
+# Git credentials storage
+
+Run `git config --global credential.helper store` to store git credentials
+globally
 
 # git init
 
@@ -40,13 +46,13 @@ commits everything in the current staging area
 
 # git push origin main
 
-push to remote repository
+Push to remote repository
 origin - name of repository
 main - branch name
 
 # git pull
 
-gets any changes from the repository to the local
+Gets any changes from the repository to the local
 machine
 
 # git branch <new branch name>

@@ -53,6 +53,13 @@ nmap <silent> [s <Plug>VimyouautocorrectJump
 "f12 to maxmize current screen
 nnoremap <silent> <F12> :MaximizerToggle<CR>
 
+autocmd bufreadpre OOP_345_notes.md let g:vmt_auto_update_on_save = 0
+autocmd bufreadpre OOP_345_notes.md nnoremap <silent> e :norm! df<Space>VguVyI*<Space>[<Esc>A](#<Esc>pI<BS><Esc>A)<Esc>hhvi(:s/\%V /-/g<CR>
+
+"80>kb^[A)^[hhvi(:s/\%V /-/g^M
+"df VguVyI* [^[A](#^[pi<80>kb^[A)^[hhvi(:s/\%V /-/g^M
+autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
+
 "maps for md files
 "=====================
 "create link

@@ -7,6 +7,9 @@
 
 "autocmd BufWritePre *.cpp :norm! mmgg=G`m
 
+"placed here for easy access
+set relativenumber
+
 "remaping leader to space
 let mapleader =" "
 
@@ -77,13 +80,6 @@ let g:mdip_imgname = 'image'
 "markdown table of contents setting
 "===================================
 let g:vmt_auto_update_on_save = 1
-
-autocmd bufreadpre OOP_345_notes.md let g:vmt_auto_update_on_save = 0
-autocmd bufreadpre OOP_345_notes.md nnoremap  e :norm! df<Space>VguVyI*<Space>[<Esc>A](#<Esc>pI<BS><Esc>A)<Esc>hhvi(:s/\%V /-/g<CR>
-
-"80>kb^[A)^[hhvi(:s/\%V /-/g^M
-"df VguVyI* [^[A](#^[pi<80>kb^[A)^[hhvi(:s/\%V /-/g^M
-autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
 
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 

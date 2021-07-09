@@ -38,6 +38,9 @@ case $CLASS in
             SESSION_NAME="oop_final_MS$MILESTONE"
             tmux new-session -d -s $SESSION_NAME
             tmux rename-window -t 0 'code'
+            #new window for instructions
+            tmux new-window -t $SESSION_NAME:2 -n 'instructions'
+            tmux send-keys -t 2 " cdoop && cd workshops/ws_$WORKSHOPNUMBER && nvim readme.md" Enter
         fi
 
         #new window for notes

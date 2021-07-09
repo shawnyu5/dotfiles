@@ -14,7 +14,7 @@ syntax enable
 "allow copying to system clipboard
 set clipboard+=unnamedplus
 
-set number relativenumber
+set number
 set autoindent
 set nohlsearch
 set lazyredraw
