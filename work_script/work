@@ -14,6 +14,7 @@ case $CLASS in
 		read -p "which workshop? (1-9) For final project, enter 10: " WORKSHOPNUMBER
 		cdoop
         #make sure workshop number is less than 9
+
         if [[ $WORKSHOPNUMBER -le 9 ]]; then
             read -p "part 1 or 2? " WORKSHOPPART
 
@@ -40,7 +41,7 @@ case $CLASS in
             tmux rename-window -t 0 'code'
             #new window for instructions
             tmux new-window -t $SESSION_NAME:2 -n 'instructions'
-            tmux send-keys -t 2 " cdoop && cd workshops/ws_$WORKSHOPNUMBER && nvim readme.md" Enter
+            tmux send-keys -t 2 " cdoop && cd final_project && nvim readme.md" Enter
         fi
 
         #new window for notes
