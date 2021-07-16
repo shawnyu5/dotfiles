@@ -48,7 +48,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'adelarsq/vim-matchit'
 
 "vim in the browser
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 "fzf plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

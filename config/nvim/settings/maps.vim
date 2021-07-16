@@ -1,7 +1,14 @@
+"scrolling without moving the cursor
 map <S-k> <C-Y>
 map <S-J> <C-E>
 map <S-down> <C-E>
 map <S-up> <C-Y>
+
+"control prefix for split management
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 "leader s to spell check
 nnoremap <leader>s :set spell!<Enter>
@@ -10,8 +17,8 @@ nnoremap <leader>s :set spell!<Enter>
 autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>"_cw
 
 "leader m to compile current file
-"autocmd FileType cpp nnoremap <leader>m :!make<CR>
-autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
+"autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
+nnoremap <leader>m :!make<CR>
 
 "make up down automatically go in between text blocks
 nnoremap <Up> gk
@@ -40,7 +47,7 @@ nnoremap S :%s///gc<Left><Left><Left><Left>
 
 filetype plugin on
 
-"'' to go to the next <++> place holder
+"leader leader to go to the next <++> place holder
 inoremap <silent> '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line

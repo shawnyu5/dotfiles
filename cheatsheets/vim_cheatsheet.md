@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [Window management](#window-management)
 * [Spell check](#spell-check)
 * [FZF plugin](#fzf-plugin)
 * [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
@@ -34,9 +35,17 @@
 
 <!-- vim-markdown-toc -->
 
-# Lunar vim config
+# Window management
 
-To change vim virtual text, to to `default-config.lua`.
+`<C-W> <C-R>` to swap the positions of the current splits
+
+`<C-W>+` **increase** the height of current window
+
+`<C-W>-` **decrease** the height of current window
+
+`<C-j/k/h/l>` change the position of active window
+
+`<C-=>` make all windows equal size
 
 # Spell check
 
