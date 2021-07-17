@@ -4,14 +4,12 @@
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
-
-"autocmd BufWritePre *.cpp :norm! mmgg=G`m
-
 "placed here for easy access
 set relativenumber
 
 "remaping leader to space
 let mapleader =" "
+
 
 source ~/.config/nvim/settings/plugin_manager.vim
 

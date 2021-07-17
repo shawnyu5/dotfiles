@@ -21,8 +21,6 @@ autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %
 nnoremap <leader>m :!make<CR>
 
 "make up down automatically go in between text blocks
-nnoremap <Up> gk
-nnoremap <Down> gj
 nnoremap k gk
 nnoremap j gj
 
