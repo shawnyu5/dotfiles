@@ -32,7 +32,8 @@ case $CLASS in
             tmux send-keys -t 0 "clear" Enter
             #new window for instructions
             tmux new-window -t $SESSION_NAME:2 -n 'instructions'
-            tmux send-keys -t 2 " cdoop && cd workshops/ws_$WORKSHOPNUMBER && nvim readme.md" Enter
+            tmux send-keys -t 2 " cdoop" Enter
+            tmux send-keys -t 2 "cd workshops/ws_$WORKSHOPNUMBER && nvim readme.md" Enter
         else
             read -p "Which milestone? (1-3)? MS_" MILESTONE
             cd final_project/MS$MILESTONE
