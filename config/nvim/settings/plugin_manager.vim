@@ -1,6 +1,17 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
+"telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+"native LSP
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'hrsh7th/nvim-compe'
+""code action
+"Plug 'glepnir/lspsaga.nvim'
+
 "status bar
 Plug 'itchyny/lightline.vim'
 
@@ -10,16 +21,10 @@ Plug 'ferrine/md-img-paste.vim'
 "COC auto completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"center current text
-"Plug 'junegunn/goyo.vim'
-
 "brower based markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-"error checking
-"Plug 'vim-syntastic/syntastic'
-
-"table of contents
+"auto generate table of contents
 Plug 'mzlogin/vim-markdown-toc'
 
 "smooth scrolling
@@ -47,12 +52,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "matchit
 Plug 'adelarsq/vim-matchit'
 
-"vim in the browser
-"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-
 "fzf plugin
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 
 "vim surround
 Plug 'tpope/vim-surround'
@@ -62,9 +64,6 @@ Plug 'sedm0784/vim-you-autocorrect'
 
 "i3config highlighting
 Plug 'mboughaba/i3config.vim'
-
-"nvim native lsp
-"Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 

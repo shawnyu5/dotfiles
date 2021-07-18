@@ -10,16 +10,24 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
-
 source ~/.config/nvim/settings/plugin_manager.vim
 
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
 
-source ~/.config/nvim/settings/fzf.vim
+source ~/.config/nvim/settings/telescope.vim
 
-"source ~/.config/nvim/settings/syntastic.vim
+"source ~/.config/nvim/settings/fzf.vim
+
+"native lsp config
+"source ~/.config/nvim/settings/lspSaga.vim
+
+"source ~/.config/nvim/settings/native_lsp.vim
+
+"luafile ~/.config/nvim/settings/compe-config.lua
+
+"source ~/.config/nvim/settings/bash-lanuage-server.vim
 
 source ~/.config/nvim/settings/coc.vim
 

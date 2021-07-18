@@ -1,3 +1,6 @@
+"leader df for diffthis
+nnoremap <silent> <leader>df :diffthis<CR>
+
 "scrolling without moving the cursor
 map <S-k> <C-Y>
 map <S-J> <C-E>
@@ -18,7 +21,7 @@ autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %
 
 "leader m to compile current file
 "autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
-nnoremap <leader>m :!make<CR>
+autocmd FileType cpp nnoremap <leader>m :!make<CR>
 
 "make up down automatically go in between text blocks
 nnoremap k gk

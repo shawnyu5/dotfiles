@@ -1,7 +1,6 @@
 "COC settings
 "====================
 set hidden
-set cmdheight=2
 set updatetime=300
 
 " Use tab for trigger completion with characters ahead and navigate.
