@@ -1,4 +1,4 @@
-mod key is windows key
+mod key is alt key
 
 mod enter - opens a terminal window
 

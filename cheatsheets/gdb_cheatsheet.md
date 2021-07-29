@@ -116,6 +116,7 @@ it would pass control to GDB, as if a break point has been hit.
 
 ```bash
 gdb
+
 target remote | vgdb
 ```
 
