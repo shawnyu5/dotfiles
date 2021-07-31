@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [Folds](#folds)
 * [Window management](#window-management)
 * [Spell check](#spell-check)
 * [FZF plugin](#fzf-plugin)
@@ -34,6 +35,36 @@
     * [Opening sessions](#opening-sessions)
 
 <!-- vim-markdown-toc -->
+
+# Folds
+
+`zf#j` creates a fold from the cursor down `#` lines.
+
+`zo` open a fold
+
+`zO` opens all folds at the cursor.
+
+`zc` closes a fold
+
+`zd` deletes the fold at the cursor.
+
+`zj` moves the cursor to the next fold.
+
+`zk` moves the cursor to the previous fold.
+
+`zm` increases the fold level by one.
+
+`zM` closes all open folds.
+
+`zr` decreases the fold level by one.
+
+`zR` decreases the fold level to zero — all folds will be open.
+
+`zE` deletes all folds.
+
+`[z` move to start of open fold.
+
+`]z` move to end of open fold.
 
 # Window management
 
