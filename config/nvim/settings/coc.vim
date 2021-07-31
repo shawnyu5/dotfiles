@@ -16,9 +16,9 @@ function! s:check_back_space() abort
 endfunction
 
 "go to function definition
-nmap <leader>gd <Plug>(coc-definition)
+nmap gd <Plug>(coc-definition)
 "go to function reference
-nmap  <leader>gr <Plug>(coc-references)
+nmap  gr <Plug>(coc-references)
 
 nnoremap <F2> :CocAction<Enter>
 

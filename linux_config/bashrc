@@ -118,8 +118,6 @@ if [ -f ~/.bash_aliases ]; then
 
 fi
 
-
-
 if [ -f ~/.bash_completion ];
 then 
     . ~/.bash_completion
@@ -138,6 +136,7 @@ fi
 
 export PATH="$PATH:~/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
+
 #remap key cursor speed at startup
 if [ -f /usr/local/bin/remap ]; then	
 	/usr/local/bin/remap

@@ -18,6 +18,12 @@ source ~/.config/nvim/settings/maps.vim
 
 source ~/.config/nvim/settings/telescope.vim
 
+source ~/.config/nvim/settings/coc.vim
+
+source ~/.config/nvim/settings/markdown-preview.vim
+
+source ~/.config/nvim/settings/vim-you-autocorrect.vim
+
 "source ~/.config/nvim/settings/fzf.vim
 
 "native lsp config
@@ -29,16 +35,18 @@ source ~/.config/nvim/settings/telescope.vim
 
 "source ~/.config/nvim/settings/bash-lanuage-server.vim
 
-source ~/.config/nvim/settings/coc.vim
-
-source ~/.config/nvim/settings/markdown-preview.vim
-
-source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
 aug i3config_ft_detection
   au!
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
+
+"autosave a view upon leaving buffer and auto load view upon entering
+"augroup AutoSaveFolds
+  "autocmd!
+  "autocmd BufWinLeave * mkview
+  "autocmd BufWinEnter * silent! loadview
+"augroup END
 
 "enhanced cpp highlight settings
 "==============================

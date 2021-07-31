@@ -1,5 +1,7 @@
 "leader df for diffthis
-nnoremap <silent> <leader>df :diffthis<CR>
+nnoremap <leader>df :diffthis<CR>
+"leader do for diffoff
+nnoremap <silent> <leader>do :diffoff<CR>
 
 "scrolling without moving the cursor
 map <S-k> <C-Y>
@@ -12,6 +14,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+"Y to copy till end of line
+nnoremap Y y$
+
+"control shift for split resizing
+"nnoremap <silent> <C-]> :vertical res +2<CR>
+"nnoremap <silent> <C-[> :vertical res -2<CR>
 
 "leader s to spell check
 nnoremap <leader>s :set spell!<Enter>
@@ -47,9 +56,6 @@ nnoremap S :%s///gc<Left><Left><Left><Left>
 "nnoremap OO O<Esc>
 
 filetype plugin on
-
-"leader leader to go to the next <++> place holder
-inoremap <silent> '' <Esc>/<++><Enter>"_c4l
 
 "<leader><leader> to go to the next <++> place holder and delete that line
 nnoremap <silent> <leader><leader> /<++><Enter>"_c4l
@@ -94,7 +100,7 @@ autocmd FileType cpp autocmd BufWrite mmgg=G`m
 "paste text and auto formate
 "autocmd FileType cpp nnoremap <leader>p ]p
 
-"maping for bash file
+"bash file maps
 "==============================
 
 ";if insert if statement
@@ -102,3 +108,14 @@ autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi
 
 ";{ creates { for functions
 autocmd Filetype sh,cpp inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
+
+"leader m to excute current file
+autocmd Filetype sh nnoremap <leader>m :!./%<CR>
+
+"md\html maps
+"============================
+"'ul insert <ul></ul>
+autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>cw
+
+"'li insert <li></li>
+autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>cw
