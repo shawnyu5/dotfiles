@@ -1,3 +1,6 @@
+"esc in terminal mode to go back to normal move
+tnoremap <Esc> <C-\><C-n>
+
 "leader df for diffthis
 nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff

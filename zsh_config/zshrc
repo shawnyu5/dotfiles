@@ -5,9 +5,11 @@
 
 # Set up the prompt
 
+precmd_functions=""
+
 autoload -Uz promptinit
-promptinit
-prompt adam1
+#promptinit
+#prompt adam1
 
 setopt histignorealldups sharehistory
 
@@ -22,10 +24,21 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+export TERM="xterm-256color"
+
+#luke smith ranbow colours
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-PROMPT='%n@%m %~ %$ '
+#zsh prompt script
+#source /home/shawn/personal/zsh_config/prompt_adam1_setup.zsh
+
+#orginal
+#PROMPT="%K{blue}%n@%m%k %B%F{cyan}%(4~|...|)%3~%F{white} %# %b%f%k"
+
+#PROMPT='%~ $# '
+#PS1='%F{blue}%1~%f %# '
+
 
 # vi mode
 bindkey -v
@@ -64,8 +77,32 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+#load alias file
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+
+export PATH="$PATH:/home/shawn/scripts/template-file-creation"
+export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
 
 
+## Enable substitution in the prompt.
+#setopt prompt_subst
+
+# Config for prompt. PS1 synonym.
+#prompt='%2/ $(git_branch_name) > '
+
+#syntax highlighting. MUST BE ON THE BOTTOM OF THE FILE
+#source /home/shawn/personal/zsh_config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+#auto suggestions
+#source /home/shawn/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
@@ -87,23 +124,17 @@ alias egrep='egrep --color=auto'
 #zle -N zle-line-init
 #echo -ne '\e[5 q' # Use beam shape cursor on startup.
 #preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-#load alias file
-if [[ -f .zsh_aliases ]]; then
-    . ./.zsh_aliases
-fi
-
-export PATH="$PATH:/home/shawn/scripts/template-file-creation"
-export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
-
-#syntax highlighting. MUST BE ON THE BOTTOM OF THE FILE
-source /home/shawn/personal/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## Find and set branch name var if in git repository.
+#function git_branch_name()
+#{
+  #branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  #if [[ $branch == "" ]];
+  #then
+    #:
+  #else
+    #echo '- ('$branch')'
+  #fi
+#}
 
 # Use modern completion system
 #autoload -Uz compinit

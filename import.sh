@@ -4,13 +4,17 @@
 #---------------------------------
 
 #vim config
-cp -v ~/.config/nvim/init.vim config/nvim/init.vim
-cp -vr ~/.config/nvim/settings/ config/nvim
+cp ~/.config/nvim/init.vim config/nvim/init.vim
+cp -r ~/.config/nvim/settings/ config/nvim && echo "vim config imported"
 
 #tmux config
-cp -v ~/.tmux.conf tmux.conf
+cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
 
 #taskrc
-cp -v ~/.taskrc task_worrior/taskrc
+cp ~/.taskrc task_worrior/taskrc && echo "task config imported"
+
+#zsh config
+cp ~/.zshrc zsh_config/zshrc
+cp ~/.zsh_aliases zsh_config/zsh_aliases && echo "zsh config imported"
 
 git status

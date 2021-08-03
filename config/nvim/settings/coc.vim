@@ -16,7 +16,10 @@ function! s:check_back_space() abort
 endfunction
 
 "go to function definition
-nmap gd <Plug>(coc-definition)
+"nmap gd :tabe % \| :!echo "hello"<CR>
+"nnoremap gd :tabe % | <Plug>(coc-definition)
+nnoremap <silent> gd :call CocAction('jumpDefinition', 'tabe')<CR>
+
 "go to function reference
 nmap  gr <Plug>(coc-references)
 
