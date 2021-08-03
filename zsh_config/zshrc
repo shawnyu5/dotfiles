@@ -102,6 +102,9 @@ fi
 export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
 
+#syntax highlighting. MUST BE ON THE BOTTOM OF THE FILE
+source /home/shawn/personal/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Use modern completion system
 #autoload -Uz compinit
 #compinit

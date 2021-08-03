@@ -61,9 +61,9 @@ alias sr="source ~/.zshrc"
 #editing bashrc file via vim
 alias bashrc="nvim ~/.bashrc"
 #editing .bash_alias file
-alias bash_alias="nvim ~/.bash_aliases"
-alias zrc="nvim ~/.zshrc"
-alias zalias="nvim ~/.zsh_aliases"
+alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
+alias zrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
+alias zalias="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
 
 #opening neomutt
 alias mail="neomutt"
