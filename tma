@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #tmux completion script
 _tma() {
     TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)

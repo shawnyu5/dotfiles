@@ -1,0 +1,282 @@
+#!/bin/bash
+#----------
+
+## Last Updated: Mar 06, 2021.
+
+# ISC License:
+#    2020-2021, Mark Fernandes.
+#
+#  Permission to use, copy, modify, and/or distribute this software for any
+#  purpose with or without fee is hereby granted, provided that the above
+#  copyright notice and this permission notice appear in all copies.
+#
+#  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+#  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+#  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+#  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+#  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+#  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+#  PERFORMANCE OF THIS SOFTWARE.
+
+## Usage:
+#   - to connect by reusing cookie or by creating a new openconnect cookie use
+#         vpn -c
+#
+#   - to disconnect but keep existing valid cookie, for a future reconnect, use
+#         vpn -d
+#
+#   - to flush stored cookies and user credentials (username) and start over
+#         vpn -f
+#
+#   - to check vpn status, whether connected or disconnected, use
+#         vpn -i
+
+## Known Issues (most recent is on top):
+#  * -i (status) reports connected despite being timed-out after VPN was kept
+#    alive for more than 24 hours continuously. FIX: vpn -d or vpn -f
+#
+#  * -d (disconnect) removes tunnel but total interface count keeps increasing
+#
+#  * in order to persist cookie for future reconnect sessions, vpn -c creates
+#    vpn and remains in foreground. Using Ctrl+C to kill existing vpn session
+#    also destroys the cookie, use 'vpn -d' from a different terminal instead.
+
+## Tested:
+#  * With DUO keyfob on Arch, Debian, and Knoppix. HINT: point CSDWRAP to your
+#    local csd-wrapper.sh location or leave CSDWRAP below empty.
+
+## CONFIGURABLE VALUES ---
+
+ VPN_DIR="${HOME}/.local/vpn"
+ VPN_FAC="senecavpn.senecacollege.ca"
+ VPN_IP4="142.204.62.75"
+ VPN_STU="studentvpn.senecacollege.ca"
+ VPN_USR="hyu126@matrix.senecacollege.ca"
+
+ AUTHUSR="${VPN_DIR}/user"
+ COOKIES="${VPN_DIR}/cookies"
+ SECRETS="${VPN_DIR}/secrets"
+
+ # tested: Arch/Debian/Knoppix (CSDWRAP distro-dependent; update accordingly)
+ CSDWRAP=/usr/lib/openconnect/csd-wrapper.sh
+ [[ ! -s ${CSDWRAP} ]] && CSDWRAP=/usr/libexec/openconnect/csd-wrapper.sh
+
+ OPTIONS="--protocol=gp --no-dtls --os=linux-64 --csd-wrapper=${CSDWRAP}"
+
+##--------------------------------------------------------------------------##
+
+
+function _auth_exit () {
+    >&2 echo "ERROR! No authentication provided."
+    _cleanup
+    exit 1
+}
+
+function _cleanup () {
+  local old=$(pwd)
+
+  if [[ -d ${VPN_DIR} ]]; then
+    rm -f ${AUTHUSR} ${COOKIES} ${SECRETS}
+    cd
+    rmdir -p --ignore-fail-on-non-empty ${VPN_DIR#${HOME}/}
+    cd ${old}
+  fi
+}
+trap _cleanup SIGINT
+
+function _err_exit () {
+  if [[ $? -ne 0 ]]; then
+    >&2 echo $1
+    _cleanup
+    exit 1
+  fi
+}
+
+function _reconnect () {
+  local response='N'
+
+  read -p "$1 " response
+  case ${response} in
+    y|Y|yes|YES )
+        _cleanup
+        vpn_connect ;;
+    * ) ;;
+  esac
+}
+
+function _usage () {
+  >&2 echo "Usage: `basename $0` [-c|connect] | [-d|disconnect] | [-f|flush]"\
+           "| [-i|info]"
+  exit 1
+}
+
+function got_root () {
+  type -a openconnect > /dev/null 2>&1
+  _err_exit "ERROR! openconnect is required but not found in: ${PATH}"
+
+  if [[ `id -u` -ne 0 ]]; then
+    type -a sudo > /dev/null 2>&1
+    _err_exit "ERROR! Not root and sudo: command not found."
+
+    # BUG: _err_exit after "sudo | grep (with or without -vq)" did not work.
+    #      Keep below as is, sudo exit status and its output acts different.
+    sudo -vn 2>&1 | \grep -q 'may not'
+    if [[ $? -eq 0 ]]; then
+      >&2 echo "ERROR! Not root and user `whoami` may not run sudo."
+      exit 1
+    fi
+    sudo openconnect 2>&1 | \grep -e "is not" > /dev/null
+    if [[ $? -eq 0 ]]; then
+      >&2 echo "ERROR! Not root and user `whoami` is not in the sudoers file."
+      exit 1
+    fi
+  fi
+}
+
+function get_user () {
+  [[ ! -d ${VPN_DIR} ]] && mkdir -p ${VPN_DIR}
+  if [[ -s ${AUTHUSR} ]]; then
+    VPN_USR=$(cat ${AUTHUSR})
+  else
+    if [[ -s ${VPN_DIR}/username ]]; then
+      VPN_USR=$(cat ${VPN_DIR}/username)
+    else
+      read -p 'Username: ' VPN_USR
+      VPN_USR=$(echo ${VPN_USR} | sed 's/@.*$//' | tr -cd '[:alnum:].-' | tr 'A-Z' 'a-z')
+    fi
+    echo ${VPN_USR} > ${AUTHUSR}
+  fi
+  [[ -z ${VPN_USR} ]] && _auth_exit
+
+  if echo ${OPTIONS} | \grep -qve "${VPN_USR}"; then
+    if \grep -q "\." ${AUTHUSR}; then
+      OPTIONS="${VPN_FAC} ${OPTIONS} -u '${VPN_USR}'"
+    else
+      OPTIONS="${VPN_STU} ${OPTIONS} -u '${VPN_USR}'"
+    fi
+  fi
+}
+
+function get_pass () {
+  [[ -s ${VPN_DIR}/password ]]\
+    && AUTHPASS=$(cat ${VPN_DIR}/password)\
+    || { read -sp 'Password: ' AUTHPASS; echo ; }
+  [[ -z ${AUTHPASS} ]] && _auth_exit
+
+  if [[ -s ${AUTHUSR} ]]; then
+    if \grep -q "\." ${AUTHUSR}; then
+      read -p 'DUO1: ' DUO
+      [[ -z ${DUO} ]] && _auth_exit
+      >&2 echo ${AUTHPASS},${DUO} > ${SECRETS}
+      read -p 'DUO2: ' DUO
+      >&2 echo ${AUTHPASS},${DUO} >> ${SECRETS}
+    else
+      echo ${AUTHPASS} > ${SECRETS}
+    fi
+  fi
+}
+
+function network_restart () {
+  local scNM="systemctl restart NetworkManager"
+  local scnw="systemctl restart networking"
+  local svnm="service network-manager restart"
+
+  if type -a systemctl > /dev/null 2>&1; then
+    if systemctl status NetworkManager > /dev/null 2>&1; then
+      eval "if [[ `id -u` -eq 0 ]]; then ${scNM}; else sudo ${scNM}; fi"
+    else
+      eval "if [[ `id -u` -eq 0 ]]; then ${scnw}; else sudo ${scnw}; fi"
+    fi
+  else
+    eval "if [[ `id -u` -eq 0 ]]; then ${svnm}; else sudo ${svnm}; fi"
+  fi
+}
+
+##--------------------------------------------------------------------------##
+
+function vpn_cookie () {
+  got_root
+  _cleanup
+
+  >&2 echo "generating new cookie...."
+  [[ ! -d ${VPN_DIR} ]] && mkdir -p ${VPN_DIR}
+
+  get_user
+  get_pass
+
+  eval "openconnect --cookieonly --passwd-on-stdin ${OPTIONS}" \
+       " < ${SECRETS} > ${COOKIES}"
+
+  rm -f ${SECRETS}
+}
+
+function vpn_connect () {
+  got_root
+
+  [[ ! -s ${COOKIES} ]] && vpn_cookie
+
+  if pgrep openconnect > /dev/null; then
+    >&2 echo "...already connected."
+    return
+  fi
+
+  >&2 echo "connecting to vpn...."
+  get_user
+
+  local conn="openconnect --cookie-on-stdin ${OPTIONS} < ${COOKIES} 2>/dev/null"
+  if [[ `id -u` -eq 0 ]]; then eval ${conn}; else eval sudo ${conn}; fi
+  [[ $? -eq 1 ]] && _reconnect 'connection failed...reconnect? (y/N):'
+}
+
+function vpn_disconnect() {
+  got_root
+
+  if pgrep openconnect > /dev/null; then
+    >&2 echo "disconnecting from vpn...."
+    if [[ `id -u` -eq 0 ]]; then
+      pkill -9 openconnect 2> /dev/null
+      network_restart
+      ip route delete ${VPN_IP4} > /dev/null 2>&1
+    else
+      sudo pkill -9 openconnect 2> /dev/null
+      network_restart
+      sudo ip route delete ${VPN_IP4} > /dev/null 2>&1
+    fi
+  fi
+}
+
+function vpn_flush() {
+  got_root
+
+  >&2 echo 'flushing vpn...'
+  if pgrep openconnect > /dev/null; then
+    vpn_disconnect
+    sleep 10
+  fi
+  _cleanup
+  _reconnect 'do you want to reconnect? (y/N):'
+}
+
+function vpn_info() {
+  if pgrep openconnect > /dev/null; then
+    echo "vpn status...connected!"
+  else
+    echo "disconnected"
+  fi
+}
+
+##--------------------------------------------------------------------------##
+
+
+  umask 0077
+
+  case "$1" in
+    -c|connect      )  vpn_connect    ;;
+    -d|disconnect   )  vpn_disconnect ;;
+    -f|flush        )  vpn_flush      ;;
+    -i|info         )  vpn_info       ;;
+    -O|only_cookie  )  vpn_cookie     ;;
+    *               )  _usage         ;;
+  esac
+
+# vim: filetype=bash:nospell:textwidth=80:colorcolumn=80

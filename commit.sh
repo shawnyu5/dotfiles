@@ -12,7 +12,7 @@ fi
 
 git add -A
 git commit -m "$MESSAGE" -m "$DESCRIPTION"
-git push origin main && echo -e "\n comitted"
+git push origin main
 
 
 

@@ -1,0 +1,10 @@
+#!/bin/bash
+#purpose of this file: script for launching seneca vpn in tmux session
+#Date: 2021-07-05
+#---------------------------------
+tmux new-session -d -s "seneca_vpn"
+tmux send-keys -t 0 "vpn -c" Enter && tmux attach-session -t seneca_vpn
+
+
+
+
