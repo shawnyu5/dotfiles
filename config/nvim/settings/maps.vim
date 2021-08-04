@@ -95,7 +95,7 @@ autocmd FileType cpp inoremap <silent> 'if if (BBB)<Enter>{<Enter><++><Enter>}<E
 autocmd FileType cpp inoremap <silent> 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>?BBB<Enter>"_cw
 
 "turn a prototype into a function
-autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><Enter>{<Enter>BBB<Enter>}<Esc>?BBB<Enter>cw
+autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><Enter>{<Enter>BBB<Enter>}<Esc>?BBB<Enter>"_cw
 
 "auto indent file upon saving
 autocmd FileType cpp autocmd BufWrite mmgg=G`m
@@ -118,7 +118,11 @@ autocmd Filetype sh nnoremap <leader>m :!./%<CR>
 "md\html maps
 "============================
 "'ul insert <ul></ul>
-autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>cw
+autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>"_cw
 
 "'li insert <li></li>
-autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>cw
+autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>"_cw
+
+"autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+

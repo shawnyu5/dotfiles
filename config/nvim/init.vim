@@ -5,7 +5,7 @@
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
 "placed here for easy access
-set relativenumber
+"set relativenumber
 
 "remaping leader to space
 let mapleader =" "
@@ -15,6 +15,9 @@ source ~/.config/nvim/settings/plugin_manager.vim
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
+
+"markdown presentation setings
+"source ~/.config/nvim/settings/mdpres.vim
 
 source ~/.config/nvim/settings/telescope.vim
 

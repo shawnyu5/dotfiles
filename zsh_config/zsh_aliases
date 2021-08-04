@@ -14,6 +14,9 @@ alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
 
+#mdp no fade by default
+alias mdp="mdp -f"
+
 alias bd=". bd -si"
 
 #logout

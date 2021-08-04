@@ -5,9 +5,8 @@
 
 # Set up the prompt
 
-precmd_functions=""
 
-autoload -Uz promptinit
+#autoload -Uz promptinit
 #promptinit
 #prompt adam1
 
@@ -27,6 +26,7 @@ autoload -U colors && colors
 
 export TERM="xterm-256color"
 
+precmd_functions=""
 #luke smith ranbow colours
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
@@ -102,7 +102,7 @@ export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_pa
 
 
 #auto suggestions
-#source /home/shawn/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/shawn/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {

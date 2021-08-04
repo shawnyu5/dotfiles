@@ -114,7 +114,7 @@ at least as many or more ~ for closing.
 
 becomes
 
-~~~ {.numberLines}
+~~~~ {.numberLines}
 int main(int argc, char *argv[]) {
     printf("%s\n", "Hello world!");
 }

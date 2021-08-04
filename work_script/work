@@ -88,7 +88,6 @@ select CLASS in 'OOP' 'SYD' 'CUL'; do
         read -p "which week? (1-13)." WEEKNUMBERCUL
         cdcul
         tmux new-session -d -s cul_weekly
-        tmux send-keys -t 0 cdcul Enter
         tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
         tmux send-keys -t 0 "clear" Enter
         tmux attach-session -t cul_weekly
