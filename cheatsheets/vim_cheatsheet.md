@@ -102,14 +102,12 @@ control-p*)
 
 # Customizing vim highlighting colors
 
-go to `/usr/share/nvim/runtime/syntax/syncolor.vim` to change syntax highlighting colors
+Go to `/usr/share/nvim/runtime/syntax/syncolor.vim` to change syntax highlighting colors
 
 # Using tabs
 
-```vim:
-
+```vim
 :tabe
-
 ```
 
 open all files in tabs
@@ -119,7 +117,7 @@ open all files in tabs
 
 open a bunch of files via command line
 
-```
+```vim
 vim file1 file2 file3
 ```
 
@@ -139,8 +137,8 @@ control x + f for file name completion
 
 ### capitalization
 
-gu changes letters to lowercase
-gU changes letters to capital
+`gu` changes letters to lowercase
+`gU` changes letters to capital
 
 ## skip a block of Code
 
