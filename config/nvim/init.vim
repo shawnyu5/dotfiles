@@ -5,7 +5,7 @@
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
 "placed here for easy access
-"set relativenumber
+set relativenumber
 
 "remaping leader to space
 let mapleader =" "
