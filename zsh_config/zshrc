@@ -87,8 +87,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-export PATH="$PATH:/home/shawn/scripts/template-file-creation"
-export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
+export PATH="$PATH:$HOME/scripts/template-file-creation"
+export PATH="$PATH:$HOME/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
 
 
 ## Enable substitution in the prompt.
@@ -102,7 +102,7 @@ export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_pa
 
 
 #auto suggestions
-source /home/shawn/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
