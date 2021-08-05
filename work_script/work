@@ -101,5 +101,3 @@ select CLASS in 'OOP' 'SYD' 'CUL'; do
 
     esac
 done
-
-
