@@ -17,11 +17,12 @@ endfunction
 
 "go to function definition
 "nmap gd :tabe % \| :!echo "hello"<CR>
-"nnoremap gd :tabe % | <Plug>(coc-definition)
-nnoremap <silent> gd :call CocAction('jumpDefinition', 'tabe')<CR>
+"nnoremap <silent> gd <Plug>(coc-definition)<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gD :call CocAction('jumpDefinition', 'tabe')<CR>
 
 "go to function reference
-nmap  gr <Plug>(coc-references)
+nnoremap  gr <Plug>(coc-references)
 
 nnoremap <F2> :CocAction<Enter>
 

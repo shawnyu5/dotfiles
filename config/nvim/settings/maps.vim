@@ -1,3 +1,7 @@
+"map n when searching to always be in center of screen
+nnoremap n nzz
+nnoremap N Nzz
+
 "esc in terminal mode to go back to normal move
 tnoremap <Esc> <C-\><C-n>
 
@@ -22,8 +26,8 @@ nnoremap <C-l> <C-w>l
 nnoremap Y y$
 
 "control shift for split resizing
-"nnoremap <silent> <C-]> :vertical res +2<CR>
-"nnoremap <silent> <C-[> :vertical res -2<CR>
+nnoremap <silent> <C-Right> :vertical res +2<CR>
+nnoremap <silent> <C-Left> :vertical res -2<CR>
 
 "leader s to spell check
 nnoremap <leader>s :set spell!<Enter>

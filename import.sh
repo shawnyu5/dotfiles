@@ -13,8 +13,4 @@ cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
 #taskrc
 cp ~/.taskrc task_worrior/taskrc && echo "task config imported"
 
-#zsh config
-cp ~/.zshrc zsh_config/zshrc
-cp ~/.zsh_aliases zsh_config/zsh_aliases && echo "zsh config imported"
-
 git status

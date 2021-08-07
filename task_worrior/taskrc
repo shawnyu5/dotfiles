@@ -58,4 +58,3 @@ uda.priority.values = H,M,,L
 urgency.ududa.priority.values = H,M,,L
 urgency.uda.priority.L.coefficent=0
 urgency.uda.priority.L.coefficent=1.8
-context=school
