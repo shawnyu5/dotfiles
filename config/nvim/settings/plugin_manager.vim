@@ -1,16 +1,10 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
-if has('nvim-0.5.0')
-    "telescope
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-elseif has('nvim-0.4.3')
-    "fzf plugin
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-endif
+"telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 "native LSP
 "Plug 'neovim/nvim-lspconfig'
@@ -58,6 +52,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "matchit
 Plug 'adelarsq/vim-matchit'
 
+"fzf plugin
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 
 "vim surround
 Plug 'tpope/vim-surround'
