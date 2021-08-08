@@ -85,8 +85,18 @@ select CLASS in 'OOP' 'SYD' 'CUL'; do
     "CUL"|"3")
     {
         #echo CUL
-        read -p "which week? (1-13)." WEEKNUMBERCUL
+        read -p "which week? (1-13). For essay, enter 14: " WEEKNUMBERCUL
         cdcul
+
+        #going to essay directory
+        if [[ $WEEKNUMBERCUL == 14 ]]; then
+            tmux new-session -d -s cul_essay
+            tmux send-keys -t 0 "cd essay_2" Enter
+            tmux send-keys -t 0 "clear" Enter
+            tmux attach-session -t cul_essay:0
+            exit
+        fi
+
         tmux new-session -d -s cul_weekly
         tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
         tmux send-keys -t 0 "clear" Enter

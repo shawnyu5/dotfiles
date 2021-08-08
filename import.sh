@@ -4,8 +4,8 @@
 #---------------------------------
 
 #vim config
-cp ~/.config/nvim/init.vim config/nvim/init.vim
-cp -r ~/.config/nvim/settings/ config/nvim && echo "vim config imported"
+cp ~/.config/nvim/init.vim config/nvim/init.vim && echo "vim settings imported"
+cp -r ~/.config/nvim/settings/ config/nvim && echo "init.vim imported"
 
 #tmux config
 cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
