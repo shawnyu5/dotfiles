@@ -24,8 +24,6 @@ elseif has('nvim-0.4.3')
     source ~/.config/nvim/settings/fzf.vim
 endif
 
-source ~/.config/nvim/settings/telescope.vim
-
 source ~/.config/nvim/settings/coc.vim
 
 source ~/.config/nvim/settings/markdown-preview.vim
