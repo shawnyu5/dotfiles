@@ -110,11 +110,14 @@ autocmd FileType cpp autocmd BufWrite mmgg=G`m
 "bash file maps
 "==============================
 
-";if insert if statement
+"'if insert if statement
 autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>?BBB<Enter>"_cw
 
-";{ creates { for functions
+"'{ creates { for functions
 autocmd Filetype sh,cpp inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
+
+"'e insert echo statement
+autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
 
 "leader m to excute current file
 autocmd Filetype sh nnoremap <leader>m :!./%<CR>
