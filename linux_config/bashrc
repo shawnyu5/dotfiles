@@ -134,7 +134,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:~/scripts/template-file-creation"
+export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
 
 #remap key cursor speed at startup
