@@ -1,3 +1,6 @@
+"command to source vimrc
+command Sr :so ~/.config/nvim/init.vim
+
 "map n when searching to always be in center of screen
 nnoremap n nzz
 nnoremap N Nzz
@@ -107,14 +110,16 @@ autocmd FileType cpp autocmd BufWrite mmgg=G`m
 "paste text and auto formate
 "autocmd FileType cpp nnoremap <leader>p ]p
 
+"general programming lanuage maps
+"==========================
+"'{ creates { for functions
+autocmd Filetype sh,cpp,javascript inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
+
 "bash file maps
 "==============================
 
 "'if insert if statement
 autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>?BBB<Enter>"_cw
-
-"'{ creates { for functions
-autocmd Filetype sh,cpp inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
 
 "'e insert echo statement
 autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
@@ -133,3 +138,7 @@ autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>"_cw
 autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
 autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
 
+"js file maps
+"===========================
+"leader m to run current code in node
+autocmd FileType javascript nnoremap <leader>m :!node %<CR>

@@ -32,6 +32,8 @@ source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
 source ~/.config/nvim/settings/md_paste.vim
 
+source ~/.config/nvim/settings/vim-closetag.vim
+
 "native lsp config
 "source ~/.config/nvim/settings/lspSaga.vim
 
@@ -42,6 +44,7 @@ source ~/.config/nvim/settings/md_paste.vim
 "source ~/.config/nvim/settings/bash-lanuage-server.vim
 
 
+"set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 "auto enable spellcheck in markdown files

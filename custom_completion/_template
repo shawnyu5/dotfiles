@@ -1,0 +1,18 @@
+#compdef template
+
+#declare an array
+local subcmds
+subcmds=('-cn'
+    '-c'
+    '-q'
+    '-compile'
+    '-make'
+    '-debug'
+    '-read'
+    '-readme'
+
+    '*: :_files'
+)
+
+
+_arguments -s -S : $subcmds

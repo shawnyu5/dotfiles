@@ -16,17 +16,14 @@ function! s:check_back_space() abort
 endfunction
 
 "go to function definition
-"nmap gd :tabe % \| :!echo "hello"<CR>
-"nnoremap <silent> gd <Plug>(coc-definition)<CR>
-nmap <silent> gd <Plug>(coc-definition)
+nnoremap  gd <Plug>(coc-definition)
 nnoremap <silent> gD :call CocAction('jumpDefinition', 'tabe')<CR>
 
 "go to function reference
 nnoremap  gr <Plug>(coc-references)
-
 nnoremap <F2> :CocAction<Enter>
 
-"show documentation
+"hover
 nnoremap <silent> H :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()

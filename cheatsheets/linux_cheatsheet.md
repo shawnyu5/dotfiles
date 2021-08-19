@@ -2,7 +2,8 @@
 
 * [system commands](#system-commands)
     * [shutdown](#shutdown)
-* [bash](#bash)
+* [Command line](#command-line)
+    * [Ash completion](#ash-completion)
     * [Installing packages on command line](#installing-packages-on-command-line)
         * [To uninstall](#to-uninstall)
     * [current time and date](#current-time-and-date)
@@ -22,7 +23,18 @@ Shuts down the computer right now.
 
 By default, it waits 1 minute before shutting down
 
-# bash
+# Command line
+
+## Ash completion
+
+[Zsh completion over
+view](https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org#getting-started)
+
+[Zsh completion helper function
+manual](https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Completion-Functions)
+
+Zsh completion script examples contained in
+`/usr/share/zsh/functions/Completion/Unix`
 
 ## Installing packages on command line
 

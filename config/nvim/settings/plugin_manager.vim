@@ -68,5 +68,8 @@ Plug 'sedm0784/vim-you-autocorrect'
 "i3config highlighting
 Plug 'mboughaba/i3config.vim'
 
+"auto close html tags
+Plug 'alvan/vim-closetag'
+
 call plug#end()
 
