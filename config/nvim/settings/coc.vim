@@ -16,13 +16,6 @@ function! s:check_back_space() abort
 endfunction
 
 "go to function definition
-nnoremap  gd <Plug>(coc-definition)
-nnoremap <silent> gD :call CocAction('jumpDefinition', 'tabe')<CR>
-
-"go to function reference
-nnoremap  gr <Plug>(coc-references)
-nnoremap <F2> :CocAction<Enter>
-
 "hover
 nnoremap <silent> H :call <SID>show_documentation()<CR>
 
@@ -35,4 +28,11 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+nmap  gd <Plug>(coc-definition)
+nnoremap <silent> gD :call CocAction('jumpDefinition', 'tabe')<CR>
+
+"go to function reference
+nnoremap  gr <Plug>(coc-references)
+nnoremap <F2> :CocAction<Enter>
 
