@@ -33,6 +33,6 @@ nmap  gd <Plug>(coc-definition)
 nnoremap <silent> gD :call CocAction('jumpDefinition', 'tabe')<CR>
 
 "go to function reference
-nnoremap  gr <Plug>(coc-references)
+nmap  gr <Plug>(coc-references)
 nnoremap <F2> :CocAction<Enter>
 

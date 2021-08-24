@@ -1,5 +1,6 @@
 <!-- vim-markdown-toc GFM -->
 
+* [Clean up repo after updating .gitignore](#clean-up-repo-after-updating-gitignore)
 * [Git credentials storage](#git-credentials-storage)
 * [git init](#git-init)
 * [git status](#git-status)
@@ -19,6 +20,21 @@
 * [git clone <repositry URL> <path to clone>](#git-clone-repositry-url-path-to-clone)
 
 <!-- vim-markdown-toc -->
+
+# Clean up repo after updating .gitignore
+
+**Remember to commit everything you've changed before you do this!**
+
+```bash
+git rm -rf --cached .
+
+git add .
+```
+
+This removes all files from the repository and adds them back (this time
+respecting the rules in your `.gitignore`).
+
+[stack overflow post](https://stackoverflow.com/questions/25436312/gitignore-not-working)
 
 # Git credentials storage
 
