@@ -3,7 +3,7 @@
 * [system commands](#system-commands)
     * [shutdown](#shutdown)
 * [Command line](#command-line)
-    * [Ash completion](#ash-completion)
+    * [Zsh completion](#zsh-completion)
     * [Installing packages on command line](#installing-packages-on-command-line)
         * [To uninstall](#to-uninstall)
     * [current time and date](#current-time-and-date)
@@ -25,7 +25,7 @@ By default, it waits 1 minute before shutting down
 
 # Command line
 
-## Ash completion
+## Zsh completion
 
 [Zsh completion over
 view](https://github.com/zsh-users/zsh-completions/blob/master/zsh-completions-howto.org#getting-started)

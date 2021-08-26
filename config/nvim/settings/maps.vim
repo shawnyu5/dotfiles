@@ -93,7 +93,7 @@ autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 "============================
 
 "'c insert cout statement
-autocmd Filetype cpp inoremap <silent> 'c cout << "" << endl;<Esc>F"i
+autocmd Filetype cpp inoremap <silent> 'c cout << "" << '\n';<Esc>F"i
 
 ";if insert if statement
 autocmd FileType cpp inoremap <silent> 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>?BBB<Enter>"_cw
