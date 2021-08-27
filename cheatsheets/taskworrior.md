@@ -134,12 +134,11 @@ Switches to the selected context
 
 `task ID modify depends:OTHER_ID`
 
-      Try not to have large, long-term tasks that will sit on your list
-      forever. It can be very satisfying and motivating to complete tasks, so
-      create more, but smaller, tasks. Don't have a 'learn Japanese' task,
-      instead have a 'Complete chapter 1' task instead, it's more readily
-      achievable, and you can more easily see progress, which can be
-      motivating.
+Try not to have large, long-term tasks that will sit on your list forever. It
+can be very satisfying and motivating to complete tasks, so create more, but
+smaller, tasks. Don't have a 'learn Japanese' task, instead have a 'Complete
+chapter 1' task instead, it's more readily achievable, and you can more easily
+see progress, which can be motivating.
 
 Having a task depend on another means the dependencies will have to be complete
 before starting that task
