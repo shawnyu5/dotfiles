@@ -53,7 +53,7 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    . /home/shawn/personal/fzf_movement.sh
+    . /home/shawnyu/personal/cd_with_fzf.sh
 }
 #create a witget using function above
 zle -N cd_with_fzf
