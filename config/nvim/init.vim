@@ -12,6 +12,7 @@ let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
+"luafile ~/.config/nvim/sets.lua
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
