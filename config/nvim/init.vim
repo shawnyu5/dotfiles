@@ -88,6 +88,7 @@ let b:wstrip_trailing_max = 0
 let g:wstrip_auto = 1  
 
 let g:wstrip_highlight = 0
+
 "markdown table of contents setting
 "===================================
 let g:vmt_auto_update_on_save = 1
