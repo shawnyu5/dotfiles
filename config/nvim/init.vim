@@ -25,7 +25,7 @@ if has('nvim-0.5.0')
     luafile ~/.config/nvim/settings/tree-sitter_config.lua
 
     "toky night settings
-luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
+    luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
 
 elseif has('nvim-0.4.3')
