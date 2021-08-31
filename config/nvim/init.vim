@@ -14,8 +14,6 @@ source ~/.config/nvim/settings/plugin_manager.vim
 
 luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
-luafile ~/.config/nvim/settings/tree-sitter_config.lua
-
 "luafile ~/.config/nvim/sets.lua
 source ~/.config/nvim/settings/sets.vim
 
@@ -24,6 +22,10 @@ source ~/.config/nvim/settings/maps.vim
 if has('nvim-0.5.0')
     "load telescope settings
     source ~/.config/nvim/settings/telescope.vim
+
+    "load tree sitter settings
+    luafile ~/.config/nvim/settings/tree-sitter_config.lua
+
 elseif has('nvim-0.4.3')
     "load fzf settings
     source ~/.config/nvim/settings/fzf.vim
