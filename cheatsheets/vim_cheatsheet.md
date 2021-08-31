@@ -193,7 +193,7 @@ type `zf'<marker name>` to fold that section
 
 # run vim commands from command line
 
-to open vim and run a vim command at the same time (ie in a script). Run `vim
+To open vim and run a vim command at the same time (ie in a script). Run `vim
 +:<vim command> <file name>`
 
 # format text

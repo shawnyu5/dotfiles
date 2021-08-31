@@ -1,6 +1,6 @@
 # [Created by task 2.5.1 5/15/2021 17:22:50]
 # Taskwarrior program configuration file.
-
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
 # 'man task-sync' or 'man taskrc'
 
 # Here is an example of entries that use the default, override and blank values
@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/.task
+data.location=/mnt/c/Users/Shawn/OneDrive - Seneca/task_worrior_config
 
 # Color theme (uncomment one to use)
 #include /usr/share/taskwarrior/light-16.theme
@@ -34,24 +34,32 @@ include /usr/share/taskwarrior/dark-blue-256.theme
 report.next.columns=id,start.age,depends,priority,project,description,due.relative,tags,recur,scheduled.countdown,until.remaining,urgency
 
 report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
+report.next.labels=ID,Active,Dependency,Priority,Project,Description,Due,Tag,Recur,S,Until,Urg
+
+#active report list formate
+report.active.columns=id,start,depends.indicator,priority,project,description,tags,recur,wait,scheduled.remaining,due,until
+
+report.active.labels=ID,Started,Dependency,Priority,Project,Description,Tags,Recur,Wait,Sched,Due,Until
+
+#change active task color
+color.active=white on green
 
 #change color on calandar
 color.calendar.overdue=white on red
 color.calendar.due=color0 on green
 color.calendar.due.today=color0 on color11
-color.uda.priority.H=red
+
 
 #custom defined alias
 alias.c=context
 alias.n=none
 alias.note=annotate
-alias.denote=denotate
+alias.denote=dennotate
 alias.cal=calendar
 
 #contexts
 context.school=+seneca
 
-color.active=black on green
 
 #change urgency to high, medium, default and low
 uda.priority.values = H,M,,L
