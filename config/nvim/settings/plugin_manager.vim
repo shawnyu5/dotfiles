@@ -1,13 +1,13 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 if has('nvim-0.5.0')
     "load telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 elseif has('nvim-0.4.3')
     "load fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
