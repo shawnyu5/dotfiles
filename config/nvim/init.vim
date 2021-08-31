@@ -12,6 +12,10 @@ let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
+luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
+
+luafile ~/.config/nvim/settings/tree-sitter_config.lua
+
 "luafile ~/.config/nvim/sets.lua
 source ~/.config/nvim/settings/sets.vim
 
@@ -35,6 +39,8 @@ source ~/.config/nvim/settings/md_paste.vim
 
 source ~/.config/nvim/settings/vim-closetag.vim
 
+"source ~/.config/nvim/settings/gruv-box_settings.vim
+
 "native lsp config
 "source ~/.config/nvim/settings/lspSaga.vim
 
@@ -43,7 +49,6 @@ source ~/.config/nvim/settings/vim-closetag.vim
 "luafile ~/.config/nvim/settings/compe-config.lua
 
 "source ~/.config/nvim/settings/bash-lanuage-server.vim
-
 
 "set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
@@ -66,23 +71,13 @@ aug end
 "enhanced cpp highlight settings
 "==============================
 "Highlighting of class scope
-let g:cpp_class_scope_highlight = 1
+"let g:cpp_class_scope_highlight = 1
 
-"Highlighting of member variables
-"let g:cpp_member_variable_highlight = 1
+""Highlighting of member variables
+""let g:cpp_member_variable_highlight = 1
 
-"Highlighting of library concepts
-let g:cpp_concepts_highlight = 1
-
-"gruvbox settings
-"=====================
-autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-
-"improved error messages
-let g:gruvbox_improved_warnings = 1
-
-set background=dark    " Setting dark mode
+""Highlighting of library concepts
+"let g:cpp_concepts_highlight = 1
 
 "trailing white space setting
 "=============================
@@ -92,6 +87,7 @@ let b:wstrip_trailing_max = 0
 "enable stripping white space when writting to buffer
 let g:wstrip_auto = 1  
 
+let g:wstrip_highlight = 0
 "markdown table of contents setting
 "===================================
 let g:vmt_auto_update_on_save = 1

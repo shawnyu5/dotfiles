@@ -1,6 +1,8 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 if has('nvim-0.5.0')
     "load telescope
     Plug 'nvim-lua/popup.nvim'
@@ -45,7 +47,8 @@ Plug 'tweekmonster/wstrip.vim'
 
 "vim color scheme
 "Plug 'morhetz/gruvbox'
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "block commenting
 Plug 'preservim/nerdcommenter'
