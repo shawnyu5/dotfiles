@@ -8,11 +8,16 @@ if has('nvim-0.5.0')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 elseif has('nvim-0.4.3')
     "load fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
+    "enhanced cpp highlighting
+    Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'gruvbox-community/gruvbox'
 endif
 
 "native LSP
@@ -47,8 +52,6 @@ Plug 'tweekmonster/wstrip.vim'
 
 "vim color scheme
 "Plug 'morhetz/gruvbox'
-"Plug 'gruvbox-community/gruvbox'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "block commenting
 Plug 'preservim/nerdcommenter'
@@ -56,8 +59,6 @@ Plug 'preservim/nerdcommenter'
 "vim maxmizer
 Plug 'szw/vim-maximizer'
 
-"enhanced cpp highlighting
-Plug 'octol/vim-cpp-enhanced-highlight'
 
 "matchit
 Plug 'adelarsq/vim-matchit'

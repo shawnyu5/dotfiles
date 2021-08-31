@@ -12,23 +12,28 @@ let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
-luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
-
 "luafile ~/.config/nvim/sets.lua
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
 
 if has('nvim-0.5.0')
-    "load telescope settings
+    "telescope settings
     source ~/.config/nvim/settings/telescope.vim
 
-    "load tree sitter settings
+    "tree sitter settings
     luafile ~/.config/nvim/settings/tree-sitter_config.lua
+
+    "toky night settings
+luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
+
 
 elseif has('nvim-0.4.3')
     "load fzf settings
     source ~/.config/nvim/settings/fzf.vim
+
+    "load gruvbox settings
+    source ~/.config/nvim/settings/gruv-box_settings.vim
 endif
 
 source ~/.config/nvim/settings/coc.vim
@@ -41,7 +46,6 @@ source ~/.config/nvim/settings/md_paste.vim
 
 source ~/.config/nvim/settings/vim-closetag.vim
 
-"source ~/.config/nvim/settings/gruv-box_settings.vim
 
 "native lsp config
 "source ~/.config/nvim/settings/lspSaga.vim
