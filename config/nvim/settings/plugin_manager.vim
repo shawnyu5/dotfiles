@@ -13,7 +13,6 @@ elseif has('nvim-0.4.3')
 
 endif
 
-Plug 'floobits/floobits-neovim'
 "native LSP
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'hrsh7th/nvim-compe'
