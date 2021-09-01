@@ -144,3 +144,7 @@ autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<
 "===========================
 "leader m to run current code in node
 autocmd FileType javascript nnoremap <leader>m :!node %<CR>
+
+"python file maps
+"==============
+autocmd FileType python inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
