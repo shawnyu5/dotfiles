@@ -9,3 +9,6 @@ cp -r config/nvim/settings ~/.config/nvim/ && echo "nvim settings directory expo
 
 #tmux.conf
 cp  tmux.conf ~/.tmux.conf && echo "tmux config exported"
+
+#task worrior config
+cp task_worrior/taskrc  ~/.taskrc && echo "task config exported"
