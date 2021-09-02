@@ -27,6 +27,9 @@ if has('nvim-0.5.0')
     "toky night settings
     luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
+    "lightline settings to fit tokyo night
+    source ~/.config/nvim/settings/markdown-preview.vim
+
 
 elseif has('nvim-0.4.3')
     "load fzf settings
@@ -37,8 +40,6 @@ elseif has('nvim-0.4.3')
 endif
 
 source ~/.config/nvim/settings/coc.vim
-
-source ~/.config/nvim/settings/markdown-preview.vim
 
 source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
