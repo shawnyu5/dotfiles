@@ -30,6 +30,7 @@ if has('nvim-0.5.0')
     "lightline settings to fit tokyo night
     source ~/.config/nvim/settings/markdown-preview.vim
 
+    source ~/.config/nvim/settings/lightLine_settings.vim
 
 elseif has('nvim-0.4.3')
     "load fzf settings

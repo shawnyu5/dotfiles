@@ -1,4 +1,4 @@
-vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = "one"
 vim.g.tokyonight_colors = { comment = "#737373" }
 
 
