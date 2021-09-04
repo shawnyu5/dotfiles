@@ -11,8 +11,12 @@
 #prompt adam1
 
 setopt histignorealldups sharehistory
+#allow for piping to /dev/null
+unsetopt multios
 
-export TERM="xterm-256color"
+#export TERM="screen-256color"
+
+fpath=(~/personal/custom_completion $fpath)
 
 # allow auto completion
 autoload -U compinit
@@ -51,6 +55,15 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
+function cd_with_fzf
+{
+    cd $HOME && cd "$(find . -not -path "*/\.*" -name "*" | fzf --bind="space:toggle-preview")" && pwd && ls
+}
+#create a witget using function above
+zle -N cd_with_fzf
+#bind control f to witget
+bindkey '^F' cd_with_fzf
+
 #if remaps.sh exists, call it
 if [[ -f ~/remaps.sh ]]; then
     ~/remaps.sh
@@ -87,8 +100,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-export PATH="$PATH:$HOME/scripts/template-file-creation"
-export PATH="$PATH:$HOME/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
+export PATH="$PATH:/home/shawn/scripts/template-file-creation"
+export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:/home/shawn/personal/work_script/:~/scripts/in_path/"
 
 
 ## Enable substitution in the prompt.
@@ -102,7 +115,7 @@ export PATH="$PATH:$HOME/personal/task_worrior/:/home/shawn/scripts/for_path/vpn
 
 
 #auto suggestions
-source $HOME/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/shawn/personal/linux_config/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
