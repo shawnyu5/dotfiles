@@ -35,10 +35,12 @@ nnoremap <silent> <C-Right> :vertical res +2<CR>
 nnoremap <silent> <C-Left> :vertical res -2<CR>
 
 "leader s to spell check
-nnoremap <leader>s :set spell!<Enter>
+nnoremap <leader>s :set spell!<CR>
 
 "print current date
-autocmd FileType markdown nnoremap <leader>d i# BBB <Esc>:put =strftime('%a %d %b %Y')<Enter>i<Backspace><Esc>A<Enter><Enter><++><Enter><Esc>/BBB<Enter>"_cw
+autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR><++><CR><Esc>/BBB<CR>"_cw
+
+autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR>Dear journal,<CR><CR><++><Esc>/BBB<CR>"_cw
 
 "leader m to compile current file
 "autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
@@ -70,7 +72,7 @@ nnoremap S :%s///gc<Left><Left><Left><Left>
 filetype plugin on
 
 "<leader><leader> to go to the next <++> place holder and delete that line
-nnoremap <silent> <leader><leader> /<++><Enter>"_c4l
+nnoremap <silent> <leader><leader> /<++><CR>"_c4l
 
 "leader fs to quick fix spelling
 nmap <silent> [s <Plug>VimyouautocorrectJump
@@ -84,12 +86,12 @@ autocmd bufreadpre OOP_345_notes.md nnoremap <silent> e :norm! df<Space>VguVyI*<
 
 "80>kb^[A)^[hhvi(:s/\%V /-/g^M
 "df VguVyI* [^[A](#^[pi<80>kb^[A)^[hhvi(:s/\%V /-/g^M
-autocmd FileType markdown nnoremap <leader>t :GenTocGFM<Enter>A<Enter><Esc>?<!<Enter>nkdd
+autocmd FileType markdown nnoremap <leader>t :GenTocGFM<CR>A<CR><Esc>?<!<CR>nkdd
 
 "maps for md files
 "=====================
 "create link
-autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
+autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<CR>"_cw
 "
 "maps for cpp file
 "============================
@@ -98,13 +100,13 @@ autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<Enter>"_cw
 autocmd Filetype cpp inoremap <silent> 'c cout << "" << '\n';<Esc>F"i
 
 ";if insert if statement
-autocmd FileType cpp inoremap <silent> 'if if (BBB)<Enter>{<Enter><++><Enter>}<Enter><Esc>?BBB<Enter>"_cw
+autocmd FileType cpp inoremap <silent> 'if if (BBB)<CR>{<CR><++><CR>}<CR><Esc>?BBB<CR>"_cw
 
 ";class insert a class
-autocmd FileType cpp inoremap <silent> 'class class BBB<Enter>{<Enter><BS>private:<Enter><++><Enter>public:<Enter><BS><++><Enter>};<Esc>?BBB<Enter>"_cw
+autocmd FileType cpp inoremap <silent> 'class class BBB<CR>{<CR><BS>private:<CR><++><CR>public:<CR><BS><++><CR>};<Esc>?BBB<CR>"_cw
 
 "turn a prototype into a function
-autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><Enter>{<Enter>BBB<Enter>}<Esc>?BBB<Enter>"_cw
+autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><CR>{<CR>BBB<CR>}<Esc>?BBB<CR>"_cw
 
 "auto indent file upon saving
 autocmd FileType cpp autocmd BufWrite mmgg=G`m
@@ -115,13 +117,13 @@ autocmd FileType cpp autocmd BufWrite mmgg=G`m
 "general programming lanuage maps
 "==========================
 "'{ creates { for functions
-autocmd Filetype sh,cpp,javascript inoremap <silent> '{ {<Enter>BBB<Enter>}<Enter><Esc>?BBB<Enter>"_cw
+autocmd Filetype sh,cpp,javascript inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
 
 "bash file maps
 "==============================
 
 "'if insert if statement
-autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<Enter><++><Enter>fi<Enter><Esc>?BBB<Enter>"_cw
+autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<CR><++><CR>fi<CR><Esc>?BBB<CR>"_cw
 
 "'e insert echo statement
 autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
