@@ -14,3 +14,12 @@ cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
 cp ~/.taskrc task_worrior/taskrc && echo "task config imported"
 
 git status
+
+read -p "Push to gitHub? [Y/n]: " CHOICE
+
+if [[ $CHOICE == 'y' || $CHOICE == 'Y' ]]; then
+    git add -A
+    git commit
+    git push origin main
+fi
+

@@ -3,6 +3,8 @@
 #Date: 2021-05-21
 #---------------------------------
 
+git pull
+
 #vim config
 cp config/nvim/init.vim ~/.config/nvim/init.vim && echo "init.vim exported"
 cp -r config/nvim/settings ~/.config/nvim/ && echo "nvim settings directory exported"
