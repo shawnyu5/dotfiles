@@ -61,10 +61,8 @@ alias v="nvim"
 #updating the source bashrc file
 alias sr="source ~/.zshrc"
 
-#editing bashrc file via vim
-alias bashrc="nvim ~/.bashrc"
-
 #editing .bash_alias file
+alias bashrc="nvim ~/.bashrc"
 alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
 alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
 alias zsh_aliases="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
@@ -76,22 +74,25 @@ alias mail="neomutt"
 alias starwars="telnet towel.blinkenlights.nl"
 
 #go to oop directory
-alias cdoop="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
+alias cdpsy="cd ~/seneca/semester_4/PSY222"
 
 #going to CUL directory
-alias cdcul="cd ~/seneca/semester_3/CUL_485_movies_and_morality"
+#alias cdcul="cd ~/seneca/semester_3/CUL_485_movies_and_morality"
 
 #going to SYD directory
-alias cdsyd="cd ~/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
+#alias cdsyd="cd ~/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
 
-#syd notes
-alias sydnotes="cd ~/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/; nvim SYD_366_notes.md; cd - > /dev/null"
+# PSY222 notes
+alias psynotes="cd ~/seneca/semester_4/PSY222/PSY222_notes.md"
 
 #oop notes
-alias oopnotes="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
+#alias oopnotes="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
 
 #cul notes
-alias culnotes="cd ~/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
+#alias culnotes="cd ~/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
+
+#move commands
+alias mvpsy=". ~/personal/seneca_movements/seneca_movements.sh ~/seneca/semester_4/PSY222"
 
 #auto complete in tmux
 alias tma="tmux attach -t $1"
@@ -173,31 +174,6 @@ function cheat
 
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
-
-#move functions
-
-function mvoop
-{
-    DEST=$(ls -d /home/shawn/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/*/ | fzf)
-    mv -v "$@" "$DEST"
-    cd "$DEST"
-}
-
-function mvsyd
-{
-
-    DEST=$(ls -d /home/shawn/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/*/ | fzf)
-    mv -v "$@" "$DEST"
-    cd "$DEST"
-}
-
-function mvcul
-{
-
-    DEST=$(ls -d /home/shawn/seneca/semester_3/CUL_485_movies_and_morality/*/ | fzf)
-    mv -v "$@" "$DEST"
-    cd "$DEST"
-}
 
 
 function oopDeclaration

@@ -57,7 +57,7 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    cd $HOME && cd "$(find . -not -path "*/\.*" -name "*" | fzf --bind="space:toggle-preview")" && pwd && ls
+    cd $HOME && cd "$(find . -not -path "*/\.*" -name "*" | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
 }
 #create a witget using function above
 zle -N cd_with_fzf
