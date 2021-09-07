@@ -46,6 +46,10 @@ autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime(
 "autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
 autocmd FileType cpp nnoremap <leader>m :!make<CR>
 
+" source current file in init.vim
+autocmd BufWinEnter init.vim nnoremap <leader>m :so %<CR>
+
+
 "make up down automatically go in between text blocks
 nnoremap k gk
 nnoremap j gj

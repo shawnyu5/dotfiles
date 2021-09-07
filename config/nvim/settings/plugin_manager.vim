@@ -3,6 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'Yggdroot/indentLine'
 
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim' "ranger dependicies
+
+
 if has('nvim-0.5.0')
     "load telescope
     Plug 'nvim-lua/popup.nvim'
