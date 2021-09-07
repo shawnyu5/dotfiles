@@ -3,9 +3,12 @@
 #Date: 2021-06-16
 #---------------------------------
 
-cp -v ~/.bashrc ./bashrc && echo "bashrc imported"
+cp ~/.bashrc ./bashrc && echo "bashrc imported"
 
-cp -v ~/.bash_aliases ./bash_aliases && echo "bash_aliases imported"
+cp ~/.bash_aliases ./bash_aliases && echo "bash aliases imported"
 
+cp ~/.zshrc zshrc && echo "zshrc imported"
+
+cp ~/.zsh_aliases zsh_aliases && echo "zsh aliases imported"
 
 
