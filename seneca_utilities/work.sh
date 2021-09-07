@@ -4,19 +4,19 @@
 #---------------------------------
 
 shopt -s expand_aliases
-source ~/.bash_aliases
+source ~/.zsh_aliases
 
 #read -p "What class will this be? (1.OOP, 2.SYD, 3.CUL) " CLASS
 
-select CLASS in 'OOP' 'SYD' 'CUL'; do
+select CLASS in 'WEB' 'DBS' 'PSY'; do
 
     case $CLASS in
-        "OOP"|"1")
-        {
+        "WEB"|"1")
+
             read -p "which workshop? (1-9) For final project, enter 10: " WORKSHOPNUMBER
 
-            #cd to oop directory
-            cdoop
+            #cd to web directory
+            cdweb
 
             #make sure workshop number is less than 9
             if [[ $WORKSHOPNUMBER -le 9 ]]; then
@@ -55,10 +55,10 @@ select CLASS in 'OOP' 'SYD' 'CUL'; do
     tmux attach-session -t $SESSION_NAME:0
 
     break
-};;
+;;
 
-    "SYD"|"2")
-    {
+    "DBS"|"2")
+
         #echo SYD
         read -p "1.lab or 2.week: " DEST
 
@@ -80,34 +80,24 @@ select CLASS in 'OOP' 'SYD' 'CUL'; do
         fi
         break
 
-    };;
+    ;;
 
-    "CUL"|"3")
-    {
+    "PSY"|"3")
         #echo CUL
-        read -p "which week? (1-13). For essay, enter 14: " WEEKNUMBERCUL
-        cdcul
+        read -p "which week? (1-13)." WEEKNUMBER
+        cdpsy
 
-        #going to essay directory
-        if [[ $WEEKNUMBERCUL == 14 ]]; then
-            tmux new-session -d -s cul_essay
-            tmux send-keys -t 0 "cd essay_2" Enter
-            tmux send-keys -t 0 "clear" Enter
-            tmux attach-session -t cul_essay:0
-            exit
-        fi
-
-        tmux new-session -d -s cul_weekly
+        tmux new-session -d -s psy_week_${WEEKNUMBER}
         tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
         tmux send-keys -t 0 "clear" Enter
-        tmux attach-session -t cul_weekly
+        tmux attach-session -t psy_week_${WEEKNUMBER}
         break
-    };;
+    ;;
 
     *)
-    {
+
         echo "invalid choice"
-    }
+
 
     esac
 done
