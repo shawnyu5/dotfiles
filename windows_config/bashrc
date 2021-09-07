@@ -105,10 +105,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
-
 fi
-
-
 
 if [ -f ~/.bash_completion ];
 then
@@ -125,8 +122,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#home directory
-#cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/
 
 export PATH="$PATH:/mnt/c/Users/Shawn/OneDrive - Seneca/fun/bash/template-file-creation:/home/shawnyu/personal/task_worrior:~/personal/work_script/"
 

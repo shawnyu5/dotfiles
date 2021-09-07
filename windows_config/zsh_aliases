@@ -1,0 +1,223 @@
+#          _             _ _           
+#  _______| |__     __ _| (_) __ _ ___ 
+# |_  / __| '_ \   / _` | | |/ _` / __|
+#  / /\__ \ | | | | (_| | | | (_| \__ \
+# /___|___/_| |_|  \__,_|_|_|\__,_|___/
+
+#deleteing start alias
+unalias start 2> /dev/null
+
+#opening current journal file
+#
+alias journal="bash /mnt/c/Users/Shawn/'OneDrive - Seneca'/.journal/journal.sh"
+
+#g for git
+alias g="git"
+alias ga="git add -A"
+alias gs="git status"
+alias gpush="git push"
+alias gpull="git pull"
+
+#mdp no fade by default
+alias mdp="mdp -f"
+
+#quickly get to the download directory
+alias dl="cd /mnt/c/Users/Shawn/Downloads/; ls -lt | head -7"
+
+alias bd=". bd -si"
+
+#c for clear
+alias c="clear"
+
+#running valgrind
+alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes"
+
+#make copying always recursive
+alias cp="cp -r"
+
+#make zip always recursive
+alias zip="zip -r"
+
+# make rm-r always prompt
+alias rm="rm -I"
+
+#opening github desktop
+alias gitd="github-desktop &"
+
+#shortcut to google chrome
+#alias chrome="google-chrome"
+
+#show battery percentage
+alias battery="acpi"
+
+#opening vimrc
+alias vimrc="cd ~/.config/nvim/; nvim init.vim; cd - > /dev/null"
+
+#have ls list directories first
+alias ls="ls --group-directories-first --color=auto"
+
+#r to open ranger
+alias r="ranger"
+
+#v for nvim
+alias v="nvim"
+
+#updating the source bashrc file
+alias sr="source ~/.zshrc"
+
+#editing bashrc file via vim
+alias bashrc="nvim ~/.bashrc"
+
+#editing .bash_alias file
+alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
+
+alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
+alias zsh_alias="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
+
+#opening neomutt
+alias mail="neomutt"
+
+#watch starwars
+alias starwars="telnet towel.blinkenlights.nl"
+
+#going to OOP directory
+alias cdoop="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++; "
+
+#going to SYD directory
+alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1;"
+
+#going to CUL directory
+alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality;"
+
+#SYD notes
+alias sydnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; nvim SYD_366_notes.md; cd - > /dev/null"
+
+#oop notes
+alias oopnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
+
+#CUL notes
+alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
+
+#going to senece onedrive directory
+alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
+
+#auto complete in tmux
+alias tma="tmux attach -t $1"
+if [ -f ~/personal/tma ]; then
+    . ~/personal/tma > /dev/null
+fi
+
+#taskworrior aliases
+#=====================================
+
+#t for task
+alias t="task"
+
+#editing taskrc
+alias trc="nvim ~/.taskrc"
+
+#==========================
+
+#for starting any file(s)
+function start
+{
+    if [ $# -eq 0 ]; then
+        echo "Opening current directory..."
+        xdg-open . & 2> /dev/null
+    else
+        for current in "$@"
+        do
+            echo "opening $current..."
+            xdg-open "$current" &2> /dev/null
+
+        done
+    fi
+}
+compdef _gnu_generic start=ls
+
+#to open all .h and .cpp files in a new vs code window
+function codea
+{
+	cpp=(`find ./ -maxdepth 1 -name "*.cpp"`)
+	h=(`find ./ -maxdepth 1 -name "*.h"`)
+
+	if [ ${#cpp[@]} -gt 0 ]; then
+		code -n ${cpp[*]}
+	else
+		echo 'no .cpp file(s) present'
+	fi
+
+	if [ ${#h[@]} -gt 0 ]; then
+		code ${h[*]}
+	else
+		echo 'no .h file(s) found'
+
+	fi
+
+}
+
+#creates a Excute bash file to first compile the program files being passed in as arguments
+function excfile
+{
+	read -p "name of the output file: " OUTPUT
+        autoexpect "$1"
+
+        #replace the last line with interact
+        cp script.exp script.exp.tmp
+        sed '$ d' script.exp.tmp > script.exp
+        rm -f script.exp.tmp >/dev/null
+
+        echo "interact" >> script.exp
+
+        mv script.exp "autocompile_$OUTPUT".exp && echo -e "\nscript.exp renamed to autocompile_$OUTPUT.exp"
+
+}
+
+#edit any cheatsheet in cheatsheet directory
+function cheat
+{
+	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
+
+}
+
+#make a directory and go into that directory
+function mkdirin { mkdir $1 && cd $1; }
+
+#move functions
+
+function mvoop
+{
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
+}
+
+function mvsyd
+{
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
+}
+
+function mvcul
+{
+
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/CUL_485_movies_and_morality/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
+}
+
+
+
+function oopDeclaration
+{
+	cal
+	read -p "Date: " DATE
+	for CURRENT in $@; do
+		mv $CURRENT $CURRENT.tmp
+		echo -e "/*Name: Shawn Yu\nStudent number: 160568192\nEmail: hyu126@myseneca.ca\nDate: $DATE\nI have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.*/" > $CURRENT
+		cat $CURRENT.tmp >> $CURRENT && echo "declaration added to $CURRENT"
+		rm $CURRENT.tmp
+	done
+}
+

@@ -8,6 +8,15 @@ unalias start 2> /dev/null
 
 alias bd=". bd -si"
 
+#g for git 
+alias g="git"
+alias gs="git status"
+alias ga="git add -A"
+alias gpush="git push"
+alias gpull="git pull"
+
+alias c="clear"
+
 #r for ranger
 alias r="ranger"
 
@@ -17,38 +26,29 @@ alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --tra
 #opening notepad ++
 alias np="/mnt/c/Program\ Files/Notepad++/notepad++.exe"
 
-#opening notepad++ in a new instance
-alias np-n="/mnt/c/Program\ Files/Notepad++/notepad++.exe--multilnst"
-
 #going to OOP directory
-alias cdoop="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++; ls"
+alias cdoop="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++; "
 
 #going to SYD directory
-alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; ls"
+alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1;"
 
 #going to CUL directory
-alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality; ls"
+alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality;"
 
 #SYD notes
-alias sydnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; vim SYD_366_notes.md; cd - > /dev/null"
+alias sydnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; nvim SYD_366_notes.md; cd - > /dev/null"
 
 #oop notes
-alias oopnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; vim OOP_345_notes.md; cd - > /dev/null"
+alias oopnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
 
 #CUL notes
-alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; vim CUL_485_notes.md; cd - > /dev/null"
+alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
 
 #going to senece onedrive directory
 alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
 
-#opening chrome web browser
-#alias chrome="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
-
-#setting vim to open neovim
-alias vim="nvim"
-
-#going to github directory
-alias cdgit="cd /mnt/c/Users/Shawn/Documents/GitHub"
+##setting vim to open neovim
+#alias vim="nvim"
 
 #make copying always recursive
 alias cp="cp -r"
@@ -63,13 +63,13 @@ alias rm="rm -I"
 alias gitd="/mnt/c/Users/Shawn/AppData/Local/GitHubDesktop/GitHubDesktop.exe"
 
 #opening vimrc
-alias vimrc="vim ~/.config/nvim/init.vim"
+alias vimrc="nvim ~/.config/nvim/init.vim"
 
 #opening ivm
-alias v="vim"
+alias v="nvim"
 
 #opening taskrc
-alias trc="vim ~/.taskrc"
+alias trc="nvim ~/.taskrc"
 
 #to open typora
 function typora
@@ -88,17 +88,11 @@ alias sr="source ~/.bashrc"
 #moving to repos
 alias repos="cd /mnt/c/Users/Shawn/source/repos"
 
-##opening WEB notes
-#alias webnotes="echo opening WEB notes...; cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/WEB_222_Web_Programming_Principles; xdg-open 'WEB 222 notes.docx' 2> /dev/null; cd -"
-
-##opening politics notes
-#alias cannotes="echo opening politics notes...; cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/CAN_190_Canadian_Politics; xdg-open 'CAN 190 politics notes.docx' 2> /dev/null; cd -"
-
 #editing bashrc file via vim
-alias bashrc="vim ~/.bashrc"
+alias bashrc="nvim ~/.bashrc"
 
 #editing .bash_alias file
-alias bash_alias="vim ~/.bash_aliases"
+alias bash_alias="nvim ~/.bash_aliases"
 
 #opening outlook
 alias outlook="echo opening outlook...; /mnt/c/Program\ Files/Microsoft\ Office/root/Office16/OUTLOOK.EXE;"
@@ -175,88 +169,41 @@ function mkdirin { mkdir $1 && cd $1; }
 
 #move functions
 
-function general_move
-{
-	#echo "general move sec arugment is $2"
-	#echo "everything else is $@"
-	mv -v "$@"
-
-}
-
 function mvoop
 {
-	if [[ $1 == "-"* ]]; then
-#		#echo "if entered"
-		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
-		shift 1
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/$DEST"
-	else
-		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++"
-		general_move "$@" "$DEST"
-		cd "$DEST"
-	fi
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
 }
 
 function mvsyd
 {
-	if [[ $1 == "-"* ]]; then
-		#echo "if entered"
-		#echo "arugment 1 is $1"
-		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
-		shift 1
-		#echo "dest is $DEST"
-		#echo "everything else is $@"
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
-
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/$DEST"
-	else
-		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
-		general_move "$@" "$DEST"
-		cd "$DEST"
-	fi
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
 }
 
 function mvcul
 {
-	if [[ $1 == "-"* ]]; then
-#		#echo "if entered"
-		DEST=$(echo "$1" | sed 's/-//') #remove - in destination path
-		shift 1
-		general_move "$@" "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
 
-		cd "/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality/$DEST"
-	else
-		#echo "else entered"
-		DEST="/mnt/c/Users/Shawn/OneDrive - Seneca/seneca/semester_3/CUL_485_movies_and_morality"
-		general_move "$@" "$DEST"
-		cd "$DEST"
-	fi
+    DEST=$(ls -d /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/CUL_485_movies_and_morality/*/ | fzf)
+    mv -v "$@" "$DEST"
+    cd "$DEST"
 }
+
 
 function oopDeclaration
 {
-    declaration="/mnt/c/Users/Shawn/OneDrive - Seneca/FUN/bash/oop_declaration/OOPDeclaration.txt"
+	cal
+	read -p "Date: " DATE
+	for CURRENT in $@; do
 
+		mv $CURRENT $CURRENT.tmp
+		echo -e "/*Name: Shawn Yu\nStudent number: 160568192\nEmail: hyu126@myseneca.ca\nDate: $DATE\nI have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.*/" > $CURRENT
+		cat $CURRENT.tmp >> $CURRENT && echo "declaration added to $CURRENT"
+		rm $CURRENT.tmp
 
-    for current in "$@"
-    do
-        touch tmp.txt
-        #put the dest file content into tmp file
-        cat "$current" > tmp.txt
-
-        #adding header
-        cat "$declaration" > "$current"
-
-        #putting orginal file back after header.
-        cat tmp.txt >> "$current"
-        rm tmp.txt >/dev/null
-
-        echo "declaration added to file: $current"
-    done
-
+	done
 }
 
 #creates a Excute bash file to first compile the program files being passed in as arguments
@@ -296,8 +243,6 @@ function updatefile
 #function vcheat
 #{
 #	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs mdless
-#}
-
 #open cheatsheet in vim
 function cheat
 {
