@@ -11,8 +11,12 @@
 #prompt adam1
 
 setopt histignorealldups sharehistory
+#allow for piping to /dev/null
+unsetopt multios
 
-export TERM="xterm-256color"
+#export TERM="screen-256color"
+
+fpath=(~/personal/custom_completion $fpath)
 
 # allow auto completion
 autoload -U compinit
@@ -53,7 +57,7 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    . /home/shawnyu/personal/cd_with_fzf.sh
+    cd $HOME && cd "$(find . -not -path "*/\.*" -name "*" | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
 }
 #create a witget using function above
 zle -N cd_with_fzf
@@ -111,7 +115,7 @@ export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_pa
 
 
 #auto suggestions
-source /home/shawn/personal/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/shawn/personal/linux_config/zsh_config/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
