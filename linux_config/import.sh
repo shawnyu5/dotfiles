@@ -7,8 +7,8 @@ cp ~/.bashrc ./bashrc && echo "bashrc imported"
 
 cp ~/.bash_aliases ./bash_aliases && echo "bash aliases imported"
 
-cp ~/.zshrc ./zsh_config/zshrc && echo "zshrc imported"
+cp ~/.zshrc zshrc && echo "zshrc imported"
 
-cp ~/.zsh_aliases ./zsh_config/zsh_aliases && echo "zsh aliases imported"
+cp ~/.zsh_aliases zsh_aliases && echo "zsh aliases imported"
 
 
