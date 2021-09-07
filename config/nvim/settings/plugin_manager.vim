@@ -1,6 +1,7 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'Yggdroot/indentLine'
 
 if has('nvim-0.5.0')
     "load telescope
