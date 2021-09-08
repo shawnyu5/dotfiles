@@ -18,6 +18,7 @@ git status
 read -p "Push to gitHub? [Y/n]: " CHOICE
 
 if [[ $CHOICE == 'y' || $CHOICE == 'Y' ]]; then
+    git pull
     git add -A
     git commit
     git push origin main
