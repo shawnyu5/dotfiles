@@ -84,7 +84,7 @@ select CLASS in 'WEB' 'DBS' 'PSY'; do
 
     "PSY"|"3")
         #echo CUL
-        read -p "which week? (1-13)." WEEKNUMBER
+        read -p "which week? (1-13): " WEEKNUMBER
         cdpsy
 
         tmux new-session -d -s psy_week_${WEEKNUMBER}
