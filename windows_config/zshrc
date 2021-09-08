@@ -10,6 +10,9 @@
 #promptinit
 #prompt adam1
 
+# allow for exporting to /dev/null
+unsetopt multios
+
 setopt histignorealldups sharehistory
 
 export TERM="xterm-256color"
@@ -23,8 +26,6 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-
-export TERM="xterm-256color"
 
 precmd_functions=""
 #luke smith ranbow colours
@@ -96,7 +97,7 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-export PATH="$PATH:$HOME/personal/task_worrior/:$HOME/personal/work_script/:/mnt/c/Users/Shawn/OneDrive - Seneca/fun/bash/template-file-creation"
+export PATH="$PATH:$HOME/personal/task_worrior/:/mnt/c/Users/Shawn/OneDrive - Seneca/fun/bash/template-file-creation"
 
 
 ## Enable substitution in the prompt.
