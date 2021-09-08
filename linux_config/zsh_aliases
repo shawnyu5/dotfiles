@@ -86,6 +86,7 @@ alias cdpsy="cd ~/seneca/semester_4/PSY222"
 alias psynotes="cd ~/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
 
 alias work="~/personal/seneca_utilities/work.sh"
+
 #oop notes
 #alias oopnotes="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
 
