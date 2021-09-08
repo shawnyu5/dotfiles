@@ -63,6 +63,9 @@ source ~/.config/nvim/settings/vim-closetag.vim
 "set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
+" disable indentLine plugin in json and markdown files
+let g:indentLine_fileTypeExclude = ['json', 'markdown']
+
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
 

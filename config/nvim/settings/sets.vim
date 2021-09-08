@@ -1,3 +1,5 @@
+" not hide markdown special symbols
+set conceallevel=0
 set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000
