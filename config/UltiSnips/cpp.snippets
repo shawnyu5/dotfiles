@@ -1,0 +1,20 @@
+snippet class "creates a cpp class" b
+class $1
+{
+private:
+	<++>
+public:
+	$1()
+	{}
+	${2:DEFAULT}
+	<++>
+};
+endsnippet
+
+snippet lamb "create a lambda"
+auto $1 = [<++>](<++>)
+{
+	<++>
+};
+endsnippet
+
