@@ -92,11 +92,11 @@ alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_48
 # PSY222 notes
 alias psynotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
 
-#oop notes
-alias oopnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
+# web notes
+alias webnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322; nvim WEB322_notes.md; cd - > /dev/null"
 
 #CUL notes
-alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
+#alias culnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
 
 #going to senece onedrive directory
 alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
