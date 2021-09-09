@@ -84,14 +84,13 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias cdpsy="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222"
 
 #going to SYD directory
-alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1;"
+alias cdweb=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322;"
 
 #going to CUL directory
 alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality;"
 
 # PSY222 notes
 alias psynotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
-
 # web notes
 alias webnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322; nvim WEB322_notes.md; cd - > /dev/null"
 
