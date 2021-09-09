@@ -1,5 +1,9 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
+" Snippets engine.
+"Plug 'SirVer/ultisnips'
+" preddefined snippets
+"Plug 'honza/vim-snippets'
 
 Plug 'Yggdroot/indentLine'
 

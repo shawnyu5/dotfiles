@@ -12,12 +12,15 @@ let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
-source ~/.config/nvim/settings/ranger_settings.vim
-
-"luafile ~/.config/nvim/sets.lua
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
+
+"source ~/.config/nvim/settings/utilsnips_settings.vim
+
+source ~/.config/nvim/settings/ranger_settings.vim
+
+"luafile ~/.config/nvim/sets.lua
 
 if has('nvim-0.5.0')
     "telescope settings
@@ -43,6 +46,7 @@ elseif has('nvim-0.4.3')
 endif
 
 source ~/.config/nvim/settings/coc.vim
+source ~/.config/nvim/settings/coc-snippets_settings.vim
 
 source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
@@ -64,7 +68,7 @@ source ~/.config/nvim/settings/vim-closetag.vim
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 " disable indentLine plugin in json and markdown files
-let g:indentLine_fileTypeExclude = ['json', 'markdown']
+let g:indentLine_fileTypeExclude = ['json', 'markdown', 'text', 'help']
 
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell

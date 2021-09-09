@@ -33,9 +33,11 @@ nnoremap Y y$
 "control shift for split resizing
 nnoremap <silent> <C-Right> :vertical res +2<CR>
 nnoremap <silent> <C-Left> :vertical res -2<CR>
+nnoremap <silent> <C-up> :res +2<CR>
+nnoremap <silent> <C-Down> :res -2<CR>
 
 "leader s to spell check
-nnoremap <leader>s :set spell!<CR>
+"nnoremap <leader>s :set spell!<CR>
 
 "print current date
 autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR><++><CR><Esc>/BBB<CR>"_cw
@@ -100,23 +102,26 @@ autocmd Filetype markdown inoremap <silent> '[ [BBB](<++>)<Esc>?BBB<CR>"_cw
 "maps for cpp file
 "============================
 
-"'c insert cout statement
-autocmd Filetype cpp inoremap <silent> 'c cout << "" << '\n';<Esc>F"i
+augroup cpp_maps
+    autocmd!
+    "'c insert cout statement
+    autocmd Filetype cpp inoremap <silent> 'c cout << "" << '\n';<Esc>F"i
 
-";if insert if statement
-autocmd FileType cpp inoremap <silent> 'if if (BBB)<CR>{<CR><++><CR>}<CR><Esc>?BBB<CR>"_cw
+    ";if insert if statement
+    autocmd FileType cpp inoremap <silent> 'if if (BBB)<CR>{<CR><++><CR>}<CR><Esc>?BBB<CR>"_cw
 
-";class insert a class
-autocmd FileType cpp inoremap <silent> 'class class BBB<CR>{<CR><BS>private:<CR><++><CR>public:<CR><BS><++><CR>};<Esc>?BBB<CR>"_cw
+    ";class insert a class
+    "autocmd FileType cpp inoremap <silent> 'class class BBB<CR>{<CR><BS>private:<CR><++><CR>public:<CR><BS><++><CR>};<Esc>?BBB<CR>"_cw
 
-"turn a prototype into a function
-autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><CR>{<CR>BBB<CR>}<Esc>?BBB<CR>"_cw
+    "turn a prototype into a function
+    autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><CR>{<CR>BBB<CR>}<Esc>?BBB<CR>"_cw
 
-"auto indent file upon saving
-autocmd FileType cpp autocmd BufWrite mmgg=G`m
+    "auto indent file upon saving
+    "autocmd FileType cpp autocmd BufWrite mmgg=G`m
 
-"paste text and auto formate
-"autocmd FileType cpp nnoremap <leader>p ]p
+    "paste text and auto formate
+    "autocmd FileType cpp nnoremap <leader>p ]p
+augroup END
 
 "general programming lanuage maps
 "==========================
@@ -126,25 +131,31 @@ autocmd Filetype sh,cpp,javascript inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?B
 "bash file maps
 "==============================
 
-"'if insert if statement
-autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<CR><++><CR>fi<CR><Esc>?BBB<CR>"_cw
+augroup bash_maps
+    autocmd!
+    "'if insert if statement
+    autocmd FileType sh inoremap <silent> 'if if [[ BBB ]]; then<CR><++><CR>fi<CR><Esc>?BBB<CR>"_cw
 
-"'e insert echo statement
-autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
+    "'e insert echo statement
+    autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
 
-"leader m to excute current file
-autocmd Filetype sh nnoremap <leader>m :!./%<CR>
+    "leader m to excute current file
+    autocmd Filetype sh nnoremap <leader>m :!./%<CR>
+augroup END
 
 "md\html maps
 "============================
 "'ul insert <ul></ul>
-autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>"_cw
+augroup html_maps
+    autocmd!
+    autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>"_cw
 
-"'li insert <li></li>
-autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>"_cw
+    "'li insert <li></li>
+    autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>"_cw
 
-autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
-autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+    autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+    autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+augroup END
 
 "js file maps
 "===========================
@@ -153,4 +164,7 @@ autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 
 "python file maps
 "==============
-autocmd FileType python inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+augroup python_maps
+    autocmd!
+    autocmd FileType python inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+augroup END

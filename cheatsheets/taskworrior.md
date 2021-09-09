@@ -79,6 +79,8 @@ Instead of **lifestyle**, you meant to type **people**?
 
 `task ID modify due:31st`
 
+`task ID modify due:2021-10-21+23:00`
+
 # putting it all together
 
 `task add oop-workshop project:seneca due:3/12`
