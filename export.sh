@@ -8,6 +8,7 @@ git pull
 #vim config
 cp config/nvim/init.vim ~/.config/nvim/init.vim && echo "init.vim exported"
 cp -r config/nvim/settings ~/.config/nvim/ && echo "nvim settings directory exported"
+cp -r config/nvim/UltiSnips. ~/.config/nvim/UltiSnips && echo "snips exported\n\n"
 
 #tmux.conf
 cp  tmux.conf ~/.tmux.conf && echo "tmux config exported"
