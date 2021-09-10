@@ -16,6 +16,8 @@ source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
 
+source ~/.config/nvim/settings/NERDtree_settings.vim
+
 "source ~/.config/nvim/settings/utilsnips_settings.vim
 
 source ~/.config/nvim/settings/ranger_settings.vim
