@@ -2,10 +2,9 @@
 #purpose of this file: create a tmux session at a specific directory depending on user input
 #Date: 2021-05-29
 #---------------------------------
-
 shopt -s expand_aliases
 #setopt aliases
-#source ~/.zshrc
+source ~/.bash
 source ~/.bash_aliases
 
 function web_course
@@ -32,7 +31,6 @@ function web_course
         else
             echo "invalid choice"
         fi
-
     done
 }
 
@@ -42,20 +40,20 @@ function dbs_course
     read -p "1.lab or 2.week: " DEST
 
     if [[ $DEST == "1" || $DEST == "lab" ]]; then
-        cdsyd
-        tmux new-session -d -s syd_lab
-        tmux send-keys -t 0 cdsyd Enter
+        cddbs
+        tmux new-session -d -s dbs_lab
+        tmux send-keys -t 0 cddbs Enter
         tmux send-keys -t 0 "cd labs" Enter
         tmux send-keys -t 0 "clear" Enter
-        tmux attach-session -t syd_lab
+        tmux attach-session -t dbs_lab
     elif [[ $DEST == "2" || $DEST == "week" ]]; then
         cdsyd
         read -p "which week? (1-13) week_" WEEKNUMBER
-        tmux new-session -d -s syd_weekly_notes
-        tmux send-keys -t 0 cdsyd Enter
+        tmux new-session -d -s dbs_lab
+        tmux send-keys -t 0 cddbs Enter
         tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
         tmux send-keys -t 0 "clear" Enter
-        tmux attach-session -t syd_weekly_notes
+        tmux attach-session -t dbs_lab
     fi
     exit
 }
@@ -64,7 +62,6 @@ function psy_course
 {
     read -p "which week? (1-13): " WEEKNUMBER
     cdpsy
-
     tmux new-session -d -s psy_week_${WEEKNUMBER}
     tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
     tmux send-keys -t 0 "clear" Enter
@@ -73,23 +70,21 @@ function psy_course
 
 }
 
-
 select CLASS in 'WEB' 'DBS' 'PSY'; do
     case $CLASS in
-        "WEB"|"1")
+        "WEB")
             web_course
             ;;
 
-    "DBS"|"2")
-        dbs_course
-        ;;
+        "DBS")
+            dbs_course
+            ;;
 
-    "PSY"|"3")
-        psy_course
-        ;;
-
-    *)
-        echo "invalid choice"
-        ;;
+        "PSY")
+            psy_course
+            ;;
+        *)
+            echo "invalid choice"
+            ;;
     esac
 done
