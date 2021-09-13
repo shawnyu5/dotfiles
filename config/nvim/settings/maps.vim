@@ -126,7 +126,7 @@ augroup END
 "general programming lanuage maps
 "==========================
 "'{ creates { for functions
-autocmd Filetype sh,cpp,javascript inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
+autocmd Filetype sh,cpp,javascript,python inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
 
 "bash file maps
 "==============================

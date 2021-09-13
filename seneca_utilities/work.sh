@@ -36,7 +36,6 @@ function web_course
 
 function dbs_course
 {
-    #echo SYD
     read -p "1.lab or 2.week: " DEST
 
     if [[ $DEST == "1" || $DEST == "lab" ]]; then
@@ -47,7 +46,7 @@ function dbs_course
         tmux send-keys -t 0 "clear" Enter
         tmux attach-session -t dbs_lab
     elif [[ $DEST == "2" || $DEST == "week" ]]; then
-        cdsyd
+        cddbs
         read -p "which week? (1-13) week_" WEEKNUMBER
         tmux new-session -d -s dbs_lab
         tmux send-keys -t 0 cddbs Enter
