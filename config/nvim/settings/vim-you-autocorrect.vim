@@ -1,5 +1,5 @@
 "vim-you-autocorrect settings
 "=========================
-autocmd FileType md nmap [s <Plug>VimyouautocorrectJump
+let g:vim_you_autocorrect_disable_highlighting = 1
 
 au BufRead *.md :EnableAutocorrect
