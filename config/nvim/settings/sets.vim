@@ -4,6 +4,8 @@ set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000
 
+set noswapfile
+
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
