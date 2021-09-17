@@ -1,5 +1,5 @@
 #!/bin/bash
-#purpose of this file:updates config files on current system
+#purpose of this file: updates config files on current system
 #Date: 2021-05-21
 #---------------------------------
 
@@ -15,3 +15,6 @@ cp  tmux.conf ~/.tmux.conf && echo "tmux config exported"
 
 #task worrior config
 cp task_worrior/taskrc  ~/.taskrc && echo "task config exported"
+
+# zsh config
+cp zsh_aliases_general ~/.zsh_aliases && echo "zsh_aliases exported"

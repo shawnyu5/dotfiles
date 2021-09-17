@@ -1,0 +1,35 @@
+#  _______| |__     __ _| (_) __ _ ___    ___ _   _ ___| |_ ___  _ __ ___
+# |_  / __| '_ \   / _` | | |/ _` / __|  / __| | | / __| __/ _ \| '_ ` _ \
+#  / /\__ \ | | | | (_| | | | (_| \__ \ | (__| |_| \__ \ || (_) | | | | | |
+# /___|___/_| |_|  \__,_|_|_|\__,_|___/  \___|\__,_|___/\__\___/|_| |_| |_|
+
+#logout
+alias logout="sudo pkill -u shawn"
+
+#opening github desktop
+alias gitd="github-desktop &"
+
+#show battery percentage
+alias battery="acpi"
+
+# seneca directories
+alias cdpsy="cd ~/seneca/semester_4/PSY222"
+alias cdweb="cd ~/seneca/semester_4/WEB322/"
+alias cddbs="cd ~/seneca/semester_4/DBS322/"
+
+# blackboard selenium
+alias bbweb="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py web; cd - > /dev/null"
+alias bbdbs="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py dbs; cd - > /dev/null"
+alias bbpsy="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py psy; cd - > /dev/null"
+
+# opening notes
+alias psynotes="cd ~/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
+alias webnotes="cd ~/seneca/semester_4/WEB322/; nvim WEB322_notes.md; cd - > /dev/null"
+alias dbsnotes="cd ~/seneca/semester_4/DBS322; nvim DBS322_notes.md; cd - > /dev/null"
+
+#move commands
+alias mvpsy=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/PSY222"
+alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/WEB322"
+alias mvdbs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/DBS322"
+
+

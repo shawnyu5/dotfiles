@@ -7,7 +7,18 @@
 #deleteing start alias
 unalias start 2> /dev/null
 
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+# Vi style:
+# zle -N edit-command-line
+# bindkey -M vicmd v edit-command-line
+
 alias su="sudo apt upgrade && sudo apt update"
+
 alias p="python3"
 #g for git
 alias g="git"
@@ -20,9 +31,6 @@ alias gpull="git pull"
 alias mdp="mdp -f"
 
 alias bd=". bd -si"
-
-#logout
-alias logout="sudo pkill -u shawn"
 
 #c for clear
 alias c="clear"
@@ -39,14 +47,8 @@ alias zip="zip -r"
 #make rm-r always prompt
 alias rm="rm -I"
 
-#opening github desktop
-alias gitd="github-desktop &"
-
 #shortcut to google chrome
 #alias chrome="google-chrome"
-
-#show battery percentage
-alias battery="acpi"
 
 #opening vimrc
 alias vimrc="cd ~/.config/nvim/; nvim init.vim; cd - > /dev/null"
@@ -54,6 +56,7 @@ alias snip="cd ~/.config/nvim/UltiSnips"
 
 #have ls list directories first
 alias ls="ls --group-directories-first --color=auto"
+alias ll="ls -l"
 
 #r to open ranger
 alias r="ranger"
@@ -76,19 +79,6 @@ alias mail="neomutt"
 #watch starwars
 alias starwars="telnet towel.blinkenlights.nl"
 
-#go to psy directory
-alias cdpsy="cd ~/seneca/semester_4/PSY222"
-#going to web directory
-alias cdcul="cd ~/seneca/semester_4/WEB322/"
-
-#going to SYD directory
-#alias cdsyd="cd ~/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1"
-
-# PSY222 notes
-alias psynotes="cd ~/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
-# WEB322 notes
-alias webnotes="cd ~/seneca/semester_4/WEB322/; nvim WEB322_notes.md; cd - > /dev/null"
-
 alias work="~/personal/seneca_utilities/work.sh"
 #oop notes
 #alias oopnotes="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
@@ -98,6 +88,8 @@ alias work="~/personal/seneca_utilities/work.sh"
 
 #move commands
 alias mvpsy=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/PSY222"
+alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/WEB322"
+alias mvdbs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/DBS322"
 
 #auto complete in tmux
 alias tma="tmux attach -t $1"
@@ -121,12 +113,12 @@ function start
 {
     if [ $# -eq 0 ]; then
         echo "Opening current directory..."
-        xdg-open . &2> /dev/null
+        xdg-open . 2> /dev/null &
     else
         for current in "$@"
         do
             echo "opening $current..."
-            xdg-open "$current" &2> /dev/null
+            xdg-open "$current" 2> /dev/null &
 
         done
     fi
@@ -154,23 +146,6 @@ function codea
 
 }
 
-#creates a Excute bash file to first compile the program files being passed in as arguments
-function excfile
-{
-	read -p "name of the output file: " OUTPUT
-        autoexpect "$1"
-
-        #replace the last line with interact
-        cp script.exp script.exp.tmp
-        sed '$ d' script.exp.tmp > script.exp
-        rm -f script.exp.tmp >/dev/null
-
-        echo "interact" >> script.exp
-
-        mv script.exp "autocompile_$OUTPUT".exp && echo -e "\nscript.exp renamed to autocompile_$OUTPUT.exp"
-
-}
-
 #edit any cheatsheet in cheatsheet directory
 function cheat
 {
@@ -193,4 +168,3 @@ function oopDeclaration
 		rm $CURRENT.tmp
 	done
 }
-
