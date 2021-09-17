@@ -1,0 +1,170 @@
+#          _             _ _           
+#  _______| |__     __ _| (_) __ _ ___ 
+# |_  / __| '_ \   / _` | | |/ _` / __|
+#  / /\__ \ | | | | (_| | | | (_| \__ \
+# /___|___/_| |_|  \__,_|_|_|\__,_|___/
+
+#deleteing start alias
+unalias start 2> /dev/null
+
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+# Vi style:
+# zle -N edit-command-line
+# bindkey -M vicmd v edit-command-line
+
+alias su="sudo apt upgrade && sudo apt update"
+
+alias p="python3"
+#g for git
+alias g="git"
+alias ga="git add -A"
+alias gs="git status"
+alias gpush="git push"
+alias gpull="git pull"
+
+#mdp no fade by default
+alias mdp="mdp -f"
+
+alias bd=". bd -si"
+
+#c for clear
+alias c="clear"
+
+#running valgrind
+alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes"
+
+#make copying always recursive
+alias cp="cp -r"
+
+#make zip always recursive
+alias zip="zip -r"
+
+#make rm-r always prompt
+alias rm="rm -I"
+
+#shortcut to google chrome
+#alias chrome="google-chrome"
+
+#opening vimrc
+alias vimrc="cd ~/.config/nvim/; nvim init.vim; cd - > /dev/null"
+alias snip="cd ~/.config/nvim/UltiSnips"
+
+#have ls list directories first
+alias ls="ls --group-directories-first --color=auto"
+alias ll="ls -l"
+
+#r to open ranger
+alias r="ranger"
+
+#v for nvim
+alias v="nvim"
+
+#updating the source bashrc file
+alias sr="source ~/.zshrc"
+
+#editing .bash_alias file
+alias bashrc="nvim ~/.bashrc"
+alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
+alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
+alias zsh_aliases="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
+
+#opening neomutt
+alias mail="neomutt"
+
+#watch starwars
+alias starwars="telnet towel.blinkenlights.nl"
+
+alias work="~/personal/seneca_utilities/work.sh"
+#oop notes
+#alias oopnotes="cd ~/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++/; nvim OOP_345_notes.md; cd - > /dev/null"
+
+#cul notes
+#alias culnotes="cd ~/seneca/semester_3/CUL_485_movies_and_morality/; nvim CUL_485_notes.md; cd - > /dev/null"
+
+#move commands
+alias mvpsy=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/PSY222"
+alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/WEB322"
+alias mvdbs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_4/DBS322"
+
+#auto complete in tmux
+alias tma="tmux attach -t $1"
+if [ -f ~/personal/tma ]; then
+    . ~/personal/tma > /dev/null
+fi
+
+#taskworrior aliases
+#=====================================
+
+#t for task
+alias t="task"
+
+#editing taskrc
+alias trc="nvim ~/.taskrc"
+
+#==========================
+
+#for starting any file(s)
+function start
+{
+    if [ $# -eq 0 ]; then
+        echo "Opening current directory..."
+        xdg-open . 2> /dev/null &
+    else
+        for current in "$@"
+        do
+            echo "opening $current..."
+            xdg-open "$current" 2> /dev/null &
+
+        done
+    fi
+}
+compdef _gnu_generic start=ls
+
+#to open all .h and .cpp files in a new vs code window
+function codea
+{
+	cpp=(`find ./ -maxdepth 1 -name "*.cpp"`)
+	h=(`find ./ -maxdepth 1 -name "*.h"`)
+
+	if [ ${#cpp[@]} -gt 0 ]; then
+		code -n ${cpp[*]}
+	else
+		echo 'no .cpp file(s) present'
+	fi
+
+	if [ ${#h[@]} -gt 0 ]; then
+		code ${h[*]}
+	else
+		echo 'no .h file(s) found'
+
+	fi
+
+}
+
+#edit any cheatsheet in cheatsheet directory
+function cheat
+{
+	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
+
+}
+
+#make a directory and go into that directory
+function mkdirin { mkdir $1 && cd $1; }
+
+
+function oopDeclaration
+{
+	cal
+	read -p "Date: " DATE
+	for CURRENT in $@; do
+		mv $CURRENT $CURRENT.tmp
+		echo -e "/*Name: Shawn Yu\nStudent number: 160568192\nEmail: hyu126@myseneca.ca\nDate: $DATE\nI have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.*/" > $CURRENT
+		cat $CURRENT.tmp >> $CURRENT && echo "declaration added to $CURRENT"
+		rm $CURRENT.tmp
+	done
+}
