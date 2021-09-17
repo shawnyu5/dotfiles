@@ -9,6 +9,6 @@ cp ~/.bash_aliases ./bash_aliases && echo "bash aliases imported"
 
 cp ~/.zshrc zshrc && echo "zshrc imported"
 
-cp ~/.zsh_aliases zsh_aliases && echo "zsh aliases imported"
+cp ~/.zsh_aliases-custom zsh_aliases-custom && echo "custom zsh aliases imported"
 
 
