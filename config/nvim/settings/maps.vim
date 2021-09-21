@@ -10,6 +10,8 @@ nnoremap N Nzz
 "esc in terminal mode to go back to normal move
 tnoremap <Esc> <C-\><C-n>
 
+nnoremap <silent> <C-f> :MaximizerToggle<CR>
+
 "leader df for diffthis
 nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff
@@ -85,7 +87,7 @@ nmap <silent> [s <Plug>VimyouautocorrectJump
 "nnoremap <leader>fs [sz=1<Enter><Esc>
 
 "f12 to maxmize current screen
-nnoremap <silent> <F12> :MaximizerToggle<CR>
+"nnoremap <silent> <F12> :MaximizerToggle<CR>
 
 autocmd bufreadpre OOP_345_notes.md let g:vmt_auto_update_on_save = 0
 autocmd bufreadpre OOP_345_notes.md nnoremap <silent> e :norm! df<Space>VguVyI*<Space>[<Esc>A](#<Esc>pI<BS><Esc>A)<Esc>hhvi(:s/\%V /-/g<CR>
