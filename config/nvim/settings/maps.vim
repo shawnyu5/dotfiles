@@ -1,4 +1,25 @@
-autocmd FileType python nnoremap <leader>m :!python3 %<CR>
+"autocmd FileType python nnoremap <leader>m :!python3 %<CR>
+"autocmd FileType cpp nnoremap <leader>m :!make<CR>
+"autocmd Filetype sh nnoremap <leader>m :!./%<CR>
+"autocmd FileType javascript nnoremap <leader>m :!node %<CR>
+"autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
+
+" Map execute this line
+function! s:executor() abort
+    if &ft == 'python'
+        exe '!python3 %'
+    elseif &ft == 'cpp'
+        exe '!make'
+    elseif &ft == 'javascript'
+        exe '!node %'
+    elseif &ft == 'sh'
+        exe '!./%'
+    elseif &ft == 'markdown'
+        exe 'MarkdownPreview'
+    endif
+endfunction
+
+nnoremap <leader>m :call <SID>executor()<CR>
 
 "command to source vimrc
 command! Sr :so ~/.config/nvim/init.vim
@@ -45,10 +66,6 @@ nnoremap <silent> <C-Down> :res -2<CR>
 autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR><++><CR><Esc>/BBB<CR>"_cw
 
 autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR>Dear journal,<CR><CR><++><Esc>/BBB<CR>"_cw
-
-"leader m to compile current file
-"autocmd FileType cpp nnoremap <leader>m :!./compile*.sh<CR>
-autocmd FileType cpp nnoremap <leader>m :!make<CR>
 
 " source current file in init.vim
 autocmd BufWinEnter init.vim nnoremap <leader>m :so %<CR>
@@ -140,9 +157,6 @@ augroup bash_maps
 
     "'e insert echo statement
     autocmd FileType sh inoremap <silent> 'e echo "BBB"<Esc>?BBB<CR>"_cw
-
-    "leader m to excute current file
-    autocmd Filetype sh nnoremap <leader>m :!./%<CR>
 augroup END
 
 "md\html maps
@@ -162,7 +176,11 @@ augroup END
 "js file maps
 "===========================
 "leader m to run current code in node
-autocmd FileType javascript nnoremap <leader>m :!node %<CR>
+augroup js_maps
+    autocmd!
+    autocmd FileType javascript inoremap <silent> 'c console.log("BBB");<Esc>?BBB<CR>"_cw
+    autocmd FileType javascript inoremap <silent> ''c console.log(BBB);<Esc>?BBB<CR>"_cw
+augroup END
 
 "python file maps
 "==============
