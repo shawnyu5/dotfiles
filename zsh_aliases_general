@@ -72,6 +72,7 @@ alias bashrc="nvim ~/.bashrc"
 alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
 alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
 alias zsh_aliases="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
+alias zsh_aliases-custom="cd-; nvim ~/.zsh_aliases-custom; cd - > /dev/null"
 
 #opening neomutt
 alias mail="neomutt"
