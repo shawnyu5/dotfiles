@@ -10,6 +10,9 @@ function! s:executor() abort
         exe '!python3 %'
     elseif &ft == 'cpp'
         exe '!make'
+        if v:shell_error != 0
+            exe '!g++ % && ./a.out'
+        endif
     elseif &ft == 'javascript'
         exe '!node %'
     elseif &ft == 'sh'
