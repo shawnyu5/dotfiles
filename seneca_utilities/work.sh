@@ -4,7 +4,7 @@
 #---------------------------------
 shopt -s expand_aliases
 #setopt aliases
-source ~/.bash
+source ~/.bashrc
 source ~/.bash_aliases
 
 function web_course
