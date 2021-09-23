@@ -9,13 +9,27 @@ alias logout="sudo pkill -u shawn"
 #opening github desktop
 alias gitd="github-desktop &"
 
+alias dl="cd ~/Downloads"
+
 #show battery percentage
 alias battery="acpi"
 
 # seneca directories
-alias cdpsy="cd ~/seneca/semester_4/PSY222"
-alias cdweb="cd ~/seneca/semester_4/WEB322/"
-alias cddbs="cd ~/seneca/semester_4/DBS322/"
+function cdpsy
+{
+    cd ~/seneca/semester_4/PSY222
+    cd $(ls -d -- */ | fzf) && ls -l
+}
+function cdweb
+{
+    cd ~/seneca/semester_4/WEB322/
+    cd $(ls -d -- */ | fzf) && ls -l
+}
+function cddbs
+{
+    cd ~/seneca/semester_4/DBS322/
+    cd $(ls -d -- */ | fzf) && ls -l
+}
 
 # blackboard selenium
 alias bbweb="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py web; cd - > /dev/null"

@@ -101,9 +101,13 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+if [ -f ~/.zsh_aliases-custom ]; then
+    . ~/.zsh_aliases-custom
+fi
+
 export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:$HOME/scripts/in_path/"
-
+export PATH="$PATH:/opt/mssql-tools/bin"
 
 ## Enable substitution in the prompt.
 #setopt prompt_subst
