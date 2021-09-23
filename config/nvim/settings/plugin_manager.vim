@@ -28,8 +28,8 @@ elseif has('nvim-0.4.3')
     Plug 'junegunn/fzf.vim'
 
     "enhanced cpp highlighting
-    Plug 'octol/vim-cpp-enhanced-highlight'
-    Plug 'gruvbox-community/gruvbox'
+    "Plug 'octol/vim-cpp-enhanced-highlight'
+    "Plug 'gruvbox-community/gruvbox'
 endif
 
 "native LSP
