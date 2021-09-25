@@ -11,12 +11,12 @@ function! s:executor() abort
     elseif &ft == 'cpp'
         exe '!make'
         if v:shell_error != 0
-            exe '!g++ % && ./a.out'
+            exe '!g++ "%" && ./a.out'
         endif
     elseif &ft == 'javascript'
-        exe '!node %'
+        exe '!node "%"'
     elseif &ft == 'sh'
-        exe '!./%'
+        exe '!./"%"'
     elseif &ft == 'markdown'
         exe 'MarkdownPreview'
     endif
@@ -183,6 +183,7 @@ augroup js_maps
     autocmd!
     autocmd FileType javascript inoremap <silent> 'c console.log("BBB");<Esc>?BBB<CR>"_cw
     autocmd FileType javascript inoremap <silent> ''c console.log(BBB);<Esc>?BBB<CR>"_cw
+    autocmd Filetype javascript inoremap <silent> ''{ {<CR>BBB<CR>});<CR><Esc>?BBB<CR>"_cw
 augroup END
 
 "python file maps

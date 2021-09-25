@@ -6,7 +6,7 @@
 # takes directory path as arg 1, the rest are files to be moved
 function custom_move
 {
-    DEST=$(ls -d ${1}/*/ | fzf)
+    DEST=$(find "$1" -type d | fzf)
     # remove directory path from argument list
     shift 1
     mv -v "$@" "$DEST"
