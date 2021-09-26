@@ -19,6 +19,8 @@ function! s:executor() abort
         exe '!./"%"'
     elseif &ft == 'markdown'
         exe 'MarkdownPreview'
+    else
+        echo 'no mapping created'
     endif
 endfunction
 
@@ -191,4 +193,5 @@ augroup END
 augroup python_maps
     autocmd!
     autocmd FileType python inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+    autocmd FileType python inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
 augroup END
