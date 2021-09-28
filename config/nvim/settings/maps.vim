@@ -38,6 +38,8 @@ tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
+" disable <S-l>
+map <S-l> <Nop>
 "leader df for diffthis
 nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff
