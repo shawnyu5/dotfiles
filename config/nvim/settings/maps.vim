@@ -4,6 +4,8 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
+
+" a function for testing stuff
 function! s:test() abort
     let files = ["hello", "world"]
     echo files
@@ -13,7 +15,8 @@ function! s:test() abort
         echo "ayyy"
     endif
 endfunction
-nnoremap <leader>t :call <SID>test()<CR>
+" nnoremap <leader>t :call <SID>test()<CR>
+
 
 " Map execute based on file type
 function! s:executor() abort
@@ -52,6 +55,8 @@ function! s:executor() abort
         exe '!./"%"'
     elseif &ft == 'markdown'
         exe 'MarkdownPreview'
+    elseif &ft == 'vim'
+        exe 'so %'
     else
         echo 'no mapping created'
     endif
@@ -108,7 +113,7 @@ autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d 
 autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR>Dear journal,<CR><CR><++><Esc>/BBB<CR>"_cw
 
 " source current file in init.vim
-autocmd BufWinEnter init.vim nnoremap <leader>m :so %<CR>
+" autocmd BufWinEnter init.vim nnoremap <leader>m :so %<CR>
 
 
 "make up down automatically go in between text blocks
@@ -215,7 +220,6 @@ augroup END
 
 "js file maps
 "===========================
-"leader m to run current code in node
 augroup js_maps
     autocmd!
     autocmd FileType javascript inoremap <silent> 'c console.log("BBB");<Esc>?BBB<CR>"_cw
