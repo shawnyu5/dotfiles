@@ -18,17 +18,17 @@ alias battery="acpi"
 function cdpsy
 {
     cd ~/seneca/semester_4/PSY222
-    cd $(ls -d -- */ | fzf) && ls -l
+    cd $(find . -type d | fzf) && ls -l
 }
 function cdweb
 {
     cd ~/seneca/semester_4/WEB322/
-    cd $(ls -d -- */ | fzf) && ls -l
+    cd $(find . -type d| fzf) && ls -l
 }
 function cddbs
 {
     cd ~/seneca/semester_4/DBS322/
-    cd $(ls -d -- */ | fzf) && ls -l
+    cd $(find . -type d | fzf) && ls -l
 }
 
 # blackboard selenium

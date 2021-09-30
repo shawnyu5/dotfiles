@@ -4,15 +4,48 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
-" Map execute this line
+function! s:test() abort
+    let files = ["hello", "world"]
+    echo files
+    if index(files, "hello") == -1
+        echo "noooo"
+    else
+        echo "ayyy"
+    endif
+endfunction
+nnoremap <leader>t :call <SID>test()<CR>
+
+" Map execute based on file type
 function! s:executor() abort
     if &ft == 'python'
         exe '!python3 %'
     elseif &ft == 'cpp'
-        exe '!make'
-        if v:shell_error != 0
-            exe '!g++ "%" && ./a.out'
+        " get all files in current directory
+        let files = system('ls')
+        " echo files
+        let current_file_name = expand('%')
+        " echo current_file_name
+
+        " open terminal in vertical split
+        exe 'vsp'
+        exe 'terminal'
+        " get the process id of the terminal
+        let process_id = b:terminal_job_id
+        sleep 100m
+
+        " if make file is not in current directory, G++
+        if (match(files, "makefile")) == -1
+            let command = join(["g++", current_file_name, "&& ./a.out\n"])
+            " echo "excuting " . command
+            call chansend(process_id, command)
+            " echo "terminal opened"
+        else
+            " else run make
+            let command = "make\n"
+            " echo "Excuting make"
+            call chansend(process_id, command)
         endif
+
     elseif &ft == 'javascript'
         exe '!node "%"'
     elseif &ft == 'sh'
