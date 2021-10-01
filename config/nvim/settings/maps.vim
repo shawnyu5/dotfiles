@@ -25,9 +25,7 @@ function! s:executor() abort
     elseif &ft == 'cpp'
         " get all files in current directory
         let files = system('ls')
-        " echo files
         let current_file_name = expand('%')
-        " echo current_file_name
 
         " open terminal in vertical split
         exe 'vsp'
@@ -36,7 +34,7 @@ function! s:executor() abort
         let process_id = b:terminal_job_id
         sleep 100m
 
-        " if make file is not in current directory, G++
+        " if make file is not in current directory, g++
         if (match(files, "makefile")) == -1
             let command = join(["g++", current_file_name, "&& ./a.out\n"])
             " echo "excuting " . command
@@ -48,15 +46,12 @@ function! s:executor() abort
             " echo "Excuting make"
             call chansend(process_id, command)
         endif
-
     elseif &ft == 'javascript'
         exe '!node "%"'
     elseif &ft == 'sh'
         exe '!./"%"'
     elseif &ft == 'markdown'
         exe 'MarkdownPreview'
-    elseif &ft == 'vim'
-        exe 'so %'
     else
         echo 'no mapping created'
     endif
@@ -112,8 +107,8 @@ autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d 
 
 autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR>Dear journal,<CR><CR><++><Esc>/BBB<CR>"_cw
 
-" source current file in init.vim
-" autocmd BufWinEnter init.vim nnoremap <leader>m :so %<CR>
+" source current file in vim
+autocmd BufWinEnter *.vim nnoremap <leader>m :so %<CR>
 
 
 "make up down automatically go in between text blocks
