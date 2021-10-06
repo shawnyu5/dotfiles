@@ -52,6 +52,8 @@ function! s:executor() abort
         exe '!./"%"'
     elseif &ft == 'markdown'
         exe 'MarkdownPreview'
+    elseif &ft == 'html'
+        exe '!chrome %'
     else
         echo 'no mapping created'
     endif
