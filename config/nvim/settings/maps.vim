@@ -65,6 +65,7 @@ endfunction
 
 nnoremap <leader>m :call <SID>executor()<CR>
 
+nnoremap <C-g> 2<C-g>
 "command to source vimrc
 command! Sr :so ~/.config/nvim/init.vim
 
