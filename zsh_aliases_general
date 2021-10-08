@@ -152,7 +152,6 @@ function codea
 function cheat
 {
 	du -a ~/personal/cheatsheets/*.md | awk '{print $2}' | fzf | xargs $EDITOR
-
 }
 
 #make a directory and go into that directory

@@ -17,7 +17,7 @@ syntax enable
 "autocmd BufEnter makefile,Makefile set noexpandtab softtabstop=0
 
 "allow copying to system clipboard
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 set number
 set autoindent
@@ -32,8 +32,14 @@ set cursorline
 set formatoptions-=cro
 "autocompletion while entering vim commands
 set wildmode=longest,list,full
+set wildmenu
 "wait 0ms after pressing the esc key to see if there are any other key presses
 set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
-set scrolloff=2
+set scrolloff=3
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 104})
+augroup END

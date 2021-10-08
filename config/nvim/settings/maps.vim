@@ -17,6 +17,12 @@ function! s:test() abort
 endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
+lua << EOF
+function open_term()
+    vim.cmd("tabe")
+    vim.cmd("terminal")
+end
+EOF
 " opens a terminal in a new tab
 function! Open_term() abort
     exe "tabe"
