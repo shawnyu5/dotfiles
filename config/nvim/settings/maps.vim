@@ -4,6 +4,8 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
+" Close tab and move left 1
+nnoremap ZZ ZZgT
 
 " a function for testing stuff
 function! s:test() abort
@@ -27,9 +29,10 @@ EOF
 function! Open_term() abort
     exe "tabe"
     exe "terminal"
+    exe "norm! i"
 endfunction
 
-" Map execute based on file type
+" Map execution based on file type
 function! s:executor() abort
     let current_file_name = expand('%')
 
@@ -37,6 +40,17 @@ function! s:executor() abort
         call Open_term()
         let command = join(["python3", current_file_name, "\n"])
         call chansend(b:terminal_job_id, command)
+
+        " let search = "true"
+        " while search == "true"
+            " let line_value = 0
+            " let last_line = line("$") + line_value
+            " if last_line != ""
+                " echo "Last line found"
+                " let search = "false"
+            " endif
+            " let line_value = line_value + 1
+        " endwhile
     elseif &ft == 'cpp'
         " get all files in current directory
         let files = system('ls')
@@ -55,7 +69,9 @@ function! s:executor() abort
             call chansend(b:terminal_job_id, command)
         endif
     elseif &ft == 'javascript'
-        exe '!node "%"'
+        call Open_term()
+        let command = join(["node", current_file_name, "\n"])
+        call chansend(b:terminal_job_id, command)
     elseif &ft == 'sh'
         call Open_term()
         let command = join (["./", current_file_name, "\n"], "")

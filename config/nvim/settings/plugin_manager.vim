@@ -71,7 +71,6 @@ Plug 'preservim/nerdcommenter'
 "vim maxmizer
 Plug 'szw/vim-maximizer'
 
-
 "matchit
 Plug 'adelarsq/vim-matchit'
 
