@@ -7,6 +7,8 @@
 " Close tab and move left 1
 nnoremap ZZ ZZgT
 
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
 " a function for testing stuff
 function! s:test() abort
     let files = ["hello", "world"]
