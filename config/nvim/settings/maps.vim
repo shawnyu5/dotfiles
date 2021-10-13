@@ -9,6 +9,7 @@ nnoremap ZZ ZZgT
 
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
+
 " a function for testing stuff
 function! s:test() abort
     let files = ["hello", "world"]
@@ -22,15 +23,13 @@ endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
 lua << EOF
-function open_term()
-    vim.cmd("tabe")
-    vim.cmd("terminal")
-end
+    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
+
 EOF
 " opens a terminal in a new tab
 function! Open_term() abort
-    exe "tabe"
-    exe "terminal"
+    exe "tabe | term"
+    " exe "terminal"
     exe "norm! i"
 endfunction
 
@@ -43,16 +42,6 @@ function! s:executor() abort
         let command = join(["python3", current_file_name, "\n"])
         call chansend(b:terminal_job_id, command)
 
-        " let search = "true"
-        " while search == "true"
-            " let line_value = 0
-            " let last_line = line("$") + line_value
-            " if last_line != ""
-                " echo "Last line found"
-                " let search = "false"
-            " endif
-            " let line_value = line_value + 1
-        " endwhile
     elseif &ft == 'cpp'
         " get all files in current directory
         let files = system('ls')
@@ -74,6 +63,7 @@ function! s:executor() abort
         call Open_term()
         let command = join(["node", current_file_name, "\n"])
         call chansend(b:terminal_job_id, command)
+
     elseif &ft == 'sh'
         call Open_term()
         let command = join (["./", current_file_name, "\n"], "")
@@ -82,12 +72,17 @@ function! s:executor() abort
         exe 'MarkdownPreview'
     elseif &ft == 'html'
         exe '!chrome %'
+    elseif &ft == "lua"
+        exe "luafile %"
+        " call Open_term()
+        " let command = join (["luajit ", current_file_name, "\n"], "")
+        " call chansend(b:terminal_job_id, command)
     else
         echo 'no mapping created'
     endif
 endfunction
 
-nnoremap <leader>m :call <SID>executor()<CR>
+" nnoremap <leader>m :call <SID>executor()<CR>
 
 nnoremap <C-g> 2<C-g>
 "command to source vimrc
@@ -257,6 +252,6 @@ augroup END
 "==============
 augroup python_maps
     autocmd!
-    autocmd FileType python inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
-    autocmd FileType python inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
+    autocmd FileType python, lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+    autocmd FileType python, lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
 augroup END

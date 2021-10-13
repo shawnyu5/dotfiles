@@ -10,6 +10,11 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
+lua << EOF
+   -- local helpers = require("helpers")
+   -- helpers.executor()
+EOF
+
 source ~/.config/nvim/settings/plugin_manager.vim
 
 source ~/.config/nvim/settings/sets.vim
@@ -25,6 +30,7 @@ source ~/.config/nvim/settings/nerdcommenter_settings.vim
 source ~/.config/nvim/settings/ranger_settings.vim
 
 "luafile ~/.config/nvim/sets.lua
+
 
 if has('nvim-0.5.0')
     "telescope settings
