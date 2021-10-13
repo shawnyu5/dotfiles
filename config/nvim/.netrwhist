@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
-let g:netrw_dirhist_7='/home/shawn/scripts/move_script'
-let g:netrw_dirhist_6='/home/shawn/scripts/9_day_stock_calculation/AC.TO_9_day_notification'
-let g:netrw_dirhist_5='/home/shawn/scripts/testing'
-let g:netrw_dirhist_4='/home/shawn/scripts'
-let g:netrw_dirhist_3='/home/shawn/scripts/testing'
-let g:netrw_dirhist_2='/home/shawn/scripts/9_day_stock_calculation/generic'
-let g:netrw_dirhist_1='/home/shawn/scripts/stocks_calculation/testing'
