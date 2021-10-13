@@ -6,8 +6,8 @@
 #vim config
 cp ~/.config/nvim/init.vim config/nvim/init.vim && echo "init.vim imported"
 # rm -rf config/nvim
-cp -r ~/.config/nvim/settings/ config/nvim && echo "vim settings imported"
-cp -r ~/.config/nvim/UltiSnips/ config/nvim/ && echo -e "snips imported\n\n"
+cp -r ~/.config/nvim/settings/ config/nvim/settings && echo "vim settings imported"
+cp -r ~/.config/nvim/UltiSnips/ config/nvim/UltiSnips/ && echo -e "snips imported\n\n"
 
 #tmux config
 cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
