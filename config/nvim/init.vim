@@ -10,10 +10,6 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
-lua << EOF
-   -- local helpers = require("helpers")
-   -- helpers.executor()
-EOF
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
