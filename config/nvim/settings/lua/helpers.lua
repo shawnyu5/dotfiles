@@ -2,7 +2,7 @@ local M = {}
 
 local function term_and_excute(command)
     vim.cmd("tabe | term")
-    vim.cmd("vim.b.terminal_job_id, command")
+    vim.fn.chansend(vim.b.terminal_job_id, command)
     vim.cmd("norm! i")
 end
 
