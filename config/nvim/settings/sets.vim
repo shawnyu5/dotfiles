@@ -1,3 +1,4 @@
+set rtp+=~/.config/nvim/settings/
 " not hide markdown special symbols
 set conceallevel=0
 set nottimeout

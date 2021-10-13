@@ -1,9 +1,5 @@
 local M = {}
 
-function M.print()
-    print("Hiiii!!!")
-end
-
 local function term_and_excute(command)
     vim.cmd("tabe | term")
     vim.cmd("vim.b.terminal_job_id, command")
@@ -19,6 +15,5 @@ function M.executor()
         term_and_excute(command)
     end
 end
-
 
 return M
