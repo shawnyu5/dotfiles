@@ -4,8 +4,16 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
-" Close tab and move left 1
-nnoremap ZZ ZZgT
+function! CloseSomething()
+  if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
+    tabclose | tabprev
+  else
+    q
+  endif
+endfunction
+
+map ZZ :call CloseSomething()<CR>
+map ZQ :call CloseSomething()<CR>
 
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
@@ -252,6 +260,6 @@ augroup END
 "==============
 augroup python_maps
     autocmd!
-    autocmd FileType python, lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
-    autocmd FileType python, lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
+    autocmd FileType python,lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+    autocmd FileType python,lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
 augroup END
