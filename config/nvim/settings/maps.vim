@@ -4,8 +4,16 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
-" Close tab and move left 1
-nnoremap ZZ ZZgT
+function! CloseSomething()
+  if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
+    tabclose | tabprev
+  else
+    q
+  endif
+endfunction
+
+map ZZ :call CloseSomething()<CR>
+map ZQ :call CloseSomething()<CR>
 
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
@@ -23,8 +31,8 @@ endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
 lua << EOF
+    package.loaded["helpers"] = nil
     vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
-
 EOF
 " opens a terminal in a new tab
 function! Open_term() abort
@@ -134,7 +142,7 @@ autocmd FileType markdown nnoremap <leader>da i# BBB <Esc>:put =strftime('%a %d 
 autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime('%a %d %b %Y')<CR>i<Backspace><Esc>A<CR><CR>Dear journal,<CR><CR><++><Esc>/BBB<CR>"_cw
 
 " source current file in vim
-autocmd BufWinEnter *.vim nnoremap <leader>m :so %<CR>
+" autocmd BufWinEnter *.vim nnoremap <leader>m :so %<CR>
 
 
 "make up down automatically go in between text blocks
@@ -252,6 +260,6 @@ augroup END
 "==============
 augroup python_maps
     autocmd!
-    autocmd FileType python, lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
-    autocmd FileType python, lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
+    autocmd FileType python,lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
+    autocmd FileType python,lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
 augroup END
