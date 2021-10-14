@@ -25,9 +25,6 @@ source ~/.config/nvim/settings/nerdcommenter_settings.vim
 
 source ~/.config/nvim/settings/ranger_settings.vim
 
-"luafile ~/.config/nvim/sets.lua
-
-
 if has('nvim-0.5.0')
     "telescope settings
     source ~/.config/nvim/settings/telescope.vim
