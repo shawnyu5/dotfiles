@@ -33,6 +33,8 @@ endfunction
 lua << EOF
     package.loaded["helpers"] = nil
     vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
+    -- closes all term windows
+    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').closer()<CR>", { noremap = true, silent = true})
 EOF
 " opens a terminal in a new tab
 function! Open_term() abort
