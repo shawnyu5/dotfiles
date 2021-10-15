@@ -32,6 +32,6 @@ task add "${NAME}" project:$CLASS\
 	due:$DATE \
 	+seneca
 
-task context school
+# task context school
 
 task
