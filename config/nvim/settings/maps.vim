@@ -8,7 +8,7 @@ function! CloseSomething()
   if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
     tabclose | tabprev
   else
-    q
+    q!
   endif
 endfunction
 
@@ -34,7 +34,7 @@ lua << EOF
     package.loaded["helpers"] = nil
     vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
     -- closes all term windows
-    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').closer()<CR>", { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
 EOF
 " opens a terminal in a new tab
 function! Open_term() abort

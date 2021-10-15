@@ -55,28 +55,31 @@ function M.executor()
     end
 end
 
--- close all open term buffers
-local function close_terms()
+
+-- exists and closes all term buffers
+function M.term_closer()
+    local win_ids = {}
+    -- remember current window
+    local current_window = vim.fn.win_getid()
+
     -- from tab 1 to last tab open
     for i = 1, vim.fn.tabpagenr("$") do
-        -- print("checking tab " .. i)
         -- if buffer is a terminal, we close it
         if vim.fn.gettabwinvar(i, 1, "&buftype") == "terminal" then
-            -- print("terminal found")
-            -- print(vim.fn.gettabwinvar(i, 1, "&buftype"))
             local win_id = vim.fn.win_getid(1, i)
-            -- print("closing window " .. i)
-            vim.fn.win_execute(win_id, "close")
+            table.insert(win_ids, win_id)
         end
-        -- print("iteration " .. i)
     end
-end
 
--- A wrapper to close all terminal windows
-function M.closer()
-    for i = 0, 13 do
-        close_terms()
+    -- go to all windows, send tell terminal to exit and close tab
+    for i = 1, #win_ids do
+        vim.fn.win_gotoid(win_ids[i])
+        vim.fn.chansend(vim.b.terminal_job_id, "\n\nexit\n") --send exit key
+        vim.fn.win_execute(win_ids[i], "close") -- close window
     end
+    -- go back to the window we started with
+    vim.fn.win_gotoid(current_window)
+
 end
 
 return M

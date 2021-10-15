@@ -10,7 +10,6 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
-
 source ~/.config/nvim/settings/plugin_manager.vim
 
 source ~/.config/nvim/settings/sets.vim
@@ -26,25 +25,25 @@ source ~/.config/nvim/settings/nerdcommenter_settings.vim
 source ~/.config/nvim/settings/ranger_settings.vim
 
 if has('nvim-0.5.0')
-    "telescope settings
+    " "telescope settings
     source ~/.config/nvim/settings/telescope.vim
 
-    "tree sitter settings
+    " "tree sitter settings
     luafile ~/.config/nvim/settings/tree-sitter_config.lua
 
-    "toky night settings
+    " "toky night settings
     luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
-    "lightline settings to fit tokyo night
+    " "lightline settings to fit tokyo night
     source ~/.config/nvim/settings/markdown-preview.vim
 
     source ~/.config/nvim/settings/lightLine_settings.vim
 
 elseif has('nvim-0.4.3')
-    "load fzf settings
+    " "load fzf settings
     source ~/.config/nvim/settings/fzf.vim
 
-    "load gruvbox settings
+    " "load gruvbox settings
     source ~/.config/nvim/settings/gruv-box_settings.vim
 endif
 
@@ -83,9 +82,9 @@ aug end
 
 "autosave a view upon leaving buffer and auto load view upon entering
 "augroup AutoSaveFolds
-  "autocmd!
-  "autocmd BufWinLeave * mkview
-  "autocmd BufWinEnter * silent! loadview
+  " "autocmd!
+  " "autocmd BufWinLeave * mkview
+  " "autocmd BufWinEnter * silent! loadview
 "augroup END
 
 "enhanced cpp highlight settings
@@ -105,7 +104,7 @@ aug end
 let b:wstrip_trailing_max = 0
 
 "enable stripping white space when writting to buffer
-let g:wstrip_auto = 1  
+let g:wstrip_auto = 1
 
 let g:wstrip_highlight = 0
 
