@@ -5,7 +5,6 @@
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
 
-" TODO: port this to lua with function args to force quit/ force save + quit
 " function! CloseSomething()
   " if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
     " tabclose | tabprev
@@ -14,6 +13,18 @@
   " endif
 " endfunction
 
+lua << EOF
+
+    package.loaded["helpers"] = nil
+    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
+    -- closes all term windows
+    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
+
+    -- left close
+    vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser(true)<CR>", { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
+
+EOF
 
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
@@ -31,17 +42,6 @@ function! s:test() abort
 endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
-lua << EOF
-    package.loaded["helpers"] = nil
-    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
-    -- closes all term windows
-    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
-
-    -- left close
-    vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
-    --map ZZ :call CloseSomething()<CR>
-    --map ZQ :call CloseSomething()<CR>
-EOF
 " opens a terminal in a new tab
 function! Open_term() abort
     exe "tabe | term"
