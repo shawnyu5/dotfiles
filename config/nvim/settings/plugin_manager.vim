@@ -1,5 +1,6 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
+
 " Snippets engine.
 "Plug 'SirVer/ultisnips'
 " preddefined snippets
@@ -22,6 +23,7 @@ if has('nvim-0.5.0')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 elseif has('nvim-0.4.3')
     "load fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

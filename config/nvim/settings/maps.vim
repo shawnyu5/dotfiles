@@ -4,18 +4,21 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
-function! CloseSomething()
-  if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
-    tabclose | tabprev
-  else
-    q!
-  endif
-endfunction
+lua << EOF
+    package.loaded["helpers"] = nil
+    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
+    -- closes all term windows
+    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
 
-map ZZ :call CloseSomething()<CR>
-map ZQ :call CloseSomething()<CR>
+    -- left close
+    vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser(true)<CR>", { noremap = true, silent = true})
+    vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
+    --map ZZ :call CloseSomething()<CR>
+    --map ZQ :call CloseSomething()<CR>
+EOF
 
-nnoremap <leader>y "+y
+nnoremap <leader>y "+yy
+vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
 " a function for testing stuff
@@ -30,12 +33,6 @@ function! s:test() abort
 endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
-lua << EOF
-    package.loaded["helpers"] = nil
-    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
-    -- closes all term windows
-    vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
-EOF
 " opens a terminal in a new tab
 function! Open_term() abort
     exe "tabe | term"
@@ -148,8 +145,8 @@ autocmd BufWinEnter 2021.md nnoremap <leader>da O<Esc>O# BBB<Esc>:put =strftime(
 
 
 "make up down automatically go in between text blocks
-nnoremap k gk
-nnoremap j gj
+nnoremap <silent> k gk
+nnoremap <silent> j gj
 
 "Q to reformate text
 nnoremap Q mmvapgq`m
