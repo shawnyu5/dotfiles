@@ -20,12 +20,14 @@ bindkey '^x^e' edit-command-line
 alias su="sudo apt upgrade && sudo apt update"
 
 alias p="python3"
+
 #g for git
 alias g="git"
 alias ga="git add -A"
 alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
+alias gd="git diff --name-only --diff-filter=d --stat=10000 | xargs bat --diff"
 
 #mdp no fade by default
 alias mdp="mdp -f"

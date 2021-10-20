@@ -20,4 +20,4 @@ task add "${NAME}" \
 	project:personal\
 	due:$DATE \
 
-task project:personal
+# task project:personal

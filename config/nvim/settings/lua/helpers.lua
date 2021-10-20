@@ -23,7 +23,7 @@ end
 
 -- opens a terminal in new tab and excute command
 local function term_and_excute(command)
-    vim.cmd("tabe | term")
+    vim.cmd("write | tabe | term")
     vim.fn.chansend(vim.b.terminal_job_id, command)
     vim.cmd("norm! i")
 end
@@ -40,6 +40,7 @@ function M.executor()
         term_and_excute(command)
 
     elseif filetype == 'cpp' then
+        vim.cmd("wa")
         local files = vim.fn.system("ls")
 
         -- check if make file exist in cwd
@@ -52,7 +53,7 @@ function M.executor()
         end
 
     elseif filetype == "javascript" then
-        local command = "node " .. current_file_name .. "\n"
+        local command = "nodemon " .. current_file_name .. "\n"
         term_and_excute(command)
 
     elseif filetype == "sh" then

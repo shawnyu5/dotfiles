@@ -6,14 +6,13 @@ call plug#begin('~/.config/nvim/plugged')
 " preddefined snippets
 "Plug 'honza/vim-snippets'
 
+" lua snippets
+Plug 'L3MON4D3/LuaSnip'
 Plug 'Yggdroot/indentLine'
-
 " NERDtree
 Plug 'preservim/nerdtree'
-
 "Plug 'francoiscabrol/ranger.vim'
 "Plug 'rbgrouleff/bclose.vim' "ranger dependicies
-
 
 if has('nvim-0.5.0')
     "load telescope
@@ -28,10 +27,9 @@ elseif has('nvim-0.4.3')
     "load fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'morhetz/gruvbox'
 
-    "enhanced cpp highlighting
-    "Plug 'octol/vim-cpp-enhanced-highlight'
-    "Plug 'gruvbox-community/gruvbox'
+
 endif
 
 "native LSP
@@ -43,9 +41,6 @@ endif
 "status bar
 Plug 'itchyny/lightline.vim'
 
-"auto paste images into markdown
-Plug 'ferrine/md-img-paste.vim'
-
 "COC auto completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -54,18 +49,17 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 "auto generate table of contents
 Plug 'mzlogin/vim-markdown-toc'
+"rmove trailing white spaces
+Plug 'tweekmonster/wstrip.vim'
+"auto paste images into markdown
+Plug 'ferrine/md-img-paste.vim'
+
 
 "smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
 "opening links in vim
 Plug 'chmp/mdnav'
-
-"rmove trailing white spaces
-Plug 'tweekmonster/wstrip.vim'
-
-"vim color scheme
-"Plug 'morhetz/gruvbox'
 
 "block commenting
 Plug 'preservim/nerdcommenter'

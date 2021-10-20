@@ -14,9 +14,9 @@
 " endfunction
 
 lua << EOF
-
     package.loaded["helpers"] = nil
-    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = true})
+
+    vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = false})
     -- closes all term windows
     vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
 
@@ -25,6 +25,15 @@ lua << EOF
     vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
 
 EOF
+
+imap <silent><expr> <C-S> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+
+snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+
+imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
 
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
@@ -227,7 +236,7 @@ augroup END
 "general programming lanuage maps
 "==========================
 "'{ creates { for functions
-autocmd Filetype sh,cpp,javascript,python inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
+autocmd Filetype sh,cpp,javascript,python, lua inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
 
 "bash file maps
 "==============================
