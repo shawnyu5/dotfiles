@@ -23,7 +23,11 @@ end
 
 -- opens a terminal in new tab and excute command
 local function term_and_excute(command)
+    -- get current tab number
+    local current_tab = vim.fn.tabpagenr()
     vim.cmd("write | tabe | term")
+    -- move terminal to 1 before current tab, so closing terminal will land on the currect page
+    vim.cmd("tabm " .. current_tab - 1)
     vim.fn.chansend(vim.b.terminal_job_id, command)
     vim.cmd("norm! i")
 end
@@ -36,7 +40,7 @@ function M.executor()
 
     if filetype == "python" then
         -- print("file type is python")
-        local command = "python3 " .. current_file_name .. "\n"
+        local command = "python3 " .. current_file_name .. "&& exit\n"
         term_and_excute(command)
 
     elseif filetype == 'cpp' then
@@ -45,19 +49,19 @@ function M.executor()
 
         -- check if make file exist in cwd
         if string.find(files, "makefile") or string.find(files, "Makefile") then
-            local command = "make\n"
+            local command = "make && exit\n"
             term_and_excute(command)
         else
-            local command = "g++ " .. current_file_name .. " && ./a.out\n"
+            local command = "g++ " .. current_file_name .. " && ./a.out && exit\n"
             term_and_excute(command)
         end
 
     elseif filetype == "javascript" then
-        local command = "nodemon " .. current_file_name .. "\n"
+        local command = "nodemon " .. current_file_name .. " && exit\n"
         term_and_excute(command)
 
     elseif filetype == "sh" then
-        local command = "./" .. current_file_name .. "\n"
+        local command = "./" .. current_file_name .. " && exit\n"
         term_and_excute(command)
 
     elseif filetype == "markdown" then

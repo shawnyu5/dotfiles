@@ -4,6 +4,7 @@
 "autocmd FileType javascript nnoremap <leader>m :!node %<CR>
 "autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
 
+" autocmd TermClose * :lua vim.cmd("close | tabp")
 
 " function! CloseSomething()
   " if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
@@ -236,7 +237,7 @@ augroup END
 "general programming lanuage maps
 "==========================
 "'{ creates { for functions
-autocmd Filetype sh,cpp,javascript,python, lua inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
+autocmd Filetype sh,cpp,javascript,python,lua inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
 
 "bash file maps
 "==============================
