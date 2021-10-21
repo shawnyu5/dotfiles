@@ -27,14 +27,17 @@ lua << EOF
 
 EOF
 
-imap <silent><expr> <C-S> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
-inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+" imap <silent><expr> <C-S> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+" inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
 
-snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
-snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+" snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+" snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 
-imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
-smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+" imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+" smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+
+nnoremap H :tabp<CR>
+nnoremap L :tabn<CR>
 
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
@@ -124,7 +127,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
 " disable <S-l>
-map <S-l> <Nop>
+" map <S-l> <Nop>
 "leader df for diffthis
 nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff

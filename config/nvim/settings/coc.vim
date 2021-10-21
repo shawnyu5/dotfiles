@@ -30,9 +30,8 @@ let g:coc_global_extensions = ['coc-pyright', 'coc-sh']
 
 "let g:coc_snippet_next = '<tab>'
 
-"go to function definition
 "hover
-nnoremap <silent> H :call <SID>show_documentation()<CR>
+nnoremap <silent><leader>h :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

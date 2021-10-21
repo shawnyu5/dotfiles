@@ -47,9 +47,9 @@ elseif has('nvim-0.4.3')
 endif
 
 source ~/.config/nvim/settings/coc.vim
-" source ~/.config/nvim/settings/coc-snippets_settings.vim
+source ~/.config/nvim/settings/coc-snippets_settings.vim
 
-luafile ~/.config/nvim/settings/luasnippets_settings.lua
+" luafile ~/.config/nvim/settings/luasnippets_settings.lua
 
 source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
