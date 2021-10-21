@@ -14,6 +14,8 @@ Plug 'preservim/nerdtree'
 "Plug 'francoiscabrol/ranger.vim'
 "Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
+Plug 'shawnyu5/executor.nvim'
+
 if has('nvim-0.5.0')
     "load telescope
     Plug 'nvim-lua/popup.nvim'
