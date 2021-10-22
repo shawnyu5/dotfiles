@@ -35,16 +35,19 @@ elseif has('nvim-0.4.3')
 endif
 
 "native LSP
-"Plug 'neovim/nvim-lspconfig'
-"Plug 'hrsh7th/nvim-compe'
-""code action
-"Plug 'glepnir/lspsaga.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+" better lsp_signature help
+Plug 'ray-x/lsp_signature.nvim'
+" Plug 'williamboman/nvim-lsp-installer'
 
 "status bar
 Plug 'itchyny/lightline.vim'
 
 "COC auto completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "brower based markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }

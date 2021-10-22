@@ -36,8 +36,8 @@ EOF
 " imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
 " smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
 
-nnoremap H :tabp<CR>
-nnoremap L :tabn<CR>
+" nnoremap H :tabp<CR>
+" nnoremap L :tabn<CR>
 
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
@@ -126,8 +126,10 @@ tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
-" disable <S-l>
-" map <S-l> <Nop>
+" disable L and H, could be overrode by other configs later
+map <S-l> <Nop>
+map <S-h> <Nop>
+
 "leader df for diffthis
 nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff

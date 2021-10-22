@@ -40,6 +40,11 @@ if has('nvim-0.5.0')
     source ~/.config/nvim/settings/markdown-preview.vim
     source ~/.config/nvim/settings/lightLine_settings.vim
 
+    "native lsp config
+    luafile ~/.config/nvim/settings/native_lsp.lua
+    luafile ~/.config/nvim/settings/cmp_config.lua
+    source ~/.config/nvim/settings/bash-lanuage-server.vim
+
 elseif has('nvim-0.4.3')
     " "load fzf settings
     source ~/.config/nvim/settings/fzf.vim
@@ -48,8 +53,8 @@ elseif has('nvim-0.4.3')
     source ~/.config/nvim/settings/gruv-box_settings.vim
 endif
 
-source ~/.config/nvim/settings/coc.vim
-source ~/.config/nvim/settings/coc-snippets_settings.vim
+" source ~/.config/nvim/settings/coc.vim
+" source ~/.config/nvim/settings/coc-snippets_settings.vim
 
 " luafile ~/.config/nvim/settings/luasnippets_settings.lua
 
@@ -59,15 +64,6 @@ source ~/.config/nvim/settings/md_paste.vim
 
 source ~/.config/nvim/settings/vim-closetag.vim
 
-
-"native lsp config
-"source ~/.config/nvim/settings/lspSaga.vim
-
-"source ~/.config/nvim/settings/native_lsp.vim
-
-"luafile ~/.config/nvim/settings/compe-config.lua
-
-"source ~/.config/nvim/settings/bash-lanuage-server.vim
 
 "set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80

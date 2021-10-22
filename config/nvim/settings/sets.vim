@@ -34,7 +34,9 @@ set splitbelow splitright
 set cursorline
 "disable auto commenting
 set formatoptions-=cro
+
 "autocompletion while entering vim commands
+set completeopt=menu,menuone,noselect
 set wildmode=longest,list,full
 set wildmenu
 "wait 0ms after pressing the esc key to see if there are any other key presses
