@@ -6,18 +6,17 @@ local cmp = require'cmp'
 -- lspkind.init()
 
 cmp.setup {
-    -- snippet = {
-    -- expand = function(args)
-    -- -- For `vsnip` user.
-    -- vim.fn["vsnip#anonymous"](args.body)
+    snippet = {
+        expand = function(args)
+            -- -- For `vsnip` user.
+            -- vim.fn["vsnip#anonymous"](args.body)
 
-    -- -- For `luasnip` user.
-    -- -- require('luasnip').lsp_expand(args.body)
-
-    -- -- For `ultisnips` user.
-    -- -- vim.fn["UltiSnips#Anon"](args.body)
-    -- end,
-    -- },
+            -- -- For `luasnip` user.
+            -- -- require('luasnip').lsp_expand(args.body)
+            -- For `ultisnips` user.
+            vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        end,
+    },
     mapping = {
         ["<Tab>"] = function(fallback)
             if cmp.visible() then
@@ -41,44 +40,17 @@ cmp.setup {
     -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
     sources = {
         { name = 'nvim_lsp' },
-
         { name = "nvim_lua" },
-        -- { name = "zsh" },
-
         { name = "path" },
-        -- For vsnip user.
-        -- { name = 'vsnip' },
-
-        -- For luasnip user.
-        -- { name = 'luasnip' },
-
-        -- For ultisnips user.
-        -- { name = 'ultisnips' },
-
-        { name = 'buffer', keyword_length = 3 },
+        { name = 'ultisnips' }, -- For ultisnips user.
+        -- would like instant completion, no keyword_length
+        { name = 'buffer'},
+        -- { name = 'buffer', keyword_length = 3 },
     },
 
     formatting = {
         -- Youtube: How to set up nice formatting for your sources.
         -- format = lspkind.cmp_format {
-            -- with_text = true,
-            -- menu = {
-                -- buffer = "[buf]",
-                -- nvim_lsp = "[LSP]",
-                -- nvim_lua = "[api]",
-                -- path = "[path]",
-            -- },
-        -- },
-    },
-    experimental = {
-        -- use new menu
-        native_menu = false,
-
-        ghost_text = false,
+            -- with_text = false,
     },
 }
-
--- Setup lspconfig.
--- require('lspconfig')[%YOUR_LSP_SERVER%].setup {
-    -- capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- }

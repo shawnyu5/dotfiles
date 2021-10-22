@@ -2,7 +2,9 @@
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
 "let g:UltiSnipsExpandTrigger="<Tab>"
+
 let g:UltiSnipsExpandTrigger="<C-s>"
+
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 

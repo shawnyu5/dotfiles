@@ -2,12 +2,13 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Snippets engine.
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " preddefined snippets
 "Plug 'honza/vim-snippets'
 
 " lua snippets
-Plug 'L3MON4D3/LuaSnip'
+" Plug 'L3MON4D3/LuaSnip'
+
 Plug 'Yggdroot/indentLine'
 " NERDtree
 Plug 'preservim/nerdtree'

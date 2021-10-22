@@ -170,3 +170,9 @@ lsp.sumneko_lua.setup {
 
 }
 
+vim.cmd[[
+    hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline
+    hi LspDiagnosticsUnderlineWarning guifg=yellow gui=italic,underline
+    hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
+    hi LspDiagnosticsUnderlineHint guifg=blue
+]]
