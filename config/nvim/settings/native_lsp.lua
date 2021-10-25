@@ -22,6 +22,7 @@ local on_attach = function(_, bufnr)
     buf_set_keymap('n', 'H', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     buf_set_keymap('n', '<leader>h', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+    buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)     -- does not work for some reason
     -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     -- buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
@@ -32,7 +33,6 @@ local on_attach = function(_, bufnr)
     -- opts)
     -- buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     -- opts)
-    -- buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     -- buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     -- buf_set_keymap('n', '<space>q',
@@ -172,7 +172,7 @@ lsp.sumneko_lua.setup {
 
 vim.cmd[[
     hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline
-    hi LspDiagnosticsUnderlineWarning guifg=yellow gui=italic,underline
+    hi LspDiagnosticsUnderlineWarning guifg=orange gui=italic,underline
     hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
-    hi LspDiagnosticsUnderlineHint guifg=blue
+    hi LspDiagnosticsUnderlineHint guifg=orange
 ]]

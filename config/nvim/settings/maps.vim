@@ -15,7 +15,7 @@
 " endfunction
 
 lua << EOF
-    package.loaded["helpers"] = nil
+    -- package.loaded["helpers"] = nil
 
     -- vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = false})
     -- -- closes all term windows

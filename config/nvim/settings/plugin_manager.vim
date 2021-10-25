@@ -15,7 +15,7 @@ Plug 'preservim/nerdtree'
 "Plug 'francoiscabrol/ranger.vim'
 "Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
-Plug 'shawnyu5/executor.nvim'
+Plug 'shawnyu5/executor.nvim', { 'branch': 'table_refactor' }
 
 if has('nvim-0.5.0')
     "load telescope
