@@ -172,7 +172,18 @@ lsp.sumneko_lua.setup {
 
 vim.cmd[[
     hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline
+    hi LspDiagnosticsSignError guifg=red
+
     hi LspDiagnosticsUnderlineWarning guifg=orange gui=italic,underline
+    hi LspDiagnosticsVirtualTextWarning guifg=orange
+    hi LspDiagnosticsSignWarning guifg=orange
+
     hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
+    hi LspDiagnosticsVirtualTextInformation guifg=white
+    hi LspDiagnosticsSignInformation guifg=white
+
     hi LspDiagnosticsUnderlineHint guifg=orange
+    hi LspDiagnosticsVirtualTextHint guifg=orange
+
+    hi LspDiagnosticsFloatingHint guifg=white
 ]]

@@ -10,10 +10,11 @@ Plug 'SirVer/ultisnips'
 " Plug 'L3MON4D3/LuaSnip'
 
 Plug 'Yggdroot/indentLine'
+
 " NERDtree
-Plug 'preservim/nerdtree'
-"Plug 'francoiscabrol/ranger.vim'
-"Plug 'rbgrouleff/bclose.vim' "ranger dependicies
+" Plug 'preservim/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
 Plug 'shawnyu5/executor.nvim', { 'branch': 'table_refactor' }
 
