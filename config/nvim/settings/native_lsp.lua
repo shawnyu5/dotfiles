@@ -161,14 +161,19 @@ lsp.sumneko_lua.setup {
         },
     },
 
-    -- pyright
-    -- npm install -g pyright
-    require'lspconfig'.pyright.setup{
-        cmd = { "pyright-langserver", "--stdio" },
-        filetypes = { "python" }
-    }
-
 }
+
+-- pyright
+-- npm install -g pyright
+-- pyright is pretty primitive...
+-- require'lspconfig'.pyright.setup{
+    -- cmd = { "pyright-langserver", "--stdio" },
+    -- filetypes = { "python" }
+-- }
+
+--pylsp
+require'lspconfig'.pylsp.setup{}
+
 
 vim.cmd[[
     hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline

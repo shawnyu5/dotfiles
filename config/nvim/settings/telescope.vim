@@ -3,5 +3,6 @@ nnoremap <leader>fw <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fg <cmd>Telescope git_files<CR>
 nnoremap <leader>fe <cmd>Telescope file_browser<CR>
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})<CR>
 command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
 

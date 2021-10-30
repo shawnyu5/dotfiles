@@ -20,8 +20,6 @@ source ~/.config/nvim/settings/NERDtree_settings.vim
 
 source ~/.config/nvim/settings/nerdcommenter_settings.vim
 
-" source ~/.config/nvim/plugged/executor/plugin/executor.vim
-
 source ~/.config/nvim/settings/utilsnips_settings.vim
 
 source ~/.config/nvim/settings/executor_settings.lua

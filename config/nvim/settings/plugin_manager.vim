@@ -1,6 +1,12 @@
 "plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
+" wrapper for prettier
+" TODO: look into this a bit more
+" Plug 'prettier/vim-prettier', {
+  " \ 'do': 'yarn install',
+  " \ 'for': ['javascript', 'css', 'json', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
 " Snippets engine.
 Plug 'SirVer/ultisnips'
 " preddefined snippets

@@ -2,6 +2,7 @@
 
 * [system commands](#system-commands)
     * [shutdown](#shutdown)
+    * [WiFi](#wifi)
 * [Command line](#command-line)
     * [Zsh completion](#zsh-completion)
     * [Installing packages on command line](#installing-packages-on-command-line)
@@ -23,6 +24,9 @@ Shuts down the computer right now.
 
 By default, it waits 1 minute before shutting down
 
+## WiFi
+
+`nmtui` - WiFi manager GUI
 # Command line
 
 ## Zsh completion
