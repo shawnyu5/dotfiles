@@ -8,4 +8,5 @@ require('nvim-autopairs').setup{
 require('nvim-autopairs').remove_rule('(') -- remove rule (
 require('nvim-autopairs').remove_rule("'") -- remove rule '
 require('nvim-autopairs').remove_rule('"') -- remove rule "
+require('nvim-autopairs').remove_rule('`') -- remove rule `
 

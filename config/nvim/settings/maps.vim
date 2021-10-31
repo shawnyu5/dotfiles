@@ -226,9 +226,6 @@ augroup cpp_maps
     ";if insert if statement
     autocmd FileType cpp inoremap <silent> 'if if (BBB)<CR>{<CR><++><CR>}<CR><Esc>?BBB<CR>"_cw
 
-    ";class insert a class
-    "autocmd FileType cpp inoremap <silent> 'class class BBB<CR>{<CR><BS>private:<CR><++><CR>public:<CR><BS><++><CR>};<Esc>?BBB<CR>"_cw
-
     "turn a prototype into a function
     autocmd FileType cpp nnoremap <silent> <leader>fu _A<BS><CR>{<CR>BBB<CR>}<Esc>?BBB<CR>"_cw
 
@@ -242,7 +239,7 @@ augroup END
 "general programming lanuage maps
 "==========================
 "'{ creates { for functions
-autocmd Filetype sh,cpp,javascript,python,lua inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
+" autocmd Filetype sh,cpp,javascript,python,lua inoremap <silent> '{ {<CR>BBB<CR>}<CR><Esc>?BBB<CR>"_cw
 
 "bash file maps
 "==============================
@@ -261,13 +258,8 @@ augroup END
 "'ul insert <ul></ul>
 augroup html_maps
     autocmd!
-    autocmd Filetype html,markdown inoremap 'ul <ul>BBB</ul><Esc>?BBB<CR>"_cw
-
-    "'li insert <li></li>
-    autocmd Filetype html,markdown inoremap 'li <li>BBB</li><Esc>?BBB<CR>"_cw
-
-    autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
-    autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+    " autocmd FileType markdown inoremap '> -> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
+    " autocmd FileType markdown inoremap '- -------------------------<CR><CR>-> # BBB<-<CR><CR><++><Esc>?BBB<CR>"_cw
 augroup END
 
 "js file maps
