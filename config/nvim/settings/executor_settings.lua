@@ -7,7 +7,7 @@ executor.setup({
     commands = {
         cpp = {
             "make",
-            "g++ %"
+            "g++ % && ./a.out"
         },
         python = {
             "python3 %"

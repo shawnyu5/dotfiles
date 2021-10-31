@@ -18,6 +18,8 @@ source ~/.config/nvim/settings/maps.vim
 
 source ~/.config/nvim/settings/NERDtree_settings.vim
 
+luafile ~/.config/nvim/settings/autopairs_settings.lua
+
 source ~/.config/nvim/settings/nerdcommenter_settings.vim
 
 source ~/.config/nvim/settings/utilsnips_settings.vim

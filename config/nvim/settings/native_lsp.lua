@@ -166,13 +166,13 @@ lsp.sumneko_lua.setup {
 -- pyright
 -- npm install -g pyright
 -- pyright is pretty primitive...
--- require'lspconfig'.pyright.setup{
-    -- cmd = { "pyright-langserver", "--stdio" },
-    -- filetypes = { "python" }
--- }
+require'lspconfig'.pyright.setup{
+    cmd = { "pyright-langserver", "--stdio" },
+    filetypes = { "python" }
+}
 
 --pylsp
-require'lspconfig'.pylsp.setup{}
+-- require'lspconfig'.pylsp.setup{}
 
 
 vim.cmd[[
@@ -182,6 +182,7 @@ vim.cmd[[
     hi LspDiagnosticsUnderlineWarning guifg=orange gui=italic,underline
     hi LspDiagnosticsVirtualTextWarning guifg=orange
     hi LspDiagnosticsSignWarning guifg=orange
+    hi LspDiagnosticsFloatingHint guifg=orange
 
     hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
     hi LspDiagnosticsVirtualTextInformation guifg=white
