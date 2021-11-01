@@ -1,11 +1,6 @@
 " plugin manager
 call plug#begin('~/.config/nvim/plugged')
 
-" wrapper for prettier
-" Plug 'prettier/vim-prettier', {
-  " \ 'do': 'yarn install',
-  " \ 'for': ['javascript', 'css', 'json', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
 " Auto pairs
 Plug 'windwp/nvim-autopairs'
 
@@ -21,6 +16,8 @@ Plug 'Yggdroot/indentLine'
 
 " NERDtree
 " Plug 'preservim/nerdtree'
+
+" ranger
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
@@ -40,7 +37,6 @@ elseif has('nvim-0.4.3')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'morhetz/gruvbox'
-
 
 endif
 

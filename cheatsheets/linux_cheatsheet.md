@@ -46,12 +46,12 @@ When using i3, it does not vibe well with gnome keyring. So we need to install
 packages on the command line instead of using the GUI. Most packages end with
 `.deb` extension. 
 
+Run the command `sudo dpkg -i <package name>` to install the package.
+
 ### To uninstall 
 
 To uninstall a package from `dpkg`, run `dpkg -r <package name>` to uninstall
 that package.
-
-Run the command `sudo dpkg -i <package name>` to install the package.
 
 ## current time and date
 

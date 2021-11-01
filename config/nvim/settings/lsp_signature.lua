@@ -17,7 +17,7 @@
   -- this setting will be helpful if you do not want the PUM and floating win overlap
   fix_pos = false,  -- set to true, the floating window will not auto-close until finish all parameters
   hint_enable = true, -- virtual hint enable
-  hint_prefix = "🐼 ",  -- Panda for parameter
+  hint_prefix = "☝  ",  -- Panda for parameter
   hint_scheme = "String",
   use_lspsaga = false,  -- set to true if you want to use lspsaga popup
   hi_parameter = "LspSignatureActiveParameter", -- how your parameter will be highlight
