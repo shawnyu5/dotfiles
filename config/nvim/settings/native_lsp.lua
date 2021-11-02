@@ -167,6 +167,7 @@ lsp.sumneko_lua.setup {
 -- npm install -g pyright
 -- pyright is pretty primitive...
 require'lspconfig'.pyright.setup{
+    on_attach = on_attach(),
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" }
 }

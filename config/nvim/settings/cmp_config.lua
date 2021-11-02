@@ -8,13 +8,13 @@ local cmp = require'cmp'
 cmp.setup {
     snippet = {
         expand = function(args)
+            vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
             -- -- For `vsnip` user.
             -- vim.fn["vsnip#anonymous"](args.body)
 
             -- -- For `luasnip` user.
             -- -- require('luasnip').lsp_expand(args.body)
             -- For `ultisnips` user.
-            vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
         end,
     },
     mapping = {
@@ -54,3 +54,9 @@ cmp.setup {
             -- with_text = false,
     },
 }
+
+cmp.setup.cmdline('/', {
+    sources = {
+        { name = 'buffer' }
+    }
+})

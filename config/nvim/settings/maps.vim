@@ -55,64 +55,6 @@ function! s:test() abort
 endfunction
 " nnoremap <leader>t :call <SID>test()<CR>
 
-" opens a terminal in a new tab
-function! Open_term() abort
-    exe "tabe | term"
-    " exe "terminal"
-    exe "norm! i"
-endfunction
-
-" Map execution based on file type
-function! s:executor() abort
-    let current_file_name = expand('%')
-
-    if &ft == 'python'
-        call Open_term()
-        let command = join(["python3", current_file_name, "\n"])
-        call chansend(b:terminal_job_id, command)
-
-    elseif &ft == 'cpp'
-        " get all files in current directory
-        let files = system('ls')
-        " open terminal in vertical split
-        call Open_term()
-
-        " if makefile is not in current directory, g++
-        if (match(files, "makefile")) == -1
-            let command = join(["g++", current_file_name, "&& ./a.out\n"])
-            " echo "excuting " . command
-            call chansend(b:terminal_job_id, command)
-        else
-            " else run make
-            let command = "make\n"
-            " echo "Excuting make"
-            call chansend(b:terminal_job_id, command)
-        endif
-    elseif &ft == 'javascript'
-        call Open_term()
-        let command = join(["node", current_file_name, "\n"])
-        call chansend(b:terminal_job_id, command)
-
-    elseif &ft == 'sh'
-        call Open_term()
-        let command = join (["./", current_file_name, "\n"], "")
-        call chansend(b:terminal_job_id, command)
-    elseif &ft == 'markdown'
-        exe 'MarkdownPreview'
-    elseif &ft == 'html'
-        exe '!chrome %'
-    elseif &ft == "lua"
-        exe "luafile %"
-        " call Open_term()
-        " let command = join (["luajit ", current_file_name, "\n"], "")
-        " call chansend(b:terminal_job_id, command)
-    else
-        echo 'no mapping created'
-    endif
-endfunction
-
-" nnoremap <leader>m :call <SID>executor()<CR>
-
 nnoremap <C-g> 2<C-g>
 "command to source vimrc
 command! Sr :so ~/.config/nvim/init.vim
