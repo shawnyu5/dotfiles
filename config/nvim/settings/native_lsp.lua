@@ -4,6 +4,8 @@ local lsp = require("lspconfig")
 local on_attach = function(_, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    -- vim.cmd("autocmd BufWritePre * :lua vim.lsp.buf.formatting()")
+
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -48,12 +50,14 @@ end
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
 vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
-    update_in_insert = false,
+    update_in_insert = true,
     virtual_text = {
         spacing = 4,
         prefix = "●"
     },
-    severity_sort = true
+    severity_sort = true,
+    signs = false
+
 })
 
 local signs = {
@@ -110,7 +114,14 @@ require'lspconfig'.html.setup {
 
 -- tsserver
 lsp.tsserver.setup{
-    on_attach = on_attach
+    on_attach = function(client, bufnr)
+        on_attach = on_attach
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
+    end
+    -- on_attach = on_attach,
+    -- on_attach.client.resolved_capabilities.document_formatting = false,
+    -- resolved_capabilities.document_range_formatting = false
 }
 
 -- sumneko lua

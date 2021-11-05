@@ -1,5 +1,5 @@
  "_       _ _               _           
-"(_)_ __ (_) |_      __   _(_)_ __ ___  
+"
 "| | '_ \| | __|     \ \ / / | '_ ` _ \ 
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
@@ -66,7 +66,6 @@ source ~/.config/nvim/settings/vim-you-autocorrect.vim
 source ~/.config/nvim/settings/md_paste.vim
 
 source ~/.config/nvim/settings/vim-closetag.vim
-
 
 "set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80

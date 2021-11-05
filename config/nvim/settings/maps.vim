@@ -210,7 +210,7 @@ augroup js_maps
     autocmd!
     autocmd FileType javascript inoremap <silent> 'c console.log("BBB");<Esc>?BBB<CR>"_cw
     autocmd FileType javascript inoremap <silent> ''c console.log(BBB);<Esc>?BBB<CR>"_cw
-    autocmd Filetype javascript inoremap <silent> ''{ {<CR>BBB<CR>});<CR><Esc>?BBB<CR>"_cw
+    " autocmd Filetype javascript inoremap <silent> ''{ {<CR>BBB<CR>});<CR><Esc>?BBB<CR>"_cw
 augroup END
 
 "python file maps

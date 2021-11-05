@@ -33,7 +33,7 @@ executor.setup({
 
     },
     default_mappings = true,
-
+    always_exit = true,
     dependency_commands = {
         make = "makefile"
     }
