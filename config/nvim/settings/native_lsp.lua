@@ -1,11 +1,9 @@
 local lsp = require("lspconfig")
 
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-    -- vim.cmd("autocmd BufWritePre * :lua vim.lsp.buf.formatting()")
-
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -57,7 +55,6 @@ vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     },
     severity_sort = true,
     signs = false
-
 })
 
 local signs = {
@@ -75,14 +72,6 @@ for type, icon in pairs(signs) do
         numhl = ""
     })
 end
--- nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
--- nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
--- nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
--- nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
--- nnoremap <silent> <S-h> <cmd>lua vim.lsp.buf.hover()<CR>
--- "nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
--- "nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
--- "nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 -- ccls set up
 -- unable to build ccls successfully
@@ -91,14 +80,18 @@ end
 -- }
 
 -- clangd
-require'lspconfig'.clangd.setup{
-    on_attach = on_attach,
-    filetypes = { "c", "cpp", "objc", "objcpp" }
+lsp.clangd.setup{
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+    end
 }
 
 -- bashls
 lsp.bashls.setup{
-    on_attach = on_attach
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+    end
 }
 
 -- html
@@ -108,16 +101,22 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 
 
 require'lspconfig'.html.setup {
-    on_attach = on_attach,
     capabilities = capabilities_html,
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+    end
 }
 
 -- tsserver
 lsp.tsserver.setup{
     on_attach = function(client, bufnr)
         on_attach = on_attach
-        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_formatting = true
         client.resolved_capabilities.document_range_formatting = false
+
+        if client.resolved_capabilities.document_formatting then
+            vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()")
+        end
     end
     -- on_attach = on_attach,
     -- on_attach.client.resolved_capabilities.document_formatting = false,
@@ -178,15 +177,18 @@ lsp.sumneko_lua.setup {
 -- npm install -g pyright
 -- pyright is pretty primitive...
 require'lspconfig'.pyright.setup{
-    on_attach = on_attach(),
     cmd = { "pyright-langserver", "--stdio" },
-    filetypes = { "python" }
+    filetypes = { "python" },
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+    end
 }
 
 --pylsp
 -- require'lspconfig'.pylsp.setup{}
 
 
+-- color settings
 vim.cmd[[
     hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline
     hi LspDiagnosticsSignError guifg=red

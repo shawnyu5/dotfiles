@@ -15,7 +15,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/indentLine'
 
 " NERDtree
-" Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 
 " ranger
 Plug 'francoiscabrol/ranger.vim'
