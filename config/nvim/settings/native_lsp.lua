@@ -1,6 +1,13 @@
 local lsp = require("lspconfig")
 
 
+-- determine weather to enable auto formatting
+local auto_format = function(client)
+    client.resolved_capabilities.document_formatting = true
+    vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()")
+end
+
+
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -83,6 +90,7 @@ end
 lsp.clangd.setup{
     filetypes = { "c", "cpp", "objc", "objcpp" },
     on_attach = function(client, bufnr)
+        auto_format(client)
         on_attach(client, bufnr)
     end
 }
@@ -110,13 +118,10 @@ require'lspconfig'.html.setup {
 -- tsserver
 lsp.tsserver.setup{
     on_attach = function(client, bufnr)
-        on_attach = on_attach
         client.resolved_capabilities.document_formatting = true
         client.resolved_capabilities.document_range_formatting = false
-
-        if client.resolved_capabilities.document_formatting then
-            vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()")
-        end
+        auto_format(client)
+        on_attach = on_attach
     end
     -- on_attach = on_attach,
     -- on_attach.client.resolved_capabilities.document_formatting = false,
@@ -146,7 +151,9 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        on_attach = on_attach(client, bufnr)
+    end,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
     settings = {
         Lua = {
@@ -201,10 +208,9 @@ vim.cmd[[
     hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
     hi LspDiagnosticsVirtualTextInformation guifg=white
     hi LspDiagnosticsSignInformation guifg=white
-    hi LspDiagnosticsFloatingInformation guifg=white
 
     hi LspDiagnosticsUnderlineHint guifg=orange
     hi LspDiagnosticsVirtualTextHint guifg=orange
-    hi LspDiagnosticsFloatingHint guifg=orange
 
+    hi LspDiagnosticsFloatingHint guifg=white
 ]]
