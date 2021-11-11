@@ -201,9 +201,10 @@ vim.cmd[[
     hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
     hi LspDiagnosticsVirtualTextInformation guifg=white
     hi LspDiagnosticsSignInformation guifg=white
+    hi LspDiagnosticsFloatingInformation guifg=white
 
     hi LspDiagnosticsUnderlineHint guifg=orange
     hi LspDiagnosticsVirtualTextHint guifg=orange
+    hi LspDiagnosticsFloatingHint guifg=orange
 
-    hi LspDiagnosticsFloatingHint guifg=white
 ]]
