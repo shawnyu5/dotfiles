@@ -47,6 +47,7 @@ if has('nvim-0.5.0')
     luafile ~/.config/nvim/settings/cmp_config.lua
     source ~/.config/nvim/settings/bash-lanuage-server.vim
     luafile ~/.config/nvim/settings/lsp_signature.lua
+    " luafile ~/.config/nvim/settings/null-ls_settings.lua
 
 elseif has('nvim-0.4.3')
     " "load fzf settings

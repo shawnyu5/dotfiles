@@ -7,10 +7,10 @@ require('nvim-autopairs').setup{
 
 -- require('nvim-autopairs').clear_rules() -- clear all rule
 -- require('nvim-autopairs').get_rule('{') -- get rule " then modify it
-require('nvim-autopairs').remove_rule('(') -- remove rule (
+-- require('nvim-autopairs').remove_rule('(') -- remove rule (
 require('nvim-autopairs').remove_rule("'") -- remove rule '
 require('nvim-autopairs').remove_rule('"') -- remove rule "
 require('nvim-autopairs').remove_rule('```') -- remove rule ```
 require('nvim-autopairs').remove_rule('`') -- remove rule `
-require('nvim-autopairs').remove_rule('[') -- remove rule [
+-- require('nvim-autopairs').remove_rule('[') -- remove rule [
 

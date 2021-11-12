@@ -90,7 +90,6 @@ end
 lsp.clangd.setup{
     filetypes = { "c", "cpp", "objc", "objcpp" },
     on_attach = function(client, bufnr)
-        auto_format(client)
         on_attach(client, bufnr)
     end
 }
@@ -111,6 +110,7 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.html.setup {
     capabilities = capabilities_html,
     on_attach = function(client, bufnr)
+        auto_format(client)
         on_attach(client, bufnr)
     end
 }
@@ -121,7 +121,7 @@ lsp.tsserver.setup{
         client.resolved_capabilities.document_formatting = true
         client.resolved_capabilities.document_range_formatting = false
         auto_format(client)
-        on_attach = on_attach
+        on_attach(client, bufnr)
     end
     -- on_attach = on_attach,
     -- on_attach.client.resolved_capabilities.document_formatting = false,
@@ -151,9 +151,7 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup {
-    on_attach = function(client, bufnr)
-        on_attach = on_attach(client, bufnr)
-    end,
+    on_attach = on_attach,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
     settings = {
         Lua = {
@@ -194,6 +192,23 @@ require'lspconfig'.pyright.setup{
 --pylsp
 -- require'lspconfig'.pylsp.setup{}
 
+-- local null_ls = require("null-ls")
+
+-- require("null-ls").config({
+    -- sources = {
+        -- -- null_ls.builtins.formatting.clang_format
+        -- null_ls.builtins.formatting.clang_format.with({
+        -- extra_args = { '-style="{IndentWidth: 4,TabWidth: 4}"'}
+        -- })
+    -- }
+-- })
+
+-- require("lspconfig")["null-ls"].setup({
+    -- on_attach = function(client, bufnr)
+        -- auto_format(client)
+        -- on_attach(client, bufnr)
+    -- end
+-- })
 
 -- color settings
 vim.cmd[[

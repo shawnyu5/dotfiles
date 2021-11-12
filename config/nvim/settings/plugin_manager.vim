@@ -47,6 +47,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 " better lsp_signature help
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 " Plug 'williamboman/nvim-lsp-installer'
 
 "status bar
