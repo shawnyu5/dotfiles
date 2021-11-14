@@ -17,7 +17,7 @@
 * [deleting a branch from remote repository](#deleting-a-branch-from-remote-repository)
     * [git log](#git-log)
     * [`git reset <file>`](#git-reset-file)
-* [git clone <repositry URL> <path to clone>](#git-clone-repositry-url-path-to-clone)
+* [Checking out a pull request](#checking-out-a-pull-request)
 
 <!-- vim-markdown-toc -->
 
@@ -125,6 +125,16 @@ Shows a history of all git commits
 --------------------------
 remove file from staging area
 
-# git clone <repositry URL> <path to clone>
+# Checking out a pull request
 
-Will clone a git repository
+`git fetch origin pull/ID/head:BRANCH NAME`
+
+Then `git checkout BRANCHNAME` will go to that pull request.
+
+Or it can be done using `gh`:
+
+```bash
+gh pr checkout NUMBER
+```
+
+**NOTE**: Look more into `gh`

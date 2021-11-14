@@ -13,7 +13,8 @@ executor.setup({
             "python3 %"
         },
         javascript = {
-            "nodemon %"
+            "kill -9 $(lsof -t -i:8080) && node %",
+            "nodemon --delay 500ms %"
         },
         sh = {
             "bash %"

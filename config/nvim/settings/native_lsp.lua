@@ -110,7 +110,7 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.html.setup {
     capabilities = capabilities_html,
     on_attach = function(client, bufnr)
-        auto_format(client)
+        -- auto_format(client)
         on_attach(client, bufnr)
     end
 }
@@ -118,9 +118,9 @@ require'lspconfig'.html.setup {
 -- tsserver
 lsp.tsserver.setup{
     on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = true
+        client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
-        auto_format(client)
+        -- auto_format(client)
         on_attach(client, bufnr)
     end
     -- on_attach = on_attach,

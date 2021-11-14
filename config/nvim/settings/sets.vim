@@ -1,4 +1,5 @@
 autocmd Filetype handlebars set ft=html
+
 set rtp+=~/.config/nvim/settings/
 set rtp+=~/.config/nvim/plugged/executor
 
