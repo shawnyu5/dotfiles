@@ -164,6 +164,7 @@ augroup cpp_maps
     autocmd!
     "'c insert cout statement
     autocmd Filetype cpp inoremap <silent> 'c cout << "" << '\n';<Esc>F"i
+    autocmd Filetype cpp inoremap <silent> ''c cout << <++> << '\n';<Esc>F+ca>
 
     ";if insert if statement
     autocmd FileType cpp inoremap <silent> 'if if (BBB)<CR>{<CR><++><CR>}<CR><Esc>?BBB<CR>"_cw

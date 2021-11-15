@@ -10,7 +10,7 @@
 * [git pull](#git-pull)
 * [git branch <new branch name>](#git-branch-new-branch-name)
 * [git branch](#git-branch)
-* [git checkout <existing branch name>](#git-checkout-existing-branch-name)
+* [git checkout](#git-checkout)
 * [git push -u origin <branch name>](#git-push--u-origin-branch-name)
 * [to merge a branch with the main](#to-merge-a-branch-with-the-main)
 * [delete a branch](#delete-a-branch)
@@ -80,7 +80,7 @@ Creates a branch with that name
 
 List all existing branches
 
-# git checkout <existing branch name>
+# git checkout 
 
 switch to that branch
 
@@ -138,3 +138,5 @@ gh pr checkout NUMBER
 ```
 
 **NOTE**: Look more into `gh`
+
+[reference line](https://cli.github.com/manual/gh_pr_checkout)
