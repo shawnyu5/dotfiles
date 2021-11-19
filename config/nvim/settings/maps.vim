@@ -221,3 +221,11 @@ augroup python_maps
     autocmd FileType python,lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
     autocmd FileType python,lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
 augroup END
+
+" SQL file maps
+" ======================
+augroup sql_maps
+    autocmd!
+    autocmd Filetype sql inoremap 'p DBMS_OUTPUT.PUT_LINE('BBB');<Esc>?BBB<CR>ciw
+    autocmd Filetype sql inoremap ''p DBMS_OUTPUT.PUT_LINE(BBB);<Esc>?BBB<CR>ciw
+augroup END
