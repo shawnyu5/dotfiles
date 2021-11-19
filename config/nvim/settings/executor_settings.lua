@@ -39,4 +39,6 @@ executor.setup({
         make = "makefile"
     }
 })
+-- print(vim.inspect(executor.commands))
+-- print(executor.executor_settings.commands)
 
