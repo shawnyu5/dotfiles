@@ -31,6 +31,8 @@ if has('nvim-0.5.0')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
+
 
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 

@@ -3,7 +3,7 @@ local M = {}
 
 local opts = {
     cpp = 'std::cout << "<message>" << <variable> << \'\\n\';',
-    javascript = 'console.log("<message>, <variable>");',
+    javascript = 'console.log("<message>", <variable>);',
     python = 'print("<message>", <variable>)',
     lua = 'print("<message>" .. <variable>)'
 }
@@ -19,7 +19,11 @@ local function wrap_variable(message, variable, ft)
     end
 end
 
+local function validate_filetype()
+end
 function M.print_debug()
+    local ft = vim.bo.filetype
+
     local message = vim.fn.input("message> ")
 
     if message == "" then
@@ -27,7 +31,6 @@ function M.print_debug()
     end
 
     local variable = vim.fn.expand("<cword>")
-    local ft = vim.bo.filetype
 
     -- wrap variable in print statement with message
     local statement = wrap_variable(message, variable, ft)
