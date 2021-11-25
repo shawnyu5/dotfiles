@@ -3,6 +3,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Plug 'https://github.com/dstein64/vim-startuptime'
 
+"harpoon
+Plug 'ThePrimeagen/harpoon'
+
 " Auto pairs
 Plug 'windwp/nvim-autopairs'
 

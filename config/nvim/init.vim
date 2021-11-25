@@ -30,6 +30,8 @@ source ~/.config/nvim/settings/ranger_settings.vim
 
 luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 
+luafile ~/.config/nvim/settings/harpoon_settings.lua
+
 if has('nvim-0.5.0')
     " "telescope settings
     source ~/.config/nvim/settings/telescope.vim

@@ -47,7 +47,7 @@ set completeopt=menu,menuone,noselect,noinsert
 set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
-set scrolloff=3
+set scrolloff=5
 
 augroup highlight_yank
     autocmd!
