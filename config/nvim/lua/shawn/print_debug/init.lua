@@ -11,16 +11,12 @@ local opts = {
 -- wraps message and vaiable in print statment based on file type
 local function wrap_variable(message, variable, ft)
     for key, value in pairs(opts) do
-        if key == ft then
-            local command = value:gsub("<message>", message)
-            command = command:gsub("<variable>", variable)
-            return command
-        end
+        local command = value:gsub("<message>", message)
+        command = command:gsub("<variable>", variable)
+        return command
     end
 end
 
-local function validate_filetype()
-end
 function M.print_debug()
     local ft = vim.bo.filetype
 

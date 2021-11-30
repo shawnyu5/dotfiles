@@ -13,8 +13,8 @@ executor.setup({
             "python3 %"
         },
         javascript = {
-            "node %",
-            "nodemon --delay 500ms %"
+            "nodemon --delay 500ms %",
+            "node %"
         },
         sh = {
             "bash %"

@@ -15,6 +15,6 @@ local opts = {
     lua = 'print("<message>" .. <variable>)'
 }
 
-for key, value in pairs(opts) do
-    print(key)
-end
+local string = "hello (world)"
+local result = string:gsub('%b()', '')
+print(result)

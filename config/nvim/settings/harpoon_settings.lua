@@ -16,3 +16,6 @@ vim.api.nvim_set_keymap("n", "<leader>4", "<cmd>lua require('harpoon.ui').nav_fi
 vim.cmd('command! Harpoonshow :lua require("harpoon.ui").toggle_quick_menu()')
 vim.cmd('command! Harpoonadd :lua require("harpoon.mark").add_file()')
 
+-- vim.api.nvim_set_keymap("n", "<leader><leader>1", '<cmd>lua require("harpoon.mark").add_file()<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap("n", "<leader><leader>2", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true })
+

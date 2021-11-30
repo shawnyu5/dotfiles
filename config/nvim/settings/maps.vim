@@ -136,7 +136,7 @@ nnoremap S :%s///gc<Left><Left><Left><Left>
 filetype plugin on
 
 "<leader><leader> to go to the next <++> place holder and delete that line
-nnoremap <silent> <leader><leader> /<++><CR>"_c4l
+nnoremap <silent> <leader><leader><leader> /<++><CR>"_c4l
 
 "leader fs to quick fix spelling
 nmap <silent> [s <Plug>VimyouautocorrectJump

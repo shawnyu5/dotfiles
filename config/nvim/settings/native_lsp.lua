@@ -1,6 +1,5 @@
 local lsp = require("lspconfig")
 
-
 -- determine weather to enable auto formatting
 local auto_format = function(client)
     client.resolved_capabilities.document_formatting = true
@@ -220,9 +219,9 @@ vim.cmd[[
     hi LspDiagnosticsSignWarning guifg=orange
     hi LspDiagnosticsFloatingHint guifg=orange
 
-    hi LspDiagnosticsUnderlineInformation guifg=white gui=bold,underline
-    hi LspDiagnosticsVirtualTextInformation guifg=white
-    hi LspDiagnosticsSignInformation guifg=white
+    hi LspDiagnosticsUnderlineInformation guifg=NONE
+    hi LspDiagnosticsVirtualTextInformation guifg=NONE
+    hi LspDiagnosticsSignInformation guifg=NONE
 
     hi LspDiagnosticsUnderlineHint guifg=orange
     hi LspDiagnosticsVirtualTextHint guifg=orange
