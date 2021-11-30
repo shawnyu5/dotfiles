@@ -4,8 +4,12 @@
 #---------------------------------
 
 #vim config
-cp -r ~/.config/nvim config/ && echo "nvim config imported"
-rm -rf config/nvim/plugged/
+cp -r ~/.config/nvim/init.vim config/nvim && echo "init.vim imported"
+cp -r ~/.config/nvim/UltiSnips/ config/nvim/ && echo "util snips imported"
+cp -r ~/.config/nvim/settings/ config/nvim/ && echo "settings imported"
+cp -r ~/.config/nvim/spell/ config/nvim/ && echo "spell directory imported"
+cp -r ~/.config/nvim/lua/ config/nvim/ && echo "lua directory imported"
+
 # cp ~/.config/nvim/init.vim config/nvim/init.vim && echo "init.vim imported"
 # # rm -rf config/nvim
 # cp -ru ~/.config/nvim/settings/ config/nvim/ && echo "vim settings imported"

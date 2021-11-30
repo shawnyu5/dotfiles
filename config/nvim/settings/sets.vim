@@ -1,7 +1,8 @@
-autocmd Filetype handlebars set ft=html
+" autocmd Filetype handlebars set ft=html
 
 set rtp+=~/.config/nvim/settings/
-set rtp+=~/.config/nvim/plugged/executor
+" set rtp+=~/.config/nvim/plugged/executor
+set rtp+=~/.config/nvim/settings/print_debug
 
 " not hide markdown special symbols
 set conceallevel=0
@@ -46,7 +47,7 @@ set completeopt=menu,menuone,noselect,noinsert
 set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
-set scrolloff=3
+set scrolloff=5
 
 augroup highlight_yank
     autocmd!

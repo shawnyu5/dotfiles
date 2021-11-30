@@ -28,6 +28,10 @@ source ~/.config/nvim/settings/executor_settings.lua
 
 source ~/.config/nvim/settings/ranger_settings.vim
 
+luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
+
+luafile ~/.config/nvim/settings/harpoon_settings.lua
+
 if has('nvim-0.5.0')
     " "telescope settings
     source ~/.config/nvim/settings/telescope.vim
@@ -88,17 +92,6 @@ aug end
   " "autocmd BufWinLeave * mkview
   " "autocmd BufWinEnter * silent! loadview
 "augroup END
-
-"enhanced cpp highlight settings
-"==============================
-"Highlighting of class scope
-"let g:cpp_class_scope_highlight = 1
-
-""Highlighting of member variables
-""let g:cpp_member_variable_highlight = 1
-
-""Highlighting of library concepts
-"let g:cpp_concepts_highlight = 1
 
 "trailing white space setting
 "=============================
