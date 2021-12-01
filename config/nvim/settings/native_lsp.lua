@@ -211,20 +211,28 @@ require'lspconfig'.pyright.setup{
 
 -- color settings
 vim.cmd[[
-    hi LspDiagnosticsUnderlineError guifg=red gui=bold,underline
-    hi LspDiagnosticsSignError guifg=red
+    " error
+    hi DiagnosticError guifg=BrightRed gui=bold,underline
+    hi DiagnosticUnderlineError guifg=red gui=bold,underline
 
-    hi LspDiagnosticsUnderlineWarning guifg=orange gui=italic,underline
-    hi LspDiagnosticsVirtualTextWarning guifg=orange
-    hi LspDiagnosticsSignWarning guifg=orange
-    hi LspDiagnosticsFloatingHint guifg=orange
+    " warning
+    hi DiagnosticWarn guifg=orange gui=italic,underline
+    hi DiagnosticVirtualTextWarn guifg=orange
+    hi DiagnosticUnderlineWarn guifg=orange gui=italic,underline
 
-    hi LspDiagnosticsUnderlineInformation guifg=NONE
-    hi LspDiagnosticsVirtualTextInformation guifg=NONE
-    hi LspDiagnosticsSignInformation guifg=NONE
 
-    hi LspDiagnosticsUnderlineHint guifg=orange
-    hi LspDiagnosticsVirtualTextHint guifg=orange
+    " info
+    hi DiagnosticInfo guifg=NONE
+    hi DiagnosticVirtualTextInfo guifg=white
+    hi DiagnosticVirtualTextInfo guifg=NONE
+    hi DiagnosticSignInfor guifg=NONE
 
-    hi LspDiagnosticsFloatingHint guifg=white
+   hi DiagnosticUnderlineInfo guifg=NONE
+
+    " hint
+    hi DiagnosticHint guifg=orange
+    hi DiagnosticVirtualTextHint guifg=orange
+    hi DiagnosticUnderlineHint guifg=orange
+    hi DiagnosticFloatingHint guifg=orange
+
 ]]

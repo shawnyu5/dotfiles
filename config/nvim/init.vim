@@ -26,7 +26,7 @@ source ~/.config/nvim/settings/utilsnips_settings.vim
 
 source ~/.config/nvim/settings/executor_settings.lua
 
-source ~/.config/nvim/settings/ranger_settings.vim
+" source ~/.config/nvim/settings/ranger_settings.vim
 
 luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 
