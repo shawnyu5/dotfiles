@@ -5,12 +5,12 @@
 
 # Set up the prompt
 
-
 #autoload -Uz promptinit
 #promptinit
 #prompt adam1
 
 setopt histignorealldups sharehistory
+
 #allow for piping to /dev/null
 unsetopt multios
 
@@ -33,7 +33,20 @@ export TERM="xterm-256color"
 precmd_functions=""
 
 #luke smith ranbow colours
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+autoload -Uz vcs_info
+precmd()
+{
+    vcs_info
+}
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '🎄 %b'
+
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}] %{$fg[green]%}⛏  %j%E %{$fg[cyan]%}${vcs_info_msg_0_}
+%{$fg[cyan]%}$%{$reset_color%}%b "
+
+# PS1="%M%n"
 
 #zsh prompt script
 #source /home/shawn/personal/zsh_config/prompt_adam1_setup.zsh
@@ -58,7 +71,7 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    cd $HOME && cd "$(find . -not -path "*/\.*" -name "*" | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
+    cd "$(find ~ -type d \( -name "*" ! -iname ".*" \) | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
 }
 #create a witget using function above
 zle -N cd_with_fzf
@@ -67,7 +80,11 @@ bindkey '^F' cd_with_fzf
 
 #if remaps.sh exists, call it
 if [[ -f ~/remaps.sh ]]; then
-    ~/remaps.sh
+    . ~/remaps.sh
+fi
+
+if [[ -f ~/.fzf.zsh ]]; then
+    source ~/.fzf.zsh
 fi
 
 SENECA_MATRIX='hyu126@matrix.senecacollege.ca'
@@ -154,3 +171,5 @@ source /home/shawn/personal/linux_config/zsh_config/zsh-autosuggestions/zsh-auto
   #fi
 #}
 
+
+alias luamake=/home/shawn/lua-language-server/3rd/luamake/luamake
