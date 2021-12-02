@@ -3,6 +3,8 @@
 * [system commands](#system-commands)
     * [shutdown](#shutdown)
     * [WiFi](#wifi)
+* [tmux](#tmux)
+    * [Copying](#copying)
 * [Command line](#command-line)
     * [Zsh completion](#zsh-completion)
     * [Installing packages on command line](#installing-packages-on-command-line)
@@ -27,6 +29,19 @@ By default, it waits 1 minute before shutting down
 ## WiFi
 
 `nmtui` - WiFi manager GUI
+
+# tmux
+
+## Copying
+
+1. `<prefix>[` to go into visual selection mode
+
+2. make the selection
+
+3. `<Enter>` to copy to system clip board
+
+4. `<prefix>]` to paste
+
 # Command line
 
 ## Zsh completion
