@@ -43,6 +43,8 @@ nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
+command! ImagePaste :call mdip#MarkdownClipboardImage()<CR>
+
 " a function for testing stuff
 function! s:test() abort
     let files = ["hello", "world"]
@@ -220,12 +222,4 @@ augroup python_maps
     autocmd!
     autocmd FileType python,lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
     autocmd FileType python,lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
-augroup END
-
-" SQL file maps
-" ======================
-augroup sql_maps
-    autocmd!
-    autocmd Filetype sql inoremap 'p DBMS_OUTPUT.PUT_LINE('BBB');<Esc>?BBB<CR>ciw
-    autocmd Filetype sql inoremap ''p DBMS_OUTPUT.PUT_LINE(BBB);<Esc>?BBB<CR>ciw
 augroup END
