@@ -32,34 +32,26 @@ luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 
 luafile ~/.config/nvim/settings/harpoon_settings.lua
 
-if has('nvim-0.5.0')
-    " "telescope settings
-    source ~/.config/nvim/settings/telescope.vim
+"telescope settings
+source ~/.config/nvim/settings/telescope.vim
 
-    " "tree sitter settings
-    luafile ~/.config/nvim/settings/tree-sitter_config.lua
+"tree sitter settings
+luafile ~/.config/nvim/settings/tree-sitter_config.lua
 
-    " "toky night settings
-    luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
+"toky night settings
+luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
-    " "lightline settings to fit tokyo night
-    source ~/.config/nvim/settings/markdown-preview.vim
-    source ~/.config/nvim/settings/lightLine_settings.vim
+"lightline settings to fit tokyo night
+source ~/.config/nvim/settings/lightLine_settings.vim
 
-    "native lsp config
-    luafile ~/.config/nvim/settings/native_lsp.lua
-    luafile ~/.config/nvim/settings/cmp_config.lua
-    source ~/.config/nvim/settings/bash-lanuage-server.vim
-    luafile ~/.config/nvim/settings/lsp_signature.lua
-    " luafile ~/.config/nvim/settings/null-ls_settings.lua
+source ~/.config/nvim/settings/markdown-preview.vim
 
-elseif has('nvim-0.4.3')
-    " "load fzf settings
-    source ~/.config/nvim/settings/fzf.vim
-
-    " "load gruvbox settings
-    source ~/.config/nvim/settings/gruv-box_settings.vim
-endif
+"native lsp config
+luafile ~/.config/nvim/settings/native_lsp.lua
+luafile ~/.config/nvim/settings/cmp_config.lua
+source ~/.config/nvim/settings/bash-lanuage-server.vim
+luafile ~/.config/nvim/settings/lsp_signature.lua
+" luafile ~/.config/nvim/settings/null-ls_settings.lua
 
 " source ~/.config/nvim/settings/coc.vim
 " source ~/.config/nvim/settings/coc-snippets_settings.vim

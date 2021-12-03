@@ -28,24 +28,15 @@ Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
 Plug 'shawnyu5/executor.nvim'
 
-if has('nvim-0.5.0')
-    "load telescope
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-telescope/telescope-file-browser.nvim'
+"load telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 
-    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-
-elseif has('nvim-0.4.3')
-    "load fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'morhetz/gruvbox'
-
-endif
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "native LSP
 Plug 'neovim/nvim-lspconfig'
