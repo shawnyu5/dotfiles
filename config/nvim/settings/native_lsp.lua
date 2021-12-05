@@ -223,7 +223,7 @@ vim.cmd[[
 
     " info
     hi DiagnosticInfo guifg=NONE
-    hi DiagnosticVirtualTextInfo guifg=white
+    " hi DiagnosticVirtualTextInfo guifg=white
     hi DiagnosticVirtualTextInfo guifg=NONE
     hi DiagnosticSignInfor guifg=NONE
 
@@ -231,7 +231,7 @@ vim.cmd[[
 
     " hint
     hi DiagnosticHint guifg=orange
-    hi DiagnosticVirtualTextHint guifg=orange
+    hi DiagnosticVirtualTextHint guifg=orange guibg=NONE
     hi DiagnosticUnderlineHint guifg=orange
     hi DiagnosticFloatingHint guifg=orange
 
