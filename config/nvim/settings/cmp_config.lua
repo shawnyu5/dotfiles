@@ -31,7 +31,7 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = "nvim_lua" },
         { name = "path" },
-        { name = 'ultisnips' }, -- For ultisnips user.
+        { name = 'ultisnips' },
         { name = 'buffer'},
         -- would like instant completion, no keyword_length
         -- { name = 'buffer', keyword_length = 3 },

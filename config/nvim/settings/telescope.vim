@@ -7,3 +7,4 @@ nnoremap <leader>fc <cmd>lua require('telescope.builtin').find_files({cwd = "~/.
 nnoremap <leader>fr <cmd>Telescope resume<CR>
 command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
 
+command! Planets :lua require("telescope.builtin").planets({show_pluto = true})
