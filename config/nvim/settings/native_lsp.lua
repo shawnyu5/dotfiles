@@ -14,6 +14,8 @@ local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+    vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
     -- Mappings
     local opts = {
         noremap = true,

@@ -9,12 +9,6 @@ cmp.setup {
     snippet = {
         expand = function(args)
             vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-            -- -- For `vsnip` user.
-            -- vim.fn["vsnip#anonymous"](args.body)
-
-            -- -- For `luasnip` user.
-            -- -- require('luasnip').lsp_expand(args.body)
-            -- For `ultisnips` user.
         end,
     },
     mapping = {
@@ -33,20 +27,15 @@ cmp.setup {
             end
         end,
     },
-    -- ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    -- ['<C-Space>'] = cmp.mapping.complete(),
-    -- ['<C-e>'] = cmp.mapping.close(),
-    -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    sources = {
+    sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = "nvim_lua" },
         { name = "path" },
         { name = 'ultisnips' }, -- For ultisnips user.
-        -- would like instant completion, no keyword_length
         { name = 'buffer'},
+        -- would like instant completion, no keyword_length
         -- { name = 'buffer', keyword_length = 3 },
-    },
+    }),
 
     formatting = {
         -- Youtube: How to set up nice formatting for your sources.
@@ -59,4 +48,12 @@ cmp.setup.cmdline('/', {
     sources = {
         { name = 'buffer' }
     }
+})
+
+cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        { name = 'cmdline' }
+    })
 })
