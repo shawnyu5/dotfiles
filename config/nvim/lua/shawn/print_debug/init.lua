@@ -33,7 +33,7 @@ function M.print_debug()
     -- wrap variable in print statement with message
     local statement = wrap_variable(message, variable, ft)
     vim.fn.append(vim.fn.line('.'), statement)
-    vim.cmd("norm! =1j")
+    vim.cmd("norm! =1jj")
 end
 
 -- M.print_debug()

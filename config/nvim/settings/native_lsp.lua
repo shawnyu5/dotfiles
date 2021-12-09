@@ -202,6 +202,7 @@ vim.cmd[[
     " error
     hi DiagnosticError guifg=BrightRed gui=bold,underline
     hi DiagnosticUnderlineError guifg=red gui=bold,underline
+    hi DiagnosticFloatingError guifg=red
 
     " warning
     hi DiagnosticWarn guifg=orange gui=italic,underline
