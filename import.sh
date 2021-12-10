@@ -10,11 +10,6 @@ cp -r ~/.config/nvim/settings/ config/nvim/ && echo "settings imported"
 cp -r ~/.config/nvim/spell/ config/nvim/ && echo "spell directory imported"
 cp -r ~/.config/nvim/lua/ config/nvim/ && echo "lua directory imported"
 
-# cp ~/.config/nvim/init.vim config/nvim/init.vim && echo "init.vim imported"
-# # rm -rf config/nvim
-# cp -ru ~/.config/nvim/settings/ config/nvim/ && echo "vim settings imported"
-# cp -r ~/.config/nvim/UltiSnips/ config/nvim/ && echo -e "snips imported\n\n"
-
 #tmux config
 cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
 

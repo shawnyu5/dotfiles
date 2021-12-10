@@ -219,7 +219,7 @@ vim.cmd[[
    hi DiagnosticUnderlineInfo guifg=NONE
 
     " hint
-    hi DiagnosticHint guifg=orange
+    hi DiagnosticHint guifg=orange, gui=italic
     hi DiagnosticVirtualTextHint guifg=orange guibg=NONE
     hi DiagnosticUnderlineHint guifg=orange
     hi DiagnosticFloatingHint guifg=orange
