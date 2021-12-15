@@ -10,7 +10,9 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
+
 source ~/.config/nvim/settings/plugin_manager.vim
+
 
 source ~/.config/nvim/settings/sets.vim
 
@@ -72,6 +74,8 @@ let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 "auto enable spellcheck in markdown files
 au BufRead *.md setlocal spell
+
+" autocmd BufRead *.hbs echo "hello"
 
 aug i3config_ft_detection
   au!
