@@ -26,14 +26,12 @@ alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --tra
 #opening notepad ++
 alias np="/mnt/c/Program\ Files/Notepad++/notepad++.exe"
 
-#going to OOP directory
-alias cdoop="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_3/OOP_345_Object-Oriented_Programming_Using_C++; "
-
-#going to SYD directory
-alias cdsyd=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1;"
-
-#going to CUL directory
-alias cdcul=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/CUL_485_movies_and_morality;"
+#going to psy directory
+alias cdpsy="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222"
+#going to WEB directory
+alias cdweb=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322;"
+#going to DBS directory
+alias cddbs=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/DBS322;"
 
 #SYD notes
 alias sydnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_3/SYD_366_Softwarer_Analysis_and_Design-1; nvim SYD_366_notes.md; cd - > /dev/null"

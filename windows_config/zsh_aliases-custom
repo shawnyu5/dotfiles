@@ -1,0 +1,34 @@
+#  _______| |__     __ _| (_) __ _ ___    ___ _   _ ___| |_ ___  _ __ ___
+# |_  / __| '_ \   / _` | | |/ _` / __|  / __| | | / __| __/ _ \| '_ ` _ \
+#  / /\__ \ | | | | (_| | | | (_| \__ \ | (__| |_| \__ \ || (_) | | | | | |
+# /___|___/_| |_|  \__,_|_|_|\__,_|___/  \___|\__,_|___/\__\___/|_| |_| |_|
+
+#opening current journal file
+alias journal="bash /mnt/c/Users/Shawn/'OneDrive - Seneca'/.journal/journal.sh"
+
+#quickly get to the download directory
+alias dl="cd /mnt/c/Users/Shawn/Downloads/; ls -lt | head -7"
+
+# seneca directories
+alias cdpsy="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222"
+alias cdweb=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322;"
+alias cddbs=" cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/DBS322;"
+
+# opening notes
+alias psynotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222/; nvim PSY222_notes.md; cd - > /dev/null"
+alias webnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322; nvim WEB322_notes.md; cd - > /dev/null"
+alias dbsnotes="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/DBS322; nvim DBS322_notes.md; cd - > /dev/null"
+
+#going to senece onedrive directory
+alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
+
+# opening bb
+alias bbweb="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/fun/python/web_scraping/selenium/blackboard && python3 blackboard.py web; cd - > /dev/null"
+alias bbpsy="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/fun/python/web_scraping/selenium/blackboard && python3 blackboard.py psy; cd - > /dev/null"
+alias bbdbs="cd /mnt/c/Users/Shawn/'OneDrive - Seneca'/fun/python/web_scraping/selenium/blackboard && python3 blackboard.py dbs; cd - > /dev/null"
+
+#move commands
+alias mvpsy=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/PSY222"
+alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/WEB322"
+alias mvdbs=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/'OneDrive - Seneca'/seneca/semester_4/DBS322"
+
