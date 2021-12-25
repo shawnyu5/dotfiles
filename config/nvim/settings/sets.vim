@@ -1,8 +1,7 @@
-" autocmd Filetype handlebars set ft=html
 
 set rtp+=~/.config/nvim/settings/
-" set rtp+=~/.config/nvim/plugged/executor
 set rtp+=~/.config/nvim/settings/print_debug
+set rtp+=~/.config/nvim/lua/shawn/print/
 
 " not hide markdown special symbols
 set conceallevel=0

@@ -56,7 +56,7 @@ Plug 'itchyny/lightline.vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "brower based markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': 'markdown' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "auto generate table of contents
 Plug 'mzlogin/vim-markdown-toc'

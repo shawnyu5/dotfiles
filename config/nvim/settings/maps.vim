@@ -1,43 +1,10 @@
-"autocmd FileType python nnoremap <leader>m :!python3 %<CR>
-"autocmd FileType cpp nnoremap <leader>m :!make<CR>
-"autocmd Filetype sh nnoremap <leader>m :!./%<CR>
-"autocmd FileType javascript nnoremap <leader>m :!node %<CR>
-"autocmd FileType markdown nnoremap <leader>m :MarkdownPreview<Enter>
-
-" autocmd TermClose * :lua vim.cmd("close | tabp")
-
-" function! CloseSomething()
-  " if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
-    " tabclose | tabprev
-  " else
-    " q!
-  " endif
-" endfunction
 
 lua << EOF
-    -- package.loaded["helpers"] = nil
-
-    -- vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('helpers').executor()<CR>", { noremap = true, silent = false})
-    -- -- closes all term windows
-    -- vim.api.nvim_set_keymap('n', '<leader>ct', ":lua require('helpers').term_closer()<CR>", { noremap = true, silent = true})
-
     -- left close
     vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser(true)<CR>", { noremap = true, silent = true})
     vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
 
 EOF
-
-" imap <silent><expr> <C-S> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
-" inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
-
-" snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
-" snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
-
-" imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
-" smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
-
-" nnoremap H :tabp<CR>
-" nnoremap L :tabn<CR>
 
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
@@ -216,10 +183,7 @@ augroup js_maps
     " autocmd Filetype javascript inoremap <silent> ''{ {<CR>BBB<CR>});<CR><Esc>?BBB<CR>"_cw
 augroup END
 
-"python file maps
-"==============
-augroup python_maps
-    autocmd!
-    autocmd FileType python,lua inoremap 'p print("<++>")<Esc>?<++><CR>"_ca>
-    autocmd FileType python,lua inoremap ''p print(<++>)<Esc>?<++><CR>"_ca>
-augroup END
+
+inoremap 'p <cmd>lua require("shawn.print").print(true)<CR>
+inoremap ''p <cmd>lua require("shawn.print").print(false)<CR>
+

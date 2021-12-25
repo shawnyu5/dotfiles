@@ -13,7 +13,6 @@ let mapleader =" "
 
 source ~/.config/nvim/settings/plugin_manager.vim
 
-
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
