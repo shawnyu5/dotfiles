@@ -30,19 +30,16 @@ function M.print(quotes)
     for k, v in pairs(opts) do
         if filetype == k then
 
-            print("filetype is " .. k)
             -- if quotes are wanted in print statement
             if quotes then
-                vim.api.nvim_put({v[1]}, "l", true, true)
+                vim.api.nvim_put({v[1]}, "l", true, false)
             else
-                vim.api.nvim_put({v[2]}, "l", true, true)
+                vim.api.nvim_put({v[2]}, "l", true, false)
             end
         end
     end
-    -- -- find `BBB` place holder
-    vim.api.nvim_command("?BBB")
-    -- -- delete it
-    vim.cmd('norm! _ci"')
+    -- delete it
+    vim.cmd('norm! ==_ci"')
     -- -- move curor to right and start insert mode
     vim.cmd("norm! l")
     vim.api.nvim_command("startinsert")
