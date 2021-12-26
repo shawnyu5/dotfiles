@@ -5,6 +5,7 @@
 
 git pull
 
+echo "hello world"
 #vim config
 cp config/nvim/init.vim ~/.config/nvim/init.vim && echo "init.vim exported"
 cp -r config/nvim/settings ~/.config/nvim/ && echo "nvim settings directory exported"
