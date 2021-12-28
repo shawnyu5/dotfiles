@@ -23,8 +23,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 
 " ranger
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim' "ranger dependicies
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'rbgrouleff/bclose.vim' "ranger dependicies
 
 Plug 'shawnyu5/executor.nvim'
 

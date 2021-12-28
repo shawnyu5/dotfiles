@@ -1,3 +1,4 @@
+local source = require "cmp_buffer.source"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- Setup nvim-cmp.
 local cmp = require'cmp'
@@ -12,9 +13,14 @@ cmp.setup {
         end,
     },
     mapping = {
+        -- ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<Tab>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
+            elseif vim.fn("UltiSnips#CanExpandSnippet") then
+                vim.fn("UltiSnips#ExpandSnippet")
+            elseif vim.fn("UltiSnips#CanJumpForwards") then
+                vim.fn("UltiSnips#JumpForwards")
             else
                 fallback()
             end
@@ -22,12 +28,14 @@ cmp.setup {
         ["<S-Tab>"] = function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
+            elseif vim.fn("UltiSnips#CanJumpBackward") then
+                vim.fn("UltiSnips#JumpBackwards")
             else
                 fallback()
             end
         end,
     },
-    sources = cmp.config.sources({
+    sources = {
         { name = 'nvim_lsp' },
         { name = "nvim_lua" },
         { name = "path" },
@@ -35,13 +43,24 @@ cmp.setup {
         { name = 'buffer'},
         -- would like instant completion, no keyword_length
         -- { name = 'buffer', keyword_length = 3 },
-    }),
+    },
 
     formatting = {
-        -- Youtube: How to set up nice formatting for your sources.
-        -- format = lspkind.cmp_format {
-            -- with_text = false,
+        format = function(entry, vim_item)
+            vim_item.menu = ({
+                nvim_lsp = '[Lsp]',
+                nvim_lua = "[Lua]",
+                ultisnips = "[Snippets]",
+                buffer = "[Buffer]",
+                path = "[Path]"
+            })[entry.source.name]
+            return vim_item
+        end
     },
+    experimental = {
+        ghost_text = false,
+        native_menu = false
+    }
 }
 
 cmp.setup.cmdline('/', {
