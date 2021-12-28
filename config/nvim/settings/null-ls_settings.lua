@@ -1,14 +1,14 @@
--- filetypes = { "c", "cpp", "cs", "java" }
--- command = "clang-format"
--- args = { "-assume-filename=<FILENAME>" }
+local status, null_ls = pcall(require, "null-ls")
+if not status then
+    vim.notify("null ls not installed...")
+    return
+end
 
-local null_ls = require("null-ls")
+local formatting = null_ls.builtins.formatting
 
-require("null-ls").config({
+null_ls.config({
+    debug = false,
     sources = {
-        null_ls.builtins.formatting.clang_format
-        -- null_ls.builtins.formatting.clang_format.with({
-        -- extra_args = { '-style="{IndentWidth: 4,TabWidth: 4}"'}
-        -- })
+        formatting.stylua
     }
 })

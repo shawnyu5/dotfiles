@@ -138,7 +138,10 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        client.resolved_capabilities.document_formatting = true
+        on_attach(client, bufnr)
+    end,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
     settings = {
         Lua = {
