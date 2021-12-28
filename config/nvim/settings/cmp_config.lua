@@ -14,7 +14,7 @@ cmp.setup {
     },
     mapping = {
         -- ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ["<Tab>"] = function(fallback)
+        ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             elseif vim.fn("UltiSnips#CanExpandSnippet") then
@@ -25,7 +25,8 @@ cmp.setup {
                 fallback()
             end
         end,
-        ["<S-Tab>"] = function(fallback)
+        { "i", "s"}),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             elseif vim.fn("UltiSnips#CanJumpBackward") then
@@ -34,6 +35,7 @@ cmp.setup {
                 fallback()
             end
         end,
+        { "i", "s"}),
     },
     sources = {
         { name = 'nvim_lsp' },
