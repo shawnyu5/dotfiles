@@ -39,10 +39,17 @@ cmp.setup {
         { name = 'nvim_lsp' },
         { name = "nvim_lua" },
         { name = "path" },
-        { name = 'ultisnips' },
+        { name = 'ultisnips' }, -- For ultisnips users.
         { name = 'buffer'},
-        -- would like instant completion, no keyword_length
-        -- { name = 'buffer', keyword_length = 3 },
+        {
+            name = 'tmux',
+            option = {
+                all_panes = false,
+                label = '[tmux]',
+                trigger_characters = { '.' },
+                trigger_characters_ft = {} -- { filetype = { '.' } }
+            }
+        },
     },
 
     formatting = {
@@ -52,7 +59,8 @@ cmp.setup {
                 nvim_lua = "[Lua]",
                 ultisnips = "[Snippets]",
                 buffer = "[Buffer]",
-                path = "[Path]"
+                path = "[Path]",
+                tmux = '[Tmux]'
             })[entry.source.name]
             return vim_item
         end

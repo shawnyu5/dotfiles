@@ -43,6 +43,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'andersevenrud/cmp-tmux' " tmux completion source
 " better lsp_signature help
 Plug 'ray-x/lsp_signature.nvim'
 
