@@ -1,4 +1,9 @@
-require("harpoon").setup({
+local ok, harpoon = pcall(require, "harpoon")
+if not ok then
+    return
+end
+
+harpoon.setup({
     global_settings = {
         save_on_toggle = false,
         save_on_change = true,

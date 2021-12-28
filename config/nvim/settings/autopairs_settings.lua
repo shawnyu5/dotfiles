@@ -1,7 +1,9 @@
--- local Rule = require('nvim-autopairs.rule')
--- local npairs = require('nvim-autopairs')
+local ok, autopairs = pcall(require, "nvim-autopairs")
+if not ok then
+    return
+end
 
-require('nvim-autopairs').setup{
+autopairs.setup{
   enable_check_bracket_line = false
 }
 
@@ -10,7 +12,7 @@ require('nvim-autopairs').setup{
 -- require('nvim-autopairs').remove_rule('(') -- remove rule (
 -- require('nvim-autopairs').remove_rule("'") -- remove rule '
 -- require('nvim-autopairs').remove_rule('"') -- remove rule "
-require('nvim-autopairs').remove_rule('```') -- remove rule ```
-require('nvim-autopairs').remove_rule('`') -- remove rule `
+autopairs.remove_rule('```') -- remove rule ```
+autopairs.remove_rule('`') -- remove rule `
 -- require('nvim-autopairs').remove_rule('[') -- remove rule [
 

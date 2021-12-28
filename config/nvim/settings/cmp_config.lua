@@ -17,10 +17,10 @@ cmp.setup {
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif vim.fn("UltiSnips#CanExpandSnippet") then
-                vim.fn("UltiSnips#ExpandSnippet")
-            elseif vim.fn("UltiSnips#CanJumpForwards") then
-                vim.fn("UltiSnips#JumpForwards")
+            -- elseif vim.fn("UltiSnips#CanExpandSnippet") then
+                -- vim.fn("UltiSnips#ExpandSnippet")
+            -- elseif vim.fn("UltiSnips#CanJumpForwards") then
+                -- vim.fn("UltiSnips#JumpForwards")
             else
                 fallback()
             end
@@ -29,8 +29,8 @@ cmp.setup {
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif vim.fn("UltiSnips#CanJumpBackward") then
-                vim.fn("UltiSnips#JumpBackwards")
+            -- elseif vim.fn("UltiSnips#CanJumpBackward") then
+                -- vim.fn("UltiSnips#JumpBackwards")
             else
                 fallback()
             end

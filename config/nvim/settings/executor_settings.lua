@@ -1,7 +1,10 @@
 -- reload this package
 package.loaded["executor"] = nil
 
-local executor = require("executor")
+local ok, executor = pcall(require, "executor")
+if not ok then
+    return
+end
 
 executor.setup({
     commands = {

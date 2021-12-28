@@ -49,7 +49,6 @@ Plug 'quangnguyen30192/cmp-nvim-ultisnips' " Ulti snips source
 Plug 'ray-x/lsp_signature.nvim'
 
 " Plug 'jose-elias-alvarez/null-ls.nvim'
-" Plug 'williamboman/nvim-lsp-installer'
 
 "status bar
 Plug 'itchyny/lightline.vim'

@@ -11,7 +11,9 @@ set relativenumber
 let mapleader =" "
 
 
-source ~/.config/nvim/settings/plugin_manager.vim
+" source ~/.config/nvim/settings/plugin_manager.vim
+
+luafile ~/.config/nvim/lua/shawn/plugin_manager.lua
 
 source ~/.config/nvim/settings/sets.vim
 
