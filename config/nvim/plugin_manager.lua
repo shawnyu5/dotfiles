@@ -62,7 +62,7 @@ use {
 
 use {
     'SirVer/ultisnips',
-    config = source("~/.config/nvim/settings/utilsnips_settings.vim")
+    config = require("shawn.ultisnips")
 } --  Snippets engine.
 
 -- use 'Yggdroot/indentLine' -- TODO: figure out why this makes title card vanish

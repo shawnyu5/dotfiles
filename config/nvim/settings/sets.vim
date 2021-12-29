@@ -6,6 +6,8 @@ set rtp+=~/.config/nvim/lua/shawn/print/
 " not hide markdown special symbols
 set conceallevel=0
 
+autocmd BufEnter *.hbs set ft=html
+
 set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000

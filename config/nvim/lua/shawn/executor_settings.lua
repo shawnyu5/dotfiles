@@ -16,8 +16,8 @@ executor.setup({
             "python3 %"
         },
         javascript = {
+            "npm start",
             "nodemon --delay 500ms %",
-            "node %"
         },
         sh = {
             "bash %"
