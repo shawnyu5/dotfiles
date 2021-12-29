@@ -52,7 +52,7 @@ luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 " luafile ~/.config/nvim/settings/native_lsp.lua
 " luafile ~/.config/nvim/settings/cmp_config.lua
 source ~/.config/nvim/settings/bash-lanuage-server.vim
-luafile ~/.config/nvim/settings/lsp_signature.lua
+" luafile ~/.config/nvim/settings/lsp_signature.lua
 " luafile ~/.config/nvim/settings/null-ls_settings.lua
 
 " source ~/.config/nvim/settings/coc.vim
@@ -60,7 +60,7 @@ luafile ~/.config/nvim/settings/lsp_signature.lua
 
 " luafile ~/.config/nvim/settings/luasnippets_settings.lua
 
-source ~/.config/nvim/settings/vim-you-autocorrect.vim
+" source ~/.config/nvim/settings/vim-you-autocorrect.vim
 
 source ~/.config/nvim/settings/md_paste.vim
 
@@ -73,14 +73,14 @@ autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 "auto enable spellcheck in markdown files
-au BufRead *.md setlocal spell
+autocmd BufRead *.md setlocal spell
 
 " autocmd BufRead *.hbs echo "hello"
 
-aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
-aug end
+" aug i3config_ft_detection
+  " au!
+  " au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+" aug end
 
 "autosave a view upon leaving buffer and auto load view upon entering
 "augroup AutoSaveFolds

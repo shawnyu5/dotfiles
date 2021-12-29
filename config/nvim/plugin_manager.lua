@@ -45,7 +45,7 @@ use {
 }
 use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate | :TSInstall javascript bash lua python cpp vim',
+    run = ':TSUpdate',
     config = require("shawn.tree-sitter")
 }
 
@@ -85,7 +85,10 @@ use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
 use 'andersevenrud/cmp-tmux' -- tmux completion source
 use 'quangnguyen30192/cmp-nvim-ultisnips' -- Ulti snips source
-use 'ray-x/lsp_signature.nvim' -- better lsp_signature help
+use {
+    'ray-x/lsp_signature.nvim',
+    config = require("shawn.lsp_signature")
+} -- better lsp_signature help
 
 use {
     'iamcco/markdown-preview.nvim',
@@ -111,8 +114,21 @@ use {
 use 'szw/vim-maximizer' -- vim maxmizer
 use 'adelarsq/vim-matchit' -- matchit
 use 'tpope/vim-surround' -- vim surround
-use 'sedm0784/vim-you-autocorrect' -- autocorrect spelling
-use 'mboughaba/i3config.vim' -- i3config highlighting
+use {
+    'sedm0784/vim-you-autocorrect',
+    config = source("~/.config/nvim/settings/vim-you-autocorrect.vim")
+} -- autocorrect spelling
+use {
+    'mboughaba/i3config.vim',
+    config = function()
+        vim.cmd([[
+        aug i3config_ft_detection
+        au!
+        au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+        aug end
+        ]])
+    end
+}-- i3config highlighting
 use 'alvan/vim-closetag' -- auto close html tags
 
 end)
