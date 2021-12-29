@@ -11,7 +11,7 @@
         * [To uninstall](#to-uninstall)
     * [current time and date](#current-time-and-date)
     * [bc calculator](#bc-calculator)
-    * [Bash debug mode](#bash-debug-mode)
+* [Postgres](#postgres)
 
 <!-- vim-markdown-toc -->
 
@@ -82,4 +82,10 @@ Or we can pipe it in: `bc -l <<< "3<4"`
 
 Unlike bash, it returns **1** for *true*, and **0** for *false*.
 
-## Bash debug mode
+# Postgres
+
+To connect to local postgres data base: 
+
+```bash
+sudo -u postgres psql
+```
