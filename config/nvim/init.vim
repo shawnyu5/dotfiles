@@ -13,41 +13,41 @@ let mapleader =" "
 
 " source ~/.config/nvim/settings/plugin_manager.vim
 
-luafile ~/.config/nvim/lua/shawn/plugin_manager.lua
+luafile ~/.config/nvim/plugin_manager.lua
 
 source ~/.config/nvim/settings/sets.vim
 
 source ~/.config/nvim/settings/maps.vim
 
-source ~/.config/nvim/settings/NERDtree_settings.vim
+" source ~/.config/nvim/settings/NERDtree_settings.vim
 
-luafile ~/.config/nvim/settings/autopairs_settings.lua
+" luafile ~/.config/nvim/settings/autopairs_settings.lua
 
-source ~/.config/nvim/settings/nerdcommenter_settings.vim
+" source ~/.config/nvim/settings/nerdcommenter_settings.vim
 
-source ~/.config/nvim/settings/utilsnips_settings.vim
+" source ~/.config/nvim/settings/utilsnips_settings.vim
 
-source ~/.config/nvim/settings/executor_settings.lua
+" source ~/.config/nvim/settings/executor_settings.lua
 
 " source ~/.config/nvim/settings/ranger_settings.vim
 
 luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 
-luafile ~/.config/nvim/settings/harpoon_settings.lua
+" luafile ~/.config/nvim/settings/harpoon_settings.lua
 
 "telescope settings
-source ~/.config/nvim/settings/telescope.vim
+" source ~/.config/nvim/settings/telescope.vim
 
 "tree sitter settings
-luafile ~/.config/nvim/settings/tree-sitter_config.lua
+" luafile ~/.config/nvim/settings/tree-sitter_config.lua
 
 "toky night settings
-luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
+" luafile ~/.config/nvim/settings/tokyo-knight_settings.lua
 
 "lightline settings to fit tokyo night
-source ~/.config/nvim/settings/lightLine_settings.vim
+" source ~/.config/nvim/settings/lightLine_settings.vim
 
-source ~/.config/nvim/settings/markdown-preview.vim
+" source ~/.config/nvim/settings/markdown-preview.vim
 
 "native lsp config
 luafile ~/.config/nvim/settings/native_lsp.lua
