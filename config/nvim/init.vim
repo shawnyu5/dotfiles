@@ -10,7 +10,6 @@ set relativenumber
 "remaping leader to space
 let mapleader =" "
 
-
 " source ~/.config/nvim/settings/plugin_manager.vim
 
 luafile ~/.config/nvim/plugin_manager.lua
@@ -50,8 +49,8 @@ luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 " source ~/.config/nvim/settings/markdown-preview.vim
 
 "native lsp config
-luafile ~/.config/nvim/settings/native_lsp.lua
-luafile ~/.config/nvim/settings/cmp_config.lua
+" luafile ~/.config/nvim/settings/native_lsp.lua
+" luafile ~/.config/nvim/settings/cmp_config.lua
 source ~/.config/nvim/settings/bash-lanuage-server.vim
 luafile ~/.config/nvim/settings/lsp_signature.lua
 " luafile ~/.config/nvim/settings/null-ls_settings.lua
