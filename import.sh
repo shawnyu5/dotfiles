@@ -4,6 +4,7 @@
 #---------------------------------
 
 #vim config
+cp ~/.config/nvim/ config/nvim && echo "nvim directory imported"
 cp -r ~/.config/nvim/init.vim config/nvim && echo "init.vim imported"
 cp -r ~/.config/nvim/UltiSnips/ config/nvim/ && echo "util snips imported"
 cp -r ~/.config/nvim/settings/ config/nvim/ && echo "settings imported"
