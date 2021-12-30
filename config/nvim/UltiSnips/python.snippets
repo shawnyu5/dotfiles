@@ -1,6 +1,11 @@
 snippet sel "selenium imports"
 from selenium import webdriver
 
-PATH = "<++>"
+PATH = "/usr/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
+endsnippet
+
+snippet if "if statement"
+if ${1:# CONDITION}:
+	${2:# code}
 endsnippet
