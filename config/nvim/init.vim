@@ -64,7 +64,7 @@ source ~/.config/nvim/settings/bash-lanuage-server.vim
 
 source ~/.config/nvim/settings/md_paste.vim
 
-source ~/.config/nvim/settings/vim-closetag.vim
+" source ~/.config/nvim/settings/vim-closetag.vim
 
 "set text width
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80

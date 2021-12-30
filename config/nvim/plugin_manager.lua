@@ -129,6 +129,9 @@ use {
         ]])
     end
 }-- i3config highlighting
-use 'alvan/vim-closetag' -- auto close html tags
+use {
+    'alvan/vim-closetag',
+    config = source("~/.config/nvim/settings/vim-closetag.vim")
+} -- auto close html tags
 
 end)
