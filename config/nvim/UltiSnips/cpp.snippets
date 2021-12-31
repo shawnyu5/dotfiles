@@ -1,24 +1,36 @@
-# cpp class
-snippet class "creates a cpp class" b
+snippet class "A cpp class" b
 class $1 {
 private:
-	<++>
+	${2: // TODO: private members}
 public:
+	// default constructor
 	$1() {}
 
-	<++>
+	$3
 };
 endsnippet
 
 # lambda expression
-snippet lamb "create a lambda"
-auto $1 = [<++>](<++>) {
-	<++>
+snippet lamb "A lambda expression"
+auto $1 = [${2:&}](${3:// TODO: parameters}) {
+	${4:// TODO: code}
 };
 endsnippet
 
 snippet if "if statement"
 if(${1:// condition}) {
 	${2:// code}
+}
+endsnippet
+
+snippet fori "regular for loop"
+for(int i = 0; i < ${1:counter}; i++) {
+	${2:// TODO: code}
+}
+endsnippet
+
+snippet fore "for each loop"
+for (auto i : ${1:obj}) {
+	${2:// TODO: code}
 }
 endsnippet
