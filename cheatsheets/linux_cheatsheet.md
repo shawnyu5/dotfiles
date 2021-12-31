@@ -84,8 +84,29 @@ Unlike bash, it returns **1** for *true*, and **0** for *false*.
 
 # Postgres
 
+To install postgres through apt:
+
+```bash
+sudo apt install postgresql
+```
+
 To connect to local postgres data base: 
 
 ```bash
 sudo -u postgres psql
 ```
+
+Upon first installing the database, the user must set it's local password:
+
+1. Login to postures shell.
+
+2. Set password
+
+```
+postgres=# \password
+Enter new password:
+Enter it again:
+postgres=# \q
+```
+
+Done
