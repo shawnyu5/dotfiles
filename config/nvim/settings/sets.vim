@@ -14,8 +14,8 @@ set timeoutlen=1000
 
 set noswapfile
 
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=3 softtabstop=3
+set shiftwidth=3
 set expandtab
 "always show tabs
 set showtabline=2
