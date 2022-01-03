@@ -1,4 +1,3 @@
-print("HEYYY")
 -- vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
 vim.g.UltiSnipsExpandTrigger = '<C-s>'
 vim.g.UltiSnipsJumpForwardTrigger = '<C-s>'
