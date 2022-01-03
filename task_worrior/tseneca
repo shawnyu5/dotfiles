@@ -3,35 +3,20 @@
 #Date: 2021-05-16 
 #---------------------------------
 
-
-#context:school
-#project: class name or lecture
-#tags: for each class
 task calendar
 
 if [[ -z $1 ]]; then
-	read -p "task name: " NAME
+   read -p "task name: " NAME
 else
-	NAME="$@"
+   NAME="$@"
 fi
 
 read -p "due date: " DATE
-read -p "class name (1.WEB 2.DBS 3.PSY ): " CLASS
-
-if [[ $CLASS == "1" || $CLASS == "WEB" || $CLASS == "web" ]]; then
-	CLASS="WEB"
-
-elif [[ $CLASS == "2" || $CLASS == "DBS" || $CLASS == "dbs" ]]; then
-	CLASS="DBS"
-
-elif [[ $CLASS == "3" || $CLASS == "PSY" || $CLASS == "psy" ]]; then
-	CLASS="PSY"
-fi
-
-task add "${NAME}" project:$CLASS\
-	due:$DATE \
-	+seneca
-
-# task context school
-
-task
+select CLASS in JAC WEB SYD EAC
+do
+   task add "${NAME}" project:$CLASS\
+      due:$DATE \
+      +seneca
+   task  # then display all tasks
+   exit
+done
