@@ -4,13 +4,11 @@
 "| | | | | | |_   _   \ V /| | | | | | |
 "|_|_| |_|_|\__| (_)   \_/ |_|_| |_| |_|
 
-"placed here for easy access
+" placed here for easy access
 set relativenumber
 
-"remaping leader to space
+" remaping leader to space
 let mapleader =" "
-
-" source ~/.config/nvim/settings/plugin_manager.vim
 
 luafile ~/.config/nvim/plugin_manager.lua
 

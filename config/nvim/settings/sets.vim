@@ -1,4 +1,3 @@
-
 set rtp+=~/.config/nvim/settings/
 set rtp+=~/.config/nvim/settings/print_debug
 set rtp+=~/.config/nvim/lua/shawn/print/

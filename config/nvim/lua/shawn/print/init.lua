@@ -20,6 +20,10 @@ local opts = {
    sh = {
       'echo "BBB"',
       'echo BBB'
+   },
+   vim = {
+      'echo "BBB"',
+      'echo BBB'
    }
 }
 
@@ -41,6 +45,11 @@ function M.print(quotes)
       end
    end
 end
+print("no print statement defined for this file type")
+-- if for loop is exited, then there are no mappings for current file type
+vim.cmd("norm! i'p")
+do return end
+
 ::continue::
 -- move curor to right and start insert mode
 vim.cmd("norm! kddl") -- TODO: idk why `nvim_put` puts the new line on the

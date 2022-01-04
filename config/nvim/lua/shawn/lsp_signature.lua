@@ -43,6 +43,7 @@
   toggle_key = nil -- toggle signature on and off in insert mode,  e.g. toggle_key = '<M-x>'
 }
 
+
 -- recommanded:
 require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 

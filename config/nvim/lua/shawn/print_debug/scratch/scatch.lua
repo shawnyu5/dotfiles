@@ -16,5 +16,5 @@ local opts = {
 }
 
 local string = "hello (world)"
-local result = string:gsub('%b()', '')
+local result = string:gsub('%b()', '()')
 print(result)

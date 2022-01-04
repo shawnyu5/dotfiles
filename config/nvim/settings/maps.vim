@@ -87,7 +87,8 @@ nnoremap <silent> j gj
 nnoremap Q mmvapgq`m
 
 "turn off auto commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * set formatoptions-=cro
+
 
 "change autocompletion menu color
 highlight PmenuSel ctermbg=red	ctermfg=green

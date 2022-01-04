@@ -23,7 +23,9 @@ end
 -- ]]
 
 return packer.startup(function(use)
--- -- useful dependencies
+-- use "dstein64/vim-startuptime"
+
+-- useful dependencies
 use 'nvim-lua/popup.nvim'
 use 'nvim-lua/plenary.nvim'
 
@@ -52,7 +54,8 @@ use {
 use 'nvim-telescope/telescope-file-browser.nvim'
 use {
     'preservim/nerdtree',
-    config = source("~/.config/nvim/settings/NERDtree_settings.vim")
+    config = source("~/.config/nvim/settings/NERDtree_settings.vim"),
+    cmd = { "NERDTree", "NERDTreeFind"}
 }
 
 use {
