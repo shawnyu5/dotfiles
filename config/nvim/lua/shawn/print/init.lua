@@ -2,7 +2,7 @@ local M = {}
 
 local opts = {
    cpp = {
-      'std::cout << "BBB" << "\n";',
+      [[std::cout << "BBB" << '\n';]],
       'std::cout << BBB << "\n";'
    },
    lua = {

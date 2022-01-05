@@ -2,7 +2,7 @@ package.loaded["print_debug"] = false
 local M = {}
 
 local opts = {
-   cpp = 'std::cout << "<message>" << <variable> << \'\\n\';',
+   cpp = [[std::cout << "<message>" << <variable> << '\n';]],
    javascript = 'console.log("<message>", <variable>);',
    python = 'print("<message>", <variable>)',
    lua = 'print("<message>" .. <variable>)'

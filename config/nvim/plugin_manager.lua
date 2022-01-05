@@ -30,6 +30,12 @@ use 'nvim-lua/popup.nvim'
 use 'nvim-lua/plenary.nvim'
 
 use 'wbthomason/packer.nvim'
+
+use {
+   "jose-elias-alvarez/null-ls.nvim",
+   config = require("shawn.null-ls")
+}
+
 use {
     'folke/tokyonight.nvim',
     branch = 'main' ,
@@ -55,7 +61,7 @@ use 'nvim-telescope/telescope-file-browser.nvim'
 use {
     'preservim/nerdtree',
     config = source("~/.config/nvim/settings/NERDtree_settings.vim"),
-    cmd = { "NERDTree", "NERDTreeFind"}
+    -- cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle"}
 }
 
 use {

@@ -1,9 +1,9 @@
 local lsp = require("lspconfig")
 
 -- determine weather to enable auto formatting
-local auto_format = function(client)
-    client.resolved_capabilities.document_formatting = true
-    vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync()")
+local format_on_save = function(client)
+    -- client.resolved_capabilities.document_formatting = true
+    vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync() vim.cmd('write')")
 end
 
 
@@ -24,8 +24,10 @@ local on_attach = function(client, bufnr)
 
     require "lsp_signature".on_attach()
 
-    -- define rename command
+    -- rename command
     vim.cmd("command! Rename :lua vim.lsp.buf.rename()")
+    -- format command
+    vim.cmd("command! Format :lua vim.lsp.buf.formatting_sync() vim.cmd('write')")
 
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     buf_set_keymap('n', 'gd', '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
@@ -77,6 +79,8 @@ end
 lsp.clangd.setup{
     filetypes = { "c", "cpp", "objc", "objcpp" },
     on_attach = function(client, bufnr)
+       client.resolved_capabilities.document_formatting = false
+       format_on_save(client)
         on_attach(client, bufnr)
     end
 }
@@ -107,7 +111,6 @@ lsp.tsserver.setup{
     on_attach = function(client, bufnr)
         client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
-        -- auto_format(client)
         on_attach(client, bufnr)
     end
     -- on_attach = on_attach,
@@ -139,7 +142,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup {
     on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = true
+        client.resolved_capabilities.document_formatting = false
         on_attach(client, bufnr)
     end,
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
@@ -178,27 +181,6 @@ require'lspconfig'.pyright.setup{
         on_attach(client, bufnr)
     end
 }
-
---pylsp
--- require'lspconfig'.pylsp.setup{}
-
--- local null_ls = require("null-ls")
-
--- require("null-ls").config({
-    -- sources = {
-        -- -- null_ls.builtins.formatting.clang_format
-        -- null_ls.builtins.formatting.clang_format.with({
-        -- extra_args = { '-style="{IndentWidth: 4,TabWidth: 4}"'}
-        -- })
-    -- }
--- })
-
--- require("lspconfig")["null-ls"].setup({
-    -- on_attach = function(client, bufnr)
-        -- auto_format(client)
-        -- on_attach(client, bufnr)
-    -- end
--- })
 
 -- color settings
 vim.cmd[[
