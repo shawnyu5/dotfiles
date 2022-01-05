@@ -16,6 +16,13 @@ set noswapfile
 set tabstop=3 softtabstop=3
 set shiftwidth=3
 set expandtab
+
+augroup makefile_indenting
+   autocmd!
+   autocmd FileType make set tabstop=4 softtabstop=4 shiftwidth=4
+
+augroup END
+
 "always show tabs
 set showtabline=2
 set cursorline
