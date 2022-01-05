@@ -6,33 +6,35 @@
 * [FZF plugin](#fzf-plugin)
 * [Customizing vim highlighting colors](#customizing-vim-highlighting-colors)
 * [Using tabs](#using-tabs)
-    * [Usage](#usage)
+   * [Usage](#usage)
 * [Auto complete](#auto-complete)
 * [vim commands](#vim-commands)
-    * [case switching](#case-switching)
-        * [capitalization](#capitalization)
-    * [skip a block of Code](#skip-a-block-of-code)
-    * [indenting](#indenting)
-    * [auto indent](#auto-indent)
-    * [detect file type](#detect-file-type)
-    * [Screen navigations](#screen-navigations)
+   * [case switching](#case-switching)
+      * [capitalization](#capitalization)
+   * [skip a block of Code](#skip-a-block-of-code)
+   * [indenting](#indenting)
+   * [auto indent](#auto-indent)
+   * [detect file type](#detect-file-type)
+   * [Screen navigations](#screen-navigations)
 * [setting markers](#setting-markers)
-    * [folding](#folding)
+   * [folding](#folding)
 * [run vim commands from command line](#run-vim-commands-from-command-line)
 * [format text](#format-text)
-    * [opening another file in vim](#opening-another-file-in-vim)
-    * [reslecting text](#reslecting-text)
-    * [run the last subsutite command globally](#run-the-last-subsutite-command-globally)
+   * [opening another file in vim](#opening-another-file-in-vim)
+   * [reslecting text](#reslecting-text)
+   * [run the last subsutite command globally](#run-the-last-subsutite-command-globally)
 * [markDown preview](#markdown-preview)
 * [diff mode](#diff-mode)
-    * [when files are already open](#when-files-are-already-open)
-    * [disable diff mode](#disable-diff-mode)
+   * [when files are already open](#when-files-are-already-open)
+   * [disable diff mode](#disable-diff-mode)
 * [running vim commands while opening vim](#running-vim-commands-while-opening-vim)
 * [pip standard input into vim](#pip-standard-input-into-vim)
 * [bring outputs of terminal commands into vim within vim it self](#bring-outputs-of-terminal-commands-into-vim-within-vim-it-self)
 * [Sessions](#sessions)
-    * [Creating sessions](#creating-sessions)
-    * [Opening sessions](#opening-sessions)
+   * [Creating sessions](#creating-sessions)
+   * [Opening sessions](#opening-sessions)
+* [Formatters](#formatters)
+   * [clang-format](#clang-format)
 
 <!-- vim-markdown-toc -->
 
@@ -279,3 +281,19 @@ In vim, `:mksession <session name.vim` to create a session
 When opening vim, do `vim -S <session name>` to open that session
 
 Or within vim, `:source <path to session>` to open session
+
+# Formatters
+
+## clang-format
+
+`clang-format-12`, the newest clang formatter. Installed through apt. Since the
+formatting is handled through null-ls, which looks for a `clang-format` binary,
+the `clang-format-12` binary in `/usr/bin/clang-format-12` was renamed to
+`clang-format`, to make null-ls recognize it.
+
+It looks for a `.clang-format` file in the root directory, which contains
+styling options. The
+[documentation](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) can be
+found here.
+
+
