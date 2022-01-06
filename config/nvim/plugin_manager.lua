@@ -49,7 +49,7 @@ return packer.startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		config = source("~/.config/nvim/settings/telescope.vim"),
+		config = require("shawn.telescope")
 	})
 	use({
 		"nvim-treesitter/nvim-treesitter",
