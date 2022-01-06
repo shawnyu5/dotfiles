@@ -15,10 +15,10 @@ local function wrap_variable(message, variable, ft)
          if message then
             local command = print_statement:gsub("<message>", message)
             command = command:gsub("<variable>", variable)
-         else
-            -- str = str:gsub('%b()', '')
-            local command = print_statement:gsub("%b()", "(<variable>)")
-            command = command:gsub("<variable>", variable)
+         -- else
+            -- -- str = str:gsub('%b()', '')
+            -- local command = print_statement:gsub("%b()", "(<variable>)")
+            -- command = command:gsub("<variable>", variable)
          end
          return command
       end
@@ -35,9 +35,11 @@ function M.print_debug()
    -- end
 
    local variable = vim.fn.expand("<cword>")
+   print("variable is " .. variable)
 
    -- wrap variable in print statement with message
    local statement = wrap_variable(message, variable, ft)
+   print(statement)
    vim.fn.append(vim.fn.line('.'), statement)
    vim.cmd("norm! =1jj")
 end

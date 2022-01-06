@@ -28,7 +28,7 @@ source ~/.config/nvim/settings/maps.vim
 
 " source ~/.config/nvim/settings/ranger_settings.vim
 
-luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
+" luafile ~/.config/nvim/lua/shawn/print_debug/init.lua
 
 " luafile ~/.config/nvim/settings/harpoon_settings.lua
 

@@ -81,6 +81,15 @@ return packer.startup(function(use)
 		config = require("shawn.harpoon"),
 	})
 
+	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+      config = require("shawn.refactor")
+	})
+
 	-- native LSP
 	use({ "neovim/nvim-lspconfig", config = require("shawn.lsp") })
 
