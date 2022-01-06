@@ -1,5 +1,6 @@
 snippet sel "selenium imports"
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 PATH = "/usr/bin/chromedriver"
 driver = webdriver.Chrome(PATH)
@@ -8,4 +9,19 @@ endsnippet
 snippet if "if statement"
 if ${1:# CONDITION}:
 	${2:# code}
+endsnippet
+
+snippet class "A python class"
+class ${1:# TODO: class name}
+	def __init__(self):
+		${2:pass}
+
+endsnippet
+
+snippet main "python main function"
+def main():
+	${1:pass}
+
+if __name__ == "__main__":
+	main()
 endsnippet

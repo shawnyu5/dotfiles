@@ -1,16 +1,9 @@
 local ok, harpoon = pcall(require, "harpoon")
 if not ok then
-    return
+	return
 end
 
-harpoon.setup({
-    global_settings = {
-        save_on_toggle = false,
-        save_on_change = true,
-        enter_on_sendcmd = false,
-        excluded_filetypes = { "harpoon" }
-    },
-})
+harpoon.setup()
 
 vim.api.nvim_set_keymap("n", "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", { noremap = true })
@@ -23,4 +16,3 @@ vim.cmd('command! Harpoonadd :lua require("harpoon.mark").add_file()')
 
 -- vim.api.nvim_set_keymap("n", "<leader><leader>1", '<cmd>lua require("harpoon.mark").add_file()<CR>', { noremap = true })
 -- vim.api.nvim_set_keymap("n", "<leader><leader>2", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true })
-
