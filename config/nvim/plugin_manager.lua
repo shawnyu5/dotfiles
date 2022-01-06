@@ -84,14 +84,18 @@ return packer.startup(function(use)
 	-- native LSP
 	use({ "neovim/nvim-lspconfig", config = require("shawn.lsp") })
 
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-nvim-lua")
+	use("andersevenrud/cmp-tmux") -- tmux completion source
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
+
 	use({
 		"hrsh7th/nvim-cmp",
 		config = require("shawn.cmp"),
 	})
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("andersevenrud/cmp-tmux") -- tmux completion source
-	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
 	use({
 		"ray-x/lsp_signature.nvim",
 		config = require("shawn.lsp_signature"),
@@ -129,14 +133,14 @@ return packer.startup(function(use)
 		"mboughaba/i3config.vim",
 		config = function()
 			print("Hiiii")
-         vim.cmd([[
+			vim.cmd([[
          aug i3config_ft_detection
          au!
          au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
          aug end
          ]])
-      end,
-   }) -- i3config highlighting
+		end,
+	}) -- i3config highlighting
 	use({
 		"alvan/vim-closetag",
 		config = source("~/.config/nvim/settings/vim-closetag.vim"),
