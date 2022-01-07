@@ -25,3 +25,19 @@ def main():
 if __name__ == "__main__":
 	main()
 endsnippet
+
+snippet unittest "unittest class set up"
+import unittest
+
+
+class TestTracker(unittest.TestCase):
+	def setUp(self) -> None:
+		${1:print("Starting test...")}
+
+	def tearDown(self) -> None:
+		${2:print("Ending test...")}
+
+if __name__ == "__main__":
+	unittest.main()
+
+endsnippet

@@ -1,8 +1,8 @@
 require("refactoring").setup({})
 
 vim.api.nvim_set_keymap(
-	"n",
+	"v",
 	"<leader>db",
-	":lua require('refactoring').debug.printf({below = true})<CR>",
+	":lua require('refactoring').debug.print_var({})<CR>",
 	{ noremap = true }
 )
