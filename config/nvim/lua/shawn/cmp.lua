@@ -69,10 +69,10 @@ cmp.setup.cmdline("/", {
 	},
 })
 
-cmp.setup.cmdline(":", {
-	sources = cmp.config.sources({
-		{ name = "path" },
-	}, {
-		{ name = "cmdline", keyword_length = 5 },
-	}),
-})
+-- cmp.setup.cmdline(":", {
+	-- sources = cmp.config.sources({
+		-- { name = "path" },
+	-- }, {
+		-- { name = "cmdline", keyword_length = 5 },
+	-- }),
+-- })

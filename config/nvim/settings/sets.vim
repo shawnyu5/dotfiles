@@ -19,7 +19,7 @@ set expandtab
 
 augroup makefile_indenting
    autocmd!
-   autocmd FileType make set tabstop=4 softtabstop=4 shiftwidth=4
+   autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 augroup END
 

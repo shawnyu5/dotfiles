@@ -80,6 +80,12 @@ end
 -- on_attach = on_attach
 -- }
 
+-- TODO: set up java
+-- java
+-- require("lspconfig").java_language_server.setup({
+	-- cmd = { "/usr/local/bin/lang_server_linux.sh" },
+-- })
+
 -- clangd
 lsp.clangd.setup({
 	filetypes = { "c", "cpp", "objc", "objcpp" },
