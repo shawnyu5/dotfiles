@@ -83,8 +83,11 @@ end
 -- TODO: set up java
 -- java
 -- require("lspconfig").java_language_server.setup({
-	-- cmd = { "/usr/local/bin/lang_server_linux.sh" },
+-- cmd = { "/usr/local/bin/lang_server_linux.sh" },
 -- })
+-- installation link
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls
+require("lspconfig").jdtls.setup({})
 
 -- clangd
 lsp.clangd.setup({
