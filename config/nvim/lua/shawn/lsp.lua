@@ -1,4 +1,8 @@
-local lsp = require("lspconfig")
+local ok, lsp = pcall(require, "lsp")
+if not ok then
+   print("lsp config not installed...")
+   return
+end
 
 -- determine weather to enable auto formatting
 local format_on_save = function(client)

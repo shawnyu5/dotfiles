@@ -1,3 +1,10 @@
+local ok, lsp_signature = pcall(require, "lsp_signature")
+if not ok then
+   print("lsp_signature not installed...")
+   return
+end
+
+
  local cfg = {
   debug = false, -- set to true to enable debug logging
   log_path = "debug_log_file_path", -- debug log path
@@ -45,7 +52,7 @@
 
 
 -- recommanded:
-require'lsp_signature'.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
+lsp_signature.setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 
 -- You can also do this inside lsp on_attach
 -- note: on_attach deprecated

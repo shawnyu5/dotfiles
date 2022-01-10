@@ -1,5 +1,6 @@
 local ok, packer = pcall(require, "packer")
 if not ok then
+   print("Packer can not be found...")
     return
 end
 

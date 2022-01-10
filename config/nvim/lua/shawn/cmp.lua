@@ -1,6 +1,10 @@
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- Setup nvim-cmp.
-local cmp = require("cmp")
+local ok, cmp = pcall(require, "cmp")
+if not ok then
+   print("cmp not installed...")
+   return
+end
 
 -- local lspkind = require "lspkind"
 -- lspkind.init()

@@ -1,4 +1,9 @@
-require("refactoring").setup({})
+local ok, refactoring = pcall(require, "refactoring")
+if not ok then
+   print("refactoring not installed...")
+   return
+end
+refactoring.setup({})
 
 vim.api.nvim_set_keymap(
 	"v",

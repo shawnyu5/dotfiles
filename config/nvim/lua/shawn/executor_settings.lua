@@ -3,6 +3,7 @@ package.loaded["executor"] = nil
 
 local ok, executor = pcall(require, "executor")
 if not ok then
+   print("executor not installed")
     return
 end
 

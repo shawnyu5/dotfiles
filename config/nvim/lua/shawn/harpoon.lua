@@ -1,6 +1,7 @@
 local ok, harpoon = pcall(require, "harpoon")
 if not ok then
-	return
+   print("harpoon not installed...")
+   return
 end
 
 harpoon.setup()
