@@ -129,6 +129,8 @@ fi
 export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:$HOME/scripts/in_path/"
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
+export JDTLS_HOME=/usr/local/bin/jdt
 
 ## Enable substitution in the prompt.
 #setopt prompt_subst
