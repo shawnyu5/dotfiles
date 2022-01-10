@@ -20,3 +20,6 @@ cp task_worrior/taskrc  ~/.taskrc && echo "task config exported"
 
 # zsh config
 cp zsh_aliases_general ~/.zsh_aliases && echo "zsh_aliases exported"
+
+# run PackerSync inside neovim
+nvim -c PackerSync
