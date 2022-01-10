@@ -1,4 +1,4 @@
-local ok, lsp = pcall(require, "lsp")
+local ok, lsp = pcall(require, "lspconfig")
 if not ok then
    print("lsp config not installed...")
    return
