@@ -34,7 +34,7 @@ function web_course
     done
 }
 
-function dbs_course
+function syd
 {
     read -p "1.lab or 2.week: " DEST
 
@@ -57,11 +57,12 @@ function dbs_course
     exit
 }
 
-function psy_course
+
+function java
 {
     read -p "which week? (1-13): " WEEKNUMBER
     cdpsy
-    tmux new-session -d -s psy_week_${WEEKNUMBER}
+    tmux new-session -d -s java_week_${WEEKNUMBER}
     tmux send-keys -t 0 "cd week_$WEEKNUMBER" Enter
     tmux send-keys -t 0 "clear" Enter
     tmux attach-session -t psy_week_${WEEKNUMBER}
@@ -69,18 +70,18 @@ function psy_course
 
 }
 
-select CLASS in 'WEB' 'DBS' 'PSY'; do
+select CLASS in 'JAC' 'EAC' 'SYD' 'WEB'; do
     case $CLASS in
         "WEB")
             web_course
             ;;
 
-        "DBS")
-            dbs_course
+        "JAC")
+            java
             ;;
 
-        "PSY")
-            psy_course
+        "SYD")
+           syd
             ;;
         *)
             echo "invalid choice"

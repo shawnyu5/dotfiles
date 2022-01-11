@@ -1,7 +1,7 @@
 local ok, lsp = pcall(require, "lspconfig")
 if not ok then
-   print("lsp config not installed...")
-   return
+	print("lsp config not installed...")
+	return
 end
 
 -- determine weather to enable auto formatting
@@ -84,14 +84,15 @@ end
 -- on_attach = on_attach
 -- }
 
--- TODO: set up java
--- java
--- require("lspconfig").java_language_server.setup({
--- cmd = { "/usr/local/bin/lang_server_linux.sh" },
--- })
--- installation link
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls
 require("lspconfig").jdtls.setup({})
+
+-- markdown
+-- lsp.remark_ls.setup({
+	-- on_attach = function(client, bufnr)
+      -- client.resolved_capabilities.document_formatting = false,
+      -- on_attach(client, bufnr)
+   -- end,
+-- })
 
 -- clangd
 lsp.clangd.setup({

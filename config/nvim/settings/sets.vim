@@ -11,6 +11,7 @@ set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000
 
+set mouse=a
 set noswapfile
 
 set tabstop=3 softtabstop=3
