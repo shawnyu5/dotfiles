@@ -34,6 +34,9 @@ executor.setup({
         markdown = {
             "MarkdownPreview",
             extern = false
+        },
+        java = {
+           "java %"
         }
 
     },

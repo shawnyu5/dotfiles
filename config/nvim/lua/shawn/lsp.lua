@@ -84,14 +84,21 @@ end
 -- on_attach = on_attach
 -- }
 
-require("lspconfig").jdtls.setup({})
+-- java
+require("lspconfig").jdtls.setup({
+	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = true
+		-- vim.g.null_ls_disable = true
+		on_attach(client, bufnr)
+	end,
+})
 
 -- markdown
 -- lsp.remark_ls.setup({
-	-- on_attach = function(client, bufnr)
-      -- client.resolved_capabilities.document_formatting = false,
-      -- on_attach(client, bufnr)
-   -- end,
+-- on_attach = function(client, bufnr)
+-- client.resolved_capabilities.document_formatting = false,
+-- on_attach(client, bufnr)
+-- end,
 -- })
 
 -- clangd

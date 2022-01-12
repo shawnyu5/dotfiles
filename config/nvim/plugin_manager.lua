@@ -31,10 +31,6 @@ return packer.startup(function(use)
 
 	use("wbthomason/packer.nvim")
 
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		config = require("shawn.null-ls"),
-	})
 
 	use({
 		"folke/tokyonight.nvim",
@@ -100,6 +96,11 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
+
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		config = require("shawn.null-ls"),
+	})
 
 	use({
 		"hrsh7th/nvim-cmp",
