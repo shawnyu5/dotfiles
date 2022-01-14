@@ -1,4 +1,4 @@
- "_       _ _               _           
+"_       _ _               _
 "
 "| | '_ \| | __|     \ \ / / | '_ ` _ \ 
 "| | | | | | |_   _   \ V /| | | | | | |
@@ -76,15 +76,15 @@ autocmd BufRead *.md setlocal spell
 " autocmd BufRead *.hbs echo "hello"
 
 " aug i3config_ft_detection
-  " au!
-  " au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+" au!
+" au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 " aug end
 
 "autosave a view upon leaving buffer and auto load view upon entering
 "augroup AutoSaveFolds
-  " "autocmd!
-  " "autocmd BufWinLeave * mkview
-  " "autocmd BufWinEnter * silent! loadview
+" "autocmd!
+" "autocmd BufWinLeave * mkview
+" "autocmd BufWinEnter * silent! loadview
 "augroup END
 
 "trailing white space setting

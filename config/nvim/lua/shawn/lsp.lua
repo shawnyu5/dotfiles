@@ -85,10 +85,10 @@ end
 -- }
 
 -- java
-require("lspconfig").jdtls.setup({
+lsp.jdtls.setup({
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = true
-		-- vim.g.null_ls_disable = true
+      -- vim.g.null_ls_disable = true
+		client.resolved_capabilities.document_formatting = false
 		on_attach(client, bufnr)
 	end,
 })

@@ -36,6 +36,7 @@ executor.setup({
             extern = false
         },
         java = {
+           "make",
            "java %"
         }
 

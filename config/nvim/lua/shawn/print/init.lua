@@ -25,6 +25,10 @@ local opts = {
 		'echo "BBB"',
 		"echo BBB",
 	},
+	java = {
+		[[System.out.println("BBB");]],
+		[[System.out.println(BBB);]],
+	},
 }
 
 function M.print(quotes)
