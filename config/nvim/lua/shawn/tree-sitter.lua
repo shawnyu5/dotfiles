@@ -1,3 +1,8 @@
+local ok, treesitter = pcall(require, "nvim-treesitter")
+if not ok then
+   print("treesitter not installed...")
+   return
+end
  -- :TSInstall javascript bash lua python cpp vim
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "javascript", "bash", "lua", "python", "cpp", "vim", "java" },

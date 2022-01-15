@@ -52,7 +52,11 @@ return packer.startup(function(use)
 		config = require("shawn.tree-sitter"),
 	})
 
-	use("nvim-telescope/telescope-file-browser.nvim")
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
+	})
+
 	use({
 		"preservim/nerdtree",
 		config = source("~/.config/nvim/settings/NERDtree_settings.vim"),
