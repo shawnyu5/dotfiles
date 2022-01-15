@@ -10,7 +10,7 @@ null_ls.config({
    debug = false,
    sources = {
       formatting.stylua,
-      formatting.prettier.with({ extra_args = {"--double-quotes" } }),
+      formatting.prettier.with({ extra_args = {"--double-quotes", "--tab-width 3" } }),
       formatting.black.with({ extra_args = { "--fast" }}),
       -- formatting.clang_format.with({ extra_args = { [[-style="{IndentWidth: 3,TabWidth: 3}"]] }})
       formatting.clang_format,

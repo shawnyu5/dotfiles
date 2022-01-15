@@ -131,7 +131,8 @@ return packer.startup(function(use)
 		config = source("~/.config/nvim/settings/nerdcommenter_settings.vim"),
 	}) -- block commenting
 
-	use({ "Shatur/neovim-session-manager", "nvim-telescope/telescope-ui-select.nvim" })
+	use({ "Shatur/neovim-session-manager", config = require("shawn.session_manager") })
+	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
 	use("szw/vim-maximizer") -- vim maxmizer
 	use("adelarsq/vim-matchit") -- matchit

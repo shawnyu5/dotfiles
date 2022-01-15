@@ -209,18 +209,18 @@ require("lspconfig").pyright.setup({
 vim.cmd([[
     " error
     hi DiagnosticError guifg=BrightRed gui=bold,underline
-    hi DiagnosticUnderlineError guifg=red gui=bold,underline
+    " hi DiagnosticUnderlineError guifg=red gui=bold,underline
     hi DiagnosticFloatingError guifg=red
 
     " warning
-    hi DiagnosticWarn guifg=orange gui=italic,underline
+    " hi DiagnosticWarn guifg=orange gui=italic,underline
     hi DiagnosticVirtualTextWarn guifg=orange
-    hi DiagnosticUnderlineWarn guifg=orange gui=italic,underline
+    " hi DiagnosticUnderlineWarn guifg=orange gui=italic,underline
 
 
     " info
     hi DiagnosticInfo guifg=NONE
-    " hi DiagnosticVirtualTextInfo guifg=white
+    hi DiagnosticVirtualTextInfo guifg=white
     hi DiagnosticVirtualTextInfo guifg=NONE
     hi DiagnosticSignInfor guifg=NONE
 
