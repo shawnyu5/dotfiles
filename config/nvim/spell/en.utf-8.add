@@ -28,3 +28,5 @@ Baily
 postgres
 pygame
 json
+ci/!
+Lodash
