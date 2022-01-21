@@ -26,7 +26,7 @@ endfunction
 
 nnoremap <C-g> 2<C-g>
 "command to source vimrc
-command! Sr :so ~/.config/nvim/init.vim
+command! Sr :so ~/.config/nvim/init.lua
 
 "map n when searching to always be in center of screen
 nnoremap n nzz
