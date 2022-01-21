@@ -53,7 +53,7 @@ alias rm="rm -I"
 #alias chrome="google-chrome"
 
 #opening vimrc
-alias vimrc="cd ~/.config/nvim/; nvim init.vim; cd - > /dev/null"
+alias vimrc="cd ~/.config/nvim/; nvim init.lua; cd - > /dev/null"
 alias snip="cd ~/.config/nvim/UltiSnips"
 
 #have ls list directories first
