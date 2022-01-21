@@ -49,7 +49,9 @@ source ~/.config/nvim/settings/maps.vim
 "native lsp config
 " luafile ~/.config/nvim/settings/native_lsp.lua
 " luafile ~/.config/nvim/settings/cmp_config.lua
+
 source ~/.config/nvim/settings/bash-lanuage-server.vim
+
 " luafile ~/.config/nvim/settings/lsp_signature.lua
 " luafile ~/.config/nvim/settings/null-ls_settings.lua
 
