@@ -1,7 +1,7 @@
-vim.cmd([[
-" placed here for easy access
-set relativenumber
+-- placed here for easy access
+vim.opt.relativenumber = true
 
+vim.cmd([[
 " remaping leader to space
 let mapleader =" "
 ]])
@@ -11,10 +11,10 @@ local function source(file)
 	vim.cmd("source " .. file)
 end
 
--- luafile ~/.config/nvim/plugin_manager.lua
 require("shawn.plugin_manager")
 source("~/.config/nvim/settings/sets.vim")
 source("~/.config/nvim/settings/maps.vim")
+require("shawn.tree-sitter")
 require("shawn.tokyo-knight")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
 source("~/.config/nvim/settings/lightLine_settings.vim")
@@ -45,20 +45,6 @@ autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 " auto enable spellcheck in markdown files
 autocmd BufRead *.md setlocal spell
-
-" autocmd BufRead *.hbs echo "hello"
-
-" aug i3config_ft_detection
-" au!
-" au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
-" aug end
-
-" autosave a view upon leaving buffer and auto load view upon entering
-" augroup AutoSaveFolds
-" "autocmd!
-" "autocmd BufWinLeave * mkview
-" "autocmd BufWinEnter * silent! loadview
-" augroup END
 
 " trailing white space setting
 " =============================

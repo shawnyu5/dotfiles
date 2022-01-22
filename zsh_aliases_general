@@ -27,15 +27,12 @@ alias ga="git add -A"
 alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
-alias gd="git diff --name-only --diff-filter=d --stat=10000 | xargs bat --diff"
+alias gcm="git checkout master || git checkout main"
 
 #mdp no fade by default
 alias mdp="mdp -f"
 
 alias bd=". bd -si"
-
-#c for clear
-alias c="clear"
 
 #running valgrind
 alias vg="valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes"
@@ -129,27 +126,6 @@ function start
 }
 compdef _gnu_generic start=ls
 
-#to open all .h and .cpp files in a new vs code window
-function codea
-{
-	cpp=(`find ./ -maxdepth 1 -name "*.cpp"`)
-	h=(`find ./ -maxdepth 1 -name "*.h"`)
-
-	if [ ${#cpp[@]} -gt 0 ]; then
-		code -n ${cpp[*]}
-	else
-		echo 'no .cpp file(s) present'
-	fi
-
-	if [ ${#h[@]} -gt 0 ]; then
-		code ${h[*]}
-	else
-		echo 'no .h file(s) found'
-
-	fi
-
-}
-
 #edit any cheatsheet in cheatsheet directory
 function cheat
 {
@@ -158,16 +134,4 @@ function cheat
 
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
-
-
-function oopDeclaration
-{
-	cal
-	read -p "Date: " DATE
-	for CURRENT in $@; do
-		mv $CURRENT $CURRENT.tmp
-		echo -e "/*Name: Shawn Yu\nStudent number: 160568192\nEmail: hyu126@myseneca.ca\nDate: $DATE\nI have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.*/" > $CURRENT
-		cat $CURRENT.tmp >> $CURRENT && echo "declaration added to $CURRENT"
-		rm $CURRENT.tmp
-	done
-}
+alias hw='cd ~/homework/.porn'

@@ -15,7 +15,6 @@ null_ls.setup({
 			"--double-quotes",
 		} }),
 		formatting.black.with({ extra_args = { "--fast" } }),
-		-- formatting.clang_format.with({ extra_args = { [[-style="{IndentWidth: 3,TabWidth: 3}"]] }})
 		formatting.clang_format,
 		formatting.markdownlint.lua,
 	},

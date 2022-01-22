@@ -43,8 +43,6 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		config = require("shawn.tree-sitter"),
-		commit = "02abc2a0634b75cee43f6e89e143338be86f716d",
 	})
 
 	use({
