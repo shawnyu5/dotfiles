@@ -134,4 +134,3 @@ function cheat
 
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
-alias hw='cd ~/homework/.porn'
