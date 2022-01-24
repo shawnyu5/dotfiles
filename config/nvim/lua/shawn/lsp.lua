@@ -123,10 +123,11 @@ lsp.bashls.setup({
 local capabilities_html = vim.lsp.protocol.make_client_capabilities()
 capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 
-require("lspconfig").html.setup({
+-- html set up
+lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
-		-- auto_format(client)
+      format_on_save(client)
 		on_attach(client, bufnr)
 	end,
 })
