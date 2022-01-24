@@ -11,15 +11,17 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		-- formatting.prettier.with({
-			-- extra_args = {
-				-- "--tab-width 3",
-				-- "--double-quotes",
-			-- },
-			-- disabled_filetypes = { "html" },
+		-- extra_args = {
+		-- "--tab-width 3",
+		-- "--double-quotes",
+		-- },
+		-- disabled_filetypes = { "html" },
 		-- }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.clang_format,
 		-- formatting.markdownlint,
-		formatting.prettierd,
+		formatting.prettierd.with({
+			disabled_filetypes = { "html" },
+		}),
 	},
 })

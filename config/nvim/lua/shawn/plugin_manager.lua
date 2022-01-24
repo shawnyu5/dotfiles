@@ -106,6 +106,7 @@ return packer.startup(function(use)
 	use({
 		"shawnyu5/executor.nvim",
 	})
+	-- use("~/.config/nvim/lua/shawn/terminal/")
 
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
 	use("tweekmonster/wstrip.vim") -- rmove trailing white spaces

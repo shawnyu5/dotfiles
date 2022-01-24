@@ -35,6 +35,7 @@ source("~/.config/nvim/settings/vim-closetag.vim")
 require("shawn.cmp")
 require("shawn.lsp_signature")
 source("~/.config/nvim/settings/md_paste.vim")
+require("shawn.terminal")
 
 vim.cmd([[
 " set text width
