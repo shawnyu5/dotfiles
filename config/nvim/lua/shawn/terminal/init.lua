@@ -21,7 +21,7 @@ function M.left_terminal(left)
 		vim.cmd("tabm " .. current_tab - 1)
 	end
 	-- go into insert mode
-	-- vim.cmd("norm! i")
+   vim.cmd("norm! i")
 end
 
 require("shawn.terminal.maps")

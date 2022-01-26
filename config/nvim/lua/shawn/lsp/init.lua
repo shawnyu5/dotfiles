@@ -1,0 +1,191 @@
+local ok, lsp = pcall(require, "lspconfig")
+if not ok then
+	print("lsp config not installed...")
+	return
+end
+local utils = require("shawn.lsp.utils")
+
+-- LSP Enable diagnostics
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+	underline = true,
+	update_in_insert = true,
+	virtual_text = {
+		spacing = 4,
+		prefix = "●",
+	},
+	severity_sort = true,
+	signs = false,
+})
+
+local signs = {
+	Error = " ",
+	Warning = " ",
+	Hint = " ",
+	Information = " ",
+}
+
+for type, icon in pairs(signs) do
+	local hl = "LspDiagnosticsSign" .. type
+	vim.fn.sign_define(hl, {
+		text = icon,
+		texthl = hl,
+		numhl = "",
+	})
+end
+
+-- ccls set up
+-- unable to build ccls successfully
+-- lsp.ccls.setup{
+-- on_attach = on_attach
+-- }
+
+-- java
+lsp.jdtls.setup({
+	on_attach = function(client, bufnr)
+      -- vim.g.null_ls_disable = true
+		client.resolved_capabilities.document_formatting = false
+		utils.on_attach(client, bufnr)
+	end,
+})
+
+-- markdown
+-- lsp.remark_ls.setup({
+-- on_attach = function(client, bufnr)
+-- client.resolved_capabilities.document_formatting = false,
+-- on_attach(client, bufnr)
+-- end,
+-- })
+
+-- clangd
+lsp.clangd.setup({
+	filetypes = { "c", "cpp", "objc", "objcpp" },
+	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = false
+		utils.format_on_save()
+		utils.on_attach(client, bufnr)
+	end,
+})
+
+-- bashls
+lsp.bashls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+	end,
+})
+
+-- html
+--Enable (broadcasting) snippet capability for completion
+local capabilities_html = vim.lsp.protocol.make_client_capabilities()
+capabilities_html.textDocument.completion.completionItem.snippetSupport = true
+
+-- html set up
+lsp.html.setup({
+	capabilities = capabilities_html,
+	on_attach = function(client, bufnr)
+      utils.format_on_save()
+		utils.on_attach(client, bufnr)
+	end,
+})
+
+-- tsserver
+lsp.tsserver.setup({
+	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = false
+		client.resolved_capabilities.document_range_formatting = false
+		utils.on_attach(client, bufnr)
+	end,
+	-- on_attach = on_attach,
+	-- on_attach.client.resolved_capabilities.document_formatting = false,
+	-- resolved_capabilities.document_range_formatting = false
+})
+
+-- sumneko lua
+-- local system_name
+if vim.fn.has("mac") == 1 then
+	-- system_name = "macOS"
+elseif vim.fn.has("unix") == 1 then
+	-- system_name = "Linux"
+elseif vim.fn.has("win32") == 1 then
+	-- system_name = "Windows"
+else
+	print("Unsupported system for sumneko")
+end
+
+-- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
+local home_dir = vim.fn.expand("~")
+local sumneko_root_path = home_dir .. "/.local/share/nvim/lsp_servers/lua-language-server/" -- require access to main.lua in root directory
+local sumneko_binary = sumneko_root_path .. "bin/Linux/lua-language-server"
+
+local runtime_path = vim.split(package.path, ";")
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+
+lsp.sumneko_lua.setup({
+	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = false
+		utils.on_attach(client, bufnr)
+	end,
+	cmd = { sumneko_binary, "-E", sumneko_root_path .. "main.lua" },
+	settings = {
+		Lua = {
+			runtime = {
+				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+				version = "LuaJIT",
+				-- Setup your lua path
+				path = runtime_path,
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = { "vim" },
+			},
+			workspace = {
+				-- Make the server aware of Neovim runtime files
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			-- Do not send telemetry data containing a randomized but unique identifier
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
+})
+
+-- pyright
+-- npm install -g pyright
+-- pyright is pretty primitive...
+require("lspconfig").pyright.setup({
+	cmd = { "pyright-langserver", "--stdio" },
+	filetypes = { "python" },
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+	end,
+})
+
+-- color settings
+vim.cmd([[
+    " error
+    hi DiagnosticError guifg=BrightRed gui=bold,underline
+    " hi DiagnosticUnderlineError guifg=red gui=bold,underline
+    hi DiagnosticFloatingError guifg=red
+
+    " warning
+    " hi DiagnosticWarn guifg=orange gui=italic,underline
+    hi DiagnosticVirtualTextWarn guifg=orange
+    " hi DiagnosticUnderlineWarn guifg=orange gui=italic,underline
+
+
+    " info
+    hi DiagnosticInfo guifg=NONE
+    hi DiagnosticVirtualTextInfo guifg=white
+    hi DiagnosticVirtualTextInfo guifg=NONE
+    hi DiagnosticSignInfor guifg=NONE
+
+   hi DiagnosticUnderlineInfo guifg=NONE
+
+    " hint
+    hi DiagnosticHint guifg=orange, gui=italic
+    hi DiagnosticVirtualTextHint guifg=orange guibg=NONE
+    hi DiagnosticUnderlineHint guifg=orange
+    hi DiagnosticFloatingHint guifg=orange
+
+]])

@@ -2,8 +2,8 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- Setup nvim-cmp.
 local ok, cmp = pcall(require, "cmp")
 if not ok then
-   print("cmp not installed...")
-   return
+	print("cmp not installed...")
+	return
 end
 
 -- local lspkind = require "lspkind"
@@ -74,9 +74,9 @@ cmp.setup.cmdline("/", {
 })
 
 -- cmp.setup.cmdline(":", {
-	-- sources = cmp.config.sources({
-		-- { name = "path" },
-	-- }, {
-		-- { name = "cmdline", keyword_length = 5 },
-	-- }),
+-- sources = cmp.config.sources({
+-- { name = "path" },
+-- }, {
+-- { name = "cmdline", keyword_length = 5 },
+-- }),
 -- })
