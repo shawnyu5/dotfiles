@@ -27,7 +27,7 @@ alias ga="git add -A"
 alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
-alias gcm="git checkout master || git checkout main"
+alias gm="git checkout master || git checkout main"
 
 #mdp no fade by default
 alias mdp="mdp -f"

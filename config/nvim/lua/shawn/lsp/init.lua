@@ -92,11 +92,9 @@ lsp.tsserver.setup({
 	on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 		client.resolved_capabilities.document_range_formatting = false
+      utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
-	-- on_attach = on_attach,
-	-- on_attach.client.resolved_capabilities.document_formatting = false,
-	-- resolved_capabilities.document_range_formatting = false
 })
 
 -- sumneko lua

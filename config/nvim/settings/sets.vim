@@ -5,6 +5,10 @@ set rtp+=~/.config/nvim/lua/shawn/print/
 " not hide markdown special symbols
 set conceallevel=0
 
+" autocmd BufWinEnter * echo 'hello'
+" autocmd BufWinEnter * source ~/.config/nvim/init.lua
+let g:init = 1
+
 autocmd BufEnter *.hbs set ft=html
 
 set nottimeout

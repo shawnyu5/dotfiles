@@ -1,5 +1,12 @@
 -- placed here for easy access
 vim.opt.relativenumber = true
+vim.g.init = false
+
+-- if vim.g.init then
+   -- print("file sourced")
+   -- -- don't re source file
+   -- return
+-- end
 
 vim.cmd([[
 " remaping leader to space
