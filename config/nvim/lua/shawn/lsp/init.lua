@@ -73,7 +73,6 @@ lsp.bashls.setup({
 	end,
 })
 
--- html
 --Enable (broadcasting) snippet capability for completion
 local capabilities_html = vim.lsp.protocol.make_client_capabilities()
 capabilities_html.textDocument.completion.completionItem.snippetSupport = true
@@ -85,6 +84,7 @@ lsp.html.setup({
       utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
+   filetypes = { "html", "typescriptreact"}
 })
 
 -- tsserver

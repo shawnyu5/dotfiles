@@ -5,7 +5,7 @@ if not ok then
 end
  -- :TSInstall javascript bash lua python cpp vim
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "javascript", "bash", "lua", "python", "cpp", "vim", "java" },
+    ensure_installed = { "javascript", "bash", "lua", "python", "cpp", "vim", "java", "typescript", "tsx" },
     highlight = {
         enable = true,
         -- disable ={ "html" },

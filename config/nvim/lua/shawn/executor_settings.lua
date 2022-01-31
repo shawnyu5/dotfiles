@@ -21,7 +21,8 @@ executor.setup({
 			"nodemon --delay 1 %",
 		},
       typescript = {
-         "tsc -w",
+         "npm start",
+         -- "tsc -w",
          extern = true
       },
 		sh = {
