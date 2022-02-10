@@ -1,20 +1,28 @@
 <!-- vim-markdown-toc GFM -->
 
+* [nginx](#nginx)
 * [system commands](#system-commands)
-    * [shutdown](#shutdown)
-    * [WiFi](#wifi)
+   * [shutdown](#shutdown)
+   * [WiFi](#wifi)
+* [Installing nodejs](#installing-nodejs)
 * [tmux](#tmux)
-    * [Copying](#copying)
+   * [Copying](#copying)
 * [Command line](#command-line)
-    * [Zsh completion](#zsh-completion)
-    * [Installing packages on command line](#installing-packages-on-command-line)
-        * [To uninstall](#to-uninstall)
-    * [current time and date](#current-time-and-date)
-    * [bc calculator](#bc-calculator)
+   * [Zsh completion](#zsh-completion)
+   * [Installing packages on command line](#installing-packages-on-command-line)
+      * [To uninstall](#to-uninstall)
+   * [current time and date](#current-time-and-date)
+   * [bc calculator](#bc-calculator)
 * [Postgres](#postgres)
 
 <!-- vim-markdown-toc -->
 
+
+# nginx
+
+Config files are stored in `/var/www/html/`
+
+It is deployed by default on port 80.
 
 # system commands
 
@@ -29,6 +37,17 @@ By default, it waits 1 minute before shutting down
 ## WiFi
 
 `nmtui` - WiFi manager GUI
+
+# Installing nodejs
+
+Download newest node JS from [website](https://nodejs.org/en/download/)
+
+```bash
+sudo mkdir -p /usr/local/lib/nodejs
+sudo tar -xJvf node-$VERSION-$DISTRO.tar.xz -C /usr/local/lib/nodejs 
+```
+
+Copy `nodejs/bin/node` binary to `/usr/local/bin`
 
 # tmux
 

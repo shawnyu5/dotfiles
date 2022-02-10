@@ -36,6 +36,7 @@ return packer.startup(function(use)
 		"itchyny/lightline.vim",
 	}) -- status bar
 
+	use({ "ahmedkhalf/project.nvim" })
 	use({
 		"nvim-telescope/telescope.nvim",
 	})
@@ -63,7 +64,7 @@ return packer.startup(function(use)
 		"SirVer/ultisnips",
 	}) --  Snippets engine.
 
-	-- use 'Yggdroot/indentLine' -- TODO: figure out why this makes title card vanish
+	-- use("Yggdroot/indentLine") -- TODO: figure out why this makes title card vanish
 
 	use({
 		"ThePrimeagen/harpoon",
@@ -95,9 +96,9 @@ return packer.startup(function(use)
 	use({
 		"hrsh7th/nvim-cmp",
 	})
-	use({
-		"ray-x/lsp_signature.nvim",
-	}) -- better lsp_signature help
+	-- use({
+	-- "ray-x/lsp_signature.nvim",
+	-- }) -- better lsp_signature help
 
 	use({
 		"iamcco/markdown-preview.nvim",

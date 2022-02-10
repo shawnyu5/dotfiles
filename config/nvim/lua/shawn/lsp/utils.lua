@@ -1,13 +1,12 @@
 local M = {}
 --
 -- determine weather to enable format on save
-function M.format_on_save ()
+function M.format_on_save()
 	-- client.resolved_capabilities.document_formatting = true
 	vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync() vim.cmd('write')")
 end
 
-
-function M.on_attach (client, bufnr)
+function M.on_attach(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
@@ -30,7 +29,7 @@ function M.on_attach (client, bufnr)
 		silent = true,
 	}
 
-	require("lsp_signature").on_attach()
+	-- require("lsp_signature").on_attach()
 
 	-- rename command
 	vim.cmd("command! Rename :lua vim.lsp.buf.rename()")
@@ -47,7 +46,4 @@ function M.on_attach (client, bufnr)
 	-- vim.api.nvim_command("autocmd CursorHold <buffer> lua vim.lsp.diagnostic.show_line_diagnostics()({ focusable = false })")
 end
 
-
 return M
-
-

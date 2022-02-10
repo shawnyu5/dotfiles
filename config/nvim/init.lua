@@ -3,9 +3,9 @@ vim.opt.relativenumber = true
 vim.g.init = false
 
 -- if vim.g.init then
-   -- print("file sourced")
-   -- -- don't re source file
-   -- return
+-- print("file sourced")
+-- -- don't re source file
+-- return
 -- end
 
 vim.cmd([[
@@ -22,6 +22,7 @@ require("shawn.plugin_manager")
 source("~/.config/nvim/settings/sets.vim")
 source("~/.config/nvim/settings/maps.vim")
 require("shawn.tree-sitter")
+require("shawn.project")
 require("shawn.tokyo-knight")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
 source("~/.config/nvim/settings/lightLine_settings.vim")
@@ -40,7 +41,7 @@ require("shawn.session_manager")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 source("~/.config/nvim/settings/vim-closetag.vim")
 require("shawn.cmp")
-require("shawn.lsp_signature")
+-- require("shawn.lsp_signature")
 source("~/.config/nvim/settings/md_paste.vim")
 require("shawn.terminal")
 
@@ -49,7 +50,7 @@ vim.cmd([[
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 " disable indentLine plugin in json and markdown files
-" let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
+let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 " auto enable spellcheck in markdown files
 autocmd BufRead *.md setlocal spell
@@ -67,4 +68,9 @@ let g:wstrip_highlight = 0
 " markdown table of contents setting
 " ===================================
 let g:vmt_auto_update_on_save = 1
+
+"disable auto commenting
+autocmd Filetype * setlocal formatoptions-=cro
 ]])
+
+vim.notify("init.lua sourced")

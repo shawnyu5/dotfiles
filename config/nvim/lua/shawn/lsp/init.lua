@@ -42,9 +42,10 @@ end
 -- java
 lsp.jdtls.setup({
 	on_attach = function(client, bufnr)
-      -- vim.g.null_ls_disable = true
+		-- vim.g.null_ls_disable = true
 		client.resolved_capabilities.document_formatting = false
 		utils.on_attach(client, bufnr)
+		utils.format_on_save()
 	end,
 })
 
@@ -81,10 +82,9 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
-      utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
-   filetypes = { "html", "typescriptreact"}
 })
 
 -- tsserver
@@ -92,7 +92,7 @@ lsp.tsserver.setup({
 	on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 		client.resolved_capabilities.document_range_formatting = false
-      utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 })
@@ -122,6 +122,7 @@ lsp.sumneko_lua.setup({
 	on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 		utils.on_attach(client, bufnr)
+		utils.format_on_save()
 	end,
 	cmd = { sumneko_binary, "-E", sumneko_root_path .. "main.lua" },
 	settings = {
@@ -156,6 +157,7 @@ require("lspconfig").pyright.setup({
 	filetypes = { "python" },
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
+		-- utils.format_on_save()
 	end,
 })
 
