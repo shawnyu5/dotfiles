@@ -30,7 +30,6 @@ augroup END
 
 "always show tabs
 set showtabline=2
-set cursorline
 "turning on syntax highlighting
 syntax enable
 "autocmd BufEnter makefile,Makefile set noexpandtab softtabstop=0
@@ -59,7 +58,7 @@ set completeopt=menu,menuone,noselect,noinsert
 set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
-set scrolloff=5
+set scrolloff=3
 
 augroup highlight_yank
     autocmd!

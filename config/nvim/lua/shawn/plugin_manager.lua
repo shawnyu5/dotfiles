@@ -31,6 +31,7 @@ return packer.startup(function(use)
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
+	use("preservim/tagbar")
 
 	use({
 		"itchyny/lightline.vim",
@@ -96,9 +97,9 @@ return packer.startup(function(use)
 	use({
 		"hrsh7th/nvim-cmp",
 	})
-	-- use({
-	-- "ray-x/lsp_signature.nvim",
-	-- }) -- better lsp_signature help
+	use({
+		"ray-x/lsp_signature.nvim",
+	}) -- better lsp_signature help
 
 	use({
 		"iamcco/markdown-preview.nvim",

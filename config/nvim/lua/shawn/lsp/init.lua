@@ -49,6 +49,9 @@ lsp.jdtls.setup({
 	end,
 })
 
+-- angluar
+lsp.angularls.setup({})
+
 -- markdown
 -- lsp.remark_ls.setup({
 -- on_attach = function(client, bufnr)
