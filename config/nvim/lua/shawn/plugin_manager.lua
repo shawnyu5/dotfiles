@@ -65,6 +65,7 @@ return packer.startup(function(use)
 		"SirVer/ultisnips",
 	}) --  Snippets engine.
 
+	use("j-hui/fidget.nvim")
 	-- use("Yggdroot/indentLine") -- TODO: figure out why this makes title card vanish
 
 	use({
