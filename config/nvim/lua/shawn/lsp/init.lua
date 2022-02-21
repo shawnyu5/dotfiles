@@ -3,12 +3,13 @@ if not ok then
 	print("lsp config not installed...")
 	return
 end
+
 local utils = require("shawn.lsp.utils")
 
 -- LSP Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
-	update_in_insert = true,
+	update_in_insert = false,
 	virtual_text = {
 		spacing = 4,
 		prefix = "●",
@@ -32,12 +33,6 @@ for type, icon in pairs(signs) do
 		numhl = "",
 	})
 end
-
--- ccls set up
--- unable to build ccls successfully
--- lsp.ccls.setup{
--- on_attach = on_attach
--- }
 
 -- java
 lsp.jdtls.setup({
@@ -190,5 +185,4 @@ vim.cmd([[
     hi DiagnosticVirtualTextHint guifg=orange guibg=NONE
     hi DiagnosticUnderlineHint guifg=orange
     hi DiagnosticFloatingHint guifg=orange
-
 ]])

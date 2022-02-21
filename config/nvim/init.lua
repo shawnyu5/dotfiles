@@ -13,7 +13,7 @@ vim.cmd([[
 let mapleader =" "
 ]])
 
--- soueces a vim file
+-- source a vim file
 local function source(file)
 	vim.cmd("source " .. file)
 end
