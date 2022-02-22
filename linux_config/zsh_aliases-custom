@@ -12,9 +12,10 @@ alias gitd="github-desktop &"
 alias dl="cd ~/Downloads"
 
 # blackboard selenium
-alias bbweb="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py web; cd - > /dev/null"
-alias bbdbs="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py dbs; cd - > /dev/null"
-alias bbpsy="cd ~/python/web_scraping/selenium/blackboard/; python3 blackboard.py psy; cd - > /dev/null"
+alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
+alias bbeac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py eac; cd - > /dev/null"
+alias bbsyd="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py syd; cd - > /dev/null"
+alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
 
 # opening notes
 alias jacnotes="cd ~/seneca/semester_5/JAC444/; nvim JAC444_notes.md; cd - > /dev/null"
