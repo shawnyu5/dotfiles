@@ -10,8 +10,8 @@ nnoremap <leader>y "+yy
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-nnoremap <C-S-Left> <CMD>tabm -1<CR>
-nnoremap <C-S-right> <CMD>tabm +1<CR>
+nnoremap <S-Left> <CMD>tabm -1<CR>
+nnoremap <S-right> <CMD>tabm +1<CR>
 
 command! ImagePaste :call mdip#MarkdownClipboardImage()<CR>
 

@@ -55,6 +55,14 @@ lsp.angularls.setup({})
 -- end,
 -- })
 
+-- go
+lsp.gopls.setup({
+	on_attach = function(client, bufnr)
+		utils.format_on_save()
+		utils.on_attach(client, bufnr)
+	end,
+})
+
 -- clangd
 lsp.clangd.setup({
 	filetypes = { "c", "cpp", "objc", "objcpp" },

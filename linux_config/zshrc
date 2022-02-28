@@ -38,7 +38,7 @@ precmd_functions=""
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 # Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '🎄 %b'
+zstyle ':vcs_info:git:*' formats '🎄%b'
 precmd() { vcs_info }
 # Enable substitution in the prompt.
 setopt prompt_subst
@@ -47,10 +47,6 @@ setopt prompt_subst
 # NOTE: prompt must be wrapped in single quotes for the git stuff to work
 PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}] %{$fg[green]%}👷%j%E %{$fg[cyan]%}${vcs_info_msg_0_}
 %{$fg[cyan]%}$%{$reset_color%}%b '
-
-
-
-# PS1="%M%n"
 
 #zsh prompt script
 #source /home/shawn/personal/zsh_config/prompt_adam1_setup.zsh
@@ -130,7 +126,8 @@ export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:$HOME/scripts/in_path/"
 export PATH="$PATH:/opt/mssql-tools/bin"
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
-export PATH=":$PATH:$JAVA_HOME/bin"
+export PATH=$PATH:/usr/local/go/bin # go
+export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME=/usr/local/bin/jdt
 export JAVA_HOME=~/.jdks/openjdk-17.0.2
 # export PATH="$PATH:/usr/local/bin/nodejs/node-v16.13.2-linux-x64/bin/"

@@ -31,6 +31,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
+		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
 	},
 	sources = {
 		{ name = "ultisnips" }, -- For ultisnips users.
