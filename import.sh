@@ -24,6 +24,7 @@ cp ~/.zsh_aliases zsh_aliases_general && echo "general zsh aliases imported"
 git status
 
 read -p "Push to gitHub? [Y/n]: " CHOICE
+CHOICE="${CHOICE:-Y}"
 
 if [[ $CHOICE == 'y' || $CHOICE == 'Y' ]]; then
     git pull
