@@ -20,11 +20,11 @@ executor.setup({
 			-- "npm start",
 			"nodemon --delay 1 %",
 		},
-      typescript = {
-         "npm start",
-         -- "tsc -w",
-         extern = true
-      },
+		typescript = {
+			"npm start",
+			-- "tsc -w",
+			extern = true,
+		},
 		sh = {
 			"bash %",
 		},
@@ -47,6 +47,10 @@ executor.setup({
 		html = {
 			"!chrome %",
 			extern = false,
+		},
+		go = {
+			"go run %",
+			extern = true,
 		},
 	},
 	default_mappings = true,

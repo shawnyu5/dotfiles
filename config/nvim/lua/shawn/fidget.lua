@@ -31,7 +31,7 @@ fidget.setup({
 		max_width = 0, -- maximum width of the fidget box
 		-- function to format fidget title
 		fidget = function(fidget_name, spinner)
-			return string.format("%s %s", spinner, fidget_name)
+			return string.format("%s %s   ", spinner, fidget_name)
 		end,
 		-- function to format each task line
 		task = function(task_name, message, percentage)
