@@ -49,7 +49,7 @@ executor.setup({
 			extern = false,
 		},
 		go = {
-			"go run %",
+			"go test",
 			extern = true,
 		},
 	},

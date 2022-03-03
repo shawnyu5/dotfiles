@@ -19,6 +19,7 @@ local function source(file)
 end
 
 require("shawn.plugin_manager")
+require("shawn.filetype")
 source("~/.config/nvim/settings/sets.vim")
 source("~/.config/nvim/settings/maps.vim")
 require("shawn.tree-sitter")
