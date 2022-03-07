@@ -4,6 +4,7 @@ set rtp+=~/.config/nvim/lua/shawn/print/
 
 " not hide markdown special symbols
 set conceallevel=0
+set termguicolors
 
 " autocmd BufWinEnter * echo 'hello'
 " autocmd BufWinEnter * source ~/.config/nvim/init.lua

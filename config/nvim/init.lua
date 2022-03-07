@@ -21,6 +21,7 @@ end
 require("shawn.plugin_manager")
 require("shawn.filetype")
 source("~/.config/nvim/settings/sets.vim")
+require("shawn.colorizer")
 source("~/.config/nvim/settings/maps.vim")
 require("shawn.tree-sitter")
 require("shawn.project")

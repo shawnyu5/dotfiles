@@ -22,12 +22,13 @@ return packer.startup(function(use)
 	-- use("dstein64/vim-startuptime")
 
 	-- useful dependencies
-	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("nvim-lua/popup.nvim")
 
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
 
+	use("norcalli/nvim-colorizer.lua")
 	use({
 		"folke/tokyonight.nvim",
 		branch = "main",

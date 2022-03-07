@@ -37,7 +37,6 @@ end
 -- java
 lsp.jdtls.setup({
 	on_attach = function(client, bufnr)
-		-- vim.g.null_ls_disable = true
 		client.resolved_capabilities.document_formatting = false
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
