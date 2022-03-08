@@ -10,11 +10,7 @@ cp -r ~/.config/kitty/ ./config/ && echo "Kitty config imported"
 cp ~/.config/compton.conf ./config/ && echo "compton config imported"
 cp -r ~/.config/i3blocks/ ./config/ && echo "i3blocks config imported"
 cp -r ~/.config/i3/ ./config/ && echo "i3 config imported"
-# cp -r ~/.config/nvim/init.vim config/nvim && echo "init.vim imported"
-# cp -r ~/.config/nvim/UltiSnips/ config/nvim/ && echo "util snips imported"
-# cp -r ~/.config/nvim/settings/ config/nvim/ && echo "settings imported"
-# cp -r ~/.config/nvim/spell/ config/nvim/ && echo "spell directory imported"
-# cp -r ~/.config/nvim/lua/ config/nvim/ && echo "lua directory imported"
+cp -r ~/.config/rofi/ ./config/ && echo "rofi config imported"
 
 #tmux config
 cp ~/.tmux.conf tmux.conf && echo "tmux config imported"
