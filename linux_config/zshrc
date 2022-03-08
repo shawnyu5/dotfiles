@@ -126,11 +126,11 @@ export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:/home/shawn/scripts/for_path/vpn_launcher/:$HOME/scripts/in_path/"
 export PATH="$PATH:/opt/mssql-tools/bin"
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
-export PATH=$PATH:/usr/local/go/bin # go
+
+export JAVA_HOME="/home/shawn/.jdks/openjdk-17.0.2"
+export PATH=$PATH:"/usr/local/go/bin" # go
 export PATH=":$PATH:$JAVA_HOME/bin" # java
-export JDTLS_HOME=/usr/local/bin/jdt
-export JAVA_HOME=~/.jdks/openjdk-17.0.2
-# export PATH="$PATH:/usr/local/bin/nodejs/node-v16.13.2-linux-x64/bin/"
+export JDTLS_HOME="/usr/local/bin/jdt"
 
 ## Enable substitution in the prompt.
 #setopt prompt_subst
