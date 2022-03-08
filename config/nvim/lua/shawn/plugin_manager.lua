@@ -27,6 +27,10 @@ return packer.startup(function(use)
 
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	})
 
 	use("norcalli/nvim-colorizer.lua")
 	use({
@@ -45,13 +49,15 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
 	})
 
 	use({
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim" },
+		"danymat/neogen",
+		requires = "nvim-treesitter/nvim-treesitter",
+		-- Uncomment next line if you want to follow only stable versions
+		-- tag = "*"
 	})
 
 	use({
