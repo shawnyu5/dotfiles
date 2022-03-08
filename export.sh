@@ -7,6 +7,7 @@ git pull
 
 #vim config
 cp -r config/nvim/ ~/.config/ && echo "nvim directory exported"
+cp taskrc ~/.taskrc && echo "taskrc exported"
 #cp config/nvim/init.vim ~/.config/nvim/init.vim && echo "init.vim exported"
 #cp -r config/nvim/settings ~/.config/nvim/ && echo "nvim settings directory exported"
 #cp -r config/nvim/lua ~/.config/nvim/ && echo "nvim lua directory exported"

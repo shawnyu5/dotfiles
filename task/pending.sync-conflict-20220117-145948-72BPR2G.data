@@ -1,0 +1,5 @@
+[description:"learn react" entry:"1639079110" modified:"1641579235" project:"personal" status:"pending" uuid:"a1551b2d-82c2-43f6-a837-c5f2d5f49883"]
+[description:"learn pygames" entry:"1641579243" modified:"1641910457" project:"personal" status:"pending" uuid:"322f96f2-3459-4c66-acc9-9d15442a790c"]
+[description:"weekly lectures" due:"1642219200" entry:"1641919402" mask:"++" modified:"1642269638" project:"JAC" recur:"weekly" start:"1641919413" status:"recurring" tags:"seneca" uuid:"fc4943dc-562e-4ff1-8932-ff10d9980fbc"]
+[description:"assignment 1" due:"1642824000" entry:"1642203454" modified:"1642203475" project:"WEB" status:"pending" tags:"seneca" uuid:"d4bd909c-b65e-4e21-9ae0-c5e14035ace7"]
+[annotation_1642449130:"video done, just need to submit" description:"intro video" due:"1642824000" entry:"1642379927" modified:"1642449130" project:"EAC" status:"pending" tags:"seneca" uuid:"a52dacf2-5cea-411f-8c3f-9211025bf49f"]
