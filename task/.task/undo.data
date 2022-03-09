@@ -4593,10 +4593,3 @@ time 1646613402
 old [description:"workshop 5" due:"1646798400" entry:"1645722369" modified:"1645722369" project:"JAC" status:"pending" tags:"seneca" uuid:"a6f69e16-6641-4aa7-9aad-1139521ecb75"]
 new [description:"workshop 5" due:"1646798400" entry:"1645722369" modified:"1646613402" project:"JAC" start:"1646613402" status:"pending" tags:"seneca" uuid:"a6f69e16-6641-4aa7-9aad-1139521ecb75"]
 ---
-time 1646745512
-new [description:"test" due:"1647057600" entry:"1646745512" modified:"1646745512" project:"SYD" status:"pending" tags:"seneca" uuid:"3684e3eb-acfe-4713-bb6d-21abbb1b611b"]
----
-time 1646746717
-old [description:"workshop 5" due:"1646798400" entry:"1645722369" modified:"1646613402" project:"JAC" start:"1646613402" status:"pending" tags:"seneca" uuid:"a6f69e16-6641-4aa7-9aad-1139521ecb75"]
-new [description:"workshop 5" due:"1646798400" end:"1646746717" entry:"1645722369" modified:"1646746717" project:"JAC" status:"completed" tags:"seneca" uuid:"a6f69e16-6641-4aa7-9aad-1139521ecb75"]
----

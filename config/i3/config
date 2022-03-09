@@ -21,7 +21,7 @@ gaps outer 1
 smart_gaps on
 
 
-exec --no-startup-id "compton -b"
+# exec --no-startup-id "compton -b"
 exec_always --no-startup-id ~/remaps.sh
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
