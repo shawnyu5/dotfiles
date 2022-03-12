@@ -12,6 +12,7 @@ cp -r ~/.config/i3blocks/ ./config/ && echo "i3blocks config imported"
 cp -r ~/.config/i3/ ./config/ && echo "i3 config imported"
 cp -r ~/.config/rofi/ ./config/ && echo "rofi config imported"
 cp -r ~/.task/ ./task && echo "taskworrior config imported"
+cp ~/.clang-format ./clang-format && echo "clang format file imported"
 
 #tmux config
 cp ~/.tmux.conf tmux.conf && echo "tmux config imported"

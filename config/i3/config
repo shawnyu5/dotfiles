@@ -22,7 +22,7 @@ smart_gaps on
 
 
 # exec --no-startup-id "compton -b"
-exec_always --no-startup-id ~/remaps.sh
+exec_always --no-startup-id ~/personal/remaps.sh
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -211,7 +211,7 @@ default_border pixel 7
 new_window pixel 7
 new_float pixel 7
 
-# for_window [class="^.*"] border pixel 7
+for_window [class="^.*"] border pixel 5
 
 client.focused          #0066ff #1a1aff #fdf6e3 #268bd2
 
