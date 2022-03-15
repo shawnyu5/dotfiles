@@ -4634,3 +4634,26 @@ time 1647032509
 old [description:"formative accessment" due:"1647057600" entry:"1647016621" modified:"1647016625" project:"EAC" start:"1647016625" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ccd36e22-5335-4a65-ac43-962961a50298"]
 new [description:"formative accessment" due:"1647057600" end:"1647032509" entry:"1647016621" modified:"1647032509" project:"EAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ccd36e22-5335-4a65-ac43-962961a50298"]
 ---
+time 1647103393
+new [description:"job skill test" due:"1647144000" entry:"1647103393" modified:"1647103393" project:"personal" status:"pending" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+---
+time 1647103398
+old [description:"job skill test" due:"1647144000" entry:"1647103393" modified:"1647103393" project:"personal" status:"pending" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+new [description:"job skill test" due:"1647144000" entry:"1647103393" modified:"1647103398" project:"personal" start:"1647103398" status:"pending" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+---
+time 1647103405
+old [description:"project plan" due:"1647057600" entry:"1646870924" modified:"1646972236" project:"EAC" start:"1646972236" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"7aaa7933-746d-42c3-99fc-6b9c8a10d799"]
+new [description:"project plan" due:"1647057600" end:"1647103405" entry:"1646870924" modified:"1647103405" project:"EAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"7aaa7933-746d-42c3-99fc-6b9c8a10d799"]
+---
+time 1647270182
+old [description:"job skill test" due:"1647144000" entry:"1647103393" modified:"1647103398" project:"personal" start:"1647103398" status:"pending" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+new [description:"job skill test" due:"1647144000" end:"1647270182" entry:"1647103393" modified:"1647270182" project:"personal" status:"completed" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+---
+time 1647270207
+old [description:"create prof interview questions" entry:"1646874416" modified:"1646874416" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3a966d60-d120-43fe-91d3-0e5005e7f038"]
+new [description:"create prof interview questions" entry:"1646874416" modified:"1647270207" project:"EAC" start:"1647270207" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3a966d60-d120-43fe-91d3-0e5005e7f038"]
+---
+time 1647270214
+old [description:"workshop 6" due:"1647399600" entry:"1646870299" modified:"1646870299" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"866e33e8-fb06-4e9e-b41f-42ea5c4b579c"]
+new [description:"workshop 6" due:"1647399600" entry:"1646870299" modified:"1647270214" project:"JAC" start:"1647270214" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"866e33e8-fb06-4e9e-b41f-42ea5c4b579c"]
+---

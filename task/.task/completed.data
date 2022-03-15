@@ -1,2 +1,4 @@
+[description:"job skill test" due:"1647144000" end:"1647270182" entry:"1647103393" modified:"1647270182" project:"personal" status:"completed" uuid:"267c3ed6-0fe0-46eb-af64-5e12d838e9a3"]
+[description:"project plan" due:"1647057600" end:"1647103405" entry:"1646870924" modified:"1647103405" project:"EAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"7aaa7933-746d-42c3-99fc-6b9c8a10d799"]
 [description:"formative accessment" due:"1647057600" end:"1647032509" entry:"1647016621" modified:"1647032509" project:"EAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ccd36e22-5335-4a65-ac43-962961a50298"]
 [description:"assignment 4" due:"1647057600" end:"1646973584" entry:"1646972226" modified:"1646973584" project:"WEB" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"c4abd8c3-a817-4ff0-a481-6e07876a83e0"]

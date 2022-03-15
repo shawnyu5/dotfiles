@@ -12,6 +12,7 @@ function M.project_files()
 end
 
 -- keymap("n", "<leader>ff", ":lua require('shawn.telescope').project_files()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true })
 
 vim.cmd([[
 nnoremap <leader>ff <cmd>Telescope find_files<CR>

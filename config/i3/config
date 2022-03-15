@@ -216,7 +216,7 @@ for_window [class="^.*"] border pixel 5
 client.focused          #0066ff #1a1aff #fdf6e3 #268bd2
 
 # opening google chrome
-bindsym $mod+w exec google-chrome
+bindsym $mod+w exec google-chrome-stable
 
 # open disord
 bindsym $mod+i exec discord

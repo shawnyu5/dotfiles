@@ -11,10 +11,6 @@ packer.init({
 	},
 })
 
--- sources a vim file
-local function source(file)
-	vim.cmd("source " .. file)
-end
 -- auto install plugins upon saving file
 -- vim.cmd [[
 -- augroup packer_config
@@ -34,22 +30,15 @@ return packer.startup(function(use)
 	use({
 		"folke/tokyonight.nvim",
 		branch = "main",
-		config = require("shawn.tokyo-knight"),
 	}) -- color scheme
 
-	use({
-		"itchyny/lightline.vim",
-		config = source("~/.config/nvim/settings/lightLine_settings.vim"),
-	}) -- status bar
+	use({ "itchyny/lightline.vim" }) -- status bar
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		config = require("shawn.telescope"),
-	})
+	use({ "nvim-telescope/telescope.nvim" })
+
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		config = require("shawn.tree-sitter"),
 	})
 
 	use({
@@ -59,26 +48,20 @@ return packer.startup(function(use)
 
 	use({
 		"preservim/nerdtree",
-		config = source("~/.config/nvim/settings/NERDtree_settings.vim"),
 		-- cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle"}
 	})
 
-	use({
-		"windwp/nvim-autopairs",
-		config = require("shawn.autopairs"),
-	})
+	use({ "windwp/nvim-autopairs" })
 
-	use({
-		"SirVer/ultisnips",
-		config = require("shawn.ultisnips"),
-	}) --  Snippets engine.
+	-- use("L3MON4D3/LuaSnip")
+
+	use("honza/vim-snippets")
+
+	use({ "SirVer/ultisnips" }) --  Snippets engine.
 
 	-- use 'Yggdroot/indentLine' -- TODO: figure out why this makes title card vanish
 
-	use({
-		"ThePrimeagen/harpoon",
-		config = require("shawn.harpoon"),
-	})
+	use({ "ThePrimeagen/harpoon" })
 
 	use({
 		"ThePrimeagen/refactoring.nvim",
@@ -86,11 +69,10 @@ return packer.startup(function(use)
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-		config = require("shawn.refactor"),
 	})
 
 	-- native LSP
-	use({ "neovim/nvim-lspconfig", config = require("shawn.lsp") })
+	use({ "neovim/nvim-lspconfig" })
 
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
@@ -99,30 +81,16 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
+	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		config = require("shawn.null-ls"),
-	})
+	use({ "jose-elias-alvarez/null-ls.nvim" })
 
-	use({
-		"hrsh7th/nvim-cmp",
-		config = require("shawn.cmp"),
-	})
-	use({
-		"ray-x/lsp_signature.nvim",
-		config = require("shawn.lsp_signature"),
-	}) -- better lsp_signature help
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
-	use({
-		"iamcco/markdown-preview.nvim",
-		config = source("~/.config/nvim/settings/markdown-preview.vim"),
-	})
+	use({ "iamcco/markdown-preview.nvim" })
 
-	use({
-		"shawnyu5/executor.nvim",
-		config = require("shawn.executor_settings"),
-	})
+	use({ "shawnyu5/executor.nvim" })
 
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
 	use("tweekmonster/wstrip.vim") -- rmove trailing white spaces
@@ -130,12 +98,8 @@ return packer.startup(function(use)
 	use("psliwka/vim-smoothie") -- smooth scrolling
 	use("chmp/mdnav") -- opening links in vim
 
-	use({
-		"preservim/nerdcommenter",
-		config = source("~/.config/nvim/settings/nerdcommenter_settings.vim"),
-	}) -- block commenting
-
-	use({ "Shatur/neovim-session-manager", config = require("shawn.session_manager") })
+	use({ "preservim/nerdcommenter" }) -- block commenting
+	use({ "Shatur/neovim-session-manager" })
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
 	use("szw/vim-maximizer") -- vim maxmizer
@@ -143,12 +107,10 @@ return packer.startup(function(use)
 	use("tpope/vim-surround") -- vim surround
 	use({
 		"sedm0784/vim-you-autocorrect",
-		config = source("~/.config/nvim/settings/vim-you-autocorrect.vim"),
 	}) -- autocorrect spelling
 	use({
 		"mboughaba/i3config.vim",
 		config = function()
-			print("Hiiii")
 			vim.cmd([[
          aug i3config_ft_detection
          au!
@@ -157,8 +119,5 @@ return packer.startup(function(use)
          ]])
 		end,
 	}) -- i3config highlighting
-	use({
-		"alvan/vim-closetag",
-		config = source("~/.config/nvim/settings/vim-closetag.vim"),
-	}) -- auto close html tags
+	use({ "alvan/vim-closetag" }) -- auto close html tags
 end)
