@@ -15,6 +15,8 @@ num=`task active | wc -l`
 if [ $num -gt "1" ]
 then
    task=$(task active | sed -e '1,3d')
+   task=$(echo $task | cut -d " " -f8-)
+   # echo $task
    notify-send "$task"
    # notification=$(task active | tail -n +4 | head -n -3)
    # notification=$(echo $notification | cut -d " " -f5-)
