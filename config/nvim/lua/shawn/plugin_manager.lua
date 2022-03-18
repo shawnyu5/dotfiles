@@ -1,3 +1,16 @@
+local fn = vim.fn
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+	packer_bootstrap = fn.system({
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+end
+
 local ok, packer = pcall(require, "packer")
 if not ok then
 	return
@@ -19,7 +32,13 @@ packer.init({
 -- ]]
 
 return packer.startup(function(use)
-	-- use("dstein64/vim-startuptime")
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require("packer").sync()
+	end
+
+	use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
@@ -37,16 +56,13 @@ return packer.startup(function(use)
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
-	use("preservim/tagbar")
+	-- use("preservim/tagbar")
 
 	use({
 		"itchyny/lightline.vim",
 	}) -- status bar
 
 	use({ "ahmedkhalf/project.nvim" })
-	use({
-		"nvim-telescope/telescope.nvim",
-	})
 
 	use({
 		"nvim-telescope/telescope-file-browser.nvim",
@@ -65,20 +81,16 @@ return packer.startup(function(use)
 		-- cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle"}
 	})
 
-	use({
-		"windwp/nvim-autopairs",
-	})
+	use({ "windwp/nvim-autopairs" })
 
-	use({
-		"SirVer/ultisnips",
-	}) --  Snippets engine.
+	-- use("L3MON4D3/LuaSnip")
+	use({ "SirVer/ultisnips" }) --  Snippets engine.
+	use("honza/vim-snippets")
 
 	use("j-hui/fidget.nvim")
 	-- use("Yggdroot/indentLine") -- TODO: figure out why this makes title card vanish
 
-	use({
-		"ThePrimeagen/harpoon",
-	})
+	use({ "ThePrimeagen/harpoon" })
 
 	use({
 		"ThePrimeagen/refactoring.nvim",
@@ -97,26 +109,17 @@ return packer.startup(function(use)
 	use("andersevenrud/cmp-tmux") -- tmux completion source
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
+	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
 
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-	})
+	use({ "jose-elias-alvarez/null-ls.nvim" })
 
-	use({
-		"hrsh7th/nvim-cmp",
-	})
-	use({
-		"ray-x/lsp_signature.nvim",
-	}) -- better lsp_signature help
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
-	use({
-		"iamcco/markdown-preview.nvim",
-	})
+	use({ "iamcco/markdown-preview.nvim" })
 
-	use({
-		"shawnyu5/executor.nvim",
-	})
+	use({ "shawnyu5/executor.nvim" })
 	-- use("~/.config/nvim/lua/shawn/terminal/")
 
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
@@ -125,13 +128,8 @@ return packer.startup(function(use)
 	use("psliwka/vim-smoothie") -- smooth scrolling
 	use("chmp/mdnav") -- opening links in vim
 
-	use({
-		"preservim/nerdcommenter",
-	}) -- block commenting
-
-	use({
-		"Shatur/neovim-session-manager",
-	})
+	use({ "preservim/nerdcommenter" }) -- block commenting
+	use({ "Shatur/neovim-session-manager" })
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
 	use("szw/vim-maximizer") -- vim maxmizer
@@ -151,7 +149,5 @@ return packer.startup(function(use)
          ]])
 		end,
 	}) -- i3config highlighting
-	use({
-		"alvan/vim-closetag",
-	}) -- auto close html tags
+	use({ "alvan/vim-closetag" }) -- auto close html tags
 end)

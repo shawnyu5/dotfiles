@@ -9,11 +9,11 @@ filetype.setup({
 	overrides = {
 		extensions = {
 			-- Set the filetype of *.pn files to potion
-			-- pn = "potion",
+			pn = "potion",
 		},
 		literal = {
 			-- Set the filetype of files named "MyBackupFile" to lua
-			-- MyBackupFile = "lua",
+			MyBackupFile = "lua",
 		},
 		complex = {
 			-- Set the filetype of any full filename matching the regex to gitconfig
