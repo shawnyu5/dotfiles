@@ -4690,3 +4690,39 @@ time 1647465711
 old [description:"nvim lsp install bash script" entry:"1646887068" modified:"1647446207" project:"personal" start:"1647446207" status:"pending" uuid:"32c35c5f-a27e-4e71-8ebf-1729fce3e7e9"]
 new [description:"nvim lsp install bash script" end:"1647465711" entry:"1646887068" modified:"1647465711" project:"personal" status:"completed" uuid:"32c35c5f-a27e-4e71-8ebf-1729fce3e7e9"]
 ---
+time 1647608891
+old [description:"create prof interview questions" due:"1647572400" entry:"1646874416" modified:"1647446201" project:"EAC" start:"1647270207" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3a966d60-d120-43fe-91d3-0e5005e7f038"]
+new [description:"create prof interview questions" due:"1647572400" end:"1647608890" entry:"1646874416" modified:"1647608891" project:"EAC" start:"1647270207" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"3a966d60-d120-43fe-91d3-0e5005e7f038"]
+---
+time 1647608897
+old [description:"workshop 7" due:"1648004400" entry:"1647447130" modified:"1647447130" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4f37d277-6dfe-4581-a15f-2b26d01009af"]
+new [description:"workshop 7" due:"1648004400" entry:"1647447130" modified:"1647608897" project:"JAC" start:"1647608897" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4f37d277-6dfe-4581-a15f-2b26d01009af"]
+---
+time 1647909413
+new [description:"send email to orthodontics for x ray" entry:"1647909413" modified:"1647909413" project:"personal" status:"pending" uuid:"66682d62-c16e-455b-a6f1-579f436cbadd"]
+---
+time 1647952477
+new [description:"individual assignment" due:"1648868400" entry:"1647952477" modified:"1647952477" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"60a34caf-b9d4-4eaa-8a06-2849c9fe4e38"]
+---
+time 1647954901
+new [description:"test" due:"1648004400" entry:"1647954901" modified:"1647954901" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1647954941
+old [description:"test" due:"1648004400" entry:"1647954901" modified:"1647954901" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" modified:"1647954941" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1647954942
+new [description:"test" due:"1648004400" entry:"1647954942" imask:"0" modified:"1647954941" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2a23c09f-d8a4-4047-9756-981f62bd7a35"]
+---
+time 1647954942
+old [description:"test" due:"1648004400" entry:"1647954901" modified:"1647954941" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"-" modified:"1647954942" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1647954946
+old [description:"test" due:"1648004400" entry:"1647954942" imask:"0" modified:"1647954941" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2a23c09f-d8a4-4047-9756-981f62bd7a35"]
+new [description:"test" due:"1648004400" entry:"1647954942" imask:"0" modified:"1647954946" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1647954946" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2a23c09f-d8a4-4047-9756-981f62bd7a35"]
+---
+time 1647964380
+old [description:"workshop 7" due:"1648004400" entry:"1647447130" modified:"1647608897" project:"JAC" start:"1647608897" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4f37d277-6dfe-4581-a15f-2b26d01009af"]
+new [description:"workshop 7" due:"1648004400" end:"1647964380" entry:"1647447130" modified:"1647964380" project:"JAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4f37d277-6dfe-4581-a15f-2b26d01009af"]
+---

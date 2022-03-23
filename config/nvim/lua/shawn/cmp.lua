@@ -34,6 +34,7 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
 	},
 	sources = {
+		{ name = "copilot" },
 		{ name = "ultisnips" }, -- For ultisnips users.
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
@@ -52,6 +53,7 @@ cmp.setup({
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.menu = ({
+				copilot = "[Copilot]",
 				nvim_lsp = "[Lsp]",
 				nvim_lua = "[Lua]",
 				ultisnips = "[Snippets]",

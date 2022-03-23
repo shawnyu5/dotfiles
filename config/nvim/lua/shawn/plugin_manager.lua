@@ -38,11 +38,13 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-	use("dstein64/vim-startuptime")
+	-- use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")
+
+	use({ "github/copilot.vim" })
 
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
@@ -103,6 +105,7 @@ return packer.startup(function(use)
 	-- native LSP
 	use({ "neovim/nvim-lspconfig" })
 
+	use({ "hrsh7th/cmp-copilot" })
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-nvim-lua")
@@ -111,10 +114,10 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
+	use({ "hrsh7th/nvim-cmp" })
 
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 
-	use({ "hrsh7th/nvim-cmp" })
 	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
 	use({ "iamcco/markdown-preview.nvim" })

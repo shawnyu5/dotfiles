@@ -1,6 +1,5 @@
 -- placed here for easy access
 vim.opt.relativenumber = true
-vim.g.init = false
 
 -- if vim.g.init then
 -- print("file sourced")
@@ -34,6 +33,7 @@ require("shawn.telescope")
 require("shawn.harpoon")
 require("shawn.refactor")
 source("~/.config/nvim/settings/maps.vim")
+require("shawn.copilot")
 require("shawn.project")
 source("~/.config/nvim/settings/markdown-preview.vim")
 require("shawn.executor_settings")
