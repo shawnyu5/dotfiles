@@ -1,3 +1,4 @@
+[description:"test" due:"1648004400" end:"1648069501" entry:"1647954942" imask:"0" modified:"1648069501" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"2a23c09f-d8a4-4047-9756-981f62bd7a35"]
 [description:"workshop 7" due:"1648004400" end:"1647964380" entry:"1647447130" modified:"1647964380" project:"JAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4f37d277-6dfe-4581-a15f-2b26d01009af"]
 [description:"create prof interview questions" due:"1647572400" end:"1647608890" entry:"1646874416" modified:"1647608891" project:"EAC" start:"1647270207" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"3a966d60-d120-43fe-91d3-0e5005e7f038"]
 [description:"nvim lsp install bash script" end:"1647465711" entry:"1646887068" modified:"1647465711" project:"personal" status:"completed" uuid:"32c35c5f-a27e-4e71-8ebf-1729fce3e7e9"]
