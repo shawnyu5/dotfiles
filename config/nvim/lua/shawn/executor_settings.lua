@@ -53,6 +53,10 @@ executor.setup({
 			"go test",
 			extern = true,
 		},
+		rust = {
+			"cargo run",
+			"cargo test",
+		},
 	},
 	default_mappings = true,
 	always_exit = true,

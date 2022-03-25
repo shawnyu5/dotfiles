@@ -4745,3 +4745,6 @@ time 1648069506
 old [description:"assignment 5" due:"1648263600" entry:"1647456283" modified:"1647456283" project:"WEB" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"527201cf-15ac-481e-9422-1d190164ec0f"]
 new [description:"assignment 5" due:"1648263600" entry:"1647456283" modified:"1648069506" project:"WEB" start:"1648069506" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"527201cf-15ac-481e-9422-1d190164ec0f"]
 ---
+time 1648135124
+new [description:"workshop 5" due:"1648609200" entry:"1648135124" modified:"1648135124" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4f5427d7-cf73-4c1b-9a30-a5ccc9af0faf"]
+---

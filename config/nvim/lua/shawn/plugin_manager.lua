@@ -60,9 +60,8 @@ return packer.startup(function(use)
 	}) -- color scheme
 	-- use("preservim/tagbar")
 
-	use({
-		"itchyny/lightline.vim",
-	}) -- status bar
+	use({ "itchyny/lightline.vim" }) -- status bar
+	-- use({ "nvim-lualine/lualine.nvim" })
 
 	use({ "ahmedkhalf/project.nvim" })
 

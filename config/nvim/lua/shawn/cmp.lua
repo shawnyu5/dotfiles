@@ -34,9 +34,8 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
 	},
 	sources = {
-		{ name = "copilot" },
-		{ name = "ultisnips" }, -- For ultisnips users.
 		{ name = "nvim_lsp" },
+		{ name = "ultisnips" }, -- For ultisnips users.
 		{ name = "nvim_lua" },
 		{ name = "path" },
 		{ name = "buffer" },
