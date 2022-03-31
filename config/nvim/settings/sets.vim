@@ -14,7 +14,7 @@ autocmd BufEnter *.hbs set ft=html
 
 set nottimeout
 set ttimeoutlen=600
-set timeoutlen=600
+set timeoutlen=1000
 
 set mouse=a
 set noswapfile

@@ -4805,3 +4805,40 @@ time 1648558394
 old [description:"complex use case test" due:"1650600000" entry:"1648557087" modified:"1648558212" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5505c2a6-ba77-4afa-a763-f711189acad0"]
 new [description:"complex use case test" due:"1649908800" entry:"1648557087" modified:"1648558394" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5505c2a6-ba77-4afa-a763-f711189acad0"]
 ---
+time 1648740370
+new [description:"test" due:"1649214000" entry:"1648740370" imask:"2" modified:"1648069501" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a577aecf-a5ea-4395-b180-08ebd357b626"]
+---
+time 1648740370
+old [description:"test" due:"1648004400" entry:"1647954901" mask:"+-" modified:"1648069501" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"+--" modified:"1648740370" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1648740370
+new [description:"test" due:"1649214000" entry:"1648740370" imask:"1" modified:"1648557263" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2a85310e-321c-417e-93cf-d815058356d5"]
+---
+time 1648740370
+old [description:"test" due:"1648609200" entry:"1648557256" mask:"-" modified:"1648557263" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+new [description:"test" due:"1648609200" entry:"1648557256" mask:"--" modified:"1648740370" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+---
+time 1648740384
+old [description:"test" due:"1648004400" entry:"1647954901" mask:"+--" modified:"1648740370" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"++-" modified:"1648740384" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1648740384
+old [description:"test" due:"1648609200" entry:"1648069495" imask:"1" modified:"1648557095" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1648557095" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b420d949-3749-4c77-8eac-88619922969b"]
+new [description:"test" due:"1648609200" end:"1648740384" entry:"1648069495" imask:"1" modified:"1648740384" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"b420d949-3749-4c77-8eac-88619922969b"]
+---
+time 1648740384
+old [description:"test" due:"1648609200" entry:"1648557256" mask:"--" modified:"1648740370" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+new [description:"test" due:"1648609200" entry:"1648557256" mask:"+-" modified:"1648740384" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+---
+time 1648740384
+old [description:"test" due:"1648609200" entry:"1648557263" imask:"0" modified:"1648557268" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" start:"1648557268" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"c2cd81b5-0127-41e5-9247-cf352f5845c4"]
+new [description:"test" due:"1648609200" end:"1648740384" entry:"1648557263" imask:"0" modified:"1648740384" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"c2cd81b5-0127-41e5-9247-cf352f5845c4"]
+---
+time 1648740396
+old [description:"individual assignment" due:"1649995200" entry:"1647952477" modified:"1648557195" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"60a34caf-b9d4-4eaa-8a06-2849c9fe4e38"]
+new [description:"individual assignment" due:"1648868400" entry:"1647952477" modified:"1648740396" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"60a34caf-b9d4-4eaa-8a06-2849c9fe4e38"]
+---
+time 1648750600
+new [description:"workshop 9" due:"1649214000" entry:"1648750600" modified:"1648750600" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"70480844-f239-45a0-82e1-b528f5399fcc"]
+---

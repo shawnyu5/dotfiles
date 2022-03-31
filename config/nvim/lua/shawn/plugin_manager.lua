@@ -62,7 +62,7 @@ return packer.startup(function(use)
 
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
-	use({ "folke/which-key.nvim" })
+	-- use({ "folke/which-key.nvim" })
 	-- use({ "nvim-lualine/lualine.nvim" })
 
 	use({ "ahmedkhalf/project.nvim" })
@@ -78,6 +78,8 @@ return packer.startup(function(use)
 		-- Uncomment next line if you want to follow only stable versions
 		-- tag = "*"
 	})
+
+	use("andweeb/presence.nvim")
 
 	use({
 		"preservim/nerdtree",
