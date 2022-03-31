@@ -52,7 +52,6 @@ cmp.setup({
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.menu = ({
-				copilot = "[Copilot]",
 				nvim_lsp = "[Lsp]",
 				nvim_lua = "[Lua]",
 				ultisnips = "[Snippets]",

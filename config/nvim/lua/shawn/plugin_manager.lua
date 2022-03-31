@@ -61,6 +61,8 @@ return packer.startup(function(use)
 	-- use("preservim/tagbar")
 
 	use({ "itchyny/lightline.vim" }) -- status bar
+	use({ "vim-test/vim-test" })
+	use({ "folke/which-key.nvim" })
 	-- use({ "nvim-lualine/lualine.nvim" })
 
 	use({ "ahmedkhalf/project.nvim" })

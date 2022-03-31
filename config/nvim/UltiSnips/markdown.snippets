@@ -2,49 +2,12 @@ snippet [ "Markdown link"
 [${1:text}](${2:link})
 endsnippet
 
-snippet cb "A generic code block"
-\`\`\`$1
-\`\`\`
+snippet drop "Dropdown menu"
+<details open>
+<summary>${1:Title}</summary>
+<br>
+${2:content}
+</details>
 
-${2}
 endsnippet
 
-snippet py "python code block"
-\`\`\`py
-$1
-\`\`\`
-
-${2}
-endsnippet
-
-snippet js "javascript code block"
-\`\`\`js
-$1
-\`\`\`
-
-${2}
-endsnippet
-
-snippet java "java code block"
-\`\`\`java
-$1
-\`\`\`
-
-${2}
-endsnippet
-
-snippet bash "bash code block"
-\`\`\`bash
-$1
-\`\`\`
-
-${2}
-endsnippet
-
-snippet ts "typescript code block"
-\`\`\`ts
-$1
-\`\`\`
-
-${2}
-endsnippet

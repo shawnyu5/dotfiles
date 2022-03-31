@@ -123,7 +123,7 @@ autocmd bufreadpre OOP_345_notes.md nnoremap <silent> e :norm! df<Space>VguVyI*<
 
 "80>kb^[A)^[hhvi(:s/\%V /-/g^M
 "df VguVyI* [^[A](#^[pi<80>kb^[A)^[hhvi(:s/\%V /-/g^M
-autocmd FileType markdown nnoremap <leader>t :GenTocGFM<CR>A<CR><Esc>?<!<CR>nkdd
+autocmd FileType markdown nnoremap <buffer> <leader>t :GenTocGFM<CR>A<CR><Esc>?<!<CR>nkdd
 
 "maps for md files
 "=====================
