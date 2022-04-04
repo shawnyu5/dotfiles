@@ -17,11 +17,11 @@ null_ls.setup({
 		-- },
 		-- disabled_filetypes = { "html" },
 		-- }),
-      formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.clang_format,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({
-			disabled_filetypes = { "html" },
+			disabled_filetypes = { "html", "json" },
 		}),
 	},
 })

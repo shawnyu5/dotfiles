@@ -4842,3 +4842,21 @@ new [description:"individual assignment" due:"1648868400" entry:"1647952477" mod
 time 1648750600
 new [description:"workshop 9" due:"1649214000" entry:"1648750600" modified:"1648750600" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"70480844-f239-45a0-82e1-b528f5399fcc"]
 ---
+time 1648909904
+old [description:"individual assignment" due:"1648868400" entry:"1647952477" modified:"1648740396" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"60a34caf-b9d4-4eaa-8a06-2849c9fe4e38"]
+new [description:"individual assignment" due:"1648868400" end:"1648909904" entry:"1647952477" modified:"1648909904" project:"SYD" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"60a34caf-b9d4-4eaa-8a06-2849c9fe4e38"]
+---
+time 1648910201
+new [description:"group presentation" due:"1649473200" entry:"1648910200" modified:"1648910200" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1a52ded0-74ee-4a52-89ad-811d689543af"]
+---
+time 1648913286
+old [description:"workshop 9" due:"1649214000" entry:"1648750600" modified:"1648750600" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"70480844-f239-45a0-82e1-b528f5399fcc"]
+new [description:"workshop 9" due:"1649214000" entry:"1648750600" modified:"1648913286" project:"JAC" start:"1648913286" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"70480844-f239-45a0-82e1-b528f5399fcc"]
+---
+time 1648913307
+new [description:"assignment 6" due:"1649473200" entry:"1648913307" modified:"1648913307" project:"WEB" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fabc9c94-3c72-4fba-a0aa-56a8bbcbd59e"]
+---
+time 1648913311
+old [description:"assignment 6" due:"1649473200" entry:"1648913307" modified:"1648913307" project:"WEB" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fabc9c94-3c72-4fba-a0aa-56a8bbcbd59e"]
+new [description:"assignment 6" due:"1649473200" entry:"1648913307" modified:"1648913311" project:"WEB" start:"1648913311" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fabc9c94-3c72-4fba-a0aa-56a8bbcbd59e"]
+---

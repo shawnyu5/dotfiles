@@ -46,6 +46,14 @@ lsp.jdtls.setup({
 -- angluar
 lsp.angularls.setup({})
 
+-- json
+lsp.jsonls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
+
 -- markdown
 -- lsp.remark_ls.setup({
 -- on_attach = function(client, bufnr)

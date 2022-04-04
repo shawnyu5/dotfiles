@@ -55,12 +55,13 @@ executor.setup({
 		},
 		rust = {
 			"cargo run",
-			"cargo test",
+			"rustc % -o a.out && ./a.out",
 		},
 	},
 	default_mappings = true,
 	always_exit = true,
 	dependency_commands = {
 		make = "makefile",
+		["cargo run"] = " Cargo.toml",
 	},
 })
