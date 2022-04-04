@@ -7,3 +7,8 @@ import: ## Import all configs from system
 export: ## Export all configs to system
 	$(PWD)/export.sh
 
+import_linux: ## import all linux configs
+	$(PWD)/linux/import.sh
+
+export_linux: ## export all linux configs
+	$(PWD)/linux/export.sh
