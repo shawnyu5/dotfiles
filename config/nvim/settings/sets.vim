@@ -12,6 +12,10 @@ let g:init = 1
 
 autocmd BufEnter *.hbs set ft=html
 
+augroup rust_copilot
+   autocmd BufEnter *.rs :Copilot disable
+augroup END
+
 set nottimeout
 set ttimeoutlen=600
 set timeoutlen=1000
