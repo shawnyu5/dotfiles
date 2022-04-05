@@ -5,7 +5,6 @@
 
 #vim config
 cp -r ~/.config/nvim/ config/ && echo "nvim directory imported"
-rm config/nvim/plugin/packer_compiled.lua
 cp -r ~/.config/kitty/ ./config/ && echo "Kitty config imported"
 cp ~/.config/compton.conf ./config/ && echo "compton config imported"
 cp -r ~/.config/i3blocks/ ./config/ && echo "i3blocks config imported"
