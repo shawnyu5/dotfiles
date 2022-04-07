@@ -4890,3 +4890,34 @@ time 1649164503
 old [description:"test" due:"1649214000" entry:"1648740370" imask:"2" modified:"1648069501" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a577aecf-a5ea-4395-b180-08ebd357b626"]
 new [description:"test" due:"1649214000" entry:"1648740370" imask:"2" modified:"1649164503" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1649164503" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a577aecf-a5ea-4395-b180-08ebd357b626"]
 ---
+time 1649202180
+old [description:"test" due:"1648004400" entry:"1647954901" mask:"++-" modified:"1648740384" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"+++" modified:"1649202180" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1649202180
+old [description:"test" due:"1649214000" entry:"1648740370" imask:"2" modified:"1649164503" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1649164503" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a577aecf-a5ea-4395-b180-08ebd357b626"]
+new [description:"test" due:"1649214000" end:"1649202180" entry:"1648740370" imask:"2" modified:"1649202180" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"a577aecf-a5ea-4395-b180-08ebd357b626"]
+---
+time 1649202203
+new [description:"report" due:"1649473200" entry:"1649202203" modified:"1649202203" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"aa6d9bb7-084b-4b8d-80bb-10e8891ddbd3"]
+---
+time 1649270422
+new [description:"test" due:"1649818800" entry:"1649270422" imask:"3" modified:"1649202180" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d0bd044b-79d0-4107-8921-ef53581bde86"]
+---
+time 1649270422
+old [description:"test" due:"1648004400" entry:"1647954901" mask:"+++" modified:"1649202180" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"+++-" modified:"1649270422" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1649270422
+new [description:"test" due:"1649818800" entry:"1649270422" imask:"2" modified:"1649099975" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bfde4bcf-cb94-4bd9-b4c9-d80d0f206f92"]
+---
+time 1649270422
+old [description:"test" due:"1648609200" entry:"1648557256" mask:"+X" modified:"1649099975" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+new [description:"test" due:"1648609200" entry:"1648557256" mask:"+X-" modified:"1649270422" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+---
+time 1649270432
+new [description:"quiz" due:"1649473200" entry:"1649270432" modified:"1649270432" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fe56b4c4-5630-4f66-800b-e2624f4f8aee"]
+---
+time 1649341270
+new [description:"workshop 10" due:"1649818800" entry:"1649341270" modified:"1649341270" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cf0a6b45-a085-4725-bce8-ecf833966970"]
+---
