@@ -44,7 +44,12 @@ lsp.jdtls.setup({
 })
 
 -- angluar
-lsp.angularls.setup({})
+lsp.angularls.setup({
+	on_attach = function(client, bufnr)
+		-- disable rename
+		client.resolved_capabilities.rename = false
+	end,
+})
 
 -- json
 lsp.jsonls.setup({

@@ -231,7 +231,7 @@ new_float pixel 7
 for_window [class="^.*"] border pixel 5
 
 # colorclass    border   background text  indicator
-client.focused  #FFFFFF  #FFFFFF  #fdf6e3 #268bd2
+client.focused  #4dff4d  #4dff4d  #484e50  #268bd2
 # client.focused_inactive #00ff37  #00ff37  #ffffff #484e50
 
 
