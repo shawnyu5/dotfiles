@@ -4951,3 +4951,47 @@ new [description:"quiz" due:"1649473200" end:"1649550907" entry:"1649270432" mod
 time 1649550980
 new [description:"tighen up report paragraphs" due:"1649646000" entry:"1649550980" modified:"1649550980" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"16bad85f-c224-4e04-84e7-56b62eee18eb"]
 ---
+time 1649725635
+old [description:"early enrollment" due:"1649732400" entry:"1649164497" modified:"1649164497" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"19875efc-924c-4cab-aa61-f6d65ec586b9"]
+new [description:"early enrollment" due:"1649732400" end:"1649725635" entry:"1649164497" modified:"1649725635" project:"JAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"19875efc-924c-4cab-aa61-f6d65ec586b9"]
+---
+time 1649725639
+old [description:"test" due:"1649818800" entry:"1649270422" imask:"3" modified:"1649202180" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d0bd044b-79d0-4107-8921-ef53581bde86"]
+new [description:"test" due:"1649818800" entry:"1649270422" imask:"3" modified:"1649725639" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1649725639" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d0bd044b-79d0-4107-8921-ef53581bde86"]
+---
+time 1649725639
+old [description:"test" due:"1649818800" entry:"1649270422" imask:"2" modified:"1649099975" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bfde4bcf-cb94-4bd9-b4c9-d80d0f206f92"]
+new [description:"test" due:"1649818800" entry:"1649270422" imask:"2" modified:"1649725639" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" start:"1649725639" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bfde4bcf-cb94-4bd9-b4c9-d80d0f206f92"]
+---
+time 1649725671
+old [description:"tighen up report paragraphs" due:"1649646000" entry:"1649550980" modified:"1649550980" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"16bad85f-c224-4e04-84e7-56b62eee18eb"]
+new [description:"tighen up report paragraphs" due:"1649646000" entry:"1649550980" modified:"1649725671" project:"EAC" start:"1649725671" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"16bad85f-c224-4e04-84e7-56b62eee18eb"]
+---
+time 1649807167
+old [description:"test" due:"1648004400" entry:"1647954901" mask:"+++-" modified:"1649270422" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+new [description:"test" due:"1648004400" entry:"1647954901" mask:"++++" modified:"1649807167" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
+---
+time 1649807167
+old [description:"test" due:"1649818800" entry:"1649270422" imask:"3" modified:"1649725639" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" start:"1649725639" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d0bd044b-79d0-4107-8921-ef53581bde86"]
+new [description:"test" due:"1649818800" end:"1649807162" entry:"1649270422" imask:"3" modified:"1649807167" parent:"094c2a9f-c98a-409c-aec8-4b2d1070fb49" project:"JAC" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"d0bd044b-79d0-4107-8921-ef53581bde86"]
+---
+time 1649807168
+old [description:"test" due:"1648609200" entry:"1648557256" mask:"+X-" modified:"1649270422" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+new [description:"test" due:"1648609200" entry:"1648557256" mask:"+X+" modified:"1649807168" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
+---
+time 1649807168
+old [description:"test" due:"1649818800" entry:"1649270422" imask:"2" modified:"1649725639" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" start:"1649725639" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bfde4bcf-cb94-4bd9-b4c9-d80d0f206f92"]
+new [description:"test" due:"1649818800" end:"1649807167" entry:"1649270422" imask:"2" modified:"1649807168" parent:"746a87be-ab27-4844-a386-b34b764dc780" project:"WEB" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bfde4bcf-cb94-4bd9-b4c9-d80d0f206f92"]
+---
+time 1649807170
+old [description:"tighen up report paragraphs" due:"1649646000" entry:"1649550980" modified:"1649725671" project:"EAC" start:"1649725671" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"16bad85f-c224-4e04-84e7-56b62eee18eb"]
+new [description:"tighen up report paragraphs" due:"1649646000" end:"1649807168" entry:"1649550980" modified:"1649807170" project:"EAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"16bad85f-c224-4e04-84e7-56b62eee18eb"]
+---
+time 1649807178
+old [description:"workshop 10" due:"1649818800" entry:"1649341270" modified:"1649341270" project:"JAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cf0a6b45-a085-4725-bce8-ecf833966970"]
+new [description:"workshop 10" due:"1649818800" end:"1649807178" entry:"1649341270" modified:"1649807178" project:"JAC" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"cf0a6b45-a085-4725-bce8-ecf833966970"]
+---
+time 1649807196
+old [description:"complex use case test" due:"1649908800" entry:"1648557087" modified:"1648558394" project:"SYD" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5505c2a6-ba77-4afa-a763-f711189acad0"]
+new [description:"complex use case test" due:"1649991600" entry:"1648557087" modified:"1649807196" project:"SYD" status:"pending" tags_seneca:"x" uuid:"5505c2a6-ba77-4afa-a763-f711189acad0"]
+---

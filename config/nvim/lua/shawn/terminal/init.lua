@@ -16,12 +16,12 @@ function M.left_terminal(left)
 	local current_tab = vim.fn.tabpagenr()
 	vim.cmd("tabe | term")
 	if left then
-      print("moving to left")
+		print("moving to left")
 		-- move terminal to 1 before current tab, so closing terminal will land on the currect page
 		vim.cmd("tabm " .. current_tab - 1)
 	end
 	-- go into insert mode
-   vim.cmd("norm! i")
+	vim.cmd("norm! i")
 end
 
 require("shawn.terminal.maps")

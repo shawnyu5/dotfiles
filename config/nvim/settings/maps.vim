@@ -1,8 +1,8 @@
 
 lua << EOF
     -- left close
-    vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser(true)<CR>", { noremap = true, silent = true})
-    vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
+   --  vim.api.nvim_set_keymap('n', 'ZZ', ":lua require('helpers').leftCloser(true)<CR>", { noremap = true, silent = true})
+   --  vim.api.nvim_set_keymap('n', 'ZQ', ":lua require('helpers').leftCloser()<CR>", { noremap = true, silent = true})
 
 EOF
 

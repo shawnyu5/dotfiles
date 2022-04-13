@@ -59,6 +59,14 @@ lsp.jsonls.setup({
 	end,
 })
 
+-- css
+lsp.cssls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
+
 -- markdown
 -- lsp.remark_ls.setup({
 -- on_attach = function(client, bufnr)
@@ -108,6 +116,7 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = false
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
@@ -130,7 +139,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup({
 	on_attach = function(client, bufnr)
-		-- client.resolved_capabilities.document_formatting = true
+		client.resolved_capabilities.document_formatting = false
 		-- client.resolved_capabilities.document_range_formatting = true
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)

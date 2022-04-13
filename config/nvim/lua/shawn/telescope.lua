@@ -1,6 +1,7 @@
 local M = {}
 
 local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 
 -- use git files if in a git repo, other wise fall back to find_files
 function M.project_files()
@@ -12,18 +13,17 @@ function M.project_files()
 end
 
 -- keymap("n", "<leader>ff", ":lua require('shawn.telescope').project_files()<CR>", { noremap = true, silent = true })
-keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>fe", "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+keymap("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim/'})<CR>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope resume<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
 vim.cmd([[
-nnoremap <leader>ff <cmd>Telescope find_files<CR>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-" nnoremap <leader>fe <cmd>lua require 'telescope'.extensions.file_browser.file_browser({ layout_strategy='vertical', layout_config={width=0.8} })<CR>
-nnoremap <leader>fe <cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>
-nnoremap <leader>fw <cmd>Telescope live_grep<cr>
-nnoremap <leader>fc <cmd>lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})<CR>
-nnoremap <leader>fr <cmd>Telescope resume<CR>
 command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
-
 command! Planets :lua require("telescope.builtin").planets({show_pluto = true})
 ]])
 

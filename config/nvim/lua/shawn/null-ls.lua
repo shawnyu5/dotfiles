@@ -21,7 +21,7 @@ null_ls.setup({
 		formatting.clang_format,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({
-			disabled_filetypes = { "html", "json" },
+			disabled_filetypes = { "json" },
 		}),
 	},
 })
