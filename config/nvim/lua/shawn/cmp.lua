@@ -15,7 +15,7 @@ cmp.setup({
 			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
 	},
-	mapping = {
+	mapping = cmp.mapping.preset.insert({
 		["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -32,7 +32,7 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
-	},
+	}),
 	sources = {
 		{ name = "copilot" },
 		{ name = "nvim_lsp" },
