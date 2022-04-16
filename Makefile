@@ -19,3 +19,4 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.config/neofetch/ ~/.config/
 	ln -svf ~/personal/.config/i3blocks ~/.config/i3blocks
 	ln -svf ~/personal/.config/rofi ~/.config/rofi
+	ln -svf ~/personal/.gitconfig ~/.gitconfig
