@@ -18,7 +18,6 @@ fi
 # Arguments:
 #   the server name to install
 #   the command to install the server
-#
 #######################################
 install() {
    SERVER=$1
@@ -38,3 +37,4 @@ install "tsserver" "npm install -g typescript typescript-language-server"
 install "lua language server" "sudo pacman -S lua-language-server"
 install "pyrigh" "sudo pacman -S pyright"
 install "angularls" "npm install -g @angular/language-server"
+install "gopls" "sudo pacman -S gopls"
