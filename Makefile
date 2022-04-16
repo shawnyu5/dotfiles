@@ -14,4 +14,6 @@ export_linux: ## export all linux configs
 	$(PWD)/linux/export.sh
 
 init: ## Create all symlinks
-	ln -s ~/personal/.config/i3 ~/.config/
+	ln -svf ~/personal/.config/i3 ~/.config/
+	ln -svf ~/personal/.config/kitty ~/.config/kitty
+	ln -svf ~/personal/.config/neofetch/ ~/.config/
