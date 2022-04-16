@@ -1,0 +1,11 @@
+google-chrome
+heroku-cli-bin
+javafx-scenebuilder
+jdtls
+neovim-nightly-bin
+pcurses
+prettierd
+stylua-bin
+teams
+visual-paradigm-community
+zoom
