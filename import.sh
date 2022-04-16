@@ -4,12 +4,12 @@
 #---------------------------------
 
 #vim config
-cp -r ~/.config/nvim/ config/ && echo "nvim directory imported"
-cp -r ~/.config/kitty/ ./config/ && echo "Kitty config imported"
-cp ~/.config/compton.conf ./config/ && echo "compton config imported"
-cp -r ~/.config/i3blocks/ ./config/ && echo "i3blocks config imported"
-cp -r ~/.config/i3/ ./config/ && echo "i3 config imported"
-cp -r ~/.config/rofi/ ./config/ && echo "rofi config imported"
+cp -r ~/.config/nvim/ .config/ && echo "nvim directory imported"
+cp -r ~/.config/kitty/ ./.config/ && echo "Kitty config imported"
+cp ~/.config/compton.conf ./.config/ && echo "compton config imported"
+cp -r ~/.config/i3blocks/ ./.config/ && echo "i3blocks config imported"
+cp -r ~/.config/i3/ ./.config/ && echo "i3 config imported"
+cp -r ~/.config/rofi/ ./.config/ && echo "rofi config imported"
 cp -r ~/.task/ ./task && echo "taskworrior config imported"
 cp ~/.clang-format ./clang-format && echo "clang format file imported"
 

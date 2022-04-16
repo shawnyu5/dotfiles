@@ -12,3 +12,6 @@ import_linux: ## import all linux configs
 
 export_linux: ## export all linux configs
 	$(PWD)/linux/export.sh
+
+init: ## Create all symlinks
+	ln -s ~/personal/.config/i3 ~/.config/
