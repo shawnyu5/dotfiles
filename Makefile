@@ -20,3 +20,8 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.config/i3blocks ~/.config/i3blocks
 	ln -svf ~/personal/.config/rofi ~/.config/rofi
 	ln -svf ~/personal/.gitconfig ~/.gitconfig
+
+backup: ## backup all pacman packages
+	mkdir -p ./backup/
+	pacman -Qnq > ./backup/pacman-packages.txt
+	pacman -Qqem > ./backup/aur-packages.txt
