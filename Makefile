@@ -19,8 +19,8 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
 
-
-backup: ## backup all pacman packages
+backup: FORCE ## backup all pacman packages
+	rm -rf ./backup
 	mkdir -p ./backup/
 	pacman -Qnq > ./backup/pacman-packages.txt
 	pacman -Qqem > ./backup/aur-packages.txt
@@ -28,3 +28,6 @@ backup: ## backup all pacman packages
 install_pacman: ## install all pacman packages
 	pacman -S --needed $(cat ./backup/pacman-packages.txt)
 	yay -S --needed $(cat ./backup/aur-packages.txt)
+
+FORCE: ;
+

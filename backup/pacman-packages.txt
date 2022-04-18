@@ -572,7 +572,7 @@ libvdpau
 libvisual
 libvorbis
 libvpx
-libvterm
+libvterm01
 libwacom
 libwebp
 libwnck3
@@ -681,6 +681,7 @@ ndctl
 ndisc6
 neofetch
 neon
+neovim
 netctl
 nettle
 network-manager-applet
