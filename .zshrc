@@ -133,6 +133,9 @@ export PATH=$PATH:"/usr/local/go/bin" # go
 # export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME="/usr/bin/jdt/"
 
+# increase ulimit
+ulimit -n 4096
+
 ## Enable substitution in the prompt.
 #setopt prompt_subst
 

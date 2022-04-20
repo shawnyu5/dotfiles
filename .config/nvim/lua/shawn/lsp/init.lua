@@ -92,7 +92,10 @@ lsp.gopls.setup({
 })
 
 -- clangd
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.offsetEncoding = { "utf-16" }
 lsp.clangd.setup({
+	capabilities = capabilities,
 	filetypes = { "c", "cpp", "objc", "objcpp" },
 	on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false

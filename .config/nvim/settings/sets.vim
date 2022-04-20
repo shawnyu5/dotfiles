@@ -6,15 +6,7 @@ set rtp+=~/.config/nvim/lua/shawn/print/
 set conceallevel=0
 set termguicolors
 
-" autocmd BufWinEnter * echo 'hello'
-" autocmd BufWinEnter * source ~/.config/nvim/init.lua
-let g:init = 1
-
 autocmd BufEnter *.hbs set ft=html
-
-augroup rust_copilot
-   autocmd BufEnter *.rs :Copilot disable
-augroup END
 
 set nottimeout
 set ttimeoutlen=600
@@ -27,11 +19,6 @@ set tabstop=3 softtabstop=3
 set shiftwidth=3
 set expandtab
 
-augroup makefile_indenting
-   autocmd!
-   autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4
-
-augroup END
 
 "always show tabs
 set showtabline=2
@@ -65,7 +52,3 @@ set ttimeoutlen=0
 set path+=**
 set scrolloff=3
 
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 104})
-augroup END

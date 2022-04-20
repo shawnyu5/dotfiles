@@ -8,8 +8,8 @@ vim.opt.relativenumber = true
 -- end
 
 vim.cmd([[
-" remaping leader to space
-let mapleader =" "
+   " remaping leader to space
+   let mapleader =" "
 ]])
 
 -- source a vim file
@@ -21,6 +21,7 @@ require("shawn.plugin_manager")
 require("shawn.tree-sitter")
 require("shawn.lsp")
 require("shawn.null-ls")
+require("shawn.autocmd")
 -- require("shawn.luasnip")
 require("shawn.lsp_signature")
 require("shawn.ultisnips")
@@ -51,7 +52,6 @@ require("shawn.telescope")
 source("~/.config/nvim/settings/NERDtree_settings.vim")
 require("shawn.autopairs")
 require("shawn.ultisnips")
-require("shawn.harpoon")
 require("shawn.refactor")
 require("shawn.lsp")
 require("shawn.fidget")
@@ -70,7 +70,7 @@ vim.cmd([[
 autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 " disable indentLine plugin in json and markdown files
-let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
+" let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 " auto enable spellcheck in markdown files
 autocmd BufRead *.md setlocal spell
@@ -90,7 +90,7 @@ let g:wstrip_highlight = 0
 let g:vmt_auto_update_on_save = 1
 
 "disable auto commenting
-autocmd Filetype * setlocal formatoptions-=cro
+" autocmd Filetype * setlocal formatoptions-=cro
 ]])
 
 vim.notify("init.lua sourced")

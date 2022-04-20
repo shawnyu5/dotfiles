@@ -30,4 +30,3 @@ install_pacman: ## install all pacman packages
 	yay -S --needed $(cat ./backup/aur-packages.txt)
 
 FORCE: ;
-

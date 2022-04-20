@@ -13,6 +13,10 @@ executor.setup({
 			"make",
 			"g++ % && ./a.out",
 		},
+		c = {
+			"make",
+			"g++ % && ./a.out",
+		},
 		python = {
 			"python3 %",
 		},
