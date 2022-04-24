@@ -30,3 +30,9 @@ install_pacman: ## install all pacman packages
 	yay -S --needed $(cat ./backup/aur-packages.txt)
 
 FORCE: ;
+
+docker: ## install and set up docker
+	sudo pacman -S --needed docker docker-compose
+	sudo systemctl enable docker
+	sudo systemctl start docker
+	sudo chmod 666 /var/run/docker.sock
