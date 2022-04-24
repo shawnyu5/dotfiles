@@ -7,12 +7,14 @@ vim.opt.relativenumber = true
 -- return
 -- end
 
-vim.cmd([[
-   " remaping leader to space
-   let mapleader =" "
-]])
+-- vim.cmd([[
+-- " remaping leader to space
+-- let mapleader =" "
+-- ]])
+vim.g.mapleader = " "
 
--- source a vim file
+--- source a vim file
+---@param file string file to source
 local function source(file)
 	vim.cmd("source " .. file)
 end
@@ -35,8 +37,8 @@ require("shawn.telescope")
 require("shawn.harpoon")
 require("shawn.refactor")
 source("~/.config/nvim/settings/maps.vim")
-require("shawn.copilot")
 require("copilot").setup()
+require("shawn.copilot")
 require("shawn.project")
 source("~/.config/nvim/settings/markdown-preview.vim")
 require("shawn.executor_settings")
@@ -48,18 +50,10 @@ require("shawn.neogen")
 require("shawn.vim-test")
 -- require("shawn.which-key")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
-require("shawn.telescope")
 source("~/.config/nvim/settings/NERDtree_settings.vim")
 require("shawn.autopairs")
-require("shawn.ultisnips")
-require("shawn.refactor")
-require("shawn.lsp")
 require("shawn.fidget")
-require("shawn.null-ls")
-require("shawn.executor_settings")
-require("shawn.autopairs")
 source("~/.config/nvim/settings/nerdcommenter_settings.vim")
-require("shawn.session_manager")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 source("~/.config/nvim/settings/vim-closetag.vim")
 source("~/.config/nvim/settings/md_paste.vim")
