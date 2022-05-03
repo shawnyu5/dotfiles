@@ -118,6 +118,8 @@ return packer.startup(function(use)
 	use("andersevenrud/cmp-tmux") -- tmux completion source
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
+	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" }) -- git completion source
+
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
 

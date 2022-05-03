@@ -17,3 +17,11 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 		require("vim.highlight").on_yank({ timeout = 104 })
 	end,
 })
+
+vim.api.nvim_create_augroup("json_lsp", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = "tsconfig.json",
+	callback = function()
+		vim.cmd("LspStop")
+	end,
+})

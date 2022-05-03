@@ -26,7 +26,7 @@ executor.setup({
 		},
 		typescript = {
 			"npm start",
-			-- "tsc -w",
+			"nodemon %",
 			extern = true,
 		},
 		sh = {
@@ -67,5 +67,6 @@ executor.setup({
 	dependency_commands = {
 		make = "makefile",
 		["cargo run"] = " Cargo.toml",
+		["npm start"] = "package.json",
 	},
 })
