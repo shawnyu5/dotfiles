@@ -1,6 +1,7 @@
 set rtp+=~/.config/nvim/settings/
 set rtp+=~/.config/nvim/settings/print_debug
 set rtp+=~/.config/nvim/lua/shawn/print/
+set laststatus=3
 
 " not hide markdown special symbols
 set conceallevel=0

@@ -17,6 +17,7 @@ null_ls.setup({
 		-- },
 		-- disabled_filetypes = { "html" },
 		-- }),
+		formatting.eslint,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.clang_format,
 		-- formatting.markdownlint,

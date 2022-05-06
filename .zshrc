@@ -30,6 +30,7 @@ autoload -U colors && colors
 
 export TERM="kitty"
 export BROWSER="google-chrome-stable"
+export GOPATH=$HOME/gopath
 
 precmd_functions=""
 

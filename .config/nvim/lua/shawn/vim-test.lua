@@ -33,5 +33,6 @@ vim.api.nvim_set_keymap("n", "<leader>tv", ":TestVisit<CR>", opts)
 
 vim.api.nvim_exec("let test#strategy = 'neovim'", true)
 vim.cmd([[let test#python#pytest#options = "-s"]]) -- pass `-s` to pytest by default
+vim.cmd([[let test#go#gotest#options = "-v"]]) -- pass `-s` to pytest by default
 
 return M
