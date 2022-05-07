@@ -17,6 +17,7 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 aom
+appstream-glib
 arandr
 arc-gtk-theme-eos
 arc-x-icons-theme
@@ -46,6 +47,7 @@ bison
 bluez
 bluez-libs
 bolt
+bridge-utils
 brotli
 btrfs-progs
 bubblewrap
@@ -65,7 +67,6 @@ clang
 clutter
 clutter-gst
 clutter-gtk
-code
 cogl
 colord
 colord-gtk
@@ -73,6 +74,7 @@ colord-gtk-common
 colord-gtk4
 compiler-rt
 confuse
+containerd
 coreutils
 cracklib
 cronie
@@ -100,6 +102,7 @@ dmidecode
 dmraid
 dnsmasq
 dnssec-anchors
+docker
 dos2unix
 dosfstools
 double-conversion
@@ -153,6 +156,7 @@ filesystem
 findutils
 firefox
 flac
+flatpak
 flex
 fluidsynth
 fontconfig
@@ -166,6 +170,7 @@ fzf
 galculator
 gawk
 gc
+gcab
 gcc
 gcc-libs
 gcr
@@ -532,6 +537,7 @@ libqrtr-glib
 libraqm
 libraw1394
 librsvg
+librsync
 libsamplerate
 libsasl
 libseccomp
@@ -646,6 +652,7 @@ lzo
 m4
 mailcap
 make
+malcontent
 man-db
 man-pages
 md4c
@@ -689,6 +696,7 @@ networkmanager
 networkmanager-openvpn
 nfs-utils
 nfsidmap
+nginx
 nilfs-utils
 nitrogen
 nm-connection-editor
@@ -724,6 +732,7 @@ opus
 orc
 os-prober
 osinfo-db
+ostree
 p11-kit
 pacman
 pacman-contrib
@@ -873,6 +882,7 @@ rofi
 rp-pppoe
 rpcbind
 rsync
+rtkit
 rtmpdump
 rubberband
 ruby
@@ -881,6 +891,7 @@ ruby-irb
 ruby-reline
 rubygems
 run-parts
+runc
 rust
 rust-analyzer
 rust-src
@@ -1013,6 +1024,9 @@ xcb-util-wm
 xcb-util-xrm
 xclip
 xdg-dbus-proxy
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
@@ -1047,6 +1061,7 @@ xterm
 xvidcore
 xxhash
 xz
+yad
 yad-eos
 yajl
 yay

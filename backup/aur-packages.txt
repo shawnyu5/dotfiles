@@ -1,3 +1,4 @@
+act
 google-chrome
 heroku-cli-bin
 javafx-scenebuilder
@@ -7,4 +8,5 @@ prettierd
 stylua-bin
 teams
 visual-paradigm-community
+visual-studio-code-bin
 zoom
