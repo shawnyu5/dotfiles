@@ -22,4 +22,3 @@ vim.g.lightline = {
 		gitBranch = getGitBranch(),
 	},
 }
--- print(" getGitBranch():", vim.inspect(getGitBranch())) -- __AUTO_GENERATED_PRINT_VAR__
