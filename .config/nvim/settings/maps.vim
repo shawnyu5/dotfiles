@@ -56,10 +56,10 @@ map <S-down> <C-E>
 map <S-up> <C-Y>
 
 "control prefix for split management
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-l> <C-w>l
 
 "Y to copy till end of line
 nnoremap Y y$

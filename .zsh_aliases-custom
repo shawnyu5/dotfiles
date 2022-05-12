@@ -6,32 +6,29 @@
 #logout
 alias logout="sudo pkill -u shawn"
 
-#opening github desktop
-alias gitd="github-desktop &"
-
 alias dl="cd ~/Downloads"
 
 # blackboard selenium
-alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
-alias bbeac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py eac; cd - > /dev/null"
-alias bbsyd="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py syd; cd - > /dev/null"
-alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
+# alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
+# alias bbeac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py eac; cd - > /dev/null"
+# alias bbsyd="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py syd; cd - > /dev/null"
+# alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
 
 # opening notes
-alias jacnotes="cd ~/seneca/semester_5/JAC444/; nvim JAC444_notes.md; cd - > /dev/null"
-alias webnotes="cd ~/seneca/semester_5/WEB422; nvim WEB422_notes.md; cd - > /dev/null"
+alias cppnotes="cd ~/seneca/semester_6/CPP555/; nvim CPP555_notes.md; cd - > /dev/null"
+alias dsanotes="cd ~/seneca/semester_6/DSA555/; nvim DSA555_notes.md; cd - > /dev/null"
 alias sydnotes="cd ~/seneca/semester_5/SYD466; nvim SYD466_notes.md; cd - > /dev/null"
 alias eacnotes="cd ~/seneca/semester_5/EAC594/; nvim EAC594_notes.md; cd - > /dev/null"
 
 # move commands
-alias mvsyd=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/SYD466/"
-alias mveac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/EAC594/"
+alias mvcpp=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/CPP555/"
+alias mvdsa=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/DSA555/"
 alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/JAC444/"
 alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/WEB422/"
 
 # cd commands
-alias cdsyd=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/SYD466"
-alias cdeac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/EAC594"
+alias cdcpp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/CPP555/"
+alias cddsa=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/DSA555/"
 alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/JAC444"
 alias cdweb=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/WEB422"
 alias neofetch="neofetch --ascii_distro archlinux"

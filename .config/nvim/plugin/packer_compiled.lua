@@ -270,6 +270,11 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tmux.nvim"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/tmux.nvim",
+    url = "https://github.com/aserowy/tmux.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
