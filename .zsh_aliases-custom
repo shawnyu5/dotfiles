@@ -24,11 +24,12 @@ alias eacnotes="cd ~/seneca/semester_5/EAC594/; nvim EAC594_notes.md; cd - > /de
 alias mvcpp=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/CPP555/"
 alias mvdsa=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/DSA555/"
 alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/JAC444/"
-alias mvweb=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/WEB422/"
+alias mvwtp=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/WTP100"
 
 # cd commands
 alias cdcpp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/CPP555/"
 alias cddsa=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/DSA555/"
 alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/JAC444"
-alias cdweb=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/WEB422"
+alias cdwtp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/WTP100"
+
 alias neofetch="neofetch --ascii_distro archlinux"

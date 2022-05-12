@@ -12,7 +12,7 @@ else
 fi
 
 read -p "due date: " DATE
-select CLASS in CPP DSA WTP
+select CLASS in CPP DSA PRJ WTP
 do
    task add "${NAME}" project:$CLASS\
       due:$DATE \
