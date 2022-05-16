@@ -31,8 +31,8 @@ lualine.setup({
 		lualine_z = {},
 	},
 	-- tabline = {
-	-- lualine_a = { "vim.fn.tabpagenr()" },
-	-- lualine_b = { "vim.fn.bufname()" },
+	-- lualine_a = {},
+	-- lualine_b = {},
 	-- lualine_c = {},
 	-- lualine_x = {},
 	-- lualine_y = {},
@@ -40,4 +40,3 @@ lualine.setup({
 	-- },
 	extensions = {},
 })
-vim.g.tabline = "hello"

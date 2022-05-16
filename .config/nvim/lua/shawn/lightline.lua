@@ -13,12 +13,24 @@ local getGitBranch = function()
 	end
 end
 
+local getNumErrors = function()
+	local errors = vim.diagnostic.get(0)
+	-- get length of errors
+	return #errors
+end
+
 vim.g.lightline = {
 	colorscheme = "tokyonight",
 	active = {
-		left = { { "mode", "paste" }, { "readonly", "filename", "modified", "gitBranch" } },
+		left = { { "mode", "paste" }, { "readonly", "filename", "modified", "gitBranch", "lspErrors" } },
 	},
 	component = {
 		gitBranch = getGitBranch(),
 	},
 }
+
+-- vim.g.lightline.component_function_visible_condition = {
+-- gitBranch = function()
+-- return getGitBranch() ~= "-"
+-- end,
+-- }

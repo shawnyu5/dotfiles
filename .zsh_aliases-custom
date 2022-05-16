@@ -17,19 +17,19 @@ alias dl="cd ~/Downloads"
 # opening notes
 alias cppnotes="cd ~/seneca/semester_6/CPP555/; nvim CPP555_notes.md; cd - > /dev/null"
 alias dsanotes="cd ~/seneca/semester_6/DSA555/; nvim DSA555_notes.md; cd - > /dev/null"
-alias sydnotes="cd ~/seneca/semester_5/SYD466; nvim SYD466_notes.md; cd - > /dev/null"
-alias eacnotes="cd ~/seneca/semester_5/EAC594/; nvim EAC594_notes.md; cd - > /dev/null"
+alias prjnotes="cd ~/seneca/semester_6/PRJ566; nvim PRJ566_notes.md; cd - > /dev/null"
+alias wtpnotes="cd ~/seneca/semester_6/WTP100; nvim WTP100_notes.md; cd - > /dev/null"
 
 # move commands
 alias mvcpp=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/CPP555/"
 alias mvdsa=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/DSA555/"
-alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_5/JAC444/"
+alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/PRJ566/"
 alias mvwtp=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_6/WTP100"
 
 # cd commands
 alias cdcpp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/CPP555/"
 alias cddsa=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/DSA555/"
-alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_5/JAC444"
+alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/PRJ566/"
 alias cdwtp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/WTP100"
 
 alias neofetch="neofetch --ascii_distro archlinux"

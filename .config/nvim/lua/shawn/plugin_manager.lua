@@ -62,7 +62,7 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
-	-- use({ "itchyny/lightline.vim" }) -- status bar
+	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({ "folke/which-key.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
@@ -155,7 +155,12 @@ return packer.startup(function(use)
 
 	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
-	use({ "iamcco/markdown-preview.nvim" })
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
 	use({ "shawnyu5/executor.nvim" })
 	-- use("~/.config/nvim/lua/shawn/terminal/")
