@@ -21,6 +21,8 @@ alias su="sudo apt upgrade && sudo apt update"
 
 alias p="python3"
 
+alias files="nautilus"
+
 #g for git
 alias g="git"
 alias ga="git add -A"
