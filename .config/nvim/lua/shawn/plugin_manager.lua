@@ -168,7 +168,8 @@ return packer.startup(function(use)
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
 	use("tweekmonster/wstrip.vim") -- rmove trailing white spaces
 	use("ferrine/md-img-paste.vim") -- auto paste images into markdown
-	use({ "psliwka/vim-smoothie", commit = "f2aaab110b49da21ab7abf4858173e3194109f6a" }) -- smooth scrolling
+	-- use({ "psliwka/vim-smoothie", commit = "f2aaab110b49da21ab7abf4858173e3194109f6a" }) -- smooth scrolling
+	use("karb94/neoscroll.nvim")
 	use("chmp/mdnav") -- opening links in vim
 
 	use({ "preservim/nerdcommenter" }) -- block commenting
