@@ -18,6 +18,7 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.bash_history ~/.bash_history
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
+	ln -svf ~/personal/.config/nvim ~/.config/nvim
 
 backup: FORCE ## backup all pacman packages
 	rm -rf ./backup
@@ -36,3 +37,7 @@ docker: ## install and set up docker
 	sudo systemctl enable docker
 	sudo systemctl start docker
 	sudo chmod 666 /var/run/docker.sock
+
+neovim: ## set up neovim with my config (WARNING: this will overwrite your current config)
+	ln -svf ~/personal/.config/nvim ~/.config/nvim
+
