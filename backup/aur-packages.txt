@@ -1,4 +1,5 @@
 act
+air
 google-chrome
 heroku-cli-bin
 javafx-scenebuilder

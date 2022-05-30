@@ -49,7 +49,7 @@ executor.setup({
 			"java %",
 		},
 		html = {
-			"!chrome %",
+			"!google-chrome-stable %",
 			extern = false,
 		},
 		go = {

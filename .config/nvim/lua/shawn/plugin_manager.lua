@@ -62,10 +62,10 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
-	-- use({ "itchyny/lightline.vim" }) -- status bar
+	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({ "folke/which-key.nvim" })
-	use({ "nvim-lualine/lualine.nvim" })
+	-- use({ "nvim-lualine/lualine.nvim" })
 	-- use({
 	-- "kdheepak/tabline.nvim",
 	-- config = function()

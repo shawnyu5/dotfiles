@@ -21,6 +21,7 @@ set tabstop=3 softtabstop=3
 set shiftwidth=3
 set expandtab
 
+set showtabline=2
 
 "always show tabs
 set showtabline=2

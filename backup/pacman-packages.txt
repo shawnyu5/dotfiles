@@ -59,6 +59,7 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
+catch2
 cdparanoia
 checkbashisms
 chromaprint
@@ -67,6 +68,7 @@ clang
 clutter
 clutter-gst
 clutter-gtk
+cmake
 cogl
 colord
 colord-gtk
@@ -330,6 +332,7 @@ js78
 js91
 json-c
 json-glib
+jsoncpp
 kaccounts-integration
 kactivities
 karchive
@@ -480,6 +483,7 @@ liblqr
 liblrdf
 libltc
 libluv
+libmalcontent
 libmanette
 libmaxminddb
 libmbim
@@ -640,6 +644,7 @@ logrotate
 lsb-release
 lsof
 lsscsi
+lua
 lua-language-server
 lua53
 luajit
@@ -782,7 +787,6 @@ pinentry
 pipewire
 pipewire-alsa
 pipewire-jack
-pipewire-media-session
 pipewire-pulse
 pixman
 pkcs11-helper
@@ -877,6 +881,7 @@ reflector
 reflector-simple
 reiserfsprogs
 rest
+rhash
 ripgrep
 rofi
 rp-pppoe
@@ -1006,6 +1011,7 @@ whois
 wildmidi
 wireless-regdb
 wireless_tools
+wireplumber
 woff2
 wpa_supplicant
 wpebackend-fdo
@@ -1061,7 +1067,6 @@ xterm
 xvidcore
 xxhash
 xz
-yad
 yad-eos
 yajl
 yay

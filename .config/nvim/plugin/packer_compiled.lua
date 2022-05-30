@@ -150,15 +150,15 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/i3config.vim",
     url = "https://github.com/mboughaba/i3config.vim"
   },
+  ["lightline.vim"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/lightline.vim",
+    url = "https://github.com/itchyny/lightline.vim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,

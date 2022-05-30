@@ -22,7 +22,7 @@ fpath=(~/personal/custom_completion $fpath)
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+compinit -i
 _comp_options+=(globdots)		# Include hidden files.
 
 # Enable colors and change prompt:
