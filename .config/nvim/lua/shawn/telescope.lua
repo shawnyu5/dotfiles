@@ -1,3 +1,8 @@
+local ok, telescope = pcall(require, "telescope")
+if not ok then
+	print("telescope not installed...")
+	return
+end
 local M = {}
 
 local keymap = vim.api.nvim_set_keymap
@@ -38,7 +43,7 @@ require("telescope").setup({
 })
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
-require("telescope").load_extension("ui-select")
-require("telescope").load_extension("file_browser")
+telescope.load_extension("ui-select")
+telescope.load_extension("file_browser")
 
 return M
