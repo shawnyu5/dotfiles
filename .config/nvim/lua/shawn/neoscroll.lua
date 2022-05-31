@@ -1,4 +1,10 @@
-require("neoscroll").setup({
+local ok, neoscroll = pcall(require, "neoscroll")
+if not ok then
+	print("neoscroll not installed...")
+	return
+end
+
+neoscroll.setup({
 	-- All these keys will be mapped to their corresponding default scrolling animation
 	mappings = { "<C-u>", "<C-d>" },
 	hide_cursor = false, -- Hide cursor while scrolling
