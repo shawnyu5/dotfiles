@@ -33,3 +33,10 @@ alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/PRJ566/
 alias cdwtp=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_6/WTP100"
 
 alias neofetch="neofetch --ascii_distro archlinux"
+# alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
+
+function awsec {
+   IPADDRESS="$1"
+   echo $IPADDRESS
+   ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
+}
