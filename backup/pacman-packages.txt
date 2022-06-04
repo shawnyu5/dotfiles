@@ -35,6 +35,7 @@ automake
 avahi
 awesome-terminal-fonts
 b43-fwcutter
+babl
 barrier
 barrier-headless
 base
@@ -44,9 +45,11 @@ bc
 bind
 binutils
 bison
+blas
 bluez
 bluez-libs
 bolt
+boost-libs
 bridge-utils
 brotli
 btrfs-progs
@@ -89,6 +92,7 @@ dbus
 dbus-glib
 dbus-python
 dconf
+debuginfod
 desktop-file-utils
 device-mapper
 dex
@@ -105,6 +109,7 @@ dmraid
 dnsmasq
 dnssec-anchors
 docker
+docker-compose
 dos2unix
 dosfstools
 double-conversion
@@ -162,6 +167,7 @@ flatpak
 flex
 fluidsynth
 fontconfig
+freeglut
 freetype2
 fribidi
 fsarchiver
@@ -177,10 +183,13 @@ gcc
 gcc-libs
 gcr
 gd
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gdm
 gedit
+gegl
 geoclue
 geocode-glib
 geoip
@@ -188,6 +197,7 @@ geoip-database
 gettext
 ghostscript
 giflib
+gimp
 girara
 git
 git-delta
@@ -199,6 +209,7 @@ glib2
 glibc
 glibmm
 glslang
+glu
 gmp
 gnome-autoar
 gnome-bluetooth
@@ -234,6 +245,7 @@ gpm
 gptfdisk
 graphene
 graphite
+graphviz
 grep
 grilo
 groff
@@ -268,6 +280,7 @@ gtkmm3
 gtksourceview3
 gtksourceview4
 gtksourceview5
+gts
 guile
 gupnp
 gupnp-dlna
@@ -316,6 +329,7 @@ iso-codes
 iw
 iwd
 jansson
+jasper
 java-environment-common
 java-runtime-common
 jbig2dec
@@ -370,15 +384,18 @@ kpty
 krb5
 kservice
 ktextwidgets
+kubectl
 kwallet
 kwidgetsaddons
 kwindowsystem
 kxmlgui
 l-smash
 lame
+lapack
 lcms2
 ldb
 ldns
+lensfun
 less
 libaccounts-glib
 libaccounts-qt
@@ -490,13 +507,16 @@ libmbim
 libmd
 libmfx
 libmicrodns
+libmicrohttpd
 libmm-glib
+libmng
 libmnl
 libmodplug
 libmpc
 libmpcdec
 libmpeg2
 libmtp
+libmypaint
 libnautilus-extension
 libndp
 libnet
@@ -539,6 +559,7 @@ libpwquality
 libqmi
 libqrtr-glib
 libraqm
+libraw
 libraw1394
 librsvg
 librsync
@@ -556,6 +577,7 @@ libsoup
 libsoup3
 libsoxr
 libspectre
+libspiro
 libsrtp
 libssh
 libssh2
@@ -585,6 +607,7 @@ libvpx
 libvterm01
 libwacom
 libwebp
+libwmf
 libwnck3
 libwpe
 libx11
@@ -666,6 +689,7 @@ media-player-info
 meld
 mesa
 mesa-utils
+metis
 minizip
 mjpegtools
 mkinitcpio
@@ -683,6 +707,7 @@ mtdev
 mtools
 mujs
 mutter
+mypaint-brushes1
 nano
 nano-syntax-highlighting
 nautilus
@@ -695,6 +720,7 @@ neofetch
 neon
 neovim
 netctl
+netpbm
 nettle
 network-manager-applet
 networkmanager
@@ -797,6 +823,7 @@ polkit
 polkit-gnome
 polkit-qt5
 poppler
+poppler-data
 poppler-glib
 poppler-qt5
 popt
@@ -926,6 +953,7 @@ sonnet
 sord
 sound-theme-freedesktop
 soundtouch
+source-highlight
 spandsp
 speex
 speexdsp
@@ -937,6 +965,7 @@ sshfs
 startup-notification
 stoken
 sudo
+suitesparse
 sushi
 svt-av1
 svt-hevc
@@ -991,6 +1020,7 @@ usbutils
 util-linux
 util-linux-libs
 v4l-utils
+valgrind
 vid.stab
 vmaf
 volume_key
