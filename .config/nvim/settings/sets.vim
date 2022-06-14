@@ -15,7 +15,7 @@ set timeoutlen=1000
 
 set mouse=a
 set noswapfile
-set signcolumn=no
+set signcolumn=yes
 
 set tabstop=3 softtabstop=3
 set shiftwidth=3

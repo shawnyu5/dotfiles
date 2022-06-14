@@ -60,6 +60,10 @@ return packer.startup(function(use)
 	}) -- color scheme
 	-- use("preservim/tagbar")
 
+	-- dap
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
 	use("aserowy/tmux.nvim")
 
 	use({ "itchyny/lightline.vim" }) -- status bar
