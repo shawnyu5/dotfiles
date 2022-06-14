@@ -1,5 +1,6 @@
 act
 air
+docker-desktop
 google-chrome
 heroku-cli-bin
 javafx-scenebuilder
