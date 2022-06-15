@@ -63,6 +63,8 @@ return packer.startup(function(use)
 	-- dap
 	use("mfussenegger/nvim-dap")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("leoluz/nvim-dap-go")
+	use("theHamsta/nvim-dap-virtual-text")
 
 	use("aserowy/tmux.nvim")
 
