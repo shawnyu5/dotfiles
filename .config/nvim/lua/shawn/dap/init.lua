@@ -30,12 +30,13 @@ command("StepOut", function(args)
 	require("dap").step_out()
 end, {})
 
--- local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
+local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
 
 -- disable lsp in dap autocmd
--- vim.cmd([[ autocmd! FileType dap-repl :LspStop]])
--- vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+-- vim.api.nvim_create_autocmd({ "BufAdd" }, {
 -- group = dap_autocmd,
 -- pattern = "dap-repl",
--- command = "echo HIII",
+-- callback = function()
+-- print("HIII")
+-- end,
 -- })
