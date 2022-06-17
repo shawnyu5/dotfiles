@@ -35,6 +35,7 @@ dapui.setup({
 	},
 	tray = {
 		elements = { "repl", "console" },
+		-- elements = { "repl", "watches" },
 		size = 10,
 		position = "bottom", -- Can be "left", "right", "top", "bottom"
 	},
@@ -52,7 +53,7 @@ dapui.setup({
 	},
 })
 
-local dap, dapui = require("dap"), require("dapui")
+local dap = require("dap")
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
 end

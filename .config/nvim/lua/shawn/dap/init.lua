@@ -22,15 +22,19 @@ map("n", "<leader>di", function()
 end)
 
 local command = vim.api.nvim_create_user_command
-command("RunToCursor", function(args)
+command("DapRunToCursor", function(args)
 	require("dap").run_to_cursor()
 end, {})
 
-command("StepOut", function(args)
-	require("dap").step_out()
+command("DapUIToggle", function(args)
+	require("dapui").toggle()
 end, {})
 
-local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
+command("DapClearBreakPoints", function(args)
+	require("dap").clear_breakpoints()
+end, {})
+
+-- local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
 
 -- disable lsp in dap autocmd
 -- vim.api.nvim_create_autocmd({ "BufAdd" }, {

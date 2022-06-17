@@ -143,7 +143,7 @@ return packer.startup(function(use)
 	-- native LSP
 	use({ "neovim/nvim-lspconfig" })
 
-	use({ "hrsh7th/nvim-cmp" })
+	use("hrsh7th/nvim-cmp")
 	use("zbirenbaum/copilot.lua")
 	use("zbirenbaum/copilot-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -151,7 +151,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("andersevenrud/cmp-tmux") -- tmux completion source
 	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
+	-- use("hrsh7th/cmp-cmdline")
 	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" }) -- git completion source
 
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
