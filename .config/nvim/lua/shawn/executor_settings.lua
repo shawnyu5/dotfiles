@@ -61,6 +61,9 @@ executor.setup({
 			"cargo run",
 			"rustc % -o a.out && ./a.out",
 		},
+      dockerfile = {
+         "docker build ."
+      }
 	},
 	default_mappings = true,
 	always_exit = true,

@@ -75,6 +75,9 @@ lsp.cssls.setup({
 -- end,
 -- })
 
+-- docker
+-- lsp.dockerls.setup({})
+
 -- rust
 lsp.rust_analyzer.setup({
 	on_attach = function(client, bufnr)

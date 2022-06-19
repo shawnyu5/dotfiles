@@ -34,6 +34,10 @@ command("DapClearBreakPoints", function(args)
 	require("dap").clear_breakpoints()
 end, {})
 
+command("DapConditionalBreakpoint", function(args)
+	require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end, {})
+
 -- local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
 
 -- disable lsp in dap autocmd
