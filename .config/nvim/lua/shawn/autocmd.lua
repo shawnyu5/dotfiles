@@ -49,7 +49,6 @@ function OrgImports()
 	end
 end
 
--- autocmd BufWritePre *.go lua OrgImports(1000)
 local go_imports = vim.api.nvim_create_augroup("go_imports", { clear = true })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	group = go_imports,
