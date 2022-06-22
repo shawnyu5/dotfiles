@@ -3,7 +3,7 @@ local M = {}
 -- determine weather to enable format on save
 function M.format_on_save()
 	-- client.resolved_capabilities.document_formatting = true
-	vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_sync() vim.cmd('write')")
+	vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.format() vim.cmd('write')")
 end
 
 function M.on_attach(client, bufnr)

@@ -37,7 +37,7 @@ end
 -- java
 lsp.jdtls.setup({
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
 	end,
@@ -47,7 +47,7 @@ lsp.jdtls.setup({
 lsp.angularls.setup({
 	on_attach = function(client, bufnr)
 		-- disable rename
-		client.resolved_capabilities.rename = false
+		client.server_capabilities.rename = false
 	end,
 })
 
@@ -70,7 +70,7 @@ lsp.cssls.setup({
 -- markdown
 -- lsp.remark_ls.setup({
 -- on_attach = function(client, bufnr)
--- client.resolved_capabilities.document_formatting = false,
+-- client.server_capabilities.document_formatting = false,
 -- on_attach(client, bufnr)
 -- end,
 -- })
@@ -101,7 +101,7 @@ lsp.clangd.setup({
 	capabilities = capabilities,
 	filetypes = { "c", "cpp", "objc", "objcpp" },
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
@@ -122,7 +122,7 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
@@ -131,8 +131,8 @@ lsp.html.setup({
 -- tsserver
 lsp.tsserver.setup({
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
+		client.server_capabilities.document_formatting = false
+		client.server_capabilities.document_range_formatting = false
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
@@ -145,8 +145,9 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup({
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
-		-- client.resolved_capabilities.document_range_formatting = true
+		client.server_capabilities.document_formatting = false
+
+		-- client.server_capabilities.document_range_formatting = true
 		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
