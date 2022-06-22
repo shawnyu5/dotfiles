@@ -79,6 +79,15 @@ cmp.setup.cmdline("/", {
 	},
 })
 
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+		{ name = "cmdline", keyword_length = 3 },
+	}),
+})
+
 local format = require("cmp_git.format")
 local sort = require("cmp_git.sort")
 
@@ -180,11 +189,3 @@ require("cmp_git").setup({
 		},
 	},
 })
-
--- cmp.setup.cmdline(":", {
--- sources = cmp.config.sources({
--- { name = "path" },
--- }, {
--- { name = "cmdline", keyword_length = 5 },
--- }),
--- })
