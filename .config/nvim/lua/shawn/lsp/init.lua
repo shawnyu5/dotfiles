@@ -76,7 +76,20 @@ lsp.cssls.setup({
 -- })
 
 -- docker
--- lsp.dockerls.setup({})
+lsp.dockerls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
+
+-- yay -S yaml-language-server
+lsp.yamlls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
 
 -- rust
 lsp.rust_analyzer.setup({

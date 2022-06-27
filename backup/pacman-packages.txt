@@ -93,6 +93,7 @@ dbus-glib
 dbus-python
 dconf
 debuginfod
+delve
 desktop-file-utils
 device-mapper
 dex
@@ -109,12 +110,16 @@ dmraid
 dnsmasq
 dnssec-anchors
 docker
+docker-compose
 dos2unix
 dosfstools
+dotnet-host
+dotnet-runtime
 double-conversion
 downgrade
 dtc
 duf
+duktape
 dunst
 e2fsprogs
 edk2-ovmf
@@ -362,8 +367,10 @@ kconfigwidgets
 kcoreaddons
 kcrash
 kdbusaddons
+kde-cli-tools
 kdeclarative
 kded
+kdesu
 keyutils
 kglobalaccel
 kguiaddons
@@ -725,7 +732,6 @@ ndctl
 ndisc6
 neofetch
 neon
-neovim
 netctl
 netpbm
 nettle
@@ -753,6 +759,7 @@ ntfs-3g
 ntp
 numactl
 numlockx
+oath-toolkit
 okular
 oniguruma
 openal
@@ -767,6 +774,7 @@ openpmix
 openresolv
 openssh
 openssl
+openssl-1.0
 openvpn
 opus
 orc
@@ -820,6 +828,7 @@ phonon-qt5
 phonon-qt5-gstreamer
 picom
 pinentry
+pinta
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -891,7 +900,9 @@ python-six
 python-termcolor
 python-toml
 python-tomli
+python-trove-classifiers
 python-urllib3
+python-validate-pyproject
 python-webencodings
 python-zipp
 qemu-audio-spice
@@ -1123,6 +1134,7 @@ xfconf
 xfsprogs
 xkeyboard-config
 xl2tpd
+xmlsec
 xorg-fonts-encodings
 xorg-server
 xorg-server-common
@@ -1148,6 +1160,7 @@ xxhash
 xz
 yad-eos
 yajl
+yaml-language-server
 yay
 zbar
 zenity

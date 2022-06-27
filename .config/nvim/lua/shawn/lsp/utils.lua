@@ -4,6 +4,15 @@ local M = {}
 function M.format_on_save()
 	-- client.resolved_capabilities.document_formatting = true
 	vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.format() vim.cmd('write')")
+	-- local group = vim.api.nvim_create_augroup("lsp_format_on_save", {})
+	-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	-- group = group,
+	-- callback = function()
+	-- vim.lsp.buf.format()
+	-- vim.cmd("write")
+	-- end,
+	-- buffer = 0,
+	-- })
 end
 
 function M.on_attach(client, bufnr)
@@ -34,7 +43,7 @@ function M.on_attach(client, bufnr)
 	-- rename command
 	vim.cmd("command! Rename :lua vim.lsp.buf.rename()")
 	-- format command
-	vim.cmd("command! Format :lua vim.lsp.buf.formatting_sync() vim.cmd('write')")
+	vim.cmd("command! Format :lua vim.lsp.buf.format() vim.cmd('write')")
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gd", '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
@@ -42,8 +51,6 @@ function M.on_attach(client, bufnr)
 	buf_set_keymap("n", "<F2>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	-- show line diagnostics instead of virtual text
-	-- vim.api.nvim_command("autocmd CursorHold <buffer> lua vim.lsp.diagnostic.show_line_diagnostics()({ focusable = false })")
 end
 
 return M

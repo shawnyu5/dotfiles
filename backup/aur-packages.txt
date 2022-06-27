@@ -1,10 +1,11 @@
 act
 air
-docker-desktop
 google-chrome
 heroku-cli-bin
+icu69-bin
 javafx-scenebuilder
 jdtls
+neovim-nightly-bin
 pcurses
 prettierd
 stylua-bin
