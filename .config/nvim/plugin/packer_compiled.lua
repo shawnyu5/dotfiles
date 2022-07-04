@@ -350,6 +350,11 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-you-autocorrect",
     url = "https://github.com/sedm0784/vim-you-autocorrect"
   },
+  ["winbar.nvim"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/winbar.nvim",
+    url = "https://github.com/fgheng/winbar.nvim"
+  },
   ["wstrip.vim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/wstrip.vim",

@@ -58,7 +58,7 @@ return packer.startup(function(use)
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
-	-- use("preservim/tagbar")
+	use("fgheng/winbar.nvim")
 
 	-- dap
 	use("mfussenegger/nvim-dap")
