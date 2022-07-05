@@ -5,6 +5,7 @@ if not status then
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = true,
@@ -24,5 +25,6 @@ null_ls.setup({
 		formatting.prettierd.with({
 			disabled_filetypes = { "json" },
 		}),
+		diagnostics.hadolint,
 	},
 })

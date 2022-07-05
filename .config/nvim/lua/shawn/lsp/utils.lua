@@ -1,3 +1,9 @@
+local ok, navic = pcall(require, "nvim-navic")
+if not ok then
+	vim.notify("nvim-navic not installed...", vim.log.ERROR)
+	return
+end
+
 local M = {}
 --
 -- determine weather to enable format on save
@@ -26,6 +32,10 @@ function M.on_attach(client, bufnr)
 
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
+	if client.name ~= "dockerls" then
+		navic.attach(client, bufnr)
+	end
 
 	-- Enable completion triggered by <c-x><c-o>
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")

@@ -1,6 +1,6 @@
 local ok, lsp = pcall(require, "lspconfig")
 if not ok then
-	print("lsp config not installed...")
+	vim.notify("lsp config not installed...", vim.log.ERROR)
 	return
 end
 

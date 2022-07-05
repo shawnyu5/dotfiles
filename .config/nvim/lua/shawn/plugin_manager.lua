@@ -59,6 +59,10 @@ return packer.startup(function(use)
 		branch = "main",
 	}) -- color scheme
 	use("fgheng/winbar.nvim")
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
 
 	-- dap
 	use("mfussenegger/nvim-dap")

@@ -21,9 +21,7 @@ set tabstop=3 softtabstop=3
 set shiftwidth=3
 set expandtab
 
-set showtabline=2
-
-"always show tabs
+" only show tabs when there are more than 2
 set showtabline=2
 "turning on syntax highlighting
 syntax enable
