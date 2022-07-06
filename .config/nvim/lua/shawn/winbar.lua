@@ -1,6 +1,7 @@
 local M = {}
 local navic = require("nvim-navic")
 
+vim.g.navic_silence = true
 navic.setup({
    icons = {
       File = "File ",
@@ -55,7 +56,7 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufAdd", "BufNew" }, {
 --- updates a new winbar from information given by nvim-navic
 M.update = function()
    if not navic.is_available() then
-      vim.notify_once("Navic is not available", vim.log.levels.WARN)
+      vim.notify_once("Navic is not available", vim.log.levels.WARN, { timeout = 2000 })
    end
 
    -- vim.notify("Updating winbar", { timeout = 2000 })

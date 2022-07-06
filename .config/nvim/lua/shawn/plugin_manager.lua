@@ -54,6 +54,7 @@ return packer.startup(function(use)
 	})
 
 	use("norcalli/nvim-colorizer.lua")
+	use("akinsho/git-conflict.nvim")
 	use({
 		"folke/tokyonight.nvim",
 		branch = "main",

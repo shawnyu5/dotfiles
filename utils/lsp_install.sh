@@ -1,4 +1,4 @@
-# make sure npm is istalled
+# make sure npm is intalled
 npm -v >> /dev/null
 if [[ $? -ne 0 ]]; then
    echo Please install npm
@@ -38,3 +38,5 @@ install "lua language server" "sudo pacman -S lua-language-server"
 install "pyrigh" "sudo pacman -S pyright"
 install "angularls" "npm install -g @angular/language-server"
 install "gopls" "sudo pacman -S gopls"
+install "dockerls" "yay -S docker-ls"
+install "marksman" "yay -S marksman-bin"
