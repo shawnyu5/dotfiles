@@ -45,9 +45,9 @@ map <S-l> <Nop>
 map <S-h> <Nop>
 
 "leader df for diffthis
-nnoremap <leader>df :diffthis<CR>
+" nnoremap <leader>df :diffthis<CR>
 "leader do for diffoff
-nnoremap <silent> <leader>do :diffoff<CR>
+" nnoremap <silent> <leader>do :diffoff<CR>
 
 "scrolling without moving the cursor
 map <S-k> <C-Y>
