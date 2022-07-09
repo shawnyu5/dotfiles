@@ -30,9 +30,10 @@ vim.api.nvim_set_keymap("n", "<leader>tf", ":TestFile<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ts", ":TestSuite<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ls", ":TestLast<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>tv", ":TestVisit<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>tp", " <Plug>PlenaryTestFile<CR>", opts)
 
 vim.api.nvim_exec("let test#strategy = 'neovim'", true)
 vim.cmd([[let test#python#pytest#options = "-s"]]) -- pass `-s` to pytest by default
--- vim.cmd([[let test#go#gotest#options = "-v"]]) -- pass `-s` to pytest by default
+-- vim.cmd([[let test#go#gotest#options = "-v"]]) -- pass `-v` to gotest by default
 
 return M

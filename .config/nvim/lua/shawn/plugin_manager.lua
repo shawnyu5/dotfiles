@@ -53,6 +53,11 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
+	use({
+		"windwp/nvim-ts-autotag",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+
 	use("norcalli/nvim-colorizer.lua")
 	use("akinsho/git-conflict.nvim")
 	use({
@@ -64,6 +69,8 @@ return packer.startup(function(use)
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
 	})
+
+	use("matbme/JABS.nvim")
 
 	-- dap
 	use("mfussenegger/nvim-dap")
