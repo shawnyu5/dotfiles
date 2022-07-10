@@ -38,7 +38,7 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-	-- use("dstein64/vim-startuptime")
+	use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
@@ -73,45 +73,17 @@ return packer.startup(function(use)
 	use("matbme/JABS.nvim")
 
 	-- dap
-	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-	use("leoluz/nvim-dap-go")
-	use("theHamsta/nvim-dap-virtual-text")
+	use({
+		"mfussenegger/nvim-dap",
+		{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+		"leoluz/nvim-dap-go",
+		"theHamsta/nvim-dap-virtual-text",
+	})
 
 	use("aserowy/tmux.nvim")
 
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
-	-- use({ "folke/which-key.nvim" })
-	-- use({ "nvim-lualine/lualine.nvim" })
-	-- use({
-	-- "kdheepak/tabline.nvim",
-	-- config = function()
-	-- require("tabline").setup({
-	-- -- Defaults configuration options
-	-- enable = true,
-	-- options = {
-	-- -- If lualine is installed tabline will use separators configured in lualine by default.
-	-- -- These options can be used to override those settings.
-	-- section_separators = { "", "" },
-	-- component_separators = { "", "" },
-	-- max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
-	-- show_tabs_always = true, -- this shows tabs only when there are more than one tab or if the first tab is named
-	-- show_devicons = false, -- this shows devicons in buffer section
-	-- show_bufnr = false, -- this appends [bufnr] to buffer section,
-	-- show_filename_only = true, -- shows base filename only instead of relative path in filename
-	-- modified_icon = "+ ", -- change the default modified icon
-	-- modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-	-- show_tabs_only = true, -- this shows only tabs instead of tabs + buffers
-	-- },
-	-- })
-	-- vim.cmd([[
-	-- set guioptions-=e " Use showtabline in gui vim
-	-- set sessionoptions+=tabpages,globals " store tabpages and globals in session
-	-- ]])
-	-- end,
-	-- })
-
 	use({ "ahmedkhalf/project.nvim" })
 
 	use({
@@ -122,8 +94,11 @@ return packer.startup(function(use)
 	use({
 		"danymat/neogen",
 		requires = "nvim-treesitter/nvim-treesitter",
-		-- Uncomment next line if you want to follow only stable versions
-		-- tag = "*"
+		opt = true,
+		cmd = "Neogen",
+		config = function()
+			require("shawn.neogen")
+		end,
 	})
 
 	use("andweeb/presence.nvim")
@@ -155,19 +130,21 @@ return packer.startup(function(use)
 	-- native LSP
 	use({ "neovim/nvim-lspconfig" })
 
-	use("hrsh7th/nvim-cmp")
+	use({
+		"hrsh7th/nvim-cmp",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-buffer",
+		"andersevenrud/cmp-tmux",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-cmdline",
+		{ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" },
+		"zbirenbaum/copilot-cmp",
+		"quangnguyen30192/cmp-nvim-ultisnips",
+	})
 	use("zbirenbaum/copilot.lua")
-	use("zbirenbaum/copilot-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-nvim-lua")
-	use("andersevenrud/cmp-tmux") -- tmux completion source
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" }) -- git completion source
 
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
-	use("quangnguyen30192/cmp-nvim-ultisnips") -- Ulti snips source
 
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 
