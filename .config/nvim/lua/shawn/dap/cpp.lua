@@ -1,6 +1,8 @@
 local dap = require("dap")
 local dap_settings = {
 	cpp_executable = "",
+	-- keeps track of weather the "launch previous session" option has been inserted
+	cpp_launch_prev_session = false,
 }
 
 dap.adapters.lldb = {
@@ -19,25 +21,29 @@ dap.adapters.cppdbg = {
 -- https://code.visualstudio.com/docs/cpp/launch-json-reference
 dap.configurations.cpp = {
 	{
-		name = "Launch previous session",
-		type = "cppdbg",
-		request = "launch",
-		program = function()
-			if dap_settings.cpp_executable == "" then
-				return ""
-			else
-				return dap_settings.cpp_executable
-			end
-		end,
-		cwd = "${workspaceFolder}",
-		stopOnEntry = true,
-	},
-	{
 		name = "Launch file",
 		type = "cppdbg",
 		request = "launch",
 		program = function()
 			dap_settings.cpp_executable = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			if dap_settings.cpp_executable ~= "" and dap_settings.cpp_launch_prev_session == false then
+				local launch_previous_session_config = {
+					name = "Launch previous session",
+					type = "cppdbg",
+					request = "launch",
+					program = function()
+						if dap_settings.cpp_executable == "" then
+							return ""
+						else
+							return dap_settings.cpp_executable
+						end
+					end,
+					cwd = "${workspaceFolder}",
+					stopOnEntry = true,
+				}
+				table.insert(dap.configurations.cpp, 1, launch_previous_session_config)
+				dap_settings.cpp_launch_prev_session = true
+			end
 			return dap_settings.cpp_executable
 		end,
 		cwd = "${workspaceFolder}",
@@ -56,6 +62,7 @@ dap.configurations.cpp = {
 		end,
 	},
 }
+
 -- dap.configurations.cpp = {
 -- {
 -- name = "Launch",
