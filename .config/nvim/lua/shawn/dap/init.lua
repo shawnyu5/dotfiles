@@ -1,6 +1,7 @@
 require("shawn.dap.dapui")
 require("shawn.dap.cpp")
 require("dap-go").setup()
+-- require("shawn.dap.javascript")
 require("shawn.dap.virtual_text")
 
 -- - `DapBreakpoint` for breakpoints (default: `B`)
@@ -25,20 +26,24 @@ local dapui = require("dapui")
 
 map("n", "<leader>dc", function()
 	dap.continue()
-end)
+end, { desc = "Dap Continue" })
+
 map("n", "<leader>db", function()
 	dap.toggle_breakpoint()
-end)
+end, { desc = "Dap Toggle breakpoint" })
+
 map("n", "<leader>do", function()
 	dap.step_over()
-end)
+end, { desc = "Dap Step over" })
+
 map("n", "<leader>di", function()
 	dap.step_into()
-end)
+end, { desc = "Dap Step into" })
+
 -- show the scopes window in float element
 map("n", "<leader>df", function()
 	dapui.float_element("scopes", { enter = true, width = 75 })
-end)
+end, { desc = "Dap toggle scopes in floating window" })
 
 local command = vim.api.nvim_create_user_command
 
@@ -57,13 +62,3 @@ end, {})
 command("DapLogPoint", function(args)
 	dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
 end, {})
--- local dap_autocmd = vim.api.nvim_create_augroup("dap", {})
-
--- disable lsp in dap autocmd
--- vim.api.nvim_create_autocmd({ "BufAdd" }, {
--- group = dap_autocmd,
--- pattern = "dap-repl",
--- callback = function()
--- print("HIII")
--- end,
--- })

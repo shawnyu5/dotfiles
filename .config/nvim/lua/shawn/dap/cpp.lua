@@ -1,4 +1,8 @@
 local dap = require("dap")
+local dap_settings = {
+	cpp_executable = "",
+}
+
 dap.adapters.lldb = {
 	type = "executable",
 	command = "/usr/bin/lldb-vscode", -- adjust as needed, must be absolute path
@@ -15,11 +19,26 @@ dap.adapters.cppdbg = {
 -- https://code.visualstudio.com/docs/cpp/launch-json-reference
 dap.configurations.cpp = {
 	{
+		name = "Launch previous session",
+		type = "cppdbg",
+		request = "launch",
+		program = function()
+			if dap_settings.cpp_executable == "" then
+				return ""
+			else
+				return dap_settings.cpp_executable
+			end
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = true,
+	},
+	{
 		name = "Launch file",
 		type = "cppdbg",
 		request = "launch",
 		program = function()
-			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			dap_settings.cpp_executable = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			return dap_settings.cpp_executable
 		end,
 		cwd = "${workspaceFolder}",
 		stopOnEntry = true,

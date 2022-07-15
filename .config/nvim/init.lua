@@ -1,20 +1,10 @@
 -- placed here for easy access
 vim.opt.relativenumber = true
 
--- if vim.g.init then
--- print("file sourced")
--- -- don't re source file
--- return
--- end
-
--- vim.cmd([[
--- " remaping leader to space
--- let mapleader =" "
--- ]])
 vim.g.mapleader = " "
 
 --- source a vim file
----@param file string file to source
+---@param file string file path to source
 local function source(file)
 	vim.cmd("source " .. file)
 end
@@ -40,7 +30,6 @@ require("shawn.harpoon")
 require("shawn.refactor")
 source("~/.config/nvim/settings/maps.vim")
 require("shawn.copilot")
-require("copilot").setup({ ft_disable = { "dap-repl", "dapui_watches", "dapui_scopes" } })
 require("shawn.project")
 require("shawn.dap")
 require("shawn.git-conflict")
@@ -53,7 +42,6 @@ require("shawn.session_manager")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 require("shawn.jabs")
 require("shawn.tokyo-knight")
--- require("shawn.neogen")
 require("shawn.vim-test")
 -- require("shawn.which-key")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")

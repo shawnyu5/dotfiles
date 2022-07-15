@@ -160,6 +160,11 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/i3config.vim",
     url = "https://github.com/mboughaba/i3config.vim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/lightline.vim",
@@ -210,8 +215,11 @@ _G.packer_plugins = {
     url = "https://github.com/preservim/nerdcommenter"
   },
   nerdtree = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nerdtree",
+    commands = { "NERDTree", "NERDTreeFind", "NERDTreeToggle" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/opt/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
   ["null-ls.nvim"] = {
@@ -268,11 +276,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
-    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -359,11 +362,6 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-snippets",
     url = "https://github.com/honza/vim-snippets"
   },
-  ["vim-startuptime"] = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-startuptime",
-    url = "https://github.com/dstein64/vim-startuptime"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -378,11 +376,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-you-autocorrect",
     url = "https://github.com/sedm0784/vim-you-autocorrect"
-  },
-  ["winbar.nvim"] = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/winbar.nvim",
-    url = "https://github.com/fgheng/winbar.nvim"
   },
   ["wstrip.vim"] = {
     loaded = true,
@@ -400,6 +393,9 @@ time([[Config for i3config.vim]], false)
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Neogen lua require("packer.load")({'neogen'}, { cmd = "Neogen", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NERDTreeFind lua require("packer.load")({'nerdtree'}, { cmd = "NERDTreeFind", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NERDTreeToggle lua require("packer.load")({'nerdtree'}, { cmd = "NERDTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NERDTree lua require("packer.load")({'nerdtree'}, { cmd = "NERDTree", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 if should_profile then save_profiles() end

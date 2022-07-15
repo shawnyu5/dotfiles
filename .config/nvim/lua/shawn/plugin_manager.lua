@@ -38,13 +38,15 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-	use("dstein64/vim-startuptime")
+	-- use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")
 
 	use({ "github/copilot.vim" })
+
+	-- use({ "jinh0/eyeliner.nvim" })
 
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
@@ -53,10 +55,10 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
-	use({
-		"windwp/nvim-ts-autotag",
-		requires = "nvim-treesitter/nvim-treesitter",
-	})
+	-- use({
+	-- "windwp/nvim-ts-autotag",
+	-- requires = "nvim-treesitter/nvim-treesitter",
+	-- })
 
 	use("norcalli/nvim-colorizer.lua")
 	use("akinsho/git-conflict.nvim")
@@ -64,7 +66,6 @@ return packer.startup(function(use)
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
-	use("fgheng/winbar.nvim")
 	use({
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
@@ -78,6 +79,11 @@ return packer.startup(function(use)
 		{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",
+		-- { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } },
+		-- {
+		-- "microsoft/vscode-js-debug",
+		-- run = "npm install --legacy-peer-deps && npm run compile",
+		-- },
 	})
 
 	use("aserowy/tmux.nvim")
@@ -85,11 +91,6 @@ return packer.startup(function(use)
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	use({ "ahmedkhalf/project.nvim" })
-
-	use({
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim" },
-	})
 
 	use({
 		"danymat/neogen",
@@ -105,17 +106,19 @@ return packer.startup(function(use)
 
 	use({
 		"preservim/nerdtree",
-		-- cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle"}
+		opt = true,
+		cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle" },
 	})
 
 	use({ "windwp/nvim-autopairs" })
 
 	-- use("L3MON4D3/LuaSnip")
-	use({ "SirVer/ultisnips" }) --  Snippets engine.
-	use("honza/vim-snippets")
+
+	use({ "SirVer/ultisnips", "honza/vim-snippets" })
 
 	use("j-hui/fidget.nvim")
-	-- use("Yggdroot/indentLine") -- TODO: figure out why this makes title card vanish
+
+	use("lukas-reineke/indent-blankline.nvim")
 
 	use({ "ThePrimeagen/harpoon" })
 
@@ -147,7 +150,6 @@ return packer.startup(function(use)
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 
 	use({ "jose-elias-alvarez/null-ls.nvim" })
-
 	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
 	use({
@@ -170,6 +172,10 @@ return packer.startup(function(use)
 	use({ "preservim/nerdcommenter" }) -- block commenting
 	use({ "Shatur/neovim-session-manager" })
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim" },
+	})
 
 	use("szw/vim-maximizer") -- vim maxmizer
 	use("adelarsq/vim-matchit") -- matchit
