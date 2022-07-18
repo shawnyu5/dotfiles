@@ -149,7 +149,14 @@ return packer.startup(function(use)
 
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 
-	use({ "jose-elias-alvarez/null-ls.nvim" })
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		opt = true,
+		event = "LspAttach",
+		config = function()
+			require("shawn.null-ls")
+		end,
+	})
 	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
 	use({

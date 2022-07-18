@@ -1,5 +1,9 @@
 local M = {}
-local navic = require("nvim-navic")
+local ok, navic = pcall(require, "nvim-navic")
+if not ok then
+	vim.notify("navic not installed...", vim.log.ERROR)
+	return
+end
 
 vim.g.navic_silence = true
 navic.setup({
