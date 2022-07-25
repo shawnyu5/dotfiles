@@ -104,11 +104,7 @@ return packer.startup(function(use)
 
 	use("andweeb/presence.nvim")
 
-	use({
-		"preservim/nerdtree",
-		opt = true,
-		cmd = { "NERDTree", "NERDTreeFind", "NERDTreeToggle" },
-	})
+	use({ "preservim/nerdtree" })
 
 	use({ "windwp/nvim-autopairs" })
 

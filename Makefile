@@ -26,7 +26,7 @@ backup: FORCE ## backup all pacman packages
 	pacman -Qnq > ./backup/pacman-packages.txt
 	pacman -Qqem > ./backup/aur-packages.txt
 
-install_pacman: ## install all pacman packages
+pacman: ## install all pacman and aur packages
 	pacman -S --needed $(cat ./backup/pacman-packages.txt)
 	yay -S --needed $(cat ./backup/aur-packages.txt)
 

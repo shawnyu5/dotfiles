@@ -124,8 +124,8 @@ if [ -f ~/.zsh_aliases-custom ]; then
     . ~/.zsh_aliases-custom
 fi
 
-export PATH="$PATH:/home/shawn/scripts/template-file-creation"
-export PATH="$PATH:/home/shawn/personal/task_worrior/:$HOME/.local/bin/"
+# export PATH="$PATH:/home/shawn/scripts/template-file-creation"
+export PATH="$PATH:/home/shawn/personal/task_worrior/:$HOME/.local/bin/:$HOME/gopath/bin/"
 export PATH="$PATH:/opt/mssql-tools/bin"
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 

@@ -34,7 +34,7 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
 	}),
 	sources = {
-		{ name = "copilot" },
+		{ name = "copilot", keyword_length = 1 },
 		{ name = "git" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },

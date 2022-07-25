@@ -24,16 +24,16 @@ navic.setup({
 		Constant = "Constant ",
 		String = "String ",
 		Number = "Number ",
-		Boolean = "◩ ",
-		Array = " ",
-		Object = " ",
-		Key = " ",
-		Null = "ﳠ ",
-		EnumMember = " ",
-		Struct = "Struct",
-		Event = " ",
-		Operator = " ",
-		TypeParameter = " ",
+		Boolean = "Boolean ",
+		Array = "Array ",
+		Object = "Object ",
+		Key = "Key ",
+		Null = "Null ",
+		EnumMember = "EnumMember ",
+		Struct = "Struct ",
+		Event = "Event ",
+		Operator = "Operator ",
+		TypeParameter = "TypeParameter ",
 	},
 	highlight = true,
 	separator = " > ",
@@ -46,16 +46,17 @@ local ignore_ft = {
 	"harpoon",
 }
 local auGroup = vim.api.nvim_create_augroup("winbar", {})
-vim.api.nvim_create_autocmd({ "CursorMoved", "BufAdd", "BufNew", "WinScrolled" }, {
-	callback = function()
-		-- if the current file type is in the ignore ft table, then dont do anything
-		if ignore_ft[vim.api.nvim_buf_get_option(0, "filetype")] ~= nil then
-			return
-		end
-		-- print("Updating winbar")
-		M.update()
-	end,
-})
+-- vim.api.nvim_create_autocmd({ "CursorMoved", "BufAdd", "BufNew", "WinScrolled" }, {
+-- group = auGroup,
+-- callback = function()
+-- -- if the current file type is in the ignore ft table, then dont do anything
+-- if ignore_ft[vim.api.nvim_buf_get_option(0, "filetype")] ~= nil then
+-- return
+-- end
+-- -- print("Updating winbar")
+-- M.update()
+-- end,
+-- })
 
 --- updates a new winbar from information given by nvim-navic
 M.update = function()
