@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["hydra.nvim"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/hydra.nvim",
+    url = "https://github.com/anuvyklack/hydra.nvim"
+  },
   ["i3config.vim"] = {
     config = { "\27LJ\2\n¸\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0" },
     loaded = true,
@@ -341,6 +346,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-closetag",
     url = "https://github.com/alvan/vim-closetag"
+  },
+  ["vim-jsontogo"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-jsontogo",
+    url = "https://github.com/meain/vim-jsontogo"
   },
   ["vim-markdown-toc"] = {
     loaded = true,

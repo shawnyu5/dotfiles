@@ -54,6 +54,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("anuvyklack/hydra.nvim")
 
 	-- use({
 	-- "windwp/nvim-ts-autotag",
@@ -70,6 +71,7 @@ return packer.startup(function(use)
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
 	})
+	use({ "meain/vim-jsontogo" })
 
 	use("matbme/JABS.nvim")
 
@@ -88,6 +90,9 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
+	-- use({
+	-- "nvim-lualine/lualine.nvim",
+	-- })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	use({ "ahmedkhalf/project.nvim" })

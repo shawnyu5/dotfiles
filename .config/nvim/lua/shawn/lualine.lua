@@ -1,7 +1,13 @@
 local ok, lualine = pcall(require, "lualine")
 if not ok then
-	print("lualine not installed...")
+	vim.notify("lualine not installed...", vim.log.levels.WARN)
 	return
+end
+
+M = {}
+
+local fileName = function()
+	return vim.fn.expand("%:t")
 end
 
 lualine.setup({
@@ -30,13 +36,13 @@ lualine.setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	-- tabline = {
-	-- lualine_a = {},
-	-- lualine_b = {},
-	-- lualine_c = {},
-	-- lualine_x = {},
-	-- lualine_y = {},
-	-- lualine_z = {},
-	-- },
+	tabline = {
+		lualine_a = { "tabs" },
+		lualine_b = { fileName },
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {},
+	},
 	extensions = {},
 })
