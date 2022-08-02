@@ -82,22 +82,46 @@ dap.listeners.after.event_initialized["dapui_config"] = function()
 end
 
 -- TODO: idk why this is not being called
-dap.listeners.before.event_terminated["dapui_config"] = function()
+dap.listeners.before["event_terminated"]["dapui_config"] = function()
+	vim.notify("dapui terminated AHHHH")
 	dapui.close()
 	vim.cmd(":DapVirtualTextForceRefresh")
 	vim.api.nvim_clear_autocmds({
 		group = dap_ui_autoGroup,
 	})
-	-- hydra.dap_hydra:exit()
+	hydra.dap_hydra:exit()
+end
+
+dap.listeners.before["event_disconnect"]["dapui_config"] = function()
+	vim.notify("dapui disconnected AHHHH")
+	dapui.close()
+	vim.cmd(":DapVirtualTextForceRefresh")
+	vim.api.nvim_clear_autocmds({
+		group = dap_ui_autoGroup,
+	})
+	hydra.dap_hydra:exit()
 end
 
 dap.listeners.before.event_exited["dapui_config"] = function()
+	vim.notify("dapui exited")
 	dapui.close()
 	vim.cmd(":DapVirtualTextForceRefresh")
-	-- hydra.dap_hydra:exit()
+	hydra.dap_hydra:exit()
 	vim.api.nvim_clear_autocmds({
 		group = dap_ui_autoGroup,
 	})
 end
 
 vim.cmd("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
+
+vim.api.nvim_create_user_command("DapT", function(args)
+	dap.terminate({}, {}, function()
+		vim.notify("dapui terminated")
+		dapui.close()
+		vim.cmd(":DapVirtualTextForceRefresh")
+		vim.api.nvim_delete_autocmds({
+			group = dap_ui_autoGroup,
+		})
+		require("shawn.hydra").dap_hydra:exit()
+	end)
+end, {})

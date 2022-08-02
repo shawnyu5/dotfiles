@@ -95,6 +95,17 @@ return packer.startup(function(use)
 	-- })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
+	-- use({
+	-- "nvim-neotest/neotest",
+	-- requires = {
+	-- "nvim-lua/plenary.nvim",
+	-- "nvim-treesitter/nvim-treesitter",
+	-- "antoinemadec/FixCursorHold.nvim",
+	-- },
+	-- })
+
+	-- use({ "nvim-neotest/neotest-plenary", "nvim-neotest/neotest-go", "haydenmeade/neotest-jest" })
+
 	use({ "ahmedkhalf/project.nvim" })
 
 	use({

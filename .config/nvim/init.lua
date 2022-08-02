@@ -43,6 +43,7 @@ require("shawn.session_manager")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 require("shawn.jabs")
 require("shawn.tokyo-knight")
+-- require("shawn.neotest")
 require("shawn.vim-test")
 -- require("shawn.which-key")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
@@ -57,7 +58,7 @@ require("shawn.terminal")
 
 vim.cmd([[
 " set text width
-autocmd bufreadpre *.md,*.txt setlocal textwidth=80
+" autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 
 " disable indentLine plugin in json and markdown files
 " let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']

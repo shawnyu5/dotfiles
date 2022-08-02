@@ -18,7 +18,6 @@ local M = {}
 -- },
 -- })
 
--- TODO: finish this
 -- dap hydra for dap operations
 local dap = require("dap")
 local dapui = require("dapui")
@@ -28,13 +27,13 @@ M.dap_hydra = hydra({
 	mode = "n",
 	-- body = "<leader>d",
 	heads = {
-		{
-			"c",
-			function()
-				dap.continue()
-			end,
-			{ desc = "continue" },
-		},
+		-- {
+		-- "c",
+		-- function()
+		-- dap.continue()
+		-- end,
+		-- { desc = "continue" },
+		-- },
 		{
 			"o",
 			function()
@@ -50,7 +49,7 @@ M.dap_hydra = hydra({
 			{ desc = "Step out" },
 		},
 		{
-			"i",
+			"n",
 			function()
 				dap.step_into()
 			end,

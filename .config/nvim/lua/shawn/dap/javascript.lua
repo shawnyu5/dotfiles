@@ -1,9 +1,33 @@
-require("nvim-dap-vscode-js").setup({
-	node_path = "/usr/local/bin/node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
-	-- debugger_path = "(runtimedir)/site/pack/packer/opt/vscode-js-debug", Path to vscode-js-debug installation.
-	adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
-})
+local dap = require("dap")
 
-for _, language in ipairs({ "typescript", "javascript" }) do
-	require("dap").configurations[language] = {}
-end
+dap.adapters.chrome = {
+	type = "executable",
+	command = "node",
+	args = { os.getenv("HOME") .. "/dev/microsoft/vscode-chrome-debug/out/src/chromeDebug.js" },
+}
+
+dap.configurations.javascript = {
+	{
+		type = "chrome",
+		request = "attach",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		port = 9222,
+		webRoot = "${workspaceFolder}",
+	},
+}
+
+dap.configurations.typescript = {
+	{
+		type = "chrome",
+		request = "attach",
+		program = "${file}",
+		cwd = vim.fn.getcwd(),
+		sourceMaps = true,
+		protocol = "inspector",
+		port = 9222,
+		webRoot = "${workspaceFolder}",
+	},
+}

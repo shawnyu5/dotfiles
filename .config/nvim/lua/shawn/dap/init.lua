@@ -1,5 +1,6 @@
 require("shawn.dap.dapui")
 require("shawn.dap.cpp")
+-- require("shawn.dap.javascript")
 require("dap-go").setup()
 -- require("shawn.dap.javascript")
 require("shawn.dap.virtual_text")
@@ -61,4 +62,19 @@ command("DapConditionalBreakpoint", function(args)
 end, {})
 command("DapLogPoint", function(args)
 	dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end, {})
+
+-- delete the DapTerminate event and replace with my own
+-- vim.api.nvim_del_user_command("DapTerminate")
+
+command("DapT", function(args)
+	dap.terminate({}, {}, function()
+		vim.notify("dapui terminated")
+		dapui.close()
+		vim.cmd(":DapVirtualTextForceRefresh")
+		vim.api.nvim_clear_autocmds({
+			group = dap_ui_autoGroup,
+		})
+		require("shawn.hydra").dap_hydra:exit()
+	end)
 end, {})
