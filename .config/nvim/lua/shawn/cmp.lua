@@ -33,6 +33,7 @@ cmp.setup({
 		end, { "i", "s" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- manual trigger completion when needed
 	}),
+	preselect = cmp.PreselectMode.None,
 	sources = {
 		{ name = "copilot", keyword_length = 1 },
 		{ name = "git" },

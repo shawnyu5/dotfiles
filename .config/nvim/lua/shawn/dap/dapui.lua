@@ -54,63 +54,6 @@ dapui.setup({
 })
 
 local dap = require("dap")
-local hydra = require("shawn.hydra")
-local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
-
-dap.listeners.after.event_initialized["dapui_config"] = function()
-	dapui.open()
-	hydra.dap_hydra:activate()
-	-- stop hydra when in insert mode
-	vim.api.nvim_create_autocmd({ "InsertEnter" }, {
-		group = dap_ui_autoGroup,
-		pattern = "*",
-		callback = function()
-			vim.notify("pausing hydra")
-			hydra.dap_hydra:exit()
-		end,
-	})
-
-	-- re enable hydra after leaving insert mode
-	vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-		group = dap_ui_autoGroup,
-		pattern = "*",
-		callback = function()
-			vim.notify("restarting hydra")
-			hydra.dap_hydra:activate()
-		end,
-	})
-end
-
--- TODO: idk why this is not being called
-dap.listeners.before["event_terminated"]["dapui_config"] = function()
-	vim.notify("dapui terminated AHHHH")
-	dapui.close()
-	vim.cmd(":DapVirtualTextForceRefresh")
-	vim.api.nvim_clear_autocmds({
-		group = dap_ui_autoGroup,
-	})
-	hydra.dap_hydra:exit()
-end
-
-dap.listeners.before["event_disconnect"]["dapui_config"] = function()
-	vim.notify("dapui disconnected AHHHH")
-	dapui.close()
-	vim.cmd(":DapVirtualTextForceRefresh")
-	vim.api.nvim_clear_autocmds({
-		group = dap_ui_autoGroup,
-	})
-	hydra.dap_hydra:exit()
-end
-
-dap.listeners.before.event_exited["dapui_config"] = function()
-	vim.notify("dapui exited")
-	dapui.close()
-	vim.cmd(":DapVirtualTextForceRefresh")
-	hydra.dap_hydra:exit()
-	vim.api.nvim_clear_autocmds({
-		group = dap_ui_autoGroup,
-	})
-end
 
 vim.cmd("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
 

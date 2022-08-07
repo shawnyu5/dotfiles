@@ -67,14 +67,85 @@ end, {})
 -- delete the DapTerminate event and replace with my own
 -- vim.api.nvim_del_user_command("DapTerminate")
 
+local hydra = require("shawn.hydra")
+local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
+
+--- Create autocmds for dap hydra on insert enter and insert leave to stop and restart hydra respectively.
+---@return table the autocmd ids
+local start_dap_hydra = function()
+	local autocmd_ids = {}
+	hydra.dap_hydra:activate()
+	-- stop hydra when in insert mode
+	local id = vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+		group = dap_ui_autoGroup,
+		pattern = "*",
+		callback = function()
+			hydra.dap_hydra:exit()
+		end,
+	})
+	table.insert(autocmd_ids, id)
+
+	-- re enable hydra after leaving insert mode
+	id = vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+		group = dap_ui_autoGroup,
+		pattern = "*",
+		callback = function()
+			vim.notify("Restarting Dap Hydra")
+			hydra.dap_hydra:activate()
+		end,
+	})
+	table.insert(autocmd_ids, id)
+
+	return autocmd_ids
+end
+
+--- clean up dap hydra by clearing and deleting all auto commands associated with it. And exiting the current hydra
+---@param autocmd_ids table the autocmd ids to clean up
+local cleanup_dap_hydra = function(autocmd_ids)
+	vim.notify("Cleaning up hydra...")
+	-- vim.api.nvim_clear_autocmds({
+	-- group = dap_ui_autoGroup,
+	-- })
+	hydra.dap_hydra:exit()
+
+	-- delete all autocmds in the group
+	for _, id in ipairs(autocmd_ids) do
+		vim.api.nvim_del_autocmd(id)
+	end
+end
+
+local dap_autocmd_ids = {}
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+	dap_autocmd_ids = start_dap_hydra()
+end
+
+-- TODO: idk why this is not being called
+dap.listeners.before["event_terminated"]["dapui_config"] = function()
+	dapui.close()
+	vim.cmd(":DapVirtualTextForceRefresh")
+	cleanup_dap_hydra(dap_autocmd_ids)
+end
+
+dap.listeners.before["event_disconnect"]["dapui_config"] = function()
+	vim.notify("dapui disconnected AHHHH")
+	dapui.close()
+	vim.cmd(":DapVirtualTextForceRefresh")
+	cleanup_dap_hydra(dap_autocmd_ids)
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+	vim.notify("dapui exited")
+	dapui.close()
+	vim.cmd(":DapVirtualTextForceRefresh")
+	cleanup_dap_hydra(dap_autocmd_ids)
+end
+
 command("DapT", function(args)
 	dap.terminate({}, {}, function()
 		vim.notify("dapui terminated")
 		dapui.close()
 		vim.cmd(":DapVirtualTextForceRefresh")
-		vim.api.nvim_clear_autocmds({
-			group = dap_ui_autoGroup,
-		})
-		require("shawn.hydra").dap_hydra:exit()
+		cleanup_dap_hydra(dap_autocmd_ids)
 	end)
 end, {})
