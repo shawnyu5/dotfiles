@@ -19,11 +19,10 @@ set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws7 "7:"
+set $ws8 "8:🌐"
 set $ws9 "9"
 set $ws10 "10"
-
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -163,6 +162,20 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+# PRIMARY=LVDS1
+
+workspace $ws1 output LVDS1
+workspace $ws2 output LVDS1
+workspace $ws3 output LVDS1
+workspace $ws4 output LVDS1
+workspace $ws5 output LVDS1
+workspace $ws6 output LVDS1
+workspace $ws7 output HDMI1
+workspace $ws8 output HDMI1
+workspace $ws9 output HDMI1
+workspace $ws10 output HDMI1
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
