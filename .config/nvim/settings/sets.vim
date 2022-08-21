@@ -4,7 +4,7 @@ set rtp+=~/.config/nvim/lua/shawn/print/
 set laststatus=3
 
 " not hide markdown special symbols
-set conceallevel=0
+set conceallevel=2
 set termguicolors
 
 autocmd BufEnter *.hbs set ft=html

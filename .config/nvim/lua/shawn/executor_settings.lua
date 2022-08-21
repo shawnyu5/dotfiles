@@ -41,6 +41,7 @@ executor.setup({
          extern = false,
       },
       markdown = {
+         -- "mdp %",
          "MarkdownPreview",
          extern = false,
       },

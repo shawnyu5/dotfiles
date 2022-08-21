@@ -17,4 +17,5 @@ let g:mkdp_browser = 'google-chrome-stable'
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = '~/personal/gitHub_markdown.css'
+" let g:mkdp_highlight_css = expand("~/retro.css")
+

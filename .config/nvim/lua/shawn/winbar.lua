@@ -1,56 +1,59 @@
 local M = {}
 local ok, navic = pcall(require, "nvim-navic")
 if not ok then
-   vim.notify("navic not installed...", vim.log.ERROR)
-   return
+	vim.notify("navic not installed...", vim.log.ERROR)
+	return
 end
 
 vim.g.navic_silence = true
 navic.setup({
-   icons = {
-      File = "File ",
-      Module = "Module ",
-      Namespace = "Namespace ",
-      Package = "Package ",
-      Class = "Class ",
-      Method = "Method ",
-      Property = "Property ",
-      Field = "Field ",
-      Constructor = "Constructor ",
-      Enum = "Enum ",
-      Interface = "Interface ",
-      Function = "Function ",
-      Variable = "Variable ",
-      Constant = "Constant ",
-      String = "String ",
-      Number = "Number ",
-      Boolean = "Boolean ",
-      Array = "Array ",
-      Object = "Object ",
-      Key = "Key ",
-      Null = "Null ",
-      EnumMember = "EnumMember ",
-      Struct = "Struct ",
-      Event = "Event ",
-      Operator = "Operator ",
-      TypeParameter = "TypeParameter ",
-   },
-   highlight = true,
-   separator = " > ",
-   depth_limit = 5,
-   depth_limit_indicator = "..",
+	icons = {
+		File = "File ",
+		Module = "Module ",
+		Namespace = "Namespace ",
+		Package = "Package ",
+		Class = "Class ",
+		Method = "Method ",
+		Property = "Property ",
+		Field = "Field ",
+		Constructor = "Constructor ",
+		Enum = "Enum ",
+		Interface = "Interface ",
+		Function = "Function ",
+		Variable = "Variable ",
+		Constant = "Constant ",
+		String = "String ",
+		Number = "Number ",
+		Boolean = "Boolean ",
+		Array = "Array ",
+		Object = "Object ",
+		Key = "Key ",
+		Null = "Null ",
+		EnumMember = "EnumMember ",
+		Struct = "Struct ",
+		Event = "Event ",
+		Operator = "Operator ",
+		TypeParameter = "TypeParameter ",
+	},
+	highlight = true,
+	separator = " > ",
+	depth_limit = 5,
+	depth_limit_indicator = "..",
 })
 
 local ignore_ft = {
-   "TelescopePrompt",
-   "harpoon",
+	"TelescopePrompt",
+	"harpoon",
+	"JABSwindow",
 }
+
 -- local auGroup = vim.api.nvim_create_augroup("winbar", {})
 -- vim.api.nvim_create_autocmd({ "CursorMoved", "BufAdd", "BufNew", "WinScrolled" }, {
 -- group = auGroup,
 -- callback = function()
--- -- if the current file type is in the ignore ft table, then dont do anything
--- if ignore_ft[vim.api.nvim_buf_get_option(0, "filetype")] ~= nil then
+-- local ft = vim.api.nvim_buf_get_option(0, "filetype")
+-- -- if the current file type is in the ignore ft table, dont do anything
+-- if vim.tbl_contains(ignore_ft, ft) then
 -- return
 -- end
 -- -- print("Updating winbar")
@@ -60,13 +63,13 @@ local ignore_ft = {
 
 --- updates a new winbar from information given by nvim-navic
 M.update = function()
-   if not navic.is_available() then
-      vim.notify_once("Navic is not available", vim.log.levels.WARN, { timeout = 2000 })
-   end
+	if not navic.is_available() then
+		vim.notify_once("Navic is not available", vim.log.levels.WARN, { timeout = 2000 })
+	end
 
-   -- vim.notify("Updating winbar", { timeout = 2000 })
-   local location = navic.get_location() or " "
-   vim.api.nvim_set_option_value("winbar", location, { scope = "local" })
+	-- vim.notify("Updating winbar", { timeout = 2000 })
+	local location = navic.get_location() or " "
+	vim.api.nvim_set_option_value("winbar", location, { scope = "local" })
 end
 
 -- NavicIconsFile

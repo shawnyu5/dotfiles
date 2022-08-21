@@ -2,25 +2,25 @@ local opts = { noremap = true }
 local M = {}
 
 local testCommands = {
-	TestNearest = ":TestNearest",
-	TestFile = ":TestFile",
-	TestSuite = ":TestSuite",
-	TestLast = ":TestLast",
-	TestVisit = ":TestVisit",
+   TestNearest = ":TestNearest",
+   TestFile = ":TestFile",
+   TestSuite = ":TestSuite",
+   TestLast = ":TestLast",
+   TestVisit = ":TestVisit",
 }
 
 M.selectTest = function()
-	vim.ui.select(
-		{ "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
-		{ prompt = "Select testing options:" },
-		function(selected)
-			for key, command in pairs(testCommands) do
-				if selected == key then
-					vim.api.nvim_command(command)
-				end
-			end
-		end
-	)
+   vim.ui.select(
+      { "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
+      { prompt = "Select testing options:" },
+      function(selected)
+         for key, command in pairs(testCommands) do
+            if selected == key then
+               vim.api.nvim_command(command)
+            end
+         end
+      end
+   )
 end
 
 vim.api.nvim_set_keymap("n", "<leader>tt", ":lua require('shawn.vim-test').selectTest()<CR>", opts)
@@ -34,6 +34,6 @@ vim.api.nvim_set_keymap("n", "<leader>tp", " <Plug>PlenaryTestFile<CR>", opts)
 
 vim.api.nvim_exec("let test#strategy = 'neovim'", true)
 vim.cmd([[let test#python#pytest#options = "-s"]]) -- pass `-s` to pytest by default
--- vim.cmd([[let test#go#gotest#options = "-v"]]) -- pass `-v` to gotest by default
+vim.cmd([[let test#go#gotest#options = "-v"]]) -- pass `-v` to gotest by default
 
 return M

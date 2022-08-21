@@ -1,5 +1,6 @@
---- get the current git branch name and return the string. Else returns "-"
-local getGitBranch = function()
+--- get the current git branch name
+---@return string the git branch. If not git branch, return "-"
+vim.g.GetGitBranch = function()
 	local f = io.popen("git rev-parse --abbrev-ref HEAD 2> /dev/null")
 	if f then
 		-- read output of current line
@@ -12,16 +13,15 @@ local getGitBranch = function()
 		end
 	end
 end
-
 local harpoon_mark = require("harpoon.mark")
 
 --- return the current harpoon mark if it exists
 ---@return string the harpoon mark for the statusline
-local get_harpoon_status = function()
+vim.g.Get_harpoon_status = function()
 	local mark_id = harpoon_mark.get_index_of(vim.fn.bufname())
 
 	if not mark_id or mark_id == "" then
-		return "No mark"
+		return ""
 	end
 	return "🦈 " .. mark_id
 end
@@ -29,19 +29,24 @@ end
 vim.g.lightline = {
 	colorscheme = "tokyonight",
 	active = {
-		left = { { "mode", "paste" }, { "readonly", "filename", "modified" }, { "gitBranch" } },
+		left = {
+			{ "mode", "paste" },
+			{ "readonly", "filename", "modified" },
+			{ "gitBranch" },
+			{ "harpoonMark" },
+		},
 		right = {
 			{ "lineinfo" },
 			{ "percent" },
 			{ "fileformat", "fileencoding", "filetype" },
-			{ "harpoonMark" },
 		},
 	},
-	component = {
-		gitBranch = getGitBranch(),
-		-- harpoonMark = get_harpoon_status(),
+	component_function = {
+		gitBranch = "GetGitBranch",
+		harpoonMark = "Get_harpoon_status",
 	},
 }
+
 -- local harpoonGroup = vim.api.nvim_create_augroup("HarpoonGroup", { clear = true })
 -- vim.api.nvim_create_autocmd({ "BufEnter", "BufLeave" }, {
 -- group = harpoonGroup,

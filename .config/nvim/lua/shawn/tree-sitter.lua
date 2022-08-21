@@ -38,12 +38,12 @@ require("nvim-treesitter.configs").setup({
 		-- termcolors = {} -- table of colour name strings
 	},
 	incremental_selection = {
-		enable = false,
+		enable = true,
 		keymaps = {
-			init_selection = "gnn",
-			node_incremental = "grn",
-			scope_incremental = "grc",
-			node_decremental = "grm",
+			-- init_selection = "gnn",
+			node_incremental = "<CR>",
+			-- scope_incremental = "grc",
+			node_decremental = "<BS>",
 		},
 	},
 })
