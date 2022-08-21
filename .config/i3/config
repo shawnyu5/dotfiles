@@ -19,8 +19,8 @@ set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7:"
-set $ws8 "8:🌐"
+set $ws7 "7:🌐"
+set $ws8 "8:"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -36,8 +36,8 @@ smart_gaps on
 # hide borders when there is only one window
 hide_edge_borders smart
 
-
-# exec --no-startup-id "compton -b"
+# exec --no-startup-id "picom --config ~/.config/picom/picom.conf"
+exec_always "picom --config ~/.config/picom/picom.conf"
 exec_always --no-startup-id ~/personal/remaps.sh
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -241,7 +241,7 @@ default_border pixel 7
 new_window pixel 7
 new_float pixel 7
 
-for_window [class="^.*"] border pixel 5
+# for_window [class="^.*"] border pixel 5
 
 # colorclass    border   background text  indicator
 client.focused  #4dff4d  #4dff4d  #484e50  #268bd2
