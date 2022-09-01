@@ -288,6 +288,11 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -401,14 +406,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-transparent
-time([[Config for nvim-transparent]], true)
-try_loadstring("\27LJ\2\nð\5\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1%\0\0\23BufferLineTabClose\29BufferlineBufferSelected\19BufferLineFill\25BufferLineBackground\24BufferLineSeparator BufferLineIndicatorSelected\16FidgetTitle\15FidgetTask\19NavicIconsFile\21NavicIconsModule\24NavicIconsNamespace\22NavicIconsPackage\20NavicIconsClass\21NavicIconsMethod\23NavicIconsProperty\20NavicIconsField\26NavicIconsConstructor\19NavicIconsEnum\24NavicIconsInterface\23NavicIconsFunction\23NavicIconsVariable\23NavicIconsConstant\21NavicIconsString\21NavicIconsNumber\22NavicIconsBoolean\20NavicIconsArray\21NavicIconsObject\18NavicIconsKey\19NavicIconsNull\25NavicIconsEnumMember\21NavicIconsStruct\20NavicIconsEvent\23NavicIconsOperator\28NavicIconsTypeParameter\14NavicText\19NavicSeparator\1\0\1\venable\2\nsetup\16transparent\frequire\0", "config", "nvim-transparent")
-time([[Config for nvim-transparent]], false)
 -- Config for: i3config.vim
 time([[Config for i3config.vim]], true)
 try_loadstring("\27LJ\2\n¸\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0", "config", "i3config.vim")
 time([[Config for i3config.vim]], false)
+-- Config for: nvim-transparent
+time([[Config for nvim-transparent]], true)
+try_loadstring("\27LJ\2\nð\5\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1%\0\0\23BufferLineTabClose\29BufferlineBufferSelected\19BufferLineFill\25BufferLineBackground\24BufferLineSeparator BufferLineIndicatorSelected\16FidgetTitle\15FidgetTask\19NavicIconsFile\21NavicIconsModule\24NavicIconsNamespace\22NavicIconsPackage\20NavicIconsClass\21NavicIconsMethod\23NavicIconsProperty\20NavicIconsField\26NavicIconsConstructor\19NavicIconsEnum\24NavicIconsInterface\23NavicIconsFunction\23NavicIconsVariable\23NavicIconsConstant\21NavicIconsString\21NavicIconsNumber\22NavicIconsBoolean\20NavicIconsArray\21NavicIconsObject\18NavicIconsKey\19NavicIconsNull\25NavicIconsEnumMember\21NavicIconsStruct\20NavicIconsEvent\23NavicIconsOperator\28NavicIconsTypeParameter\14NavicText\19NavicSeparator\1\0\1\venable\2\nsetup\16transparent\frequire\0", "config", "nvim-transparent")
+time([[Config for nvim-transparent]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

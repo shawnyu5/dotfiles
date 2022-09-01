@@ -11,6 +11,7 @@ end
 
 require("shawn.plugin_manager")
 require("shawn.tree-sitter")
+require("shawn.ts-context")
 require("shawn.lsp")
 -- require("shawn.null-ls")
 require("shawn.autocmd")
