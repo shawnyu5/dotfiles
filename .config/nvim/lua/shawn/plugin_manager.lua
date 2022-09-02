@@ -105,6 +105,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 		"nvim-treesitter/nvim-treesitter-context",
+		"p00f/nvim-ts-rainbow",
 	})
 	use("anuvyklack/hydra.nvim")
 
