@@ -25,6 +25,8 @@ set expandtab
 
 " only show tabs when there are more than 2
 set showtabline=2
+set spelloptions+="noplainbuffer"
+set spell
 "turning on syntax highlighting
 syntax enable
 "autocmd BufEnter makefile,Makefile set noexpandtab softtabstop=0

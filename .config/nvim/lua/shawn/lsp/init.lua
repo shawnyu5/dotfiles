@@ -83,6 +83,14 @@ lsp.cssls.setup({
 -- end,
 -- })
 
+-- latex
+lsp.texlab.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
+
 -- docker
 lsp.dockerls.setup({
 	on_attach = function(client, bufnr)

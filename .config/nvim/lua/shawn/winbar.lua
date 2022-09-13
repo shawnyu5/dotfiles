@@ -48,23 +48,23 @@ local ignore_ft = {
 	"markdown",
 }
 
-local auGroup = vim.api.nvim_create_augroup("winbar", {})
-vim.api.nvim_create_autocmd({
-	"CursorMoved", --[[  "BufAdd", ]]
-	"BufNew",
-	"WinScrolled",
-}, {
-	group = auGroup,
-	callback = function()
-		local ft = vim.api.nvim_buf_get_option(0, "filetype")
-		-- if the current file type is in the ignore ft table, dont do anything
-		if vim.tbl_contains(ignore_ft, ft) then
-			return
-		end
-		-- print("Updating winbar")
-		M.update()
-	end,
-})
+-- local auGroup = vim.api.nvim_create_augroup("winbar", {})
+-- vim.api.nvim_create_autocmd({
+-- "CursorMoved", [>  "BufAdd", <]
+-- "BufNew",
+-- "WinScrolled",
+-- }, {
+-- group = auGroup,
+-- callback = function()
+-- local ft = vim.api.nvim_buf_get_option(0, "filetype")
+-- -- if the current file type is in the ignore ft table, dont do anything
+-- if vim.tbl_contains(ignore_ft, ft) then
+-- return
+-- end
+-- -- print("Updating winbar")
+-- M.update()
+-- end,
+-- })
 
 --- updates a new winbar from information given by nvim-navic
 M.update = function()

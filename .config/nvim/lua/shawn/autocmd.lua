@@ -54,3 +54,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = "*.go",
 	callback = OrgImports,
 })
+
+local termina_auto_group = vim.api.nvim_create_augroup("terminal_auto_group", { clear = true })
+vim.api.nvim_create_autocmd({ "TermOpen" }, {
+	group = termina_auto_group,
+	callback = function()
+		vim.cmd("setlocal nospell")
+	end,
+})

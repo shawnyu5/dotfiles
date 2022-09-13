@@ -9,19 +9,53 @@ require("treesitter-context").setup({
 		-- appear in the context window.
 		default = {
 			"class",
-			-- "function",
-			-- "method",
+			"function",
+			"method",
 			"for",
 			"while",
 			"if",
 			"switch",
 			"case",
 		},
-		-- Example for a specific filetype.
-		-- If a pattern is missing, *open a PR* so everyone can benefit.
-		--   rust = {
-		--       'impl_item',
-		--   },
+		-- Patterns for specific filetypes
+		tex = {
+			"chapter",
+			"section",
+			"subsection",
+			"subsubsection",
+		},
+		rust = {
+			"impl_item",
+			"struct",
+			"enum",
+		},
+		scala = {
+			"object_definition",
+		},
+		vhdl = {
+			"process_statement",
+			"architecture_body",
+			"entity_declaration",
+		},
+		markdown = {
+			"section",
+		},
+		elixir = {
+			"anonymous_function",
+			"arguments",
+			"block",
+			"do_block",
+			"list",
+			"map",
+			"tuple",
+			"quoted_content",
+		},
+		json = {
+			"pair",
+		},
+		yaml = {
+			"block_mapping_pair",
+		},
 	},
 	exact_patterns = {
 		-- Example for a specific filetype with Lua patterns
@@ -35,5 +69,7 @@ require("treesitter-context").setup({
 
 	zindex = 20, -- The Z-index of the context window
 	mode = "cursor", -- Line used to calculate context. Choices: 'cursor', 'topline'
-	separator = nil, -- Separator between context and content. Should be a single character string, like '-'.
+	-- Separator between context and content. Should be a single character string, like '-'.
+	-- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+	separator = nil,
 })

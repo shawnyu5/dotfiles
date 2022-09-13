@@ -19,6 +19,7 @@ require("shawn.autocmd")
 require("shawn.hydra")
 require("shawn.lsp_signature")
 require("shawn.ultisnips")
+require("shawn.nvim-tree")
 require("shawn.lightline")
 require("shawn.tmux")
 -- require("shawn.lualine")
@@ -48,7 +49,7 @@ require("shawn.tokyo-knight")
 require("shawn.vim-test")
 -- require("shawn.which-key")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
-source("~/.config/nvim/settings/NERDtree_settings.vim")
+-- source("~/.config/nvim/settings/NERDtree_settings.vim")
 require("shawn.autopairs")
 require("shawn.fidget")
 source("~/.config/nvim/settings/nerdcommenter_settings.vim")
@@ -65,7 +66,7 @@ vim.cmd([[
 " let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 " auto enable spellcheck in markdown files
-autocmd BufRead *.md setlocal spell
+" autocmd BufRead *.md setlocal spell
 
 " trailing white space setting
 " =============================

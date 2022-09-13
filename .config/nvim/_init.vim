@@ -73,7 +73,7 @@ autocmd bufreadpre *.md,*.txt setlocal textwidth=80
 " let g:indentLine_fileTypeExclude = ['markdown', 'text', 'help']
 
 "auto enable spellcheck in markdown files
-autocmd BufRead *.md setlocal spell
+" autocmd BufRead *.md setlocal spell
 
 " autocmd BufRead *.hbs echo "hello"
 

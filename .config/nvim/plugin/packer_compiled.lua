@@ -129,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["executor.nvim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/executor.nvim",
@@ -224,11 +219,6 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
   ["null-ls.nvim"] = {
     config = { "\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18shawn.null-ls\frequire\0" },
     loaded = false,
@@ -282,11 +272,10 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
   },
-  ["nvim-transparent"] = {
-    config = { "\27LJ\2\nð\5\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1%\0\0\23BufferLineTabClose\29BufferlineBufferSelected\19BufferLineFill\25BufferLineBackground\24BufferLineSeparator BufferLineIndicatorSelected\16FidgetTitle\15FidgetTask\19NavicIconsFile\21NavicIconsModule\24NavicIconsNamespace\22NavicIconsPackage\20NavicIconsClass\21NavicIconsMethod\23NavicIconsProperty\20NavicIconsField\26NavicIconsConstructor\19NavicIconsEnum\24NavicIconsInterface\23NavicIconsFunction\23NavicIconsVariable\23NavicIconsConstant\21NavicIconsString\21NavicIconsNumber\22NavicIconsBoolean\20NavicIconsArray\21NavicIconsObject\18NavicIconsKey\19NavicIconsNull\25NavicIconsEnumMember\21NavicIconsStruct\20NavicIconsEvent\23NavicIconsOperator\28NavicIconsTypeParameter\14NavicText\19NavicSeparator\1\0\1\venable\2\nsetup\16transparent\frequire\0" },
+  ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -302,6 +291,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
     url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -373,6 +367,13 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-jsontogo",
     url = "https://github.com/meain/vim-jsontogo"
   },
+  ["vim-latex-live-preview"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/opt/vim-latex-live-preview",
+    url = "https://github.com/xuhdev/vim-latex-live-preview"
+  },
   ["vim-markdown-toc"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/vim-markdown-toc",
@@ -420,10 +421,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for i3config.vim]], true)
 try_loadstring("\27LJ\2\n¸\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0", "config", "i3config.vim")
 time([[Config for i3config.vim]], false)
--- Config for: nvim-transparent
-time([[Config for nvim-transparent]], true)
-try_loadstring("\27LJ\2\nð\5\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1%\0\0\23BufferLineTabClose\29BufferlineBufferSelected\19BufferLineFill\25BufferLineBackground\24BufferLineSeparator BufferLineIndicatorSelected\16FidgetTitle\15FidgetTask\19NavicIconsFile\21NavicIconsModule\24NavicIconsNamespace\22NavicIconsPackage\20NavicIconsClass\21NavicIconsMethod\23NavicIconsProperty\20NavicIconsField\26NavicIconsConstructor\19NavicIconsEnum\24NavicIconsInterface\23NavicIconsFunction\23NavicIconsVariable\23NavicIconsConstant\21NavicIconsString\21NavicIconsNumber\22NavicIconsBoolean\20NavicIconsArray\21NavicIconsObject\18NavicIconsKey\19NavicIconsNull\25NavicIconsEnumMember\21NavicIconsStruct\20NavicIconsEvent\23NavicIconsOperator\28NavicIconsTypeParameter\14NavicText\19NavicSeparator\1\0\1\venable\2\nsetup\16transparent\frequire\0", "config", "nvim-transparent")
-time([[Config for nvim-transparent]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -432,6 +429,11 @@ time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vim-latex-live-preview'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType plaintex ++once lua require("packer.load")({'vim-latex-live-preview'}, { ft = "plaintex" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au LspAttach * ++once lua require("packer.load")({'null-ls.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]

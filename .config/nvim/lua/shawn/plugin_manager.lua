@@ -44,58 +44,59 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lua/popup.nvim")
 
-	use({
-		"xiyaowong/nvim-transparent",
-		config = function()
-			require("transparent").setup({
-				enable = true, -- boolean: enable transparent
-				extra_groups = { -- table/string: additional groups that should be cleared
-					-- In particular, when you set it to 'all', that means all available groups
+	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
+	-- use({
+	-- "xiyaowong/nvim-transparent",
+	-- config = function()
+	-- require("transparent").setup({
+	-- enable = true, -- boolean: enable transparent
+	-- extra_groups = { -- table/string: additional groups that should be cleared
+	-- -- In particular, when you set it to 'all', that means all available groups
 
-					-- example of akinsho/nvim-bufferline.lua
-					"BufferLineTabClose",
-					"BufferlineBufferSelected",
-					"BufferLineFill",
-					"BufferLineBackground",
-					"BufferLineSeparator",
-					"BufferLineIndicatorSelected",
-					"FidgetTitle",
-					"FidgetTask",
-					"NavicIconsFile",
-					"NavicIconsModule",
-					"NavicIconsNamespace",
-					"NavicIconsPackage",
-					"NavicIconsClass",
-					"NavicIconsMethod",
-					"NavicIconsProperty",
-					"NavicIconsField",
-					"NavicIconsConstructor",
-					"NavicIconsEnum",
-					"NavicIconsInterface",
-					"NavicIconsFunction",
-					"NavicIconsVariable",
-					"NavicIconsConstant",
-					"NavicIconsString",
-					"NavicIconsNumber",
-					"NavicIconsBoolean",
-					"NavicIconsArray",
-					"NavicIconsObject",
-					"NavicIconsKey",
-					"NavicIconsNull",
-					"NavicIconsEnumMember",
-					"NavicIconsStruct",
-					"NavicIconsEvent",
-					"NavicIconsOperator",
-					"NavicIconsTypeParameter",
-					"NavicText",
-					"NavicSeparator",
-				},
-				exclude = {}, -- table: groups you don't want to clear
-			})
-		end,
-	})
+	-- -- example of akinsho/nvim-bufferline.lua
+	-- "BufferLineTabClose",
+	-- "BufferlineBufferSelected",
+	-- "BufferLineFill",
+	-- "BufferLineBackground",
+	-- "BufferLineSeparator",
+	-- "BufferLineIndicatorSelected",
+	-- "FidgetTitle",
+	-- "FidgetTask",
+	-- "NavicIconsFile",
+	-- "NavicIconsModule",
+	-- "NavicIconsNamespace",
+	-- "NavicIconsPackage",
+	-- "NavicIconsClass",
+	-- "NavicIconsMethod",
+	-- "NavicIconsProperty",
+	-- "NavicIconsField",
+	-- "NavicIconsConstructor",
+	-- "NavicIconsEnum",
+	-- "NavicIconsInterface",
+	-- "NavicIconsFunction",
+	-- "NavicIconsVariable",
+	-- "NavicIconsConstant",
+	-- "NavicIconsString",
+	-- "NavicIconsNumber",
+	-- "NavicIconsBoolean",
+	-- "NavicIconsArray",
+	-- "NavicIconsObject",
+	-- "NavicIconsKey",
+	-- "NavicIconsNull",
+	-- "NavicIconsEnumMember",
+	-- "NavicIconsStruct",
+	-- "NavicIconsEvent",
+	-- "NavicIconsOperator",
+	-- "NavicIconsTypeParameter",
+	-- "NavicText",
+	-- "NavicSeparator",
+	-- },
+	-- exclude = {}, -- table: groups you don't want to clear
+	-- })
+	-- end,
+	-- })
 
-	use({ "github/copilot.vim" })
+	-- use({ "github/copilot.vim" })
 
 	-- use({ "jinh0/eyeliner.nvim" })
 
@@ -172,7 +173,13 @@ return packer.startup(function(use)
 
 	use("andweeb/presence.nvim")
 
-	use({ "preservim/nerdtree" })
+	-- use({ "preservim/nerdtree" })
+	use({
+		"kyazdani42/nvim-tree.lua",
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- for file icons
+		},
+	})
 
 	use({ "windwp/nvim-autopairs" })
 
