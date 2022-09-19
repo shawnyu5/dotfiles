@@ -40,4 +40,4 @@ function awsec {
    echo $IPADDRESS
    ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
 }
-alias ocean="ssh root@143.110.215.158"
+alias ocean="ssh root@161.35.8.80"
