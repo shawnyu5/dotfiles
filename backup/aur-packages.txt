@@ -1,12 +1,14 @@
 act
 air
+aws-cli-v2-bin
 google-chrome
 hadolint-bin
 heroku-cli-bin
 icu69-bin
 javafx-scenebuilder
 jdtls
-marksman-bin
+kazam
+marp-cli-bin
 neovim-nightly-bin
 pcurses
 prettierd

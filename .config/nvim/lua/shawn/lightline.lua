@@ -26,6 +26,30 @@ vim.g.Get_harpoon_status = function()
 	return "🦈 " .. mark_id
 end
 
+local lightline_component = {
+	mode = "%{lightline#mode()}",
+	absolutepath = "%F",
+	relativepath = "%f",
+	filename = "%t",
+	modified = "%M",
+	bufnum = "%n",
+	paste = '%{&paste?"PASTE":""}',
+	readonly = "%R",
+	charvalue = "%b",
+	charvaluehex = "%B",
+	fileencoding = '%{&fenc!=#""?&fenc:&enc}',
+	fileformat = "%{&ff}",
+	filetype = '%{&ft!=#""?&ft:"no ft"}',
+	percent = "%3p%%",
+	percentwin = "%P",
+	spell = '%{&spell?&spelllang:""}',
+	lineinfo = "%3l:%-2c",
+	line = "%l",
+	column = "%c",
+	close = "%999X X ",
+	winnr = "%{winnr()}",
+}
+
 vim.g.lightline = {
 	colorscheme = "tokyonight",
 	active = {
@@ -40,6 +64,10 @@ vim.g.lightline = {
 			{ "percent" },
 			{ "fileformat", "fileencoding", "filetype" },
 		},
+	},
+	tab = {
+		active = { "tabnum", "filename", "modified" },
+		-- inactive = { "tabnum", "filename", "modified" },
 	},
 	component_function = {
 		gitBranch = "GetGitBranch",

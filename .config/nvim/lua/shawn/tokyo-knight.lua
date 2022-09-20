@@ -42,3 +42,7 @@ tokyonight.setup({
 })
 
 vim.cmd("colorscheme tokyonight")
+-- TreesitterContext
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
+-- vim.cmd("hi TreesitterContextLineNumber  guibg=NONE ctermbg=NONE")
+-- highlight "TreesitterContext"guibg = NONE

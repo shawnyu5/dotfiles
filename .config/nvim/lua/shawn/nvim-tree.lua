@@ -45,3 +45,5 @@ local map = vim.keymap.set
 
 map("n", "<leader>nn", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
