@@ -45,6 +45,11 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 
 	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
+   use ({ "williamboman/mason.nvim", config = function() 
+      require("mason").setup()
+      end
+})
+
 	-- use({
 	-- "xiyaowong/nvim-transparent",
 	-- config = function()

@@ -160,7 +160,7 @@ _G.packer_plugins = {
     url = "https://github.com/anuvyklack/hydra.nvim"
   },
   ["i3config.vim"] = {
-    config = { "\27LJ\2\n¸\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0" },
+    config = { "\27LJ\2\2¸\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0" },
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/i3config.vim",
     url = "https://github.com/mboughaba/i3config.vim"
@@ -185,6 +185,12 @@ _G.packer_plugins = {
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["mason.nvim"] = {
+    config = { "\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0" },
+    loaded = true,
+    path = "/home/shawn/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["md-img-paste.vim"] = {
     loaded = true,
     path = "/home/shawn/.local/share/nvim/site/pack/packer/start/md-img-paste.vim",
@@ -197,7 +203,7 @@ _G.packer_plugins = {
   },
   neogen = {
     commands = { "Neogen" },
-    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17shawn.neogen\frequire\0" },
+    config = { "\27LJ\2\2,\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\17shawn.neogen\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -220,7 +226,7 @@ _G.packer_plugins = {
     url = "https://github.com/preservim/nerdcommenter"
   },
   ["null-ls.nvim"] = {
-    config = { "\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18shawn.null-ls\frequire\0" },
+    config = { "\27LJ\2\2-\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\18shawn.null-ls\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -417,9 +423,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\0023\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
 -- Config for: i3config.vim
 time([[Config for i3config.vim]], true)
-try_loadstring("\27LJ\2\n¸\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0", "config", "i3config.vim")
+try_loadstring("\27LJ\2\2¸\1\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0˜\1         aug i3config_ft_detection\n         au!\n         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config\n         aug end\n         \bcmd\bvim\0", "config", "i3config.vim")
 time([[Config for i3config.vim]], false)
 
 -- Command lazy-loads
@@ -431,8 +441,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'vim-latex-live-preview'}, { ft = "tex" }, _G.packer_plugins)]]
 vim.cmd [[au FileType plaintex ++once lua require("packer.load")({'vim-latex-live-preview'}, { ft = "plaintex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vim-latex-live-preview'}, { ft = "tex" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
