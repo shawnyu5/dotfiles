@@ -17,8 +17,6 @@ bindkey '^x^e' edit-command-line
 # zle -N edit-command-line
 # bindkey -M vicmd v edit-command-line
 
-alias su="sudo apt upgrade && sudo apt update"
-
 alias p="python3"
 
 alias files="nautilus"
@@ -144,5 +142,4 @@ function cheat
 
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
-alias bd=". bd -si"
 alias bd=". bd -si"

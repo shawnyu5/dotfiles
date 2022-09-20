@@ -51,59 +51,20 @@ return packer.startup(function(use)
 })
 
 	-- use({
-	-- "xiyaowong/nvim-transparent",
+	-- "https://github.com/nocksock/do.nvim",
 	-- config = function()
-	-- require("transparent").setup({
-	-- enable = true, -- boolean: enable transparent
-	-- extra_groups = { -- table/string: additional groups that should be cleared
-	-- -- In particular, when you set it to 'all', that means all available groups
-
-	-- -- example of akinsho/nvim-bufferline.lua
-	-- "BufferLineTabClose",
-	-- "BufferlineBufferSelected",
-	-- "BufferLineFill",
-	-- "BufferLineBackground",
-	-- "BufferLineSeparator",
-	-- "BufferLineIndicatorSelected",
-	-- "FidgetTitle",
-	-- "FidgetTask",
-	-- "NavicIconsFile",
-	-- "NavicIconsModule",
-	-- "NavicIconsNamespace",
-	-- "NavicIconsPackage",
-	-- "NavicIconsClass",
-	-- "NavicIconsMethod",
-	-- "NavicIconsProperty",
-	-- "NavicIconsField",
-	-- "NavicIconsConstructor",
-	-- "NavicIconsEnum",
-	-- "NavicIconsInterface",
-	-- "NavicIconsFunction",
-	-- "NavicIconsVariable",
-	-- "NavicIconsConstant",
-	-- "NavicIconsString",
-	-- "NavicIconsNumber",
-	-- "NavicIconsBoolean",
-	-- "NavicIconsArray",
-	-- "NavicIconsObject",
-	-- "NavicIconsKey",
-	-- "NavicIconsNull",
-	-- "NavicIconsEnumMember",
-	-- "NavicIconsStruct",
-	-- "NavicIconsEvent",
-	-- "NavicIconsOperator",
-	-- "NavicIconsTypeParameter",
-	-- "NavicText",
-	-- "NavicSeparator",
+	-- require("do.nvim").setup({
+	-- -- default options
+	-- message_timeout = 2000, -- how long notifications are shown
+	-- kaomoji_mode = 0, -- 0 kaomoji everywhere, 1 skip kaomoji in doing
+	-- doing_prefix = "Doing: ",
+	-- store = {
+	-- auto_create_file = false, -- automatically create a .do_tasks when calling :Do
+	-- file_name = ".do_tasks",
 	-- },
-	-- exclude = {}, -- table: groups you don't want to clear
 	-- })
 	-- end,
 	-- })
-
-	-- use({ "github/copilot.vim" })
-
-	-- use({ "jinh0/eyeliner.nvim" })
 
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
