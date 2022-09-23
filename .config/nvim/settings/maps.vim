@@ -35,6 +35,9 @@ command! Sr :so ~/.config/nvim/init.lua
 nnoremap n nzz
 nnoremap N Nzz
 
+" map esc to control c in systems that doesnt allow system wide remaps
+inoremap <C-c> <Esc>
+
 "esc in terminal mode to go back to normal move
 tnoremap <Esc> <C-\><C-n>
 
