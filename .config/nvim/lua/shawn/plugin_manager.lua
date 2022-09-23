@@ -45,10 +45,13 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 
 	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
-   use ({ "williamboman/mason.nvim", config = function() 
-      require("mason").setup()
-      end
-})
+
+	use({
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	})
 
 	-- use({
 	-- "https://github.com/nocksock/do.nvim",
@@ -91,6 +94,7 @@ return packer.startup(function(use)
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
 	})
+
 	use({ "meain/vim-jsontogo" })
 
 	use("matbme/JABS.nvim")
