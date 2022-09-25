@@ -48,22 +48,8 @@ return packer.startup(function(use)
 
 	-- use({ "github/copilot.vim" })
 
-	-- use({
-	-- "https://github.com/nocksock/do.nvim",
-	-- config = function()
-	-- require("do.nvim").setup({
-	-- -- default options
-	-- message_timeout = 2000, -- how long notifications are shown
-	-- kaomoji_mode = 0, -- 0 kaomoji everywhere, 1 skip kaomoji in doing
-	-- doing_prefix = "Doing: ",
-	-- store = {
-	-- auto_create_file = false, -- automatically create a .do_tasks when calling :Do
-	-- file_name = ".do_tasks",
-	-- },
-	-- })
-	-- end,
-	-- })
-
+	-- use({ "https://github.com/nocksock/do.nvim" })
+	use({ "~/do.nvim" })
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
 	use({
