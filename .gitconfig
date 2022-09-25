@@ -20,3 +20,6 @@
     colorMoved = default
 [init]
 	defaultBranch = master
+[push]
+	default = current
+	autoSetupRemote = true
