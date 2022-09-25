@@ -126,9 +126,9 @@ return packer.startup(function(use)
 	-- use({ "preservim/nerdtree" })
 	use({
 		"kyazdani42/nvim-tree.lua",
-		requires = {
-			"kyazdani42/nvim-web-devicons", -- for file icons
-		},
+		-- requires = {
+			-- "kyazdani42/nvim-web-devicons", -- for file icons
+		-- },
 	})
 
 	use({ "windwp/nvim-autopairs" })
