@@ -94,10 +94,8 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
-	-- use({
-	-- "nvim-lualine/lualine.nvim",
-	-- })
-	use({ "itchyny/lightline.vim" }) -- status bar
+	use({ "nvim-lualine/lualine.nvim" })
+   use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({
 	-- "nvim-neotest/neotest",
@@ -127,7 +125,7 @@ return packer.startup(function(use)
 	use({
 		"kyazdani42/nvim-tree.lua",
 		-- requires = {
-			-- "kyazdani42/nvim-web-devicons", -- for file icons
+		-- "kyazdani42/nvim-web-devicons", -- for file icons
 		-- },
 	})
 
