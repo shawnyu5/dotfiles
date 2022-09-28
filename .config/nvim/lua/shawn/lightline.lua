@@ -58,13 +58,13 @@ local lightline_component = {
 
 vim.g.lightline = {
 	colorscheme = "tokyonight",
-	component = {
+	component_expand = {
 		relativePath = lightline_component.relativepath,
 	},
 	active = {
 		left = {
 			{ "mode", "paste" },
-			{ "readonly", "filename", "modified" },
+			{ "readonly", "relativepath", "modified" },
 			{ "gitBranch" },
 			{ "harpoonMark" },
 		},
@@ -74,10 +74,10 @@ vim.g.lightline = {
 			{ "fileformat", "fileencoding", "filetype" },
 		},
 	},
-	tab_component = {
-		-- relativepath = "HELLO"
-		relativepath = vim.fn.expand("%f"),
-	},
+	-- tab_component = {
+	-- -- relativepath = "HELLO"
+	-- relativepath = vim.fn.expand("%f"),
+	-- },
 	tab_component_function = {
 		relativepathFunc = "Get_relative_path_name",
 	},
@@ -85,11 +85,14 @@ vim.g.lightline = {
 		active = { "tabnum", "filename", "modified" },
 		inactive = { "tabnum", "filename", "modified" },
 	},
-	-- tabline = {
-	-- left = {
-	-- { "tabs" } ,
-	-- },
-	-- },
+	tabline = {
+		left = {
+			{ "tabs" },
+		},
+		right = {
+			-- { "close" },
+		},
+	},
 	component_function = {
 		gitBranch = "GetGitBranch",
 		harpoonMark = "Get_harpoon_status",
