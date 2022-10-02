@@ -64,7 +64,7 @@ vim.g.lightline = {
 	active = {
 		left = {
 			{ "mode", "paste" },
-			{ "readonly", "relativepath", "modified" },
+			{ "readonly", "filename", "modified" },
 			{ "gitBranch" },
 			{ "harpoonMark" },
 		},
