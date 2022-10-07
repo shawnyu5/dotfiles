@@ -1,8 +1,6 @@
 require("shawn.dap.dapui")
 require("shawn.dap.cpp")
--- require("shawn.dap.javascript")
 require("dap-go").setup()
--- require("shawn.dap.javascript")
 require("shawn.dap.virtual_text")
 
 -- - `DapBreakpoint` for breakpoints (default: `B`)
@@ -25,12 +23,24 @@ local map = vim.keymap.set
 local dap = require("dap")
 local dapui = require("dapui")
 
+--- toggle signcolumn depending if there are dap break points
+local function toggle_signcolumn()
+   -- if there are breakpoints, toggle sign column
+   if dap.list_breakpoints() then
+      vim.opt.signcolumn = "yes"
+   else
+      vim.opt.signcolumn = "no"
+
+   end
+end
+
 map("n", "<leader>dc", function()
 	dap.continue()
 end, { desc = "Dap Continue" })
 
 map("n", "<leader>db", function()
 	dap.toggle_breakpoint()
+   toggle_signcolumn()
 end, { desc = "Dap Toggle breakpoint" })
 
 map("n", "<leader>do", function()
@@ -147,5 +157,6 @@ command("DapT", function(args)
 		dapui.close()
 		vim.cmd(":DapVirtualTextForceRefresh")
 		cleanup_dap_hydra(dap_autocmd_ids)
+      toggle_signcolumn()
 	end)
 end, {})

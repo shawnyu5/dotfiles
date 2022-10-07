@@ -26,11 +26,11 @@ do_nvim.setup({
 
 -- vim.api.nvim_set_option_value("winbar", do_nvim.view(), { scope = "global" })
 
-vim.api.nvim_create_autocmd({ "User" }, {
-   group = require("do.state").state.auGroupId,
-   desc = "A task has been added",
-   pattern = "TaskModified",
-   callback = function()
-      print("Task modified")
-   end,
-})
+-- vim.api.nvim_create_autocmd({ "User" }, {
+   -- group = require("do.state").state.auGroupId,
+   -- desc = "A task has been added",
+   -- pattern = "TaskModified",
+   -- callback = function()
+      -- print("Task modified")
+   -- end,
+-- })

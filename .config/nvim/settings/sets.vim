@@ -15,7 +15,7 @@ set timeoutlen=1000
 
 set mouse=a
 set noswapfile
-set signcolumn=yes
+set signcolumn=no
 
 set linebreak
 

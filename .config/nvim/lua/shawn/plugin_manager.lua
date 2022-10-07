@@ -49,7 +49,8 @@ return packer.startup(function(use)
 	-- use({ "github/copilot.vim" })
 
 	-- use({ "https://github.com/nocksock/do.nvim" })
-	use({ "~/do.nvim" })
+   use({ "~/do.nvim" })
+   -- use({ "shawnyu5/do.nvim" })
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
 	use({
@@ -95,7 +96,7 @@ return packer.startup(function(use)
 	use("aserowy/tmux.nvim")
 
 	use({ "nvim-lualine/lualine.nvim" })
-   use({ "itchyny/lightline.vim" }) -- status bar
+	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({
 	-- "nvim-neotest/neotest",
