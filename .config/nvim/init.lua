@@ -2,6 +2,7 @@
 vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
+vim.opt.fillchars = { eob = " " }
 
 --- source a vim file
 ---@param file string file path to source

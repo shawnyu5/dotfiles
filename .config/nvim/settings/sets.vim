@@ -15,7 +15,7 @@ set timeoutlen=1000
 
 set mouse=a
 set noswapfile
-set signcolumn=no
+set signcolumn=yes
 
 set linebreak
 
@@ -57,3 +57,4 @@ set ttimeoutlen=0
 set path+=**
 set scrolloff=3
 
+" set fillchars=eob:\
