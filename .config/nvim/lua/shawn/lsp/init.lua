@@ -1,6 +1,6 @@
 local ok, lsp = pcall(require, "lspconfig")
 if not ok then
-	vim.notify("lsp config not installed...", vim.log.ERROR)
+	vim.notify("lsp config not installed...", vim.log.levels.WARN)
 	return
 end
 
@@ -75,14 +75,6 @@ lsp.cssls.setup({
 	end,
 })
 
--- markdown
--- lsp.remark_ls.setup({
--- on_attach = function(client, bufnr)
--- client.server_capabilities.document_formatting = false,
--- on_attach(client, bufnr)
--- end,
--- })
-
 -- latex
 lsp.texlab.setup({
 	on_attach = function(client, bufnr)
@@ -132,7 +124,7 @@ lsp.gopls.setup({
 		},
 	},
 	init_options = {
-		usePlaceholders = true,
+		usePlaceholders = false,
 	},
 })
 
@@ -219,7 +211,6 @@ lsp.sumneko_lua.setup({
 
 -- pyright
 -- npm install -g pyright
--- pyright is pretty primitive...
 lsp.pyright.setup({
 	cmd = { "pyright-langserver", "--stdio" },
 	filetypes = { "python" },
