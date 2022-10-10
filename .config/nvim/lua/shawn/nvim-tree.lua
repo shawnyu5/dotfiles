@@ -1,4 +1,10 @@
-require("nvim-tree").setup({
+local ok, tree = pcall(require, "nvim-tree")
+if not ok then
+   vim.notify("tree not installed...", vim.log.ERROR)
+   return
+end
+
+tree.setup({
 	sort_by = "case_sensitive",
 	view = {
 		adaptive_size = true,
@@ -16,6 +22,7 @@ require("nvim-tree").setup({
 	renderer = {
 		group_empty = true,
 		icons = {
+			webdev_colors = false,
 			show = {
 				file = true,
 				folder = true,
@@ -24,13 +31,13 @@ require("nvim-tree").setup({
 			glyphs = {
 				default = "",
 				folder = {
-					arrow_closed = "",
-					arrow_open = "",
+					arrow_closed = "➜",
+					arrow_open = "🠗",
 					default = "",
 					open = "",
 					empty = "",
 					empty_open = "",
-					symlink = "",
+					symlink = "s",
 					symlink_open = "",
 				},
 			},
@@ -46,4 +53,4 @@ local map = vim.keymap.set
 map("n", "<leader>nn", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none", ctermbg = "none"})
