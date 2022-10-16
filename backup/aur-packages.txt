@@ -2,14 +2,16 @@ act
 air
 aws-cli-v2-bin
 google-chrome
+grub-tools
 hadolint-bin
 heroku-cli-bin
 icu69-bin
+ipw2100-fw
+ipw2200-fw
 javafx-scenebuilder
 jdtls
 kazam
 marp-cli-bin
-neovim-nightly-bin
 pcurses
 prettierd
 stylua-bin

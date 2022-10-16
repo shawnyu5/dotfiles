@@ -27,9 +27,7 @@ arc-x-icons-theme
 archlinux-keyring
 archlinux-xdg-menu
 argon2
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 attr
 audit
@@ -269,7 +267,6 @@ grep
 grilo
 groff
 grub
-grub-tools
 grub2-theme-endeavouros
 gsettings-desktop-schemas
 gsfonts
@@ -349,6 +346,7 @@ haskell-comonad
 haskell-conduit
 haskell-conduit-extra
 haskell-connection
+haskell-contravariant
 haskell-cookie
 haskell-cryptonite
 haskell-data-default
@@ -365,6 +363,7 @@ haskell-doctemplates
 haskell-emojis
 haskell-erf
 haskell-file-embed
+haskell-generically
 haskell-ghc-bignum-orphans
 haskell-glob
 haskell-haddock-library
@@ -387,6 +386,7 @@ haskell-http-client
 haskell-http-client-tls
 haskell-http-types
 haskell-indexed-traversable
+haskell-indexed-traversable-instances
 haskell-integer-logarithms
 haskell-iproute
 haskell-ipynb
@@ -403,6 +403,7 @@ haskell-network
 haskell-network-uri
 haskell-old-locale
 haskell-old-time
+haskell-onetuple
 haskell-pandoc-lua-marshal
 haskell-pandoc-types
 haskell-pem
@@ -413,6 +414,8 @@ haskell-random
 haskell-resourcet
 haskell-safe
 haskell-scientific
+haskell-semialign
+haskell-semigroupoids
 haskell-sha
 haskell-skylighting
 haskell-skylighting-core
@@ -422,6 +425,7 @@ haskell-skylighting-format-latex
 haskell-socks
 haskell-split
 haskell-splitmix
+haskell-statevar
 haskell-streaming-commons
 haskell-strict
 haskell-syb
@@ -431,6 +435,7 @@ haskell-temporary
 haskell-texmath
 haskell-text-conversions
 haskell-text-icu
+haskell-text-short
 haskell-th-abstraction
 haskell-th-compat
 haskell-th-lift
@@ -450,6 +455,8 @@ haskell-utf8-string
 haskell-uuid-types
 haskell-vector
 haskell-vector-algorithms
+haskell-vector-stream
+haskell-witherable
 haskell-x509
 haskell-x509-store
 haskell-x509-system
@@ -464,6 +471,7 @@ haveged
 hdparm
 hicolor-icon-theme
 hidapi
+highway
 htop
 http-parser
 hwdata
@@ -492,8 +500,6 @@ inxi
 iproute2
 iptables
 iputils
-ipw2100-fw
-ipw2200-fw
 iso-codes
 iw
 iwd
@@ -614,9 +620,11 @@ libdca
 libde265
 libdrm
 libdv
+libdvbpsi
 libdvdcss
 libdvdnav
 libdvdread
+libebml
 libedit
 libelf
 libepoxy
@@ -655,6 +663,7 @@ libid3tag
 libidn
 libidn2
 libiec61883
+libimagequant
 libimobiledevice
 libindicator-gtk3
 libinih
@@ -674,8 +683,10 @@ liblqr
 liblrdf
 libltc
 libluv
+libmad
 libmalcontent
 libmanette
+libmatroska
 libmaxminddb
 libmbim
 libmd
@@ -762,6 +773,7 @@ libssh2
 libstemmer
 libsynctex
 libsysprof-capture
+libtar
 libtasn1
 libteam
 libtermkey
@@ -772,6 +784,7 @@ libtirpc
 libtool
 libunistring
 libunwind
+libupnp
 liburcu
 liburing
 libusb
@@ -784,7 +797,7 @@ libverto
 libvisual
 libvorbis
 libvpx
-libvterm01
+libvterm
 libwacom
 libwebp
 libwmf
@@ -852,6 +865,7 @@ lsscsi
 lua
 lua-language-server
 lua-lpeg
+lua52
 lua53
 luajit
 luit
@@ -904,6 +918,7 @@ ndctl
 ndisc6
 neofetch
 neon
+neovim
 netctl
 netpbm
 nettle
@@ -1005,6 +1020,7 @@ picom
 pinentry
 pipewire
 pipewire-alsa
+pipewire-audio
 pipewire-jack
 pipewire-pulse
 pixman
@@ -1032,6 +1048,7 @@ purpose
 pv
 python
 python-appdirs
+python-attrs
 python-autocommand
 python-bcrypt
 python-botocore
@@ -1050,6 +1067,7 @@ python-distlib
 python-distro
 python-distutils-extra
 python-dnspython
+python-docopt
 python-docutils
 python-future
 python-gobject
@@ -1071,6 +1089,7 @@ python-ordered-set
 python-packaging
 python-paramiko
 python-pep517
+python-pillow
 python-pip
 python-platformdirs
 python-ply
@@ -1106,6 +1125,7 @@ python-urllib3
 python-validate-pyproject
 python-wcwidth
 python-webencodings
+python-xlib
 python-yaml
 python-zipp
 pyzy
@@ -1132,6 +1152,7 @@ qemu-hw-usb-smartcard
 qemu-img
 qemu-pr-helper
 qemu-system-x86
+qemu-system-x86-firmware
 qemu-tools
 qemu-ui-curses
 qemu-ui-opengl
@@ -1219,6 +1240,7 @@ ruby-net-http
 ruby-open-uri
 ruby-power_assert
 ruby-psych
+ruby-racc
 ruby-rake
 ruby-rdoc
 ruby-reline
@@ -1328,6 +1350,7 @@ twolame
 tzdata
 uchardet
 udisks2
+ueberzug
 unibilium
 unicode-cldr-annotations
 unrar
@@ -1344,6 +1367,7 @@ valgrind
 vde2
 vid.stab
 virglrenderer
+vlc
 vmaf
 volume_key
 vpnc
