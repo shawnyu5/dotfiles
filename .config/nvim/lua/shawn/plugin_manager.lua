@@ -213,12 +213,14 @@ return packer.startup(function(use)
 	use({
 		"mboughaba/i3config.vim",
 		config = function()
-			vim.cmd([[
-         aug i3config_ft_detection
-         au!
-         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
-         aug end
-         ]])
+         local group = vim.api.nvim_create_augroup("i3config_ft_detection", {})
+         vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+            group = group,
+            pattern = "~/personal/.config/i3/config",
+            callback = function()
+               vim.bo.filetype = "i3config"
+            end
+         })
 		end,
 	}) -- i3config highlighting
 	use({ "alvan/vim-closetag" }) -- auto close html tags

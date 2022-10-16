@@ -2,6 +2,7 @@
 vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
+-- get rid of eob fill chars
 vim.opt.fillchars = { eob = " " }
 
 --- source a vim file
