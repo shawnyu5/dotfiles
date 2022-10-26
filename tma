@@ -8,3 +8,4 @@ _tma() {
     COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
 }
 complete -F _tma tma
+

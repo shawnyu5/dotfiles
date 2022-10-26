@@ -18,6 +18,7 @@ require("nvim-treesitter.configs").setup({
 		"tsx",
 		"rust",
 		"dockerfile",
+      "json"
 	},
 	highlight = {
 		enable = true,
