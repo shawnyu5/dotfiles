@@ -9,11 +9,17 @@ refactoring.setup({
 		cpp = {
 			'std::cout << "%s " << %s << "\\n";',
 		},
+		go = {
+			'fmt.Printf("%s %%v\\n", %s)',
+		},
 	},
 	printf_statements = {
 		-- add a custom printf statement for cpp
 		cpp = {
 			'std::cout << "%s\\n";',
+		},
+		go = {
+			'fmt.Println("%s")',
 		},
 	},
 })
