@@ -164,7 +164,9 @@ return packer.startup(function(use)
 		{ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" },
 		"zbirenbaum/copilot-cmp",
 		"quangnguyen30192/cmp-nvim-ultisnips",
+      "hrsh7th/cmp-nvim-lsp-signature-help"
 	})
+	-- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 	use("zbirenbaum/copilot.lua")
 
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
@@ -177,7 +179,6 @@ return packer.startup(function(use)
 			require("shawn.null-ls")
 		end,
 	})
-	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
 	use({
 		"iamcco/markdown-preview.nvim",

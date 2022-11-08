@@ -35,6 +35,7 @@ cmp.setup({
 	}),
 	preselect = cmp.PreselectMode.None,
 	sources = {
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "copilot", keyword_length = 1 },
 		{ name = "git" },
 		{ name = "nvim_lsp" },
@@ -55,6 +56,7 @@ cmp.setup({
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.menu = ({
+				nvim_lsp_signature_help = "[Signature]",
 				copilot = "[copilot]",
 				git = "[git]",
 				nvim_lsp = "[Lsp]",
@@ -192,5 +194,5 @@ require("cmp_git").setup({
 })
 
 vim.api.nvim_create_user_command("Gitmessage", function()
-   vim.opt.filetype = "gitmessage"
+	vim.opt.filetype = "gitmessage"
 end, {})

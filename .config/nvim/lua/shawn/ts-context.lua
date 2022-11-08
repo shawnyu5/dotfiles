@@ -13,7 +13,7 @@ require("treesitter-context").setup({
 			"method",
 			"for",
 			"while",
-			-- "if",
+         "if",
 			"switch",
 			"case",
 		},
