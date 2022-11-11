@@ -38,7 +38,7 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-	-- use("dstein64/vim-startuptime")
+   use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
@@ -86,11 +86,6 @@ return packer.startup(function(use)
 		{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",
-		-- { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } },
-		-- {
-		-- "microsoft/vscode-js-debug",
-		-- run = "npm install --legacy-peer-deps && npm run compile",
-		-- },
 	})
 
 	use("aserowy/tmux.nvim")
@@ -193,9 +188,8 @@ return packer.startup(function(use)
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
 	use("tweekmonster/wstrip.vim") -- rmove trailing white spaces
 	use("ferrine/md-img-paste.vim") -- auto paste images into markdown
-	-- use({ "psliwka/vim-smoothie", commit = "f2aaab110b49da21ab7abf4858173e3194109f6a" }) -- smooth scrolling
 	use("karb94/neoscroll.nvim")
-	use("chmp/mdnav") -- opening links in vim
+	use("chmp/mdnav") -- opening links in markdown
 
 	use({ "preservim/nerdcommenter" }) -- block commenting
 	use({ "Shatur/neovim-session-manager" })
