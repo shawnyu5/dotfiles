@@ -38,7 +38,7 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-	-- use("dstein64/vim-startuptime")
+   use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
@@ -46,29 +46,11 @@ return packer.startup(function(use)
 
 	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
 
-	use({
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	})
+	-- use({ "github/copilot.vim" })
 
-	-- use({
-	-- "https://github.com/nocksock/do.nvim",
-	-- config = function()
-	-- require("do.nvim").setup({
-	-- -- default options
-	-- message_timeout = 2000, -- how long notifications are shown
-	-- kaomoji_mode = 0, -- 0 kaomoji everywhere, 1 skip kaomoji in doing
-	-- doing_prefix = "Doing: ",
-	-- store = {
-	-- auto_create_file = false, -- automatically create a .do_tasks when calling :Do
-	-- file_name = ".do_tasks",
-	-- },
-	-- })
-	-- end,
-	-- })
-
+	-- use({ "https://github.com/nocksock/do.nvim" })
+   -- use({ "~/do.nvim" })
+   -- use({ "shawnyu5/do.nvim" })
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
 	use({
@@ -94,7 +76,6 @@ return packer.startup(function(use)
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
 	})
-
 	use({ "meain/vim-jsontogo" })
 
 	use("matbme/JABS.nvim")
@@ -105,18 +86,11 @@ return packer.startup(function(use)
 		{ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",
-		-- { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } },
-		-- {
-		-- "microsoft/vscode-js-debug",
-		-- run = "npm install --legacy-peer-deps && npm run compile",
-		-- },
 	})
 
 	use("aserowy/tmux.nvim")
 
-	-- use({
-	-- "nvim-lualine/lualine.nvim",
-	-- })
+	use({ "nvim-lualine/lualine.nvim" })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({
@@ -146,9 +120,9 @@ return packer.startup(function(use)
 	-- use({ "preservim/nerdtree" })
 	use({
 		"kyazdani42/nvim-tree.lua",
-		requires = {
-			"kyazdani42/nvim-web-devicons", -- for file icons
-		},
+		-- requires = {
+		-- "kyazdani42/nvim-web-devicons", -- for file icons
+		-- },
 	})
 
 	use({ "windwp/nvim-autopairs" })
@@ -185,7 +159,9 @@ return packer.startup(function(use)
 		{ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" },
 		"zbirenbaum/copilot-cmp",
 		"quangnguyen30192/cmp-nvim-ultisnips",
+      "hrsh7th/cmp-nvim-lsp-signature-help"
 	})
+	-- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 	use("zbirenbaum/copilot.lua")
 
 	-- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
@@ -198,7 +174,6 @@ return packer.startup(function(use)
 			require("shawn.null-ls")
 		end,
 	})
-	use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -213,9 +188,8 @@ return packer.startup(function(use)
 	use("mzlogin/vim-markdown-toc") -- auto generate table of contents
 	use("tweekmonster/wstrip.vim") -- rmove trailing white spaces
 	use("ferrine/md-img-paste.vim") -- auto paste images into markdown
-	-- use({ "psliwka/vim-smoothie", commit = "f2aaab110b49da21ab7abf4858173e3194109f6a" }) -- smooth scrolling
 	use("karb94/neoscroll.nvim")
-	use("chmp/mdnav") -- opening links in vim
+	use("chmp/mdnav") -- opening links in markdown
 
 	use({ "preservim/nerdcommenter" }) -- block commenting
 	use({ "Shatur/neovim-session-manager" })
@@ -234,12 +208,14 @@ return packer.startup(function(use)
 	use({
 		"mboughaba/i3config.vim",
 		config = function()
-			vim.cmd([[
-         aug i3config_ft_detection
-         au!
-         au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
-         aug end
-         ]])
+         local group = vim.api.nvim_create_augroup("i3config_ft_detection", {})
+         vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+            group = group,
+            pattern = "~/personal/.config/i3/config",
+            callback = function()
+               vim.bo.filetype = "i3config"
+            end
+         })
 		end,
 	}) -- i3config highlighting
 	use({ "alvan/vim-closetag" }) -- auto close html tags
