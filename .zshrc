@@ -129,7 +129,7 @@ export PATH="$PATH:/home/shawn/personal/task_worrior/:$HOME/.local/bin/:$HOME/go
 export PATH="$PATH:/opt/mssql-tools/bin"
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
-export JAVA_HOME="/usr/lib/jvm/default-runtime"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
 export PATH=$PATH:"/usr/local/go/bin" # go
 # export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME="/usr/bin/jdt/"
