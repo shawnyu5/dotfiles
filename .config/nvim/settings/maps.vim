@@ -18,6 +18,9 @@ nnoremap N Nzz
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+nnoremap L gt
+nnoremap H gT
+
 "esc in terminal mode to go back to normal move
 tnoremap <Esc> <C-\><C-n>
 
@@ -25,10 +28,6 @@ nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
 " paste in visual mode without copying to clipboard
 xnoremap p "_dP
-
-" disable L and H, could be overrode by other configs later
-map <S-l> <Nop>
-map <S-h> <Nop>
 
 "leader df for diffthis
 " nnoremap <leader>df :diffthis<CR>
