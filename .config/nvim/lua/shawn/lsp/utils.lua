@@ -1,9 +1,3 @@
-local ok, navic = pcall(require, "nvim-navic")
-if not ok then
-	vim.notify("nvim-navic not installed...", vim.log.ERROR)
-	return
-end
-
 local M = {}
 --
 -- determine weather to enable format on save
@@ -33,10 +27,6 @@ function M.on_attach(client, bufnr)
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-	if client.name ~= "dockerls" then
-		navic.attach(client, bufnr)
-	end
-
 	-- Enable completion triggered by <c-x><c-o>
 	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -57,7 +47,7 @@ function M.on_attach(client, bufnr)
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gd", '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
-	buf_set_keymap("n", "H", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "<F2>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	buf_set_keymap("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
