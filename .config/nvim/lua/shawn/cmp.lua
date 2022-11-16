@@ -35,6 +35,7 @@ cmp.setup({
 	}),
 	preselect = cmp.PreselectMode.None,
 	sources = {
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "copilot", keyword_length = 1 },
 		{ name = "git" },
 		{ name = "nvim_lsp" },
@@ -55,6 +56,7 @@ cmp.setup({
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.menu = ({
+				nvim_lsp_signature_help = "[Signature]",
 				copilot = "[copilot]",
 				git = "[git]",
 				nvim_lsp = "[Lsp]",
@@ -94,7 +96,7 @@ local sort = require("cmp_git.sort")
 
 require("cmp_git").setup({
 	-- defaults
-	filetypes = { "gitcommit", "octo" },
+	filetypes = { "gitcommit", "octo", "gitmessage" },
 	remotes = { "upstream", "origin" }, -- in order of most to least prioritized
 	enableRemoteUrlRewrites = false, -- enable git url rewrites, see https://git-scm.com/docs/git-config#Documentation/git-config.txt-urlltbasegtinsteadOf
 	git = {
@@ -190,3 +192,7 @@ require("cmp_git").setup({
 		},
 	},
 })
+
+vim.api.nvim_create_user_command("Gitmessage", function()
+	vim.opt.filetype = "gitmessage"
+end, {})
