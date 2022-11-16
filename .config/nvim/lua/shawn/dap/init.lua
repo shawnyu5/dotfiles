@@ -67,7 +67,7 @@ end, {})
 -- delete the DapTerminate event and replace with my own
 -- vim.api.nvim_del_user_command("DapTerminate")
 
-local hydra = require("shawn.hydra")
+--local hydra = require("shawn.hydra")
 local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
 
 --- Create autocmds for dap hydra on insert enter and insert leave to stop and restart hydra respectively.

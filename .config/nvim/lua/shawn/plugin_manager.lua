@@ -46,6 +46,7 @@ return packer.startup(function(use)
 
 	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
 
+   use { "williamboman/mason.nvim" }
 	-- use({ "github/copilot.vim" })
 
 	-- use({ "https://github.com/nocksock/do.nvim" })
