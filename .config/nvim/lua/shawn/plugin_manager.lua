@@ -49,10 +49,9 @@ return packer.startup(function(use)
 	-- use({ "github/copilot.vim" })
 
 	-- use({ "https://github.com/nocksock/do.nvim" })
-	use({ "~/do.nvim" })
-	-- use({ "shawnyu5/do.nvim" })
+	-- use({ "~/do.nvim" })
+	use({ "shawnyu5/do.nvim" })
 	use("wbthomason/packer.nvim")
-	use("nathom/filetype.nvim")
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
