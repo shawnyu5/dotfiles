@@ -38,7 +38,7 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 
-   use("dstein64/vim-startuptime")
+	use("dstein64/vim-startuptime")
 
 	-- useful dependencies
 	use("nvim-lua/plenary.nvim")
@@ -49,8 +49,8 @@ return packer.startup(function(use)
 	-- use({ "github/copilot.vim" })
 
 	-- use({ "https://github.com/nocksock/do.nvim" })
-   use({ "~/do.nvim" })
-   -- use({ "shawnyu5/do.nvim" })
+	use({ "~/do.nvim" })
+	-- use({ "shawnyu5/do.nvim" })
 	use("wbthomason/packer.nvim")
 	use("nathom/filetype.nvim")
 	use({
@@ -72,13 +72,14 @@ return packer.startup(function(use)
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
-	use({
-		"SmiteshP/nvim-navic",
-		requires = "neovim/nvim-lspconfig",
-	})
+	-- use({
+	-- "SmiteshP/nvim-navic",
+	-- requires = "neovim/nvim-lspconfig",
+	-- })
 	use({ "meain/vim-jsontogo" })
 
-	use("matbme/JABS.nvim")
+	-- use("matbme/JABS.nvim")
+	use("j-morano/buffer_manager.nvim")
 
 	-- dap
 	use({
@@ -159,7 +160,7 @@ return packer.startup(function(use)
 		{ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" },
 		"zbirenbaum/copilot-cmp",
 		"quangnguyen30192/cmp-nvim-ultisnips",
-      "hrsh7th/cmp-nvim-lsp-signature-help"
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 	})
 	-- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 	use("zbirenbaum/copilot.lua")
@@ -208,14 +209,14 @@ return packer.startup(function(use)
 	use({
 		"mboughaba/i3config.vim",
 		config = function()
-         local group = vim.api.nvim_create_augroup("i3config_ft_detection", {})
-         vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-            group = group,
-            pattern = "~/personal/.config/i3/config",
-            callback = function()
-               vim.bo.filetype = "i3config"
-            end
-         })
+			local group = vim.api.nvim_create_augroup("i3config_ft_detection", {})
+			vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+				group = group,
+				pattern = "~/personal/.config/i3/config",
+				callback = function()
+					vim.bo.filetype = "i3config"
+				end,
+			})
 		end,
 	}) -- i3config highlighting
 	use({ "alvan/vim-closetag" }) -- auto close html tags
