@@ -16,6 +16,7 @@ alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
+amtk
 ansible
 ansible-core
 aom
@@ -195,6 +196,7 @@ gcab
 gcc
 gcc-libs
 gcr
+gcr-4
 gd
 gdb
 gdb-common
@@ -205,6 +207,8 @@ gedit
 gegl
 geoclue
 geocode-glib
+geocode-glib-2
+geocode-glib-common
 geoip
 geoip-database
 gettext
@@ -267,7 +271,6 @@ grep
 grilo
 groff
 grub
-grub2-theme-endeavouros
 gsettings-desktop-schemas
 gsfonts
 gsm
@@ -517,6 +520,7 @@ jre-openjdk
 jre-openjdk-headless
 jre11-openjdk
 jre11-openjdk-headless
+js102
 js78
 js91
 json-c
@@ -597,6 +601,7 @@ libbsd
 libbytesize
 libcaca
 libcacard
+libcamera
 libcanberra
 libcap
 libcap-ng
@@ -651,7 +656,6 @@ libgsf
 libgtop
 libgudev
 libgusb
-libgweather
 libgweather-4
 libgxps
 libhandy
@@ -737,6 +741,7 @@ libplist
 libpng
 libportal
 libportal-gtk3
+libportal-gtk4
 libproxy
 libpsl
 libpulse
@@ -746,6 +751,7 @@ libqrtr-glib
 libraqm
 libraw
 libraw1394
+librest
 librime
 librime-data
 librsvg
@@ -800,6 +806,7 @@ libvpx
 libvterm
 libwacom
 libwebp
+libwireplumber
 libwmf
 libwnck3
 libwpe
@@ -831,6 +838,7 @@ libxml2
 libxmlb
 libxmu
 libxpm
+libxpresent
 libxrandr
 libxrender
 libxres
@@ -888,7 +896,6 @@ media-player-info
 meld
 mesa
 mesa-utils
-metis
 minizip
 mjpegtools
 mkinitcpio
@@ -927,6 +934,7 @@ networkmanager
 networkmanager-openvpn
 nfs-utils
 nfsidmap
+nftables
 nginx
 nilfs-utils
 nitrogen
@@ -1125,6 +1133,7 @@ python-urllib3
 python-validate-pyproject
 python-wcwidth
 python-webencodings
+python-wheel
 python-xlib
 python-yaml
 python-zipp
@@ -1316,6 +1325,7 @@ tar
 task
 tcl
 tdb
+tepl
 tevent
 texinfo
 texlab
@@ -1380,6 +1390,7 @@ wayland
 wayland-protocols
 webkit2gtk
 webkit2gtk-4.1
+webp-pixbuf-loader
 webrtc-audio-processing
 welcome
 wget

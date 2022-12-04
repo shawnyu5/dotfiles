@@ -3,6 +3,7 @@ air
 aws-cli-v2-bin
 google-chrome
 grub-tools
+grub2-theme-endeavouros
 hadolint-bin
 heroku-cli-bin
 icu69-bin
