@@ -30,6 +30,7 @@ alias gpull="git pull"
 alias gm="git checkout master || git checkout main"
 
 alias homemonitor="~/.screenlayout/home_monitor.sh"
+alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
 alias homemonitorOff="xrandr --output HDMI1 --off"
 
 #mdp no fade by default
