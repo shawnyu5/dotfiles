@@ -62,3 +62,9 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
 		vim.cmd("setlocal nospell")
 	end,
 })
+
+vim.filetype.add({
+	extension = {
+		vugu = "html",
+	},
+})
