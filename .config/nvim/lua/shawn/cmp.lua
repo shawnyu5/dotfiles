@@ -35,7 +35,7 @@ cmp.setup({
 	}),
 	preselect = cmp.PreselectMode.None,
 	sources = {
-		{ name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp_signature_help" , keyword_length = 0},
 		{ name = "copilot", keyword_length = 1 },
 		{ name = "git" },
 		{ name = "nvim_lsp" },
