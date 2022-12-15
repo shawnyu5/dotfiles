@@ -15,3 +15,33 @@
        ignore_errors: true
        ansible.builtin.package:
           name: bash-language-server
+     - name: install html / json
+       community.general.npm:
+          name: vscode-langservers-extracted
+          global: true
+     - name: install tsserver
+       community.general.npm:
+          name: typescript-language-server
+          global: true
+     - name: install lua language server
+       ignore_errors: true
+       ansible.builtin.package:
+          name: lua-language-server
+     - name: install pyright
+       ignore_errors: true
+       ansible.builtin.package:
+          name: pyright
+     - name: install angular language server
+       community.general.npm:
+          name: "@angular/language-server"
+          global: true
+       # TODO: docker-ls only available in the AUR
+     - name: install docker ls
+       ignore_errors: true
+       ansible.builtin.package:
+          name: docker-ls
+       # TODO: marksman only available in the AUR
+     - name: install marksman
+       ignore_errors: true
+       ansible.builtin.package:
+          name: marksman-bin
