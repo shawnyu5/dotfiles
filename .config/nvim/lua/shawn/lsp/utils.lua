@@ -45,12 +45,15 @@ function M.on_attach(client, bufnr)
 	-- format command
 	vim.cmd("command! Format :lua vim.lsp.buf.format() vim.cmd('write')")
 
-	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	buf_set_keymap("n", "gd", '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
-	buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	buf_set_keymap("n", "<F2>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	buf_set_keymap("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	local opts = { noremap = true, silent = true, buffer = bufnr }
+	local keymap = vim.keymap.set
+	keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
+	keymap("n", "gD", vim.lsp.buf.declaration, opts)
+	keymap("n", "gi", vim.lsp.buf.implementation, bufopts)
+	keymap("n", "K", vim.lsp.buf.hover, opts)
+	keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
+	keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
+	keymap("n", "gr", vim.lsp.buf.references, opts)
 end
 
 return M

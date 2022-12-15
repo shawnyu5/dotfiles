@@ -31,7 +31,7 @@ alias gm="git checkout master || git checkout main"
 
 alias homemonitor="~/.screenlayout/home_monitor.sh"
 alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
-alias homemonitorOff="xrandr --output HDMI1 --off"
+alias homemonitorOff="~/.screenlayout/no_monitor.sh"
 
 #mdp no fade by default
 alias mdp="mdp -f"
