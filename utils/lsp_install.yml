@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
+  become: true
   tasks:
      - name: install go
        import_role:
@@ -7,3 +8,10 @@
        become: true
        vars:
           golang_version: "1.19.4"
+     - name: install gopls
+       ansible.builtin.command:
+          cmd: go install golang.org/x/tools/gopls@latest
+     - name: install bash language server
+       ignore_errors: true
+       ansible.builtin.package:
+          name: bash-language-server
