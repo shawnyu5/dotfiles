@@ -35,9 +35,6 @@ lazy.setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		lazy = false,
-		-- config = function()
-		-- require("shawn.tree-sitter")
-		-- end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
@@ -111,7 +108,15 @@ lazy.setup({
 	-- use("L3MON4D3/LuaSnip")
 	{
 		"SirVer/ultisnips",
+		event = "InsertEnter",
+		config = function()
+			require("shawn.ultisnips")
+		end,
+	},
+	{
 		"honza/vim-snippets",
+		event = "InsertEnter",
+		dependencies = { "SirVer/ultisnips" },
 	},
 	{ "j-hui/fidget.nvim" },
 	{ "lukas-reineke/indent-blankline.nvim" },
