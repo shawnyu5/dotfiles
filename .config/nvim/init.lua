@@ -9,7 +9,7 @@ local function source(file)
 	vim.cmd("source " .. file)
 end
 
-require("shawn.plugin_manager")
+require("shawn.packer")
 require("shawn.tree-sitter")
 require("shawn.ts-context")
 require("shawn.lsp")

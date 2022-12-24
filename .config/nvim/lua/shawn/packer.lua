@@ -94,9 +94,10 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
-	use({ "nvim-lualine/lualine.nvim" })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
+	use({ "shawnyu5/do.nvim" })
+
 	-- use({
 	-- "nvim-neotest/neotest",
 	-- requires = {
