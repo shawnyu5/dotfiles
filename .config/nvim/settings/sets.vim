@@ -27,8 +27,6 @@ set expandtab
 set showtabline=2
 set spelloptions+="noplainbuffer"
 set spell
-"turning on syntax highlighting
-syntax enable
 "autocmd BufEnter makefile,Makefile set noexpandtab softtabstop=0
 
 "allow copying to system clipboard

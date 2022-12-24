@@ -90,7 +90,7 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
-	use({ "nvim-lualine/lualine.nvim" })
+	-- use({ "nvim-lualine/lualine.nvim" })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
 	-- use({
