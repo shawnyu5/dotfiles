@@ -1,6 +1,6 @@
 local ok, project_nvim = pcall(require, "project_nvim")
 if not ok then
-	print("project not installed...")
+	print("project_nvim not installed...")
 	return
 end
 
