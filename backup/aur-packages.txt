@@ -1,6 +1,7 @@
 act
 air
 aws-cli-v2-bin
+docker-ls
 google-chrome
 grub-tools
 grub2-theme-endeavouros
@@ -13,6 +14,8 @@ javafx-scenebuilder
 jdtls
 kazam
 marp-cli-bin
+neovim-nightly-bin
+openssl-1.0
 pcurses
 prettierd
 stylua-bin

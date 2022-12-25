@@ -8,6 +8,7 @@ adobe-source-code-pro-fonts
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
+adwaita-cursors
 adwaita-icon-theme
 alsa-card-profiles
 alsa-firmware
@@ -43,6 +44,7 @@ barrier-headless
 base
 bash
 bash-completion
+bash-language-server
 bc
 bind
 binutils
@@ -93,11 +95,13 @@ curl
 cython
 dav1d
 db
+db5.3
 dbus
 dbus-glib
 dbus-python
 dconf
 debuginfod
+default-cursors
 delve
 desktop-file-utils
 device-mapper
@@ -805,6 +809,7 @@ libvorbis
 libvpx
 libvterm
 libwacom
+libwbclient
 libwebp
 libwireplumber
 libwmf
@@ -925,7 +930,7 @@ ndctl
 ndisc6
 neofetch
 neon
-neovim
+net-tools
 netctl
 netpbm
 nettle
@@ -971,7 +976,6 @@ openpmix
 openresolv
 openssh
 openssl
-openssl-1.0
 openvpn
 opus
 orc
@@ -1054,6 +1058,7 @@ procps-ng
 psmisc
 purpose
 pv
+pyright
 python
 python-appdirs
 python-attrs
@@ -1338,6 +1343,7 @@ threadweaver
 thunar
 thunar-archive-plugin
 thunar-volman
+tinygo
 tinyxml2
 tldr
 tmux
@@ -1376,6 +1382,8 @@ v4l-utils
 valgrind
 vde2
 vid.stab
+vim
+vim-runtime
 virglrenderer
 vlc
 vmaf
@@ -1460,7 +1468,7 @@ xterm
 xvidcore
 xxhash
 xz
-yad-eos
+yad
 yajl
 yaml-cpp
 yaml-language-server
