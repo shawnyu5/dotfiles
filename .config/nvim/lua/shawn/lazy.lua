@@ -18,6 +18,7 @@ if not ok then
 end
 
 local pluginSpec = {
+	{ "folke/lazy.nvim" },
 	{
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
