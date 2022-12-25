@@ -219,7 +219,7 @@ local pluginSpec = {
 	}, -- auto close html tags,
 }
 local lines = {}
-for line in io.lines(vim.fn.expand("~") .. ".config/nvim/system_config.json") do
+for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
 	lines[#lines + 1] = line
 end
 
