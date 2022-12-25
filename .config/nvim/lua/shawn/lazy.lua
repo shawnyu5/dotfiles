@@ -17,7 +17,7 @@ if not ok then
 	return
 end
 
-lazy.setup({
+local pluginSpec = {
 	{
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
@@ -165,10 +165,14 @@ lazy.setup({
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+		ft = { "markdown" },
 	},
 	{ "shawnyu5/executor.nvim" },
 	-- use("~/.config/nvim/lua/shawn/terminal/")
-	{ "mzlogin/vim-markdown-toc" }, -- auto generate table of contents,
+	{
+		"mzlogin/vim-markdown-toc",
+		ft = "markdown",
+	}, -- auto generate table of contents,
 	{
 		"tweekmonster/wstrip.vim",
 		event = "InsertEnter",
@@ -177,9 +181,15 @@ lazy.setup({
 	{ "karb94/neoscroll.nvim" },
 	{ "chmp/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
-	{ "Shatur/neovim-session-manager" },
 	{ "nvim-telescope/telescope.nvim" },
-	{ "nvim-telescope/telescope-ui-select.nvim" },
+	{
+		"Shatur/neovim-session-manager",
+		dependencies = { "nvim-telescope/telescope.nvim" },
+	},
+	{
+		"nvim-telescope/telescope-ui-select.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim" },
+	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim" },
@@ -203,5 +213,24 @@ lazy.setup({
 			})
 		end,
 	}, -- i3config highlighting
-	{ "alvan/vim-closetag" }, -- auto close html tags,
-}, {})
+	{
+		"alvan/vim-closetag",
+		ft = { "html" },
+	}, -- auto close html tags,
+}
+local lines = {}
+for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
+	lines[#lines + 1] = line
+end
+
+local system_config = vim.fn.json_decode(lines)
+if system_config.windows == true then
+	table.insert(pluginSpec, {
+		"williamboman/mason.nvim",
+		config = function()
+			require("shawn.mason")
+		end,
+	})
+end
+
+lazy.setup(pluginSpec, {})
