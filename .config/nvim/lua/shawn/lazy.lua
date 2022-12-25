@@ -18,6 +18,7 @@ if not ok then
 end
 
 local pluginSpec = {
+	{ "folke/lazy.nvim" },
 	{
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
@@ -42,11 +43,6 @@ local pluginSpec = {
 	},
 	{ "anuvyklack/hydra.nvim" },
 
-	-- use({
-	-- "windwp/nvim-ts-autotag",
-	-- requires = "nvim-treesitter/nvim-treesitter",
-	-- })
-
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "akinsho/git-conflict.nvim" },
 	{
@@ -54,10 +50,6 @@ local pluginSpec = {
 		branch = "main",
 		dependencies = { "itchyny/lightline.vim" },
 	}, -- color scheme
-	-- {
-	-- "SmiteshP/nvim-navic",
-	-- dependencies = "neovim/nvim-lspconfig",
-	-- },
 	{
 		"meain/vim-jsontogo",
 		ft = "go",
@@ -218,6 +210,7 @@ local pluginSpec = {
 		ft = { "html" },
 	}, -- auto close html tags,
 }
+
 local lines = {}
 for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
 	lines[#lines + 1] = line
