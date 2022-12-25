@@ -1,4 +1,4 @@
-local ok, treesitter = pcall(require, "nvim-treesitter")
+local ok, _ = pcall(require, "nvim-treesitter")
 if not ok then
 	print("treesitter not installed...")
 	return

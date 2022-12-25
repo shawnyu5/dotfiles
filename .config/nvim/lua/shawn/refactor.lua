@@ -3,6 +3,7 @@ if not ok then
 	vim.notify("refactoring not installed...", vim.log.levels.WARN)
 	return
 end
+
 refactoring.setup({
 	print_var_statements = {
 		-- add a custom print var statement for cpp
