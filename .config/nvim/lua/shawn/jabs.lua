@@ -51,5 +51,5 @@ require("jabs").setup({
 	},
 
 	-- Whether to use nvim-web-devicons next to filenames
-	use_devicons = true, -- true or false. Default true
+	use_devicons = false, -- true or false. Default true
 })

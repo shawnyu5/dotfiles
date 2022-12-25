@@ -157,7 +157,7 @@ lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
-      utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 })
@@ -182,7 +182,7 @@ lsp.sumneko_lua.setup({
 		client.server_capabilities.document_formatting = false
 
 		-- client.server_capabilities.document_range_formatting = true
-      utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {

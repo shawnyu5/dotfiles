@@ -45,16 +45,13 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 
 	use({ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } })
-	use({ "hashivim/vim-terraform" })
 
-	use({ "williamboman/mason.nvim" })
 	-- use({ "github/copilot.vim" })
 
 	-- use({ "https://github.com/nocksock/do.nvim" })
 	-- use({ "~/do.nvim" })
-	-- use({ "shawnyu5/do.nvim" })
+	use({ "shawnyu5/do.nvim" })
 	use("wbthomason/packer.nvim")
-	-- use("nathom/filetype.nvim")
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -68,21 +65,20 @@ return packer.startup(function(use)
 	-- requires = "nvim-treesitter/nvim-treesitter",
 	-- })
 
-	use("eandrju/cellular-automaton.nvim")
-
 	use("norcalli/nvim-colorizer.lua")
 	use("akinsho/git-conflict.nvim")
 	use({
 		"folke/tokyonight.nvim",
 		branch = "main",
 	}) -- color scheme
-	use({
-		"SmiteshP/nvim-navic",
-		requires = "neovim/nvim-lspconfig",
-	})
+	-- use({
+	-- "SmiteshP/nvim-navic",
+	-- requires = "neovim/nvim-lspconfig",
+	-- })
 	use({ "meain/vim-jsontogo" })
 
-	use("matbme/JABS.nvim")
+	-- use("matbme/JABS.nvim")
+	use("j-morano/buffer_manager.nvim")
 
 	-- dap
 	use({
@@ -94,10 +90,9 @@ return packer.startup(function(use)
 
 	use("aserowy/tmux.nvim")
 
+	-- use({ "nvim-lualine/lualine.nvim" })
 	use({ "itchyny/lightline.vim" }) -- status bar
 	use({ "vim-test/vim-test" })
-	use({ "shawnyu5/do.nvim" })
-
 	-- use({
 	-- "nvim-neotest/neotest",
 	-- requires = {
