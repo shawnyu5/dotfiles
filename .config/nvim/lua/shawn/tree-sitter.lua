@@ -6,7 +6,6 @@ end
 -- :TSInstall javascript bash lua python cpp vim
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
-		"yaml",
 		"javascript",
 		"go",
 		"bash",
@@ -16,18 +15,19 @@ require("nvim-treesitter.configs").setup({
 		"vim",
 		"java",
 		"typescript",
-		"tsx",
 		"rust",
 		"dockerfile",
+		"markdown",
+		"markdown_inline",
+		"yaml",
+		"tsx",
 	},
+
 	highlight = {
 		enable = true,
 		-- disable ={ "html" },
 
 		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-		-- Using this option may slow down your editor, and you may see some duplicate highlights.
-		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	},
 	incremental_selection = {

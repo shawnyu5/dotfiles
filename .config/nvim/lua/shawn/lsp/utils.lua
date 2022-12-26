@@ -35,14 +35,6 @@ function M.on_attach(client, bufnr)
 
 	vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 
-	-- Mappings
-	local opts = {
-		noremap = true,
-		silent = true,
-	}
-
-	-- require("lsp_signature").on_attach()
-
 	-- rename command
 	vim.cmd("command! Rename :lua vim.lsp.buf.rename()")
 	-- format command
@@ -52,7 +44,7 @@ function M.on_attach(client, bufnr)
 	local keymap = vim.keymap.set
 	keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
 	keymap("n", "gD", vim.lsp.buf.declaration, opts)
-	keymap("n", "gi", vim.lsp.buf.implementation, bufopts)
+	keymap("n", "gi", vim.lsp.buf.implementation, opts)
 	keymap("n", "K", vim.lsp.buf.hover, opts)
 	keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
 	keymap("n", "<leader>h", vim.diagnostic.open_float, opts)

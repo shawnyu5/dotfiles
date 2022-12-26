@@ -4,6 +4,7 @@ vim.opt.relativenumber = true
 vim.g.mapleader = " "
 -- get rid of eob fill chars
 vim.opt.fillchars = { eob = " " }
+vim.cmd([[set syntax=off]])
 
 --- source a vim file
 ---@param file string file path to source
@@ -15,12 +16,13 @@ source("~/.config/nvim/settings/maps.vim")
 source("~/.config/nvim/settings/sets.vim")
 require("shawn.lazy")
 -- require("shawn.packer")
-require("shawn.tree-sitter")
 require("shawn.ts-context")
 require("shawn.lsp")
 require("shawn.autocmd")
 require("shawn.hydra")
 require("shawn.do")
+require("shawn.due")
+require("shawn.bullets")
 require("shawn.nvim-tree")
 require("shawn.lightline")
 require("shawn.tmux")
@@ -41,7 +43,7 @@ require("shawn.executor_settings")
 require("shawn.neoscroll")
 require("shawn.session_manager")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
--- require("shawn.jabs")
+-- -- require("shawn.jabs")
 require("shawn.tokyo-knight")
 -- require("shawn.neotest")
 require("shawn.vim-test")
@@ -54,7 +56,7 @@ source("~/.config/nvim/settings/nerdcommenter_settings.vim")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 source("~/.config/nvim/settings/vim-closetag.vim")
 source("~/.config/nvim/settings/md_paste.vim")
-require("shawn.terminal")
+-- require("shawn.terminal")
 
 -- markdown table of contents setting
 -- ===================================
