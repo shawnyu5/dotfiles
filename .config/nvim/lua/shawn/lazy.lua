@@ -33,6 +33,11 @@ local pluginSpec = {
 	{ "shawnyu5/do.nvim" },
 	-- -- { "wbthomason/packer.nvim" },
 	{
+		"dkarter/bullets.vim",
+		ft = { "markdown", "text" },
+	},
+	{ "NFrid/due.nvim" },
+	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		lazy = false,
@@ -157,6 +162,15 @@ local pluginSpec = {
 			vim.fn["mkdp#util#install"]()
 		end,
 		ft = { "markdown" },
+	},
+	{
+		"toppair/peek.nvim",
+		build = "deno task --quiet build:fast",
+		ft = { "markdown" },
+		event = "VeryLazy",
+		config = function()
+			require("shawn.peek")
+		end,
 	},
 	{ "shawnyu5/executor.nvim" },
 	{
