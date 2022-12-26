@@ -32,10 +32,6 @@ local pluginSpec = {
 
 	{ "shawnyu5/do.nvim" },
 	-- -- { "wbthomason/packer.nvim" },
-	{
-		"dkarter/bullets.vim",
-		ft = { "markdown", "text" },
-	},
 	{ "NFrid/due.nvim" },
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -178,12 +174,23 @@ local pluginSpec = {
 		ft = "markdown",
 	}, -- auto generate table of contents,
 	{
+		"jakewvincent/mkdnflow.nvim",
+		ft = "markdown",
+		config = function()
+			require("shawn.mkdnflow")
+		end,
+	},
+	{
+		"dkarter/bullets.vim",
+		ft = { "markdown", "text" },
+	},
+	{
 		"tweekmonster/wstrip.vim",
 		event = "InsertEnter",
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "karb94/neoscroll.nvim" },
-	{ "chmp/mdnav" }, -- opening links in markdown,
+	-- { "chmp/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
 	{
@@ -201,9 +208,7 @@ local pluginSpec = {
 	{ "szw/vim-maximizer" }, -- vim maxmizer,
 	{ "adelarsq/vim-matchit" }, -- matchit,
 	{ "tpope/vim-surround" }, -- vim surround,
-	{
-		"sedm0784/vim-you-autocorrect",
-	},
+	{ "sedm0784/vim-you-autocorrect" },
 	{
 		"mboughaba/i3config.vim",
 		config = function()
