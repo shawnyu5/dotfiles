@@ -6,7 +6,6 @@ end
 -- :TSInstall javascript bash lua python cpp vim
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
-		"yaml",
 		"javascript",
 		"go",
 		"bash",
@@ -16,10 +15,14 @@ require("nvim-treesitter.configs").setup({
 		"vim",
 		"java",
 		"typescript",
-		"tsx",
 		"rust",
 		"dockerfile",
+		"markdown",
+		"markdown_inline",
+		"yaml",
+		"tsx",
 	},
+
 	highlight = {
 		enable = true,
 		-- disable ={ "html" },
