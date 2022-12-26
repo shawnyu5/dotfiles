@@ -75,6 +75,7 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 			vim.cmd("LspStart")
 		end, 7000)
 	end,
+	once = true,
 })
 
 -- css
