@@ -57,7 +57,7 @@ local lightline_component = {
 }
 
 vim.g.lightline = {
-	colorscheme = "tokyonight",
+	colorscheme = "jellybeans",
 	component_expand = {
 		relativePath = lightline_component.relativepath,
 	},
