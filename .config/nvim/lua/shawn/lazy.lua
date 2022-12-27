@@ -67,7 +67,11 @@ local pluginSpec = {
 		config = function()
 			require("zephyr")
 			-- make background transparent
-			vim.api.nvim_set_hl(0, "Normal", {
+			local set_hl = vim.api.nvim_set_hl
+			set_hl(0, "Normal", {
+				bg = "none",
+			})
+			set_hl(0, "NormalFloat", {
 				bg = "none",
 			})
 		end,
