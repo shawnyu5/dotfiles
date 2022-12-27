@@ -30,7 +30,10 @@ local pluginSpec = {
 
 	-- -- use({ "github/copilot.vim" })
 
-	{ "shawnyu5/do.nvim" },
+	{
+		"shawnyu5/do.nvim",
+		-- dir = "/home/shawn/do.nvim",
+	},
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
 	{
@@ -43,6 +46,10 @@ local pluginSpec = {
 		end,
 	},
 	{
+		"nvim-treesitter/playground",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+	},
+	{
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
@@ -50,10 +57,20 @@ local pluginSpec = {
 
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "akinsho/git-conflict.nvim" },
+	-- {
+	-- "folke/tokyonight.nvim",
+	-- branch = "main",
+	-- dependencies = { "itchyny/lightline.vim" },
+	-- },
 	{
-		"folke/tokyonight.nvim",
-		branch = "main",
-		dependencies = { "itchyny/lightline.vim" },
+		"glepnir/zephyr-nvim",
+		config = function()
+			require("zephyr")
+			-- make background transparent
+			vim.api.nvim_set_hl(0, "Normal", {
+				bg = "none",
+			})
+		end,
 	},
 	{
 		"meain/vim-jsontogo",
@@ -74,7 +91,12 @@ local pluginSpec = {
 	{ "aserowy/tmux.nvim" },
 
 	-- -- use({ "nvim-lualine/lualine.nvim" })
-	-- { "itchyny/lightline.vim" }, -- status bar,
+	{
+		"itchyny/lightline.vim",
+		config = function()
+			require("shawn.lightline")
+		end,
+	}, -- status bar,
 	{
 		"vim-test/vim-test",
 		event = "VeryLazy",
@@ -142,6 +164,10 @@ local pluginSpec = {
 			require("shawn.cmp")
 		end,
 	},
+	{
+		"SmiteshP/nvim-navic",
+		dependencies = { "neovim/nvim-lspconfig" },
+	},
 	-- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 	{ "zbirenbaum/copilot.lua" },
 	-- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
@@ -168,7 +194,9 @@ local pluginSpec = {
 			require("shawn.peek")
 		end,
 	},
-	{ "shawnyu5/executor.nvim" },
+	{
+		"shawnyu5/executor.nvim",
+	},
 	{
 		"mzlogin/vim-markdown-toc",
 		ft = "markdown",
@@ -181,6 +209,7 @@ local pluginSpec = {
 		end,
 	},
 	{
+		-- work with bullet lists in md nicely
 		"dkarter/bullets.vim",
 		ft = { "markdown", "text" },
 	},
