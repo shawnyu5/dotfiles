@@ -57,21 +57,31 @@ local pluginSpec = {
 
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "akinsho/git-conflict.nvim" },
-	-- {
-	-- "folke/tokyonight.nvim",
-	-- branch = "main",
-	-- dependencies = { "itchyny/lightline.vim" },
-	-- },
 	{
-		"glepnir/zephyr-nvim",
-		config = function()
-			require("zephyr")
-			-- make background transparent
-			vim.api.nvim_set_hl(0, "Normal", {
-				bg = "none",
-			})
-		end,
+		"folke/tokyonight.nvim",
+		branch = "main",
+		dependencies = { "itchyny/lightline.vim" },
 	},
+	-- {
+	-- "glepnir/zephyr-nvim",
+	-- config = function()
+	-- require("zephyr")
+	-- -- make background transparent
+	-- local set_hl = vim.api.nvim_set_hl
+	-- set_hl(0, "Normal", {
+	-- bg = "none",
+	-- })
+	-- set_hl(0, "NormalFloat", {
+	-- bg = "none",
+	-- })
+	-- -- set_hl(0, "FloatBorder", {
+	-- -- bg = "yellow",
+	-- -- })
+	-- set_hl(0, "CmpDocumentation", {
+	-- bg = "gray",
+	-- })
+	-- end,
+	-- },
 	{
 		"meain/vim-jsontogo",
 		ft = "go",
