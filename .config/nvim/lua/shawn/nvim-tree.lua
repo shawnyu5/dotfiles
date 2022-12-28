@@ -6,6 +6,9 @@ end
 
 tree.setup({
 	sort_by = "case_sensitive",
+	-- hijack_unnamed_buffer_when_opening = true,
+	-- focus_empty_on_setup = true,
+	-- open_on_setup = true, -- open tree by default when nvim is open with no args
 	view = {
 		adaptive_size = true,
 		mappings = {

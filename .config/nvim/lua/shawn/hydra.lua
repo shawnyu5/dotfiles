@@ -70,22 +70,22 @@ M.dap_hydra = hydra({
 	},
 })
 
--- local take_input = function()
--- vim.ui.select({ "a", "b", "c" }, {
--- prompt = "Input: ",
--- on_select = function(selected)
--- print(selected)
--- end,
--- })
--- end
--- hydra({
--- name = "input test",
--- mode = "n",
--- body = "t",
--- heads = {
--- { "s", take_input, { desc = "Take input", exit = true } },
--- },
--- })
+local take_input = function()
+	vim.ui.select({ "a", "b", "c" }, {
+		prompt = "Input: ",
+		on_select = function(selected)
+			print(selected)
+		end,
+	})
+end
+hydra({
+	name = "input test",
+	mode = "n",
+	body = "t",
+	heads = {
+		{ "s", take_input, { desc = "Take input", exit = true } },
+	},
+})
 
 local hint = [[
   ^ ^        Options

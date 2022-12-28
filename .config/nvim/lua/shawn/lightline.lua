@@ -26,11 +26,17 @@ vim.g.Get_harpoon_status = function()
 	return "🦈 " .. mark_id
 end
 
+--- Get the relative path name of the current file
+---@return string
+vim.g.Get_relative_path_name = function()
+	return vim.fn.expand("%f")
+end
+
 local lightline_component = {
 	mode = "%{lightline#mode()}",
 	absolutepath = "%F",
 	relativepath = "%f",
-	filename = "%t",
+	filename = "%f",
 	modified = "%M",
 	bufnum = "%n",
 	paste = '%{&paste?"PASTE":""}',
@@ -51,7 +57,10 @@ local lightline_component = {
 }
 
 vim.g.lightline = {
-	colorscheme = "tokyonight",
+	colorscheme = "jellybeans",
+	component_expand = {
+		relativePath = lightline_component.relativepath,
+	},
 	active = {
 		left = {
 			{ "mode", "paste" },
@@ -65,13 +74,29 @@ vim.g.lightline = {
 			{ "fileformat", "fileencoding", "filetype" },
 		},
 	},
+	-- tab_component = {
+	-- -- relativepath = "HELLO"
+	-- relativepath = vim.fn.expand("%f"),
+	-- },
+	tab_component_function = {
+		relativepathFunc = "Get_relative_path_name",
+	},
 	tab = {
 		active = { "tabnum", "filename", "modified" },
-		-- inactive = { "tabnum", "filename", "modified" },
+		inactive = { "tabnum", "filename", "modified" },
+	},
+	tabline = {
+		left = {
+			{ "tabs" },
+		},
+		right = {
+			-- { "close" },
+		},
 	},
 	component_function = {
 		gitBranch = "GetGitBranch",
 		harpoonMark = "Get_harpoon_status",
+		relativePathName = "Get_relative_path_name",
 	},
 }
 

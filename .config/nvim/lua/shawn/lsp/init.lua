@@ -67,6 +67,17 @@ lsp.marksman.setup({
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+	pattern = "*.md",
+	callback = function()
+		vim.defer_fn(function()
+			vim.notify("Restarted marksman lsp...")
+			vim.cmd("LspStart")
+		end, 7000)
+	end,
+	once = true,
+})
+
 -- css
 lsp.cssls.setup({
 	on_attach = function(client, bufnr)
@@ -91,11 +102,13 @@ lsp.dockerls.setup({
 	end,
 })
 
--- yay -S yaml-language-server
 lsp.yamlls.setup({
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
+		if client.server_capabilities.documentSymbolProvider then
+			require("nvim-navic").attach(client, bufnr)
+		end
 	end,
 })
 
@@ -157,7 +170,7 @@ lsp.html.setup({
 	capabilities = capabilities_html,
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
-      utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 })
@@ -182,7 +195,7 @@ lsp.sumneko_lua.setup({
 		client.server_capabilities.document_formatting = false
 
 		-- client.server_capabilities.document_range_formatting = true
-		-- utils.format_on_save()
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {

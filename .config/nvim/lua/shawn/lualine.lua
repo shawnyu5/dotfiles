@@ -4,8 +4,6 @@ if not ok then
 	return
 end
 
-M = {}
-
 local fileName = function()
 	return vim.fn.expand("%:t")
 end
@@ -37,12 +35,26 @@ lualine.setup({
 		lualine_z = {},
 	},
 	tabline = {
-		lualine_a = { "tabs" },
-		lualine_b = { fileName },
-		lualine_c = {},
-		lualine_x = {},
-		lualine_y = {},
-		lualine_z = {},
+		-- lualine_a = { fileName },
+		-- lualine_b = { fileName },
+		-- lualine_c = { "filename" },
+		-- lualine_x = {},
+		-- lualine_y = {},
+		-- lualine_z = {},
 	},
 	extensions = {},
 })
+
+-- vim.opt.tabline = "%f"
+
+-- local set_tabline = function()
+-- local bulist = {}
+-- local last_tab = vim.fn.tabpagenr("$")
+-- for i = 1, last_tab do
+-- -- append to bulist
+-- table.insert(bulist, i)
+-- end
+-- print("function bulist:", vim.inspect(bulist)) -- __AUTO_GENERATED_PRINT_VAR__
+-- end
+
+-- set_tabline()

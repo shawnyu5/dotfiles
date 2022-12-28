@@ -1,7 +1,7 @@
 snippet pcall "checks if a module is installed"
-local ok, ${1:module} = pcall(require, "$1")
+local ok, ${1:module} = pcall(require, "${2:$1}")
 if not ok then
-	vim.notify("$1 not installed...", vim.log.ERROR)
+	vim.notify("$2 not installed...", vim.log.ERROR)
 	return
 end
 endsnippet

@@ -20,7 +20,7 @@ neoscroll.setup({
 
 local t = {}
 -- Syntax: t[keys] = {function, {function arguments}}
-t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "150" } }
-t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "150" } }
+t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "200" } }
+t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "200" } }
 
 require("neoscroll.config").set_mappings(t)
