@@ -4,7 +4,7 @@ if not ok then
 	return
 end
 
-tokyonight.setup({
+local config = {
 	-- your configuration comes here
 	-- or leave it empty to use the default settings
 	style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
@@ -39,10 +39,13 @@ tokyonight.setup({
 	---@param highlights Highlights
 	---@param colors ColorScheme
 	on_highlights = function(highlights, colors) end,
-})
+}
+local utils = require("shawn.utils")
+
+local system_config = utils.get_system_config()
+if system_config.windows == true then
+	config.transparent = false
+end
+tokyonight.setup(config)
 
 vim.cmd("colorscheme tokyonight")
--- TreesitterContext
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
--- vim.cmd("hi TreesitterContextLineNumber  guibg=NONE ctermbg=NONE")
--- highlight "TreesitterContext"guibg = NONE

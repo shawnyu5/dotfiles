@@ -267,12 +267,13 @@ local pluginSpec = {
 	}, -- auto close html tags,
 }
 
-local lines = {}
-for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
-	lines[#lines + 1] = line
-end
+local utils = require("shawn.utils")
+-- local lines = {}
+-- for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
+-- lines[#lines + 1] = line
+-- end
 
-local system_config = vim.fn.json_decode(lines)
+local system_config = utils.get_system_config()
 if system_config.windows == true then
 	table.insert(pluginSpec, {
 		"williamboman/mason.nvim",
