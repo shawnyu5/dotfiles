@@ -24,7 +24,6 @@
   "lazy.nvim": { "branch": "main", "commit": "dc03fa1ae57c3949874c9cae50074a83232c4eed" },
   "lightline.vim": { "branch": "master", "commit": "b1e91b41f5028d65fa3d31a425ff21591d5d957f" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
-  "mason.nvim": { "branch": "main", "commit": "fc090f84f525143d47004cae948315fa4b27ab4f" },
   "md-img-paste.vim": { "branch": "master", "commit": "787be15ff52ea2db5ae7b813ab8808c8d4cf749e" },
   "mkdnflow.nvim": { "branch": "main", "commit": "750dacc026467b135a17620eb0e14ab87c0027c9" },
   "neogen": { "branch": "main", "commit": "05e7ca83bb5c976d834473cc96a5f3a6b11e42b0" },
