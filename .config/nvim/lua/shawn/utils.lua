@@ -8,7 +8,8 @@ function M.get_system_config()
 		lines[#lines + 1] = line
 	end
 
-	---@type table
+	---@class table
+	---@field windows boolean if the current system is windows
 	return vim.fn.json_decode(lines)
 end
 
