@@ -30,10 +30,10 @@ local pluginSpec = {
 
 	-- -- use({ "github/copilot.vim" })
 
-	{
-		"shawnyu5/do.nvim",
-		-- dir = "/home/shawn/do.nvim",
-	},
+	-- {
+	-- "shawnyu5/do.nvim",
+	-- -- dir = "/home/shawn/do.nvim",
+	-- },
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
 	{
