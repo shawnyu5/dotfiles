@@ -52,7 +52,9 @@ mkdnflow.setup({
 		auto_extend_cols = false,
 	},
 	mappings = {
-		MkdnEnter = { { "n", "v" }, "<CR>" },
+		-- dont make links from text when pressing enter
+		-- MkdnEnter = { { "n", "v" }, "<CR>" },
+		MkdnEnter = false,
 		MkdnTab = false,
 		MkdnSTab = false,
 		-- dont need to jump to next / prev link in file
@@ -67,7 +69,7 @@ mkdnflow.setup({
 		-- MkdnGoForward = { "n", "<Del>" },
 		MkdnGoBack = false,
 		MkdnGoForward = false,
-		MkdnFollowLink = false, -- see MkdnEnter
+		MkdnFollowLink = { { "n", "v" }, "<CR>" }, -- see MkdnEnter
 		MkdnDestroyLink = { "n", "<M-CR>" },
 		MkdnTagSpan = { "v", "<M-CR>" },
 		-- MkdnMoveSource = { "n", "<F3>" },
