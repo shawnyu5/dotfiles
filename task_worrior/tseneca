@@ -1,9 +1,8 @@
 #!/bin/bash
-#purpose of this file: add a task to project seneca with due date
-#Date: 2021-05-16 
-#---------------------------------
-
 task calendar
+
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
 
 if [[ -z $1 ]]; then
    read -p "task name: " NAME
@@ -11,11 +10,11 @@ else
    NAME="$@"
 fi
 
-read -p "due date: " DATE
-select CLASS in CPP DSA PRJ WTP
+read -p "due date: $YEAR-$MONTH-" DATE
+select CLASS in C# BCI JAC PRJ666
 do
    task add "${NAME}" project:$CLASS\
-      due:$DATE \
+      due:$YEAR-$MONTH-$DATE \
       +seneca
    task  # then display all tasks
    exit
