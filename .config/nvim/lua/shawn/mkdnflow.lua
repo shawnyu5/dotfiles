@@ -53,31 +53,23 @@ mkdnflow.setup({
 	},
 	mappings = {
 		-- dont make links from text when pressing enter
-		-- MkdnEnter = { { "n", "v" }, "<CR>" },
 		MkdnEnter = false,
 		MkdnTab = false,
 		MkdnSTab = false,
 		-- dont need to jump to next / prev link in file
-		-- MkdnNextLink = { "n", "<Tab>" },
-		-- MkdnPrevLink = { "n", "<S-Tab>" },
 		MkdnNextLink = false,
 		MkdnPrevLink = false,
 		MkdnNextHeading = { "n", "]]" },
 		MkdnPrevHeading = { "n", "[[" },
 		-- <C-O> / <C-I> are better for this
-		-- MkdnGoBack = { "n", "<BS>" },
-		-- MkdnGoForward = { "n", "<Del>" },
 		MkdnGoBack = false,
 		MkdnGoForward = false,
-		MkdnFollowLink = { { "n", "v" }, "<CR>" }, -- see MkdnEnter
+		MkdnFollowLink = false,
 		MkdnDestroyLink = { "n", "<M-CR>" },
 		MkdnTagSpan = { "v", "<M-CR>" },
-		-- MkdnMoveSource = { "n", "<F3>" },
 		MkdnMoveSource = false,
 		-- do not override `ya` in normal mode
-		-- MkdnYankAnchorLink = { "n", "ya" },
 		MkdnYankAnchorLink = false,
-		-- MkdnYankFileAnchorLink = { "n", "yfa" },
 		-- dont overide y* mappings
 		MkdnYankFileAnchorLink = false,
 		MkdnIncreaseHeading = { "n", "+" },
@@ -97,8 +89,6 @@ mkdnflow.setup({
 		MkdnTableNewColAfter = { "n", "<leader>ic" },
 		MkdnTableNewColBefore = { "n", "<leader>iC" },
 		-- these are telescope mappings
-		-- MkdnFoldSection = { "n", "<leader>f" },
-		-- MkdnUnfoldSection = { "n", "<leader>F" },
 		MkdnFoldSection = false,
 		MkdnUnfoldSection = false,
 	},
