@@ -23,14 +23,9 @@ set tabstop=3 softtabstop=3
 set shiftwidth=3
 set expandtab
 
-" only show tabs when there are more than 2
 set showtabline=2
 set spelloptions+="noplainbuffer"
 set spell
-"autocmd BufEnter makefile,Makefile set noexpandtab softtabstop=0
-
-"allow copying to system clipboard
-" set clipboard+=unnamedplus
 
 set number
 set autoindent
@@ -55,4 +50,3 @@ set ttimeoutlen=0
 set path+=**
 set scrolloff=3
 
-" set fillchars=eob:\

@@ -37,6 +37,10 @@ local pluginSpec = {
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
 	{
+		"hashivim/vim-terraform",
+		ft = { "terraform" },
+	},
+	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		lazy = false,

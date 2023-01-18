@@ -105,10 +105,8 @@ lsp.dockerls.setup({
 lsp.yamlls.setup({
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
-		utils.format_on_save()
-		if client.server_capabilities.documentSymbolProvider then
-			require("nvim-navic").attach(client, bufnr)
-		end
+		-- utils.format_on_save()
+		require("nvim-navic").attach(client, bufnr)
 	end,
 })
 

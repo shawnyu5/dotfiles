@@ -4,7 +4,6 @@ vim.opt.relativenumber = true
 vim.g.mapleader = " "
 -- get rid of eob fill chars
 vim.opt.fillchars = { eob = " " }
-vim.cmd([[set syntax=off]])
 
 --- source a vim file
 ---@param file string file path to source
