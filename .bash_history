@@ -19,3 +19,4 @@ sudo pacman -S zsh
 chsh -s $(which zsh)
 chsh -s $(which zsh)
 zsh
+ssh shawny@mla05docker.mgt.fundserv.com
