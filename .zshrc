@@ -28,7 +28,7 @@ _comp_options+=(globdots)		# Include hidden files.
 # Enable colors and change prompt:
 autoload -U colors && colors
 
-export TERM="kitty"
+# export TERM="kitty"
 export BROWSER="google-chrome-stable"
 export GOPATH=$HOME/gopath
 
@@ -73,7 +73,8 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    cd "$(find ~ -type d \( -name "*" ! -iname ".*" \) | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
+    DIR="$(find ~ -maxdepth 1 -type d -not -path '*/.*' | fzf --bind="space:toggle-preview")"
+    cd $DIR
 }
 #create a witget using function above
 zle -N cd_with_fzf
