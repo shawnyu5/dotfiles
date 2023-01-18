@@ -2,11 +2,11 @@ help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 init: ## Create all symlinks
-	ln -svf ~/personal/.config/i3 ~/.config/
-	ln -svf ~/personal/.config/kitty ~/.config/kitty
+	# ln -svf ~/personal/.config/i3 ~/.config/
+	# ln -svf ~/personal/.config/kitty ~/.config/
+	# ln -svf ~/personal/.config/i3blocks ~/.config/
+	# ln -svf ~/personal/.config/rofi ~/.config/
 	ln -svf ~/personal/.config/neofetch/ ~/.config/
-	ln -svf ~/personal/.config/i3blocks ~/.config/i3blocks
-	ln -svf ~/personal/.config/rofi ~/.config/rofi
 	ln -svf ~/personal/.gitconfig ~/.gitconfig
 	ln -svf ~/personal/.zshrc ~/.zshrc
 	ln -svf ~/personal/.zsh_aliases ~/.zsh_aliases
@@ -18,8 +18,8 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.bash_history ~/.bash_history
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
-	ln -svf ~/personal/.config/nvim ~/.config/nvim
-	ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
+	ln -svf ~/personal/.config/nvim ~/.config/
+	# ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
 
 backup: FORCE ## backup all pacman packages
 	rm -rf ./backup
@@ -27,9 +27,11 @@ backup: FORCE ## backup all pacman packages
 	pacman -Qnq > ./backup/pacman-packages.txt
 	pacman -Qqem > ./backup/aur-packages.txt
 
-pacman: ## install all pacman and aur packages
-	pacman -S --needed $(cat ./backup/pacman-packages.txt)
-	yay -S --needed $(cat ./backup/aur-packages.txt)
+pacman: ## install all pacman packages
+	pacman -S - < ./backup/pacman-packages.txt
+
+yay: ## install all aur packages
+	yay -S - < ./backup/aur-packages.txt
 
 FORCE: ;
 
