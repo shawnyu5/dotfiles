@@ -73,7 +73,7 @@ bindkey -v '^?' backward-delete-char
 
 function cd_with_fzf
 {
-    DIR="$(find ~ -maxdepth 1 -type d -not -path '*/.*' | fzf --bind="space:toggle-preview")"
+    DIR="$(find ~ -maxdepth 3 -type d -not -path '*/.*' | fzf --bind="space:toggle-preview")"
     cd $DIR
 }
 #create a witget using function above

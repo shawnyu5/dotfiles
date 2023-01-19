@@ -32,6 +32,16 @@ vim.g.Get_relative_path_name = function()
 	return vim.fn.expand("%f")
 end
 
+--- check if `spell` is set
+---@return string
+vim.g.Check_spell = function()
+	local spell = vim.opt.spell:get()
+	if spell then
+		return "📚"
+	end
+	return ""
+end
+
 local lightline_component = {
 	mode = "%{lightline#mode()}",
 	absolutepath = "%F",
@@ -71,7 +81,7 @@ vim.g.lightline = {
 		right = {
 			{ "lineinfo" },
 			{ "percent" },
-			{ "fileformat", "fileencoding", "filetype" },
+			{ "fileformat", "fileencoding", "filetype", "spell" },
 		},
 	},
 	-- tab_component = {
@@ -97,6 +107,7 @@ vim.g.lightline = {
 		gitBranch = "GetGitBranch",
 		harpoonMark = "Get_harpoon_status",
 		relativePathName = "Get_relative_path_name",
+		spell = "Check_spell",
 	},
 }
 
