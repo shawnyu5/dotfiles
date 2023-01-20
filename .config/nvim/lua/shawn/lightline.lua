@@ -26,6 +26,14 @@ vim.g.Get_harpoon_status = function()
 	return "🦈 " .. mark_id
 end
 
+--- check if `spell` is enabled
+---@return string
+vim.g.Check_spell = function()
+	if vim.opt.spell:get() then
+		return "📚"
+	end
+	return ""
+end
 --- Get the relative path name of the current file
 ---@return string
 vim.g.Get_relative_path_name = function()
@@ -71,7 +79,7 @@ vim.g.lightline = {
 		right = {
 			{ "lineinfo" },
 			{ "percent" },
-			{ "fileformat", "fileencoding", "filetype" },
+			{ "fileformat", "fileencoding", "filetype", "checkSpell" },
 		},
 	},
 	-- tab_component = {
@@ -97,6 +105,7 @@ vim.g.lightline = {
 		gitBranch = "GetGitBranch",
 		harpoonMark = "Get_harpoon_status",
 		relativePathName = "Get_relative_path_name",
+		checkSpell = "Check_spell",
 	},
 }
 
