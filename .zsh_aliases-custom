@@ -6,7 +6,7 @@
 #logout
 alias logout="sudo pkill -u shawn"
 
-alias dl="cd ~/Downloads"
+alias dl="cd /mnt/c/Users/shawny/Downloads"
 
 # blackboard selenium
 # alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
