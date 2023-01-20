@@ -1,9 +1,8 @@
 #!/bin/bash
-#purpose of this file: add a task to project seneca with due date
-#Date: 2021-05-16 
-#---------------------------------
+# task calendar
+cal
 
-task calendar
+MONTH=$(date +%b)
 
 if [[ -z $1 ]]; then
    read -p "task name: " NAME
@@ -11,12 +10,15 @@ else
    NAME="$@"
 fi
 
-read -p "due date: " DATE
-select CLASS in CPP DSA PRJ WTP
-do
-   task add "${NAME}" project:$CLASS\
-      due:$DATE \
-      +seneca
-   task  # then display all tasks
-   exit
-done
+read -p "due date: $MONTH " DATE
+
+CLASS=$(echo -e "C#\nBCI\nJAC\nPRJ\n" | fzf)
+
+ultralist add $NAME due:${DATE}${MONTH} +$CLASS
+
+# task add "${NAME}" project:$CLASS\
+   # due:$YEAR-$MONTH-$DATE \
+   # +seneca
+
+# task
+ultralist list
