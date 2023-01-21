@@ -3,10 +3,11 @@ help: ## Prints help for targets with comments
 
 init: set_default_shell ## Create all symlinks
 	ln -svf ~/personal/.config/i3 ~/.config/
-	ln -svf ~/personal/.config/kitty ~/.config/kitty
+	ln -svf ~/personal/.config/kitty ~/.config/
 	ln -svf ~/personal/.config/neofetch/ ~/.config/
-	ln -svf ~/personal/.config/i3blocks ~/.config/i3blocks
-	ln -svf ~/personal/.config/rofi ~/.config/rofi
+	ln -svf ~/personal/.config/i3blocks ~/.config/
+	ln -svf ~/personal/.config/rofi ~/.config/
+	ln -svf ~/personal/.config/nvim ~/.config/
 	ln -svf ~/personal/.gitconfig ~/.gitconfig
 	ln -svf ~/personal/.zshrc ~/.zshrc
 	ln -svf ~/personal/.zsh_aliases ~/.zsh_aliases
@@ -18,8 +19,9 @@ init: set_default_shell ## Create all symlinks
 	ln -svf ~/personal/.bash_history ~/.bash_history
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
-	ln -svf ~/personal/.config/nvim ~/.config/nvim
 	ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
+	ln -svf ~/personal/.todos.json ~/.todos.json
+
 
 backup: FORCE ## backup all pacman packages
 	rm -rf ./backup
