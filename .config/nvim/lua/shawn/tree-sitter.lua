@@ -21,6 +21,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown_inline",
 		"yaml",
 		"tsx",
+		"c_sharp",
 	},
 
 	highlight = {
