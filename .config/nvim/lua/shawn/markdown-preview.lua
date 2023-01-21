@@ -11,12 +11,9 @@ vim.g.mkdp_auto_close = 0
 vim.g.mkdp_refresh_slow = 1
 
 -- specify browser to open preview page
-vim.g.mkdp_browser = "google-chrome-stable"
 local utils = require("shawn.utils")
 local system_config = utils.get_system_config()
-if system_config.windows then
-	vim.g.mkdp_browser = system_config.mkdp_browser_path
-end
+vim.g.mkdp_browser = system_config.mkdp_browser_path
 
 -- use a custom markdown style must be absolute path
 -- like '/Users/username/markdown.css' or expand('~/markdown.css')
