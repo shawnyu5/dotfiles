@@ -13,6 +13,8 @@ ipw2200-fw
 javafx-scenebuilder
 jdtls
 kazam
+ltex-ls-bin
+marksman-bin
 marp-cli-bin
 neovim-nightly-bin
 openssl-1.0
@@ -20,6 +22,7 @@ pcurses
 prettierd
 stylua-bin
 teams
+ultralist
 visual-paradigm-community
 visual-studio-code-bin
 zoom
