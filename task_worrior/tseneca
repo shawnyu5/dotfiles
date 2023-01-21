@@ -20,7 +20,8 @@ ultralist add $NAME due:${DATE}${MONTH} +$CLASS
    # due:$YEAR-$MONTH-$DATE \
    # +seneca
 
-# task
+# archive completed tasks
+ultralist ar c
 ultralist list
 
 cd ~/personal/
