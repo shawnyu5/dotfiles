@@ -12,7 +12,7 @@ fi
 
 read -p "due date: $MONTH " DATE
 
-CLASS=$(echo -e "C#\nBCI\nJAC\nPRJ\n" | fzf)
+CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\ncs" | fzf)
 
 ultralist add $NAME due:${DATE}${MONTH} +$CLASS
 
@@ -22,3 +22,8 @@ ultralist add $NAME due:${DATE}${MONTH} +$CLASS
 
 # task
 ultralist list
+
+cd ~/personal/
+git add .todos.json
+git commit -m "chore: update .todos.json"
+git push

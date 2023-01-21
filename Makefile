@@ -19,6 +19,7 @@ init: ## Create all symlinks
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
 	ln -svf ~/personal/.config/nvim ~/.config/
+	ln -svf ~/personal/.todos.json ~/.todos.json
 	# ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
 
 backup: FORCE ## backup all pacman packages
