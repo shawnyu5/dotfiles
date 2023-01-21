@@ -15,7 +15,7 @@ vim.g.mkdp_browser = "google-chrome-stable"
 local utils = require("shawn.utils")
 local system_config = utils.get_system_config()
 if system_config.windows then
-	vim.g.mkdp_browser = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome"
+	vim.g.mkdp_browser = system_config.mkdp_browser_path
 end
 
 -- use a custom markdown style must be absolute path

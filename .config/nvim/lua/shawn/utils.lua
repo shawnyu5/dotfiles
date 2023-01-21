@@ -10,6 +10,7 @@ function M.get_system_config()
 
 	---@class table
 	---@field windows boolean if the current system is windows
+	---@field mkdp_browser_path string path to local chrome executable
 	return vim.fn.json_decode(lines)
 end
 
