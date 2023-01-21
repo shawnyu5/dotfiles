@@ -1,3 +1,4 @@
 {
-   "windows": false
+   "windows": false,
+   "mkdp_browser_path": "google-chrome-stable"
 }
