@@ -11,7 +11,7 @@
        shell: "echo {{ item }}"
        loop: "{{ branches }}"
 
-     - name: sync neovim config in windows branch
+     - name: sync neovim config in all branch
        shell: |
           cd ~/personal
           git checkout main
@@ -23,3 +23,8 @@
           git commit -m "merged nvim config from main"
           git push
        loop: "{{ branches }}"
+
+
+     - name: go back to default branch
+       shell: |
+         git checkout main
