@@ -10,7 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = true,
 	sources = {
-      formatting.stylua,
+		formatting.stylua,
 		-- formatting.prettier.with({
 		-- extra_args = {
 		-- "--tab-width 3",
@@ -20,7 +20,10 @@ null_ls.setup({
 		-- }),
 		-- formatting.eslint,
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.clang_format,
+		formatting.clang_format.with({
+			disabled_filetypes = { "java" },
+		}),
+		formatting.google_java_format,
 		-- formatting.markdownlint,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({

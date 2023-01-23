@@ -1,14 +1,14 @@
-Language: Java
-IndentWidth: 3
-AlignConsecutiveAssignments: Consecutive
-AlignTrailingComments: true
-AllowAllArgumentsOnNextLine: true
-AllowAllParametersOfDeclarationOnNextLine: true
-AllowShortBlocksOnASingleLine: Empty
-BreakBeforeBraces: Custom
-BraceWrapping:
-   BeforeElse: true
-   AfterClass: true
+# Language: Java
+# IndentWidth: 3
+# AlignConsecutiveAssignments: Consecutive
+# AlignTrailingComments: true
+# AllowAllArgumentsOnNextLine: true
+# AllowAllParametersOfDeclarationOnNextLine: true
+# AllowShortBlocksOnASingleLine: Empty
+# BreakBeforeBraces: Custom
+# BraceWrapping:
+   # BeforeElse: true
+   # AfterClass: true
 
 ---
 Language: Cpp
