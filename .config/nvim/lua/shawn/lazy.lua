@@ -159,6 +159,7 @@ local pluginSpec = {
 	},
 	-- native LSP
 	{ "neovim/nvim-lspconfig" },
+	{ "mfussenegger/nvim-jdtls" },
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
