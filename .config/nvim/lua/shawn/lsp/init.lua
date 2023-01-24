@@ -35,19 +35,76 @@ for type, icon in pairs(signs) do
 end
 
 -- java
-lsp.jdtls.setup({
-	on_attach = function(client, bufnr)
-		client.server_capabilities.document_formatting = false
-		utils.on_attach(client, bufnr)
-		utils.format_on_save()
+-- config.on_attach = function(client, bufnr)
+-- vim.api.nvim_create_user_command("Test", function()
+-- print("hello world")
+-- end, {})
+-- vim.notify("Java LSP on_attach")
+-- utils.on_attach(client, bufnr)
+-- utils.format_on_save()
+-- end
+-- vim.pretty_print(config.on_attach)
+
+local jdtls_group = vim.api.nvim_create_augroup("jdtls", {})
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*.java",
+	group = jdtls_group,
+	callback = function()
+		local config = {
+			cmd = { "jdtls" },
+			root_dir = vim.fs.dirname(vim.fs.find({ ".gradlew", ".git", "mvnw" }, { upward = true })[1]),
+			on_attach = function(client, bufnr)
+				local jdtls = require("jdtls")
+				vim.notify("Java LSP on_attach")
+				utils.on_attach(client, bufnr)
+				utils.format_on_save()
+
+				local command = vim.api.nvim_buf_create_user_command
+				command(bufnr, "JdtExtractConstant", function()
+					jdtls.extract_constant()
+				end, { desc = "jdtls extract constant" })
+				command(bufnr, "JdtExtractVariable", function()
+					jdtls.extract_variable()
+				end, { desc = "jdtls extract variable" })
+				command(bufnr, "JdtExtractMethod", function()
+					jdtls.extract_method()
+				end, { desc = "jdtls extract a method" })
+				command(bufnr, "JdtSuperImpl", function()
+					jdtls.super_implementation()
+				end, { desc = "jdtls jump to super implementation of method" })
+			end,
+		}
+		require("jdtls").start_or_attach(config)
 	end,
 })
 
--- angluar
+-- lsp.jdtls.setup({
+-- on_attach = function(client, bufnr)
+-- client.server_capabilities.document_formatting = false
+-- client.server_capabilities.document_range_formatting = false
+-- utils.on_attach(client, bufnr)
+-- utils.format_on_save()
+-- end,
+-- handlers = {
+-- ["$/progress"] = function(_, result)
+-- vim.api.nvim_command(string.format(':echohl Function | echo "%s" | echohl None', result.message))
+-- end,
+-- },
+-- })
+
+-- angular
 lsp.angularls.setup({
 	on_attach = function(client, bufnr)
 		-- disable rename
 		client.server_capabilities.rename = false
+	end,
+})
+
+-- vue
+lsp.vuels.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
 	end,
 })
 
@@ -78,6 +135,56 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	once = true,
 })
 
+-- c#
+lsp.csharp_ls.setup({
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+		utils.format_on_save()
+	end,
+})
+
+-- lsp.omnisharp.setup({
+-- cmd = { "dotnet", "/usr/lib/omnisharp-roslyn/OmniSharp.dll" },
+-- on_attach = function(client, bufnr)
+-- utils.on_attach(client, bufnr)
+-- client.server_capabilities.semanticTokensProvider = nil
+-- end,
+
+-- -- Enables support for reading code style, naming convention and analyzer
+-- -- settings from .editorconfig.
+-- enable_editorconfig_support = true,
+
+-- -- If true, MSBuild project system will only load projects for files that
+-- -- were opened in the editor. This setting is useful for big C# codebases
+-- -- and allows for faster initialization of code navigation features only
+-- -- for projects that are relevant to code that is being edited. With this
+-- -- setting enabled OmniSharp may load fewer projects and may thus display
+-- -- incomplete reference lists for symbols.
+-- enable_ms_build_load_projects_on_demand = false,
+
+-- -- Enables support for roslyn analyzers, code fixes and rulesets.
+-- enable_roslyn_analyzers = false,
+
+-- -- Specifies whether 'using' directives should be grouped and sorted during
+-- -- document formatting.
+-- organize_imports_on_format = false,
+
+-- -- Enables support for showing unimported types and unimported extension
+-- -- methods in completion lists. When committed, the appropriate using
+-- -- directive will be added at the top of the current file. This option can
+-- -- have a negative impact on initial completion responsiveness,
+-- -- particularly for the first few completion sessions after opening a
+-- -- solution.
+-- enable_import_completion = false,
+
+-- -- Specifies whether to include preview versions of the .NET SDK when
+-- -- determining which version to use for project loading.
+-- sdk_include_prereleases = true,
+
+-- -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
+-- -- true
+-- analyze_open_documents_only = false,
+-- })
 -- css
 lsp.cssls.setup({
 	on_attach = function(client, bufnr)

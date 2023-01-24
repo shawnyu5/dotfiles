@@ -50,13 +50,13 @@ require("shawn.vim-test")
 -- require("shawn.which-key")
 source("~/.config/nvim/settings/bash-lanuage-server.vim")
 -- source("~/.config/nvim/settings/NERDtree_settings.vim")
+require("shawn.terminal")
 require("shawn.autopairs")
 require("shawn.fidget")
 source("~/.config/nvim/settings/nerdcommenter_settings.vim")
 source("~/.config/nvim/settings/vim-you-autocorrect.vim")
 source("~/.config/nvim/settings/vim-closetag.vim")
 source("~/.config/nvim/settings/md_paste.vim")
--- require("shawn.terminal")
 
 -- markdown table of contents setting
 -- ===================================

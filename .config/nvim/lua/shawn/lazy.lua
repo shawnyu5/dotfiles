@@ -159,6 +159,7 @@ local pluginSpec = {
 	},
 	-- native LSP
 	{ "neovim/nvim-lspconfig" },
+	{ "mfussenegger/nvim-jdtls" },
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -233,7 +234,7 @@ local pluginSpec = {
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "karb94/neoscroll.nvim" },
-	{ "chmp/mdnav" }, -- opening links in markdown,
+	-- { "chmp/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
 	{
