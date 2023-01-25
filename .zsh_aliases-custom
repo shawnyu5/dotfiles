@@ -16,24 +16,21 @@ alias dl="cd ~/Downloads"
 
 # opening notes
 alias bcinotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/BCI433/BCI433_notes.md"
-alias jacnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/JAC555/JAC555_notes.md"
 alias prjnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRJ666/PRJ666_notes.md"
-alias csnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO670/PRO670_notes.md"
-alias devopsnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO690/PRO690_notes.md"
+alias csnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO670_intro_to_c_sharp/PRO670_notes.md"
+alias devopsnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO690_intro_to_devops/PRO690_notes.md"
 
 # move commands
 alias mvbci=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/BCI433"
-alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/JAC555/"
 alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRJ666/"
-alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO670/"
-alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO690/"
+alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
 
 # cd commands
 alias cdbci=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/BCI433/"
-alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/JAC555/"
 alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRJ666/"
-alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670/"
-alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690/"
+alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
 
 alias neofetch="neofetch --ascii_distro archlinux"
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
