@@ -4,9 +4,11 @@
   tasks:
     - name: sync task from windows branch
       shell: |
+        git checkout windows
+        git pull
+        git checkout main
         git pull
         git checkout windows .todos.json
-        git pull
         git add .todos.json
         git commit -m "synced .todos.json from branch windows"
         git push
