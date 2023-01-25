@@ -1596,3 +1596,4 @@
 {"description":"test","entry":"20230125T054325Z","modified":"20230125T054325Z","status":"pending","uuid":"d404bad9-a0fd-4cdd-9ed9-efebd90dbdee"}
 {"description":"test","end":"20230125T054333Z","entry":"20230125T054325Z","modified":"20230125T054334Z","status":"deleted","uuid":"d404bad9-a0fd-4cdd-9ed9-efebd90dbdee"}
 {"description":"project charter","due":"20230125T230000Z","entry":"20230125T054349Z","modified":"20230125T054349Z","project":"PRJ","status":"pending","uuid":"b6392c07-a85d-42ed-8a76-2064d53d713a","tags":["seneca"]}
+{"description":"excrise 2b","due":"20230128T045900Z","entry":"20230125T054601Z","modified":"20230125T054601Z","project":"C#","status":"pending","uuid":"d97e302a-8d67-4fb4-ab0f-8851770ab511","tags":["seneca"]}
