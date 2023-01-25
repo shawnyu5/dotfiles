@@ -24,7 +24,6 @@
           git push
        loop: "{{ branches }}"
 
-
      - name: go back to default branch
        shell: |
          git checkout main

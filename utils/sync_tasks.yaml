@@ -1,0 +1,14 @@
+- name: sync ultratasks
+  hosts: localhost
+  become: false
+  tasks:
+    - name: sync task from windows branch
+      shell: |
+        git pull
+        git checkout windows .todos.json
+        git pull
+        git add .todos.json
+        git commit -m "synced .todos.json from branch windows"
+        git push
+
+
