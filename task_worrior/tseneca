@@ -19,4 +19,9 @@ task add "${NAME}" project:$CLASS\
    +seneca
 
 task
+
+cd ~/personal/
+git add .task
+git commit -m "sync task worrior tasks"
+git push
 # ultralist list

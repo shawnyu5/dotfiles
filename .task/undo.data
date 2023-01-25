@@ -5938,3 +5938,10 @@ time 1674622486
 old [description:"test" due:"1673388000" entry:"1674622476" modified:"1674622476" status:"pending" uuid:"2e522ab9-985f-4fb4-b15f-801e51802618"]
 new [description:"test" due:"1673388000" end:"1674622485" entry:"1674622476" modified:"1674622486" status:"deleted" uuid:"2e522ab9-985f-4fb4-b15f-801e51802618"]
 ---
+time 1674625168
+new [description:"test" entry:"1674625168" modified:"1674625168" status:"pending" uuid:"99ee022b-0f24-4853-b0a5-469ad419c961"]
+---
+time 1674625265
+old [description:"test" entry:"1674625168" modified:"1674625168" status:"pending" uuid:"99ee022b-0f24-4853-b0a5-469ad419c961"]
+new [description:"test" end:"1674625264" entry:"1674625168" modified:"1674625265" status:"deleted" uuid:"99ee022b-0f24-4853-b0a5-469ad419c961"]
+---
