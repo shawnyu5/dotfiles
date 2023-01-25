@@ -1581,3 +1581,13 @@
 {"description":"test","end":"20230125T043711Z","entry":"20230125T043603Z","modified":"20230125T043712Z","project":"seneca","status":"deleted","uuid":"b726e62e-d548-4f26-bd7e-cd333fec25e3","tags":["c#"]}
 {"description":"test","entry":"20230125T044035Z","modified":"20230125T044035Z","project":"seneca","status":"pending","uuid":"d5b957bd-a2ff-4f82-869a-a0e9f00398ce"}
 {"description":"test","end":"20230125T044039Z","entry":"20230125T044035Z","modified":"20230125T044040Z","project":"seneca","status":"deleted","uuid":"d5b957bd-a2ff-4f82-869a-a0e9f00398ce"}
+{"description":"project charter","due":"20230125T180000Z","entry":"20230125T045208Z","modified":"20230125T045208Z","project":"PRJ","status":"pending","uuid":"d7b2a8f6-2d85-45bc-8633-64a6ba101b2e","tags":["seneca"]}
+{"description":"project charter","due":"20230125T180000Z","end":"20230125T045236Z","entry":"20230125T045208Z","modified":"20230125T045237Z","project":"PRJ","status":"deleted","uuid":"d7b2a8f6-2d85-45bc-8633-64a6ba101b2e","tags":["seneca"]}
+{"description":"test","due":"20230110T153000Z","entry":"20230125T045258Z","modified":"20230125T045258Z","status":"pending","uuid":"d6ffd20e-9634-4a04-bbd4-dfb2e3b7b39a"}
+{"description":"test","due":"20230110T153000Z","entry":"20230125T045357Z","modified":"20230125T045357Z","status":"pending","uuid":"f04665d1-1fe3-4fba-830c-55a7faada2b4"}
+{"description":"test","due":"20230110T153000Z","end":"20230125T045401Z","entry":"20230125T045258Z","modified":"20230125T045403Z","status":"deleted","uuid":"d6ffd20e-9634-4a04-bbd4-dfb2e3b7b39a"}
+{"description":"test","due":"20230110T153000Z","end":"20230125T045403Z","entry":"20230125T045357Z","modified":"20230125T045403Z","status":"deleted","uuid":"f04665d1-1fe3-4fba-830c-55a7faada2b4"}
+{"description":"test","due":"20230110T103000Z","entry":"20230125T045406Z","modified":"20230125T045406Z","status":"pending","uuid":"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"}
+{"description":"test","due":"20230110T103000Z","end":"20230125T045427Z","entry":"20230125T045406Z","modified":"20230125T045428Z","status":"deleted","uuid":"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"}
+{"description":"test","due":"20230110T220000Z","entry":"20230125T045436Z","modified":"20230125T045436Z","status":"pending","uuid":"2e522ab9-985f-4fb4-b15f-801e51802618"}
+{"description":"test","due":"20230110T220000Z","end":"20230125T045445Z","entry":"20230125T045436Z","modified":"20230125T045446Z","status":"deleted","uuid":"2e522ab9-985f-4fb4-b15f-801e51802618"}

@@ -1,8 +1,8 @@
 #!/bin/bash
-# task calendar
-cal
+task calendar
 
-MONTH=$(date +%b)
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
 
 if [[ -z $1 ]]; then
    read -p "task name: " NAME
@@ -10,15 +10,13 @@ else
    NAME="$@"
 fi
 
-read -p "due date: $MONTH " DATE
+read -p "due date: $YEAR-$MONTH-" DATE
 
 CLASS=$(echo -e "C#\nBCI\nJAC\nPRJ\n" | fzf)
 
-ultralist add $NAME due:${DATE}${MONTH} +$CLASS
+task add "${NAME}" project:$CLASS\
+   due:$YEAR-$MONTH-$DATE \
+   +seneca
 
-# task add "${NAME}" project:$CLASS\
-   # due:$YEAR-$MONTH-$DATE \
-   # +seneca
-
-# task
-ultralist list
+task
+# ultralist list

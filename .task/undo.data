@@ -5903,3 +5903,38 @@ time 1674621640
 old [description:"test" entry:"1674621635" modified:"1674621635" project:"seneca" status:"pending" uuid:"d5b957bd-a2ff-4f82-869a-a0e9f00398ce"]
 new [description:"test" end:"1674621639" entry:"1674621635" modified:"1674621640" project:"seneca" status:"deleted" uuid:"d5b957bd-a2ff-4f82-869a-a0e9f00398ce"]
 ---
+time 1674622328
+new [description:"project charter" due:"1674669600" entry:"1674622328" modified:"1674622328" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d7b2a8f6-2d85-45bc-8633-64a6ba101b2e"]
+---
+time 1674622357
+old [description:"project charter" due:"1674669600" entry:"1674622328" modified:"1674622328" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d7b2a8f6-2d85-45bc-8633-64a6ba101b2e"]
+new [description:"project charter" due:"1674669600" end:"1674622356" entry:"1674622328" modified:"1674622357" project:"PRJ" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"d7b2a8f6-2d85-45bc-8633-64a6ba101b2e"]
+---
+time 1674622378
+new [description:"test" due:"1673364600" entry:"1674622378" modified:"1674622378" status:"pending" uuid:"d6ffd20e-9634-4a04-bbd4-dfb2e3b7b39a"]
+---
+time 1674622437
+new [description:"test" due:"1673364600" entry:"1674622437" modified:"1674622437" status:"pending" uuid:"f04665d1-1fe3-4fba-830c-55a7faada2b4"]
+---
+time 1674622443
+old [description:"test" due:"1673364600" entry:"1674622378" modified:"1674622378" status:"pending" uuid:"d6ffd20e-9634-4a04-bbd4-dfb2e3b7b39a"]
+new [description:"test" due:"1673364600" end:"1674622441" entry:"1674622378" modified:"1674622443" status:"deleted" uuid:"d6ffd20e-9634-4a04-bbd4-dfb2e3b7b39a"]
+---
+time 1674622443
+old [description:"test" due:"1673364600" entry:"1674622437" modified:"1674622437" status:"pending" uuid:"f04665d1-1fe3-4fba-830c-55a7faada2b4"]
+new [description:"test" due:"1673364600" end:"1674622443" entry:"1674622437" modified:"1674622443" status:"deleted" uuid:"f04665d1-1fe3-4fba-830c-55a7faada2b4"]
+---
+time 1674622446
+new [description:"test" due:"1673346600" entry:"1674622446" modified:"1674622446" status:"pending" uuid:"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"]
+---
+time 1674622468
+old [description:"test" due:"1673346600" entry:"1674622446" modified:"1674622446" status:"pending" uuid:"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"]
+new [description:"test" due:"1673346600" end:"1674622467" entry:"1674622446" modified:"1674622468" status:"deleted" uuid:"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"]
+---
+time 1674622476
+new [description:"test" due:"1673388000" entry:"1674622476" modified:"1674622476" status:"pending" uuid:"2e522ab9-985f-4fb4-b15f-801e51802618"]
+---
+time 1674622486
+old [description:"test" due:"1673388000" entry:"1674622476" modified:"1674622476" status:"pending" uuid:"2e522ab9-985f-4fb4-b15f-801e51802618"]
+new [description:"test" due:"1673388000" end:"1674622485" entry:"1674622476" modified:"1674622486" status:"deleted" uuid:"2e522ab9-985f-4fb4-b15f-801e51802618"]
+---

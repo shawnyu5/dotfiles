@@ -20,7 +20,8 @@ init: set_default_shell ## Create all symlinks
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
 	ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
-	ln -svf ~/personal/.todos.json ~/.todos.json
+	# Ultralist
+	# ln -svf ~/personal/.todos.json ~/.todos.json
 
 
 backup: FORCE ## backup all pacman packages
