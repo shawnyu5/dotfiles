@@ -25,6 +25,7 @@ ultralist ar c
 ultralist list
 
 cd ~/personal/
+gpull
 git add .todos.json
 git commit -m "chore: update .todos.json"
 git push
