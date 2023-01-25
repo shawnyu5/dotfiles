@@ -1,0 +1,40 @@
+- name: sync ultratasks
+  hosts: localhost
+  become: false
+  vars:
+     branch:
+        - main
+        - windows
+  tasks:
+     - name: get current branch name
+       register: branch_name_command
+       shell: git rev-parse --abbrev-ref HEAD
+
+     - set_fact:
+          # branch to sync info from
+          target_branch: "{{ branch | difference(branch_name_command.stdout) }}"
+          # current branch
+          og_branch: "{{ branch | intersect(branch_name_command.stdout) }}"
+
+     # - name: debug
+     # debug:
+     # msg: "{{ branch | intersect(branch_name_command.stdout) }}"
+     - name: "sync task from {{ target_branch }} branch"
+       register: sync_task
+       shell: |
+          cd ~/personal
+          git fetch --all
+          # git checkout {{ target_branch[0] }}
+          # git pull
+          git checkout {{ og_branch[0] }}
+          git pull
+          git checkout {{ target_branch[0] }} .task
+          # git add .todos.json
+          # git commit -m "synced .todos.json from branch {{ target_branch[0] }}"
+          # git push
+     - name: stdout
+       debug:
+          msg: "{{ sync_task.stdout.split('\n') }}"
+     - name: stderr
+       debug:
+          msg: "{{ sync_task.stderr.split('\n') }}"
