@@ -17,7 +17,6 @@
           git checkout main
           git pull
           git checkout {{ item }}
-          git pull
           git checkout main .config/nvim
           git add .config/nvim
           git commit -m "merged nvim config from main"
