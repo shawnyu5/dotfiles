@@ -111,6 +111,8 @@ lsp.vuels.setup({
 -- json
 lsp.jsonls.setup({
 	on_attach = function(client, bufnr)
+		client.server_capabilities.document_formatting = false
+		client.server_capabilities.document_range_formatting = false
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
 	end,
