@@ -5958,3 +5958,6 @@ new [description:"project charter" due:"1674687600" entry:"1674625429" modified:
 time 1674625561
 new [description:"excrise 2b" due:"1674881940" entry:"1674625561" modified:"1674625561" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d97e302a-8d67-4fb4-ab0f-8851770ab511"]
 ---
+time 1674625581
+new [description:"excrise 2d" due:"1674881940" entry:"1674625581" modified:"1674625581" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"596b0664-83f2-4be6-8976-f707edbaf9f7"]
+---
