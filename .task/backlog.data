@@ -1591,3 +1591,4 @@
 {"description":"test","due":"20230110T103000Z","end":"20230125T045427Z","entry":"20230125T045406Z","modified":"20230125T045428Z","status":"deleted","uuid":"2332a7d5-9e35-40d1-9db3-cf71fcb637ec"}
 {"description":"test","due":"20230110T220000Z","entry":"20230125T045436Z","modified":"20230125T045436Z","status":"pending","uuid":"2e522ab9-985f-4fb4-b15f-801e51802618"}
 {"description":"test","due":"20230110T220000Z","end":"20230125T045445Z","entry":"20230125T045436Z","modified":"20230125T045446Z","status":"deleted","uuid":"2e522ab9-985f-4fb4-b15f-801e51802618"}
+{"description":"test","entry":"20230125T053928Z","modified":"20230125T053928Z","status":"pending","uuid":"99ee022b-0f24-4853-b0a5-469ad419c961"}
