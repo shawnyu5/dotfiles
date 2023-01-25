@@ -16,10 +16,7 @@
           # current branch
           og_branch: "{{ branch | intersect(branch_name_command.stdout) }}"
 
-     # - name: debug
-     # debug:
-     # msg: "{{ branch | intersect(branch_name_command.stdout) }}"
-     - name: "sync task from {{ target_branch }} branch"
+     - name: "sync task from {{ target_branch[0] }} branch"
        register: sync_task
        shell: |
           cd ~/personal
@@ -29,9 +26,9 @@
           git checkout {{ og_branch[0] }}
           git pull
           git checkout {{ target_branch[0] }} .task
-          # git add .todos.json
-          # git commit -m "synced .todos.json from branch {{ target_branch[0] }}"
-          # git push
+          git add .task
+          git commit -m "synced .task from branch {{ target_branch[0] }}"
+          git push
      - name: stdout
        debug:
           msg: "{{ sync_task.stdout.split('\n') }}"
