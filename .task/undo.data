@@ -5967,3 +5967,7 @@ new [description:"create windows VM" due:"1675141140" entry:"1674625613" modifie
 time 1674625653
 new [description:"fjds" due:"1673326800" entry:"1674625653" modified:"1674625653" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebb3d803-9d8c-4fd9-bb6d-4bbd30116863"]
 ---
+time 1674625668
+old [description:"fjds" due:"1673326800" entry:"1674625653" modified:"1674625653" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebb3d803-9d8c-4fd9-bb6d-4bbd30116863"]
+new [description:"fjds" due:"1673326800" end:"1674625667" entry:"1674625653" modified:"1674625668" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"ebb3d803-9d8c-4fd9-bb6d-4bbd30116863"]
+---
