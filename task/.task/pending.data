@@ -1,4 +1,0 @@
-[description:"test" due:"1648004400" entry:"1647954901" mask:"++++" modified:"1649807167" project:"JAC" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"094c2a9f-c98a-409c-aec8-4b2d1070fb49"]
-[description:"complex use case test" due:"1649991600" entry:"1648557087" modified:"1649807196" project:"SYD" status:"pending" tags_seneca:"x" uuid:"5505c2a6-ba77-4afa-a763-f711189acad0"]
-[description:"test" due:"1648609200" entry:"1648557256" mask:"+X+" modified:"1649807168" project:"WEB" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"746a87be-ab27-4844-a386-b34b764dc780"]
-[description:"final project" due:"1650254400" entry:"1649550158" modified:"1649550251" project:"EAC" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"c4f575fa-95cf-4c82-ab56-015e3c5eddea"]
