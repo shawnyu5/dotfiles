@@ -27,7 +27,7 @@ null_ls.setup({
 		-- formatting.markdownlint,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({
-			disabled_filetypes = { "json" },
+			-- disabled_filetypes = { "json" },
 		}),
 		diagnostics.hadolint,
 	},
