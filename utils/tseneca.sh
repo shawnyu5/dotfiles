@@ -16,7 +16,7 @@ fi
 
 # dateSelection=($(seq 1 31))
 # add all dates of current month
-for i in {1..31}; do
+for i in {01..31}; do
    dateSelection+=("$YEAR-$MONTH-$i")
 done
 dateSelection+=("tomorrow")
@@ -29,13 +29,13 @@ dateSelection+=("thu")
 dateSelection+=("fri")
 dateSelection+=("sat")
 dateSelection+=("sun")
-DATE=$(printf "'%s'\n" "${dateSelection[@]}" | fzf --prompt "Due date: ")
-# read -p "due date: $YEAR-$MONTH-" DATE
+DATE=$(printf '%s\n' "${dateSelection[@]}" | fzf --prompt "Due date: ")
+read -e -p "due date: " -i $DATE DATE
 
 CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\nCo-op" | fzf --prompt "Class: ")
 
 task add "${NAME}" project:$CLASS\
-   due:$YEAR-$MONTH-$DATE \
+   due:$DATE \
    +seneca
 
 task
