@@ -1,8 +1,8 @@
 #!/bin/bash
-# task calendar
-cal
+task calendar
 
-MONTH=$(date +%b)
+YEAR=$(date +%Y)
+MONTH=$(date +%m)
 
 if [[ -z $1 ]]; then
    read -p "task name: " NAME
@@ -10,22 +10,19 @@ else
    NAME="$@"
 fi
 
-read -p "due date: $MONTH " DATE
+# TODO: add common due dates to choose from. ie midnight
+read -p "due date: $YEAR-$MONTH-" DATE
 
-CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\ncs" | fzf)
+CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\n" | fzf)
 
-ultralist add $NAME due:${DATE}${MONTH} +$CLASS
+task add "${NAME}" project:$CLASS\
+   due:$YEAR-$MONTH-$DATE \
+   +seneca
 
-# task add "${NAME}" project:$CLASS\
-   # due:$YEAR-$MONTH-$DATE \
-   # +seneca
-
-# archive completed tasks
-ultralist ar c
-ultralist list
+task
 
 cd ~/personal/
-gpull
-git add .todos.json
-git commit -m "chore: update .todos.json"
+git add .task
+git commit -m "sync task worrior tasks"
 git push
+# ultralist list
