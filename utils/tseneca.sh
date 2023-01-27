@@ -14,10 +14,25 @@ else
    NAME="$@"
 fi
 
-# TODO: add common due dates to choose from. ie midnight
-read -p "due date: $YEAR-$MONTH-" DATE
+# dateSelection=($(seq 1 31))
+# add all dates of current month
+for i in {1..31}; do
+   dateSelection+=("$YEAR-$MONTH-$i")
+done
+dateSelection+=("tomorrow")
+dateSelection+=("today")
+dateSelection+=("yesterday")
+dateSelection+=("mon")
+dateSelection+=("tue")
+dateSelection+=("wed")
+dateSelection+=("thu")
+dateSelection+=("fri")
+dateSelection+=("sat")
+dateSelection+=("sun")
+DATE=$(printf "'%s'\n" "${dateSelection[@]}" | fzf --prompt "Due date: ")
+# read -p "due date: $YEAR-$MONTH-" DATE
 
-CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\nCo-op" | fzf)
+CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\nCo-op" | fzf --prompt "Class: ")
 
 task add "${NAME}" project:$CLASS\
    due:$YEAR-$MONTH-$DATE \
