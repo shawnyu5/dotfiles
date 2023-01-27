@@ -1609,4 +1609,4 @@
 {"description":"test","due":"20230110T050000Z","end":"20230127T034041Z","entry":"20230127T034023Z","modified":"20230127T034044Z","status":"deleted","uuid":"b1994e36-c723-4834-ac13-b3174e3a4c0a","tags":["seneca"]}
 {"description":"jj","due":"20230110T050000Z","entry":"20230127T043422Z","modified":"20230127T043422Z","project":"C#","status":"pending","uuid":"fb55453f-8447-40fd-8eeb-5015f9ff9e0a","tags":["seneca"]}
 {"description":"jj","due":"20230110T050000Z","end":"20230127T043428Z","entry":"20230127T043422Z","modified":"20230127T043429Z","project":"C#","status":"deleted","uuid":"fb55453f-8447-40fd-8eeb-5015f9ff9e0a","tags":["seneca"]}
-{"description":"login to IBM","due":"20230130T040000Z","entry":"20230127T043919Z","modified":"20230127T043919Z","project":"BCI","status":"pending","uuid":"07f13e4f-b097-4918-9ed1-a7fa7bf4048f","tags":["seneca"]}
+{"description":"create windows VM","due":"20230131T045900Z","entry":"20230125T054653Z","modified":"20230127T043557Z","project":"devops","status":"pending","uuid":"fac7fe4a-fc65-4d68-9e7a-90cd09f6b185","tags":["seneca"]}
