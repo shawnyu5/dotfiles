@@ -5990,3 +5990,7 @@ new [description:"create windows VM" due:"1675141140" entry:"1674625613" modifie
 time 1674790823
 new [description:"test" due:"1673326800" entry:"1674790823" modified:"1674790823" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1994e36-c723-4834-ac13-b3174e3a4c0a"]
 ---
+time 1674790844
+old [description:"test" due:"1673326800" entry:"1674790823" modified:"1674790823" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1994e36-c723-4834-ac13-b3174e3a4c0a"]
+new [description:"test" due:"1673326800" end:"1674790841" entry:"1674790823" modified:"1674790844" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"b1994e36-c723-4834-ac13-b3174e3a4c0a"]
+---
