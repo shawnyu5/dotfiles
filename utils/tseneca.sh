@@ -1,4 +1,8 @@
 #!/bin/bash
+#######################################
+#  Add a seneca task to task worrior  #
+#######################################
+
 task calendar
 
 YEAR=$(date +%Y)
@@ -21,8 +25,8 @@ task add "${NAME}" project:$CLASS\
 
 task
 
+# commit tasks to git
 cd ~/personal/
 git add .task
 git commit -m "sync task worrior tasks"
 git push
-# ultralist list
