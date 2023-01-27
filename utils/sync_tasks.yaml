@@ -1,4 +1,6 @@
-- name: sync ultratasks
+- name: |
+    Sync tasks]
+    [Description: sync tasks from current branch to other branches that requires the tasks
   hosts: localhost
   become: false
   vars:
@@ -11,27 +13,29 @@
        shell: git rev-parse --abbrev-ref HEAD
 
      - set_fact:
-          # branch to sync info from
+          # branch to sync info to
           target_branch: "{{ branch | difference(branch_name_command.stdout) }}"
           # current branch
           og_branch: "{{ branch | intersect(branch_name_command.stdout) }}"
 
+     #- debug:
+         #msg: "target branch {{ target_branch }}"
+     #- debug:
+         #msg: "og_branch {{ og_branch }}"
      - name: "sync task from {{ target_branch[0] }} branch"
-       register: sync_task
+       register: sync_tasks
        shell: |
           cd ~/personal
-          git fetch --all
-          # git checkout {{ target_branch[0] }}
-          # git pull
-          git checkout {{ og_branch[0] }}
+          git checkout {{ target_branch[0] }}
           git pull
-          git checkout {{ target_branch[0] }} .task
+          git checkout {{ og_branch[0] }} .task
           git add .task
-          git commit -m "synced .task from branch {{ target_branch[0] }}"
+          git commit -m "synced .task from branch {{ og_branch[0] }}"
           git push
+          git checkout {{ og_branch[0] }}
      - name: stdout
        debug:
-          msg: "{{ sync_task.stdout.split('\n') }}"
+          msg: "{{ sync_tasks.stdout.split('\n') }}"
      - name: stderr
        debug:
-          msg: "{{ sync_task.stderr.split('\n') }}"
+          msg: "{{ sync_tasks.stderr.split('\n') }}"
