@@ -17,7 +17,7 @@ fi
 # TODO: add common due dates to choose from. ie midnight
 read -p "due date: $YEAR-$MONTH-" DATE
 
-CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\n" | fzf)
+CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\nCo-op" | fzf)
 
 task add "${NAME}" project:$CLASS\
    due:$YEAR-$MONTH-$DATE \
