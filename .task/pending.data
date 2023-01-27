@@ -1,2 +1,4 @@
 [description:"create windows VM" due:"1675141140" entry:"1674625613" modified:"1674794617" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fac7fe4a-fc65-4d68-9e7a-90cd09f6b185"]
 [description:"login to IBM" due:"1675051200" entry:"1674794501" modified:"1674794501" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9403d6df-ed68-44e1-8173-b7b6dc3c4f0f"]
+[description:"reflection 1" due:"1674878400" entry:"1674794827" modified:"1674794827" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4daccdec-1203-4802-9666-965eb807c0b7"]
+[description:"learning plan" due:"1674878400" entry:"1674794847" modified:"1674794847" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"807134d4-1f0c-445d-99ba-341830ffef73"]
