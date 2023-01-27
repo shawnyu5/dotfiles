@@ -107,12 +107,15 @@ function tma
 }
 
 
-#taskworrior aliases
-#=====================================
+##########################
+#  task worrior aliases  #
+##########################
+
 
 #t for task
 alias t="task"
-alias tsync="bash ~/personal/task_worrior/tsync.sh"
+alias tsync="bash ~/personal/utils/tsync.sh"
+alias tseneca="bash ~/personal/utils/tseneca.sh"
 
 #editing taskrc
 alias trc="nvim ~/.taskrc"
