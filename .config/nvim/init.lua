@@ -1,5 +1,5 @@
 -- placed here for easy access
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 vim.g.mapleader = " "
 -- get rid of eob fill chars
