@@ -8,3 +8,4 @@ cd ~/personal
 git add .task
 git commit -m "sync .task"
 git push
+ansible-playbook ~/personal/utils/sync_tasks.yaml
