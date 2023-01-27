@@ -1,6 +1,6 @@
 - name: |
     Sync tasks]
-    Description: sync tasks from current branch to other branches that requires the tasks
+    [Description: sync tasks from current branch to other branches that requires the tasks
   hosts: localhost
   become: false
   vars:
