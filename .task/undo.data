@@ -6029,3 +6029,6 @@ time 1674795512
 old [description:"test" due:"1675054800" entry:"1674795506" modified:"1674795506" status:"pending" uuid:"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"]
 new [description:"test" due:"1675054800" end:"1674795510" entry:"1674795506" modified:"1674795512" status:"deleted" uuid:"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"]
 ---
+time 1674798051
+new [description:"test" due:"1672635600" entry:"1674798051" modified:"1674798051" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"6b55c593-7686-42de-a48b-27a025c82919"]
+---
