@@ -6001,3 +6001,6 @@ time 1674794069
 old [description:"jj" due:"1673326800" entry:"1674794062" modified:"1674794062" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"fb55453f-8447-40fd-8eeb-5015f9ff9e0a"]
 new [description:"jj" due:"1673326800" end:"1674794068" entry:"1674794062" modified:"1674794069" project:"C#" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"fb55453f-8447-40fd-8eeb-5015f9ff9e0a"]
 ---
+time 1674794359
+new [description:"login to IBM" due:"1675051200" entry:"1674794359" modified:"1674794359" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"07f13e4f-b097-4918-9ed1-a7fa7bf4048f"]
+---
