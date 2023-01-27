@@ -6032,3 +6032,7 @@ new [description:"test" due:"1675054800" end:"1674795510" entry:"1674795506" mod
 time 1674798051
 new [description:"test" due:"1672635600" entry:"1674798051" modified:"1674798051" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"6b55c593-7686-42de-a48b-27a025c82919"]
 ---
+time 1674798061
+old [description:"test" due:"1672635600" entry:"1674798051" modified:"1674798051" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"6b55c593-7686-42de-a48b-27a025c82919"]
+new [description:"test" due:"1672635600" end:"1674798060" entry:"1674798051" modified:"1674798061" project:"C#" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"6b55c593-7686-42de-a48b-27a025c82919"]
+---
