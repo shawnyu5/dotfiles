@@ -30,8 +30,7 @@ alias gpull="git pull"
 alias gm="git checkout master || git checkout main"
 
 alias homemonitor="~/.screenlayout/home_monitor.sh"
-alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
-alias homemonitorOff="~/.screenlayout/no_monitor.sh"
+alias homemonitorOff="xrandr --output HDMI1 --off"
 
 #mdp no fade by default
 alias mdp="mdp -f"
@@ -82,6 +81,7 @@ alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
 alias zsh_aliases="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
 alias zsh_aliases-custom="cd -; nvim ~/.zsh_aliases-custom; cd - > /dev/null"
 
+
 #opening neomutt
 alias mail="neomutt"
 
@@ -112,6 +112,7 @@ function tma
 
 #t for task
 alias t="task"
+alias tsync="bash ~/personal/task_worrior/tsync.sh"
 
 #editing taskrc
 alias trc="nvim ~/.taskrc"
@@ -144,4 +145,3 @@ function cheat
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
 alias bd=". bd -si"
-alias wallpaper="~/personal/utils/change_wallpaper.sh"
