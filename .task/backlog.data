@@ -1608,3 +1608,4 @@
 {"description":"test","due":"20230110T050000Z","entry":"20230127T034023Z","modified":"20230127T034023Z","status":"pending","uuid":"b1994e36-c723-4834-ac13-b3174e3a4c0a","tags":["seneca"]}
 {"description":"test","due":"20230110T050000Z","end":"20230127T034041Z","entry":"20230127T034023Z","modified":"20230127T034044Z","status":"deleted","uuid":"b1994e36-c723-4834-ac13-b3174e3a4c0a","tags":["seneca"]}
 {"description":"jj","due":"20230110T050000Z","entry":"20230127T043422Z","modified":"20230127T043422Z","project":"C#","status":"pending","uuid":"fb55453f-8447-40fd-8eeb-5015f9ff9e0a","tags":["seneca"]}
+{"description":"jj","due":"20230110T050000Z","end":"20230127T043428Z","entry":"20230127T043422Z","modified":"20230127T043429Z","project":"C#","status":"deleted","uuid":"fb55453f-8447-40fd-8eeb-5015f9ff9e0a","tags":["seneca"]}
