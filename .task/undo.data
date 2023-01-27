@@ -6022,3 +6022,10 @@ new [description:"reflection 1" due:"1674878400" entry:"1674794827" modified:"16
 time 1674794847
 new [description:"learning plan" due:"1674878400" entry:"1674794847" modified:"1674794847" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"807134d4-1f0c-445d-99ba-341830ffef73"]
 ---
+time 1674795506
+new [description:"test" due:"1675054800" entry:"1674795506" modified:"1674795506" status:"pending" uuid:"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"]
+---
+time 1674795512
+old [description:"test" due:"1675054800" entry:"1674795506" modified:"1674795506" status:"pending" uuid:"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"]
+new [description:"test" due:"1675054800" end:"1674795510" entry:"1674795506" modified:"1674795512" status:"deleted" uuid:"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"]
+---

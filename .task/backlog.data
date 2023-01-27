@@ -1615,3 +1615,5 @@
 {"description":"create windows VM","due":"20230131T045900Z","entry":"20230125T054653Z","modified":"20230127T044337Z","project":"devops","status":"pending","uuid":"fac7fe4a-fc65-4d68-9e7a-90cd09f6b185","tags":["seneca"]}
 {"description":"reflection 1","due":"20230128T040000Z","entry":"20230127T044707Z","modified":"20230127T044707Z","project":"Co-op","status":"pending","uuid":"4daccdec-1203-4802-9666-965eb807c0b7","tags":["seneca"]}
 {"description":"learning plan","due":"20230128T040000Z","entry":"20230127T044727Z","modified":"20230127T044727Z","project":"Co-op","status":"pending","uuid":"807134d4-1f0c-445d-99ba-341830ffef73","tags":["seneca"]}
+{"description":"test","due":"20230130T050000Z","entry":"20230127T045826Z","modified":"20230127T045826Z","status":"pending","uuid":"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"}
+{"description":"test","due":"20230130T050000Z","end":"20230127T045830Z","entry":"20230127T045826Z","modified":"20230127T045832Z","status":"deleted","uuid":"232239fc-3289-4c21-b8cc-c67d6a4b3ed4"}
