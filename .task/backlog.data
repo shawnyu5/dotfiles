@@ -1605,3 +1605,5 @@
 {"description":"excrise 2b","due":"20230128T045900Z","end":"20230125T220823Z","entry":"20230125T054601Z","modified":"20230125T220823Z","project":"C#","status":"completed","uuid":"d97e302a-8d67-4fb4-ab0f-8851770ab511","tags":["seneca"]}
 {"description":"excrise 2d","due":"20230128T045900Z","end":"20230127T032402Z","entry":"20230125T054621Z","modified":"20230127T032402Z","project":"C#","status":"completed","uuid":"596b0664-83f2-4be6-8976-f707edbaf9f7","tags":["seneca"]}
 {"description":"create windows VM","due":"20230131T045900Z","entry":"20230125T054653Z","modified":"20230127T032421Z","project":"bci","status":"pending","uuid":"fac7fe4a-fc65-4d68-9e7a-90cd09f6b185","tags":["seneca"]}
+{"description":"test","due":"20230110T050000Z","entry":"20230127T034023Z","modified":"20230127T034023Z","status":"pending","uuid":"b1994e36-c723-4834-ac13-b3174e3a4c0a","tags":["seneca"]}
+{"description":"test","due":"20230110T050000Z","end":"20230127T034041Z","entry":"20230127T034023Z","modified":"20230127T034044Z","status":"deleted","uuid":"b1994e36-c723-4834-ac13-b3174e3a4c0a","tags":["seneca"]}
