@@ -6,10 +6,10 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # make sure script is ran with root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
+# if [ "$EUID" -ne 0 ]
+  # then echo "Please run as root"
+  # exit
+# fi
 
 #######################################
 # prompt user with a prompt, and run command passed in
@@ -41,3 +41,4 @@ install "gopls" "sudo pacman -S gopls"
 install "dockerls" "yay -S docker-ls"
 install "marksman" "yay -S marksman-bin"
 install "texlab" "sudo pacman -S texlab"
+install "csharp-ls" "dotnet tool install --global csharp-ls"
