@@ -6019,3 +6019,6 @@ new [description:"create windows VM" due:"1675141140" entry:"1674625613" modifie
 time 1674794827
 new [description:"reflection 1" due:"1674878400" entry:"1674794827" modified:"1674794827" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4daccdec-1203-4802-9666-965eb807c0b7"]
 ---
+time 1674794847
+new [description:"learning plan" due:"1674878400" entry:"1674794847" modified:"1674794847" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"807134d4-1f0c-445d-99ba-341830ffef73"]
+---
