@@ -5,6 +5,7 @@
 
 
 cd ~/personal
+git pull
 git add .task
 git commit -m "sync .task"
 git push
