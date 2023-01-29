@@ -6042,3 +6042,6 @@ new [description:"sort out passport renewal" entry:"1674924630" modified:"167492
 time 1675028764
 new [description:"excrise 3a" due:"1675483200" entry:"1675028764" modified:"1675028764" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ab4c3c2c-1845-4787-b1e3-0226717d6843"]
 ---
+time 1675028788
+new [description:"excrise 3b" due:"1675400400" entry:"1675028787" modified:"1675028787" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
+---
