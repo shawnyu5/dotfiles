@@ -35,6 +35,10 @@ alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO6
 alias neofetch="neofetch --ascii_distro archlinux"
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
 
+alias homemonitor="~/.screenlayout/home_monitor.sh"
+alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
+alias homemonitorOff="xrandr --output HDMI1 --off"
+
 function awsec {
    IPADDRESS="$1"
    echo $IPADDRESS
