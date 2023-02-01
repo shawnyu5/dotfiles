@@ -6045,3 +6045,7 @@ new [description:"excrise 3a" due:"1675483200" entry:"1675028764" modified:"1675
 time 1675028788
 new [description:"excrise 3b" due:"1675400400" entry:"1675028787" modified:"1675028787" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
 ---
+time 1675294666
+old [description:"excrise 3b" due:"1675400400" entry:"1675028787" modified:"1675028787" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
+new [description:"excrise 3b" due:"1675483200" entry:"1675028787" modified:"1675294666" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
+---
