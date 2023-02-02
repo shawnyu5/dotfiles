@@ -19,6 +19,11 @@ fi
 for i in {01..31}; do
    dateSelection+=("$YEAR-$MONTH-$i")
 done
+
+MONTH=$((MONTH+1))
+for i in {01..31}; do
+   dateSelection+=("$YEAR-0$MONTH-$i")
+done
 dateSelection+=("tomorrow")
 dateSelection+=("today")
 dateSelection+=("yesterday")
