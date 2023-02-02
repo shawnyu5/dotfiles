@@ -50,4 +50,11 @@ function M.on_attach(client, bufnr)
 	keymap("n", "gr", vim.lsp.buf.references, opts)
 end
 
+--- disable formatting for a client
+---@param client Client a lsp client
+function M.disable_formatting(client)
+	client.server_capabilities.document_formatting = false
+	client.server_capabilities.document_range_formatting = false
+end
+
 return M
