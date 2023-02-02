@@ -6049,15 +6049,14 @@ time 1675294666
 old [description:"excrise 3b" due:"1675400400" entry:"1675028787" modified:"1675028787" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
 new [description:"excrise 3b" due:"1675483200" entry:"1675028787" modified:"1675294666" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
 ---
-time 1675381324
+time 1675299128
+new [description:"lab 3 containers" due:"1675742400" entry:"1675299128" modified:"1675299128" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"10ad4a8c-eebc-4005-9775-51b9a1a70900"]
+---
+time 1675382214
 old [description:"excrise 3a" due:"1675483200" entry:"1675028764" modified:"1675028764" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ab4c3c2c-1845-4787-b1e3-0226717d6843"]
-new [description:"excrise 3a" due:"1675483200" end:"1675381324" entry:"1675028764" modified:"1675381324" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ab4c3c2c-1845-4787-b1e3-0226717d6843"]
+new [description:"excrise 3a" due:"1675483200" end:"1675382214" entry:"1675028764" modified:"1675382214" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ab4c3c2c-1845-4787-b1e3-0226717d6843"]
 ---
-time 1675381330
+time 1675382214
 old [description:"excrise 3b" due:"1675483200" entry:"1675028787" modified:"1675294666" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
-new [description:"excrise 3b" due:"1675483200" entry:"1675028787" modified:"1675381330" project:"C#" start:"1675381330" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
----
-time 1675382143
-old [description:"excrise 3b" due:"1675483200" entry:"1675028787" modified:"1675381330" project:"C#" start:"1675381330" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
-new [description:"excrise 3b" due:"1675483200" end:"1675382143" entry:"1675028787" modified:"1675382143" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
+new [description:"excrise 3b" due:"1675483200" end:"1675382214" entry:"1675028787" modified:"1675382214" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed"]
 ---
