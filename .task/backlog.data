@@ -1623,4 +1623,6 @@
 {"description":"excrise 3a","due":"20230204T040000Z","entry":"20230129T214604Z","modified":"20230129T214604Z","project":"C#","status":"pending","uuid":"ab4c3c2c-1845-4787-b1e3-0226717d6843","tags":["seneca"]}
 {"description":"excrise 3b","due":"20230203T050000Z","entry":"20230129T214627Z","modified":"20230129T214627Z","project":"C#","status":"pending","uuid":"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed","tags":["seneca"]}
 {"description":"excrise 3b","due":"20230204T040000Z","entry":"20230129T214627Z","modified":"20230201T233746Z","project":"C#","status":"pending","uuid":"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed","tags":["seneca"]}
-{"description":"lab 3 containers","due":"20230207T040000Z","entry":"20230202T005208Z","modified":"20230202T005208Z","project":"devops","status":"pending","uuid":"10ad4a8c-eebc-4005-9775-51b9a1a70900","tags":["seneca"]}
+{"description":"excrise 3a","due":"20230204T040000Z","end":"20230202T234204Z","entry":"20230129T214604Z","modified":"20230202T234204Z","project":"C#","status":"completed","uuid":"ab4c3c2c-1845-4787-b1e3-0226717d6843","tags":["seneca"]}
+{"description":"excrise 3b","due":"20230204T040000Z","entry":"20230129T214627Z","modified":"20230202T234210Z","project":"C#","start":"20230202T234210Z","status":"pending","uuid":"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed","tags":["seneca"]}
+{"description":"excrise 3b","due":"20230204T040000Z","end":"20230202T235543Z","entry":"20230129T214627Z","modified":"20230202T235543Z","project":"C#","status":"completed","uuid":"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed","tags":["seneca"]}
