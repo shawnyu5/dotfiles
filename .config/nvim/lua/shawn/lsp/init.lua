@@ -111,6 +111,7 @@ lsp.vuels.setup({
 -- json
 lsp.jsonls.setup({
 	on_attach = function(client, bufnr)
+		require("nvim-navic").attach(client, bufnr)
 		client.server_capabilities.document_formatting = false
 		client.server_capabilities.document_range_formatting = false
 		utils.on_attach(client, bufnr)
@@ -214,6 +215,7 @@ lsp.dockerls.setup({
 lsp.yamlls.setup({
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
+		utils.disable_formatting()
 		-- utils.format_on_save()
 		require("nvim-navic").attach(client, bufnr)
 	end,
