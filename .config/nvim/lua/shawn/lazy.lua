@@ -157,6 +157,23 @@ local pluginSpec = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	},
+	-- TODO: look into octo more
+	-- {
+	-- "pwntester/octo.nvim",
+	-- dependencies = {
+	-- "nvim-lua/plenary.nvim",
+	-- "nvim-telescope/telescope.nvim",
+	-- },
+	-- config = function()
+	-- require("octo").setup()
+	-- end,
+	-- },
 	-- native LSP
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
