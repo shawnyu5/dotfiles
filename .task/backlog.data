@@ -1626,3 +1626,4 @@
 {"description":"lab 3 containers","due":"20230207T040000Z","entry":"20230202T005208Z","modified":"20230202T005208Z","project":"devops","status":"pending","uuid":"10ad4a8c-eebc-4005-9775-51b9a1a70900","tags":["seneca"]}
 {"description":"excrise 3a","due":"20230204T040000Z","end":"20230202T235654Z","entry":"20230129T214604Z","modified":"20230202T235654Z","project":"C#","status":"completed","uuid":"ab4c3c2c-1845-4787-b1e3-0226717d6843","tags":["seneca"]}
 {"description":"excrise 3b","due":"20230204T040000Z","end":"20230202T235654Z","entry":"20230129T214627Z","modified":"20230202T235654Z","project":"C#","status":"completed","uuid":"94c09a14-9e72-4dda-a3e5-f0ccc928f3ed","tags":["seneca"]}
+{"description":"lab 2","due":"20230208T050000Z","entry":"20230203T021758Z","modified":"20230203T021758Z","project":"BCI","status":"pending","uuid":"97f20870-7da5-47b4-81d7-0c12056604c2","tags":["seneca"]}
