@@ -6069,3 +6069,15 @@ new [description:"excrise 4b" due:"1676001600" entry:"1675528844" modified:"1675
 time 1675529090
 new [description:"excrise 4c" due:"1676088000" entry:"1675529090" modified:"1675529090" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
 ---
+time 1675530061
+old [description:"excrise 4c" due:"1676088000" entry:"1675529090" modified:"1675529090" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
+new [annotation_1675530061:"done, needs to submit" description:"excrise 4c" due:"1676088000" entry:"1675529090" modified:"1675530061" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
+---
+time 1675534967
+old [annotation_1675530061:"done, needs to submit" description:"excrise 4c" due:"1676088000" entry:"1675529090" modified:"1675530061" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
+new [annotation_1675530061:"done, needs to submit" description:"excrise 4c" due:"1676088000" end:"1675534967" entry:"1675529090" modified:"1675534967" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
+---
+time 1675534975
+old [description:"lab 3 containers" due:"1675742400" entry:"1675299128" modified:"1675299128" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"10ad4a8c-eebc-4005-9775-51b9a1a70900"]
+new [description:"lab 3 containers" due:"1675742400" entry:"1675299128" modified:"1675534975" project:"devops" start:"1675534975" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"10ad4a8c-eebc-4005-9775-51b9a1a70900"]
+---
