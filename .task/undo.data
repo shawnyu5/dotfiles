@@ -6066,3 +6066,6 @@ new [description:"lab 2" due:"1675832400" entry:"1675390678" modified:"167539067
 time 1675528844
 new [description:"excrise 4b" due:"1676001600" entry:"1675528844" modified:"1675528844" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"8a2ab8fd-417e-4a09-b463-2371038d6ef4"]
 ---
+time 1675529090
+new [description:"excrise 4c" due:"1676088000" entry:"1675529090" modified:"1675529090" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"99a56357-57af-4bce-9a8b-a83c69afa311"]
+---
