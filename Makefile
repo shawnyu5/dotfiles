@@ -45,3 +45,5 @@ docker: ## install and set up docker
 neovim: ## set up neovim with my config (WARNING: this will overwrite your current config)
 	ln -svf ~/personal/.config/nvim ~/.config/nvim
 
+tmux_plugin_manager:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
