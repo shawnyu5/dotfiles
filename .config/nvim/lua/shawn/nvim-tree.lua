@@ -57,3 +57,32 @@ map("n", "<leader>nn", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none", ctermbg = "none" })
+
+local function open_nvim_tree(data)
+	-- buffer is a directory
+	local directory = vim.fn.isdirectory(data.file) == 1
+
+	if not directory then
+		return
+	end
+
+	-- create a new, empty buffer
+	vim.cmd.enew()
+
+	-- wipe the directory buffer
+	vim.cmd.bw(data.buf)
+
+	-- change to the directory
+	vim.cmd.cd(data.file)
+
+	-- open the tree
+	require("nvim-tree.api").tree.open()
+end
+
+local augroup = vim.api.nvim_create_augroup("nvim-tree", { clear = true })
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+	group = augroup,
+	callback = function(data)
+		open_nvim_tree(data)
+	end,
+})
