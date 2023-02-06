@@ -60,10 +60,6 @@ vim.api.nvim_create_autocmd({
 
 --- updates the winbar from information given by nvim-navic
 function M.update()
-	if not navic.is_available() then
-		vim.notify_once("Navic is not available", vim.log.levels.WARN, { timeout = 2000 })
-	end
-
 	local location = navic.get_location() or " "
 	vim.api.nvim_set_option_value("winbar", location, { scope = "local" })
 end
