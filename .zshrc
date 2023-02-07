@@ -29,7 +29,7 @@ _comp_options+=(globdots)		# Include hidden files.
 autoload -U colors && colors
 
 # export TERM="kitty"
-export BROWSER="google-chrome-stable"
+export BROWSER='/mnt/c/Program\ Files\ (x86)/Google/Chrome/Application/chrome.exe'
 export GOPATH=$HOME/gopath
 
 precmd_functions=""
