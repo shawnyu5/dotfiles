@@ -6108,3 +6108,6 @@ new [description:"excrise 4b" due:"1676001600" end:"1675817649" entry:"167552884
 time 1675817758
 new [description:"excrise 4a" due:"1676005200" entry:"1675817758" modified:"1675817758" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
 ---
+time 1675819584
+new [description:"Agile Planning and Portfolio Management with Azure Boards" due:"1676264400" entry:"1675819584" modified:"1675819584" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
+---
