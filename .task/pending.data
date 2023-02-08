@@ -1,3 +1,4 @@
 [description:"sort out passport renewal" entry:"1674924630" modified:"1674924630" status:"pending" uuid:"19c688f1-e3b6-4516-b89a-604b1ab53b2f"]
-[description:"lab 2" due:"1675915200" entry:"1675390678" modified:"1675816499" project:"BCI" status:"pending" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
-[description:"excrise 4b" due:"1676001600" entry:"1675528844" modified:"1675528844" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"8a2ab8fd-417e-4a09-b463-2371038d6ef4"]
+[description:"lab 2" due:"1675915200" entry:"1675390678" modified:"1675816499" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
+[description:"excrise 4a" due:"1676005200" entry:"1675817758" modified:"1675817758" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
+[description:"Agile Planning and Portfolio Management with Azure Boards" due:"1676264400" entry:"1675819584" modified:"1675819584" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
