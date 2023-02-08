@@ -1642,3 +1642,4 @@
 {"description":"excrise 4b","due":"20230210T040000Z","end":"20230208T005409Z","entry":"20230204T164044Z","modified":"20230208T005409Z","project":"C#","status":"completed","uuid":"8a2ab8fd-417e-4a09-b463-2371038d6ef4","tags":["seneca"]}
 {"description":"excrise 4a","due":"20230210T050000Z","entry":"20230208T005558Z","modified":"20230208T005558Z","project":"C#","status":"pending","uuid":"f5583b5e-adce-48ab-b76c-4c04d9284087","tags":["seneca"]}
 {"description":"Agile Planning and Portfolio Management with Azure Boards","due":"20230213T050000Z","entry":"20230208T012624Z","modified":"20230208T012624Z","project":"devops","status":"pending","uuid":"2c10cd8d-5626-4cc0-a5a8-d00550442b0b","tags":["seneca"]}
+{"description":"Agile Planning and Portfolio Management with Azure Boards lab","due":"20230213T050000Z","entry":"20230208T012624Z","modified":"20230208T014307Z","project":"devops","status":"pending","uuid":"2c10cd8d-5626-4cc0-a5a8-d00550442b0b","tags":["seneca"]}
