@@ -91,7 +91,7 @@ local pluginSpec = {
       ft = "go",
    },
 
-   -- -- use("matbme/JABS.nvim")
+   -- use("matbme/JABS.nvim")
    { "j-morano/buffer_manager.nvim" },
 
    -- dap
@@ -104,7 +104,7 @@ local pluginSpec = {
 
    { "aserowy/tmux.nvim" },
 
-   -- -- use({ "nvim-lualine/lualine.nvim" })
+   -- use({ "nvim-lualine/lualine.nvim" })
    {
       "itchyny/lightline.vim",
       config = function()
@@ -129,7 +129,7 @@ local pluginSpec = {
 
    { "andweeb/presence.nvim" },
 
-   -- -- use({ "preservim/nerdtree" })
+   -- use({ "preservim/nerdtree" })
    {
       "kyazdani42/nvim-tree.lua",
    },
