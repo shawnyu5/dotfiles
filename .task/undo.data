@@ -6118,3 +6118,19 @@ new [description:"Agile Planning and Portfolio Management with Azure Boards lab"
 time 1675900152
 new [description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900152" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
 ---
+time 1675900428
+old [description:"excrise 4a" due:"1676005200" entry:"1675817758" modified:"1675817758" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
+new [description:"excrise 4a" due:"1676005200" entry:"1675817758" modified:"1675900428" project:"C#" start:"1675900428" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
+---
+time 1675900472
+old [description:"excrise 4a" due:"1676005200" entry:"1675817758" modified:"1675900428" project:"C#" start:"1675900428" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
+new [description:"excrise 4a" due:"1676005200" end:"1675900472" entry:"1675817758" modified:"1675900472" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f5583b5e-adce-48ab-b76c-4c04d9284087"]
+---
+time 1675900492
+old [description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900152" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 prats" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900492" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1675900517
+old [annotation_1675900492:"assignment is in 3 prats" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900492" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900517" project:"devops" status:"pending" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
