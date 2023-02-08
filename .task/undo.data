@@ -6115,3 +6115,6 @@ time 1675820587
 old [description:"Agile Planning and Portfolio Management with Azure Boards" due:"1676264400" entry:"1675819584" modified:"1675819584" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
 new [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" entry:"1675819584" modified:"1675820587" project:"devops" status:"pending" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
 ---
+time 1675900152
+new [description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900152" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
