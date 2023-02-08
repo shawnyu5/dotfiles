@@ -6093,3 +6093,11 @@ time 1675655697
 old [annotation_1675540629:"done, need to submit" description:"lab 3 containers" due:"1675742400" entry:"1675299128" modified:"1675540634" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"10ad4a8c-eebc-4005-9775-51b9a1a70900"]
 new [annotation_1675540629:"done, need to submit" description:"lab 3 containers" due:"1675742400" end:"1675655697" entry:"1675299128" modified:"1675655697" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"10ad4a8c-eebc-4005-9775-51b9a1a70900"]
 ---
+time 1675816474
+old [description:"reflection 1" due:"1674878400" entry:"1674794827" modified:"1674794827" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4daccdec-1203-4802-9666-965eb807c0b7"]
+new [description:"reflection 1" due:"1674878400" end:"1675816474" entry:"1674794827" modified:"1675816474" project:"Co-op" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4daccdec-1203-4802-9666-965eb807c0b7"]
+---
+time 1675816499
+old [description:"lab 2" due:"1675832400" entry:"1675390678" modified:"1675390678" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
+new [description:"lab 2" due:"1675915200" entry:"1675390678" modified:"1675816499" project:"BCI" status:"pending" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
+---
