@@ -6101,3 +6101,7 @@ time 1675816499
 old [description:"lab 2" due:"1675832400" entry:"1675390678" modified:"1675390678" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
 new [description:"lab 2" due:"1675915200" entry:"1675390678" modified:"1675816499" project:"BCI" status:"pending" tags_seneca:"x" uuid:"97f20870-7da5-47b4-81d7-0c12056604c2"]
 ---
+time 1675817649
+old [description:"excrise 4b" due:"1676001600" entry:"1675528844" modified:"1675528844" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"8a2ab8fd-417e-4a09-b463-2371038d6ef4"]
+new [description:"excrise 4b" due:"1676001600" end:"1675817649" entry:"1675528844" modified:"1675817649" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"8a2ab8fd-417e-4a09-b463-2371038d6ef4"]
+---
