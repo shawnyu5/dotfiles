@@ -6140,3 +6140,14 @@ new [description:"excrise 5b" due:"1676692800" entry:"1676130729" modified:"1676
 time 1676130756
 new [description:"excrise 5c" due:"1676692800" entry:"1676130756" modified:"1676130756" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"27b3bcf5-9668-4a31-a8a4-9cf9ac8bc8bf"]
 ---
+time 1676130782
+old [description:"excrise 5b" due:"1676692800" entry:"1676130729" modified:"1676130729" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"db247771-e8f7-44f5-ad44-e867c1862dec"]
+new [annotation_1676130782:"completed in class" description:"excrise 5b" due:"1676692800" entry:"1676130729" modified:"1676130782" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"db247771-e8f7-44f5-ad44-e867c1862dec"]
+---
+time 1676132415
+old [description:"excrise 5c" due:"1676692800" entry:"1676130756" modified:"1676130756" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"27b3bcf5-9668-4a31-a8a4-9cf9ac8bc8bf"]
+new [annotation_1676132415:"complete in class" description:"excrise 5c" due:"1676692800" entry:"1676130756" modified:"1676132415" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"27b3bcf5-9668-4a31-a8a4-9cf9ac8bc8bf"]
+---
+time 1676133018
+new [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676133018" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
+---
