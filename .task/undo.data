@@ -6134,3 +6134,6 @@ time 1675900517
 old [annotation_1675900492:"assignment is in 3 prats" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900492" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
 new [annotation_1675900492:"assignment is in 3 parts" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900517" project:"devops" status:"pending" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
 ---
+time 1676130729
+new [description:"excrise 5b" due:"1676692800" entry:"1676130729" modified:"1676130729" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"db247771-e8f7-44f5-ad44-e867c1862dec"]
+---
