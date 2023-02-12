@@ -6151,3 +6151,19 @@ new [annotation_1676132415:"complete in class" description:"excrise 5c" due:"167
 time 1676133018
 new [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676133018" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
 ---
+time 1676146399
+old [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676133018" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
+new [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676146399" project:"C#" start:"1676146399" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
+---
+time 1676146405
+old [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676146399" project:"C#" start:"1676146399" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
+new [description:"excrise 5a" due:"1676692800" entry:"1676133018" modified:"1676146405" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d1d33cb-3b0f-43cf-a439-3da11c6ac174"]
+---
+time 1676146411
+old [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" entry:"1675819584" modified:"1675820587" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
+new [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" entry:"1675819584" modified:"1676146411" project:"devops" start:"1676146411" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
+---
+time 1676162306
+old [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" entry:"1675819584" modified:"1676146411" project:"devops" start:"1676146411" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
+new [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" end:"1676162306" entry:"1675819584" modified:"1676162306" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
+---
