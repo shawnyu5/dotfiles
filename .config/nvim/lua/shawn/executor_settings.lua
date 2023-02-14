@@ -83,18 +83,18 @@ local config = {
 	},
 }
 
-if utils.get_system_config().windows then
-	for _, cmdTbl in pairs(config.commands) do
-		cmdTbl["extern"] = false
-		-- range for loop from 1 to 10
-		for k, cmd in ipairs(cmdTbl) do
-			cmdTbl[k] = string.format(
-				"lua require('harpoon.term').sendCommand(1, '%s \\n') require('harpoon.term').gotoTerminal(1)",
-				cmd
-			)
-		end
-	end
-end
+-- if utils.get_system_config().windows then
+-- for _, cmdTbl in pairs(config.commands) do
+-- cmdTbl["extern"] = false
+-- -- range for loop from 1 to 10
+-- for k, cmd in ipairs(cmdTbl) do
+-- cmdTbl[k] = string.format(
+-- "lua require('harpoon.term').sendCommand(1, '%s \\n') require('harpoon.term').gotoTerminal(1)",
+-- cmd
+-- )
+-- end
+-- end
+-- end
 -- print(vim.inspect(config.commands))
 
 executor.setup(config)
