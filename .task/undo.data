@@ -6178,3 +6178,14 @@ new [annotation_1676132415:"complete in class" description:"excrise 5c" due:"167
 time 1676341306
 new [description:"part 1 create VM using powershell" due:"1677297600" entry:"1676341306" modified:"1676341306" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"079987f4-4f9e-49e6-8b64-644702df891b"]
 ---
+time 1676341331
+old [annotation_1675900492:"assignment is in 3 parts" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900517" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1676341331" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341349
+old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1676341331" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341349" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341387
+new [description:"part 2 create virual network" due:"1677211200" entry:"1676341387" modified:"1676341387" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"81c9fbde-5654-475b-8716-18f413925684"]
+---
