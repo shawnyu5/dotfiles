@@ -6167,3 +6167,40 @@ time 1676162306
 old [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" entry:"1675819584" modified:"1676146411" project:"devops" start:"1676146411" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
 new [description:"Agile Planning and Portfolio Management with Azure Boards lab" due:"1676264400" end:"1676162306" entry:"1675819584" modified:"1676162306" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"2c10cd8d-5626-4cc0-a5a8-d00550442b0b"]
 ---
+time 1676341224
+old [annotation_1676130782:"completed in class" description:"excrise 5b" due:"1676692800" entry:"1676130729" modified:"1676130782" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"db247771-e8f7-44f5-ad44-e867c1862dec"]
+new [annotation_1676130782:"completed in class" description:"excrise 5b" due:"1676692800" end:"1676341224" entry:"1676130729" modified:"1676341224" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"db247771-e8f7-44f5-ad44-e867c1862dec"]
+---
+time 1676341224
+old [annotation_1676132415:"complete in class" description:"excrise 5c" due:"1676692800" entry:"1676130756" modified:"1676132415" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"27b3bcf5-9668-4a31-a8a4-9cf9ac8bc8bf"]
+new [annotation_1676132415:"complete in class" description:"excrise 5c" due:"1676692800" end:"1676341224" entry:"1676130756" modified:"1676341224" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"27b3bcf5-9668-4a31-a8a4-9cf9ac8bc8bf"]
+---
+time 1676341306
+new [description:"part 1 create VM using powershell" due:"1677297600" entry:"1676341306" modified:"1676341306" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"079987f4-4f9e-49e6-8b64-644702df891b"]
+---
+time 1676341331
+old [annotation_1675900492:"assignment is in 3 parts" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1675900517" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1676341331" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341349
+old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677214800" entry:"1675900152" modified:"1676341331" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341349" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341387
+new [description:"part 2 create virual network" due:"1677211200" entry:"1676341387" modified:"1676341387" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"81c9fbde-5654-475b-8716-18f413925684"]
+---
+time 1676341400
+old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341349" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341400" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341425
+new [description:"part 3 install docker" due:"1677211200" entry:"1676341425" modified:"1676341425" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
+---
+time 1676341432
+old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341400" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" dep_ebfd0212-d627-4b0b-ba19-903d12f6ae6a:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684,ebfd0212-d627-4b0b-ba19-903d12f6ae6a" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341432" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
+time 1676341444
+old [description:"part 3 install docker" due:"1677211200" entry:"1676341425" modified:"1676341425" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
+new [description:"part 3 install docker" due:"1677211200" end:"1676341444" entry:"1676341425" modified:"1676341444" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
+---
