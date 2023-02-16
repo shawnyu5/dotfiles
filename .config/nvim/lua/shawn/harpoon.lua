@@ -34,7 +34,7 @@ end, {
 })
 
 vim.api.nvim_create_user_command("Harpoonadd", function()
-	require("harpoon.ui").add_file()
+	require("harpoon.mark").add_file()
 end, {
 	desc = "Add current file to harpoon",
 })
