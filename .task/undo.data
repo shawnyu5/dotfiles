@@ -6204,3 +6204,6 @@ time 1676343464
 old [description:"part 2 create virual network" due:"1677211200" entry:"1676341387" modified:"1676341387" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"81c9fbde-5654-475b-8716-18f413925684"]
 new [description:"part 2 create virual network" due:"1677211200" end:"1676343464" entry:"1676341387" modified:"1676343464" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"81c9fbde-5654-475b-8716-18f413925684"]
 ---
+time 1676583140
+new [description:"lab 5 git" due:"1676952000" entry:"1676583139" modified:"1676583139" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d35df77b-a0f5-4f94-b602-b8adc3a190af"]
+---
