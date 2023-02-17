@@ -35,16 +35,6 @@ for type, icon in pairs(signs) do
 end
 
 -- java
--- config.on_attach = function(client, bufnr)
--- vim.api.nvim_create_user_command("Test", function()
--- print("hello world")
--- end, {})
--- vim.notify("Java LSP on_attach")
--- utils.on_attach(client, bufnr)
--- utils.format_on_save()
--- end
--- vim.pretty_print(config.on_attach)
-
 local jdtls_group = vim.api.nvim_create_augroup("jdtls", {})
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.java",
@@ -75,6 +65,15 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			end,
 		}
 		require("jdtls").start_or_attach(config)
+	end,
+})
+
+-- groovy
+lsp.groovyls.setup({
+	cmd = { "groovy-language-server" },
+	on_attach = function(client, bufnr)
+		utils.on_attach(client, bufnr)
+      utils.disable_formatting(client)
 	end,
 })
 
