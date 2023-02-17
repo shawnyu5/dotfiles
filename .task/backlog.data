@@ -1670,3 +1670,4 @@
 {"description":"part 3 install docker","due":"20230224T040000Z","entry":"20230214T022345Z","modified":"20230214T022345Z","project":"devops","status":"pending","uuid":"ebfd0212-d627-4b0b-ba19-903d12f6ae6a","tags":["seneca"]}
 {"description":"part 2 create virual network","due":"20230224T040000Z","end":"20230214T025744Z","entry":"20230214T022307Z","modified":"20230214T025744Z","project":"devops","status":"completed","uuid":"81c9fbde-5654-475b-8716-18f413925684","tags":["seneca"]}
 {"description":"lab 5 git","due":"20230221T040000Z","entry":"20230216T213219Z","modified":"20230216T213219Z","project":"devops","status":"pending","uuid":"d35df77b-a0f5-4f94-b602-b8adc3a190af","tags":["seneca"]}
+{"description":"lab 2","due":"20230209T040000Z","end":"20230217T033518Z","entry":"20230203T021758Z","modified":"20230217T033518Z","project":"BCI","status":"completed","uuid":"97f20870-7da5-47b4-81d7-0c12056604c2","tags":["seneca"]}
