@@ -23,6 +23,7 @@ require("nvim-treesitter.configs").setup({
 		"tsx",
 		"c_sharp",
 		"json",
+      "jsdoc"
 	},
 
 	highlight = {

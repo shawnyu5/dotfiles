@@ -20,3 +20,8 @@ chsh -s $(which zsh)
 chsh -s $(which zsh)
 zsh
 ssh shawny@mla05docker.mgt.fundserv.com
+ssh shawny@mla05docker.mgt.fundserv.com
+ls
+
+ls
+exit
