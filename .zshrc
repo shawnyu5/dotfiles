@@ -127,7 +127,7 @@ fi
 
 # export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:/home/shawn/personal/task_worrior/:$HOME/.local/bin/:$HOME/gopath/bin/"
-export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="$PATH:/opt/mssql-tools/bin:$HOME/.local/share/nvim/mason/bin/"
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
