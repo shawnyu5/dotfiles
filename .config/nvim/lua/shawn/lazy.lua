@@ -200,15 +200,16 @@ local pluginSpec = {
 		end,
 		ft = { "markdown" },
 	},
-	{
-		"toppair/peek.nvim",
-		build = "deno task --quiet build:fast",
-		ft = { "markdown" },
-		event = "VeryLazy",
-		config = function()
-			require("shawn.peek")
-		end,
-	},
+	-- {
+	-- "toppair/peek.nvim",
+	-- build = "deno task --quiet build:fast",
+	-- ft = { "markdown" },
+	-- event = "VeryLazy",
+	-- config = function()
+	-- require("shawn.peek")
+	-- end,
+	-- },
+
 	{
 		"shawnyu5/executor.nvim",
 	},

@@ -295,12 +295,11 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-lsp.sumneko_lua.setup({
+lsp.lua_ls.setup({
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 
 		-- client.server_capabilities.document_range_formatting = true
-		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {
