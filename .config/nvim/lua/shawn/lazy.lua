@@ -91,7 +91,7 @@ local pluginSpec = {
 		ft = "go",
 	},
 
-	-- use("matbme/JABS.nvim")
+	-- -- use("matbme/JABS.nvim")
 	{ "j-morano/buffer_manager.nvim" },
 
 	-- dap
@@ -104,7 +104,7 @@ local pluginSpec = {
 
 	{ "aserowy/tmux.nvim" },
 
-	-- use({ "nvim-lualine/lualine.nvim" })
+	-- -- use({ "nvim-lualine/lualine.nvim" })
 	{
 		"itchyny/lightline.vim",
 		config = function()
@@ -129,7 +129,7 @@ local pluginSpec = {
 
 	{ "andweeb/presence.nvim" },
 
-	-- use({ "preservim/nerdtree" })
+	-- -- use({ "preservim/nerdtree" })
 	{
 		"kyazdani42/nvim-tree.lua",
 	},
@@ -157,30 +157,8 @@ local pluginSpec = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	},
-	-- TODO: look into octo more
-	-- {
-	-- "pwntester/octo.nvim",
-	-- dependencies = {
-	-- "nvim-lua/plenary.nvim",
-	-- "nvim-telescope/telescope.nvim",
-	-- },
-	-- config = function()
-	-- require("octo").setup()
-	-- end,
-	-- },
 	-- native LSP
-	{
-		"neovim/nvim-lspconfig",
-		dependencies = {
-			"SmiteshP/nvim-navic",
-		},
-	},
+	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
 	{
 		"hrsh7th/nvim-cmp",
@@ -203,7 +181,7 @@ local pluginSpec = {
 	},
 	{
 		"SmiteshP/nvim-navic",
-		-- dependencies = { "neovim/nvim-lspconfig" },
+		dependencies = { "neovim/nvim-lspconfig" },
 	},
 	-- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
 	{ "zbirenbaum/copilot.lua" },
@@ -222,42 +200,29 @@ local pluginSpec = {
 		end,
 		ft = { "markdown" },
 	},
-	-- {
-	-- "toppair/peek.nvim",
-	-- build = "deno task --quiet build:fast",
-	-- ft = { "markdown" },
-	-- event = "VeryLazy",
-	-- config = function()
-	-- require("shawn.peek")
-	-- end,
-	-- },
+	{
+		"toppair/peek.nvim",
+		build = "deno task --quiet build:fast",
+		ft = { "markdown" },
+		event = "VeryLazy",
+		config = function()
+			require("shawn.peek")
+		end,
+	},
 	{
 		"shawnyu5/executor.nvim",
 	},
-	-- {
-	-- "jackMort/ChatGPT.nvim",
-	-- config = function()
-	-- require("chatgpt").setup({
-	-- -- optional configuration
-	-- })
-	-- end,
-	-- dependencies = {
-	-- "MunifTanjim/nui.nvim",
-	-- "nvim-lua/plenary.nvim",
-	-- "nvim-telescope/telescope.nvim",
-	-- },
-	-- },
 	{
 		"mzlogin/vim-markdown-toc",
 		ft = "markdown",
 	}, -- auto generate table of contents,
-	-- {
-		-- "jakewvincent/mkdnflow.nvim",
-		-- ft = "markdown",
-		-- config = function()
-			-- require("shawn.mkdnflow")
-		-- end,
-	-- },
+	{
+		"jakewvincent/mkdnflow.nvim",
+		ft = "markdown",
+		config = function()
+			require("shawn.mkdnflow")
+		end,
+	},
 	{
 		-- work with bullet lists in md nicely
 		"dkarter/bullets.vim",
@@ -269,7 +234,7 @@ local pluginSpec = {
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "karb94/neoscroll.nvim" },
-	{ "chmp/mdnav" }, -- opening links in markdown,
+	-- { "chmp/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
 	{

@@ -35,6 +35,16 @@ for type, icon in pairs(signs) do
 end
 
 -- java
+-- config.on_attach = function(client, bufnr)
+-- vim.api.nvim_create_user_command("Test", function()
+-- print("hello world")
+-- end, {})
+-- vim.notify("Java LSP on_attach")
+-- utils.on_attach(client, bufnr)
+-- utils.format_on_save()
+-- end
+-- vim.pretty_print(config.on_attach)
+
 local jdtls_group = vim.api.nvim_create_augroup("jdtls", {})
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.java",
@@ -65,15 +75,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			end,
 		}
 		require("jdtls").start_or_attach(config)
-	end,
-})
-
--- groovy
-lsp.groovyls.setup({
-	cmd = { "groovy-language-server" },
-	on_attach = function(client, bufnr)
-		utils.on_attach(client, bufnr)
-      utils.disable_formatting(client)
 	end,
 })
 
@@ -110,9 +111,6 @@ lsp.vuels.setup({
 -- json
 lsp.jsonls.setup({
 	on_attach = function(client, bufnr)
-		require("nvim-navic").attach(client, bufnr)
-		client.server_capabilities.document_formatting = false
-		client.server_capabilities.document_range_formatting = false
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
 	end,
@@ -214,7 +212,6 @@ lsp.dockerls.setup({
 lsp.yamlls.setup({
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
-		utils.disable_formatting(client)
 		-- utils.format_on_save()
 		require("nvim-navic").attach(client, bufnr)
 	end,
@@ -298,9 +295,12 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-lsp.lua_ls.setup({
+lsp.sumneko_lua.setup({
 	on_attach = function(client, bufnr)
-		utils.disable_formatting(client)
+		client.server_capabilities.document_formatting = false
+
+		-- client.server_capabilities.document_range_formatting = true
+		utils.format_on_save()
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {
