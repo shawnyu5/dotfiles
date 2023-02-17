@@ -111,9 +111,6 @@ lsp.vuels.setup({
 -- json
 lsp.jsonls.setup({
 	on_attach = function(client, bufnr)
-		require("nvim-navic").attach(client, bufnr)
-		client.server_capabilities.document_formatting = false
-		client.server_capabilities.document_range_formatting = false
 		utils.on_attach(client, bufnr)
 		utils.format_on_save()
 	end,
@@ -215,7 +212,6 @@ lsp.dockerls.setup({
 lsp.yamlls.setup({
 	on_attach = function(client, bufnr)
 		utils.on_attach(client, bufnr)
-		utils.disable_formatting(client)
 		-- utils.format_on_save()
 		require("nvim-navic").attach(client, bufnr)
 	end,
@@ -301,7 +297,9 @@ table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.lua_ls.setup({
 	on_attach = function(client, bufnr)
-		utils.disable_formatting(client)
+		client.server_capabilities.document_formatting = false
+
+		-- client.server_capabilities.document_range_formatting = true
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {
