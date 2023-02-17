@@ -180,6 +180,12 @@ local pluginSpec = {
 		end,
 	},
 	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	},
+	{
 		"SmiteshP/nvim-navic",
 		dependencies = { "neovim/nvim-lspconfig" },
 	},
