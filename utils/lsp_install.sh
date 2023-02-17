@@ -6,10 +6,10 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # make sure script is ran with root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
+# if [ "$EUID" -ne 0 ]
+  # then echo "Please run as root"
+  # exit
+# fi
 
 #######################################
 # prompt user with a prompt, and run command passed in
