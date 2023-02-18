@@ -6219,3 +6219,14 @@ time 1676693397
 old [description:"sort out passport renewal" entry:"1674924630" modified:"1674924630" status:"pending" uuid:"19c688f1-e3b6-4516-b89a-604b1ab53b2f"]
 new [description:"sort out passport renewal" end:"1676693397" entry:"1674924630" modified:"1676693397" status:"completed" uuid:"19c688f1-e3b6-4516-b89a-604b1ab53b2f"]
 ---
+time 1676737002
+old [description:"lab 5 git" due:"1676952000" entry:"1676583139" modified:"1676583139" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d35df77b-a0f5-4f94-b602-b8adc3a190af"]
+new [description:"lab 5 git" due:"1676952000" entry:"1676583139" modified:"1676737002" project:"devops" start:"1676737002" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d35df77b-a0f5-4f94-b602-b8adc3a190af"]
+---
+time 1676747490
+old [description:"lab 5 git" due:"1676952000" entry:"1676583139" modified:"1676737002" project:"devops" start:"1676737002" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d35df77b-a0f5-4f94-b602-b8adc3a190af"]
+new [description:"lab 5 git" due:"1676952000" end:"1676747490" entry:"1676583139" modified:"1676747490" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"d35df77b-a0f5-4f94-b602-b8adc3a190af"]
+---
+time 1676747521
+new [description:"ibm test 1 review" due:"1677124800" entry:"1676747521" modified:"1676747521" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"18941c67-1f07-415a-9c8d-b2d6e53c7364"]
+---
