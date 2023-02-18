@@ -14,6 +14,12 @@ function M.format_on_save()
 	-- })
 end
 
+--- disable formatting for a language server
+function M.disable_formatting(client)
+	client.server_capabilities.document_formatting = false
+	client.server_capabilities.document_range_formatting = false
+end
+
 function M.on_attach(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
