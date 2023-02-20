@@ -241,7 +241,7 @@ local pluginSpec = {
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "karb94/neoscroll.nvim" },
-   { "chmp/mdnav" }, -- opening links in markdown,
+	{ "chmp/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
 	{
@@ -252,10 +252,10 @@ local pluginSpec = {
 		"nvim-telescope/telescope-ui-select.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim" },
 	},
-	{
-		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim" },
-	},
+	-- {
+	-- "nvim-telescope/telescope-file-browser.nvim",
+	-- dependencies = { "nvim-telescope/telescope.nvim" },
+	-- },
 	{ "szw/vim-maximizer" }, -- vim maxmizer,
 	{ "adelarsq/vim-matchit" }, -- matchit,
 	{ "tpope/vim-surround" }, -- vim surround,
