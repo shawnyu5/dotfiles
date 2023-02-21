@@ -68,3 +68,13 @@ vim.filetype.add({
 		vugu = "html",
 	},
 })
+
+local central_ci_augroup = vim.api.nvim_create_augroup("central_ci", {})
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	group = central_ci_augroup,
+   pattern = vim.fn.expand("~") .. "/central-ci/*",
+	callback = function()
+		vim.cmd("set ff=unix")
+		vim.cmd("wa")
+	end,
+})
