@@ -6238,3 +6238,6 @@ time 1676857440
 old [description:"part 3 install docker" due:"1677211200" entry:"1676341425" modified:"1676753484" project:"devops" start:"1676753484" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
 new [description:"part 3 install docker" due:"1677211200" end:"1676857440" entry:"1676341425" modified:"1676857440" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
 ---
+time 1676945568
+new [description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1676945568" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
