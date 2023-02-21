@@ -6249,3 +6249,6 @@ time 1676946292
 old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" dep_ebfd0212-d627-4b0b-ba19-903d12f6ae6a:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684,ebfd0212-d627-4b0b-ba19-903d12f6ae6a" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341432" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
 new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" dep_ebfd0212-d627-4b0b-ba19-903d12f6ae6a:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684,ebfd0212-d627-4b0b-ba19-903d12f6ae6a" description:"assignment 1" due:"1677374549" end:"1676946292" entry:"1675900152" modified:"1676946292" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
 ---
+time 1676990574
+new [description:"plan for europe trip" entry:"1676990574" modified:"1676990574" status:"pending" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
+---
