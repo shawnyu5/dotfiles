@@ -50,6 +50,7 @@ require("shawn.lsp.html")
 require("shawn.lsp.ts")
 require("shawn.lsp.lua")
 require("shawn.lsp.python")
+require("shawn.lsp.groovy")
 
 -- color settings
 vim.cmd([[
