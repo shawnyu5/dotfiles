@@ -6238,3 +6238,14 @@ time 1676857440
 old [description:"part 3 install docker" due:"1677211200" entry:"1676341425" modified:"1676753484" project:"devops" start:"1676753484" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
 new [description:"part 3 install docker" due:"1677211200" end:"1676857440" entry:"1676341425" modified:"1676857440" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"ebfd0212-d627-4b0b-ba19-903d12f6ae6a"]
 ---
+time 1676945568
+new [description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1676945568" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1676945957
+old [description:"part 1 create VM using powershell" due:"1677297600" entry:"1676341306" modified:"1676341306" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"079987f4-4f9e-49e6-8b64-644702df891b"]
+new [description:"part 1 create VM using powershell" due:"1677297600" end:"1676945957" entry:"1676341306" modified:"1676945957" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"079987f4-4f9e-49e6-8b64-644702df891b"]
+---
+time 1676946292
+old [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" dep_ebfd0212-d627-4b0b-ba19-903d12f6ae6a:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684,ebfd0212-d627-4b0b-ba19-903d12f6ae6a" description:"assignment 1" due:"1677374549" entry:"1675900152" modified:"1676341432" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b64-644702df891b:"x" dep_81c9fbde-5654-475b-8716-18f413925684:"x" dep_ebfd0212-d627-4b0b-ba19-903d12f6ae6a:"x" depends:"079987f4-4f9e-49e6-8b64-644702df891b,81c9fbde-5654-475b-8716-18f413925684,ebfd0212-d627-4b0b-ba19-903d12f6ae6a" description:"assignment 1" due:"1677374549" end:"1676946292" entry:"1675900152" modified:"1676946292" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"9421cf65-310b-497b-b7c3-6b13250245ba"]
+---
