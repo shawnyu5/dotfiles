@@ -6252,3 +6252,6 @@ new [annotation_1675900492:"assignment is in 3 parts" dep_079987f4-4f9e-49e6-8b6
 time 1676990574
 new [description:"plan for europe trip" entry:"1676990574" modified:"1676990574" status:"pending" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
 ---
+time 1677097607
+new [description:"lab 6 enabling Continuous Integration with Azure Pipelines" due:"1677556800" entry:"1677097607" modified:"1677097607" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d506b139-260c-4a88-b048-7fb1326390df"]
+---
