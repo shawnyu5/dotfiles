@@ -91,6 +91,7 @@ local hint = [[
   ^ ^        Options
   ^
   _r_ %{rnu} relative number
+  _s_ %{spell} spell
   ^
        ^^^^                _<Esc>_
 ]]
@@ -121,6 +122,18 @@ local options_hydra = hydra({
 			end,
 			{ desc = "relativenumber" },
 		},
+		{
+			"s",
+			function()
+				if vim.o.spell == true then
+					vim.o.spell = false
+				else
+					vim.o.spell = true
+				end
+			end,
+			{ exit = true, desc = "spell" },
+		},
+		{ "<Esc>", nil, { exit = true } },
 	},
 })
 
