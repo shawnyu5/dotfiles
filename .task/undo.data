@@ -6308,3 +6308,7 @@ time 1677345568
 old [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM (5 mark)" due:"1678165200" entry:"1677345461" modified:"1677345461" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
 new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" entry:"1677345461" modified:"1677345568" project:"devops" status:"pending" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
 ---
+time 1677345608
+old [description:"lab 6 enabling Continuous Integration with Azure Pipelines" due:"1677556800" entry:"1677097607" modified:"1677097607" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d506b139-260c-4a88-b048-7fb1326390df"]
+new [description:"lab 6 enabling Continuous Integration with Azure Pipelines" due:"1677556800" entry:"1677097607" modified:"1677345608" project:"devops" start:"1677345608" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"d506b139-260c-4a88-b048-7fb1326390df"]
+---
