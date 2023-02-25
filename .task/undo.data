@@ -6286,3 +6286,10 @@ new [description:"co op reflection 2" due:"1676610000" entry:"1677345395" modifi
 time 1677345461
 new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM (5 mark)" due:"1678165200" entry:"1677345461" modified:"1677345461" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
 ---
+time 1677345475
+old [annotation_1677097915:"Max 20 min video" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677097915" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" depends:"9cec6f7d-40ab-4905-924a-045cd98eee9b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345475" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1677345509
+new [description:"Part 2: Use Azure Container Instances as a Jenkins build agent" due:"1678248000" entry:"1677345509" modified:"1677345509" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3667d80b-0210-4f8d-9e1d-04c0239935e9"]
+---
