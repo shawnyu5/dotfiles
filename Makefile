@@ -27,8 +27,8 @@ init: set_default_shell ## Create all symlinks
 backup: FORCE ## backup all pacman packages
 	rm -rf ./backup
 	mkdir -p ./backup/
-	pacman -Qnq > ./backup/pacman-packages.txt
-	pacman -Qqem > ./backup/aur-packages.txt
+	pacman -Qnq | grep -v "endeavouros*" > ./backup/pacman-packages.txt
+	pacman -Qqem | grep -v "endeavouros*" > ./backup/aur-packages.txt
 
 pacman: ## install all pacman packages
 	pacman -S - < ./backup/pacman-packages.txt
