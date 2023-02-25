@@ -6280,3 +6280,6 @@ new [description:"excrise 6b" due:"1677819600" end:"1677345138" entry:"167734456
 time 1677345208
 new [description:"excrise 6a" due:"1677819600" entry:"1677345208" modified:"1677345208" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
 ---
+time 1677345395
+new [description:"co op reflection 2" due:"1676610000" entry:"1677345395" modified:"1677345395" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"8ca51be2-8d81-4881-b1e9-91db9f46bb13"]
+---
