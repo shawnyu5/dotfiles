@@ -1689,3 +1689,4 @@
 {"description":"excrise 6b","due":"20230303T050000Z","entry":"20230225T170245Z","modified":"20230225T170245Z","project":"C#","status":"pending","uuid":"14f0b2af-f631-4b4b-8cad-10cf1533fbd4","tags":["seneca"]}
 {"description":"excrise 5d","due":"20230303T050000Z","end":"20230225T171218Z","entry":"20230225T170227Z","modified":"20230225T171218Z","project":"C#","status":"completed","uuid":"f27c03b1-a6f1-4cbf-b77c-3bd34b5f58e2","tags":["seneca"]}
 {"description":"excrise 6b","due":"20230303T050000Z","end":"20230225T171218Z","entry":"20230225T170245Z","modified":"20230225T171218Z","project":"C#","status":"completed","uuid":"14f0b2af-f631-4b4b-8cad-10cf1533fbd4","tags":["seneca"]}
+{"description":"excrise 6a","due":"20230303T050000Z","entry":"20230225T171328Z","modified":"20230225T171328Z","project":"C#","status":"pending","uuid":"b3971e52-b90f-4901-9e3d-4452fe03e3a5","tags":["seneca"]}

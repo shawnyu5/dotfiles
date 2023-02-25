@@ -6277,3 +6277,6 @@ time 1677345138
 old [description:"excrise 6b" due:"1677819600" entry:"1677344565" modified:"1677344565" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"14f0b2af-f631-4b4b-8cad-10cf1533fbd4"]
 new [description:"excrise 6b" due:"1677819600" end:"1677345138" entry:"1677344565" modified:"1677345138" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"14f0b2af-f631-4b4b-8cad-10cf1533fbd4"]
 ---
+time 1677345208
+new [description:"excrise 6a" due:"1677819600" entry:"1677345208" modified:"1677345208" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
+---
