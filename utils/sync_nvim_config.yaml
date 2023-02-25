@@ -1,5 +1,7 @@
 ---
-- name: sync nvim config
+- name: |
+    sync nvim config]
+    Description: Sync neovim config from current config to all other branch]
   hosts: localhost
   become: false
   vars:
