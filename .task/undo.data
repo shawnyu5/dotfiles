@@ -6280,3 +6280,31 @@ new [description:"excrise 6b" due:"1677819600" end:"1677345138" entry:"167734456
 time 1677345208
 new [description:"excrise 6a" due:"1677819600" entry:"1677345208" modified:"1677345208" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
 ---
+time 1677345395
+new [description:"co op reflection 2" due:"1676610000" entry:"1677345395" modified:"1677345395" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"8ca51be2-8d81-4881-b1e9-91db9f46bb13"]
+---
+time 1677345461
+new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM (5 mark)" due:"1678165200" entry:"1677345461" modified:"1677345461" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
+---
+time 1677345475
+old [annotation_1677097915:"Max 20 min video" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677097915" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" depends:"9cec6f7d-40ab-4905-924a-045cd98eee9b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345475" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1677345509
+new [description:"Part 2: Use Azure Container Instances as a Jenkins build agent" due:"1678248000" entry:"1677345509" modified:"1677345509" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3667d80b-0210-4f8d-9e1d-04c0239935e9"]
+---
+time 1677345521
+old [annotation_1677097915:"Max 20 min video" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" depends:"9cec6f7d-40ab-4905-924a-045cd98eee9b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345475" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345521" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1677345543
+new [description:"Part 3: Deploy to Linux virtual machine using Jenkins and Azure DevOps Services" due:"1678248000" entry:"1677345543" modified:"1677345543" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b9b45ce0-6b7e-4420-b74d-fe4e9e96448b"]
+---
+time 1677345548
+old [annotation_1677097915:"Max 20 min video" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345521" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" dep_b9b45ce0-6b7e-4420-b74d-fe4e9e96448b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b,b9b45ce0-6b7e-4420-b74d-fe4e9e96448b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345548" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1677345568
+old [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM (5 mark)" due:"1678165200" entry:"1677345461" modified:"1677345461" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
+new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" entry:"1677345461" modified:"1677345568" project:"devops" status:"pending" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
+---
