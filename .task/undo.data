@@ -6266,3 +6266,6 @@ new [description:"ibm test 1 review" due:"1677124800" end:"1677210546" entry:"16
 time 1677344547
 new [description:"excrise 5d" due:"1677819600" entry:"1677344547" modified:"1677344547" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f27c03b1-a6f1-4cbf-b77c-3bd34b5f58e2"]
 ---
+time 1677344565
+new [description:"excrise 6b" due:"1677819600" entry:"1677344565" modified:"1677344565" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"14f0b2af-f631-4b4b-8cad-10cf1533fbd4"]
+---
