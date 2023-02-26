@@ -6328,3 +6328,7 @@ time 1677355434
 old [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" entry:"1677345461" modified:"1677345568" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
 new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" entry:"1677345461" modified:"1677355434" project:"devops" start:"1677355434" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
 ---
+time 1677373293
+old [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" entry:"1677345461" modified:"1677355434" project:"devops" start:"1677355434" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
+new [description:"Part 1: Get Started: Install Jenkins on an Azure Linux VM" due:"1678248000" end:"1677373293" entry:"1677345461" modified:"1677373293" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"9cec6f7d-40ab-4905-924a-045cd98eee9b"]
+---
