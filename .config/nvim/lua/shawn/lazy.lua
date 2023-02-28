@@ -193,6 +193,9 @@ local pluginSpec = {
 	{ "zbirenbaum/copilot.lua" },
 	-- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	{
+		"chrisbra/csv.vim",
+	},
+	{
 		"jose-elias-alvarez/null-ls.nvim",
 		event = "LspAttach",
 		config = function()
