@@ -26,6 +26,9 @@ tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
+" zz centers the cursor both vertically and horizontally
+nnoremap zz zzzszH
+
 " paste in visual mode without copying to clipboard
 xnoremap p "_dP
 
