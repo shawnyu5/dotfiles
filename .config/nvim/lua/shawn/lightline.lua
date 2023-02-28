@@ -34,6 +34,7 @@ vim.g.Check_spell = function()
 	end
 	return ""
 end
+
 --- Get the relative path name of the current file
 ---@return string
 vim.g.Get_relative_path_name = function()
@@ -82,10 +83,6 @@ vim.g.lightline = {
 			{ "fileformat", "fileencoding", "filetype", "checkSpell" },
 		},
 	},
-	-- tab_component = {
-	-- -- relativepath = "HELLO"
-	-- relativepath = vim.fn.expand("%f"),
-	-- },
 	tab_component_function = {
 		relativepathFunc = "Get_relative_path_name",
 	},
