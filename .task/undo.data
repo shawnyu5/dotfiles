@@ -6336,3 +6336,7 @@ time 1677615683
 old [description:"Part 2: Use Azure Container Instances as a Jenkins build agent" due:"1678248000" entry:"1677345509" modified:"1677345509" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"3667d80b-0210-4f8d-9e1d-04c0239935e9"]
 new [description:"Part 2: Use Azure Container Instances as a Jenkins build agent" due:"1678248000" end:"1677615683" entry:"1677345509" modified:"1677615683" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"3667d80b-0210-4f8d-9e1d-04c0239935e9"]
 ---
+time 1677630227
+old [description:"excrise 6a" due:"1677819600" entry:"1677345208" modified:"1677345208" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
+new [description:"excrise 6a" due:"1677819600" end:"1677630227" entry:"1677345208" modified:"1677630227" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
+---
