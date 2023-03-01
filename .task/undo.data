@@ -6340,3 +6340,6 @@ time 1677630227
 old [description:"excrise 6a" due:"1677819600" entry:"1677345208" modified:"1677345208" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
 new [description:"excrise 6a" due:"1677819600" end:"1677630227" entry:"1677345208" modified:"1677630227" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"b3971e52-b90f-4901-9e3d-4452fe03e3a5"]
 ---
+time 1677630883
+new [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" entry:"1677630883" modified:"1677630883" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
+---
