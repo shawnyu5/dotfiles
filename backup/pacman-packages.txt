@@ -42,6 +42,7 @@ avahi
 awesome-terminal-fonts
 b43-fwcutter
 babl
+bacon
 barrier
 barrier-headless
 base
@@ -50,6 +51,7 @@ bash-completion
 bash-language-server
 bat
 bc
+binaryen
 bind
 binutils
 bison
@@ -1042,6 +1044,7 @@ make
 malcontent
 man-db
 man-pages
+mandown
 marisa
 maven
 md4c
@@ -1474,9 +1477,9 @@ ruby-uri
 rubygems
 run-parts
 runc
-rust
 rust-analyzer
 rust-src
+rustup
 s-nail
 sbc
 scrot
@@ -1685,6 +1688,7 @@ yaml-cpp
 yaml-language-server
 yay
 zbar
+zellij
 zenity
 zeromq
 zimg
