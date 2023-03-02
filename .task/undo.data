@@ -6346,3 +6346,6 @@ new [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azur
 time 1677630910
 new [description:"lab 7.2 Embracing Continuous Delivery with Azure Pipelines" due:"1678762800" entry:"1677630910" modified:"1677630910" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5c80af8c-caf9-4f2a-83bd-935c48258187"]
 ---
+time 1677715825
+new [description:"fix css issues" due:"1678251600" entry:"1677715825" modified:"1677715825" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0e07008a-b073-4b96-823f-908cb7441c1d"]
+---
