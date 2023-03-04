@@ -4,4 +4,5 @@
 [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" entry:"1677630883" modified:"1677630883" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
 [description:"lab 7.2 Embracing Continuous Delivery with Azure Pipelines" due:"1678762800" entry:"1677630910" modified:"1677630910" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5c80af8c-caf9-4f2a-83bd-935c48258187"]
 [description:"fix css issues" due:"1678251600" entry:"1677715825" modified:"1677715825" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0e07008a-b073-4b96-823f-908cb7441c1d"]
-[description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947493" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+[annotation_1677947505:"complete, need to submit" description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947505" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+[description:"execrise 7b" due:"1678507200" entry:"1677948154" modified:"1677948154" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d16242a-ae96-4e84-b339-d13284c4577c"]
