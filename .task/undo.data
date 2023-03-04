@@ -6349,3 +6349,13 @@ new [description:"lab 7.2 Embracing Continuous Delivery with Azure Pipelines" du
 time 1677715825
 new [description:"fix css issues" due:"1678251600" entry:"1677715825" modified:"1677715825" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0e07008a-b073-4b96-823f-908cb7441c1d"]
 ---
+time 1677947493
+new [description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947493" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+---
+time 1677947505
+old [description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947493" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+new [annotation_1677947505:"complete, need to submit" description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947505" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+---
+time 1677948154
+new [description:"execrise 7b" due:"1678507200" entry:"1677948154" modified:"1677948154" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d16242a-ae96-4e84-b339-d13284c4577c"]
+---
