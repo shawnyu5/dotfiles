@@ -1,10 +1,11 @@
 act
-air
+air-bin
 aws-cli-v2-bin
 docker-ls
+escrotum-git
 google-chrome
+google-java-format
 grub-tools
-grub2-theme-endeavouros
 hadolint-bin
 heroku-cli-bin
 icu69-bin
