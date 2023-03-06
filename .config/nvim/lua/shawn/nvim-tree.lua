@@ -76,7 +76,9 @@ local function open_nvim_tree(data)
 	vim.cmd.cd(data.file)
 
 	-- open the tree
-	require("nvim-tree.api").tree.open()
+	require("nvim-tree.api").tree.open({
+      current_window = true
+   })
 end
 
 local augroup = vim.api.nvim_create_augroup("nvim-tree", { clear = true })

@@ -161,6 +161,9 @@ local pluginSpec = {
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
 	{
+		"simrat39/rust-tools.nvim",
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
@@ -359,7 +362,6 @@ lazy.setup(pluginSpec, {
 					enter = true,
 				})
 			end,
-
 			-- open a terminal for the plugin dir
 			["<localleader>t"] = function(plugin)
 				require("lazy.util").open_cmd({ vim.go.shell }, {
