@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd({
    "CursorMovedI",
    "WinScrolled",
 }, {
-   pattern = { "*.yml", "*.yaml" },
+   pattern = { "*.yml", "*.yaml", "*.json" },
    group = auGroup,
    callback = function()
       M.update()
