@@ -6359,3 +6359,15 @@ new [annotation_1677947505:"complete, need to submit" description:"execrise 7a" 
 time 1677948154
 new [description:"execrise 7b" due:"1678507200" entry:"1677948154" modified:"1677948154" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5d16242a-ae96-4e84-b339-d13284c4577c"]
 ---
+time 1678074000
+old [description:"Part 3: Deploy to Linux virtual machine using Jenkins and Azure DevOps Services" due:"1678248000" entry:"1677345543" modified:"1677957068" project:"devops" start:"1677957068" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b9b45ce0-6b7e-4420-b74d-fe4e9e96448b"]
+new [description:"Part 3: Deploy to Linux virtual machine using Jenkins and Azure DevOps Services" due:"1678248000" end:"1678074000" entry:"1677345543" modified:"1678074000" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"b9b45ce0-6b7e-4420-b74d-fe4e9e96448b"]
+---
+time 1678074011
+old [annotation_1677097915:"Max 20 min video" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" dep_b9b45ce0-6b7e-4420-b74d-fe4e9e96448b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b,b9b45ce0-6b7e-4420-b74d-fe4e9e96448b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1677345548" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" annotation_1678074011:"presentation done. Need to submit" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" dep_b9b45ce0-6b7e-4420-b74d-fe4e9e96448b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b,b9b45ce0-6b7e-4420-b74d-fe4e9e96448b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1678074011" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
+time 1678074017
+old [annotation_1677097915:"Max 20 min video" annotation_1678074011:"presentation done. Need to submit" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" dep_b9b45ce0-6b7e-4420-b74d-fe4e9e96448b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b,b9b45ce0-6b7e-4420-b74d-fe4e9e96448b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1678074011" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+new [annotation_1677097915:"Max 20 min video" annotation_1678074011:"presentation done. Need to submit" dep_3667d80b-0210-4f8d-9e1d-04c0239935e9:"x" dep_9cec6f7d-40ab-4905-924a-045cd98eee9b:"x" dep_b9b45ce0-6b7e-4420-b74d-fe4e9e96448b:"x" depends:"3667d80b-0210-4f8d-9e1d-04c0239935e9,9cec6f7d-40ab-4905-924a-045cd98eee9b,b9b45ce0-6b7e-4420-b74d-fe4e9e96448b" description:"project 1 midterm" due:"1678248000" entry:"1676945568" modified:"1678074017" project:"devops" start:"1678074017" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"262a6ec5-8da1-448e-82d1-b96144dd17ec"]
+---
