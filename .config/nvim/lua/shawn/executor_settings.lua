@@ -61,7 +61,6 @@ executor.setup({
       },
       rust = {
          "cargo run",
-         "rustc % -o a.out && ./a.out",
       },
       dockerfile = {
          "docker build .",
@@ -76,7 +75,6 @@ executor.setup({
    insert_on_enter = false, -- enter insert mode on entering a terminal
    dependency_commands = {
       make = "Makefile",
-      ["cargo run"] = " Cargo.toml",
       ["npm start"] = "package.json",
    },
 })
