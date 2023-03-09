@@ -1,7 +1,7 @@
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-init: set_default_shell ## Create all symlinks
+init: set_default_shell neovim ## Create all symlinks
 	ln -svf ~/personal/.config/i3 ~/.config/
 	ln -svf ~/personal/.config/kitty ~/.config/
 	ln -svf ~/personal/.config/neofetch/ ~/.config/
@@ -46,6 +46,9 @@ docker: ## install and set up docker
 
 neovim: ## set up neovim with my config (WARNING: this will overwrite your current config)
 	ln -svf ~/personal/.config/nvim ~/.config/nvim
+
+tmux_plugin_manager:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 set_default_shell: ## set default shell to zsh
 	chsh -s $$(which zsh)
