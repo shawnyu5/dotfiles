@@ -1,7 +1,7 @@
 help: ## Prints help for targets with comments
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-init: set_default_shell neovim ## Create all symlinks
+init: neovim ## Create all symlinks
 	ln -svf ~/personal/.config/i3 ~/.config/
 	ln -svf ~/personal/.config/kitty ~/.config/
 	ln -svf ~/personal/.config/neofetch/ ~/.config/
