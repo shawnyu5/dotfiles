@@ -20,8 +20,6 @@ init: neovim ## Create all symlinks
 	ln -svf ~/personal/.tmux.conf ~/.tmux.conf
 	ln -svf ~/personal/.taskrc ~/.taskrc
 	ln -svf ~/personal/wallpapers ~/Pictures/wallpaper
-	# Ultralist
-	# ln -svf ~/personal/.todos.json ~/.todos.json
 
 
 backup: FORCE ## backup all pacman packages
@@ -44,7 +42,8 @@ docker: ## install and set up docker
 	sudo systemctl start docker
 	sudo chmod 666 /var/run/docker.sock
 
-neovim: ## set up neovim with my config (WARNING: this will overwrite your current config)
+neovim: ## set up neovim with my config
+	mkdir ~/.config/nvim
 	ln -svf ~/personal/.config/nvim ~/.config/nvim
 
 tmux_plugin_manager:
