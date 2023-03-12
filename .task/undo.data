@@ -6379,3 +6379,14 @@ time 1678420085
 old [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" entry:"1677630883" modified:"1677630883" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
 new [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" entry:"1677630883" modified:"1678420085" project:"devops" start:"1678420085" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
 ---
+time 1678500265
+old [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" entry:"1677630883" modified:"1678420085" project:"devops" start:"1678420085" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
+new [description:"lab 7.1 Configuring CI\/CD Pipelines as Code with YAML in Azure DevOps" due:"1678762800" end:"1678500265" entry:"1677630883" modified:"1678500265" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"06737797-3ed4-4cec-bdc3-7d0516344350"]
+---
+time 1678500415
+old [annotation_1677947505:"complete, need to submit" description:"execrise 7a" due:"1678507200" entry:"1677947493" modified:"1677947505" project:"C#" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+new [annotation_1677947505:"complete, need to submit" description:"execrise 7a" due:"1678507200" end:"1678500415" entry:"1677947493" modified:"1678500415" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"b1ce33e6-23ff-4c6f-8da0-d1a31ebc77bd"]
+---
+time 1678657270
+new [description:"assignment 1" due:"1679972400" entry:"1678657270" modified:"1678657270" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"08c2028e-987a-4434-9173-b8083e5bc88f"]
+---
