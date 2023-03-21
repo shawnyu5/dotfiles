@@ -1727,3 +1727,4 @@
 {"description":"fix css issues","due":"20230308T050000Z","end":"20230316T145523Z","entry":"20230302T001025Z","modified":"20230316T145524Z","project":"PRJ","status":"deleted","uuid":"0e07008a-b073-4b96-823f-908cb7441c1d","tags":["seneca"]}
 {"description":"reflection 3","due":"20230318T030000Z","entry":"20230318T150322Z","modified":"20230318T150322Z","project":"Co-op","status":"pending","uuid":"281a6e29-f635-486e-9c7b-a1df1003ba1a","tags":["seneca"]}
 {"description":"project","due":"20230325T030000Z","entry":"20230318T151307Z","modified":"20230318T151307Z","project":"C#","status":"pending","uuid":"1bf8d777-b6eb-4431-b2fe-685d202b100e","tags":["seneca"]}
+{"description":"ansible lab","due":"20230328T030000Z","entry":"20230321T231313Z","modified":"20230321T231313Z","project":"devops","status":"pending","uuid":"bed1f406-dd45-4153-89a8-892b9ecf109f","tags":["seneca"]}
