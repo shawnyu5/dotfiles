@@ -1,5 +1,4 @@
 [description:"plan for europe trip" entry:"1676990574" modified:"1676990574" status:"pending" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
-[description:"assignment 1" due:"1679972400" entry:"1678657270" modified:"1679579348" project:"BCI" start:"1679579348" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"08c2028e-987a-4434-9173-b8083e5bc88f"]
 [description:"assignment 2" due:"1680404400" entry:"1678670864" modified:"1678670864" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2b7bcccc-0792-49c9-91e0-349260d9fbcb"]
 [description:"reflection 3" due:"1679108400" entry:"1679151802" modified:"1679151802" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
 [description:"project" due:"1679713200" entry:"1679152387" modified:"1679579348" project:"C#" start:"1679579348" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1bf8d777-b6eb-4431-b2fe-685d202b100e"]
