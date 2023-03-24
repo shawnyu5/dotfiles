@@ -66,6 +66,9 @@ local pluginSpec = {
 		branch = "main",
 		dependencies = { "itchyny/lightline.vim" },
 	},
+	{
+		"echasnovski/mini.indentscope",
+	},
 	-- {
 	-- "glepnir/zephyr-nvim",
 	-- config = function()
