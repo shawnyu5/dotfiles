@@ -4,6 +4,28 @@ if not ok then
 	return
 end
 
+local disable_buftype = {
+	"nofile",
+}
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = { "*" },
+	callback = function()
+		if vim.tbl_contains(disable_buftype, vim.bo.buftype) then
+			vim.b.miniindentscope_disable = true
+		end
+	end,
+   desc = "disable indentscope on certain buftypes",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "help", "NvimTree", "lazy", "mason" },
+	callback = function()
+		vim.b.miniindentscope_disable = true
+	end,
+   desc = "disable indentscope on certain file types",
+})
+
 indentscope.setup({
 	-- Draw options
 	draw = {
@@ -42,11 +64,4 @@ indentscope.setup({
 	},
 	-- Which character to use for drawing scope indicator
 	symbol = "│",
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "help", "NvimTree", "lazy", "mason" },
-	callback = function()
-		vim.b.miniindentscope_disable = true
-	end,
 })
