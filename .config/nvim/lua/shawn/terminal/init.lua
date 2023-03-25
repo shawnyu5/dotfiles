@@ -16,7 +16,6 @@ function M.left_terminal(left)
 	local current_tab = vim.fn.tabpagenr()
 	vim.cmd("tabe | term")
 	if left then
-		print("moving to left")
 		-- move terminal to 1 before current tab, so closing terminal will land on the currect page
 		vim.cmd("tabm " .. current_tab - 1)
 	end
