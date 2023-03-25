@@ -60,11 +60,22 @@ local pluginSpec = {
 	{ "anuvyklack/hydra.nvim" },
 
 	{ "norcalli/nvim-colorizer.lua" },
-	{ "akinsho/git-conflict.nvim" },
+	-- { "akinsho/git-conflict.nvim" },
 	{
 		"folke/tokyonight.nvim",
 		branch = "main",
 		dependencies = { "itchyny/lightline.vim" },
+	},
+	{
+		"echasnovski/mini.indentscope",
+	},
+	{
+		"sindrets/diffview.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
+		config = function()
+         require("shawn.diffview")
+		end,
 	},
 	-- {
 	-- "glepnir/zephyr-nvim",
@@ -433,3 +444,5 @@ lazy.setup(pluginSpec, {
 		skip_if_doc_exists = true,
 	},
 })
+
+
