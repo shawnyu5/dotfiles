@@ -127,12 +127,14 @@ fi
 # export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:$HOME/.local/bin/:$HOME/gopath/bin/"
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH=$PATH:"/usr/local/go/bin" # go
+
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
 export JAVA_HOME="/usr/lib/jvm/default-runtime"
-export PATH=$PATH:"/usr/local/go/bin" # go
 # export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME="/usr/bin/jdt/"
+export ansible_python_interpreter=/usr/bin/python3
 
 # increase ulimit
 # ulimit -n 6000

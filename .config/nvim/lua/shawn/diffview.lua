@@ -5,6 +5,7 @@ if not ok then
 end
 
 local actions = require("diffview.actions")
+-- diffview.setup({
 diffview.setup({
 	diff_binaries = false, -- Show diffs for binaries
 	enhanced_diff_hl = false, -- See |diffview-config-enhanced_diff_hl|
