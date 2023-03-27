@@ -6438,3 +6438,18 @@ time 1679759750
 old [description:"project" due:"1679713200" entry:"1679152387" modified:"1679579348" project:"C#" start:"1679579348" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1bf8d777-b6eb-4431-b2fe-685d202b100e"]
 new [description:"project" due:"1679713200" end:"1679759750" entry:"1679152387" modified:"1679759750" project:"C#" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"1bf8d777-b6eb-4431-b2fe-685d202b100e"]
 ---
+time 1679797647
+old [description:"ansible lab" due:"1679972400" entry:"1679440393" modified:"1679720791" project:"devops" start:"1679720791" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bed1f406-dd45-4153-89a8-892b9ecf109f"]
+new [description:"ansible lab" due:"1679972400" end:"1679797647" entry:"1679440393" modified:"1679797647" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bed1f406-dd45-4153-89a8-892b9ecf109f"]
+---
+time 1679803930
+old [description:"assignment 2" due:"1680404400" entry:"1678670864" modified:"1678670864" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2b7bcccc-0792-49c9-91e0-349260d9fbcb"]
+new [description:"assignment 2" due:"1680404400" entry:"1678670864" modified:"1679803930" project:"devops" start:"1679803930" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"2b7bcccc-0792-49c9-91e0-349260d9fbcb"]
+---
+time 1679803930
+old [description:"reflection 3" due:"1679108400" entry:"1679151802" modified:"1679151802" project:"Co-op" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
+new [description:"reflection 3" due:"1679108400" entry:"1679151802" modified:"1679803930" project:"Co-op" start:"1679803930" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
+---
+time 1679848596
+new [description:"fix tmux status bar" entry:"1679848596" modified:"1679848596" status:"pending" uuid:"dd2965fc-b3c8-42af-b6ed-536da52c0c5e"]
+---
