@@ -5,9 +5,15 @@
   package:
     name: neovim
     state: latest
+
 - name: install gcc
   package:
     name: gcc
+    state: latest
+
+- name: install node
+  package:
+    name: nodejs
     state: latest
 
 - name: create .config directory
