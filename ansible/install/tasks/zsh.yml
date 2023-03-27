@@ -14,7 +14,7 @@
 - name: set default shell
   become: true
   shell: |
-    sudo chsh -s $(which zsh)
+    chsh -s $(which zsh)
 
 
 - name: link zshrc
