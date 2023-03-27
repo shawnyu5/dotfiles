@@ -28,6 +28,7 @@ alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
 alias gm="git checkout master || git checkout main"
+alias gforce="git commit --amend --no-edit && git push --force"
 
 
 #mdp no fade by default
