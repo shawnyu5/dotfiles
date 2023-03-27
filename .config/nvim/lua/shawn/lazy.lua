@@ -72,7 +72,7 @@ local pluginSpec = {
 	{
 		"sindrets/diffview.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		event = "VeryLazy",
+      event = "VeryLazy",
 		config = function()
          require("shawn.diffview")
 		end,

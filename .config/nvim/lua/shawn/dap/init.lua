@@ -19,20 +19,12 @@ require("shawn.dap.virtual_text")
 -- vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
 -- EOF
 
+vim.fn.sign_define("DapBreakpoint", { text = "🛑", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpointRejected", { text = "❌", texthl = "", linehl = "", numhl = "" })
+
 local map = vim.keymap.set
 local dap = require("dap")
 local dapui = require("dapui")
-
---- toggle signcolumn depending if there are dap break points
-local function toggle_signcolumn()
-   -- if there are breakpoints, toggle sign column
-   if dap.list_breakpoints() then
-      vim.opt.signcolumn = "yes"
-   else
-      vim.opt.signcolumn = "no"
-
-   end
-end
 
 map("n", "<leader>dc", function()
 	dap.continue()
@@ -40,7 +32,6 @@ end, { desc = "Dap Continue" })
 
 map("n", "<leader>db", function()
 	dap.toggle_breakpoint()
-   toggle_signcolumn()
 end, { desc = "Dap Toggle breakpoint" })
 
 map("n", "<leader>do", function()
@@ -60,19 +51,29 @@ local command = vim.api.nvim_create_user_command
 
 command("DapRunToCursor", function(args)
 	dap.run_to_cursor()
-end, {})
+end, {
+	desc = "Run to cursor",
+})
 command("DapUIToggle", function(args)
 	require("dapui").toggle()
-end, {})
+end, {
+	desc = "Toggle Dap UI",
+})
 command("DapClearBreakPoints", function(args)
 	dap.clear_breakpoints()
-end, {})
+end, {
+	desc = "Clear all breakpoints",
+})
 command("DapConditionalBreakpoint", function(args)
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
-end, {})
+end, {
+	desc = "Set conditional breakpoint",
+})
 command("DapLogPoint", function(args)
 	dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
-end, {})
+end, {
+	desc = "Set log point",
+})
 
 -- delete the DapTerminate event and replace with my own
 -- vim.api.nvim_del_user_command("DapTerminate")
@@ -80,75 +81,72 @@ end, {})
 local hydra = require("shawn.hydra")
 local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
 
---- Create autocmds for dap hydra on insert enter and insert leave to stop and restart hydra respectively.
----@return table the autocmd ids
-local start_dap_hydra = function()
-	local autocmd_ids = {}
-	hydra.dap_hydra:activate()
-	-- stop hydra when in insert mode
-	local id = vim.api.nvim_create_autocmd({ "InsertEnter" }, {
-		group = dap_ui_autoGroup,
-		pattern = "*",
-		callback = function()
-			hydra.dap_hydra:exit()
-		end,
-	})
-	table.insert(autocmd_ids, id)
+-- --- Create autocmds for dap hydra on insert enter and insert leave to stop and restart hydra respectively.
+-- ---@return table the autocmd ids
+-- local start_dap_hydra = function()
+-- local autocmd_ids = {}
+-- hydra.dap_hydra:activate()
+-- -- stop hydra when in insert mode
+-- local id = vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+-- group = dap_ui_autoGroup,
+-- pattern = "*",
+-- callback = function()
+-- hydra.dap_hydra:exit()
+-- end,
+-- })
+-- table.insert(autocmd_ids, id)
 
-	-- re enable hydra after leaving insert mode
-	id = vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-		group = dap_ui_autoGroup,
-		pattern = "*",
-		callback = function()
-			vim.notify("Restarting Dap Hydra")
-			hydra.dap_hydra:activate()
-		end,
-	})
-	table.insert(autocmd_ids, id)
+-- -- re enable hydra after leaving insert mode
+-- id = vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+-- group = dap_ui_autoGroup,
+-- pattern = "*",
+-- callback = function()
+-- vim.notify("Restarting Dap Hydra")
+-- hydra.dap_hydra:activate()
+-- end,
+-- })
+-- table.insert(autocmd_ids, id)
 
-	return autocmd_ids
-end
+-- return autocmd_ids
+-- end
 
---- clean up dap hydra by clearing and deleting all auto commands associated with it. And exiting the current hydra
----@param autocmd_ids table the autocmd ids to clean up
-local cleanup_dap_hydra = function(autocmd_ids)
-	vim.notify("Cleaning up hydra...")
-	-- vim.api.nvim_clear_autocmds({
-	-- group = dap_ui_autoGroup,
-	-- })
-	hydra.dap_hydra:exit()
+-- --- clean up dap hydra by clearing and deleting all auto commands associated with it. And exiting the current hydra
+-- ---@param autocmd_ids table the autocmd ids to clean up
+-- local cleanup_dap_hydra = function(autocmd_ids)
+-- vim.notify("Cleaning up hydra...")
+-- -- vim.api.nvim_clear_autocmds({
+-- -- group = dap_ui_autoGroup,
+-- -- })
+-- hydra.dap_hydra:exit()
 
-	-- delete all autocmds in the group
-	for _, id in ipairs(autocmd_ids) do
-		vim.api.nvim_del_autocmd(id)
-	end
-end
+-- -- delete all autocmds in the group
+-- for _, id in ipairs(autocmd_ids) do
+-- vim.api.nvim_del_autocmd(id)
+-- end
+-- end
 
-local dap_autocmd_ids = {}
+-- local dap_autocmd_ids = {}
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
-	dap_autocmd_ids = start_dap_hydra()
+	-- dap_autocmd_ids = start_dap_hydra()
 end
 
 -- TODO: idk why this is not being called
 dap.listeners.before["event_terminated"]["dapui_config"] = function()
 	dapui.close()
 	vim.cmd(":DapVirtualTextForceRefresh")
-	cleanup_dap_hydra(dap_autocmd_ids)
 end
 
 dap.listeners.before["event_disconnect"]["dapui_config"] = function()
 	vim.notify("dapui disconnected AHHHH")
 	dapui.close()
 	vim.cmd(":DapVirtualTextForceRefresh")
-	cleanup_dap_hydra(dap_autocmd_ids)
 end
 
 dap.listeners.before.event_exited["dapui_config"] = function()
 	vim.notify("dapui exited")
 	dapui.close()
 	vim.cmd(":DapVirtualTextForceRefresh")
-	cleanup_dap_hydra(dap_autocmd_ids)
 end
 
 command("DapT", function(args)
@@ -156,7 +154,5 @@ command("DapT", function(args)
 		vim.notify("dapui terminated")
 		dapui.close()
 		vim.cmd(":DapVirtualTextForceRefresh")
-		cleanup_dap_hydra(dap_autocmd_ids)
-      toggle_signcolumn()
 	end)
 end, {})
