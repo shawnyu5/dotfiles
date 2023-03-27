@@ -7,6 +7,12 @@
     state: latest
 # - name: debug specified user's home dir through ansible.env
   # debug: var=ansible_env.HOME
+- name: create .config directory
+  file:
+    path: "{{ ansible_env.HOME }}/.config/"
+    state: directory
+    mode: '0755'
+
 - name: link neovim config
   file:
     src: "{{ ansible_env.HOME }}/personal/.config/nvim"
