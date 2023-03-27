@@ -10,7 +10,7 @@
 
 - name: link tmux conf
   file:
-    src: "{{ ansible_env.HOME }}/personal/.tmux.conf"
+    src: "{{ personal_dir }}/.tmux.conf"
     dest: "{{ ansible_env.HOME }}/.tmux.conf"
     state: link
 
@@ -18,3 +18,9 @@
   git:
     repo: https://github.com/shawnyu5/tmux-powerline
     dest: "{{ ansible_env.HOME }}/.tmux/tmux-powerline/"
+
+- name: link tmux powerline config
+  file:
+    src: "{{ personal_dir }}/.tmux-powerlinerc"
+    dest: "{{ ansible_env.HOME }}/.tmux-powerlinerc"
+    state: link
