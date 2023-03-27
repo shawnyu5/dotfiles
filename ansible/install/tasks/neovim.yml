@@ -5,8 +5,11 @@
   package:
     name: neovim
     state: latest
-# - name: debug specified user's home dir through ansible.env
-  # debug: var=ansible_env.HOME
+- name: install gcc
+  package:
+    name: gcc
+    state: latest
+
 - name: create .config directory
   file:
     path: "{{ ansible_env.HOME }}/.config/"
