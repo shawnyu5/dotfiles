@@ -1737,3 +1737,5 @@
 {"description":"assignment 2","due":"20230402T030000Z","entry":"20230313T012744Z","modified":"20230326T041210Z","project":"devops","start":"20230326T041210Z","status":"pending","uuid":"2b7bcccc-0792-49c9-91e0-349260d9fbcb","tags":["seneca"]}
 {"description":"reflection 3","due":"20230318T030000Z","entry":"20230318T150322Z","modified":"20230326T041210Z","project":"Co-op","start":"20230326T041210Z","status":"pending","uuid":"281a6e29-f635-486e-9c7b-a1df1003ba1a","tags":["seneca"]}
 {"description":"fix tmux status bar","entry":"20230326T163636Z","modified":"20230326T163636Z","status":"pending","uuid":"dd2965fc-b3c8-42af-b6ed-536da52c0c5e"}
+{"description":"fix tmux status bar","end":"20230327T034350Z","entry":"20230326T163636Z","modified":"20230327T034350Z","status":"completed","uuid":"dd2965fc-b3c8-42af-b6ed-536da52c0c5e"}
+{"description":"switch to mason for LSP management","entry":"20230327T034401Z","modified":"20230327T034401Z","status":"pending","uuid":"330a5c48-de9c-455f-8e72-b2de286e4ae5"}
