@@ -42,12 +42,12 @@ docker: ## install and set up docker
 	sudo systemctl start docker
 	sudo chmod 666 /var/run/docker.sock
 
-neovim: ## set up neovim with my config
-	mkdir ~/.config/nvim
-	ln -svf ~/personal/.config/nvim ~/.config/nvim
+# neovim: ## set up neovim with my config
+	# mkdir ~/.config/nvim
+	# ln -svf ~/personal/.config/nvim ~/.config/nvim
 
-tmux_plugin_manager:
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# tmux_plugin_manager:
+	# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-set_default_shell: ## set default shell to zsh
-	chsh -s $$(which zsh)
+# set_default_shell: ## set default shell to zsh
+	# chsh -s $$(which zsh)
