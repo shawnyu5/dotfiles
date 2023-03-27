@@ -87,4 +87,3 @@ let g:wstrip_highlight = 0
 " autocmd Filetype * setlocal formatoptions-=cro
 ]])
 
-vim.notify("init.lua sourced")

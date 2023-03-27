@@ -6,6 +6,21 @@ end
 
 dapui.setup({
 	icons = { expanded = "▾", collapsed = "▸" },
+	controls = {
+		element = "repl",
+		enabled = true,
+		icons = {
+			disconnect = "⏹️",
+			pause = "⏸",
+			play = "▶️",
+			run_last = "⏮️",
+			step_back = "🔙",
+			step_into = "🔽",
+			step_out = "🔼",
+			step_over = "⏩",
+			terminate = "🔪",
+		},
+	},
 	mappings = {
 		-- Use a table to apply multiple mappings
 		expand = { "<CR>", "<2-LeftMouse>" },
@@ -55,7 +70,14 @@ dapui.setup({
 
 local dap = require("dap")
 
-vim.cmd("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
+-- vim.cmd("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
+local dap_ui_autoGroup =vim.api.nvim_create_augroup("dap ui", {})
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = "dap-repl",
+	callback = function()
+		require("dap.ext.autocompl").attach()
+	end,
+})
 
 vim.api.nvim_create_user_command("DapT", function(args)
 	dap.terminate({}, {}, function()

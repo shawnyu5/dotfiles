@@ -6,6 +6,7 @@ end
 
 local disable_buftype = {
 	"nofile",
+	"terminal",
 }
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -15,7 +16,15 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 			vim.b.miniindentscope_disable = true
 		end
 	end,
-   desc = "disable indentscope on certain buftypes",
+	desc = "disable indentscope on certain buftypes",
+})
+
+vim.api.nvim_create_autocmd({ "TermOpen" }, {
+	pattern = { "*" },
+	callback = function()
+		vim.b.miniindentscope_disable = true
+	end,
+	desc = "disable indentscope in terminal buffers",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -23,7 +32,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.b.miniindentscope_disable = true
 	end,
-   desc = "disable indentscope on certain file types",
+	desc = "disable indentscope on certain file types",
 })
 
 indentscope.setup({
