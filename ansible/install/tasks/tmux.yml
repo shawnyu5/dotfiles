@@ -1,0 +1,20 @@
+---
+- name: install tmux
+  package:
+    name: tmux
+    state: latest
+- name: install tmux plugin manager
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm/"
+
+- name: link tmux conf
+  file:
+    src: "{{ ansible_env.HOME }}/personal/.tmux.conf"
+    dest: "{{ ansible_env.HOME }}/.tmux.conf"
+    state: link
+
+- name: clone tmux powerline
+  git:
+    repo: https://github.com/shawnyu5/tmux-powerline
+    dest: "{{ ansible_env.HOME }}/.tmux/tmux-powerline/"

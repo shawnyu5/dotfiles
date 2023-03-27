@@ -1,0 +1,14 @@
+---
+- name: install neovim
+  ignore_errors: true
+  become: true
+  package:
+    name: neovim
+    state: latest
+# - name: debug specified user's home dir through ansible.env
+  # debug: var=ansible_env.HOME
+- name: link neovim config
+  file:
+    src: "{{ ansible_env.HOME }}/personal/.config/nvim"
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    state: link

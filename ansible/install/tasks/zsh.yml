@@ -1,0 +1,34 @@
+---
+- name: install ZSH
+  ignore_errors: true
+  package:
+    name: zsh
+    state: latest
+
+# - name: debug specified user's home dir through ansible.env
+  # debug: var=ansible_env.HOME
+  # become: true
+
+- name: set default shell
+  become: true
+  shell: |
+    sudo chsh -s $(which zsh)
+
+
+- name: link zshrc
+  file:
+    src: "{{ personal_dir }}/.zshrc"
+    dest: "{{ ansible_env.HOME }}/.zshrc"
+    state: link
+
+- name: link zsh_aliases
+  file:
+    src: "{{ personal_dir }}/.zsh_aliases"
+    dest: "{{ ansible_env.HOME }}/.zsh_aliases"
+    state: link
+
+- name: link zsh_aliases_custom
+  file:
+    src: "{{ personal_dir }}/.zsh_aliases-custom"
+    dest: "{{ ansible_env.HOME }}/.zsh_aliases-custom"
+    state: link
