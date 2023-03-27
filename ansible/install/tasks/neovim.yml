@@ -24,6 +24,11 @@
 - name: install pynvim
   shell: pip3 install pynvim
 
+- name: install xclip
+  package:
+    name: xclip
+    state: latest
+
 - name: create .config directory
   ignore_errors: true
   file:
