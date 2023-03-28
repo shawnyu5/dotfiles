@@ -69,14 +69,14 @@ local pluginSpec = {
 	{
 		"echasnovski/mini.indentscope",
 	},
-	{
-		"sindrets/diffview.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-      event = "VeryLazy",
-		config = function()
-         require("shawn.diffview")
-		end,
-	},
+	-- {
+	-- "sindrets/diffview.nvim",
+	-- dependencies = { "nvim-lua/plenary.nvim" },
+	-- event = "VeryLazy",
+	-- config = function()
+	-- require("shawn.diffview")
+	-- end,
+	-- },
 	-- {
 	-- "glepnir/zephyr-nvim",
 	-- config = function()
@@ -169,6 +169,17 @@ local pluginSpec = {
 		},
 	},
 	-- native LSP
+	{
+		"williamboman/mason.nvim",
+		build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+		config = function()
+			require("shawn.mason")
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+	},
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
 	{
@@ -296,22 +307,6 @@ local pluginSpec = {
 		ft = { "html" },
 	}, -- auto close html tags,
 }
-
-local utils = require("shawn.utils")
--- local lines = {}
--- for line in io.lines(vim.fn.expand("~") .. "/.config/nvim/system_config.json") do
--- lines[#lines + 1] = line
--- end
-
-local system_config = utils.get_system_config()
-if system_config.windows == true then
-	table.insert(pluginSpec, {
-		"williamboman/mason.nvim",
-		config = function()
-			require("shawn.mason")
-		end,
-	})
-end
 
 lazy.setup(pluginSpec, {
 	root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
@@ -444,5 +439,3 @@ lazy.setup(pluginSpec, {
 		skip_if_doc_exists = true,
 	},
 })
-
-

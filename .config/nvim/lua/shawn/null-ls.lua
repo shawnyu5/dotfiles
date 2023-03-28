@@ -30,5 +30,7 @@ null_ls.setup({
 			disabled_filetypes = { "json" },
 		}),
 		diagnostics.hadolint,
+		diagnostics.gitlint,
+      diagnostics.yamllint,
 	},
 })
