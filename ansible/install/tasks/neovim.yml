@@ -25,6 +25,7 @@
   shell: pip3 install pynvim
 
 - name: install xclip
+  become: true
   package:
     name: xclip
     state: latest
