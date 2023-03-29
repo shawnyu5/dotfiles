@@ -1,12 +1,11 @@
-local ok, diffview = pcall(require, "diffview")
-if not ok then
-	vim.notify("diffview not installed...", vim.log.ERROR)
-	return
-end
+-- local ok, diffview = pcall(require, "diffview")
+-- if not ok then
+	-- vim.notify("diffview not installed...", vim.log.ERROR)
+	-- return
+-- end
 
 local actions = require("diffview.actions")
--- diffview.setup({
-diffview.setup({
+require("diffview").setup({
 	diff_binaries = false, -- Show diffs for binaries
 	enhanced_diff_hl = false, -- See |diffview-config-enhanced_diff_hl|
 	git_cmd = { "git" }, -- The git executable followed by default args.
