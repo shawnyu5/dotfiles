@@ -6,7 +6,7 @@
 #logout
 alias logout="sudo pkill -u shawn"
 
-alias dl="cd ~/Downloads"
+alias dl="cd /mnt/c/Users/Shawn/Downloads"
 
 # blackboard selenium
 # alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
@@ -15,34 +15,38 @@ alias dl="cd ~/Downloads"
 # alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
 
 # opening notes
-alias bcinotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/BCI433/BCI433_notes.md"
-alias prjnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRJ666/PRJ666_notes.md"
-alias csnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO670_intro_to_c_sharp/PRO670_notes.md"
-alias devopsnotes="nvim -c ':cd %:p:h' ~/seneca/semester_7/PRO690_intro_to_devops/PRO690_notes.md"
+
+# nvim -c ':cd %:p:h' ~/seneca/semester_7/BCI433/BCI433_notes.md
+alias bcinotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/BCI433_notes.md"
+alias jacnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/JAC555_notes.md"
+alias prjnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/PRJ666_notes.md"
+alias csnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/PRO670_notes.md"
+alias devopsnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/PRO690_notes.md"
 
 # move commands
-alias mvbci=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/BCI433"
-alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRJ666/"
-alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
-alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
+alias mvbci=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/"
+alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/"
+alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/"
+alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
 
 # cd commands
-alias cdbci=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/BCI433/"
-alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRJ666/"
-alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
-alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
+alias cdbci=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/" 
+alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/" 
+alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/" 
+alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
 
 alias neofetch="neofetch --ascii_distro archlinux"
+
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
 
-alias homemonitor="~/.screenlayout/home_monitor.sh"
-alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
-alias homemonitorOff="xrandr --output HDMI1 --off"
-
-function awsec {
-   IPADDRESS="$1"
-   echo $IPADDRESS
-   ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
-}
-alias ocean="ssh root@161.35.8.80"
-alias wallpaper="~/personal/utils/change_wallpaper.sh"
+# function awsec {
+   # IPADDRESS="$1"
+   # echo $IPADDRESS
+   # ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
+# }
+alias ocean="ssh root@143.110.215.158"
+alias cdone="cd /mnt/c/Users/Shawn/OneDrive\ -\ Seneca"
+alias google-chrome-stable="/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
+alias files="explorer.exe"

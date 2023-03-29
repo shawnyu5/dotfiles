@@ -2,7 +2,7 @@
 
 WIDTH=${WIDTH:-200}
 HEIGHT=${HEIGHT:-200}
-DATEFMT=${DATEFMT:-"+%a %Y.%m.%d"}
+DATEFMT=${DATEFMT:-"+%a %d.%m.%Y %H:%M:%S"}
 SHORTFMT=${SHORTFMT:-"+%H:%M:%S"}
 
 OPTIND=1

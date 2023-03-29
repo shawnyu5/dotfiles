@@ -127,14 +127,12 @@ fi
 # export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:$HOME/.local/bin/:$HOME/gopath/bin/"
 export PATH="$PATH:/opt/mssql-tools/bin"
-export PATH=$PATH:"/usr/local/go/bin" # go
-
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
 export JAVA_HOME="/usr/lib/jvm/default-runtime"
+export PATH=$PATH:"/usr/local/go/bin" # go
 # export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME="/usr/bin/jdt/"
-export ansible_python_interpreter=/usr/bin/python3
 
 # increase ulimit
 # ulimit -n 6000
@@ -154,7 +152,7 @@ export LS_COLORS
 
 
 #auto suggestions
-source $HOME/personal/linux/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/shawn/personal/linux/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
