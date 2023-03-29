@@ -6460,3 +6460,10 @@ new [description:"fix tmux status bar" end:"1679888630" entry:"1679848596" modif
 time 1679888641
 new [description:"switch to mason for LSP management" entry:"1679888641" modified:"1679888641" status:"pending" uuid:"330a5c48-de9c-455f-8e72-b2de286e4ae5"]
 ---
+time 1680119479
+new [description:"lab" entry:"1680119479" modified:"1680119479" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0249a51c-e425-4a91-9728-4341bb0a6839"]
+---
+time 1680119492
+old [description:"lab" entry:"1680119479" modified:"1680119479" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0249a51c-e425-4a91-9728-4341bb0a6839"]
+new [description:"lab" due:"1680494400" entry:"1680119479" modified:"1680119492" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"0249a51c-e425-4a91-9728-4341bb0a6839"]
+---
