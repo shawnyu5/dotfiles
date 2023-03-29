@@ -1,0 +1,10 @@
+---
+- name: set up neovim
+  include_tasks:
+    file: neovim.yml
+- name: set up ZSH
+  include_tasks:
+    file: zsh.yml
+- name: set up tmux
+  include_tasks:
+    file: tmux.yml

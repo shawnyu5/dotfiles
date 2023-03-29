@@ -1,0 +1,43 @@
+---
+- name: install neovim
+  ignore_errors: true
+  become: true
+  package:
+    name: neovim
+    state: latest
+
+- name: install gcc
+  package:
+    name: gcc
+    state: latest
+
+- name: install node
+  package:
+    name: nodejs
+    state: latest
+
+- name: install pip
+  package:
+    name: python-pip
+    state: latest
+
+- name: install pynvim
+  shell: pip3 install pynvim
+
+- name: install xclip
+  package:
+    name: xclip
+    state: latest
+
+- name: create .config directory
+  ignore_errors: true
+  file:
+    path: "{{ ansible_env.HOME }}/.config/"
+    state: directory
+    mode: '0755'
+
+- name: link neovim config
+  file:
+    src: "{{ personal_dir }}/.config/nvim"
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    state: link

@@ -5,10 +5,10 @@
 	name = shawn yu
 
 [core]
-    pager = less
+    pager = delta
 
 [interactive]
-    diffFilter = less
+    diffFilter = delta --color-only
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -20,9 +20,6 @@
     colorMoved = default
 [init]
 	defaultBranch = master
-[safe]
-	directory = /home/shawn/actions-runner/_work/jenkins_plugin_versioning/jenkins_plugin_versioning
-	directory = /home/shawn/actions-runner/_work/jenkins_plugin_versioning/jenkins_plugin_versioning
-	directory = /home/shawn/github_runner/actions-runner/_work/jenkins_plugin_versioning/jenkins_plugin_versioning
-	directory = /home/shawn/github_runner/actions-runner/_work/jenkins_plugin_versioning/jenkins_plugin_versioning
-	directory = /home/shawn/actions-runner/_work/sematic_release_testing/sematic_release_testing
+[push]
+	default = current
+	autoSetupRemote = true
