@@ -28,9 +28,8 @@ alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
 alias gm="git checkout master || git checkout main"
+alias gforce="git commit --amend --no-edit && git push --force"
 
-alias homemonitor="~/.screenlayout/home_monitor.sh"
-alias homemonitorOff="xrandr --output HDMI1 --off"
 
 #mdp no fade by default
 alias mdp="mdp -f"
@@ -148,3 +147,4 @@ function cheat
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
 alias bd=". bd -si"
+alias cat="bat"
