@@ -39,6 +39,8 @@ alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDr
 
 alias neofetch="neofetch --ascii_distro archlinux"
 
+export TMUX_POWERLINE_PATCHED_FONT_IN_USE=false
+
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
 
 # function awsec {
