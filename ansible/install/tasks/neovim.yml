@@ -24,6 +24,13 @@
 - name: install pynvim
   shell: pip3 install pynvim
 
+- name: install ripgrep
+  ignore_errors: true
+  become: true
+  package:
+    name: ripgrep
+    state: latest
+
 - name: install xclip
   become: true
   package:
