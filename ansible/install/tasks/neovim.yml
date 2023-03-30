@@ -12,6 +12,12 @@
     name: gcc
     state: latest
 
+- name: install unzip
+  become: true
+  package:
+    name: unzip
+    state: latest
+
 - name: install node
   become: true
   package:
