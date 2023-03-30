@@ -148,3 +148,4 @@ function cheat
 function mkdirin { mkdir $1 && cd $1; }
 alias bd=". bd -si"
 alias cat="bat"
+alias devOpServer="ssh shawn@146.190.216.74"
