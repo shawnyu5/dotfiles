@@ -5,7 +5,6 @@
 
 #logout
 alias logout="sudo pkill -u shawn"
-
 alias dl="cd ~/Downloads"
 
 # blackboard selenium
@@ -44,5 +43,5 @@ function awsec {
    echo $IPADDRESS
    ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
 }
-alias ocean="ssh root@161.35.8.80"
 alias wallpaper="~/personal/utils/change_wallpaper.sh"
+alias files="nautilus"
