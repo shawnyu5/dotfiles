@@ -1743,3 +1743,4 @@
 {"description":"user docs","due":"20230420T030000Z","entry":"20230329T225833Z","modified":"20230329T225833Z","project":"PRJ","status":"pending","uuid":"5201532a-969a-40ca-ba3e-02b66d0b003c","tags":["seneca"]}
 {"description":"assignment 2","due":"20230402T030000Z","end":"20230331T145148Z","entry":"20230313T012744Z","modified":"20230331T145148Z","project":"devops","status":"completed","uuid":"2b7bcccc-0792-49c9-91e0-349260d9fbcb","tags":["seneca"]}
 {"description":"switch to mason for LSP management","end":"20230331T145159Z","entry":"20230327T034401Z","modified":"20230331T145159Z","status":"completed","uuid":"330a5c48-de9c-455f-8e72-b2de286e4ae5"}
+{"description":"kubernetes lab","due":"20230404T030000Z","entry":"20230402T130106Z","modified":"20230402T130106Z","project":"devops","status":"pending","uuid":"8fbe6419-7877-4791-9b16-814d0569e9a5","tags":["seneca"]}
