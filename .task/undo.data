@@ -6474,3 +6474,6 @@ time 1680274319
 old [description:"switch to mason for LSP management" entry:"1679888641" modified:"1679888641" status:"pending" uuid:"330a5c48-de9c-455f-8e72-b2de286e4ae5"]
 new [description:"switch to mason for LSP management" end:"1680274319" entry:"1679888641" modified:"1680274319" status:"completed" uuid:"330a5c48-de9c-455f-8e72-b2de286e4ae5"]
 ---
+time 1680738891
+new [description:"assignment 2" due:"1684292400" entry:"1680738891" modified:"1680738891" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"facc94dc-cd93-4ead-9793-2d08d56ad708"]
+---
