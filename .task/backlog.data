@@ -1748,3 +1748,4 @@
 {"description":"kubernetes lab","due":"20230404T030000Z","end":"20230402T232200Z","entry":"20230402T130106Z","modified":"20230402T232200Z","project":"devops","status":"completed","uuid":"8fbe6419-7877-4791-9b16-814d0569e9a5","tags":["seneca"]}
 {"description":"book g road test","entry":"20230402T232212Z","modified":"20230402T232212Z","status":"pending","uuid":"999fb618-d221-4819-9c56-bbd3e2ebebaa"}
 {"description":"prometheus workshop","due":"20230411T030000Z","entry":"20230405T135937Z","modified":"20230405T135937Z","project":"devops","status":"pending","uuid":"bf8924fa-01f5-4b57-ae10-e66010c81e5e","tags":["seneca"]}
+{"description":"prometheus workshop","due":"20230411T030000Z","end":"20230409T012051Z","entry":"20230405T135937Z","modified":"20230409T012051Z","project":"devops","status":"completed","uuid":"bf8924fa-01f5-4b57-ae10-e66010c81e5e","tags":["seneca"]}
