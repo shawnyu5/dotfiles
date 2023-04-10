@@ -3,7 +3,7 @@ local utils = require("shawn.lsp.utils")
 -- go
 lsp.gopls.setup({
 	on_attach = function(client, bufnr)
-		utils.format_on_save()
+		utils.format_on_save(bufnr)
 		utils.on_attach(client, bufnr)
 	end,
 	settings = {

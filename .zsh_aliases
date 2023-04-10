@@ -143,3 +143,4 @@ alias cat="bat"
 
 alias devOpServer="ssh shawn@146.190.216.74"
 alias ocean="ssh root@161.35.8.80"
+alias k="kubectl"
