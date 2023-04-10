@@ -1749,3 +1749,4 @@
 {"description":"book g road test","entry":"20230402T232212Z","modified":"20230402T232212Z","status":"pending","uuid":"999fb618-d221-4819-9c56-bbd3e2ebebaa"}
 {"description":"prometheus workshop","due":"20230411T030000Z","entry":"20230405T135937Z","modified":"20230405T135937Z","project":"devops","status":"pending","uuid":"bf8924fa-01f5-4b57-ae10-e66010c81e5e","tags":["seneca"]}
 {"description":"prometheus workshop","due":"20230411T030000Z","end":"20230409T012051Z","entry":"20230405T135937Z","modified":"20230409T012051Z","project":"devops","status":"completed","uuid":"bf8924fa-01f5-4b57-ae10-e66010c81e5e","tags":["seneca"]}
+{"description":"assignment 2","due":"20230417T030000Z","entry":"20230410T041834Z","modified":"20230410T041834Z","project":"BCI","status":"pending","uuid":"4df553a1-c94a-471c-a257-7ce54b64f7e3","tags":["seneca"]}
