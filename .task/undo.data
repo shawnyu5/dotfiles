@@ -6495,3 +6495,21 @@ time 1681003251
 old [description:"prometheus workshop" due:"1681182000" entry:"1680703177" modified:"1680703177" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
 new [description:"prometheus workshop" due:"1681182000" end:"1681003251" entry:"1680703177" modified:"1681003251" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
 ---
+time 1681100315
+new [description:"assignment 2" due:"1681700400" entry:"1681100314" modified:"1681100314" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+---
+time 1681139091
+old [description:"assignment 2" due:"1681700400" entry:"1681100314" modified:"1681100314" project:"BCI" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+new [description:"assignment 2" due:"1681700400" entry:"1681100314" modified:"1681139091" project:"BCI" start:"1681139091" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+---
+time 1681139113
+new [description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139113" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
+---
+time 1681139119
+old [description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139113" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
+new [description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139119" project:"devops" start:"1681139119" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
+---
+time 1681153726
+old [description:"reflection 3" due:"1679108400" entry:"1679151802" modified:"1679803930" project:"Co-op" start:"1679803930" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
+new [description:"reflection 3" due:"1679108400" end:"1681153726" entry:"1679151802" modified:"1681153726" project:"Co-op" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
+---
