@@ -6491,3 +6491,7 @@ new [description:"book g road test" entry:"1680477732" modified:"1680477732" sta
 time 1680703177
 new [description:"prometheus workshop" due:"1681182000" entry:"1680703177" modified:"1680703177" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
 ---
+time 1681003251
+old [description:"prometheus workshop" due:"1681182000" entry:"1680703177" modified:"1680703177" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
+new [description:"prometheus workshop" due:"1681182000" end:"1681003251" entry:"1680703177" modified:"1681003251" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
+---
