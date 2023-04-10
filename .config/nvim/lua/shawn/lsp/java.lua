@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 				local jdtls = require("jdtls")
 				vim.notify("Java LSP on_attach")
 				utils.on_attach(client, bufnr)
-				utils.format_on_save()
+				utils.format_on_save(bufnr)
 
 				local command = vim.api.nvim_buf_create_user_command
 				command(bufnr, "JdtExtractConstant", function()
