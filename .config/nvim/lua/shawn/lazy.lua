@@ -69,8 +69,16 @@ local pluginSpec = {
 	{
 		"echasnovski/mini.indentscope",
 	},
+	{
+		"sindrets/diffview.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
+		config = function()
+			require("shawn.diffview")
+		end,
+	},
 	-- {
-	-- "sindrets/diffview.nvim",
+	-- "3699394/diffview.nvim",
 	-- dependencies = { "nvim-lua/plenary.nvim" },
 	-- event = "VeryLazy",
 	-- config = function()

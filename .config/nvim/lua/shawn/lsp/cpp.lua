@@ -8,7 +8,7 @@ lsp.clangd.setup({
 	filetypes = { "c", "cpp", "objc", "objcpp" },
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
-		utils.format_on_save()
+		utils.format_on_save(bufnr)
 		utils.on_attach(client, bufnr)
 	end,
 })

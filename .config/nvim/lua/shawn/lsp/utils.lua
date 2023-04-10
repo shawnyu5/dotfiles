@@ -1,17 +1,16 @@
 local M = {}
 --- Create autocmd to format on save
-function M.format_on_save()
-	-- client.resolved_capabilities.document_formatting = true
-	vim.api.nvim_command("autocmd BufWritePre <buffer> :lua vim.lsp.buf.format() vim.cmd('write')")
-	-- local group = vim.api.nvim_create_augroup("lsp_format_on_save", {})
-	-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	-- group = group,
-	-- callback = function()
-	-- vim.lsp.buf.format()
-	-- vim.cmd("write")
-	-- end,
-	-- buffer = 0,
-	-- })
+--- @param bufnr number the buff number to format
+function M.format_on_save(bufnr)
+	local augroup = vim.api.nvim_create_augroup("lsp_format_on_save", {})
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		group = augroup,
+		callback = function()
+			vim.lsp.buf.format({bufnr = bufnr})
+			vim.cmd("write")
+		end,
+      -- buffer = 0,
+	})
 end
 
 --- disable formatting for a language server
