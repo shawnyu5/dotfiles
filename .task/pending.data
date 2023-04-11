@@ -3,4 +3,3 @@
 [description:"user docs" due:"1681959600" entry:"1680130713" modified:"1680130713" project:"PRJ" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5201532a-969a-40ca-ba3e-02b66d0b003c"]
 [description:"book g road test" entry:"1680477732" modified:"1680477732" status:"pending" uuid:"999fb618-d221-4819-9c56-bbd3e2ebebaa"]
 [description:"assignment 2" due:"1681700400" entry:"1681100314" modified:"1681139091" project:"BCI" start:"1681139091" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
-[description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139119" project:"devops" start:"1681139119" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
