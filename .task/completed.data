@@ -1,3 +1,4 @@
+[description:"try to deploy a helm chart though argo cd" due:"1681182000" end:"1681174826" entry:"1681139113" modified:"1681174826" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
 [description:"reflection 3" due:"1679108400" end:"1681153726" entry:"1679151802" modified:"1681153726" project:"Co-op" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
 [description:"prometheus workshop" due:"1681182000" end:"1681003251" entry:"1680703177" modified:"1681003251" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
 [description:"kubernetes lab" due:"1680577200" end:"1680477720" entry:"1680440466" modified:"1680477720" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"8fbe6419-7877-4791-9b16-814d0569e9a5"]

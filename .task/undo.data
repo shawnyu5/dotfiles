@@ -6513,3 +6513,7 @@ time 1681153726
 old [description:"reflection 3" due:"1679108400" entry:"1679151802" modified:"1679803930" project:"Co-op" start:"1679803930" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
 new [description:"reflection 3" due:"1679108400" end:"1681153726" entry:"1679151802" modified:"1681153726" project:"Co-op" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
 ---
+time 1681174826
+old [description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139119" project:"devops" start:"1681139119" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
+new [description:"try to deploy a helm chart though argo cd" due:"1681182000" end:"1681174826" entry:"1681139113" modified:"1681174826" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
+---
