@@ -6517,3 +6517,10 @@ time 1681174826
 old [description:"try to deploy a helm chart though argo cd" due:"1681182000" entry:"1681139113" modified:"1681139119" project:"devops" start:"1681139119" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
 new [description:"try to deploy a helm chart though argo cd" due:"1681182000" end:"1681174826" entry:"1681139113" modified:"1681174826" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
 ---
+time 1681482786
+old [description:"assignment 2" due:"1681700400" entry:"1681100314" modified:"1681139091" project:"BCI" start:"1681139091" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+new [description:"assignment 2" due:"1681700400" end:"1681482786" entry:"1681100314" modified:"1681482786" project:"BCI" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+---
+time 1681482802
+new [description:"lab" due:"1681786800" entry:"1681482802" modified:"1681482802" project:"devops" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee"]
+---
