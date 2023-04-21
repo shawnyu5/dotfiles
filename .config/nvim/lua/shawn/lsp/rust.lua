@@ -9,7 +9,7 @@ rt.setup({
   server = {
     on_attach = function(client, bufnr)
        utils.on_attach(client, bufnr)
-       utils.format_on_save(bufnr)
+       -- utils.format_on_save(bufnr)
        rt.inlay_hints.enable()
 
       -- Hover actions
