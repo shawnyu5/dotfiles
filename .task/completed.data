@@ -1,4 +1,6 @@
-[description:"assignment 2" due:"1681700400" end:"1681482786" entry:"1681100314" modified:"1681482786" project:"BCI" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
+[description:"final project" due:"1681873200" end:"1682041218" entry:"1680050714" modified:"1682041225" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"1b5cc702-520f-4376-b110-385b8462fe5a"]
+[description:"user docs" due:"1681959600" end:"1682041225" entry:"1680130713" modified:"1682041228" project:"PRJ" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"5201532a-969a-40ca-ba3e-02b66d0b003c"]
+[description:"assignment 2" due:"1681700400" end:"1682041228" entry:"1681100314" modified:"1682041229" project:"BCI" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
 [description:"try to deploy a helm chart though argo cd" due:"1681182000" end:"1681174826" entry:"1681139113" modified:"1681174826" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
 [description:"reflection 3" due:"1679108400" end:"1681153726" entry:"1679151802" modified:"1681153726" project:"Co-op" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"281a6e29-f635-486e-9c7b-a1df1003ba1a"]
 [description:"prometheus workshop" due:"1681182000" end:"1681003251" entry:"1680703177" modified:"1681003251" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"bf8924fa-01f5-4b57-ae10-e66010c81e5e"]
