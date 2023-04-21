@@ -1757,3 +1757,4 @@
 {"description":"try to deploy a helm chart though argo cd","due":"20230411T030000Z","end":"20230411T010026Z","entry":"20230410T150513Z","modified":"20230411T010026Z","project":"devops","status":"completed","uuid":"f0d1fe5a-b114-4f22-9b4a-385aba13add8","tags":["seneca"]}
 {"description":"assignment 2","due":"20230417T030000Z","end":"20230414T143306Z","entry":"20230410T041834Z","modified":"20230414T143306Z","project":"BCI","status":"completed","uuid":"4df553a1-c94a-471c-a257-7ce54b64f7e3","tags":["seneca"]}
 {"description":"lab","due":"20230418T030000Z","entry":"20230414T143322Z","modified":"20230414T143322Z","project":"devops","status":"pending","uuid":"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee","tags":["seneca"]}
+{"description":"lab","due":"20230418T030000Z","end":"20230421T210537Z","entry":"20230414T143322Z","modified":"20230421T210538Z","project":"devops","status":"deleted","uuid":"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee","tags":["seneca"]}
