@@ -1,12 +1,13 @@
 local M = {}
 --- Create autocmd to format on save
---- @param bufnr number the buff number to format
+--- @param bufnr number the buf number to format
 function M.format_on_save(bufnr)
 	local augroup = vim.api.nvim_create_augroup("lsp_format_on_save", {})
 	vim.api.nvim_create_autocmd("BufWritePre", {
 		group = augroup,
 		callback = function()
-			vim.lsp.buf.format({bufnr = bufnr})
+			vim.lsp.buf.format()
+			-- vim.lsp.buf.format({bufnr = bufnr})
 			vim.cmd("write")
 		end,
       -- buffer = 0,
