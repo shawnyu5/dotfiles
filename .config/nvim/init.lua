@@ -15,6 +15,7 @@ source("~/.config/nvim/settings/maps.vim")
 source("~/.config/nvim/settings/sets.vim")
 require("shawn.lazy")
 -- require("shawn.packer")
+source("~/.config/nvim/settings/NERDtree_settings.vim")
 require("shawn.ts-context")
 require("shawn.lsp")
 require("shawn.autocmd")
@@ -86,4 +87,3 @@ let g:wstrip_highlight = 0
 "disable auto commenting
 " autocmd Filetype * setlocal formatoptions-=cro
 ]])
-
