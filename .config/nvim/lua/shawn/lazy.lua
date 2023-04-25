@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-   vim.notify_once("lazy not installed, installing...", vim.log.levels.WARN)
+	vim.notify_once("lazy not installed, installing...", vim.log.levels.WARN)
 	vim.fn.system({
 		"git",
 		"clone",
@@ -50,10 +50,10 @@ local pluginSpec = {
 			require("shawn.tree-sitter")
 		end,
 	},
-	{
-		"nvim-treesitter/playground",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-	},
+	-- {
+	-- "nvim-treesitter/playground",
+	-- dependencies = "nvim-treesitter/nvim-treesitter",
+	-- },
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
@@ -149,10 +149,9 @@ local pluginSpec = {
 
 	{ "andweeb/presence.nvim" },
 
-	-- -- use({ "preservim/nerdtree" })
-	{
-		"kyazdani42/nvim-tree.lua",
-	},
+	{ "preservim/nerdtree" },
+	-- "kyazdani42/nvim-tree.lua",
+	-- },
 
 	{ "windwp/nvim-autopairs" },
 	{
