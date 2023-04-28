@@ -1,3 +1,4 @@
+[description:"book g road test" end:"1682693834" entry:"1680477732" modified:"1682693834" status:"completed" uuid:"999fb618-d221-4819-9c56-bbd3e2ebebaa"]
 [description:"lab" due:"1681786800" end:"1682111137" entry:"1681482802" modified:"1682111138" project:"devops" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee"]
 [description:"assignment 2" due:"1681700400" end:"1681482786" entry:"1681100314" modified:"1681482786" project:"BCI" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4df553a1-c94a-471c-a257-7ce54b64f7e3"]
 [description:"try to deploy a helm chart though argo cd" due:"1681182000" end:"1681174826" entry:"1681139113" modified:"1681174826" project:"devops" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f0d1fe5a-b114-4f22-9b4a-385aba13add8"]
