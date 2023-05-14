@@ -1,5 +1,5 @@
 -- placed here for easy access
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
 -- get rid of eob fill chars
@@ -24,7 +24,7 @@ require("shawn.hydra")
 --require("shawn.do")
 require("shawn.due")
 require("shawn.bullets")
-require("shawn.nvim-tree")
+-- require("shawn.nvim-tree")
 require("shawn.navic")
 require("shawn.tmux")
 require("shawn.indentscope")
