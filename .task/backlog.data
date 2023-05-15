@@ -1759,3 +1759,6 @@
 {"description":"lab","due":"20230418T030000Z","entry":"20230414T143322Z","modified":"20230414T143322Z","project":"devops","status":"pending","uuid":"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee","tags":["seneca"]}
 {"description":"lab","due":"20230418T030000Z","end":"20230421T210537Z","entry":"20230414T143322Z","modified":"20230421T210538Z","project":"devops","status":"deleted","uuid":"58df74ec-d9c9-44ef-bca5-695c3ff8c8ee","tags":["seneca"]}
 {"description":"book g road test","end":"20230428T145714Z","entry":"20230402T232212Z","modified":"20230428T145714Z","status":"completed","uuid":"999fb618-d221-4819-9c56-bbd3e2ebebaa"}
+{"description":"fjdlsk","due":"20230501T040000Z","entry":"20230515T213059Z","modified":"20230515T213059Z","status":"pending","uuid":"dd036dad-7c66-42e7-8f78-4a6ebd30ceb5","tags":["seneca"]}
+{"description":"fjdlsk","due":"20230501T040000Z","end":"20230515T213105Z","entry":"20230515T213059Z","modified":"20230515T213107Z","status":"deleted","uuid":"dd036dad-7c66-42e7-8f78-4a6ebd30ceb5","tags":["seneca"]}
+{"description":"plan for europe trip","end":"20230515T213109Z","entry":"20230221T144254Z","modified":"20230515T213109Z","status":"completed","uuid":"ecdd1aaa-db77-47c4-a82c-c31373acaed8"}
