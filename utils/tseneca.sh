@@ -37,7 +37,7 @@ dateSelection+=("sun")
 DATE=$(printf '%s\n' "${dateSelection[@]}" | fzf --prompt "Due date: ")
 read -e -p "due date: " -i $DATE DATE
 
-CLASS=$(echo -e "C#\nBCI\ndevops\nPRJ\nCo-op" | fzf --prompt "Class: ")
+CLASS=$(echo -e "data warehousing\nbig data\nadvanced java" | fzf --prompt "Class: ")
 
 task add "${NAME}" project:$CLASS\
    due:$DATE \
