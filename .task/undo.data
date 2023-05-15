@@ -6532,3 +6532,6 @@ time 1682693834
 old [description:"book g road test" entry:"1680477732" modified:"1680477732" status:"pending" uuid:"999fb618-d221-4819-9c56-bbd3e2ebebaa"]
 new [description:"book g road test" end:"1682693834" entry:"1680477732" modified:"1682693834" status:"completed" uuid:"999fb618-d221-4819-9c56-bbd3e2ebebaa"]
 ---
+time 1684186259
+new [description:"fjdlsk" due:"1682913600" entry:"1684186259" modified:"1684186259" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd036dad-7c66-42e7-8f78-4a6ebd30ceb5"]
+---
