@@ -1768,3 +1768,4 @@
 {"description":"assignment 1","due":"20230613T030000Z","entry":"20230515T224034Z","modified":"20230515T224226Z","project":"data_warehousing","status":"pending","uuid":"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7","tags":["seneca"]}
 {"description":"assignment 2","due":"20230627T030000Z","entry":"20230515T224110Z","modified":"20230515T224241Z","project":"data_warehousing","status":"pending","uuid":"cf144dfb-0f72-4d0f-a534-7bb8871442a4","tags":["seneca"]}
 {"description":"assignment 1","due":"20230607T030000Z","entry":"20230516T224344Z","modified":"20230516T224344Z","project":"big_data","status":"pending","uuid":"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da","tags":["seneca"]}
+{"description":"assignment 2","due":"20230614T030000Z","entry":"20230516T224410Z","modified":"20230516T224410Z","project":"big_data","status":"pending","uuid":"69f5617c-79b3-4df4-9d50-650e96bcc473","tags":["seneca"]}

@@ -6564,3 +6564,6 @@ new [description:"assignment 2" due:"1687834800" entry:"1684190470" modified:"16
 time 1684277024
 new [description:"assignment 1" due:"1686106800" entry:"1684277024" modified:"1684277024" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da"]
 ---
+time 1684277050
+new [description:"assignment 2" due:"1686711600" entry:"1684277050" modified:"1684277050" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"69f5617c-79b3-4df4-9d50-650e96bcc473"]
+---
