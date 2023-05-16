@@ -1,2 +1,3 @@
-[description:"assignment 1 warehousing" due:"1686625200" entry:"1684190434" modified:"1684190434" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
-[description:"assignment 2 warehousing" due:"1687834800" entry:"1684190470" modified:"1684190470" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cf144dfb-0f72-4d0f-a534-7bb8871442a4"]
+[description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684190546" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+[description:"assignment 2" due:"1687834800" entry:"1684190470" modified:"1684190561" project:"data_warehousing" status:"pending" tags_seneca:"x" uuid:"cf144dfb-0f72-4d0f-a534-7bb8871442a4"]
+[description:"assignment 1" due:"1686106800" entry:"1684277024" modified:"1684277024" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da"]
