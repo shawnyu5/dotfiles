@@ -6570,3 +6570,7 @@ new [description:"assignment 2" due:"1686711600" entry:"1684277050" modified:"16
 time 1684411421
 new [description:"register for big data environment" due:"1684551600" entry:"1684411421" modified:"1684411421" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
 ---
+time 1684411532
+old [description:"register for big data environment" due:"1684551600" entry:"1684411421" modified:"1684411421" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
+new [description:"register for big data environment" due:"1684551600" end:"1684411532" entry:"1684411421" modified:"1684411532" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
+---
