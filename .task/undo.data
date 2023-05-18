@@ -6543,3 +6543,34 @@ time 1684186269
 old [description:"plan for europe trip" entry:"1676990574" modified:"1676990574" status:"pending" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
 new [description:"plan for europe trip" end:"1684186269" entry:"1676990574" modified:"1684186269" status:"completed" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
 ---
+time 1684190434
+new [description:"assignment 1 warehousing" due:"1686625200" entry:"1684190434" modified:"1684190434" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+---
+time 1684190470
+new [description:"assignment 2 warehousing" due:"1687834800" entry:"1684190470" modified:"1684190470" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cf144dfb-0f72-4d0f-a534-7bb8871442a4"]
+---
+time 1684190526
+old [description:"assignment 1 warehousing" due:"1686625200" entry:"1684190434" modified:"1684190434" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+new [description:"assignment 1 warehousing" due:"1686625200" entry:"1684190434" modified:"1684190526" project:"data_warehousing" status:"pending" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+---
+time 1684190546
+old [description:"assignment 1 warehousing" due:"1686625200" entry:"1684190434" modified:"1684190526" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+new [description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684190546" project:"data_warehousing" status:"pending" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+---
+time 1684190561
+old [description:"assignment 2 warehousing" due:"1687834800" entry:"1684190470" modified:"1684190470" project:"data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cf144dfb-0f72-4d0f-a534-7bb8871442a4"]
+new [description:"assignment 2" due:"1687834800" entry:"1684190470" modified:"1684190561" project:"data_warehousing" status:"pending" tags_seneca:"x" uuid:"cf144dfb-0f72-4d0f-a534-7bb8871442a4"]
+---
+time 1684277024
+new [description:"assignment 1" due:"1686106800" entry:"1684277024" modified:"1684277024" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da"]
+---
+time 1684277050
+new [description:"assignment 2" due:"1686711600" entry:"1684277050" modified:"1684277050" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"69f5617c-79b3-4df4-9d50-650e96bcc473"]
+---
+time 1684411421
+new [description:"register for big data environment" due:"1684551600" entry:"1684411421" modified:"1684411421" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
+---
+time 1684411532
+old [description:"register for big data environment" due:"1684551600" entry:"1684411421" modified:"1684411421" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
+new [description:"register for big data environment" due:"1684551600" end:"1684411532" entry:"1684411421" modified:"1684411532" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
+---
