@@ -6577,3 +6577,21 @@ new [description:"register for big data environment" due:"1684551600" end:"16844
 time 1684416867
 new [description:"lecture" due:"1684724400" entry:"1684416867" modified:"1684416867" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
 ---
+time 1684416893
+old [description:"lecture" due:"1684724400" entry:"1684416867" modified:"1684416867" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" modified:"1684416893" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1684416894
+new [description:"lecture" due:"1684724400" entry:"1684416894" imask:"0" modified:"1684416893" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bbc9ff5d-c7d8-43bd-9757-474d1b70cfa5"]
+---
+time 1684416894
+old [description:"lecture" due:"1684724400" entry:"1684416867" modified:"1684416893" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"-" modified:"1684416894" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1684416921
+old [description:"lecture" due:"1684724400" entry:"1684416894" imask:"0" modified:"1684416893" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bbc9ff5d-c7d8-43bd-9757-474d1b70cfa5"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416894" imask:"0" modified:"1684416921" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags_seneca:"x" uuid:"bbc9ff5d-c7d8-43bd-9757-474d1b70cfa5"]
+---
+time 1684416996
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" modified:"1684416996" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
