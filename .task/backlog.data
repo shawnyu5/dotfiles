@@ -1769,3 +1769,4 @@
 {"description":"assignment 2","due":"20230627T030000Z","entry":"20230515T224110Z","modified":"20230515T224241Z","project":"data_warehousing","status":"pending","uuid":"cf144dfb-0f72-4d0f-a534-7bb8871442a4","tags":["seneca"]}
 {"description":"assignment 1","due":"20230607T030000Z","entry":"20230516T224344Z","modified":"20230516T224344Z","project":"big_data","status":"pending","uuid":"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da","tags":["seneca"]}
 {"description":"assignment 2","due":"20230614T030000Z","entry":"20230516T224410Z","modified":"20230516T224410Z","project":"big_data","status":"pending","uuid":"69f5617c-79b3-4df4-9d50-650e96bcc473","tags":["seneca"]}
+{"description":"register for big data environment","due":"20230520T030000Z","entry":"20230518T120341Z","modified":"20230518T120341Z","project":"big_data","status":"pending","uuid":"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908","tags":["seneca"]}
