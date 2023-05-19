@@ -1,3 +1,4 @@
+[description:"watch lecture" due:"1684724400" end:"1684459984" entry:"1684417015" imask:"0" modified:"1684459984" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"a3264df2-0e00-41a7-bbda-8a39135190eb"]
 [description:"register for big data environment" due:"1684551600" end:"1684411532" entry:"1684411421" modified:"1684411532" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"e5bbe313-7f87-4a48-8fc3-9bdfdcb9a908"]
 [description:"plan for europe trip" end:"1684186269" entry:"1676990574" modified:"1684186269" status:"completed" uuid:"ecdd1aaa-db77-47c4-a82c-c31373acaed8"]
 [description:"fjdlsk" due:"1682913600" end:"1684186265" entry:"1684186259" modified:"1684186267" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"dd036dad-7c66-42e7-8f78-4a6ebd30ceb5"]
