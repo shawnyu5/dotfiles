@@ -15,15 +15,19 @@ alias dl="cd ~/Downloads"
 
 # opening notes
 alias dbwnotes="nvim -c ':cd %:p:h' ~/seneca/semester_8/DBW624_intro_to_datawarehousing/DBW624_intro_to_datawarehousing_notes.md"
+alias bdanotes="nvim -c ':cd %:p:h' ~/seneca/semester_8/BDA400_intro_to_big_data/BDA400_intro_to_big_data_notes.md"
 
 # move commands
 alias mvdbw=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/DBW624_intro_to_datawarehousing/"
+alias mvbda=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/BDA400_intro_to_big_data/"
+alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/JAC555_advanced_java/"
 # alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRJ666/"
 # alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
 # alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
 
 # cd commands
 alias cddbw=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/DBW624_intro_to_datawarehousing/"
+alias cdbda=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/BDA400_intro_to_big_data/"
 # alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRJ666/"
 # alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
 # alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
