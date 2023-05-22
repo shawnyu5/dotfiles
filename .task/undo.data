@@ -6647,3 +6647,7 @@ time 1684770316
 old [description:"lecture" due:"1685329200" entry:"1684770293" imask:"1" modified:"1684700599" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1c38e80f-13dc-49be-bc2e-c8b3af661c1e"]
 new [description:"watch lecture" due:"1685329200" entry:"1684770293" imask:"1" modified:"1684770316" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags_seneca:"x" uuid:"1c38e80f-13dc-49be-bc2e-c8b3af661c1e"]
 ---
+time 1684770361
+old [description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684190546" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+new [annotation_1684770361:"ask about reference table tomorrow during office hours" description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684770361" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
+---
