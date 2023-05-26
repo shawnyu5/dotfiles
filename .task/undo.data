@@ -6651,3 +6651,7 @@ time 1684770361
 old [description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684190546" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
 new [annotation_1684770361:"ask about reference table tomorrow during office hours" description:"assignment 1" due:"1686625200" entry:"1684190434" modified:"1684770361" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"cd324e9a-90a4-4bd1-8fb1-d572c5d166f7"]
 ---
+time 1685059955
+old [description:"assignment 1" due:"1686106800" entry:"1684277024" modified:"1684277024" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da"]
+new [description:"assignment 1" due:"1686106800" end:"1685059955" entry:"1684277024" modified:"1685059955" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"f4ceefd6-d466-4b0b-b6ec-7c1257d4b0da"]
+---
