@@ -6692,3 +6692,7 @@ new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++-" 
 time 1685389981
 new [description:"assignment 2" due:"1686711600" entry:"1685389981" modified:"1685389981" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bbc1539d-1ffb-49dc-84c0-73182a3e0f30"]
 ---
+time 1685389995
+old [description:"assignment 2" due:"1686711600" entry:"1685389981" modified:"1685389981" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bbc1539d-1ffb-49dc-84c0-73182a3e0f30"]
+new [description:"assignment 2" due:"1686711600" end:"1685389992" entry:"1685389981" modified:"1685389995" project:"big_data" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"bbc1539d-1ffb-49dc-84c0-73182a3e0f30"]
+---
