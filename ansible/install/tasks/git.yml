@@ -5,6 +5,9 @@
     name: git
     state: latest
 
+- name: configure git to use credentials helper store
+  shell: git config --global credential.helper store
+
 - name: copy git-credentials
   copy:
     src: "{{ personal_dir }}/.git-credentials"
