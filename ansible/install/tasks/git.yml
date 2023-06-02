@@ -5,8 +5,7 @@
     name: git
     state: latest
 
-- name: link git-credentials
-  file:
+- name: copy git-credentials
+  copy:
     src: "{{ personal_dir }}/.git-credentials"
-    dest: "{{ ansible_env.HOME }}/.config/nvim"
-    state: link
+    dest: "{{ansible_env.HOME }}/.git-credentials"

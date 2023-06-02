@@ -6,9 +6,9 @@
     name: zsh
     state: latest
 
-- name: set default shell
-  shell: |
-    chsh -s $(which zsh)
+# - name: set default shell
+  # shell: |
+    # chsh -s $(which zsh)
 
 - name: install ranger
   become: true
