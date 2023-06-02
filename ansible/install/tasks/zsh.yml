@@ -6,12 +6,6 @@
     name: zsh
     state: latest
 
-- name: install which
-  become: true
-  package:
-    name: which
-    state: latest
-
 - name: set default shell
   become: true
   shell: |
