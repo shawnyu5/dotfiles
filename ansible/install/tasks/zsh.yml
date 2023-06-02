@@ -7,9 +7,15 @@
     state: latest
 
 - name: set default shell
-  become: true
   shell: |
     chsh -s $(which zsh)
+
+- name: install ranger
+  become: true
+  ignore_errors: true
+  package:
+    name: ranger
+    state: latest
 
 - name: link zshrc
   file:
