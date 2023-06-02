@@ -60,3 +60,7 @@ GH
 webhook
 Kubernetes
 kubectl
+Hadoop
+HDFS
+MapReduce
+RDD
