@@ -24,6 +24,12 @@
     name: nodejs
     state: latest
 
+- name: install npm
+  become: true
+  package:
+    name: npm
+    state: latest
+
 - name: install pip
   ignore_errors: true
   become: true
