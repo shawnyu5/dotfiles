@@ -28,6 +28,7 @@ alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester
 # cd commands
 alias cddbw=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/DBW624_intro_to_datawarehousing/"
 alias cdbda=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/BDA400_intro_to_big_data/"
+alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/JAC555_advanced_java/"
 # alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRJ666/"
 # alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
 # alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690_intro_to_devops/"

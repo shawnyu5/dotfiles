@@ -57,6 +57,7 @@
     mode: '0755'
 
 - name: link neovim config
+  ignore_errors: true
   file:
     src: "{{ personal_dir }}/.config/nvim"
     dest: "{{ ansible_env.HOME }}/.config/nvim"
