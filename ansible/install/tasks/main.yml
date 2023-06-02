@@ -8,3 +8,6 @@
 - name: set up tmux
   include_tasks:
     file: tmux.yml
+- name: install i3 dependencies
+  include_tasks:
+    file: i3.yml
