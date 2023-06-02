@@ -6696,3 +6696,6 @@ time 1685389995
 old [description:"assignment 2" due:"1686711600" entry:"1685389981" modified:"1685389981" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"bbc1539d-1ffb-49dc-84c0-73182a3e0f30"]
 new [description:"assignment 2" due:"1686711600" end:"1685389992" entry:"1685389981" modified:"1685389995" project:"big_data" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"bbc1539d-1ffb-49dc-84c0-73182a3e0f30"]
 ---
+time 1685664960
+new [description:"assignment 1" due:"1687143600" entry:"1685664960" modified:"1685664960" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+---
