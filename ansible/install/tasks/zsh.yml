@@ -1,5 +1,6 @@
 ---
-- name: install ZSH
+- name: install zsh
+  become: true
   ignore_errors: true
   package:
     name: zsh
@@ -16,7 +17,6 @@
   shell: |
     chsh -s $(which zsh)
 
-
 - name: link zshrc
   file:
     src: "{{ personal_dir }}/.zshrc"
@@ -25,12 +25,12 @@
 
 - name: link zsh_aliases
   file:
-    src: "{{ personal_dir }}/.zsh_aliases"
     dest: "{{ ansible_env.HOME }}/.zsh_aliases"
+    src: "{{ personal_dir }}/.zsh_aliases"
     state: link
 
 - name: link zsh_aliases_custom
   file:
-    src: "{{ personal_dir }}/.zsh_aliases-custom"
     dest: "{{ ansible_env.HOME }}/.zsh_aliases-custom"
+    src: "{{ personal_dir }}/.zsh_aliases-custom"
     state: link

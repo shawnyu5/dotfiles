@@ -1,0 +1,14 @@
+---
+- name: install flameshot (screen shot tool)
+  ignore_errors: true
+  become: true
+  package:
+    name: flameshot
+    state: latest
+
+- name: install kitty
+  ignore_errors: true
+  become: true
+  package:
+    name: kitty
+    state: latest
