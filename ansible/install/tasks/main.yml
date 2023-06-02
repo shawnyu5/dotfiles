@@ -11,3 +11,6 @@
 - name: install i3 dependencies
   include_tasks:
     file: i3.yml
+- name: set up git
+  include_tasks:
+    file: git.yml

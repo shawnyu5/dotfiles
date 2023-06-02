@@ -1,0 +1,12 @@
+---
+- name: install git
+  become: true
+  package:
+    name: git
+    state: latest
+
+- name: link git-credentials
+  file:
+    src: "{{ personal_dir }}/.git-credentials"
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    state: link
