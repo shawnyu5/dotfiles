@@ -19,7 +19,6 @@ bindkey '^x^e' edit-command-line
 
 alias p="python3"
 
-alias files="nautilus"
 
 #g for git
 alias g="git"
@@ -27,10 +26,9 @@ alias ga="git add -A"
 alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
-alias gm="git checkout master || git checkout main"
+alias gm="git checkout $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
+alias gforce="git commit --amend --no-edit && git push --force"
 
-alias homemonitor="~/.screenlayout/home_monitor.sh"
-alias homemonitorOff="xrandr --output HDMI1 --off"
 
 #mdp no fade by default
 alias mdp="mdp -f"
@@ -48,6 +46,7 @@ alias zip="zip -r"
 
 #make rm-r always prompt
 alias rm="rm -I"
+
 function history() {
    COMMAND=$(cat ~/.zsh_history | fzf --reverse --height 40% --border --prompt "zsh> ")
    eval $COMMAND
@@ -59,7 +58,7 @@ alias history="history"
 
 #opening vimrc
 alias vimrc="cd ~/.config/nvim/; nvim init.lua; cd - > /dev/null"
-alias snip="cd ~/.config/nvim/UltiSnips"
+# alias snip="cd ~/.config/nvim/UltiSnips"
 
 #have ls list directories first
 alias ls="ls --group-directories-first --color=auto"
@@ -75,19 +74,20 @@ alias v="nvim"
 alias sr="source ~/.zshrc"
 
 #editing .bash_alias file
-alias bashrc="nvim ~/.bashrc"
-alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
+# alias bashrc="nvim ~/.bashrc"
+# alias bash_alias="cd ~; nvim ~/.bash_aliases; cd - > /dev/null/"
 alias zshrc="cd ~; nvim ~/.zshrc; cd - > /dev/null"
 alias zsh_aliases="cd ~; nvim ~/.zsh_aliases; cd - > /dev/null"
 alias zsh_aliases-custom="cd -; nvim ~/.zsh_aliases-custom; cd - > /dev/null"
 
-#opening neomutt
-alias mail="neomutt"
+
+# opening neomutt
+# alias mail="neomutt"
 
 #watch starwars
 alias starwars="telnet towel.blinkenlights.nl"
 
-alias work="~/personal/seneca_utilities/work.sh"
+# alias work="~/personal/seneca_utilities/work.sh"
 
 #auto complete in tmux
 # alias tma="tmux attach -t $1"
@@ -106,16 +106,12 @@ function tma
 }
 
 
-#taskworrior aliases
-#=====================================
-
-#t for task
+##########################
+#  task worrior aliases  #
+##########################
 alias t="task"
-
-#editing taskrc
-alias trc="nvim ~/.taskrc"
-
-#==========================
+alias tsync="bash ~/personal/utils/tsync.sh"
+alias tseneca="bash ~/personal/utils/tseneca.sh"
 
 #for starting any file(s)
 function start
@@ -143,3 +139,10 @@ function cheat
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
 alias bd=". bd -si"
+alias cat="bat"
+
+alias devOpServer="ssh shawn@146.190.216.74"
+alias ocean="ssh root@161.35.8.80"
+alias k="kubectl"
+# turn the screen off
+alias sleep="xset dpms force standby"
