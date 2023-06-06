@@ -212,12 +212,12 @@ local pluginSpec = {
 			require("shawn.cmp")
 		end,
 	},
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	},
+	-- {
+		-- "lewis6991/gitsigns.nvim",
+		-- config = function()
+			-- require("gitsigns").setup()
+		-- end,
+	-- },
 	{
 		"SmiteshP/nvim-navic",
 		dependencies = { "neovim/nvim-lspconfig" },
