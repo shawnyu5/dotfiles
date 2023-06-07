@@ -26,6 +26,10 @@ keymap("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').find_files({cwd = '~/.config/nvim/'})<CR>", opts)
 keymap("n", "<leader>fr", "<cmd>Telescope resume<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+vim.keymap.set("n", "<leader><leader>fw", function()
+	local word = vim.fn.expand("<cword>")
+	vim.cmd("Telescope live_grep default_text=" .. word)
+end, { desc = "live grep for word under cursor" })
 
 vim.cmd([[
 command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
