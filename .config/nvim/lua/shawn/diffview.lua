@@ -482,46 +482,46 @@ require("diffview").setup({
 	},
 })
 
-local command = vim.api.nvim_create_user_command
-local augroup = vim.api.nvim_create_augroup("diffview", {})
-vim.api.nvim_create_autocmd({ "User DiffviewViewOpened" }, {
-	group = augroup,
-	callback = function()
-		command("GitConflictChooseTheirs", function()
-			actions.conflict_choose("theirs")
-		end, { desc = "Choose THEIRS in a git conflict" })
+-- local command = vim.api.nvim_create_user_command
+-- local augroup = vim.api.nvim_create_augroup("diffview", {})
+-- vim.api.nvim_create_autocmd({ "User DiffviewViewOpened" }, {
+	-- group = augroup,
+	-- callback = function()
+		-- command("GitConflictChooseTheirs", function()
+			-- actions.conflict_choose("theirs")
+		-- end, { desc = "Choose THEIRS in a git conflict" })
 
-		command("GitConflictChooseBase", function()
-			actions.conflict_choose("base")
-		end, { desc = "Choose BASE in a git conflict" })
+		-- command("GitConflictChooseBase", function()
+			-- actions.conflict_choose("base")
+		-- end, { desc = "Choose BASE in a git conflict" })
 
-		command("GitConflictChooseAll", function()
-			actions.conflict_choose("all")
-		end, { desc = "Choose ALL in a git conflict" })
+		-- command("GitConflictChooseAll", function()
+			-- actions.conflict_choose("all")
+		-- end, { desc = "Choose ALL in a git conflict" })
 
-		command("GitConflictChooseNone", function()
-			actions.conflict_choose("none")
-		end, { desc = "Delete the conflict region" })
+		-- command("GitConflictChooseNone", function()
+			-- actions.conflict_choose("none")
+		-- end, { desc = "Delete the conflict region" })
 
-		command("GitConflictChooseOurs", function()
-			actions.conflict_choose("ours")
-		end, { desc = "Choose OURS in a git conflict" })
-	end,
-})
+		-- command("GitConflictChooseOurs", function()
+			-- actions.conflict_choose("ours")
+		-- end, { desc = "Choose OURS in a git conflict" })
+	-- end,
+-- })
 
-vim.api.nvim_create_autocmd("User DiffviewViewClosed", {
-	group = augroup,
-	callback = function()
-		local cmd_names = {
-			"GitConflictChooseTheirs",
-			"GitConflictChooseOurs",
-			"GitConflictChooseBase",
-			"GitConflictChooseNone",
-			"GitConflictChooseAll",
-		}
-		for i, _ in ipairs(cmd_names) do
-			vim.api.nvim_del_user_command(cmd_names[i])
-		end
-	end,
-   desc = "Delete all user commands once exited from diff view"
-})
+-- vim.api.nvim_create_autocmd("User DiffviewViewClosed", {
+	-- group = augroup,
+	-- callback = function()
+		-- local cmd_names = {
+			-- "GitConflictChooseTheirs",
+			-- "GitConflictChooseOurs",
+			-- "GitConflictChooseBase",
+			-- "GitConflictChooseNone",
+			-- "GitConflictChooseAll",
+		-- }
+		-- for i, _ in ipairs(cmd_names) do
+			-- vim.api.nvim_del_user_command(cmd_names[i])
+		-- end
+	-- end,
+   -- desc = "Delete all user commands once exited from diff view"
+-- })
