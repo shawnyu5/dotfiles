@@ -166,7 +166,7 @@ local pluginSpec = {
 		event = "InsertEnter",
 		dependencies = { "SirVer/ultisnips" },
 	},
-	{ "j-hui/fidget.nvim" },
+	{ "j-hui/fidget.nvim", tag = "legacy" },
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "ThePrimeagen/harpoon" },
 	{
@@ -213,10 +213,10 @@ local pluginSpec = {
 		end,
 	},
 	-- {
-		-- "lewis6991/gitsigns.nvim",
-		-- config = function()
-			-- require("gitsigns").setup()
-		-- end,
+	-- "lewis6991/gitsigns.nvim",
+	-- config = function()
+	-- require("gitsigns").setup()
+	-- end,
 	-- },
 	{
 		"SmiteshP/nvim-navic",
