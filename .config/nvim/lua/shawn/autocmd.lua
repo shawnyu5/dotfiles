@@ -1,80 +1,82 @@
 vim.api.nvim_create_augroup("formatOptions", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	pattern = "*",
-	command = "setlocal formatoptions-=cro",
+   pattern = "*",
+   command = "setlocal formatoptions-=cro",
 })
 
 vim.api.nvim_create_augroup("makeFileIndent", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	group = "makeFileIndent",
-	pattern = "make",
-	command = "setlocal tabstop=4 softtabstop=4 shiftwidth=4",
+   group = "makeFileIndent",
+   pattern = "make",
+   command = "setlocal tabstop=4 softtabstop=4 shiftwidth=4",
 })
 
 vim.api.nvim_create_augroup("highlight_yank", { clear = true })
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
-	group = "highlight_yank",
-	pattern = "*",
-	callback = function()
-		require("vim.highlight").on_yank({ timeout = 104 })
-	end,
+   group = "highlight_yank",
+   pattern = "*",
+   callback = function()
+      require("vim.highlight").on_yank({ timeout = 104 })
+   end,
 })
 
 vim.api.nvim_create_augroup("json_lsp", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	group = "json_lsp",
-	pattern = "tsconfig.json",
-	callback = function()
-		vim.cmd("LspStop")
-	end,
+   group = "json_lsp",
+   pattern = "tsconfig.json",
+   callback = function()
+      vim.cmd("LspStop")
+   end,
 })
 
 function OrgImports()
-	local clients = vim.lsp.buf_get_clients()
-	for _, client in pairs(clients) do
-		local params = vim.lsp.util.make_range_params(nil, client.offset_encoding)
-		params.context = { only = { "source.organizeImports" } }
+   local clients = vim.lsp.buf_get_clients()
+   for _, client in pairs(clients) do
+      local params = vim.lsp.util.make_range_params(nil, client.offset_encoding)
+      params.context = { only = { "source.organizeImports" } }
 
-		local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 3000)
-		for _, res in pairs(result or {}) do
-			for _, r in pairs(res.result or {}) do
-				if r.edit then
-					vim.lsp.util.apply_workspace_edit(r.edit, client.offset_encoding)
-				else
-					vim.lsp.buf.execute_command(r.command)
-				end
-			end
-		end
-	end
+      local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 3000)
+      for _, res in pairs(result or {}) do
+         for _, r in pairs(res.result or {}) do
+            if r.edit then
+               vim.lsp.util.apply_workspace_edit(r.edit, client.offset_encoding)
+            else
+               vim.lsp.buf.execute_command(r.command)
+            end
+         end
+      end
+   end
 end
 
 local go_imports = vim.api.nvim_create_augroup("go_imports", { clear = true })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	group = go_imports,
-	pattern = "*.go",
-	callback = OrgImports,
+   group = go_imports,
+   pattern = "*.go",
+   callback = OrgImports,
 })
 
 local termina_auto_group = vim.api.nvim_create_augroup("terminal_auto_group", { clear = true })
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
-	group = termina_auto_group,
-	callback = function()
-		vim.cmd("setlocal nospell")
-	end,
+   group = termina_auto_group,
+   callback = function()
+      vim.cmd("setlocal nospell")
+   end,
 })
 
 vim.filetype.add({
-	extension = {
-		vugu = "html",
-	},
+   extension = {
+      vugu = "html",
+   },
 })
 
 local central_ci_augroup = vim.api.nvim_create_augroup("central_ci", {})
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	group = central_ci_augroup,
-	pattern = vim.fn.expand("~") .. "/central-ci/*",
-	callback = function()
-		vim.cmd("set ff=unix")
-		vim.cmd("wa")
-	end,
+   group = central_ci_augroup,
+   pattern = vim.fn.expand("~") .. "/central-ci/*",
+   callback = function()
+      if vim.opt_local.modifiable:get() == true then
+         vim.cmd("set ff=unix")
+         vim.cmd("wa")
+      end
+   end,
 })

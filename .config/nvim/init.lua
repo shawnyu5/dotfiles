@@ -1,5 +1,5 @@
 -- placed here for easy access
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
 -- get rid of eob fill chars
@@ -38,7 +38,7 @@ require("shawn.refactor")
 require("shawn.copilot")
 require("shawn.project")
 require("shawn.dap")
--- require("shawn.git-conflict")
+require("shawn.git-conflict")
 require("shawn.markdown-preview")
 -- source("~/.config/nvim/settings/markdown-preview.vim")
 -- require("shawn.winbar")
