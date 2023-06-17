@@ -6773,3 +6773,15 @@ new [description:"assignement 3" due:"1687316400" entry:"1686790333" modified:"1
 time 1686964079
 new [description:"lab 3" due:"1687402800" entry:"1686964079" modified:"1686964079" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd3cee04-ec3b-4162-9c2f-13bf99b57999"]
 ---
+time 1686964129
+old [description:"assignment 1" due:"1687143600" entry:"1685664960" modified:"1685664960" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+new [description:"assignment 1" due:"1687665600" entry:"1685664960" modified:"1686964129" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+---
+time 1686964134
+old [description:"assignment 1" due:"1687665600" entry:"1685664960" modified:"1686964129" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+new [description:"assignment 1" due:"1687748400" entry:"1685664960" modified:"1686964134" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+---
+time 1687029271
+old [description:"assignement 3" due:"1687316400" entry:"1686790333" modified:"1686790333" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"33a7be06-619a-43fc-a760-a9f6731ea5e7"]
+new [description:"assignement 3" due:"1687316400" end:"1687029271" entry:"1686790333" modified:"1687029271" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"33a7be06-619a-43fc-a760-a9f6731ea5e7"]
+---

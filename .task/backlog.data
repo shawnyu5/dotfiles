@@ -1825,3 +1825,6 @@
 {"description":"assignment 2","due":"20230614T030000Z","end":"20230614T010735Z","entry":"20230516T224410Z","modified":"20230614T010735Z","project":"big_data","status":"completed","uuid":"69f5617c-79b3-4df4-9d50-650e96bcc473","tags":["seneca"]}
 {"description":"assignement 3","due":"20230621T030000Z","entry":"20230615T005213Z","modified":"20230615T005213Z","project":"big_data","status":"pending","uuid":"33a7be06-619a-43fc-a760-a9f6731ea5e7","tags":["seneca"]}
 {"description":"lab 3","due":"20230622T030000Z","entry":"20230617T010759Z","modified":"20230617T010759Z","project":"advanced_java","status":"pending","uuid":"dd3cee04-ec3b-4162-9c2f-13bf99b57999","tags":["seneca"]}
+{"description":"assignment 1","due":"20230625T040000Z","entry":"20230602T001600Z","modified":"20230617T010849Z","project":"advanced_java","status":"pending","uuid":"00934e8a-165a-4840-9b7e-21b6d438b9b2","tags":["seneca"]}
+{"description":"assignment 1","due":"20230626T030000Z","entry":"20230602T001600Z","modified":"20230617T010854Z","project":"advanced_java","status":"pending","uuid":"00934e8a-165a-4840-9b7e-21b6d438b9b2","tags":["seneca"]}
+{"description":"assignement 3","due":"20230621T030000Z","end":"20230617T191431Z","entry":"20230615T005213Z","modified":"20230617T191431Z","project":"big_data","status":"completed","uuid":"33a7be06-619a-43fc-a760-a9f6731ea5e7","tags":["seneca"]}
