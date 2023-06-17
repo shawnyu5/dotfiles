@@ -6770,3 +6770,6 @@ new [description:"assignment 2" due:"1686711600" end:"1686704855" entry:"1684277
 time 1686790333
 new [description:"assignement 3" due:"1687316400" entry:"1686790333" modified:"1686790333" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"33a7be06-619a-43fc-a760-a9f6731ea5e7"]
 ---
+time 1686964079
+new [description:"lab 3" due:"1687402800" entry:"1686964079" modified:"1686964079" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd3cee04-ec3b-4162-9c2f-13bf99b57999"]
+---

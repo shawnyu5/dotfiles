@@ -1824,3 +1824,4 @@
 {"description":"watch lecture","due":"20230522T030000Z","entry":"20230518T133636Z","mask":"++++-","modified":"20230612T212240Z","project":"big_data","recur":"weekly","rtype":"periodic","status":"recurring","uuid":"1d1ecfaa-58f3-4f28-b1e0-df871e54271b","tags":["seneca"]}
 {"description":"assignment 2","due":"20230614T030000Z","end":"20230614T010735Z","entry":"20230516T224410Z","modified":"20230614T010735Z","project":"big_data","status":"completed","uuid":"69f5617c-79b3-4df4-9d50-650e96bcc473","tags":["seneca"]}
 {"description":"assignement 3","due":"20230621T030000Z","entry":"20230615T005213Z","modified":"20230615T005213Z","project":"big_data","status":"pending","uuid":"33a7be06-619a-43fc-a760-a9f6731ea5e7","tags":["seneca"]}
+{"description":"lab 3","due":"20230622T030000Z","entry":"20230617T010759Z","modified":"20230617T010759Z","project":"advanced_java","status":"pending","uuid":"dd3cee04-ec3b-4162-9c2f-13bf99b57999","tags":["seneca"]}

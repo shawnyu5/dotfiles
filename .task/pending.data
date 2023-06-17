@@ -5,3 +5,4 @@
 [description:"lecture" due:"1687143600" entry:"1686604960" imask:"4" modified:"1686525571" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"48ec2aa2-f60e-417b-a19d-c04c15409505"]
 [description:"watch lecture" due:"1687143600" entry:"1686604960" imask:"4" modified:"1686525571" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"5e7ba56a-cd76-4356-979d-e6a6972e87e9"]
 [description:"assignement 3" due:"1687316400" entry:"1686790333" modified:"1686790333" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"33a7be06-619a-43fc-a760-a9f6731ea5e7"]
+[description:"lab 3" due:"1687402800" entry:"1686964079" modified:"1686964079" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd3cee04-ec3b-4162-9c2f-13bf99b57999"]
