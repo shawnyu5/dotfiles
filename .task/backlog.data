@@ -1828,3 +1828,4 @@
 {"description":"assignment 1","due":"20230625T040000Z","entry":"20230602T001600Z","modified":"20230617T010849Z","project":"advanced_java","status":"pending","uuid":"00934e8a-165a-4840-9b7e-21b6d438b9b2","tags":["seneca"]}
 {"description":"assignment 1","due":"20230626T030000Z","entry":"20230602T001600Z","modified":"20230617T010854Z","project":"advanced_java","status":"pending","uuid":"00934e8a-165a-4840-9b7e-21b6d438b9b2","tags":["seneca"]}
 {"description":"assignement 3","due":"20230621T030000Z","end":"20230617T191431Z","entry":"20230615T005213Z","modified":"20230617T191431Z","project":"big_data","status":"completed","uuid":"33a7be06-619a-43fc-a760-a9f6731ea5e7","tags":["seneca"]}
+{"description":"midterm","due":"20230711T030000Z","entry":"20230618T001549Z","modified":"20230618T001549Z","project":"data_warehousing","status":"pending","uuid":"4a4dd0ba-6c2a-4331-a013-6b63ae9737d2","tags":["seneca"]}
