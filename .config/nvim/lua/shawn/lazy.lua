@@ -70,6 +70,18 @@ local pluginSpec = {
    {
       "echasnovski/mini.indentscope",
    },
+   {
+      "Bekaboo/dropbar.nvim",
+      dependencies = { "neovim/nvim-lspconfig" },
+      config = function ()
+         local opts = {
+            icons = {
+               enable = false,
+            },
+         }
+         require("dropbar").setup(opts)
+      end
+   },
    -- {
    -- "sindrets/diffview.nvim",
    -- dependencies = { "nvim-lua/plenary.nvim" },
