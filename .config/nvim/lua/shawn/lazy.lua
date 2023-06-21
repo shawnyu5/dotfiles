@@ -230,10 +230,10 @@ local pluginSpec = {
    -- require("gitsigns").setup()
    -- end,
    -- },
-   {
-      "SmiteshP/nvim-navic",
-      dependencies = { "neovim/nvim-lspconfig" },
-   },
+   -- {
+      -- "SmiteshP/nvim-navic",
+      -- dependencies = { "neovim/nvim-lspconfig" },
+   -- },
    -- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
    { "zbirenbaum/copilot.lua" },
    -- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
