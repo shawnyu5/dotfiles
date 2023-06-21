@@ -6,6 +6,6 @@ lsp.yamlls.setup({
 		utils.on_attach(client, bufnr)
       vim.lsp.handlers["textDocument/publishDiagnostics"] = nil
 		-- utils.format_on_save()
-		require("nvim-navic").attach(client, bufnr)
+		-- require("nvim-navic").attach(client, bufnr)
 	end,
 })
