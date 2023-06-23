@@ -6809,3 +6809,6 @@ time 1687307625
 old [description:"lab 3" due:"1687402800" entry:"1686964079" modified:"1686964079" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd3cee04-ec3b-4162-9c2f-13bf99b57999"]
 new [description:"lab 3" due:"1687402800" end:"1687307625" entry:"1686964079" modified:"1687307625" project:"advanced_java" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"dd3cee04-ec3b-4162-9c2f-13bf99b57999"]
 ---
+time 1687557290
+new [description:"assignment 2" due:"1687834800" entry:"1687557290" modified:"1687557290" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"863795e8-e9ad-4525-87e5-febaacca194b"]
+---
