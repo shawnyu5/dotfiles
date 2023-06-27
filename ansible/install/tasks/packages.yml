@@ -51,3 +51,15 @@
   package:
     name: ranger
     state: latest
+
+- name: install java
+  become: true
+  ignore_errors: true
+  package:
+    name:
+      - jdk17-openjdk
+      - jre17-openjdk
+    state: latest
+
+
+
