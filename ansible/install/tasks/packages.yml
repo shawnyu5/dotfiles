@@ -41,8 +41,8 @@
   become: true
   package:
     name:
-    - nodejs
-    - npm
+      - nodejs
+      - npm
     state: latest
 
 - name: install go
@@ -50,4 +50,11 @@
   become: true
   package:
     name: go
+    state: latest
+
+- name: install ranger
+  become: true
+  ignore_errors: true
+  package:
+    name: ranger
     state: latest

@@ -3,19 +3,14 @@
   become: true
   ignore_errors: true
   package:
-    name: zsh
+    name:
+      - zsh
+      - starship
     state: latest
 
 # - name: set default shell
-  # shell: |
-    # chsh -s $(which zsh)
-
-- name: install ranger
-  become: true
-  ignore_errors: true
-  package:
-    name: ranger
-    state: latest
+# shell: |
+# chsh -s $(which zsh)
 
 - name: link zshrc
   file:
