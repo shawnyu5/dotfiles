@@ -8,10 +8,6 @@
       - starship
     state: latest
 
-# - name: set default shell
-# shell: |
-# chsh -s $(which zsh)
-
 - name: link zshrc
   file:
     src: "{{ personal_dir }}/.zshrc"

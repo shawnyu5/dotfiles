@@ -10,14 +10,9 @@
   ignore_errors: true
   become: true
   package:
-    name: kitty
-    state: latest
-
-- name: install picom
-  ignore_errors: true
-  become: true
-  package:
-    name: picom
+    name:
+      - kitty
+      - picom
     state: latest
 
 - name: link kitty config
@@ -51,4 +46,3 @@
     dest: "{{ ansible_env.HOME }}/.config/picom"
     state: link
     force: true
-

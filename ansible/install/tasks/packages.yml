@@ -6,13 +6,6 @@
     name: noto-fonts-emoji
     state: latest
 
-- name: install git-delta
-  ignore_errors: true
-  become: true
-  package:
-    name: git-delta
-    state: latest
-
 - name: install discord
   ignore_errors: true
   become: true

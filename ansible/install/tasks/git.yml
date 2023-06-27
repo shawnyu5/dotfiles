@@ -2,7 +2,9 @@
 - name: install git
   become: true
   package:
-    name: git
+    name:
+      - git
+      - git-delta
     state: latest
 
 - name: copy git-credentials
@@ -14,8 +16,3 @@
   copy:
     src: "{{ personal_dir }}/.gitconfig"
     dest: "{{ ansible_env.HOME }}/.gitconfig"
-
-- name: set name and email address
-  shell: |
-      git config --global user.email "shawn.yu5@hotmail.com"
-      git config --global user.name "Shawn Yu"
