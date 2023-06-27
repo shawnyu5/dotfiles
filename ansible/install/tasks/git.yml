@@ -10,8 +10,14 @@
     src: "{{ personal_dir }}/.git-credentials"
     dest: "{{ ansible_env.HOME }}/.git-credentials"
 
-- name: Set name and email address
+- name: set name and email address
   shell: |
       git config --global user.email "shawn.yu5@hotmail.com"
       git config --global user.name "Shawn Yu"
 
+# - name: check credential storage method
+
+# - name: set credential storage method
+  # shell: |
+    # echo -e "[credential]
+      # helper = store" >> .gitconfig
