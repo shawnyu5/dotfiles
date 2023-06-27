@@ -20,5 +20,34 @@
     name: discord
     state: latest
 
+- name: install rust
+  ignore_errors: true
+  become: true
+  package:
+    name: rust
+    state: latest
 
+- name: install font
+  ignore_errors: true
+  become: true
+  package:
+    name:
+      - ttf-fira-code
+      - ttf-firacode-nerd
+    state: latest
 
+- name: install node and NPM
+  ignore_errors: true
+  become: true
+  package:
+    name:
+    - nodejs
+    - npm
+    state: latest
+
+- name: install go
+  ignore_errors: true
+  become: true
+  package:
+    name: go
+    state: latest
