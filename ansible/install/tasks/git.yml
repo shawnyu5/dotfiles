@@ -5,10 +5,15 @@
     name: git
     state: latest
 
-- name: link git-credentials
+- name: copy git-credentials
   copy:
     src: "{{ personal_dir }}/.git-credentials"
     dest: "{{ ansible_env.HOME }}/.git-credentials"
+
+- name: copy gitconfig
+  copy:
+    src: "{{ personal_dir }}/.gitconfig"
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
 
 - name: set name and email address
   shell: |
