@@ -36,6 +36,14 @@
     state: link
     force: true
 
+- name: link i3blocks config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/i3blocks"
+    dest: "{{ ansible_env.HOME }}/.config/i3blocks"
+    state: link
+    force: true
+
 - name: link picom config
   ignore_errors: true
   file:
