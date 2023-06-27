@@ -228,7 +228,7 @@ bar {
    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
 
    # status_command i3status
-   font pango:mono 12
+   font pango:mono 11
 }
 
 # setting wall paper
