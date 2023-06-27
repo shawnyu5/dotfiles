@@ -51,3 +51,4 @@
     dest: "{{ ansible_env.HOME }}/.config/picom"
     state: link
     force: true
+
