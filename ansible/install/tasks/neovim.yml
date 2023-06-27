@@ -64,3 +64,4 @@
     src: "{{ personal_dir }}/.config/nvim"
     dest: "{{ ansible_env.HOME }}/.config/nvim"
     state: link
+    force: true

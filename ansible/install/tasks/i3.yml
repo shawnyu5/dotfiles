@@ -12,3 +12,11 @@
   package:
     name: kitty
     state: latest
+
+- name: link i3 config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/i3"
+    dest: "{{ ansible_env.HOME }}/.config/i3"
+    state: link
+    force: true
