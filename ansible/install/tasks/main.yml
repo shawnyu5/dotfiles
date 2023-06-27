@@ -14,3 +14,6 @@
 - name: set up git
   include_tasks:
     file: git.yml
+- name: install additional packages
+  include_tasks:
+    file: packages.yml

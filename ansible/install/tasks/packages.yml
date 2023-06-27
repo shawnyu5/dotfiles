@@ -1,0 +1,14 @@
+---
+- name: install google chrome
+  ignore_errors: true
+  become: true
+  package:
+    name: google-chrome
+    state: latest
+
+- name: install emojies
+  ignore_errors: true
+  become: true
+  package:
+    name: noto-fonts-emoji
+    state: latest
