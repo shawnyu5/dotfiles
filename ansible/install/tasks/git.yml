@@ -6,7 +6,12 @@
     state: latest
 
 - name: link git-credentials
-  file:
+  copy:
     src: "{{ personal_dir }}/.git-credentials"
-    dest: "{{ ansible_env.HOME }}/.config/nvim"
-    state: link
+    dest: "{{ ansible_env.HOME }}/.git-credentials"
+
+- name: Set name and email address
+  shell: |
+      git config --global user.email "shawn.yu5@hotmail.com"
+      git config --global user.name "Shawn Yu"
+
