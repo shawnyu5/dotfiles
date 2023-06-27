@@ -61,5 +61,9 @@
       - jre17-openjdk
     state: latest
 
-
-
+- name: install htop
+  become: true
+  ignore_errors: true
+  package:
+    name: htop
+    state: latest
