@@ -143,7 +143,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:🌐"
 set $ws2 "2:"
-set $ws3 "3:"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6:🌐"
@@ -164,16 +164,16 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-workspace $ws1 output VGA1
-workspace $ws2 output VGA1
-workspace $ws3 output VGA1
-workspace $ws4 output VGA1
-workspace $ws5 output VGA1
-workspace $ws6 output HDMI1
-workspace $ws7 output HDMI1
-workspace $ws8 output HDMI1
-workspace $ws9 output HDMI1
-workspace $ws10 output HDMI1
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-3
+workspace $ws5 output DP-3
+workspace $ws6 output DP-3
+workspace $ws7 output DP-3
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
 
 
 # move focused container to workspace
