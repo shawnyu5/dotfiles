@@ -6866,3 +6866,18 @@ time 1687817902
 old [description:"midterm" due:"1687921200" entry:"1689034649" modified:"1687817860" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
 new [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687817902" project:"big_data" status:"pending" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
 ---
+time 1687917123
+old [description:"midterm" due:"1689044400" entry:"1687047349" modified:"1687047349" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4a4dd0ba-6c2a-4331-a013-6b63ae9737d2"]
+new [description:"midterm" due:"1687921200" entry:"1687047349" modified:"1687917123" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4a4dd0ba-6c2a-4331-a013-6b63ae9737d2"]
+---
+time 1687917127
+old [description:"midterm" due:"1687921200" entry:"1687047349" modified:"1687917123" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4a4dd0ba-6c2a-4331-a013-6b63ae9737d2"]
+new [description:"midterm" due:"1687921200" end:"1687917127" entry:"1687047349" modified:"1687917127" project:"data_warehousing" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"4a4dd0ba-6c2a-4331-a013-6b63ae9737d2"]
+---
+time 1687921580
+new [description:"assignment 4" due:"1689130800" entry:"1687921580" modified:"1687921580" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ce154a05-d999-43fa-a9f2-4e83a101d764"]
+---
+time 1687987274
+old [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687817902" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
+new [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687987274" project:"data_warehousing" status:"pending" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
+---
