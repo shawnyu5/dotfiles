@@ -7,6 +7,7 @@
      branch:
         - main
         - windows
+        - new_pc
   tasks:
      - name: get current branch name
        register: branch_name_command

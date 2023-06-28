@@ -24,17 +24,12 @@
     name: nodejs
     state: latest
 
-- name: install pip
-  ignore_errors: true
-  become: true
-  package:
-    name: python3-pip
-    state: latest
-
 - name: install pynvim
   become: true
   ignore_errors: true
-  shell: pip3 install pynvim
+  package:
+    name: python-pynvim
+    state: latest
 
 - name: install ripgrep
   ignore_errors: true
@@ -54,7 +49,7 @@
   file:
     path: "{{ ansible_env.HOME }}/.config/"
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: link neovim config
   ignore_errors: true
@@ -62,3 +57,4 @@
     src: "{{ personal_dir }}/.config/nvim"
     dest: "{{ ansible_env.HOME }}/.config/nvim"
     state: link
+    force: true

@@ -3,18 +3,9 @@
   become: true
   ignore_errors: true
   package:
-    name: zsh
-    state: latest
-
-- name: set default shell
-  shell: |
-    chsh -s $(which zsh)
-
-- name: install ranger
-  become: true
-  ignore_errors: true
-  package:
-    name: ranger
+    name:
+      - zsh
+      - starship
     state: latest
 
 - name: link zshrc
@@ -34,3 +25,10 @@
     dest: "{{ ansible_env.HOME }}/.zsh_aliases-custom"
     src: "{{ personal_dir }}/.zsh_aliases-custom"
     state: link
+
+- name: link starship config
+  file:
+    dest: "{{ ansible_env.HOME }}/.config/starship.toml"
+    src: "{{ personal_dir }}/.config/starship.toml"
+    state: link
+    force: true

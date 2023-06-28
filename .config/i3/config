@@ -42,6 +42,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id flameshot
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -141,13 +142,13 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:🌐"
-set $ws2 "2:"
-set $ws3 "3:"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6:🌐"
-set $ws7 "7:"
+set $ws6 "6"
+set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -164,16 +165,16 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-workspace $ws1 output VGA1
-workspace $ws2 output VGA1
-workspace $ws3 output VGA1
-workspace $ws4 output VGA1
-workspace $ws5 output VGA1
-workspace $ws6 output HDMI1
-workspace $ws7 output HDMI1
-workspace $ws8 output HDMI1
-workspace $ws9 output HDMI1
-workspace $ws10 output HDMI1
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-3
+workspace $ws5 output DP-3
+workspace $ws6 output DP-3
+workspace $ws7 output DP-3
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
 
 
 # move focused container to workspace
@@ -228,7 +229,7 @@ bar {
    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
 
    # status_command i3status
-   font pango:mono 12
+   font pango:mono 11
 }
 
 # setting wall paper

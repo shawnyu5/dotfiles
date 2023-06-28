@@ -8,7 +8,6 @@ local ensure_installed = {
 	"bash-language-server",
 	"clangd",
 	"clang-format",
-	"csharp-language-server",
 	"docker-compose-language-service",
 	"dockerfile-language-server",
 	"gitlint",
