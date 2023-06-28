@@ -5,10 +5,8 @@
     name: git
     state: latest
 
-- name: configure git to use credentials helper store
-  shell: git config --global credential.helper store
-
-- name: copy git-credentials
-  copy:
+- name: link git-credentials
+  file:
     src: "{{ personal_dir }}/.git-credentials"
-    dest: "{{ansible_env.HOME }}/.git-credentials"
+    dest: "{{ ansible_env.HOME }}/.config/nvim"
+    state: link
