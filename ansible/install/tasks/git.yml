@@ -5,6 +5,7 @@
     name:
       - git
       - git-delta
+      - github-cli
     state: latest
 
 - name: copy git-credentials

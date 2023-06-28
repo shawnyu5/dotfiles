@@ -1,4 +1,8 @@
 ---
+- name: install additional packages
+  include_tasks:
+    file: packages.yml
+
 - name: set up neovim
   include_tasks:
     file: neovim.yml
@@ -22,7 +26,3 @@
 - name: set up task worrior
   include_tasks:
     file: task_worrior.yml
-
-- name: install additional packages
-  include_tasks:
-    file: packages.yml

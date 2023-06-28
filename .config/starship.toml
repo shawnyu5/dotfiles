@@ -29,3 +29,6 @@ symbol_threshold = 1
 
 [cmd_duration]
 disabled = true
+
+[nodejs]
+detect_files = [""]
