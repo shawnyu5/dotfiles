@@ -7,6 +7,10 @@
   include_tasks:
     file: neovim.yml
 
+- name: setup ranger
+  include_tasks:
+    file: ranger.yml
+
 - name: set up ZSH
   include_tasks:
     file: zsh.yml
