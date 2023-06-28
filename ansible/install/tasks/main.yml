@@ -2,15 +2,27 @@
 - name: set up neovim
   include_tasks:
     file: neovim.yml
+
 - name: set up ZSH
   include_tasks:
     file: zsh.yml
+
 - name: set up tmux
   include_tasks:
     file: tmux.yml
-- name: install i3 dependencies
+
+- name: install i3
   include_tasks:
     file: i3.yml
+
 - name: set up git
   include_tasks:
     file: git.yml
+
+- name: set up task worrior
+  include_tasks:
+    file: task_worrior.yml
+
+- name: install additional packages
+  include_tasks:
+    file: packages.yml

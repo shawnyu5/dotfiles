@@ -2,11 +2,17 @@
 - name: install git
   become: true
   package:
-    name: git
+    name:
+      - git
+      - git-delta
     state: latest
 
-- name: link git-credentials
-  file:
+- name: copy git-credentials
+  copy:
     src: "{{ personal_dir }}/.git-credentials"
-    dest: "{{ ansible_env.HOME }}/.config/nvim"
-    state: link
+    dest: "{{ ansible_env.HOME }}/.git-credentials"
+
+- name: copy gitconfig
+  copy:
+    src: "{{ personal_dir }}/.gitconfig"
+    dest: "{{ ansible_env.HOME }}/.gitconfig"
