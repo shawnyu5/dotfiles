@@ -45,13 +45,6 @@
     name: go
     state: latest
 
-- name: install ranger
-  become: true
-  ignore_errors: true
-  package:
-    name: ranger
-    state: latest
-
 - name: install java
   become: true
   ignore_errors: true

@@ -1,0 +1,17 @@
+---
+- name: install ranger
+  become: true
+  ignore_errors: true
+  package:
+    name:
+      - ranger
+      - ueberzug
+    state: latest
+
+- name: link ranger config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/ranger"
+    dest: "{{ ansible_env.HOME }}/.config/ranger"
+    state: link
+    force: true
