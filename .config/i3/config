@@ -233,7 +233,7 @@ bar {
 }
 
 # setting wall paper
-exec --no-startup-id feh --randomize --bg-fill /home/shawn/Pictures/wallpaper
+exec --no-startup-id feh --randomize --bg-fill ~/personal/wallpapers
 
 # changing default window behavior
 default_border pixel 7
