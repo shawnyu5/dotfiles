@@ -7,7 +7,7 @@ end
 local config = {
 	-- your configuration comes here
 	-- or leave it empty to use the default settings
-	style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+	style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
 	transparent = true, -- Enable this to disable setting the background color
 	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
 	styles = {
@@ -42,9 +42,8 @@ local config = {
 }
 local utils = require("shawn.utils")
 
-local system_config = utils.get_system_config()
-if system_config.windows == true then
-	config.transparent = false
+if utils.is_windows() then
+   config.transparent = false
 end
 tokyonight.setup(config)
 
