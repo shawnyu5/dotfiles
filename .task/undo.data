@@ -6900,3 +6900,7 @@ time 1688236247
 old [description:"watch lecture" due:"1687748400" entry:"1687210980" imask:"5" modified:"1686604960" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e53a546a-4e78-4220-a40b-c078ce8b69d8"]
 new [description:"watch lecture" due:"1687748400" end:"1688236247" entry:"1687210980" imask:"5" modified:"1688236247" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"e53a546a-4e78-4220-a40b-c078ce8b69d8"]
 ---
+time 1688237625
+old [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687987274" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
+new [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1688237625" project:"data_warehousing" start:"1688237625" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
+---
