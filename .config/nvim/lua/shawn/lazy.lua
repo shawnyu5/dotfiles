@@ -73,7 +73,7 @@ local pluginSpec = {
    {
       "Bekaboo/dropbar.nvim",
       dependencies = { "neovim/nvim-lspconfig" },
-      config = function()
+      config = function ()
          local opts = {
             icons = {
                enable = false,
@@ -231,8 +231,8 @@ local pluginSpec = {
    -- end,
    -- },
    -- {
-   -- "SmiteshP/nvim-navic",
-   -- dependencies = { "neovim/nvim-lspconfig" },
+      -- "SmiteshP/nvim-navic",
+      -- dependencies = { "neovim/nvim-lspconfig" },
    -- },
    -- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
    { "zbirenbaum/copilot.lua" },
@@ -287,11 +287,11 @@ local pluginSpec = {
    {
       "tweekmonster/wstrip.vim",
       event = "InsertEnter",
-   },                              -- rmove trailing white spaces,
+   },                            -- rmove trailing white spaces,
    { "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
    { "karb94/neoscroll.nvim" },
-   { "shawnyu5/mdnav" },           -- opening links in markdown,
-   { "preservim/nerdcommenter" },  -- block commenting,
+   { "shawnyu5/mdnav" },         -- opening links in markdown,
+   { "preservim/nerdcommenter" }, -- block commenting,
    { "nvim-telescope/telescope.nvim" },
    {
       "Shatur/neovim-session-manager",
@@ -305,9 +305,9 @@ local pluginSpec = {
    -- "nvim-telescope/telescope-file-browser.nvim",
    -- dependencies = { "nvim-telescope/telescope.nvim" },
    -- },
-   { "szw/vim-maximizer" },    -- vim maxmizer,
+   { "szw/vim-maximizer" },  -- vim maxmizer,
    { "adelarsq/vim-matchit" }, -- matchit,
-   { "tpope/vim-surround" },   -- vim surround,
+   { "tpope/vim-surround" }, -- vim surround,
    { "sedm0784/vim-you-autocorrect" },
    {
       "mboughaba/i3config.vim",
@@ -331,7 +331,7 @@ local pluginSpec = {
 lazy.setup(pluginSpec, {
    root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
    defaults = {
-      lazy = false,                          -- should plugins be lazy-loaded?
+      lazy = false,                        -- should plugins be lazy-loaded?
       version = nil,
       -- version = "*", -- enable this to try installing the latest stable versions of plugins
    },
@@ -341,7 +341,7 @@ lazy.setup(pluginSpec, {
       -- defaults for the `Lazy log` command
       -- log = { "-10" }, -- show the last 10 commits
       log = { "--since=3 days ago" }, -- show commits from the last 3 days
-      timeout = 120,                  -- kill processes that take more than 2 minutes
+      timeout = 120,              -- kill processes that take more than 2 minutes
       url_format = "https://github.com/%s.git",
    },
    dev = {
@@ -412,7 +412,7 @@ lazy.setup(pluginSpec, {
       -- automatically check for plugin updates
       enabled = false,
       concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-      notify = true,    -- get a notification when new updates are found
+      notify = true, -- get a notification when new updates are found
       frequency = 3600, -- check for updates every hour
    },
    change_detection = {
@@ -433,9 +433,9 @@ lazy.setup(pluginSpec, {
       },
       reset_packpath = true, -- reset the package path to improve startup time
       rtp = {
-         reset = true,       -- reset the runtime path to $VIMRUNTIME and your config directory
+         reset = true,   -- reset the runtime path to $VIMRUNTIME and your config directory
          ---@type string[]
-         paths = {},         -- add any custom paths here that you want to indluce in the rtp
+         paths = {},     -- add any custom paths here that you want to indluce in the rtp
          ---@type string[] list any plugins you want to disable here
          disabled_plugins = {
             -- "gzip",
