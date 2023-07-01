@@ -1,0 +1,5 @@
+snippet concurrency "add a concurrency group to cancel in progess workflow for the current workflow only"
+concurrency:
+	group: ${{ github.workflow }}-${{ github.ref }}
+	cancel-in-progress: true
+endsnippet
