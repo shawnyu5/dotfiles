@@ -6884,3 +6884,19 @@ new [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687987
 time 1687991935
 new [description:"assignment 3" due:"1689649200" entry:"1687991935" modified:"1687991935" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"82af0b09-8ddc-473f-a9fc-8b385fdcf001"]
 ---
+time 1688236247
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++--" modified:"1687816777" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++-" modified:"1688236247" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1688236247
+old [description:"lecture" due:"1687748400" entry:"1687210980" imask:"5" modified:"1686604960" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"76f81b90-6db1-4d23-9f9b-f72621c5b19a"]
+new [description:"lecture" due:"1687748400" end:"1688236247" entry:"1687210980" imask:"5" modified:"1688236247" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"76f81b90-6db1-4d23-9f9b-f72621c5b19a"]
+---
+time 1688236247
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++--" modified:"1687816777" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++-" modified:"1688236247" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
+time 1688236247
+old [description:"watch lecture" due:"1687748400" entry:"1687210980" imask:"5" modified:"1686604960" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"e53a546a-4e78-4220-a40b-c078ce8b69d8"]
+new [description:"watch lecture" due:"1687748400" end:"1688236247" entry:"1687210980" imask:"5" modified:"1688236247" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"e53a546a-4e78-4220-a40b-c078ce8b69d8"]
+---
