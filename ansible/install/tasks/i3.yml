@@ -1,0 +1,48 @@
+---
+- name: install flameshot (screen shot tool)
+  ignore_errors: true
+  become: true
+  package:
+    name: flameshot
+    state: latest
+
+- name: install kitty
+  ignore_errors: true
+  become: true
+  package:
+    name:
+      - kitty
+      - picom
+    state: latest
+
+- name: link kitty config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/kitty"
+    dest: "{{ ansible_env.HOME }}/.config/kitty"
+    state: link
+    force: true
+
+- name: link i3 config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/i3"
+    dest: "{{ ansible_env.HOME }}/.config/i3"
+    state: link
+    force: true
+
+- name: link i3blocks config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/i3blocks"
+    dest: "{{ ansible_env.HOME }}/.config/i3blocks"
+    state: link
+    force: true
+
+- name: link picom config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/picom"
+    dest: "{{ ansible_env.HOME }}/.config/picom"
+    state: link
+    force: true

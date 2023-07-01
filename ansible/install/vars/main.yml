@@ -1,3 +1,3 @@
 ---
 # vars file for install
-personal_dir: "{{ ansible_env.HOME }}/personal"
+personal_dir: "/home/$USER/personal"

@@ -1,10 +1,32 @@
 ---
+- name: install additional packages
+  include_tasks:
+    file: packages.yml
+
 - name: set up neovim
   include_tasks:
     file: neovim.yml
+
+- name: setup ranger
+  include_tasks:
+    file: ranger.yml
+
 - name: set up ZSH
   include_tasks:
     file: zsh.yml
+
 - name: set up tmux
   include_tasks:
     file: tmux.yml
+
+- name: install i3
+  include_tasks:
+    file: i3.yml
+
+- name: set up git
+  include_tasks:
+    file: git.yml
+
+- name: set up task worrior
+  include_tasks:
+    file: task_worrior.yml

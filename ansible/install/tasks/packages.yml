@@ -1,0 +1,80 @@
+---
+- name: install emojies
+  ignore_errors: true
+  become: true
+  package:
+    name: noto-fonts-emoji
+    state: latest
+
+- name: install discord
+  ignore_errors: true
+  become: true
+  package:
+    name: discord
+    state: latest
+
+- name: install rustup
+  ignore_errors: true
+  become: true
+  package:
+    name: rustup
+    state: latest
+
+- name: set default rust
+  ignore_errors: true
+  shell: rustup default stable
+
+- name: install font
+  ignore_errors: true
+  become: true
+  package:
+    name:
+      - ttf-fira-code
+      - ttf-firacode-nerd
+    state: latest
+
+- name: install node and NPM
+  ignore_errors: true
+  become: true
+  package:
+    name:
+      - nodejs
+      - npm
+    state: latest
+
+- name: install go
+  ignore_errors: true
+  become: true
+  package:
+    name: go
+    state: latest
+
+- name: install java
+  become: true
+  ignore_errors: true
+  package:
+    name:
+      - jdk17-openjdk
+      - jre17-openjdk
+    state: latest
+
+- name: install htop
+  become: true
+  ignore_errors: true
+  package:
+    name: htop
+    state: latest
+
+- name: install fzf
+  become: true
+  ignore_errors: true
+  package:
+    name: fzf
+    state: latest
+
+- name: install okular PDF viewer
+  become: true
+  ignore_errors: true
+  package:
+    name: okular
+    state: latest

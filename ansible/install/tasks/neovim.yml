@@ -7,22 +7,36 @@
     state: latest
 
 - name: install gcc
+  become: true
   package:
     name: gcc
     state: latest
 
+- name: install unzip
+  become: true
+  package:
+    name: unzip
+    state: latest
+
 - name: install node
+  become: true
   package:
     name: nodejs
     state: latest
 
-- name: install pip
+- name: install pynvim
+  become: true
+  ignore_errors: true
   package:
-    name: python-pip
+    name: python-pynvim
     state: latest
 
-- name: install pynvim
-  shell: pip3 install pynvim
+- name: install ripgrep
+  ignore_errors: true
+  become: true
+  package:
+    name: ripgrep
+    state: latest
 
 - name: install xclip
   become: true
@@ -35,10 +49,12 @@
   file:
     path: "{{ ansible_env.HOME }}/.config/"
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: link neovim config
+  ignore_errors: true
   file:
     src: "{{ personal_dir }}/.config/nvim"
     dest: "{{ ansible_env.HOME }}/.config/nvim"
     state: link
+    force: true

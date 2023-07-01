@@ -1,0 +1,19 @@
+---
+- name: install git
+  become: true
+  package:
+    name:
+      - git
+      - git-delta
+      - github-cli
+    state: latest
+
+- name: copy git-credentials
+  copy:
+    src: "{{ personal_dir }}/.git-credentials"
+    dest: "{{ ansible_env.HOME }}/.git-credentials"
+
+- name: copy gitconfig
+  copy:
+    src: "{{ personal_dir }}/.gitconfig"
+    dest: "{{ ansible_env.HOME }}/.gitconfig"

@@ -1,21 +1,12 @@
 ---
-- name: install ZSH
+- name: install zsh
+  become: true
   ignore_errors: true
   package:
-    name: zsh
+    name:
+      - zsh
+      - starship
     state: latest
-
-- name: install which
-  become: true
-  package:
-    name: which
-    state: latest
-
-- name: set default shell
-  become: true
-  shell: |
-    chsh -s $(which zsh)
-
 
 - name: link zshrc
   file:
@@ -34,3 +25,10 @@
     dest: "{{ ansible_env.HOME }}/.zsh_aliases-custom"
     src: "{{ personal_dir }}/.zsh_aliases-custom"
     state: link
+
+- name: link starship config
+  file:
+    dest: "{{ ansible_env.HOME }}/.config/starship.toml"
+    src: "{{ personal_dir }}/.config/starship.toml"
+    state: link
+    force: true
