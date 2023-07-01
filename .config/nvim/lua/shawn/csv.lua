@@ -12,19 +12,19 @@ local function csv_col_name()
 	return "|  " .. vim.fn.CSVCol() .. " - " .. vim.fn.CSVCol("Name")
 end
 
--- local csv_augroup = vim.api.nvim_create_augroup("csv_augroup", {})
--- vim.api.nvim_create_autocmd("InsertLeave", {
-	-- group = csv_augroup,
-	-- pattern = "*.csv",
-	-- callback = function()
-      -- -- make sure the current line is not empty, otherwise `ArrangeColumn` will throw an error
-		-- local current_line = vim.fn.getline(".")
-      -- if current_line ~= "" then
-         -- vim.cmd("ArrangeColumn")
-      -- end
-	-- end,
-	-- desc = "ArrangeColumn on InsertLeave",
--- })
+local csv_augroup = vim.api.nvim_create_augroup("csv_augroup", {})
+vim.api.nvim_create_autocmd("InsertLeave", {
+	group = csv_augroup,
+	pattern = "*.csv",
+	callback = function()
+      -- make sure the current line is not empty, otherwise `ArrangeColumn` will throw an error
+		local current_line = vim.fn.getline(".")
+      if current_line ~= "" then
+         vim.cmd("ArrangeColumn")
+      end
+	end,
+	desc = "ArrangeColumn on InsertLeave",
+})
 
 vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
 	group = csv_augroup,

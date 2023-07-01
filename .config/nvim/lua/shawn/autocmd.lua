@@ -60,7 +60,6 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
    group = termina_auto_group,
    callback = function()
       vim.cmd("setlocal nospell")
-      vim.opt_local.number = false
    end,
 })
 
