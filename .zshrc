@@ -41,14 +41,15 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats '🌲%b'
-precmd() { vcs_info }
+# precmd() { vcs_info }
 # Enable substitution in the prompt.
 setopt prompt_subst
 
 
 # NOTE: prompt must be wrapped in single quotes for the git stuff to work
-PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}] %{$fg[green]%}🔨%j%E %{$fg[cyan]%}${vcs_info_msg_0_}
-%{$fg[cyan]%}$%{$reset_color%}%b '
+# PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}] %{$fg[green]%}🔨%j%E %{$fg[cyan]%}${vcs_info_msg_0_}
+# %{$fg[cyan]%}$%{$reset_color%}%b '
+eval "$(starship init zsh)"
 
 #zsh prompt script
 #source /home/shawn/personal/zsh_config/prompt_adam1_setup.zsh
@@ -127,12 +128,14 @@ fi
 # export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:$HOME/.local/bin/:$HOME/gopath/bin/"
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH=$PATH:"/usr/local/go/bin" # go
+
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
 export JAVA_HOME="/usr/lib/jvm/default-runtime"
-export PATH=$PATH:"/usr/local/go/bin" # go
 # export PATH=":$PATH:$JAVA_HOME/bin" # java
 export JDTLS_HOME="/usr/bin/jdt/"
+export ansible_python_interpreter=/usr/bin/python3
 
 # increase ulimit
 # ulimit -n 6000
@@ -152,7 +155,7 @@ export LS_COLORS
 
 
 #auto suggestions
-source /home/shawn/personal/linux/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/personal/linux/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {

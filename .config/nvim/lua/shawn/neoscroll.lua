@@ -5,7 +5,7 @@ if not ok then
 end
 
 local utils = require("shawn.utils")
-if not utils.is_windows() then
+if not utils.get_system_config().windows then
 	neoscroll.setup({
 		-- All these keys will be mapped to their corresponding default scrolling animation
 		mappings = { "<C-u>", "<C-d>" },
