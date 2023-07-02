@@ -37,10 +37,10 @@ precmd_functions=""
 #luke smith ranbow colours
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '🌲%b'
+# autoload -Uz vcs_info
+# zstyle ':vcs_info:*' enable git svn
+# # Format the vcs_info_msg_0_ variable
+# zstyle ':vcs_info:git:*' formats '🌲%b'
 # precmd() { vcs_info }
 # Enable substitution in the prompt.
 setopt prompt_subst
