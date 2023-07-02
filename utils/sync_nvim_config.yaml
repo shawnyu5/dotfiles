@@ -1,0 +1,44 @@
+---
+- name: |
+    sync config]
+    Description: Sync config files from current branch to all other branch]
+  hosts: localhost
+  become: false
+  vars:
+    # all branches that needs to be kept in sync, including the current branch
+    branches:
+      - main
+      - windows
+      - work_laptop
+
+  tasks:
+    - name: get current branch name
+      register: branch_name_command
+      shell: git rev-parse --abbrev-ref HEAD
+
+    - set_fact:
+        # branch to sync to
+        target_branches:
+          "{{ branches | difference(branch_name_command.stdout) }}"
+          # current branch
+        og_branch: "{{ branches | intersect(branch_name_command.stdout) }}"
+
+    - name: sync config
+      register: sync_config
+      shell: |
+        cd ~/personal/
+        echo "syncing {{ item }} branch"
+        git worktree add {{ item }}
+        cd {{ item }}
+        git pull
+        git checkout {{ og_branch[0] }} .config/nvim .zshrc .zsh_aliases ansible utils .config/starship.toml
+        git commit -m "merged config from {{ og_branch[0] }}"
+        git push
+        cd ..
+        git worktree remove {{ item }}
+      loop: "{{ target_branches }}"
+
+    - name: stdout
+      debug:
+        msg: "{{ item.stdout_lines}}"
+      loop: "{{ sync_config.results }}"
