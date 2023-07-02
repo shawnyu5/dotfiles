@@ -5,7 +5,8 @@
 
 #logout
 alias logout="sudo pkill -u shawn"
-alias dl="cd ~/Downloads"
+
+alias dl="cd /mnt/c/Users/shawny/Downloads"
 
 # blackboard selenium
 # alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
@@ -14,36 +15,44 @@ alias dl="cd ~/Downloads"
 # alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
 
 # opening notes
-alias dbwnotes="nvim -c ':cd %:p:h' ~/seneca/semester_8/DBW624_intro_to_datawarehousing/DBW624_intro_to_datawarehousing_notes.md"
-alias bdanotes="nvim -c ':cd %:p:h' ~/seneca/semester_8/BDA400_intro_to_big_data/BDA400_intro_to_big_data_notes.md"
+
+# nvim -c ':cd %:p:h' ~/seneca/semester_7/BCI433/BCI433_notes.md
+alias bcinotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/BCI433_notes.md"
+alias jacnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/JAC555_notes.md"
+alias prjnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/PRJ666_notes.md"
+alias csnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/PRO670_notes.md"
+alias devopsnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/PRO690_notes.md"
 
 # move commands
-alias mvdbw=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/DBW624_intro_to_datawarehousing/"
-alias mvbda=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/BDA400_intro_to_big_data/"
-alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_8/JAC555_advanced_java/"
-# alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRJ666/"
-# alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
-# alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
+alias mvbci=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/"
+alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/"
+alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/"
+alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
 
 # cd commands
-alias cddbw=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/DBW624_intro_to_datawarehousing/"
-alias cdbda=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/BDA400_intro_to_big_data/"
-alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_8/JAC555_advanced_java/"
-# alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRJ666/"
-# alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO670_intro_to_c_sharp/"
-# alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh ~/seneca/semester_7/PRO690_intro_to_devops/"
+alias cdbci=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/" 
+alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/" 
+alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/" 
+alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
+alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
 
 alias neofetch="neofetch --ascii_distro archlinux"
+
+export TMUX_POWERLINE_PATCHED_FONT_IN_USE=false
+
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
 
-alias homemonitor="~/.screenlayout/home_monitor.sh"
-alias homemonitorone="~/.screenlayout/home_monitor_one.sh"
-alias homemonitorOff="~/.screenlayout/no_monitor.sh"
+# function awsec {
+   # IPADDRESS="$1"
+   # echo $IPADDRESS
+   # ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
+# }
+alias ocean="ssh root@143.110.215.158"
+alias cdone="cd /mnt/c/Users/shawny/OneDrive\ -\ Fundserv\ Inc"
+alias google-chrome-stable="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
+alias github_runner="ssh -i ~/.ssh/github_runner azureuser@10.142.1.11"
+alias k="kubectl"
 
-function awsec {
-   IPADDRESS="$1"
-   echo $IPADDRESS
-   ssh -i "~/.ssh/cpp555.pem" ec2-user@$IPADDRESS
-}
-alias wallpaper="~/personal/utils/change_wallpaper.sh"
-alias files="nautilus"
+export GH_BROWSER='"/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"'
+export BROWSER='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'

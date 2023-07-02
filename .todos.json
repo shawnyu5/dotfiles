@@ -1,1 +1,154 @@
-[{"id":3,"uuid":"7550eb74-a546-4a8c-8bcd-09c7ceec81a4","subject":"set up BCI client +BCI","projects":["BCI"],"contexts":[],"due":"2023-01-22","completed":true,"completed_date":"2023-01-23T20:50:55-05:00","status":"completed","archived":true,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":2,"uuid":"57a53bd6-a4b2-4839-a660-147ab0affb9c","subject":"project charter +PRJ","projects":["PRJ"],"contexts":[],"due":"2023-01-25","completed":false,"completed_date":"","status":"","archived":false,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":1,"uuid":"55618c52-7ccd-4c88-9071-030aa6390b07","subject":"566 submission +PRJ","projects":["PRJ"],"contexts":[],"due":"2023-01-25","completed":true,"completed_date":"2023-01-20T22:55:09-05:00","status":"completed","archived":true,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":4,"uuid":"2c46ba70-f6f4-4702-8c56-24807707998a","subject":"excrise 2c +C#","projects":["C"],"contexts":[],"due":"2023-01-27","completed":true,"completed_date":"2023-01-21T11:02:34-05:00","status":"completed","archived":true,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":7,"uuid":"26e57d03-c704-456a-b508-8e8e88174dbe","subject":"excrise 2b +C#","projects":["C"],"contexts":[],"due":"2023-01-27","completed":false,"completed_date":"","status":"","archived":false,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":8,"uuid":"4822ace8-6796-4983-b0ff-9a00b2dd1900","subject":"excrise 2d +C#","projects":["C"],"contexts":[],"due":"2023-01-27","completed":false,"completed_date":"","status":"","archived":false,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":5,"uuid":"775592e1-e935-4484-8c96-09feaf7e162d","subject":"create personal azure account +devops","projects":["devops"],"contexts":[],"due":"2023-01-29","completed":true,"completed_date":"2023-01-24T20:20:55-05:00","status":"completed","archived":true,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":6,"uuid":"d3916062-0acb-4297-82ce-79c1d3a7866b","subject":"create windowd VM +devops","projects":["devops"],"contexts":[],"due":"2023-01-30","completed":false,"completed_date":"","status":"","archived":false,"is_priority":false,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""},{"id":9,"uuid":"ac0e0ed7-0b7b-4308-b2f2-24b5d53939ca","subject":"go back to task worrior +C#","projects":["none"],"contexts":[],"due":"2024-01-25","completed":false,"completed_date":"","status":"","archived":false,"is_priority":true,"notes":null,"recur":"","recur_until":"","prev_recur_todo_uuid":""}]
+[
+   {
+      "id": 3,
+      "uuid": "7550eb74-a546-4a8c-8bcd-09c7ceec81a4",
+      "subject": "set up BCI client +BCI",
+      "projects": [
+         "BCI"
+      ],
+      "contexts": [],
+      "due": "2023-01-22",
+      "completed": true,
+      "completed_date": "2023-01-23T20:50:55-05:00",
+      "status": "completed",
+      "archived": true,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 2,
+      "uuid": "57a53bd6-a4b2-4839-a660-147ab0affb9c",
+      "subject": "project charter +PRJ",
+      "projects": [
+         "PRJ"
+      ],
+      "contexts": [],
+      "due": "2023-01-25",
+      "completed": false,
+      "completed_date": "",
+      "status": "",
+      "archived": false,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 1,
+      "uuid": "55618c52-7ccd-4c88-9071-030aa6390b07",
+      "subject": "566 submission +PRJ",
+      "projects": [
+         "PRJ"
+      ],
+      "contexts": [],
+      "due": "2023-01-25",
+      "completed": true,
+      "completed_date": "2023-01-20T22:55:09-05:00",
+      "status": "completed",
+      "archived": true,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 4,
+      "uuid": "2c46ba70-f6f4-4702-8c56-24807707998a",
+      "subject": "excrise 2c +C#",
+      "projects": [
+         "C"
+      ],
+      "contexts": [],
+      "due": "2023-01-27",
+      "completed": true,
+      "completed_date": "2023-01-21T11:02:34-05:00",
+      "status": "completed",
+      "archived": true,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 7,
+      "uuid": "26e57d03-c704-456a-b508-8e8e88174dbe",
+      "subject": "excrise 2b +C#",
+      "projects": [
+         "C"
+      ],
+      "contexts": [],
+      "due": "2023-01-27",
+      "completed": false,
+      "completed_date": "",
+      "status": "",
+      "archived": false,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 8,
+      "uuid": "4822ace8-6796-4983-b0ff-9a00b2dd1900",
+      "subject": "excrise 2d +C#",
+      "projects": [
+         "C"
+      ],
+      "contexts": [],
+      "due": "2023-01-27",
+      "completed": false,
+      "completed_date": "",
+      "status": "",
+      "archived": false,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 5,
+      "uuid": "775592e1-e935-4484-8c96-09feaf7e162d",
+      "subject": "create personal azure account +devops",
+      "projects": [
+         "devops"
+      ],
+      "contexts": [],
+      "due": "2023-01-29",
+      "completed": true,
+      "completed_date": "2023-01-24T20:20:55-05:00",
+      "status": "completed",
+      "archived": true,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   },
+   {
+      "id": 6,
+      "uuid": "d3916062-0acb-4297-82ce-79c1d3a7866b",
+      "subject": "create windowd VM +devops",
+      "projects": [
+         "devops"
+      ],
+      "contexts": [],
+      "due": "2023-01-30",
+      "completed": false,
+      "completed_date": "",
+      "status": "",
+      "archived": false,
+      "is_priority": false,
+      "notes": null,
+      "recur": "",
+      "recur_until": "",
+      "prev_recur_todo_uuid": ""
+   }
+]

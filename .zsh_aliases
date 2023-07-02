@@ -139,7 +139,6 @@ function cheat
 #make a directory and go into that directory
 function mkdirin { mkdir $1 && cd $1; }
 alias bd=". bd -si"
-alias cat="bat"
 
 alias devOpServer="ssh shawn@146.190.216.74"
 alias ocean="ssh root@161.35.8.80"

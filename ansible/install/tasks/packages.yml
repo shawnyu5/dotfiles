@@ -13,16 +13,12 @@
     name: discord
     state: latest
 
-- name: install rustup
+- name: install rust
   ignore_errors: true
   become: true
   package:
-    name: rustup
+    name: rust
     state: latest
-
-- name: set default rust
-  ignore_errors: true
-  shell: rustup default stable
 
 - name: install font
   ignore_errors: true
@@ -70,11 +66,4 @@
   ignore_errors: true
   package:
     name: fzf
-    state: latest
-
-- name: install okular PDF viewer
-  become: true
-  ignore_errors: true
-  package:
-    name: okular
     state: latest

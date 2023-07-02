@@ -1,4 +1,4 @@
 {
-   "windows": false,
-   "mkdp_browser_path": "google-chrome-stable"
+   "windows": true,
+   "mkdp_browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 }
