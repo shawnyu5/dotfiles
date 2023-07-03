@@ -6904,3 +6904,17 @@ time 1688237625
 old [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1687987274" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
 new [description:"midterm" due:"1689044400" entry:"1687306649" modified:"1688237625" project:"data_warehousing" start:"1688237625" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f9f6fd24-3122-4a93-bcf9-a6d73c086b04"]
 ---
+time 1688416956
+new [description:"lecture" due:"1688958000" entry:"1688416956" imask:"7" modified:"1688236247" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"40c52dd3-1743-4768-b9fd-006bb780ba8d"]
+---
+time 1688416956
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++-" modified:"1688236247" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++--" modified:"1688416956" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1688416956
+new [description:"watch lecture" due:"1688958000" entry:"1688416956" imask:"7" modified:"1688236247" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"4a582fe8-2a5e-411b-9daf-4e3269ef1724"]
+---
+time 1688416956
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++-" modified:"1688236247" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++--" modified:"1688416956" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
