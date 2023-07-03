@@ -1,0 +1,11 @@
+<base>
+[up]>[down]
+[down]>[up]
+[lctr]>[lalt]
+[lalt]>[end]
+[del]>[lctr]
+[end]>[lctr]
+<keypad>
+<function1>
+<function2>
+<function3>

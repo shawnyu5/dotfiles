@@ -1,0 +1,14 @@
+<base>
+[esc]>[caps]
+[caps]>[esc]
+[up]>[down]
+[down]>[up]
+[lctr]>[lalt]
+[lalt]>[lctr]
+[del]>[lctr]
+[home]>[lalt]
+[end]>[tab]
+<keypad>
+<function1>
+<function2>
+<function3>
