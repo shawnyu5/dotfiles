@@ -155,7 +155,7 @@ export LS_COLORS
 
 
 #auto suggestions
-source $HOME/personal/linux/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/personal/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
