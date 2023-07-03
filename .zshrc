@@ -157,6 +157,12 @@ export LS_COLORS
 #auto suggestions
 source $HOME/personal/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+tmux-window-name() {
+	($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
+}
+
+add-zsh-hook chpwd tmux-window-name
+
 # Change cursor shape for different vi modes.
 #function zle-keymap-select {
   #if [[ ${KEYMAP} == vicmd ]] ||
