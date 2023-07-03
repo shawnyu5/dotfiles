@@ -2,7 +2,10 @@
 - name: install tmux
   become: true
   package:
-    name: tmux
+    name:
+      - tmux
+      # tmux window-rename dependency
+      - python-libtmux
     state: latest
 
 - name: install tmux plugin manager
