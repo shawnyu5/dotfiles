@@ -157,42 +157,8 @@ export LS_COLORS
 #auto suggestions
 source $HOME/personal/zsh_tools/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-tmux-window-name() {
-	($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
-}
+# tmux-window-name() {
+	# ($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
+# }
 
-add-zsh-hook chpwd tmux-window-name
-
-# Change cursor shape for different vi modes.
-#function zle-keymap-select {
-  #if [[ ${KEYMAP} == vicmd ]] ||
-     #[[ $1 = 'block' ]]; then
-    #echo -ne '\e[1 q'
-  #elif [[ ${KEYMAP} == main ]] ||
-       #[[ ${KEYMAP} == viins ]] ||
-       #[[ ${KEYMAP} = '' ]] ||
-       #[[ $1 = 'beam' ]]; then
-    #echo -ne '\e[5 q'
-  #fi
-#}
-#zle -N zle-keymap-select
-#zle-line-init() {
-    #zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    #echo -ne "\e[5 q"
-#}
-#zle -N zle-line-init
-#echo -ne '\e[5 q' # Use beam shape cursor on startup.
-#preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-## Find and set branch name var if in git repository.
-#function git_branch_name()
-#{
-  #branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  #if [[ $branch == "" ]];
-  #then
-    #:
-  #else
-    #echo '- ('$branch')'
-  #fi
-#}
-
-
+# add-zsh-hook chpwd tmux-window-name
