@@ -1,18 +1,20 @@
-vim.api.nvim_create_augroup("formatOptions", { clear = true })
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+local create_augroup = vim.api.nvim_create_augroup
+local create_autocmd = vim.api.nvim_create_autocmd
+create_augroup("formatOptions", { clear = true })
+create_autocmd({ "BufEnter" }, {
    pattern = "*",
    command = "setlocal formatoptions-=cro",
 })
 
-vim.api.nvim_create_augroup("makeFileIndent", { clear = true })
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+create_augroup("makeFileIndent", { clear = true })
+create_autocmd({ "BufEnter" }, {
    group = "makeFileIndent",
    pattern = "make",
    command = "setlocal tabstop=4 softtabstop=4 shiftwidth=4",
 })
 
-vim.api.nvim_create_augroup("highlight_yank", { clear = true })
-vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+create_augroup("highlight_yank", { clear = true })
+create_autocmd({ "TextYankPost" }, {
    group = "highlight_yank",
    pattern = "*",
    callback = function()
@@ -20,8 +22,8 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
    end,
 })
 
-vim.api.nvim_create_augroup("json_lsp", { clear = true })
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+create_augroup("json_lsp", { clear = true })
+create_autocmd({ "BufEnter" }, {
    group = "json_lsp",
    pattern = "tsconfig.json",
    callback = function()
@@ -48,15 +50,15 @@ function OrgImports()
    end
 end
 
-local go_imports = vim.api.nvim_create_augroup("go_imports", { clear = true })
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+local go_imports = create_augroup("go_imports", { clear = true })
+create_autocmd({ "BufWritePre" }, {
    group = go_imports,
    pattern = "*.go",
    callback = OrgImports,
 })
 
-local termina_auto_group = vim.api.nvim_create_augroup("terminal_auto_group", { clear = true })
-vim.api.nvim_create_autocmd({ "TermOpen" }, {
+local termina_auto_group = create_augroup("terminal_auto_group", { clear = true })
+create_autocmd({ "TermOpen" }, {
    group = termina_auto_group,
    callback = function()
       vim.cmd("setlocal nospell")
@@ -69,8 +71,8 @@ vim.filetype.add({
    },
 })
 
-local central_ci_augroup = vim.api.nvim_create_augroup("central_ci", {})
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+local central_ci_augroup = create_augroup("central_ci", {})
+create_autocmd({ "BufEnter" }, {
    group = central_ci_augroup,
    pattern = vim.fn.expand("~") .. "/central-ci/*",
    callback = function()
@@ -79,4 +81,12 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
          vim.cmd("wa")
       end
    end,
+})
+
+local terminal_group = create_augroup("terminal", {})
+create_autocmd({"TermOpen"}, {
+   group = terminal_group,
+   callback = function()
+      vim.opt_local.number = false
+   end
 })
