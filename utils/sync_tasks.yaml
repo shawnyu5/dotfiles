@@ -27,6 +27,8 @@
        register: sync_tasks
        shell: |
           cd ~/personal
+          git fetch --all
+          git pull --all
           git worktree add {{ target_branch[0] }} {{ target_branch[0] }}
           cd {{ target_branch[0] }}
           git pull

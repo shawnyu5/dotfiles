@@ -27,8 +27,6 @@
       register: sync_config
       shell: |
         cd ~/personal/
-        git fetch --all
-        git pull --all
         echo "syncing {{ item }} branch"
         git worktree add {{ item }}
         cd {{ item }}
