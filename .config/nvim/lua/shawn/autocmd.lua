@@ -71,22 +71,14 @@ vim.filetype.add({
    },
 })
 
-local central_ci_augroup = create_augroup("central_ci", {})
-create_autocmd({ "BufEnter" }, {
-   group = central_ci_augroup,
-   pattern = vim.fn.expand("~") .. "/central-ci/*",
-   callback = function()
-      if vim.opt_local.modifiable:get() == true then
-         vim.cmd("set ff=unix")
-         vim.cmd("wa")
-      end
-   end,
-})
-
-local terminal_group = create_augroup("terminal", {})
-create_autocmd({"TermOpen"}, {
-   group = terminal_group,
-   callback = function()
-      vim.opt_local.number = false
-   end
-})
+-- local central_ci_augroup = vim.api.nvim_create_augroup("central_ci", {})
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+   -- group = central_ci_augroup,
+   -- pattern = vim.fn.expand("~") .. "/central-ci/*",
+   -- callback = function()
+      -- if vim.opt_local.modifiable:get() == true then
+         -- vim.cmd("set ff=unix")
+         -- vim.cmd("wa")
+      -- end
+   -- end,
+-- })
