@@ -27,11 +27,13 @@
       register: sync_config
       shell: |
         cd ~/personal/
+        git fetch --all
+        git pull --all
         echo "syncing {{ item }} branch"
         git worktree add {{ item }}
         cd {{ item }}
         git pull
-        git checkout {{ og_branch[0] }} .config/nvim .zshrc .zsh_aliases ansible utils/ .config/starship.toml
+        git checkout {{ og_branch[0] }} .config/nvim .zshrc .zsh_aliases ansible utils/ .config/starship.toml .tmux.conf
         git commit -m "merged config from {{ og_branch[0] }}"
         git push
         cd ..
