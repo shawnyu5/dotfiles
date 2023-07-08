@@ -6921,3 +6921,15 @@ new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++
 time 1688693115
 new [description:"lab 4" due:"1689303600" entry:"1688693115" modified:"1688693115" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"425b8e42-f778-46b7-a56b-89dc164aa67a"]
 ---
+time 1688826351
+old [description:"assignment 1" due:"1688871600" entry:"1685664960" modified:"1687557541" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+new [description:"assignment 1" due:"1688871600" entry:"1685664960" modified:"1688826351" project:"advanced_java" start:"1688826351" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+---
+time 1688826360
+old [description:"assignment 4" due:"1689130800" entry:"1687921580" modified:"1687921580" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ce154a05-d999-43fa-a9f2-4e83a101d764"]
+new [description:"assignment 4" due:"1689130800" entry:"1687921580" modified:"1688826360" project:"big_data" start:"1688826360" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"ce154a05-d999-43fa-a9f2-4e83a101d764"]
+---
+time 1688828505
+old [description:"assignment 1" due:"1688871600" entry:"1685664960" modified:"1688826351" project:"advanced_java" start:"1688826351" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+new [description:"assignment 1" due:"1688871600" end:"1688828505" entry:"1685664960" modified:"1688828505" project:"advanced_java" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"00934e8a-165a-4840-9b7e-21b6d438b9b2"]
+---
