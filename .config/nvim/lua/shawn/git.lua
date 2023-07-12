@@ -22,7 +22,7 @@ keymap("n", "<leader>gs", function()
       })
    end,
    { desc = "Git status" })
-keymap("n", "<leader>gc", function() vim.cmd("Git commit") end, { desc = "Git commit" })
+keymap("n", "<leader>gc", function() vim.cmd("silent! Git commit") end, { desc = "Git commit" })
 keymap("n", "<leader>ga", function()
    vim.cmd("Git add -A")
    vim.notify("git added all changes")
