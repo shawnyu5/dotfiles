@@ -29,7 +29,6 @@ local pluginSpec = {
    { "nvim-lua/popup.nvim" },
 
    { "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
-
    -- -- use({ "github/copilot.vim" })
 
    -- {
@@ -162,10 +161,10 @@ local pluginSpec = {
 
    { "andweeb/presence.nvim" },
 
-   { "preservim/nerdtree" },
-   -- "kyazdani42/nvim-tree.lua",
-   -- },
-
+   {
+      "preservim/nerdtree",
+      cmd = { "NERDTreeToggle", "NERDTreeFind" }
+   },
    { "windwp/nvim-autopairs" },
    {
       "SirVer/ultisnips",
@@ -193,6 +192,7 @@ local pluginSpec = {
    {
       "williamboman/mason.nvim",
       build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+      event = "VeryLazy",
       config = function()
          require("shawn.mason")
       end,

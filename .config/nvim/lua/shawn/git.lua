@@ -8,7 +8,7 @@ keymap("n", "<leader>gs", function()
             deleted = "🗑️",
             renamed = "➡",
             unmerged = "🔄",
-            untracked = "📥",
+            untracked = "🆕",
          },
          layout_strategy = "vertical",
          initial_mode = "normal"
