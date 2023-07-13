@@ -46,6 +46,13 @@ vim.cmd([[
 ]])
 
 require("telescope").setup({
+   defaults = {
+      layout_config = {
+         vertical = {
+            preview_cutoff = 20,
+         },
+      },
+   },
    extensions = {
       ["ui-select"] = {
          require("telescope.themes").get_dropdown({

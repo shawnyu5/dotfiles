@@ -8,6 +8,13 @@
       - github-cli
     state: latest
 
+- name: install gh cli plugins
+  ignore_errors: true
+  shell: |
+    gh extension install https://github.com/mislav/gh-branch
+    gh extension install https://github.com/shawnyu5/gh-ac
+    gh extension install https://github.com/seachicken/gh-poi
+
 - name: copy git-credentials
   copy:
     src: "{{ personal_dir }}/.git-credentials"
