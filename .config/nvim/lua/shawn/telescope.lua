@@ -47,8 +47,6 @@ vim.cmd([[
 
 require("telescope").setup({
    defaults = {
-      file_ignore_patterns = { ".git/" },
-      path_display = { "smart" },
       layout_config = {
          vertical = {
             preview_cutoff = 20,
