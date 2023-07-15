@@ -49,6 +49,10 @@
     name: go
     state: latest
 
+- name: install slides (cli markdown slides tool)
+  ignore_errors: true
+  shell: go install github.com/maaslalani/slides@latest
+
 - name: install java
   become: true
   ignore_errors: true
