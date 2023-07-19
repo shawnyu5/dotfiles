@@ -3,3 +3,7 @@
 [description:"assignment 5" due:"1689735600" entry:"1689289415" modified:"1689289415" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"04022ae6-e943-4aab-ab22-c8a1841345a5"]
 [description:"lecture" due:"1690167600" entry:"1689615419" imask:"9" modified:"1689109596" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"1053d329-1c38-4400-9388-672060519dc2"]
 [description:"watch lecture" due:"1690167600" entry:"1689615419" imask:"9" modified:"1689109596" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0028f58-e72a-4753-b8a9-790422f4093c"]
+[description:"assignment 4" due:"1690254000" entry:"1689765815" modified:"1689765815" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f5fe15c3-d01c-454e-9fd7-72c1ddfe94ce"]
+[description:"assignment 6" due:"1690340400" entry:"1689765830" modified:"1689765830" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
+[description:"assignment 5" due:"1690858800" entry:"1689765855" modified:"1689765855" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"914360bd-dda8-409e-bd55-bc1e3e413c85"]
+[description:"assignment 7" due:"1690945200" entry:"1689765871" modified:"1689765871" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"948d9f03-ab1f-40d6-92b0-3c39d86b5e6b"]
