@@ -7072,3 +7072,7 @@ time 1690035406
 old [description:"assignment 6" due:"1690340400" entry:"1689765830" modified:"1689765830" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
 new [description:"assignment 6" due:"1690340400" entry:"1689765830" modified:"1690035406" project:"big_data" start:"1690035406" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
 ---
+time 1690036602
+old [description:"assignment 6" due:"1690340400" entry:"1689765830" modified:"1690035406" project:"big_data" start:"1690035406" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
+new [description:"assignment 6" due:"1690340400" end:"1690036602" entry:"1689765830" modified:"1690036602" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
+---
