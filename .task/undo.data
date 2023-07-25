@@ -7076,3 +7076,20 @@ time 1690036602
 old [description:"assignment 6" due:"1690340400" entry:"1689765830" modified:"1690035406" project:"big_data" start:"1690035406" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
 new [description:"assignment 6" due:"1690340400" end:"1690036602" entry:"1689765830" modified:"1690036602" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"9b36b522-2392-4063-9d40-7760ce088653"]
 ---
+time 1690062422
+new [description:"assignment 2" due:"1690686000" entry:"1690062422" modified:"1690062422" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"dd55a664-9965-4d64-ad49-e9988cf97bb5"]
+---
+time 1690258684
+new [description:"lecture" due:"1690772400" entry:"1690258684" imask:"10" modified:"1689811882" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"36a905f7-1690-4497-8f99-9c501cbc6070"]
+---
+time 1690258684
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++++++" modified:"1689811882" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++++++-" modified:"1690258684" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1690258684
+new [description:"watch lecture" due:"1690772400" entry:"1690258684" imask:"10" modified:"1689811882" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"f0e82526-f651-4c7e-9760-66391b418955"]
+---
+time 1690258684
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++++++" modified:"1689811882" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++++++-" modified:"1690258684" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
