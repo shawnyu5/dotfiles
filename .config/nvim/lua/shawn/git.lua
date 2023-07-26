@@ -1,4 +1,11 @@
 local keymap = vim.keymap.set
+
+---run git add -A
+local function git_add_all()
+   vim.cmd("Git add -A")
+   vim.notify("git added all changes")
+end
+
 keymap("n", "<leader>gs", function()
       require("telescope.builtin").git_status({
          git_icons = {
@@ -8,7 +15,7 @@ keymap("n", "<leader>gs", function()
             deleted = "🗑️",
             renamed = "➡",
             unmerged = "🔄",
-            untracked = "📥",
+            untracked = "🆕",
          },
          layout_strategy = "vertical",
          initial_mode = "normal"
@@ -17,8 +24,7 @@ keymap("n", "<leader>gs", function()
    { desc = "Git status" })
 keymap("n", "<leader>gc", function() vim.cmd("silent! Git commit") end, { desc = "Git commit" })
 keymap("n", "<leader>ga", function()
-   vim.cmd("Git add -A")
-   vim.notify("git added all changes")
+   git_add_all()
 end, { desc = "Git add -A" })
 keymap("n", "<leader>gp", function() vim.cmd("Git push") end, { desc = "Git push" })
 keymap("n", "<leader>gf", function()
