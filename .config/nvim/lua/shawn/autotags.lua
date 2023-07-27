@@ -20,6 +20,7 @@ local filetypes = {
 	"glimmer",
 	"handlebars",
 	"hbs",
+   "svelte"
 }
 local skip_tags = {
 	"area",

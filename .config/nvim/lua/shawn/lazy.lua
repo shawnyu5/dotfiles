@@ -136,7 +136,7 @@ local pluginSpec = {
 
    { "aserowy/tmux.nvim" },
 
-   -- -- use({ "nvim-lualine/lualine.nvim" })
+   -- { "nvim-lualine/lualine.nvim" },
    {
       "itchyny/lightline.vim",
       config = function()
