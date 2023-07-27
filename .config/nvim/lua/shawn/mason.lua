@@ -25,7 +25,8 @@ local ensure_installed = {
    "rust-analyzer",
    "typescript-language-server",
    "lua-language-server",
-   "yamllint"
+   "yamllint",
+   "svelte-language-server"
 }
 
 mason.setup()

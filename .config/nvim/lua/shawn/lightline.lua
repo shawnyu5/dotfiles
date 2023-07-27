@@ -15,16 +15,16 @@ vim.g.GetGitBranch = function()
 end
 local harpoon_mark = require("harpoon.mark")
 
---- return the current harpoon mark if it exists
----@return string the harpoon mark for the statusline
-vim.g.Get_harpoon_status = function()
-	local mark_id = harpoon_mark.get_index_of(vim.fn.bufname())
+-- --- return the current harpoon mark if it exists
+-- ---@return string the harpoon mark for the statusline
+-- vim.g.Get_harpoon_status = function()
+--    local mark_id = harpoon_mark.get_index_of(vim.fn.bufname())
 
-	if not mark_id or mark_id == "" then
-		return ""
-	end
-	return "🦈 " .. mark_id
-end
+--    if not mark_id or mark_id == "" then
+--       return ""
+--    end
+--    return "🦈 " .. mark_id
+-- end
 
 --- check if `spell` is enabled
 ---@return string
