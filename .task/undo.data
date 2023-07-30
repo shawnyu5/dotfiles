@@ -7093,3 +7093,12 @@ time 1690258684
 old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++++++" modified:"1689811882" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
 new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++++++-" modified:"1690258684" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
 ---
+time 1690513068
+new [description:"lab 5" due:"1690858800" entry:"1690513068" modified:"1690513068" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"76e14919-1c0a-41b1-a849-a193a1f8cd2b"]
+---
+time 1690549685
+new [description:"final project" due:"1692068400" entry:"1690549685" modified:"1690549685" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"843bd788-2867-483d-b4d4-7e8fa0cea87b"]
+---
+time 1690549722
+new [description:"final project" due:"1692154800" entry:"1690549722" modified:"1690549722" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"acdfd91c-24e2-4b00-8142-524b0344d737"]
+---
