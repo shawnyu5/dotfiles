@@ -7151,3 +7151,23 @@ time 1691159130
 old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++" modified:"1690729232" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
 new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++-" modified:"1691159130" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
 ---
+time 1691177398
+old [description:"final project" due:"1692154800" entry:"1690549722" modified:"1690549722" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"acdfd91c-24e2-4b00-8142-524b0344d737"]
+new [annotation_1691177398:"complete. need to review and submit" description:"final project" due:"1692154800" entry:"1690549722" modified:"1691177398" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"acdfd91c-24e2-4b00-8142-524b0344d737"]
+---
+time 1691177404
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++-" modified:"1691159130" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"++++++++++++" modified:"1691177404" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1691177404
+old [description:"lecture" due:"1691377200" entry:"1691159130" imask:"11" modified:"1690729232" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"415e3597-b8ea-40c2-b53b-7eb2aafdab0b"]
+new [description:"lecture" due:"1691377200" end:"1691177404" entry:"1691159130" imask:"11" modified:"1691177404" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"415e3597-b8ea-40c2-b53b-7eb2aafdab0b"]
+---
+time 1691177404
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++-" modified:"1691159130" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"++++++++++++" modified:"1691177404" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
+time 1691177404
+old [description:"watch lecture" due:"1691377200" entry:"1691159130" imask:"11" modified:"1690729232" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"88f10833-cd7b-4c8d-8485-13defc96e4df"]
+new [description:"watch lecture" due:"1691377200" end:"1691177404" entry:"1691159130" imask:"11" modified:"1691177404" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"88f10833-cd7b-4c8d-8485-13defc96e4df"]
+---
