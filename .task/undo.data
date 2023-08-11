@@ -7201,3 +7201,7 @@ time 1691616470
 old [description:"watch lecture" due:"1691982000" entry:"1691459525" imask:"12" modified:"1691177404" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"69e8d740-bd98-4c9d-939c-ac400bc8080b"]
 new [description:"watch lecture" due:"1691982000" end:"1691616470" entry:"1691459525" imask:"12" modified:"1691616470" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"69e8d740-bd98-4c9d-939c-ac400bc8080b"]
 ---
+time 1691766862
+old [description:"assignment 3" due:"1691985600" entry:"1690728598" modified:"1690728598" project:"advanced_java" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"329e95de-572e-48f1-bd1a-c4eccefe3155"]
+new [description:"assignment 3" due:"1691985600" end:"1691766862" entry:"1690728598" modified:"1691766862" project:"advanced_java" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"329e95de-572e-48f1-bd1a-c4eccefe3155"]
+---
