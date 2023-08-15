@@ -7217,3 +7217,45 @@ time 1691945611
 old [description:"final project" due:"1692068400" entry:"1690549685" modified:"1690549685" project:"data_warehousing" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"843bd788-2867-483d-b4d4-7e8fa0cea87b"]
 new [description:"final project" due:"1692068400" end:"1691945611" entry:"1690549685" modified:"1691945611" project:"data_warehousing" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"843bd788-2867-483d-b4d4-7e8fa0cea87b"]
 ---
+time 1692045283
+new [description:"lecture" due:"1692586800" entry:"1692045283" imask:"13" modified:"1691616455" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"7c39f183-65b6-4696-9f3f-7d094d9bd3dc"]
+---
+time 1692045283
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++++" modified:"1691616455" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++++-" modified:"1692045283" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1692045283
+new [description:"watch lecture" due:"1692586800" entry:"1692045283" imask:"13" modified:"1691616470" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"baa794cd-b62c-49b3-9fb0-3bb564e43a3f"]
+---
+time 1692045283
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++++" modified:"1691616470" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++++-" modified:"1692045283" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
+time 1692045397
+old [annotation_1691177398:"complete. need to review and submit" description:"final project" due:"1692154800" entry:"1690549722" modified:"1691177398" project:"big_data" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"acdfd91c-24e2-4b00-8142-524b0344d737"]
+new [annotation_1691177398:"complete. need to review and submit" description:"final project" due:"1692154800" end:"1692045397" entry:"1690549722" modified:"1692045397" project:"big_data" status:"completed" tags:"seneca" tags_seneca:"x" uuid:"acdfd91c-24e2-4b00-8142-524b0344d737"]
+---
+time 1692045409
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++++-" modified:"1692045283" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++++X" modified:"1692045409" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1692045409
+old [description:"lecture" due:"1692586800" entry:"1692045283" imask:"13" modified:"1691616455" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"7c39f183-65b6-4696-9f3f-7d094d9bd3dc"]
+new [description:"lecture" due:"1692586800" end:"1692045401" entry:"1692045283" imask:"13" modified:"1692045409" parent:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"7c39f183-65b6-4696-9f3f-7d094d9bd3dc"]
+---
+time 1692045412
+old [description:"lecture" due:"1684724400" entry:"1684416867" mask:"+++++++++++++X" modified:"1692045409" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+new [description:"lecture" due:"1684724400" end:"1692045412" entry:"1684416867" mask:"+++++++++++++X" modified:"1692045412" project:"data_warehousing" recur:"weekly" rtype:"periodic" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"a4af0549-d8a6-4fbe-b0fe-e5ad5f5faeab"]
+---
+time 1692045412
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++++-" modified:"1692045283" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++++X" modified:"1692045412" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
+time 1692045412
+old [description:"watch lecture" due:"1692586800" entry:"1692045283" imask:"13" modified:"1691616470" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"pending" tags:"seneca" tags_seneca:"x" uuid:"baa794cd-b62c-49b3-9fb0-3bb564e43a3f"]
+new [description:"watch lecture" due:"1692586800" end:"1692045412" entry:"1692045283" imask:"13" modified:"1692045412" parent:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b" project:"big_data" recur:"weekly" rtype:"periodic" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"baa794cd-b62c-49b3-9fb0-3bb564e43a3f"]
+---
+time 1692045414
+old [description:"watch lecture" due:"1684724400" entry:"1684416996" mask:"+++++++++++++X" modified:"1692045412" project:"big_data" recur:"weekly" rtype:"periodic" status:"recurring" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+new [description:"watch lecture" due:"1684724400" end:"1692045414" entry:"1684416996" mask:"+++++++++++++X" modified:"1692045414" project:"big_data" recur:"weekly" rtype:"periodic" status:"deleted" tags:"seneca" tags_seneca:"x" uuid:"1d1ecfaa-58f3-4f28-b1e0-df871e54271b"]
+---
