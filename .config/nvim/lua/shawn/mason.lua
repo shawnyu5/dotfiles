@@ -18,7 +18,6 @@ local ensure_installed = {
    "prettierd",
    "angular-language-server",
    "jdtls",
-   "vue-language-server",
    "json-lsp",
    "css-lsp",
    "yaml-language-server",
@@ -26,7 +25,7 @@ local ensure_installed = {
    "typescript-language-server",
    "lua-language-server",
    "yamllint",
-   "svelte-language-server"
+   "taplo"
 }
 
 mason.setup()
