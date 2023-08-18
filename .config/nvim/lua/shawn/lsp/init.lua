@@ -6,11 +6,12 @@ end
 
 local notify = vim.notify
 vim.notify = function(msg, ...)
-    if msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet") then
-        return
-    end
+	if msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
+	then
+		return
+	end
 
-    notify(msg, ...)
+	notify(msg, ...)
 end
 
 -- LSP Enable diagnostics
@@ -61,6 +62,7 @@ require("shawn.lsp.lua")
 require("shawn.lsp.python")
 require("shawn.lsp.groovy")
 require("shawn.lsp.svelte")
+require("shawn.lsp.toml")
 -- require("shawn.lsp.ansible")
 
 -- color settings
