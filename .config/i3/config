@@ -216,6 +216,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+   # status_command i3blocks -c ~/.config/i3.endavor/i3blocks.conf
 
    # status_command i3status
    font pango:mono 11
