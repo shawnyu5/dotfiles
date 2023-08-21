@@ -47,11 +47,11 @@ alias zip="zip -r"
 #make rm-r always prompt
 alias rm="rm -I"
 
-function history() {
-   COMMAND=$(cat ~/.zsh_history | fzf --reverse --height 40% --border --prompt "zsh> ")
-   eval $COMMAND
-}
-alias history="history"
+# function history() {
+#    COMMAND=$(cat ~/.zsh_history | fzf --reverse --height 40% --border --prompt "zsh> ")
+#    eval $COMMAND
+# }
+# alias history="history"
 
 #shortcut to google chrome
 #alias chrome="google-chrome"
