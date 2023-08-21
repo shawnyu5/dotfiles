@@ -29,6 +29,6 @@ let g:NERDTreeAutoDeleteBuffer=1
 local map = vim.keymap.set
 map("n","<leader>nt", function()
    vim.cmd("tabe")
-   vim.cmd("NERDTreeToggle | only")
+   vim.cmd("NERDTreeFind | only")
 end, {})
 
