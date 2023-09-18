@@ -72,14 +72,14 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-function cd_with_fzf
-{
-    cd "$(find ~ -type d \( -name "*" ! -iname ".*" \) | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
-}
-#create a witget using function above
-zle -N cd_with_fzf
-#bind control f to witget
-bindkey '^F' cd_with_fzf
+# function cd_with_fzf
+# {
+#     cd "$(find ~ -type d \( -name "*" ! -iname ".*" \) | fzf --bind="space:toggle-preview")" && pwd && ls --group-directories-first --color=auto
+# }
+# #create a witget using function above
+# zle -N cd_with_fzf
+# #bind control f to witget
+# bindkey '^F' cd_with_fzf
 
 #if remaps.sh exists, call it
 # if [[ -f ~/remaps.sh ]]; then
@@ -191,4 +191,5 @@ zinit light-mode for \
 
 zinit ice lucid wait'0'
 zinit light joshskidmore/zsh-fzf-history-search
-
+zinit light KulkarniKaustubh/fzf-dir-navigator
+# zinit load chitoku-k/fzf-zsh-completions
