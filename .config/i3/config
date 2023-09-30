@@ -27,6 +27,7 @@ hide_edge_borders smart
 # exec --no-startup-id "picom --config ~/.config/picom/picom.conf"
 exec_always "picom --config ~/.config/picom/picom.conf"
 exec_always --no-startup-id ~/personal/remaps.sh
+exec_always --no-startup-id ~/.screenlayout/laptop.sh
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
