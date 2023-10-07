@@ -191,3 +191,11 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
+zinit light KulkarniKaustubh/fzf-dir-navigator
+# zinit load chitoku-k/fzf-zsh-completions
+
+# opam configuration
+[[ ! -r /home/shawn/.opam/opam-init/init.zsh ]] || source /home/shawn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
