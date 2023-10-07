@@ -82,3 +82,19 @@
   package:
     name: okular
     state: latest
+
+- name: install docker
+  become: true
+  ignore_errors: true
+  package:
+    name:
+      - docker
+      - docker-compose
+    state: latest
+
+- name: install opam
+  become: true
+  ignore_errors: true
+  package:
+    name: opam
+    state: latest
