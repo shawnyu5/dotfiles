@@ -98,3 +98,7 @@
   package:
     name: opam
     state: latest
+
+- name: install ocaml tools using opam
+  ignore_errors: true
+  shell: opam install dune merlin odoc utop dune-release --yes
