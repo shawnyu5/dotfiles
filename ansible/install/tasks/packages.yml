@@ -92,3 +92,9 @@
       - docker-compose
     state: latest
 
+- name: install opam
+  become: true
+  ignore_errors: true
+  package:
+    name: opam
+    state: latest
