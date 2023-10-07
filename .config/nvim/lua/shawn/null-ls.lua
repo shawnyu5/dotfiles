@@ -24,6 +24,7 @@ null_ls.setup({
 			disabled_filetypes = { "java" },
 		}),
 		formatting.google_java_format,
+      formatting.ocamlformat,
 		-- formatting.markdownlint,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({
