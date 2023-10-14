@@ -63,6 +63,7 @@ require("shawn.lsp.python")
 require("shawn.lsp.groovy")
 require("shawn.lsp.svelte")
 require("shawn.lsp.toml")
+require("shawn.lsp.ocaml")
 -- require("shawn.lsp.ansible")
 
 -- color settings
