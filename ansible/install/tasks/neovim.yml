@@ -58,3 +58,11 @@
     dest: "{{ ansible_env.HOME }}/.config/nvim"
     state: link
     force: true
+
+- name: link clang-format config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.clang-format"
+    dest: "{{ ansible_env.HOME }}"
+    state: link
+    force: true
