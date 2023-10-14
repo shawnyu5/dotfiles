@@ -10,6 +10,7 @@
       - main
       - windows
       - work_laptop
+      - hp_laptop
 
   tasks:
     - name: get current branch name
