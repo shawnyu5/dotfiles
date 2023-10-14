@@ -32,9 +32,6 @@ export TERM="kitty"
 export BROWSER="google-chrome-stable"
 export GOPATH=$HOME/gopath
 
-zinit ice lucid wait'0'
-zinit light joshskidmore/zsh-fzf-history-search
-
 precmd_functions=""
 
 #luke smith ranbow colours
