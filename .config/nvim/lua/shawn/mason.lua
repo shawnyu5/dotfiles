@@ -29,6 +29,7 @@ local ensure_installed = {
 	"stylua",
 	"ocaml-lsp",
 	"ocamlformat",
+	"cpptools",
 }
 
 mason.setup()

@@ -10,15 +10,15 @@ dapui.setup({
 		element = "repl",
 		enabled = true,
 		icons = {
-			disconnect = "⏹️",
-			pause = "⏸",
-			play = "▶️",
-			run_last = "⏮️",
-			step_back = "🔙",
-			step_into = "🔽",
-			step_out = "🔼",
-			step_over = "⏩",
-			terminate = "🔪",
+			disconnect = "disconnect",
+			pause = "pause",
+			play = "play",
+			run_last = "last",
+			step_back = "back",
+			step_into = "into",
+			step_out = "out",
+			step_over = "over",
+			terminate = "kill",
 		},
 	},
 	mappings = {
@@ -71,7 +71,7 @@ dapui.setup({
 local dap = require("dap")
 
 -- vim.cmd("au FileType dap-repl lua require('dap.ext.autocompl').attach()")
-local dap_ui_autoGroup =vim.api.nvim_create_augroup("dap ui", {})
+local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap ui", {})
 vim.api.nvim_create_autocmd("Filetype", {
 	pattern = "dap-repl",
 	callback = function()
