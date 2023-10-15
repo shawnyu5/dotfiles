@@ -10,14 +10,6 @@ require("shawn.dap.virtual_text")
 -- - `DapBreakpointRejected` to indicate breakpoints rejected by the debug
 -- adapter (default: `R`)
 
--- You can customize the signs by overriding their definitions after you've
--- loaded `dap`. For example:
-
--- >
--- lua << EOF
--- require('dap')
--- vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
--- EOF
 
 vim.fn.sign_define("DapBreakpoint", { text = "🛑", texthl = "", linehl = "", numhl = "" })
 vim.fn.sign_define("DapBreakpointRejected", { text = "❌", texthl = "", linehl = "", numhl = "" })
@@ -34,14 +26,6 @@ map("n", "<leader>db", function()
 	dap.toggle_breakpoint()
 end, { desc = "Dap Toggle breakpoint" })
 
-map("n", "<leader>do", function()
-	dap.step_over()
-end, { desc = "Dap Step over" })
-
-map("n", "<leader>di", function()
-	dap.step_into()
-end, { desc = "Dap Step into" })
-
 -- show the scopes window in float element
 map("n", "<leader>df", function()
 	dapui.float_element("scopes", { enter = true, width = 75 })
@@ -49,37 +33,48 @@ end, { desc = "Dap toggle scopes in floating window" })
 
 local command = vim.api.nvim_create_user_command
 
-command("DapRunToCursor", function(args)
+command("DapRunToCursor", function()
 	dap.run_to_cursor()
 end, {
 	desc = "Run to cursor",
 })
-command("DapUIToggle", function(args)
+
+command("DapUIToggle", function()
 	require("dapui").toggle()
 end, {
 	desc = "Toggle Dap UI",
 })
-command("DapClearBreakPoints", function(args)
+
+command("DapClearBreakPoints", function()
 	dap.clear_breakpoints()
 end, {
 	desc = "Clear all breakpoints",
 })
-command("DapConditionalBreakpoint", function(args)
+
+command("DapConditionalBreakpoint", function()
 	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end, {
 	desc = "Set conditional breakpoint",
 })
-command("DapLogPoint", function(args)
+
+command("DapLogPoint", function()
 	dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
 end, {
 	desc = "Set log point",
 })
 
+command("DapT", function()
+	dap.terminate({}, {}, function()
+		vim.notify("dapui terminated")
+		dapui.close()
+		vim.cmd(":DapVirtualTextForceRefresh")
+	end)
+end, {})
 -- delete the DapTerminate event and replace with my own
 -- vim.api.nvim_del_user_command("DapTerminate")
 
-local hydra = require("shawn.hydra")
-local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
+-- local hydra = require("shawn.hydra")
+-- local dap_ui_autoGroup = vim.api.nvim_create_augroup("dap_ui_autoGroup", { clear = true })
 
 -- --- Create autocmds for dap hydra on insert enter and insert leave to stop and restart hydra respectively.
 -- ---@return table the autocmd ids
@@ -149,10 +144,3 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	vim.cmd(":DapVirtualTextForceRefresh")
 end
 
-command("DapT", function(args)
-	dap.terminate({}, {}, function()
-		vim.notify("dapui terminated")
-		dapui.close()
-		vim.cmd(":DapVirtualTextForceRefresh")
-	end)
-end, {})
