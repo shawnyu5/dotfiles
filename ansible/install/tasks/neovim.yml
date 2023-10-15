@@ -63,6 +63,6 @@
   ignore_errors: true
   file:
     src: "{{ personal_dir }}/.clang-format"
-    dest: "{{ ansible_env.HOME }}/.clang-format"
+    dest: "{{ ansible_env.HOME }}"
     state: link
     force: true
