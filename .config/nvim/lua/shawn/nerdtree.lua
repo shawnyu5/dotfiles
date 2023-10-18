@@ -54,12 +54,12 @@ map("n", "<leader>nf", function()
 	vim.cmd("NERDTreeFind")
 	resize_nerdtree_buffer()
 end, {
-desc = "Open the current file in Nerdtree"
+	desc = "Open the current file in Nerdtree",
 })
 
 map("n", "<leader>nn", function()
 	vim.cmd("NERDTreeToggle")
 	resize_nerdtree_buffer()
 end, {
-desc = "Open Nerdtree"
+	desc = "Open Nerdtree",
 })
