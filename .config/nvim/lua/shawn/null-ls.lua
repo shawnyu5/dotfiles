@@ -1,7 +1,7 @@
 local status, null_ls = pcall(require, "null-ls")
 if not status then
-	vim.notify("null-ls not installed...", vim.log.levels.WARN)
-	return
+   vim.notify("null-ls not installed...", vim.log.levels.WARN)
+   return
 end
 
 local formatting = null_ls.builtins.formatting
@@ -33,5 +33,5 @@ null_ls.setup({
 		diagnostics.hadolint,
 		diagnostics.gitlint,
       diagnostics.yamllint,
-	},
+   },
 })
