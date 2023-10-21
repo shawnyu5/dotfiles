@@ -92,13 +92,9 @@
       - docker-compose
     state: latest
 
-- name: install opam
+- name: install gdb
   become: true
   ignore_errors: true
   package:
-    name: opam
+    name: gdb
     state: latest
-
-- name: install ocaml tools using opam
-  ignore_errors: true
-  shell: opam install dune merlin odoc utop dune-release --yes
