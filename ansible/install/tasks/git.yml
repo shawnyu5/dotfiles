@@ -1,12 +1,19 @@
 ---
 - name: install git
   become: true
+  ignore_errors: true
+  register: git
   package:
     name:
       - git
       - git-delta
       - github-cli
     state: latest
+
+- name: install git delta using cargo
+  ignore_errors: true
+  when: git.rc == 1
+  shell: cargo install git-delta
 
 - name: install gh cli plugins
   ignore_errors: true
