@@ -26,7 +26,6 @@
 - name: set up git
   include_tasks:
     file: git.yml
-
 - name: set up task worrior
   include_tasks:
     file: task_worrior.yml
