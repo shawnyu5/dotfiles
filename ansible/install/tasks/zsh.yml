@@ -2,11 +2,16 @@
 - name: install zsh
   become: true
   ignore_errors: true
+  register: zsh
   package:
     name:
       - zsh
       - starship
     state: latest
+
+- name: install starship using cargo
+  when: zsh.rc | default(0) == 1
+  shell: cargo install starship --locked
 
 - name: link zshrc
   file:
@@ -32,7 +37,6 @@
     src: "{{ personal_dir }}/.config/starship.toml"
     state: link
     force: true
-
 # - name: Install zinit
 #   shell: |
 #     bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
