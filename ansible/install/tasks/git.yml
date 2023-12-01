@@ -32,10 +32,10 @@
     src: "{{ personal_dir }}/.gitconfig"
     dest: "{{ ansible_env.HOME }}/.gitconfig"
 
-- name: link gh config
+- name: link gh config.yaml
   ignore_errors: true
   file:
-    src: "{{ personal_dir }}/.config/gh"
-    dest: "{{ ansible_env.HOME }}/.config/gh"
+    src: "{{ personal_dir }}/.config/gh/config.yaml"
+    dest: "{{ ansible_env.HOME }}/.config/gh/config.yaml"
     state: link
     force: true
