@@ -220,7 +220,7 @@ local pluginSpec = {
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
 			{ "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
-			"zbirenbaum/copilot-cmp",
+			-- "zbirenbaum/copilot-cmp",
 			"quangnguyen30192/cmp-nvim-ultisnips",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
@@ -239,7 +239,7 @@ local pluginSpec = {
 	-- dependencies = { "neovim/nvim-lspconfig" },
 	-- },
 	-- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
-	{ "zbirenbaum/copilot.lua" },
+	-- { "zbirenbaum/copilot.lua" },
 	-- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	{
 		"chrisbra/csv.vim",
