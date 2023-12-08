@@ -196,3 +196,7 @@ zinit light KulkarniKaustubh/fzf-dir-navigator
 
 # opam configuration
 [[ ! -r /home/shawn/.opam/opam-init/init.zsh ]] || source /home/shawn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
