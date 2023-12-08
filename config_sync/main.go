@@ -17,7 +17,7 @@ import (
 )
 
 func main() {
-	branches := []string{"main", "windows"}
+	branches := []string{"main", "windows", "work_laptop", "hp_laptop"}
 	os.RemoveAll("/tmp/personal")
 
 	// r, err := git.PlainOpen("/tmp/personal")
@@ -60,8 +60,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Unable to checkout to main branch:", err)
 	}
-	// command to checkout config files from og branch into current branch
-	checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync")
 
 	// refs, _ := r.References()
 	// refs.ForEach(func(ref *plumbing.Reference) error {
@@ -76,7 +74,10 @@ func main() {
 	for _, branch := range branches {
 		log.Printf("Syncing config from `%s` to `%s`", ogBranchName, branch)
 
-		err = exec.Command("git", "checkout", "windows").Run()
+		// command to checkout config files from og branch into current branch
+		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync")
+
+		err = exec.Command("git", "checkout", branch).Run()
 		if err != nil {
 			log.Fatalf("Unable to checkout branch `%s`: %s", branch, err)
 		}
@@ -90,7 +91,7 @@ func main() {
 
 		err = checkoutFiles.Run()
 		if err != nil {
-			log.Fatal("Error checking out files:", err)
+			log.Fatal("Error checking out files: ", err)
 		}
 
 		_, err = w.Commit(fmt.Sprintf("chore: sync config from %s", ogBranchName), &git.CommitOptions{
