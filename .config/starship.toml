@@ -36,3 +36,4 @@ detect_files = [""]
 [kubernetes]
 disabled = false
 format = '[$symbol$context]($style) in '
+style = 'blue bold'
