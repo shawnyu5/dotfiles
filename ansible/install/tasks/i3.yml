@@ -46,3 +46,11 @@
     dest: "{{ ansible_env.HOME }}/.config/picom"
     state: link
     force: true
+
+- name: link rofi config
+  ignore_errors: true
+  file:
+    src: "{{ personal_dir }}/.config/rofi"
+    dest: "{{ ansible_env.HOME }}/.config/rofi"
+    state: link
+    force: true
