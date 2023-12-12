@@ -163,7 +163,7 @@ local pluginSpec = {
 
 	{
 		"preservim/nerdtree",
-		cmd = { "NERDTreeToggle", "NERDTreeFind" },
+		-- cmd = { "NERDTreeToggle", "NERDTreeFind" },
 	},
 	{ "windwp/nvim-autopairs" },
 	{
