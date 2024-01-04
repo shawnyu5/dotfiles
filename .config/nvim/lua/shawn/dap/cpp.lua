@@ -25,7 +25,6 @@ local function find_a_out()
    return false
 end
 
-print(find_a_out())
 
 dap.configurations.cpp = {
 	{
