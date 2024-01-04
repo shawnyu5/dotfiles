@@ -12,7 +12,7 @@ require("nvim-treesitter.configs").setup({
 		"lua",
 		"python",
 		"cpp",
-		"vim",
+		-- "vim",
 		"java",
 		"typescript",
 		"rust",
