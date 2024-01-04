@@ -71,7 +71,7 @@ executor.setup({
       },
    },
    default_mappings = true,
-   always_exit = true,
+   always_exit = false,
    insert_on_enter = false, -- enter insert mode on entering a terminal
    dependency_commands = {
       make = "Makefile",
