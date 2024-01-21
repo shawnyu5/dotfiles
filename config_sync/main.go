@@ -29,15 +29,14 @@ func main() {
 		log.Fatal("Error cloning repo:", err)
 	}
 
-	os.Chdir("/tmp/personal")
-	// cmd := exec.Command("")
-	// ref, err := r.Head()
+	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// ogBranchName := ref.Name().Short()
+	os.Chdir(fmt.Sprintf("%s/personal", homeDir))
 	getOgBranchName := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
+
 	var ogBranchNameBuffer bytes.Buffer
 	getOgBranchName.Stdout = &ogBranchNameBuffer
 	getOgBranchName.Run()
@@ -75,7 +74,7 @@ func main() {
 		log.Printf("Syncing config from `%s` to `%s`", ogBranchName, branch)
 
 		// command to checkout config files from og branch into current branch
-		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync")
+		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync", ".config/gh")
 
 		err = exec.Command("git", "checkout", branch).Run()
 		if err != nil {
