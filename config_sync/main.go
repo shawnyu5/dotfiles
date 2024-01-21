@@ -20,28 +20,17 @@ func main() {
 	branches := []string{"main", "windows", "work_laptop", "hp_laptop"}
 	os.RemoveAll("/tmp/personal")
 
+	ogBranchName := currentPersonalCheckedOutBranch()
+	// println(ogBranchName)
+
 	// r, err := git.PlainOpen("/tmp/personal")
 	r, err := git.PlainClone("/tmp/personal", false, &git.CloneOptions{
-		URL:      "https://github.com/shawnyu5/dotfiles",
-		Progress: os.Stdout,
+		URL:           "https://github.com/shawnyu5/dotfiles",
+		ReferenceName: plumbing.ReferenceName("refs/heads/" + ogBranchName),
 	})
 	if err != nil {
 		log.Fatal("Error cloning repo:", err)
 	}
-
-	homeDir, err := os.UserHomeDir()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	os.Chdir(fmt.Sprintf("%s/personal", homeDir))
-	getOgBranchName := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
-
-	var ogBranchNameBuffer bytes.Buffer
-	getOgBranchName.Stdout = &ogBranchNameBuffer
-	getOgBranchName.Run()
-	ogBranchName := ogBranchNameBuffer.String()
-	ogBranchName = strings.TrimSpace(ogBranchName)
 
 	branches = removeElement(branches, ogBranchName)
 
@@ -50,15 +39,15 @@ func main() {
 		log.Fatal("Unable to get worktree:", err)
 	}
 
-	err = w.Checkout(&git.CheckoutOptions{
-		Branch: plumbing.ReferenceName("refs/heads/main"),
-		Create: false,
-		Keep:   true,
-	})
+	// err = w.Checkout(&git.CheckoutOptions{
+	//    Branch: plumbing.ReferenceName("refs/heads/main"),
+	//    Create: false,
+	//    Keep:   true,
+	// })
 
-	if err != nil {
-		log.Fatal("Unable to checkout to main branch:", err)
-	}
+	// if err != nil {
+	//    log.Fatal("Unable to checkout to main branch:", err)
+	// }
 
 	// refs, _ := r.References()
 	// refs.ForEach(func(ref *plumbing.Reference) error {
@@ -70,6 +59,7 @@ func main() {
 
 	// return
 
+	os.Chdir("/tmp/personal")
 	for _, branch := range branches {
 		log.Printf("Syncing config from `%s` to `%s`", ogBranchName, branch)
 
@@ -120,6 +110,25 @@ func main() {
 			log.Fatal("Failed to push to branch:", err)
 		}
 	}
+}
+
+// currentPersonalCheckedOutBranch get the current branch that is checked out at `~/personal`
+func currentPersonalCheckedOutBranch() string {
+	homeDir, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	os.Chdir(fmt.Sprintf("%s/personal", homeDir))
+	getOgBranchName := exec.Command("git", "rev-parse", "--abbrev-ref", "HEAD")
+
+	var ogBranchNameBuffer bytes.Buffer
+	getOgBranchName.Stdout = &ogBranchNameBuffer
+	getOgBranchName.Run()
+	ogBranchName := ogBranchNameBuffer.String()
+	ogBranchName = strings.TrimSpace(ogBranchName)
+	return ogBranchName
+
 }
 
 // getPAT Read Github personal access token from `~/.git-credentials`
