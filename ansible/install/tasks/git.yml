@@ -35,7 +35,7 @@
 - name: link gh config.yaml
   ignore_errors: true
   file:
-    src: "{{ personal_dir }}/.config/gh/config.yaml"
-    dest: "{{ ansible_env.HOME }}/.config/gh/config.yaml"
+    src: "{{ personal_dir }}/.config/gh/config.yml"
+    dest: "{{ ansible_env.HOME }}/.config/gh/config.yml"
     state: link
     force: true
