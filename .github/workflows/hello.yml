@@ -7,7 +7,7 @@ jobs:
   hello:
     name: hello
     runs-on:
-      - ubuntu-latest
+      - ubuntu-latesttt
     steps:
       - name: Hello world
         run: |
