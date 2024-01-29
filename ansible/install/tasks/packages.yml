@@ -106,4 +106,5 @@
     name:
       - minikube
       - kubectl
+      - k9s
     state: latest
