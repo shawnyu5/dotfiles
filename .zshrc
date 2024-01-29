@@ -28,7 +28,6 @@ _comp_options+=(globdots)		# Include hidden files.
 # Enable colors and change prompt:
 autoload -U colors && colors
 
-export TERM="kitty"
 export BROWSER="google-chrome-stable"
 export GOPATH=$HOME/gopath
 
