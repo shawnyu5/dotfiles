@@ -12,3 +12,12 @@ jobs:
       - name: Hello world
         run: |
           echo hello world
+
+  hello2:
+    name: hello2
+    runs-on:
+      - ubuntu-latesttt
+    steps:
+      - name: Hello world
+        run: |
+          echo hello world
