@@ -7,7 +7,7 @@ jobs:
   hello:
     name: hello
     runs-on:
-      - ubuntu-latesttt
+      - ubuntu-latest
     steps:
       - name: Hello world
         run: |
@@ -16,7 +16,7 @@ jobs:
   hello2:
     name: hello2
     runs-on:
-      - ubuntu-latesttt
+      - ubuntu-latest
     steps:
       - name: Hello world
         run: |

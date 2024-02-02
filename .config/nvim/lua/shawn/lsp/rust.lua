@@ -1,16 +1,16 @@
 local utils = require("shawn.lsp.utils")
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.offsetEncoding = { "utf-16" }
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.offsetEncoding = { "utf-16" }
 vim.g.rustaceanvim = {
 	-- LSP configuration
 	server = {
 		on_attach = function(client, bufnr)
 			utils.on_attach(client, bufnr)
 			utils.format_on_save(bufnr)
-			vim.keymap.set("n", "<F2>", function()
-				vim.cmd.RustLsp("codeAction")
-			end, { noremap = true, silent = true, buffer = bufnr })
+			-- vim.keymap.set("n", "<F2>", function()
+			--    vim.cmd.RustLsp("codeAction")
+			-- end, { noremap = true, silent = true, buffer = bufnr })
 		end,
 	},
 }
