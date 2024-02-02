@@ -207,8 +207,13 @@ local pluginSpec = {
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
 	{
-		"simrat39/rust-tools.nvim",
+		"mrcjkb/rustaceanvim",
+		version = "^4", -- Recommended
+		ft = { "rust" },
 	},
+	-- {
+	--    "simrat39/rust-tools.nvim",
+	-- },
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
