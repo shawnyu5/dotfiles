@@ -25,6 +25,8 @@ function M.on_attach(client, bufnr)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
 
+   vim.lsp.inlay_hint.enable(bufnr, true)
+
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
 	end
