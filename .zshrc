@@ -193,5 +193,7 @@ zinit light joshskidmore/zsh-fzf-history-search
 zinit light KulkarniKaustubh/fzf-dir-navigator
 # zinit load chitoku-k/fzf-zsh-completions
 
+eval "$(zoxide init zsh)"
+
 # opam configuration
 # [[ ! -r /home/shawn/.opam/opam-init/init.zsh ]] || source /home/shawn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
