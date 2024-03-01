@@ -1,9 +1,2 @@
 local lsp = require("lspconfig")
-local utils = require("shawn.lsp.utils")
-
-lsp.dockerls.setup({
-	on_attach = function(client, bufnr)
-		utils.on_attach(client, bufnr)
-		utils.format_on_save(bufnr)
-	end,
-})
+lsp.dockerls.setup({})

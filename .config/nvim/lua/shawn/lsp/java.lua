@@ -1,5 +1,3 @@
-local utils = require("shawn.lsp.utils")
-
 local jdtls_group = vim.api.nvim_create_augroup("jdtls", {})
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.java",
@@ -11,8 +9,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			on_attach = function(client, bufnr)
 				local jdtls = require("jdtls")
 				vim.notify("Java LSP on_attach")
-				utils.on_attach(client, bufnr)
-				utils.format_on_save(bufnr)
 
 				local command = vim.api.nvim_buf_create_user_command
 				command(bufnr, "JdtExtractConstant", function()
@@ -46,4 +42,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
 -- end,
 -- },
 -- })
-

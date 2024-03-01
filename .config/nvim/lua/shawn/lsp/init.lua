@@ -1,12 +1,7 @@
-local ok, lsp = pcall(require, "lspconfig")
-if not ok then
-	vim.notify("lsp config not installed...", vim.log.levels.WARN)
-	return
-end
-
 local notify = vim.notify
 vim.notify = function(msg, ...)
-	if msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
+	if
+		msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
 	then
 		return
 	end

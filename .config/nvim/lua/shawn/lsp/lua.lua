@@ -1,15 +1,9 @@
 local lsp = require("lspconfig")
-local utils = require("shawn.lsp.utils")
--- sumneko lua
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.lua_ls.setup({
-	on_attach = function(client, bufnr)
-		utils.disable_formatting(client)
-		utils.on_attach(client, bufnr)
-	end,
 	settings = {
 		Lua = {
 			runtime = {
