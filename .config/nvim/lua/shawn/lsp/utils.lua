@@ -1,6 +1,8 @@
 local M = {}
+
+---@deprecated
 --- Create autocmd to format on save
---- @param bufnr number the buf number to format
+--- @param bufnr buf number to format
 function M.format_on_save(bufnr)
 	local augroup = vim.api.nvim_create_augroup("lsp_format_on_save", {})
 	vim.api.nvim_create_autocmd("BufWritePre", {
@@ -10,22 +12,29 @@ function M.format_on_save(bufnr)
 			-- vim.lsp.buf.format({bufnr = bufnr})
 			vim.cmd("write")
 		end,
-      -- buffer = 0,
+		-- buffer = 0,
 	})
 end
 
 --- disable formatting for a language server
-function M.disable_formatting(client)
-	client.server_capabilities.document_formatting = false
-	client.server_capabilities.document_range_formatting = false
+function M.disable_formatting_on_save(bufnr)
+	-- client.server_capabilities.documentFormattingProvider = false
+	-- client.server_capabilities.documentRangeFormattingProvider = false
+
+	-- if M.format_on_save_autocmd then
+	--    vim.api.nvim_del_autocmd(M.format_on_save_autocmd)
+	-- end
+
+	vim.b[bufnr].disable_autoformat = true
 end
 
+---@deprecated
 function M.on_attach(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
 
-   vim.lsp.inlay_hint.enable(bufnr, true)
+	vim.lsp.inlay_hint.enable(bufnr, true)
 
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
@@ -57,5 +66,47 @@ function M.on_attach(client, bufnr)
 	keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
 	keymap("n", "gr", vim.lsp.buf.references, opts)
 end
+
+local lspAugroup = vim.api.nvim_create_augroup("UserLspConfig", {})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = lspAugroup,
+	callback = function(ev)
+		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
+		local opts = { buffer = ev.buf }
+		local keymap = vim.keymap.set
+		keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
+		keymap("n", "gD", vim.lsp.buf.declaration, opts)
+		keymap("n", "gi", vim.lsp.buf.implementation, opts)
+		keymap("n", "K", vim.lsp.buf.hover, opts)
+		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
+		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
+		keymap("n", "gr", vim.lsp.buf.references, opts)
+
+		vim.api.nvim_buf_create_user_command(ev.buf, "Format", function()
+			vim.lsp.buf.format({ async = false })
+			vim.cmd("write")
+		end, {})
+
+		vim.api.nvim_buf_create_user_command(ev.buf, "Rename", function()
+			vim.lsp.buf.rename()
+		end, {})
+
+		-- M.format_on_save_autocmd = vim.api.nvim_create_autocmd("BufWritePre", {
+		--    group = lspAugroup,
+		--    callback = function()
+		--       vim.notify("Formatting on save")
+		--       -- vim.api.nvim_clear_autocmds({ group = lspAugroup, buffer = ev.buf })
+		--       print(ev.buf)
+		--       vim.lsp.buf.format({ bufnr = ev.buf })
+		--    end,
+		--    buffer = ev.buf,
+		-- })
+	end,
+})
 
 return M

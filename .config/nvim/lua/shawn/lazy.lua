@@ -233,6 +233,13 @@ local pluginSpec = {
 			require("shawn.cmp")
 		end,
 	},
+   {
+      'stevearc/conform.nvim',
+      config = function()
+         require("shawn.conform")
+      end
+   },
+
 	-- {
 	-- "lewis6991/gitsigns.nvim",
 	-- config = function()

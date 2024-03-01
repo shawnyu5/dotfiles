@@ -7,9 +7,7 @@ capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 
 lsp.html.setup({
 	capabilities = capabilities_html,
-	on_attach = function(client, bufnr)
-      utils.disable_formatting(client)
-      utils.format_on_save(bufnr)
-		utils.on_attach(client, bufnr)
+	on_attach = function(_, bufnr)
+		utils.disable_formatting_on_save(bufnr)
 	end,
 })
