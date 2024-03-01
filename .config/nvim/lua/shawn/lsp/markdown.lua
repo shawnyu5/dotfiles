@@ -1,11 +1,5 @@
 local lsp = require("lspconfig")
-local utils = require("shawn.lsp.utils")
-lsp.marksman.setup({
-	on_attach = function(client, bufnr)
-		utils.on_attach(client, bufnr)
-		utils.format_on_save(bufnr)
-	end,
-})
+lsp.marksman.setup({})
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	pattern = "*.md",

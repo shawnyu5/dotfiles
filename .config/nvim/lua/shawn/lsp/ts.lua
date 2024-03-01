@@ -1,13 +1,8 @@
 local lsp = require("lspconfig")
 local utils = require("shawn.lsp.utils")
 
--- tsserver
 lsp.tsserver.setup({
-	on_attach = function(client, bufnr)
-      utils.disable_formatting(client)
-		utils.format_on_save(bufnr)
-		utils.on_attach(client, bufnr)
+	on_attach = function(_, bufnr)
+		utils.disable_formatting_on_save(bufnr)
 	end,
 })
-
-
