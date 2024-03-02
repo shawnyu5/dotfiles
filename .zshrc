@@ -48,6 +48,7 @@ setopt prompt_subst
 # NOTE: prompt must be wrapped in single quotes for the git stuff to work
 # PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}] %{$fg[green]%}🔨%j%E %{$fg[cyan]%}${vcs_info_msg_0_}
 # %{$fg[cyan]%}$%{$reset_color%}%b '
+
 eval "$(starship init zsh)"
 
 #zsh prompt script
