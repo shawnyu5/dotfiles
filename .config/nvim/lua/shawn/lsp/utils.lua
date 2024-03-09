@@ -74,7 +74,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+
 		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 
 		local opts = { buffer = ev.buf }
@@ -95,6 +96,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.api.nvim_buf_create_user_command(ev.buf, "Rename", function()
 			vim.lsp.buf.rename()
 		end, {})
+
+		vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+			buffer = ev.buf,
+			callback = vim.lsp.buf.document_highlight,
+		})
+
+		vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+			group = lspAugroup,
+			buffer = ev.buf,
+			callback = vim.lsp.buf.clear_references,
+		})
 
 		-- M.format_on_save_autocmd = vim.api.nvim_create_autocmd("BufWritePre", {
 		--    group = lspAugroup,
