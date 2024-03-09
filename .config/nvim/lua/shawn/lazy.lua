@@ -233,12 +233,12 @@ local pluginSpec = {
 			require("shawn.cmp")
 		end,
 	},
-	{
-		"stevearc/conform.nvim",
-		config = function()
-			require("shawn.conform")
-		end,
-	},
+   {
+      'stevearc/conform.nvim',
+      config = function()
+         require("shawn.conform")
+      end
+   },
 
 	-- {
 	-- "lewis6991/gitsigns.nvim",
@@ -307,10 +307,7 @@ local pluginSpec = {
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "karb94/neoscroll.nvim" },
 	{ "shawnyu5/mdnav" }, -- opening links in markdown,
-	-- { "preservim/nerdcommenter" }, -- block commenting,
-	{
-		"numToStr/Comment.nvim",
-	},
+	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
 	{
 		"Shatur/neovim-session-manager",
