@@ -2,6 +2,7 @@ set rtp+=~/.config/nvim/settings/
 set rtp+=~/.config/nvim/settings/print_debug
 set rtp+=~/.config/nvim/lua/shawn/print/
 set laststatus=3
+set updatetime=800
 
 " not hide markdown special symbols
 set conceallevel=2
@@ -11,7 +12,7 @@ autocmd BufEnter *.hbs set ft=html
 
 set nottimeout
 set ttimeoutlen=600
-set timeoutlen=1000
+set timeoutlen=900
 
 set mouse=a
 set noswapfile
