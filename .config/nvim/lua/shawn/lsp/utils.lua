@@ -97,16 +97,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.lsp.buf.rename()
 		end, {})
 
-		vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-			buffer = ev.buf,
-			callback = vim.lsp.buf.document_highlight,
-		})
+		-- vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+		--    buffer = ev.buf,
+		--    callback = vim.lsp.buf.document_highlight,
+		-- })
 
-		vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-			group = lspAugroup,
-			buffer = ev.buf,
-			callback = vim.lsp.buf.clear_references,
-		})
+		-- vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+		--    group = lspAugroup,
+		--    buffer = ev.buf,
+		--    callback = vim.lsp.buf.clear_references,
+		-- })
 
 		-- M.format_on_save_autocmd = vim.api.nvim_create_autocmd("BufWritePre", {
 		--    group = lspAugroup,
