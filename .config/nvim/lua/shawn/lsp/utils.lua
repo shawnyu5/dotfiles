@@ -75,6 +75,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		vim.lsp.inlay_hint.enable(ev.bufnr, true)
 
 		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 
