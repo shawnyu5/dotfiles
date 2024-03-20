@@ -38,6 +38,16 @@ local pluginSpec = {
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
 	{
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	},
+	{
 		"hashivim/vim-terraform",
 		ft = { "terraform" },
 	},
@@ -128,7 +138,6 @@ local pluginSpec = {
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 	{ "anuvyklack/hydra.nvim" },
-
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "akinsho/git-conflict.nvim" },
 	{
@@ -139,18 +148,18 @@ local pluginSpec = {
 	{
 		"echasnovski/mini.indentscope",
 	},
-	-- {
-	--    "Bekaboo/dropbar.nvim",
-	--    dependencies = { "neovim/nvim-lspconfig" },
-	--    config = function()
-	--       local opts = {
-	--          icons = {
-	--             enable = false,
-	--          },
-	--       }
-	--       require("dropbar").setup(opts)
-	--    end,
-	-- },
+	{
+		"Bekaboo/dropbar.nvim",
+		dependencies = { "neovim/nvim-lspconfig" },
+		config = function()
+			local opts = {
+				icons = {
+					enable = false,
+				},
+			}
+			require("dropbar").setup(opts)
+		end,
+	},
 	-- {
 	-- "sindrets/diffview.nvim",
 	-- dependencies = { "nvim-lua/plenary.nvim" },
