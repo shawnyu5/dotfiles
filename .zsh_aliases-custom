@@ -3,39 +3,11 @@
 #  / /\__ \ | | | | (_| | | | (_| \__ \ | (__| |_| \__ \ || (_) | | | | | |
 # /___|___/_| |_|  \__,_|_|_|\__,_|___/  \___|\__,_|___/\__\___/|_| |_| |_|
 
-export TERM="kitty"
+# export TERM="kitty"
 alias dl="cd /mnt/c/Users/shawny/Downloads"
 
-# blackboard selenium
-# alias bbjac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py jac; cd - > /dev/null"
-# alias bbeac="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py eac; cd - > /dev/null"
-# alias bbsyd="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py syd; cd - > /dev/null"
-# alias bbweb="cd ~/python/web_scraping/selenium/blackboard/blackboard/; python3 blackboard.py web; cd - > /dev/null"
-
-# opening notes
-
-# nvim -c ':cd %:p:h' ~/seneca/semester_7/BCI433/BCI433_notes.md
-alias bcinotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/BCI433_notes.md"
-alias jacnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/JAC555_notes.md"
-alias prjnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/PRJ666_notes.md"
-alias csnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/PRO670_notes.md"
-alias devopsnotes="nvim -c ':cd %:p:h' /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/PRO690_notes.md"
-
-# move commands
-alias mvbci=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/"
-alias mvjac=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/"
-alias mvprj=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/"
-alias mvcs=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
-alias mvdevops=". ~/personal/seneca_utilities/seneca_movements.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
-
-# cd commands
-alias cdbci=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/BCI433/" 
-alias cdjac=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/JAC555/" 
-alias cdprj=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRJ666/" 
-alias cdcs=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO670_intro_to_c_sharp/"
-alias cddevops=". ~/personal/seneca_utilities/cd_fzf.sh /mnt/c/Users/Shawn/OneDrive\ -\ Seneca/seneca/semester_7/PRO690_intro_to_devops/"
-
 alias neofetch="neofetch --ascii_distro archlinux"
+alias goland='/mnt/c/Program\ Files/JetBrains/GoLand\ 2023.1.4/bin/goland64.exe'
 
 export TMUX_POWERLINE_PATCHED_FONT_IN_USE=false
 
