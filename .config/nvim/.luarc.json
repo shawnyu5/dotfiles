@@ -54,5 +54,8 @@
         "/home/shawn/.local/state/nvim/lazy/readme",
         "/home/shawn/.local/share/nvim/lazy/ultisnips/after",
         "${3rd}/luassert/library"
+    ],
+    "diagnostics.disable": [
+        "inject-field"
     ]
 }
