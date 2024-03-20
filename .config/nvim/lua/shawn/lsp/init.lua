@@ -8,6 +8,7 @@ vim.notify = function(msg, ...)
 
 	notify(msg, ...)
 end
+local utils = require("shawn.lsp.utils")
 
 -- LSP Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -37,29 +38,156 @@ for type, icon in pairs(signs) do
 	})
 end
 
+local lspAugroup = vim.api.nvim_create_augroup("UserLspConfig", {})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = lspAugroup,
+	callback = function(ev)
+		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		vim.lsp.inlay_hint.enable(ev.bufnr, true)
+
+		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
+		local opts = { buffer = ev.buf }
+		local keymap = vim.keymap.set
+		keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
+		keymap("n", "gD", vim.lsp.buf.declaration, opts)
+		keymap("n", "gi", vim.lsp.buf.implementation, opts)
+		keymap("n", "K", vim.lsp.buf.hover, opts)
+		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
+		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
+		keymap("n", "gr", vim.lsp.buf.references, opts)
+
+		vim.api.nvim_buf_create_user_command(ev.buf, "Format", function()
+			vim.lsp.buf.format({ async = false })
+			vim.cmd("write")
+		end, {})
+
+		vim.api.nvim_buf_create_user_command(ev.buf, "Rename", function()
+			vim.lsp.buf.rename()
+		end, {})
+
+		local client = vim.lsp.get_client_by_id(ev.data.client_id)
+		if client and client.server_capabilities.documentHighlightProvider then
+			vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+				buffer = ev.buf,
+				callback = vim.lsp.buf.document_highlight,
+			})
+
+			vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+				buffer = ev.buf,
+				callback = vim.lsp.buf.clear_references,
+			})
+		end
+	end,
+})
+
+local function lua_ls_runtime_path()
+	local runtime_path = vim.split(package.path, ";")
+	table.insert(runtime_path, "lua/?.lua")
+	table.insert(runtime_path, "lua/?/init.lua")
+	return runtime_path
+end
+
+local servers = {
+	-- jdtls = {},
+	angularls = {
+		on_attach = function(client, _)
+			-- disable rename. Prefer tsserver's rename capabilities
+			client.server_capabilities.rename = false
+		end,
+	},
+	gopls = {
+		settings = {
+			gopls = {
+				experimentalPostfixCompletions = true,
+				analyses = {
+					unusedparams = true,
+					shadow = true,
+				},
+				staticcheck = true,
+			},
+		},
+		init_options = {
+			usePlaceholders = false,
+		},
+	},
+	vuels = {},
+	jsonls = {},
+	marksman = {},
+	csharp_ls = {},
+	cssls = {},
+	texlab = {},
+	dockerls = {},
+	yamlls = {},
+	clangd = {
+		capabilities = {
+			offsetEncoding = { "utf-16" },
+		},
+	},
+	bashls = {},
+	html = {
+		on_attach = function(_, bufnr)
+			utils.disable_formatting_on_save(bufnr)
+		end,
+		capabilities = {
+			textDocument = {
+				completion = {
+					completionItem = {
+						snippetSupport = true,
+					},
+				},
+			},
+		},
+	},
+	tsserver = {
+		on_attach = function(_, bufnr)
+			utils.disable_formatting_on_save(bufnr)
+		end,
+	},
+	lua_ls = {
+		settings = {
+			Lua = {
+				runtime = {
+					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+					version = "LuaJIT",
+					-- Setup your lua path
+					path = lua_ls_runtime_path(),
+				},
+				diagnostics = {
+					-- Get the language server to recognize the `vim` global
+					globals = { "vim" },
+				},
+				workspace = {
+					-- Make the server aware of Neovim runtime files
+					library = vim.api.nvim_get_runtime_file("", true),
+					checkThirdParty = false,
+				},
+				-- Do not send telemetry data containing a randomized but unique identifier
+				telemetry = {
+					enable = false,
+				},
+			},
+		},
+	},
+	groovyls = {
+		cmd = { "groovy-language-server" },
+	},
+	taplo = {},
+}
+
+-- for loop over all servers
+for server, config in pairs(servers) do
+	local capabilities = vim.lsp.protocol.make_client_capabilities()
+	capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+	config.capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {})
+	require("lspconfig")[server].setup(config)
+end
+
 require("shawn.lsp.java")
-require("shawn.lsp.angular")
-require("shawn.lsp.vue")
-require("shawn.lsp.json")
-require("shawn.lsp.markdown")
-require("shawn.lsp.c_sharp")
-require("shawn.lsp.css")
-require("shawn.lsp.latex")
-require("shawn.lsp.docker")
-require("shawn.lsp.yaml")
 require("shawn.lsp.rust")
-require("shawn.lsp.go")
-require("shawn.lsp.cpp")
-require("shawn.lsp.bash")
-require("shawn.lsp.html")
-require("shawn.lsp.ts")
-require("shawn.lsp.lua")
-require("shawn.lsp.python")
-require("shawn.lsp.groovy")
-require("shawn.lsp.svelte")
-require("shawn.lsp.toml")
-require("shawn.lsp.ocaml")
--- require("shawn.lsp.ansible")
 
 -- color settings
 vim.cmd([[
