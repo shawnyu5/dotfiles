@@ -3,8 +3,3 @@ concurrency:
 	group: ${{ github.workflow }}-${{ github.ref }}
 	cancel-in-progress: true
 endsnippet
-
-snippet checkout "Use the latest checkout action"
-- name: Checkout repo
-  uses: actions/checkout@v4
-endsnippet
