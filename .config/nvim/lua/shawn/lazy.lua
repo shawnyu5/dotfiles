@@ -38,16 +38,6 @@ local pluginSpec = {
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
 	{
-		"Exafunction/codeium.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-		},
-		config = function()
-			require("codeium").setup({})
-		end,
-	},
-	{
 		"hashivim/vim-terraform",
 		ft = { "terraform" },
 	},
@@ -421,6 +411,20 @@ local pluginSpec = {
 		ft = { "html" },
 	}, -- auto close html tags,
 }
+
+local utils = require("shawn.utils")
+if utils.get_system_config().system_name ~= utils.system_names.work_laptop then
+	table.insert(pluginSpec, {
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	})
+end
 
 lazy.setup(pluginSpec, {
 	root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
