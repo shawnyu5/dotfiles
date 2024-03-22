@@ -373,7 +373,6 @@ local pluginSpec = {
 		event = "InsertEnter",
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
-	{ "karb94/neoscroll.nvim" },
 	{ "shawnyu5/mdnav" }, -- opening links in markdown,
 	{ "preservim/nerdcommenter" }, -- block commenting,
 	{ "nvim-telescope/telescope.nvim" },
@@ -422,6 +421,13 @@ if utils.get_system_config().system_name ~= utils.system_names.work_laptop then
 		},
 		config = function()
 			require("codeium").setup({})
+		end,
+	})
+
+	table.insert(pluginSpec, {
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("shawn.neoscroll")
 		end,
 	})
 end
