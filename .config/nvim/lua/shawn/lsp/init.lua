@@ -102,6 +102,13 @@ local servers = {
 	gopls = {
 		settings = {
 			gopls = {
+				hints = {
+					assignVariableTypes = true,
+					compositeLiteralFields = true,
+					functionTypeParameters = true,
+					parameterNames = true,
+					rangeVariableTypes = true,
+				},
 				experimentalPostfixCompletions = true,
 				analyses = {
 					unusedparams = true,
