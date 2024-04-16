@@ -16,7 +16,7 @@ unsetopt multios
 
 #export TERM="screen-256color"
 
-# fpath=(~/personal/custom_completion $fpath)
+fpath=(~/personal/custom_completion $fpath)
 
 # allow auto completion
 autoload -U compinit
