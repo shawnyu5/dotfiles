@@ -128,7 +128,11 @@ local servers = {
 	cssls = {},
 	texlab = {},
 	dockerls = {},
-	yamlls = {},
+	yamlls = {
+		on_attach = function(_, bufnr)
+			utils.disable_formatting_on_save(bufnr)
+		end,
+	},
 	clangd = {
 		capabilities = {
 			offsetEncoding = { "utf-16" },
