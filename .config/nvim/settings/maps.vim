@@ -28,7 +28,7 @@ nnoremap <silent> <C-f> :MaximizerToggle<CR>
 
 " zz centers the cursor both vertically and horizontally
 autocmd Filetype csv nnoremap zz zzzszH
-autocmd Filetype markdown nnoremap zz zzzszH
+" autocmd Filetype markdown nnoremap zz zzzszH
 
 " paste in visual mode without copying to clipboard
 xnoremap p "_dP
