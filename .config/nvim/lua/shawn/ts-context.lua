@@ -1,12 +1,12 @@
 local ok, context = pcall(require, "treesitter-context")
 if not ok then
-   vim.notify("treesitter-context not installed...", vim.log.ERROR)
-   return
+	vim.notify("treesitter-context not installed...", vim.log.ERROR)
+	return
 end
 
 context.setup({
 	enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-	max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+	max_lines = 12, -- How many lines the window should span. Values <= 0 mean no limit.
 	trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
 	patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
 		-- For all filetypes
@@ -19,7 +19,7 @@ context.setup({
 			"method",
 			"for",
 			"while",
-         "if",
+			"if",
 			"switch",
 			"case",
 		},
