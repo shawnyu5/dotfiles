@@ -37,10 +37,10 @@ local pluginSpec = {
 	-- },
 	-- -- { "wbthomason/packer.nvim" },
 	{ "NFrid/due.nvim" },
-	{
-		"hashivim/vim-terraform",
-		ft = { "terraform" },
-	},
+	-- {
+	--    "hashivim/vim-terraform",
+	--    ft = { "terraform" },
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
