@@ -71,7 +71,7 @@ oil.setup({
 		["<C-r>"] = "actions.refresh",
 		["-"] = "actions.parent",
 		["_"] = "actions.open_cwd",
-		-- ["g\\"] = "actions.toggle_trash",
+		["<C-c>"] = "actions.close",
 	},
 	-- Set to false to disable all of the above keymaps
 	use_default_keymaps = false,
@@ -176,4 +176,5 @@ oil.setup({
 	},
 })
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "_", require("oil.actions").open_cwd.callback, { desc = "Open cwd in Oil" })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open current file in Oil" })
