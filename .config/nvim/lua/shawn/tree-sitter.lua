@@ -16,7 +16,7 @@ require("nvim-treesitter.configs").setup({
 		"java",
 		"typescript",
 		"rust",
-		"dockerfile",
+		-- "dockerfile",
 		"markdown",
 		"markdown_inline",
 		"yaml",
