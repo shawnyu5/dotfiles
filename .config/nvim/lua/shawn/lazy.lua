@@ -229,9 +229,17 @@ local pluginSpec = {
 
 	{ "andweeb/presence.nvim" },
 
+	-- {
+	--    "preservim/nerdtree",
+	--    -- cmd = { "NERDTreeToggle", "NERDTreeFind" },
+	-- },
 	{
-		"preservim/nerdtree",
-		-- cmd = { "NERDTreeToggle", "NERDTreeFind" },
+		"stevearc/oil.nvim",
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("shawn.oil")
+		end,
 	},
 	{ "windwp/nvim-autopairs" },
 	{
