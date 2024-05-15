@@ -30,6 +30,7 @@ local ensure_installed = {
 	-- "ocaml-lsp",
 	-- "ocamlformat",
 	"cpptools",
+	"terraform-ls",
 }
 
 mason.setup()

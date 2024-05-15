@@ -187,6 +187,7 @@ local servers = {
 		cmd = { "groovy-language-server" },
 	},
 	taplo = {},
+	terraformls = {},
 }
 
 -- for loop over all servers
