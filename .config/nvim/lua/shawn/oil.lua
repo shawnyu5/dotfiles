@@ -71,7 +71,7 @@ oil.setup({
 		["<C-r>"] = "actions.refresh",
 		["-"] = "actions.parent",
 		["_"] = "actions.open_cwd",
-		["<C-c>"] = "actions.close",
+		["q"] = "actions.close",
 	},
 	-- Set to false to disable all of the above keymaps
 	use_default_keymaps = false,
