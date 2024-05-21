@@ -39,9 +39,7 @@ feat({}): {}
 				i(2, ""),
 				i(3, ""),
 			},
-			{
-				-- desc = "feature commit",
-			}
+			{}
 		)
 	),
 	s(
@@ -57,9 +55,7 @@ fix({}): {}
 				i(2, ""),
 				i(3, ""),
 			},
-			{
-				-- desc = "feature commit",
-			}
+			{}
 		)
 	),
 	s(
@@ -75,9 +71,7 @@ chore({}): {}
 				i(2, ""),
 				i(3, ""),
 			},
-			{
-				-- desc = "feature commit",
-			}
+			{}
 		)
 	),
 	s(
@@ -93,9 +87,22 @@ test({}): {}
 				i(2, ""),
 				i(3, ""),
 			},
+			{}
+		)
+	),
+	s(
+		"bk",
+		fmt(
+			[[
+BREAKING CHANGE: {}
+
+{}
+   ]],
 			{
-				-- desc = "feature commit",
-			}
+				i(1, ""),
+				i(2, ""),
+			},
+			{}
 		)
 	),
 })
