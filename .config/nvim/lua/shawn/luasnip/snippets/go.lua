@@ -26,41 +26,34 @@ local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
 ls.add_snippets("go", {
-	--  s(
-	--     "example1",
-	--     fmt("just an {iNode1}", {
-	--        iNode1 = i(1, "example"),
-	--     })
-	--  ),
-	--  s(
-	--     "example3",
-	--     fmt(
-	--        [[
-	-- if <> then
-	--   <>
-	-- end
-	-- ]],
-	--        {
-	--           -- i(1) is at nodes[1], i(2) at nodes[2].
-	--           i(1, "not now"),
-	--           i(2, "when"),
-	--        },
-	--        {
-	--           delimiters = "<>",
-	--        }
-	--     )
-	--  ),
 	s(
 		"err",
 		fmt(
 			[[
-if <> != nil {
-   <>
+if err != nil {
+   log.Fatal(<>)
 }
   ]],
 			{
 				i(1, "err"),
-				i(2, "log.Fatal(err)"),
+			},
+			{
+				delimiters = "<>",
+			}
+		)
+	),
+	s(
+		"func",
+		fmt(
+			[[
+func <>(<>) {
+   <>
+}
+  ]],
+			{
+				i(1, ""),
+				i(2, ""),
+				i(3, ""),
 			},
 			{
 				delimiters = "<>",
@@ -68,20 +61,3 @@ if <> != nil {
 		)
 	),
 })
-
--- ls.add_snippets("go", {
---    s("err", {
---       fmt(
---          [[if <> != nil {
---             <>
---          }]],
---          {
---             i(1, "err"),
---             i(2, "log.Fatal(err)"),
---          },
---          {
---             delimiters = "<>",
---          }
---       ),
---    }),
--- })
