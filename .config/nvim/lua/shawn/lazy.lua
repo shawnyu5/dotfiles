@@ -242,17 +242,28 @@ local pluginSpec = {
 		end,
 	},
 	{ "windwp/nvim-autopairs" },
+	-- {
+	--    "SirVer/ultisnips",
+	--    event = "InsertEnter",
+	--    config = function()
+	--       require("shawn.ultisnips")
+	--    end,
+	-- },
 	{
-		"SirVer/ultisnips",
-		event = "InsertEnter",
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
 		config = function()
-			require("shawn.ultisnips")
+			require("shawn.luasnip")
 		end,
+		-- dependencies = { "molleweide/LuaSnip-snippets.nvim" },
 	},
 	{
 		"honza/vim-snippets",
-		event = "InsertEnter",
-		dependencies = { "SirVer/ultisnips" },
+		-- event = "InsertEnter",
+		-- dependencies = { "SirVer/ultisnips" },
 	},
 	{
 		"j-hui/fidget.nvim",
@@ -292,7 +303,7 @@ local pluginSpec = {
 	-- },
 	{
 		"hrsh7th/nvim-cmp",
-		event = "InsertEnter",
+		-- event = "InsertEnter",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lua",
@@ -300,9 +311,10 @@ local pluginSpec = {
 			"andersevenrud/cmp-tmux",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
+			"saadparwaiz1/cmp_luasnip",
 			{ "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
 			-- "zbirenbaum/copilot-cmp",
-			"quangnguyen30192/cmp-nvim-ultisnips",
+			-- "quangnguyen30192/cmp-nvim-ultisnips",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
 		config = function()
