@@ -1,13 +1,15 @@
 local ls = require("luasnip")
+require("luasnip.loaders.from_snipmate").load()
 require("shawn.luasnip.snippets.go")
+require("shawn.luasnip.snippets.gitcommit")
 
 vim.keymap.set({ "i" }, "<C-s>", function()
 	ls.expand()
 end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<C-k>", function()
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
 	ls.jump(1)
 end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<C-J>", function()
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
 	ls.jump(-1)
 end, { silent = true })
 
