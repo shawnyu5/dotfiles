@@ -12,7 +12,8 @@ end
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -37,11 +38,12 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp_signature_help" },
 		-- { name = "copilot" },
-		{ name = "codeium" },
+		-- { name = "codeium" },
 		{ name = "git" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "ultisnips" }, -- For ultisnips users.
+		{ name = "luasnip" },
+		-- { name = "ultisnips" },
 		{ name = "path" },
 		{ name = "buffer" },
 		{
