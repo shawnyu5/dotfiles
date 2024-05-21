@@ -228,10 +228,12 @@ local pluginSpec = {
 	},
 
 	{ "andweeb/presence.nvim" },
-
 	-- {
 	--    "preservim/nerdtree",
 	--    -- cmd = { "NERDTreeToggle", "NERDTreeFind" },
+	--    config = function()
+	--       require("shawn.nerdtree")
+	--    end,
 	-- },
 	{
 		"stevearc/oil.nvim",
