@@ -25,9 +25,9 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
---- Return a snippet with git commit prefix
+--- Construct a snippet with git commit prefix
 ---@param prefix string a valid git commit
----@return snippet snippet snippet
+---@return snippet snippet a snippet
 local function git_commit_snippet(prefix)
 	return s(
 		prefix,
