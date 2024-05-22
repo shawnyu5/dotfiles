@@ -25,103 +25,41 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
+--- Construct a snippet with git commit prefix
+---@param prefix string a valid git commit
+---@return snippet snippet a snippet
+local function git_commit_snippet(prefix)
+	return s(
+		prefix,
+		fmt(
+			string.format(
+				[[
+%s({}): {}
+
+{}
+  ]],
+				prefix
+			),
+			{
+				i(1, "scope"),
+				i(2, "message"),
+				i(3, ""),
+			},
+			{}
+		)
+	)
+end
+
 ls.add_snippets("gitcommit", {
-	s(
-		"feat",
-		fmt(
-			[[
-feat({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
-	s(
-		"fix",
-		fmt(
-			[[
-fix({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
-	s(
-		"build",
-		fmt(
-			[[
-build({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
-	s(
-		"chore",
-		fmt(
-			[[
-chore({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
-	s(
-		"test",
-		fmt(
-			[[
-test({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
-	s(
-		"ci",
-		fmt(
-			[[
-ci({}): {}
-
-{}
-  ]],
-			{
-				i(1, ""),
-				i(2, ""),
-				i(3, ""),
-			},
-			{}
-		)
-	),
+	git_commit_snippet("feat"),
+	git_commit_snippet("fix"),
+	git_commit_snippet("build"),
+	git_commit_snippet("perf"),
+	git_commit_snippet("chore"),
+	git_commit_snippet("test"),
+	git_commit_snippet("ci"),
+	git_commit_snippet("style"),
+	git_commit_snippet("refactor"),
 	s(
 		"bk",
 		fmt(
@@ -131,7 +69,7 @@ BREAKING CHANGE: {}
 {}
    ]],
 			{
-				i(1, ""),
+				i(1, "title"),
 				i(2, ""),
 			},
 			{}
