@@ -50,7 +50,6 @@ local function git_commit_snippet(prefix)
 	)
 end
 
-ls.cleanup()
 ls.add_snippets("gitcommit", {
 	git_commit_snippet("feat"),
 	git_commit_snippet("fix"),
