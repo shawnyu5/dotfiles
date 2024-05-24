@@ -55,6 +55,7 @@ ls.add_snippets("gitcommit", {
 	git_commit_snippet("fix"),
 	git_commit_snippet("build"),
 	git_commit_snippet("perf"),
+	git_commit_snippet("docs"),
 	git_commit_snippet("chore"),
 	git_commit_snippet("test"),
 	git_commit_snippet("ci"),
