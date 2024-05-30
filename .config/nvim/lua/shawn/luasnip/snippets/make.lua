@@ -25,36 +25,15 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
-ls.add_snippets("go", {
+ls.add_snippets("make", {
 	s(
-		"err",
+		"help",
 		fmt(
 			[[
-if err != nil {
-   log.Fatal(<>)
-}
-  ]],
-			{
-				i(1, "err"),
-			},
-			{
-				delimiters = "<>",
-			}
-		)
-	),
-	s(
-		"func",
-		fmt(
-			[[
-func <>(<>) {
-   <>
-}
-  ]],
-			{
-				i(1, "name"),
-				i(2, ""),
-				i(3, ""),
-			},
+help:
+   @awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[$$()% a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+   ]],
+			{},
 			{
 				delimiters = "<>",
 			}
