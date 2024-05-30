@@ -2,6 +2,8 @@ local ls = require("luasnip")
 require("luasnip.loaders.from_snipmate").load()
 require("shawn.luasnip.snippets.go")
 require("shawn.luasnip.snippets.gitcommit")
+require("shawn.luasnip.snippets.make")
+require("shawn.luasnip.snippets.yaml")
 
 vim.keymap.set({ "i" }, "<C-s>", function()
 	ls.expand()

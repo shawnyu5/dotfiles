@@ -25,39 +25,17 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
-ls.add_snippets("go", {
+ls.add_snippets("yaml", {
 	s(
-		"err",
+		"checkout",
 		fmt(
 			[[
-if err != nil {
-   log.Fatal(<>)
-}
-  ]],
-			{
-				i(1, "err"),
-			},
-			{
-				delimiters = "<>",
-			}
-		)
-	),
-	s(
-		"func",
-		fmt(
-			[[
-func <>(<>) {
-   <>
-}
-  ]],
-			{
-				i(1, "name"),
-				i(2, ""),
-				i(3, ""),
-			},
-			{
-				delimiters = "<>",
-			}
+- name: Checkout code
+  uses: actions/checkout@v3
+
+   ]],
+			{},
+			{}
 		)
 	),
 })
