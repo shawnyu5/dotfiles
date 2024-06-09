@@ -73,7 +73,7 @@ mkdnflow.setup({
 		-- dont overide y* mappings
 		MkdnYankFileAnchorLink = false,
 		MkdnIncreaseHeading = { "n", "+" },
-		MkdnDecreaseHeading = { "n", "-" },
+		MkdnDecreaseHeading = false,
 		MkdnToggleToDo = { { "n", "v" }, "<C-Space>" },
 		MkdnNewListItem = false,
 		MkdnNewListItemBelowInsert = { "n", "o" },
