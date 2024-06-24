@@ -64,7 +64,7 @@ func main() {
 		log.Printf("Syncing config from `%s` to `%s`", ogBranchName, branch)
 
 		// command to checkout config files from og branch into current branch
-		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync", ".config/gh")
+		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync", ".config/gh", "work_history.md")
 
 		err = exec.Command("git", "checkout", branch).Run()
 		if err != nil {
