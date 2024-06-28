@@ -23,7 +23,9 @@ alias cdone="cd /mnt/c/Users/shawny/OneDrive\ -\ Fundserv\ Inc"
 alias google-chrome-stable="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
 alias github_runner="ssh -i ~/.ssh/github_runner azureuser@10.142.1.11"
 alias k="kubectl"
+# Github approve comment dev
 alias gacd="gh pr review --approve && gh pr comment --body 'atlantis apply -p dev'"
+# Github approve comment qa
 alias gacq="gh pr review --approve && gh pr comment --body 'atlantis apply -p qa'"
 
 export GH_BROWSER='"/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"'
