@@ -51,4 +51,14 @@ ls.add_snippets("markdown", {
 			{}
 		)
 	),
+	s(
+		"bt",
+		fmt(
+			[[
+   ### TODO book tickets
+   ]],
+			{},
+			{}
+		)
+	),
 })

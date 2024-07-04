@@ -176,5 +176,5 @@ oil.setup({
 	},
 })
 
-vim.keymap.set("n", "_", require("oil.actions").open_cwd.callback, { desc = "Open cwd in Oil" })
+-- vim.keymap.set("n", "_", require("oil.actions").open_cwd.callback, { desc = "Open cwd in Oil" })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open current file in Oil" })
