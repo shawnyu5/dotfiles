@@ -4,6 +4,7 @@ require("shawn.luasnip.snippets.go")
 require("shawn.luasnip.snippets.gitcommit")
 require("shawn.luasnip.snippets.make")
 require("shawn.luasnip.snippets.yaml")
+require("shawn.luasnip.snippets.markdown")
 
 vim.keymap.set({ "i" }, "<C-s>", function()
 	ls.expand()
