@@ -29,34 +29,25 @@ local ms = ls.multi_snippet
 ---@param prefix string a valid git commit
 ---@return snippet snippet a snippet
 local function git_commit_snippet(prefix)
-	return s(prefix, {
-		t(prefix),
-		d(1, function(args)
-			local scope_message = args[1][1]
-			if scope_message == "" then
-				return sn(nil, {})
-			else
-				return sn(nil, {
-					t("("),
-				})
-			end
-		end, 2),
-		i(2, ""),
-		d(3, function(args)
-			local scope_message = args[1][1]
-			if scope_message == "" then
-				return sn(nil, {})
-			else
-				return sn(nil, {
-					t(")"),
-				})
-			end
-		end, 2),
-		t(": "),
-		i(4, "message"),
-		t({ "", "", "" }),
-		i(5),
-	})
+	return s(
+		prefix,
+		fmt(
+			string.format(
+				[[
+%s({}): {}
+
+{}
+  ]],
+				prefix
+			),
+			{
+				i(1, "scope"),
+				i(2, "message"),
+				i(3, ""),
+			},
+			{}
+		)
+	)
 end
 
 ls.add_snippets("gitcommit", {
