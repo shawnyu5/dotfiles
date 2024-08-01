@@ -345,7 +345,7 @@ local pluginSpec = {
 	-- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	{
 		"chrisbra/csv.vim",
-		ft = { "csv" },
+		-- ft = { "csv" },
 	},
 	{
 		-- "jose-elias-alvarez/null-ls.nvim",

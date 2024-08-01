@@ -64,9 +64,21 @@ oil.setup({
 	keymaps = {
 		["g?"] = "actions.show_help",
 		["<CR>"] = "actions.select",
-		["<C-v>"] = "actions.select_vsplit",
-		["<C-x>"] = "actions.select_split",
-		["<C-t>"] = "actions.select_tab",
+		["<C-v>"] = {
+			"actions.select",
+			opts = { vertical = true, close = true },
+			desc = "Open the entry in a vertical split, and close the Oil buffer",
+		},
+		["<C-x>"] = {
+			"actions.select",
+			opts = { horizontal = true, close = true },
+			desc = "Open the entry in a horizontal split, and close the Oil buffer",
+		},
+		["<C-t>"] = {
+			"actions.select",
+			opts = { tab = true },
+			desc = "Open the entry in a new tab",
+		},
 		["<C-p>"] = "actions.preview",
 		["<C-r>"] = "actions.refresh",
 		["-"] = "actions.parent",
@@ -176,5 +188,5 @@ oil.setup({
 	},
 })
 
--- vim.keymap.set("n", "_", require("oil.actions").open_cwd.callback, { desc = "Open cwd in Oil" })
+vim.keymap.set("n", "<leader>-", require("oil.actions").open_cwd.callback, { desc = "Open cwd in Oil" })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open current file in Oil" })
