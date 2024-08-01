@@ -25,6 +25,8 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
+ls.cleanup()
+
 --- Construct a snippet with git commit prefix
 ---@param prefix string a valid git commit
 ---@return snippet snippet a snippet
@@ -57,9 +59,28 @@ local function git_commit_snippet(prefix)
 		t({ "", "", "" }),
 		i(5),
 	})
+	--    return s(
+	--       prefix,
+	--       fmt(
+	--          string.format(
+	--             [[
+	-- %s({}): {}
+
+	-- {}
+	--   ]],
+	--             prefix
+	--          ),
+	--          {
+	--             i(1, "scope"),
+	--             i(2, "message"),
+	--             i(3, ""),
+	--          },
+	--          {}
+	--       )
+	--    )
 end
 
-ls.add_snippets("gitcommit", {
+ls.add_snippets("lua", {
 	git_commit_snippet("feat"),
 	git_commit_snippet("fix"),
 	git_commit_snippet("build"),
