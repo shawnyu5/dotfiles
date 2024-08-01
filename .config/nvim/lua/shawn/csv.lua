@@ -17,11 +17,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	group = csv_augroup,
 	pattern = "*.csv",
 	callback = function()
-      -- make sure the current line is not empty, otherwise `ArrangeColumn` will throw an error
+		-- make sure the current line is not empty, otherwise `ArrangeColumn` will throw an error
 		local current_line = vim.fn.getline(".")
-      if current_line ~= "" then
-         vim.cmd("ArrangeColumn")
-      end
+		if current_line ~= "" then
+			vim.cmd("ArrangeColumn")
+		end
 	end,
 	desc = "ArrangeColumn on InsertLeave",
 })
