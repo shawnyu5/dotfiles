@@ -25,7 +25,7 @@ local ensure_installed = {
 	"typescript-language-server",
 	"lua-language-server",
 	"yamllint",
-	"taplo",
+	-- "taplo",
 	"stylua",
 	-- "ocaml-lsp",
 	-- "ocamlformat",
