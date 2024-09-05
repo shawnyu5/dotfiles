@@ -158,7 +158,7 @@ local servers = {
 			},
 		},
 	},
-	tsserver = {
+	ts_ls = {
 		on_attach = function(_, bufnr)
 			utils.disable_formatting_on_save(bufnr)
 		end,
