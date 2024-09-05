@@ -44,6 +44,7 @@ local pluginSpec = {
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
 		opts = {
 			signs = false, -- show icons in the signs column
 			sign_priority = 8, -- sign priority
@@ -237,7 +238,6 @@ local pluginSpec = {
 	-- },
 	{
 		"stevearc/oil.nvim",
-		-- Optional dependencies
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("shawn.oil")
@@ -253,6 +253,7 @@ local pluginSpec = {
 	-- },
 	{
 		"L3MON4D3/LuaSnip",
+		event = "VeryLazy",
 		-- follow latest release.
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
@@ -279,6 +280,10 @@ local pluginSpec = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
 		},
+		event = "VeryLazy",
+		config = function()
+			require("shawn.refactor")
+		end,
 	},
 	-- native LSP
 	{
@@ -397,7 +402,10 @@ local pluginSpec = {
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "shawnyu5/mdnav" }, -- opening links in markdown,
-	{ "preservim/nerdcommenter" }, -- block commenting,
+	{
+		"preservim/nerdcommenter",
+		event = "VeryLazy",
+	},
 	{ "nvim-telescope/telescope.nvim" },
 	{
 		"Shatur/neovim-session-manager",
