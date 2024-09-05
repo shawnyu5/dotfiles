@@ -99,6 +99,13 @@
     name: gdb
     state: latest
 
+- name: install terraform
+  become: true
+  ignore_errors: true
+  package:
+    name: ansible
+    state: latest
+
 - name: install kubernetes related packages
   become: true
   ignore_errors: true
