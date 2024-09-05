@@ -22,6 +22,7 @@ require("nvim-treesitter.configs").setup({
 		"yaml",
 		"tsx",
 		"c_sharp",
+		"terraform",
 	},
 
 	highlight = {
