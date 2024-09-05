@@ -274,16 +274,17 @@ local pluginSpec = {
 	},
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "ThePrimeagen/harpoon" },
-	-- {
-	--    "ThePrimeagen/refactoring.nvim",
-	--    dependencies = {
-	--       "nvim-lua/plenary.nvim",
-	--       "nvim-treesitter/nvim-treesitter",
-	--    },
-	--    config = function()
-	--       require("shawn.refactor")
-	--    end,
-	-- },
+	{
+		"ThePrimeagen/refactoring.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		event = "VeryLazy",
+		config = function()
+			require("shawn.refactor")
+		end,
+	},
 	-- native LSP
 	{
 		"williamboman/mason.nvim",
