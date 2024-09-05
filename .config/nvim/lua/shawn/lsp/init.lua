@@ -8,6 +8,7 @@ vim.notify = function(msg, ...)
 
 	notify(msg, ...)
 end
+
 local utils = require("shawn.lsp.utils")
 
 -- LSP Enable diagnostics

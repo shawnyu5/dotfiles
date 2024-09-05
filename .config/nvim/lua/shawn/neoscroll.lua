@@ -1,9 +1,4 @@
-local ok, neoscroll = pcall(require, "neoscroll")
-if not ok then
-	print("neoscroll not installed...")
-	return
-end
-
+local neoscroll = require("neoscroll")
 neoscroll.setup({
 	-- All these keys will be mapped to their corresponding default scrolling animation
 	mappings = { "<C-u>", "<C-d>" },
@@ -18,9 +13,21 @@ neoscroll.setup({
 	performance_mode = false, -- Disable "Performance Mode" on all buffers.
 })
 
-local t = {}
--- Syntax: t[keys] = {function, {function arguments}}
-t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "150" } }
-t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "150" } }
+-- local t = {}
+-- -- Syntax: t[keys] = {function, {function arguments}}
+-- t["<C-u>"] = { "scroll", { "-vim.wo.scroll", "true", "150" } }
+-- t["<C-d>"] = { "scroll", { "vim.wo.scroll", "true", "150" } }
 
-require("neoscroll.config").set_mappings(t)
+local keymap = {
+	["<C-u>"] = function()
+		neoscroll.ctrl_u({ duration = 150 })
+	end,
+	["<C-d>"] = function()
+		neoscroll.ctrl_d({ duration = 150 })
+	end,
+}
+
+local modes = { "n", "v", "x" }
+for key, func in pairs(keymap) do
+	vim.keymap.set(modes, key, func)
+end
