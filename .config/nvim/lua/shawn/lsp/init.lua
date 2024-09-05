@@ -192,6 +192,7 @@ local servers = {
 	},
 	taplo = {},
 	terraformls = {},
+	tflint = {},
 }
 
 -- for loop over all servers

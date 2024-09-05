@@ -31,6 +31,7 @@ local ensure_installed = {
 	-- "ocamlformat",
 	"cpptools",
 	"terraform-ls",
+	"tflint",
 }
 
 mason.setup()
