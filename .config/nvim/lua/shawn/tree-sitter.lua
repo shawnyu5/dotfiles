@@ -12,7 +12,6 @@ require("nvim-treesitter.configs").setup({
 		"lua",
 		"python",
 		"cpp",
-		-- "vim",
 		"java",
 		"typescript",
 		"rust",
@@ -23,8 +22,11 @@ require("nvim-treesitter.configs").setup({
 		"tsx",
 		"c_sharp",
 		"terraform",
+		"json",
+		"toml",
 	},
-
+	auto_install = true,
+	sync_install = false,
 	highlight = {
 		enable = true,
 		-- disable ={ "html" },
