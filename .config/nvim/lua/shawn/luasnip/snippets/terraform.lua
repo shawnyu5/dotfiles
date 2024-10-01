@@ -25,17 +25,24 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
-ls.add_snippets("yaml", {
+ls.add_snippets("terraform", {
 	s(
-		"checkout",
+		"variable",
 		fmt(
 			[[
-- name: Checkout code
-  uses: actions/checkout@v4
-
+variable "<variable>" {
+   description = "<description>"
+   type = <type>
+}
    ]],
-			{},
-			{}
+			{
+				variable = i(1, ""),
+				description = i(2, "description"),
+				type = i(3, "string"),
+			},
+			{
+				delimiters = "<>",
+			}
 		)
 	),
 })
