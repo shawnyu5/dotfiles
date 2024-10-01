@@ -24,7 +24,7 @@ alias google-chrome-stable="/mnt/c/Program\ Files/Google/Chrome/Application/chro
 alias github_runner="ssh -i ~/.ssh/github_runner azureuser@10.142.1.11"
 alias k="kubectl"
 # Github approve comment dev
-alias gacd="gh pr review --approve && gh pr comment --body 'atlantis apply -p dev'"
+alias gacd="gh pr comment --body 'atlantis apply -p dev'"
 # Github approve comment qa
 alias gacq="gh pr review --approve && gh pr comment --body 'atlantis apply -p qa'"
 
