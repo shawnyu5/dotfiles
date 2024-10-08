@@ -308,40 +308,40 @@ local pluginSpec = {
 	-- {
 	--    "simrat39/rust-tools.nvim",
 	-- },
-	-- {
-	--    "hrsh7th/nvim-cmp",
-	--    -- event = "InsertEnter",
-	--    dependencies = {
-	--       "hrsh7th/cmp-nvim-lsp",
-	--       "hrsh7th/cmp-nvim-lua",
-	--       "hrsh7th/cmp-buffer",
-	--       "andersevenrud/cmp-tmux",
-	--       "hrsh7th/cmp-path",
-	--       "hrsh7th/cmp-cmdline",
-	--       "saadparwaiz1/cmp_luasnip",
-	--       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
-	--       -- "zbirenbaum/copilot-cmp",
-	--       -- "quangnguyen30192/cmp-nvim-ultisnips",
-	--       "hrsh7th/cmp-nvim-lsp-signature-help",
-	--    },
-	--    config = function()
-	--       require("shawn.cmp")
-	--    end,
-	-- },
 	{
-		"saghen/blink.cmp",
-		lazy = false, -- lazy loading handled internally
-		-- optional: provides snippets for the snippet source
-		dependencies = "rafamadriz/friendly-snippets",
-
-		-- use a release tag to download pre-built binaries
-		version = "v0.*",
-		-- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-		-- build = 'cargo build --release',
+		"hrsh7th/nvim-cmp",
+		-- event = "InsertEnter",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-nvim-lua",
+			"hrsh7th/cmp-buffer",
+			"andersevenrud/cmp-tmux",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"saadparwaiz1/cmp_luasnip",
+			{ "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
+			-- "zbirenbaum/copilot-cmp",
+			-- "quangnguyen30192/cmp-nvim-ultisnips",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
+		},
 		config = function()
-			require("shawn.blink_cmp")
+			require("shawn.cmp")
 		end,
 	},
+	-- {
+	--    "saghen/blink.cmp",
+	--    lazy = false, -- lazy loading handled internally
+	--    -- optional: provides snippets for the snippet source
+	--    dependencies = "rafamadriz/friendly-snippets",
+
+	--    -- use a release tag to download pre-built binaries
+	--    version = "v0.*",
+	--    -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+	--    -- build = 'cargo build --release',
+	--    config = function()
+	--       require("shawn.blink_cmp")
+	--    end,
+	-- },
 	{
 		"stevearc/conform.nvim",
 		config = function()
