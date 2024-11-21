@@ -44,7 +44,24 @@ local pluginSpec = {
 	{
 		"tadaa/vimade",
 		config = function()
-			require("vimade").setup()
+			require("vimade").setup({
+				fadelevel = function(style, state)
+					local buftype = vim.api.nvim_get_option_value("buftype", {
+						scope = "local",
+					})
+					if buftype == "nofile" then
+						return 0.9
+					end
+
+					local filetype = vim.api.nvim_get_option_value("filetype", {
+						scope = "local",
+					})
+					if filetype == "help" then
+						return 1
+					end
+					return 0.5
+				end,
+			})
 		end,
 		event = "UIEnter",
 	},
