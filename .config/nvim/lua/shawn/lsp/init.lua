@@ -2,6 +2,7 @@ local notify = vim.notify
 vim.notify = function(msg, ...)
 	if
 		msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
+		or msg:find("server cancelled the request")
 	then
 		return
 	end
