@@ -2,4 +2,4 @@
 xset r rate 300 45
 # swaping escape and caps lock
 # setxkbmap -option caps:swapescape
-echo "remapped"
+notify-send "Keys remapped"
