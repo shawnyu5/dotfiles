@@ -14,13 +14,25 @@ create_autocmd({ "BufEnter" }, {
 })
 
 create_augroup("highlight_yank", { clear = true })
-create_autocmd({ "TextYankPost" }, {
-	group = "highlight_yank",
-	pattern = "*",
-	callback = function()
-		require("vim.hl").on_yank({ timeout = 104 })
-	end,
-})
+
+local utils = require("shawn.utils")
+if utils.get_system_config().system_name == utils.system_names.work_laptop then
+	create_autocmd({ "TextYankPost" }, {
+		group = "highlight_yank",
+		pattern = "*",
+		callback = function()
+			require("vim.highlight").on_yank({ timeout = 104 })
+		end,
+	})
+else
+	create_autocmd({ "TextYankPost" }, {
+		group = "highlight_yank",
+		pattern = "*",
+		callback = function()
+			require("vim.hl").on_yank({ timeout = 104 })
+		end,
+	})
+end
 
 create_augroup("json_lsp", { clear = true })
 create_autocmd({ "BufEnter" }, {
