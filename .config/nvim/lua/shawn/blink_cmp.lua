@@ -1,58 +1,98 @@
 local blink = require("blink-cmp")
 
 blink.setup({
-	-- for keymap, all values may be string | string[]
-	-- use an empty table to disable a keymap
 	keymap = {
-		show = "<C-space>",
-		hide = "<C-e>",
-		accept = "<CR>",
-		select_next = { "<Down>", "<Tab>", "<C-n>" },
-		select_prev = { "<Up>", "<S-Tab>", "<C-p>" },
-
-		show_documentation = {},
-		hide_documentation = {},
-		scroll_documentation_up = "<C-b>",
-		scroll_documentation_down = "<C-f>",
-
-		snippet_forward = "<C-k>",
-		snippet_backward = "<C-j>",
+		preset = "default",
+		["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+		["<C-e>"] = { "hide" },
+		["<C-y>"] = { "select_and_accept" },
+		["<CR>"] = { "accept" },
+		["<Down>"] = { "select_next", "fallback" },
+		["<Tab>"] = { "select_next", "fallback" },
+		["<C-n>"] = { "select_next", "fallback" },
+		["<C-p>"] = { "select_prev", "fallback" },
+		["<Up>"] = { "select_prev", "fallback" },
+		["<S-Tab>"] = { "select_prev", "fallback" },
+		["<C-k>"] = { "snippet_forward", "fallback" },
+		["<C-j>"] = { "snippet_backward", "fallback" },
 	},
 
 	accept = {
 		create_undo_point = true,
-		auto_brackets = {
-			enabled = true,
-			default_brackets = { "(", ")" },
-			override_brackets_for_filetypes = {},
-			-- Overrides the default blocked filetypes
-			force_allow_filetypes = {},
-			blocked_filetypes = {},
-			-- Synchronously use the kind of the item to determine if brackets should be added
-			kind_resolution = {
-				enabled = true,
-				blocked_filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
+		-- Function used to expand snippets, for luasnip users, you may use::
+		-- function(snippet) require('luasnip').lsp_expand(snippet) end
+		-- See the "Luasnip" section for info on setting up the luasnip source
+		expand_snippet = function(snippet)
+			require("luasnip").lsp_expand(snippet)
+		end,
+
+		sources = {
+			completion = {
+				-- WARN: add the rest of your providers here, unless you're using `opts_extend`
+				-- and defining this outside of your primary `blink.cmp` config
+				-- see the default configuration for the default providers
+				enabled_providers = { "luasnip", "lsp", "path", "buffer" },
 			},
-			-- Asynchronously use semantic token to determine if brackets should be added
-			semantic_token_resolution = {
-				enabled = true,
-				blocked_filetypes = {},
+			providers = {
+				luasnip = {
+					name = "luasnip",
+					module = "blink.compat.source",
+
+					score_offset = -3,
+
+					opts = {
+						use_show_condition = false,
+						show_autosnippets = true,
+					},
+				},
+
+				auto_brackets = {
+					enabled = false,
+					default_brackets = { "(", ")" },
+					override_brackets_for_filetypes = {},
+					-- Overrides the default blocked filetypes
+					force_allow_filetypes = {},
+					blocked_filetypes = {},
+					-- Synchronously use the kind of the item to determine if brackets should be added
+					kind_resolution = {
+						enabled = true,
+						blocked_filetypes = { "typescriptreact", "javascriptreact", "vue" },
+					},
+					-- Asynchronously use semantic token to determine if brackets should be added
+					semantic_token_resolution = {
+						enabled = true,
+						blocked_filetypes = {},
+						-- How long to wait for semantic tokens to return before assuming no brackets should be added
+						timeout_ms = 400,
+					},
+				},
 			},
 		},
 	},
-
 	trigger = {
 		completion = {
+			-- 'prefix' will fuzzy match on the text before the cursor
+			-- 'full' will fuzzy match on the text before *and* after the cursor
+			-- example: 'foo_|_bar' will match 'foo_' for 'prefix' and 'foo__bar' for 'full'
+			keyword_range = "full",
 			-- regex used to get the text when fuzzy matching
 			-- changing this may break some sources, so please report if you run into issues
-			-- todo: shouldnt this also affect the accept command? should this also be per language?
+			-- TODO: shouldnt this also affect the accept command? should this also be per language?
 			keyword_regex = "[%w_\\-]",
+			-- after matching with keyword_regex, any characters matching this regex at the prefix will be excluded
+			exclude_from_prefix_regex = "[\\-]",
 			-- LSPs can indicate when to show the completion window via trigger characters
-			-- however, some LSPs (*cough* tsserver *cough*) return characters that would essentially
+			-- however, some LSPs (i.e. tsserver) return characters that would essentially
 			-- always show the window. We block these by default
 			blocked_trigger_characters = { " ", "\n", "\t" },
+			-- when true, will show the completion window when the cursor comes after a trigger character after accepting an item
+			show_on_accept_on_trigger_character = true,
 			-- when true, will show the completion window when the cursor comes after a trigger character when entering insert mode
 			show_on_insert_on_trigger_character = true,
+			-- list of additional trigger characters that won't trigger the completion window when the cursor comes after a trigger character when entering insert mode/accepting an item
+			show_on_x_blocked_trigger_characters = { "'", '"', "(" },
+			-- when false, will not show the completion window automatically when in a snippet
+			show_in_snippet = true,
 		},
 
 		signature_help = {
@@ -64,93 +104,126 @@ blink.setup({
 		},
 	},
 
-	fuzzy = {
-		-- frencency tracks the most recently/frequently used items and boosts the score of the item
-		use_frecency = true,
-		-- proximity bonus boosts the score of items with a value in the buffer
-		use_proximity = true,
-		max_items = 200,
-		-- controls which sorts to use and in which order, these three are currently the only allowed options
-		sorts = { "label", "kind", "score" },
-	},
-
-	sources = {
-		-- similar to nvim-cmp's sources, but we point directly to the source's lua module
-		-- multiple groups can be provided, where it'll fallback to the next group if the previous
-		-- returns no completion items
-		-- WARN: This API will have breaking changes during the beta
-		providers = {
-			{
-				{ "blink.cmp.sources.lsp" },
-				{ "blink.cmp.sources.path" },
-				{ "blink.cmp.sources.snippets", score_offset = -3 },
-			},
-			{ { "blink.cmp.sources.buffer" } },
-		},
-		-- -- FOR REF: full example
-		-- providers = {
-		--    {
-		--       -- all of these properties work on every source
-		--       {
-		--          "blink.cmp.sources.lsp",
-		--          keyword_length = 0,
-		--          score_offset = 0,
-		--          trigger_characters = { "f", "o", "o" },
-		--          opts = {},
-		--       },
-		--       -- the follow two sources have additional options
-		--       {
-		--          "blink.cmp.sources.path",
-		--          opts = {
-		--             trailing_slash = false,
-		--             label_trailing_slash = true,
-		--             get_cwd = function(context)
-		--                return vim.fn.expand(("#%d:p:h"):format(context.bufnr))
-		--             end,
-		--             show_hidden_files_by_default = true,
-		--          },
-		--       },
-		--       {
-		--          "blink.cmp.sources.snippets",
-		--          score_offset = -3,
-		--          -- similar to https://github.com/garymjr/nvim-snippets
-		--          opts = {
-		--             friendly_snippets = true,
-		--             search_paths = { vim.fn.stdpath("config") .. "/snippets" },
-		--             global_snippets = { "all" },
-		--             extended_filetypes = {},
-		--             ignored_filetypes = {},
-		--          },
-		--       },
-		--    },
-		--    { { "blink.cmp.sources.buffer" } },
-		-- },
-	},
-
 	windows = {
 		autocomplete = {
-			min_width = 30,
-			max_width = 60,
+			min_width = 15,
 			max_height = 10,
 			border = "none",
+			winblend = 0,
 			winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
 			-- keep the cursor X lines away from the top/bottom of the window
 			scrolloff = 2,
+			-- note that the gutter will be disabled when border ~= 'none'
+			scrollbar = true,
 			-- which directions to show the window,
 			-- falling back to the next direction when there's not enough space
 			direction_priority = { "s", "n" },
+			-- Controls whether the completion window will automatically show when typing
+			auto_show = true,
+			-- Controls how the completion items are selected
+			-- 'preselect' will automatically select the first item in the completion list
+			-- 'manual' will not select any item by default
+			-- 'auto_insert' will not select any item by default, and insert the completion items automatically when selecting them
+			--
+			-- When using 'auto_insert', you may want to bind a key to the `cancel` command, which will undo the selection
+			selection = "auto_insert",
 			-- Controls how the completion items are rendered on the popup window
-			-- 'simple' will render the item's kind icon the left alongside the label
-			-- 'reversed' will render the label on the left and the kind icon + name on the right
-			-- 'function(blink.cmp.CompletionRenderContext): blink.cmp.Component[]' for custom rendering
-			draw = "simple",
+			draw = {
+				-- Aligns the keyword you've typed to a component in the menu
+				align_to_component = "label", -- or 'none' to disable
+				-- Left and right padding, optionally { left, right } for different padding on each side
+				padding = 1,
+				-- Gap between columns
+				gap = 1,
+
+				-- Components to render, grouped by column
+				columns = { { "kind_icon" }, { "label", "label_description", gap = 1 } },
+				-- for a setup similar to nvim-cmp: https://github.com/Saghen/blink.cmp/pull/245#issuecomment-2463659508
+				-- columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+
+				-- Definitions for possible components to render. Each component defines:
+				--   ellipsis: whether to add an ellipsis when truncating the text
+				--   width: control the min, max and fill behavior of the component
+				--   text function: will be called for each item
+				--   highlight function: will be called only when the line appears on screen
+				components = {
+					kind_icon = {
+						ellipsis = false,
+						text = function(ctx)
+							return ctx.kind_icon .. ctx.icon_gap
+						end,
+						highlight = function(ctx)
+							return (require("blink.cmp.utils").get_tailwind_hl(ctx) or "BlinkCmpKind") .. ctx.kind
+						end,
+					},
+
+					kind = {
+						ellipsis = false,
+						width = { fill = true },
+						text = function(ctx)
+							return ctx.kind
+						end,
+						highlight = function(ctx)
+							return (require("blink.cmp.utils").get_tailwind_hl(ctx) or "BlinkCmpKind") .. ctx.kind
+						end,
+					},
+
+					label = {
+						width = { fill = true, max = 60 },
+						text = function(ctx)
+							return ctx.label .. ctx.label_detail
+						end,
+						highlight = function(ctx)
+							-- label and label details
+							local highlights = {
+								{
+									0,
+									#ctx.label,
+									group = ctx.deprecated and "BlinkCmpLabelDeprecated" or "BlinkCmpLabel",
+								},
+							}
+							if ctx.label_detail then
+								table.insert(
+									highlights,
+									{ #ctx.label, #ctx.label + #ctx.label_detail, group = "BlinkCmpLabelDetail" }
+								)
+							end
+
+							-- characters matched on the label by the fuzzy matcher
+							for _, idx in ipairs(ctx.label_matched_indices) do
+								table.insert(highlights, { idx, idx + 1, group = "BlinkCmpLabelMatch" })
+							end
+
+							return highlights
+						end,
+					},
+
+					label_description = {
+						width = { max = 30 },
+						text = function(ctx)
+							return ctx.label_description
+						end,
+						highlight = "BlinkCmpLabelDescription",
+					},
+				},
+			},
+			-- Controls the cycling behavior when reaching the beginning or end of the completion list.
+			cycle = {
+				-- When `true`, calling `select_next` at the *bottom* of the completion list will select the *first* completion item.
+				from_bottom = true,
+				-- When `true`, calling `select_prev` at the *top* of the completion list will select the *last* completion item.
+				from_top = true,
+			},
 		},
 		documentation = {
 			min_width = 10,
 			max_width = 60,
 			max_height = 20,
 			border = "padded",
+			winblend = 0,
 			winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+			-- note that the gutter will be disabled when border ~= 'none'
+			scrollbar = true,
 			-- which directions to show the documentation window,
 			-- for each of the possible autocomplete window directions,
 			-- falling back to the next direction when there's not enough space
@@ -158,61 +231,33 @@ blink.setup({
 				autocomplete_north = { "e", "w", "n", "s" },
 				autocomplete_south = { "e", "w", "s", "n" },
 			},
-			auto_show = true,
+			-- Controls whether the documentation window will automatically show when selecting a completion item
+			auto_show = false,
 			auto_show_delay_ms = 500,
-			update_delay_ms = 100,
+			update_delay_ms = 50,
+			-- whether to use treesitter highlighting, disable if you run into performance issues
+			-- WARN: temporary, eventually blink will support regex highlighting
+			treesitter_highlighting = true,
 		},
 		signature_help = {
 			min_width = 1,
 			max_width = 100,
 			max_height = 10,
 			border = "padded",
+			winblend = 0,
 			winhighlight = "Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureHelpBorder",
+			-- note that the gutter will be disabled when border ~= 'none'
+			scrollbar = false,
+
+			-- which directions to show the window,
+			-- falling back to the next direction when there's not enough space
+			direction_priority = { "n", "s" },
+			-- whether to use treesitter highlighting, disable if you run into performance issues
+			-- WARN: temporary, eventually blink will support regex highlighting
+			treesitter_highlighting = true,
 		},
-	},
-
-	highlight = {
-		ns = vim.api.nvim_create_namespace("blink_cmp"),
-		-- sets the fallback highlight groups to nvim-cmp's highlight groups
-		-- useful for when your theme doesn't support blink.cmp
-		-- will be removed in a future release, assuming themes add support
-		use_nvim_cmp_as_default = false,
-	},
-
-	-- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-	-- adjusts spacing to ensure icons are aligned
-	nerd_font_variant = "normal",
-
-	kind_icons = {
-		Text = "󰉿",
-		Method = "󰊕",
-		Function = "󰊕",
-		Constructor = "󰒓",
-
-		Field = "󰜢",
-		Variable = "󰆦",
-		Property = "󰖷",
-
-		Class = "󱡠",
-		Interface = "󱡠",
-		Struct = "󱡠",
-		Module = "󰅩",
-
-		Unit = "󰪚",
-		Value = "󰦨",
-		Enum = "󰦨",
-		EnumMember = "󰦨",
-
-		Keyword = "󰻾",
-		Constant = "󰏿",
-
-		Snippet = "󱄽",
-		Color = "󰏘",
-		File = "󰈔",
-		Reference = "󰬲",
-		Folder = "󰉋",
-		Event = "󱐋",
-		Operator = "󰪚",
-		TypeParameter = "󰬛",
+		ghost_text = {
+			enabled = false,
+		},
 	},
 })

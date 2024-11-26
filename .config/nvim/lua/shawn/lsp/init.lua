@@ -48,7 +48,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
+
 		if vim.version().minor == 11 then
 			vim.lsp.inlay_hint.enable(ev.bufnr, {})
 		else
@@ -209,7 +211,9 @@ local servers = {
 -- for loop over all servers
 for server, config in pairs(servers) do
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+	-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+	config.capabilities =
+		vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities(config.capabilities))
 	config.capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {})
 	require("lspconfig")[server].setup(config)
 end
