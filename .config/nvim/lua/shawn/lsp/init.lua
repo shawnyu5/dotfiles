@@ -10,6 +10,7 @@ vim.notify = function(msg, ...)
 end
 
 local utils = require("shawn.lsp.utils")
+local lsp_utils = require("lspconfig.util")
 
 -- LSP Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -192,8 +193,16 @@ local servers = {
 		cmd = { "groovy-language-server" },
 	},
 	taplo = {},
-	terraformls = {},
-	tflint = {},
+	terraformls = {
+		filetypes = {
+			"terraform",
+			"terrform-vars",
+			"hcl",
+		},
+	},
+	tflint = {
+		root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
+	},
 }
 
 -- for loop over all servers
