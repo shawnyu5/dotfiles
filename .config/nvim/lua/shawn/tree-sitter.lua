@@ -29,7 +29,7 @@ require("nvim-treesitter.configs").setup({
 	sync_install = false,
 	highlight = {
 		enable = true,
-		-- disable ={ "html" },
+		disable = { "text" },
 
 		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
 		additional_vim_regex_highlighting = false,
