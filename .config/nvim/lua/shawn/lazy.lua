@@ -41,13 +41,13 @@ local pluginSpec = {
 	--    "hashivim/vim-terraform",
 	--    ft = { "terraform" },
 	-- },
-	{
-		"tadaa/vimade",
-		config = function()
-			require("vimade").setup()
-		end,
-		event = "UIEnter",
-	},
+	-- {
+	--    "tadaa/vimade",
+	--    config = function()
+	--       require("vimade").setup()
+	--    end,
+	--    event = "UIEnter",
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
