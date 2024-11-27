@@ -347,7 +347,8 @@ local pluginSpec = {
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip",
+			"andersevenrud/cmp-tmux",
+			-- "saadparwaiz1/cmp_luasnip",
 			-- lock compat to tagged versions, if you've also locked blink.cmp to tagged versions
 			{ "saghen/blink.compat", version = "*", opts = { impersonate_nvim_cmp = true } },
 		},

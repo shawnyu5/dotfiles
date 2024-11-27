@@ -6,7 +6,7 @@ blink.setup({
 		["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 		["<C-e>"] = { "hide" },
 		["<C-y>"] = { "select_and_accept" },
-		["<CR>"] = { "accept" },
+		["<CR>"] = { "accept", "fallback" },
 		["<Down>"] = { "select_next", "fallback" },
 		["<Tab>"] = { "select_next", "fallback" },
 		["<C-n>"] = { "select_next", "fallback" },
@@ -38,11 +38,54 @@ blink.setup({
 					name = "luasnip",
 					module = "blink.compat.source",
 
-					score_offset = -3,
+					score_offset = 1,
 
 					opts = {
 						use_show_condition = false,
 						show_autosnippets = true,
+					},
+				},
+
+				-- TODO: this source doesnt seem to work...
+				tmux = {
+					name = "tmux",
+					module = "blink.compat.source",
+					score_offset = -3,
+					opts = {
+						all_panes = false,
+						label = "[tmux]",
+						trigger_characters = { "." },
+						trigger_characters_ft = {}, -- { filetype = { '.' } }
+					},
+				},
+
+				lsp = {
+					name = "LSP",
+					module = "blink.cmp.sources.lsp",
+
+					--- *All* of the providers have the following options available
+					--- NOTE: All of these options may be functions to get dynamic behavior
+					--- See the type definitions for more information
+					enabled = true, -- whether or not to enable the provider
+					transform_items = nil, -- function to transform the items before they're returned
+					should_show_items = true, -- whether or not to show the items
+					max_items = nil, -- maximum number of items to return
+					min_keyword_length = 0, -- minimum number of characters to trigger the provider
+					fallback_for = {}, -- if any of these providers return 0 items, it will fallback to this provider
+					score_offset = 0, -- boost/penalize the score of the items
+					override = nil, -- override the source's functions
+				},
+				path = {
+					name = "Path",
+					module = "blink.cmp.sources.path",
+					score_offset = 3,
+					opts = {
+						trailing_slash = false,
+						label_trailing_slash = true,
+						get_cwd = function(context)
+							return vim.fn.expand(("#%d:p:h"):format(context.bufnr))
+						end,
+						show_hidden_files_by_default = false,
 					},
 				},
 
