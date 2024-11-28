@@ -48,3 +48,4 @@ function awsec {
 alias wallpaper="~/personal/utils/change_wallpaper.sh"
 alias files="nautilus"
 alias suspend="sleep 2 && i3lock -c 000000 && systemctl suspend"
+alias update-nvim-nightly='asdf uninstall neovim nightly && asdf install neovim nightly'
