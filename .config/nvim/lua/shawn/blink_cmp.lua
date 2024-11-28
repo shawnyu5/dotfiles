@@ -299,8 +299,9 @@ blink.setup({
 			-- whether to use treesitter highlighting, disable if you run into performance issues
 			treesitter_highlighting = true,
 		},
+		-- Displays a preview of the selected item on the current line
 		ghost_text = {
-			enabled = false,
+			enabled = true,
 		},
 	},
 })
