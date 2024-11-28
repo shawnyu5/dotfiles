@@ -259,6 +259,12 @@ blink.setup({
 			},
 		},
 		documentation = {
+			-- Controls whether the documentation window will automatically show when selecting a completion item
+			auto_show = true,
+			-- Delay before showing the documentation window
+			auto_show_delay_ms = 50,
+			update_delay_ms = 50,
+
 			min_width = 10,
 			max_width = 60,
 			max_height = 20,
@@ -274,12 +280,7 @@ blink.setup({
 				autocomplete_north = { "e", "w", "n", "s" },
 				autocomplete_south = { "e", "w", "s", "n" },
 			},
-			-- Controls whether the documentation window will automatically show when selecting a completion item
-			auto_show = false,
-			auto_show_delay_ms = 500,
-			update_delay_ms = 50,
 			-- whether to use treesitter highlighting, disable if you run into performance issues
-			-- WARN: temporary, eventually blink will support regex highlighting
 			treesitter_highlighting = true,
 		},
 		signature_help = {
@@ -296,7 +297,6 @@ blink.setup({
 			-- falling back to the next direction when there's not enough space
 			direction_priority = { "n", "s" },
 			-- whether to use treesitter highlighting, disable if you run into performance issues
-			-- WARN: temporary, eventually blink will support regex highlighting
 			treesitter_highlighting = true,
 		},
 		ghost_text = {
