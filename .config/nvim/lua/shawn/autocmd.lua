@@ -32,7 +32,7 @@ create_autocmd({ "BufEnter" }, {
 })
 
 function OrgImports()
-	local clients = vim.lsp.buf_get_clients()
+	local clients = vim.lsp.get_clients()
 	for _, client in pairs(clients) do
 		local params = vim.lsp.util.make_range_params(nil, client.offset_encoding)
 		params.context = { only = { "source.organizeImports" } }
@@ -44,6 +44,7 @@ function OrgImports()
 					vim.lsp.util.apply_workspace_edit(r.edit, client.offset_encoding)
 				else
 					vim.lsp.buf.execute_command(r.command)
+					-- client.exec_cmd(r.command, client.handlers)
 				end
 			end
 		end
