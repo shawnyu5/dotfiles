@@ -61,4 +61,21 @@ ls.add_snippets("markdown", {
 			{}
 		)
 	),
+	s(
+		"details",
+		fmt(
+			[[
+   <details>
+   <summary>{summary}</summary>
+
+   {details}
+   </details>
+   ]],
+			{
+				summary = i(1, "summary"),
+				details = i(2, ""),
+			},
+			{}
+		)
+	),
 })
