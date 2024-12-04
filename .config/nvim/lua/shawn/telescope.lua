@@ -35,7 +35,14 @@ keymap("n", "<leader>fc", function()
 	telescope_builtin.find_files({ cwd = "~/.config/nvim" })
 end, { desc = "fuzzy search over neovim config" })
 keymap("n", "<leader>fr", telescope_builtin.resume, { desc = "resume last telescope search" })
-keymap("n", "<leader>fh", telescope_builtin.help_tags, { desc = "fuzzy search vim help tags" })
+keymap("n", "<leader>fh", function()
+	local ft = vim.bo.filetype
+	if ft == "markdown" then
+		vim.cmd("Telescope heading")
+	else
+		telescope_builtin.help_tags()
+	end
+end, { desc = "fuzzy search vim help tags" })
 keymap({ "n", "v" }, "<leader><leader>fw", function()
 	telescope_builtin.grep_string({ layout_strategy = "vertical" })
 end, { desc = "live grep for word under cursor" })
@@ -66,6 +73,9 @@ require("telescope").setup({
 				-- even more opts
 			}),
 		},
+		heading = {
+			treesitter = true,
+		},
 		fzf = {
 			fuzzy = true, -- false will only do exact matching
 			override_generic_sorter = true, -- override the generic sorter
@@ -84,5 +94,6 @@ require("telescope").setup({
 telescope.load_extension("ui-select")
 telescope.load_extension("fzf")
 telescope.load_extension("frecency")
+telescope.load_extension("heading")
 
 return M
