@@ -18,6 +18,7 @@ require("nvim-treesitter.configs").setup({
 		-- "dockerfile",
 		"markdown",
 		"markdown_inline",
+		"rst",
 		"yaml",
 		"tsx",
 		"c_sharp",
