@@ -435,17 +435,28 @@ local pluginSpec = {
 		"preservim/nerdcommenter",
 		event = "VeryLazy",
 	},
-	{ "nvim-telescope/telescope.nvim" },
 	{
-		"Shatur/neovim-session-manager",
-		dependencies = { "nvim-telescope/telescope.nvim" },
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+			},
+			"nvim-telescope/telescope-frecency.nvim",
+		},
 		config = function()
-			require("shawn.session_manager")
+			require("shawn.telescope")
 		end,
 	},
 	{
-		"nvim-telescope/telescope-ui-select.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim" },
+		"Shatur/neovim-session-manager",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
+		},
+		config = function()
+			require("shawn.session_manager")
+		end,
 	},
 	-- {
 	--    "nvim-telescope/telescope-file-browser.nvim",
