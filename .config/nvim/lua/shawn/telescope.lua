@@ -1,8 +1,4 @@
-local ok, telescope = pcall(require, "telescope")
-if not ok then
-	print("telescope not installed...")
-	return
-end
+local telescope = require("telescope")
 local M = {}
 
 -- use git files if in a git repo, other wise fall back to find_files
@@ -29,7 +25,8 @@ keymap("n", "<leader>ff", function()
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 keymap("n", "<leader>fb", function()
-	telescope_builtin.buffers()
+	-- telescope_builtin.buffers()
+	vim.cmd("Telescope frecency")
 end, { desc = "fuzzy search all buffers" })
 keymap("n", "<leader>fw", function()
 	telescope_builtin.live_grep({ layout_strategy = "vertical" })
@@ -69,11 +66,23 @@ require("telescope").setup({
 				-- even more opts
 			}),
 		},
+		fzf = {
+			fuzzy = true, -- false will only do exact matching
+			override_generic_sorter = true, -- override the generic sorter
+			override_file_sorter = true, -- override the file sorter
+			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+			-- the default case_mode is "smart_case"
+		},
+		frecency = {
+			default_workspace = "CWD",
+			-- Do not show current buffer in candidates
+			hide_current_buffer = true,
+		},
 	},
 })
--- To get fzf loaded and working with telescope, you need to call
--- load_extension, somewhere after setup function:
+
 telescope.load_extension("ui-select")
--- telescope.load_extension("file_browser")
+telescope.load_extension("fzf")
+telescope.load_extension("frecency")
 
 return M
