@@ -278,7 +278,7 @@ local config = {
 		window = {
 			min_width = 1,
 			max_width = 100,
-			max_height = 20,
+			max_height = 10,
 			border = "padded",
 			winblend = 0,
 			winhighlight = "Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureHelpBorder",
@@ -325,7 +325,7 @@ local config = {
 	sources = {
 		completion = {
 			-- Static list of providers to enable, or a function to dynamically enable/disable providers based on the context
-			enabled_providers = { "lsp", "luasnip", "snippets", "buffer" },
+			enabled_providers = { "lsp", "path", "snippets", "buffer" },
 			-- Example dynamically picking providers based on the filetype and treesitter node:
 			-- enabled_providers = function(ctx)
 			--   local node = vim.treesitter.get_node()
@@ -341,6 +341,17 @@ local config = {
 
 		-- Please see https://github.com/Saghen/blink.compat for using `nvim-cmp` sources
 		providers = {
+			luasnip = {
+				name = "luasnip",
+				module = "blink.compat.source",
+
+				score_offset = 1,
+
+				opts = {
+					use_show_condition = false,
+					show_autosnippets = true,
+				},
+			},
 			-- TODO: this source doesnt seem to work...
 			tmux = {
 				name = "tmux",

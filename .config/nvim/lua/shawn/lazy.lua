@@ -348,15 +348,9 @@ local pluginSpec = {
 			"rafamadriz/friendly-snippets",
 			"L3MON4D3/LuaSnip",
 			"andersevenrud/cmp-tmux",
-			"giuxtaposition/blink-cmp-copilot",
-			-- "zbirenbaum/copilot-cmp",
 			-- "saadparwaiz1/cmp_luasnip",
 			-- lock compat to tagged versions, if you've also locked blink.cmp to tagged versions
-			{
-				"saghen/blink.compat",
-				version = "*",
-				opts = { impersonate_nvim_cmp = true },
-			},
+			{ "saghen/blink.compat", version = "*", opts = { impersonate_nvim_cmp = true } },
 		},
 
 		config = function()
@@ -369,6 +363,20 @@ local pluginSpec = {
 			require("shawn.conform")
 		end,
 	},
+
+	-- {
+	-- "lewis6991/gitsigns.nvim",
+	-- config = function()
+	-- require("gitsigns").setup()
+	-- end,
+	-- },
+	-- {
+	-- "SmiteshP/nvim-navic",
+	-- dependencies = { "neovim/nvim-lspconfig" },
+	-- },
+	-- -- use({ "ray-x/lsp_signature.nvim" }) -- better lsp_signature help
+	-- { "zbirenbaum/copilot.lua" },
+	-- -- use({ "saadparwaiz1/cmp_luasnip" }) -- lua snip source
 	{
 		"chrisbra/csv.vim",
 		-- ft = { "csv" },
@@ -499,15 +507,6 @@ if utils.get_system_config().system_name ~= utils.system_names.work_laptop then
 		config = function()
 			require("shawn.neoscroll")
 		end,
-	})
-elseif utils.get_system_config().system_name == utils.system_names.work_laptop then
-	-- Only load copilot on work laptop
-	table.insert(pluginSpec, {
-		"zbirenbaum/copilot.lua",
-		config = function()
-			require("shawn.copilot")
-		end,
-		event = "InsertEnter",
 	})
 end
 
