@@ -1,0 +1,15 @@
+---
+- name: Check if bacon has been installed
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.cargo/bin/bacon"
+  register: binary_check
+
+- name: install bacon
+  shell: cargo install bacon
+  when: not binary_check.stat.exists
+
+- name: link tmux conf
+  file:
+    src: "{{ personal_dir }}/.config/bacon"
+    dest: "{{ ansible_env.HOME }}/.config/bacon"
+    state: link
