@@ -29,3 +29,7 @@
 - name: set up task worrior
   include_tasks:
     file: task_worrior.yml
+
+- name: set up bacon
+  include_tasks:
+    file: bacon.yml
