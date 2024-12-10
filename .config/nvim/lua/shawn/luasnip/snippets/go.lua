@@ -31,7 +31,7 @@ ls.add_snippets("go", {
 		fmt(
 			[[
 if err != nil {
-   log.Fatal(<>)
+   log.Fatalf("<>", err)
 }
   ]],
 			{
