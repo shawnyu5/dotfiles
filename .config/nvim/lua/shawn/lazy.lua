@@ -29,7 +29,6 @@ local pluginSpec = {
 	{ "nvim-lua/popup.nvim" },
 
 	{ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
-	-- -- use({ "github/copilot.vim" })
 
 	-- {
 	-- "shawnyu5/do.nvim",
@@ -348,7 +347,7 @@ local pluginSpec = {
 			"rafamadriz/friendly-snippets",
 			"L3MON4D3/LuaSnip",
 			"andersevenrud/cmp-tmux",
-			"giuxtaposition/blink-cmp-copilot",
+			-- "giuxtaposition/blink-cmp-copilot",
 			-- "zbirenbaum/copilot-cmp",
 			-- "saadparwaiz1/cmp_luasnip",
 			-- lock compat to tagged versions, if you've also locked blink.cmp to tagged versions
@@ -508,6 +507,9 @@ elseif utils.get_system_config().system_name == utils.system_names.work_laptop t
 			require("shawn.copilot")
 		end,
 		event = "InsertEnter",
+	})
+	table.insert(pluginSpec, {
+		"giuxtaposition/blink-cmp-copilot",
 	})
 end
 
