@@ -46,6 +46,7 @@ end, { desc = "fuzzy search vim help tags" })
 keymap({ "n", "v" }, "<leader><leader>fw", function()
 	telescope_builtin.grep_string({ layout_strategy = "vertical" })
 end, { desc = "live grep for word under cursor" })
+keymap("n", "<leader>gb", telescope_builtin.git_branches, { desc = "fuzzy search git branches" })
 
 vim.cmd([[
    command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
@@ -59,6 +60,12 @@ require("telescope").setup({
 		},
 		lsp_references = {
 			theme = "ivy",
+			initial_mode = "normal",
+		},
+		live_grep = {
+			additional_args = { "--hidden" },
+		},
+		git_branches = {
 			initial_mode = "normal",
 		},
 	},
