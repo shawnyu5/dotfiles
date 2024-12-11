@@ -24,7 +24,7 @@ null_ls.setup({
 			disabled_filetypes = { "java" },
 		}),
 		formatting.google_java_format,
-      formatting.ocamlformat,
+		formatting.ocamlformat,
 		-- formatting.markdownlint,
 		-- formatting.markdownlint,
 		formatting.prettierd.with({
@@ -32,6 +32,8 @@ null_ls.setup({
 		}),
 		diagnostics.hadolint,
 		diagnostics.gitlint,
-      diagnostics.yamllint,
+		-- TODO: idk why null-ls cant find this executable. It is installed by mason...
+		-- diagnostics.yamllint,
+		diagnostics.actionlint,
 	},
 })

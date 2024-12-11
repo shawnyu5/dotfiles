@@ -67,7 +67,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap("n", "K", vim.lsp.buf.hover, opts)
 		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
 		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
-		keymap("n", "gr", vim.lsp.buf.references, opts)
+		keymap("n", "gr", require("telescope.builtin").lsp_references, opts)
 
 		vim.api.nvim_buf_create_user_command(ev.buf, "Format", function()
 			vim.lsp.buf.format({ async = false })
