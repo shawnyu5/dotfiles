@@ -32,6 +32,7 @@ local ensure_installed = {
 	"cpptools",
 	"terraform-ls",
 	"tflint",
+	"actionlint",
 }
 
 mason.setup()

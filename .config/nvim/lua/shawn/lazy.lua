@@ -373,7 +373,6 @@ local pluginSpec = {
 		-- ft = { "csv" },
 	},
 	{
-		-- "jose-elias-alvarez/null-ls.nvim",
 		"nvimtools/none-ls.nvim",
 		event = "LspAttach",
 		config = function()
