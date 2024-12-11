@@ -62,7 +62,9 @@ local termina_auto_group = create_augroup("terminal_auto_group", { clear = true 
 create_autocmd({ "TermOpen" }, {
 	group = termina_auto_group,
 	callback = function()
-		vim.cmd("setlocal nospell")
+		vim.opt_local.spell = false
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
 	end,
 })
 
@@ -83,12 +85,3 @@ vim.filetype.add({
 -- end
 -- end,
 -- })
-
-local terminal_group = create_augroup("terminal", {})
-create_autocmd({ "TermOpen" }, {
-	group = terminal_group,
-	callback = function()
-		vim.opt_local.number = false
-		vim.opt_local.relativenumber = false
-	end,
-})

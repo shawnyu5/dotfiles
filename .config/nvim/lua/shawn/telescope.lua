@@ -57,6 +57,10 @@ require("telescope").setup({
 		find_files = {
 			follow = true,
 		},
+		lsp_references = {
+			theme = "ivy",
+			initial_mode = "normal",
+		},
 	},
 	defaults = {
 		file_ignore_patterns = { ".git/" },
@@ -69,9 +73,7 @@ require("telescope").setup({
 	},
 	extensions = {
 		["ui-select"] = {
-			require("telescope.themes").get_dropdown({
-				-- even more opts
-			}),
+			require("telescope.themes").get_dropdown({}),
 		},
 		heading = {
 			treesitter = true,
