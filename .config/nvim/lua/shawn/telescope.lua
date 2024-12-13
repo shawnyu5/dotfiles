@@ -25,8 +25,8 @@ keymap("n", "<leader>ff", function()
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 keymap("n", "<leader>fb", function()
-	-- telescope_builtin.buffers()
-	vim.cmd("Telescope frecency")
+	telescope_builtin.buffers()
+	-- require("telescope").extensions.frecency.frecency({})
 end, { desc = "fuzzy search all buffers" })
 keymap("n", "<leader>fw", function()
 	telescope_builtin.live_grep({ layout_strategy = "vertical" })
@@ -46,7 +46,11 @@ end, { desc = "fuzzy search vim help tags" })
 keymap({ "n", "v" }, "<leader><leader>fw", function()
 	telescope_builtin.grep_string({ layout_strategy = "vertical" })
 end, { desc = "live grep for word under cursor" })
-keymap("n", "<leader>gb", telescope_builtin.git_branches, { desc = "fuzzy search git branches" })
+keymap("n", "<leader>gb", function()
+	telescope_builtin.git_branches({
+		show_remote_tracking_branches = false,
+	})
+end, { desc = "fuzzy search git branches" })
 
 vim.cmd([[
    command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
