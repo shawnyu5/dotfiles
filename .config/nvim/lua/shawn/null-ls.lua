@@ -34,6 +34,8 @@ null_ls.setup({
 		diagnostics.gitlint,
 		-- TODO: idk why null-ls cant find this executable. It is installed by mason...
 		-- diagnostics.yamllint,
-		diagnostics.actionlint,
+		diagnostics.actionlint.with({
+			extra_args = { "-shellcheck=" },
+		}),
 	},
 })
