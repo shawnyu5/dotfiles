@@ -38,4 +38,10 @@ ls.add_snippets("yaml", {
 			{}
 		)
 	),
+	s(
+		"error",
+		fmt("echo '::error::{error}'", {
+			error = i(1, "Error message"),
+		}, {})
+	),
 })
