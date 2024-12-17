@@ -69,9 +69,7 @@ require("telescope").setup({
 		live_grep = {
 			additional_args = { "--hidden" },
 		},
-		git_branches = {
-			initial_mode = "normal",
-		},
+		git_branches = {},
 	},
 	defaults = {
 		file_ignore_patterns = { ".git/" },
