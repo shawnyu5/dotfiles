@@ -1,0 +1,11 @@
+snippet err If error, log.Fatalf
+	if err != nil {
+		log.Fatalf("${1:error}: %s", err)
+	}
+	${0}
+snippet func A function
+	func ${1:name}(${2}) {
+		${3}
+	}
+snippet fj filepath.Join
+	filepath.Join(${1})

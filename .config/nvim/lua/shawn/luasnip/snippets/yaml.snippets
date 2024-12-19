@@ -1,0 +1,8 @@
+snippet checkout
+	- name: Checkout code
+	  uses: actions/checkout@v4
+
+	${0}
+
+snippet error Github actions error message
+	echo '::error::${1:error}'
