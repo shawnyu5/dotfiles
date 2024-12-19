@@ -267,12 +267,10 @@ local pluginSpec = {
 		config = function()
 			require("shawn.luasnip")
 		end,
-		-- dependencies = { "molleweide/LuaSnip-snippets.nvim" },
-	},
-	{
-		"honza/vim-snippets",
-		-- event = "InsertEnter",
-		-- dependencies = { "SirVer/ultisnips" },
+		dependencies = {
+			"honza/vim-snippets",
+			-- "rafamadriz/friendly-snippets",
+		},
 	},
 	{
 		"j-hui/fidget.nvim",
@@ -344,7 +342,6 @@ local pluginSpec = {
 		-- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
 		-- build = 'cargo build --release',
 		dependencies = {
-			"rafamadriz/friendly-snippets",
 			"L3MON4D3/LuaSnip",
 			"andersevenrud/cmp-tmux",
 			-- "giuxtaposition/blink-cmp-copilot",

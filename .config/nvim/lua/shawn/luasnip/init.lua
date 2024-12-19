@@ -1,11 +1,7 @@
 local ls = require("luasnip")
-require("luasnip.loaders.from_snipmate").load()
-require("shawn.luasnip.snippets.go")
+require("luasnip.loaders.from_snipmate").lazy_load()
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = "./lua/shawn/luasnip/snippets" })
 require("shawn.luasnip.snippets.gitcommit")
-require("shawn.luasnip.snippets.make")
-require("shawn.luasnip.snippets.yaml")
-require("shawn.luasnip.snippets.markdown")
-require("shawn.luasnip.snippets.terraform")
 
 vim.keymap.set({ "i" }, "<C-s>", function()
 	ls.expand()
