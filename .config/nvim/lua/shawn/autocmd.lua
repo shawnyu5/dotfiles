@@ -18,7 +18,7 @@ create_autocmd({ "TextYankPost" }, {
 	group = "highlight_yank",
 	pattern = "*",
 	callback = function()
-		local version = vim.version.parse(vim.version())
+		local version = vim.version()
 		if version ~= nil and version.minor == 11 then
 			require("vim.hl").on_yank({ timeout = 104 })
 		else
