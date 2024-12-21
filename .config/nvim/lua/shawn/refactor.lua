@@ -13,6 +13,9 @@ refactoring.setup({
 		go = {
 			'fmt.Printf("%s %%v\\n", %s)',
 		},
+		typescriptreact = {
+			[[console.log("custom print var %s %%s", JSON.stringify(%s));]],
+		},
 	},
 	printf_statements = {
 		-- add a custom printf statement for cpp
