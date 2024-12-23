@@ -210,10 +210,11 @@ local servers = {
 
 -- for loop over all servers
 for server, config in pairs(servers) do
-	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 	config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-	-- config.capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {})
+	config.capabilities.textDocument.foldingRange = {
+		dynamicRegistration = false,
+		lineFoldingOnly = true,
+	}
 	require("lspconfig")[server].setup(config)
 end
 
