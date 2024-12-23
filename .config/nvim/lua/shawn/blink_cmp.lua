@@ -56,7 +56,8 @@ local config = {
 
 	sources = {
 		default = { "lsp", "path", "luasnip", "snippets", "buffer" },
-
+		cmdline = {},
+		-- min_keyword_length = 2,
 		providers = {
 			-- TODO: this source doesnt seem to work...
 			tmux = {
