@@ -29,7 +29,7 @@ keymap("n", "<leader>fb", function()
 	-- require("telescope").extensions.frecency.frecency({})
 end, { desc = "fuzzy search all buffers" })
 keymap("n", "<leader>fw", function()
-	telescope_builtin.live_grep({ layout_strategy = "vertical" })
+	telescope_builtin.live_grep({})
 end, { desc = "fuzzy search words" })
 keymap("n", "<leader>fc", function()
 	telescope_builtin.find_files({ cwd = "~/.config/nvim" })
@@ -67,6 +67,7 @@ require("telescope").setup({
 			initial_mode = "normal",
 		},
 		live_grep = {
+			theme = "ivy",
 			additional_args = { "--hidden" },
 		},
 		git_branches = {},

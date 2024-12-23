@@ -29,24 +29,13 @@ local pluginSpec = {
 	{ "nvim-lua/popup.nvim" },
 
 	{ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
-
-	-- {
-	-- "shawnyu5/do.nvim",
-	-- -- dir = "/home/shawn/do.nvim",
-	-- },
-	-- -- { "wbthomason/packer.nvim" },
-	{ "NFrid/due.nvim" },
-	-- {
-	--    "hashivim/vim-terraform",
-	--    ft = { "terraform" },
-	-- },
-	-- {
-	--    "tadaa/vimade",
-	--    config = function()
-	--       require("vimade").setup()
-	--    end,
-	--    event = "UIEnter",
-	-- },
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = "kevinhwang91/promise-async",
+		config = function()
+			require("shawn.ufo")
+		end,
+	},
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -126,10 +115,6 @@ local pluginSpec = {
 			require("shawn.tree-sitter")
 		end,
 	},
-	-- {
-	-- "nvim-treesitter/playground",
-	-- dependencies = "nvim-treesitter/nvim-treesitter",
-	-- },
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
@@ -142,9 +127,7 @@ local pluginSpec = {
 		branch = "main",
 		dependencies = { "itchyny/lightline.vim" },
 	},
-	{
-		"echasnovski/mini.indentscope",
-	},
+	{ "echasnovski/mini.indentscope" },
 	{
 		"Bekaboo/dropbar.nvim",
 		dependencies = { "neovim/nvim-lspconfig" },
@@ -157,51 +140,12 @@ local pluginSpec = {
 			require("dropbar").setup(opts)
 		end,
 	},
-	-- {
-	-- "sindrets/diffview.nvim",
-	-- dependencies = { "nvim-lua/plenary.nvim" },
-	-- event = "VeryLazy",
-	-- config = function()
-	-- require("shawn.diffview")
-	-- end,
-	-- },
-	-- {
-	-- "3699394/diffview.nvim",
-	-- dependencies = { "nvim-lua/plenary.nvim" },
-	-- event = "VeryLazy",
-	-- config = function()
-	-- require("shawn.diffview")
-	-- end,
-	-- },
-	-- {
-	-- "glepnir/zephyr-nvim",
-	-- config = function()
-	-- require("zephyr")
-	-- -- make background transparent
-	-- local set_hl = vim.api.nvim_set_hl
-	-- set_hl(0, "Normal", {
-	-- bg = "none",
-	-- })
-	-- set_hl(0, "NormalFloat", {
-	-- bg = "none",
-	-- })
-	-- -- set_hl(0, "FloatBorder", {
-	-- -- bg = "yellow",
-	-- -- })
-	-- set_hl(0, "CmpDocumentation", {
-	-- bg = "gray",
-	-- })
-	-- end,
-	-- },
 	{
 		"meain/vim-jsontogo",
 		ft = "go",
 	},
 
-	-- -- use("matbme/JABS.nvim")
 	{ "j-morano/buffer_manager.nvim" },
-
-	-- dap
 	{
 		"mfussenegger/nvim-dap",
 		{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
@@ -210,8 +154,6 @@ local pluginSpec = {
 	},
 
 	{ "aserowy/tmux.nvim" },
-
-	-- { "nvim-lualine/lualine.nvim" },
 	{
 		"itchyny/lightline.vim",
 		config = function()
@@ -235,13 +177,6 @@ local pluginSpec = {
 	},
 
 	{ "andweeb/presence.nvim" },
-	-- {
-	--    "preservim/nerdtree",
-	--    -- cmd = { "NERDTreeToggle", "NERDTreeFind" },
-	--    config = function()
-	--       require("shawn.nerdtree")
-	--    end,
-	-- },
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
