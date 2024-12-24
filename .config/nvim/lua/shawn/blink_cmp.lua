@@ -40,8 +40,10 @@ local config = {
 		},
 
 		menu = {
-			-- Controls whether the documentation window will automatically show when selecting a completion item
-			auto_show = true,
+			auto_show = function(ctx)
+				return ctx.mode ~= "cmdline"
+			end,
+			-- auto_show = true,
 		},
 		-- Displays a preview of the selected item on the current line
 		ghost_text = {
@@ -56,8 +58,7 @@ local config = {
 
 	sources = {
 		default = { "lsp", "path", "luasnip", "snippets", "buffer" },
-		cmdline = {},
-		-- min_keyword_length = 2,
+		-- cmdline = {},
 		providers = {
 			-- TODO: this source doesnt seem to work...
 			tmux = {
