@@ -64,7 +64,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
 		keymap("n", "gD", vim.lsp.buf.declaration, opts)
 		keymap("n", "gi", vim.lsp.buf.implementation, opts)
-		keymap("n", "K", vim.lsp.buf.hover, opts)
+		keymap("n", "K", function()
+			local winid = require("ufo").peekFoldedLinesUnderCursor({ enter = true })
+			if not winid then
+				vim.lsp.buf.hover()
+			end
+		end, opts)
 		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
 		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
 		keymap("n", "gr", require("telescope.builtin").lsp_references, opts)
