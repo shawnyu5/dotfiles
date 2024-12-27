@@ -15,6 +15,8 @@ local config = {
 		["<S-Tab>"] = { "select_prev", "fallback" },
 		["<C-k>"] = { "snippet_forward", "fallback" },
 		["<C-j>"] = { "snippet_backward", "fallback" },
+		["<C-u>"] = { "scroll_documentation_up", "fallback" },
+		["<C-d>"] = { "scroll_documentation_down", "fallback" },
 	},
 
 	snippets = {
@@ -40,11 +42,9 @@ local config = {
 		},
 
 		menu = {
-			auto_show = function(ctx)
-				return ctx.mode ~= "cmdline"
-			end,
-			-- auto_show = true,
+			auto_show = true,
 		},
+		documentation = { auto_show = true, auto_show_delay_ms = 500 },
 		-- Displays a preview of the selected item on the current line
 		ghost_text = {
 			enabled = true,
@@ -58,7 +58,7 @@ local config = {
 
 	sources = {
 		default = { "lsp", "path", "luasnip", "snippets", "buffer" },
-		-- cmdline = {},
+		cmdline = {},
 		providers = {
 			-- TODO: this source doesnt seem to work...
 			tmux = {
