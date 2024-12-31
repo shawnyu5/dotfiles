@@ -43,8 +43,8 @@ local config = {
 
 		menu = {
 			-- auto_show = true,
-			auto_show = function()
-				return vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
+			auto_show = function(ctx)
+				return ctx.mode ~= "cmdline" or vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
 			end,
 		},
 		documentation = { auto_show = true, auto_show_delay_ms = 500 },
