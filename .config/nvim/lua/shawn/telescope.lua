@@ -10,32 +10,29 @@ function M.project_files()
 	end
 end
 
-local keymap = vim.keymap.set
--- vim.keymap.set('n', 'lhs', function() print("real lua function") end)
-
 local telescope_builtin = require("telescope.builtin")
 
 local opts = { noremap = true, silent = true }
-keymap("n", "<leader>fd", function()
+vim.keymap.set("n", "<leader>fd", function()
 	telescope_builtin.diagnostics()
 end, opts)
-keymap("n", "<leader>ff", function()
+vim.keymap.set("n", "<leader>ff", function()
 	telescope_builtin.find_files({
 		hidden = true,
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
-keymap("n", "<leader>fb", function()
+vim.keymap.set("n", "<leader>fb", function()
 	telescope_builtin.buffers()
 	-- require("telescope").extensions.frecency.frecency({})
 end, { desc = "fuzzy search all buffers" })
-keymap("n", "<leader>fw", function()
+vim.keymap.set("n", "<leader>fw", function()
 	telescope_builtin.live_grep({})
 end, { desc = "fuzzy search words" })
-keymap("n", "<leader>fc", function()
+vim.keymap.set("n", "<leader>fc", function()
 	telescope_builtin.find_files({ cwd = "~/.config/nvim" })
 end, { desc = "fuzzy search over neovim config" })
-keymap("n", "<leader>fr", telescope_builtin.resume, { desc = "resume last telescope search" })
-keymap("n", "<leader>fh", function()
+vim.keymap.set("n", "<leader>fr", telescope_builtin.resume, { desc = "resume last telescope search" })
+vim.keymap.set("n", "<leader>fh", function()
 	local ft = vim.bo.filetype
 	if ft == "markdown" then
 		vim.cmd("Telescope heading")
@@ -43,14 +40,20 @@ keymap("n", "<leader>fh", function()
 		telescope_builtin.help_tags()
 	end
 end, { desc = "fuzzy search vim help tags" })
-keymap({ "n", "v" }, "<leader><leader>fw", function()
+vim.keymap.set({ "n", "v" }, "<leader><leader>fw", function()
 	telescope_builtin.grep_string({ layout_strategy = "vertical" })
 end, { desc = "live grep for word under cursor" })
-keymap("n", "<leader>gb", function()
+vim.keymap.set("n", "<leader>gb", function()
 	telescope_builtin.git_branches({
 		show_remote_tracking_branches = false,
 	})
 end, { desc = "fuzzy search git branches" })
+vim.keymap.set(
+	"n",
+	"<leader>f/",
+	telescope_builtin.current_buffer_fuzzy_find,
+	{ desc = "Fuzzy find in current buffer" }
+)
 
 vim.cmd([[
    command! Config :lua require('telescope.builtin').find_files({cwd = "~/.config/nvim/"})
@@ -69,6 +72,9 @@ require("telescope").setup({
 		live_grep = {
 			theme = "ivy",
 			additional_args = { "--hidden" },
+		},
+		current_buffer_fuzzy_find = {
+			layout_strategy = "vertical",
 		},
 		git_branches = {},
 	},
