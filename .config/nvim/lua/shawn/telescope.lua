@@ -101,17 +101,17 @@ require("telescope").setup({
 			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
 			-- the default case_mode is "smart_case"
 		},
-		frecency = {
-			default_workspace = "CWD",
-			-- Do not show current buffer in candidates
-			hide_current_buffer = true,
-		},
+		-- frecency = {
+		--    default_workspace = "CWD",
+		--    -- Do not show current buffer in candidates
+		--    hide_current_buffer = true,
+		-- },
 	},
 })
 
 telescope.load_extension("ui-select")
 telescope.load_extension("fzf")
-telescope.load_extension("frecency")
+-- telescope.load_extension("frecency")
 telescope.load_extension("heading")
 
 return M
