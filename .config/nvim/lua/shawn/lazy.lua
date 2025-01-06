@@ -364,11 +364,11 @@ local pluginSpec = {
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 			},
-			"nvim-telescope/telescope-frecency.nvim",
-			{
-				"crispgm/telescope-heading.nvim",
-				ft = { "markdown" },
-			},
+			-- "nvim-telescope/telescope-frecency.nvim",
+			-- {
+			--    "crispgm/telescope-heading.nvim",
+			--    ft = { "markdown" },
+			-- },
 		},
 		config = function()
 			require("shawn.telescope")
