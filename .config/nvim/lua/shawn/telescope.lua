@@ -73,8 +73,12 @@ require("telescope").setup({
 			theme = "ivy",
 			additional_args = { "--hidden" },
 		},
+		grep_string = {
+			theme = "ivy",
+			additional_args = { "--hidden" },
+		},
 		current_buffer_fuzzy_find = {
-			layout_strategy = "vertical",
+			theme = "ivy",
 		},
 		git_branches = {},
 	},
