@@ -24,10 +24,7 @@ local config = {
 		list = {
 			selection = {
 				auto_insert = true,
-				-- preselect = false,
-				preselect = function(ctx)
-					return ctx.mode == "cmdline"
-				end,
+				preselect = false,
 			},
 		},
 
@@ -48,7 +45,7 @@ local config = {
 
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
-		-- cmdline = {},
+		cmdline = {},
 		providers = {
 			-- TODO: this source doesnt seem to work...
 			tmux = {
