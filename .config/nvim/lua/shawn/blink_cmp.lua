@@ -125,10 +125,10 @@ local config = {
 
 local utils = require("shawn.utils")
 if utils.get_system_config().system_name == utils.system_names.work_laptop then
-	config.sources.providers["copilot"] = {
-		name = "copilot",
-		module = "blink-cmp-copilot",
-	}
+	-- config.sources.providers["copilot"] = {
+	--    name = "copilot",
+	--    module = "blink-cmp-copilot",
+	-- }
 	-- table.insert(config.sources.completion.enabled_providers, "copilot")
 end
 

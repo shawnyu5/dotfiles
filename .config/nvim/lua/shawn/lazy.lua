@@ -444,9 +444,9 @@ elseif utils.get_system_config().system_name == utils.system_names.work_laptop t
 		end,
 		event = "InsertEnter",
 	})
-	table.insert(pluginSpec, {
-		"giuxtaposition/blink-cmp-copilot",
-	})
+	-- table.insert(pluginSpec, {
+	--    "giuxtaposition/blink-cmp-copilot",
+	-- })
 end
 
 lazy.setup(pluginSpec, {
