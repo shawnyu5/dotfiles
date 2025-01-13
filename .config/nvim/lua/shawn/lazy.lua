@@ -20,6 +20,11 @@ end
 
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
+	{
+		"folke/lazydev.nvim",
+		ft = "lua",
+	},
+
 	{ "tpope/vim-fugitive" },
 	{
 		"dstein64/vim-startuptime",

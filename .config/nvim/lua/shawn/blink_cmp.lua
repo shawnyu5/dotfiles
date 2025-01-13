@@ -19,35 +19,19 @@ local config = {
 		["<C-d>"] = { "scroll_documentation_down", "fallback" },
 	},
 
-	snippets = {
-		-- Function to use when expanding LSP provided snippets
-		expand = function(snippet)
-			require("luasnip").lsp_expand(snippet)
-		end,
-		-- Function to use when checking if a snippet is active
-		active = function(filter)
-			if filter and filter.direction then
-				return require("luasnip").jumpable(filter.direction)
-			end
-			return require("luasnip").in_snippet()
-		end,
-		jump = function(direction)
-			require("luasnip").jump(direction)
-		end,
-	},
-
+	snippets = { preset = "luasnip" },
 	completion = {
 		list = {
-			selection = "auto_insert",
+			selection = {
+				auto_insert = true,
+				preselect = false,
+			},
 		},
 
 		menu = {
-			-- auto_show = true,
-			auto_show = function(ctx)
-				return ctx.mode ~= "cmdline" or vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
-			end,
+			auto_show = true,
 		},
-		documentation = { auto_show = true, auto_show_delay_ms = 500 },
+		documentation = { auto_show = true, auto_show_delay_ms = 300 },
 		-- Displays a preview of the selected item on the current line
 		ghost_text = {
 			enabled = true,
@@ -60,7 +44,7 @@ local config = {
 	},
 
 	sources = {
-		default = { "lsp", "path", "luasnip", "snippets", "buffer" },
+		default = { "lsp", "path", "snippets", "buffer" },
 		cmdline = {},
 		providers = {
 			-- TODO: this source doesnt seem to work...
