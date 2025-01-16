@@ -10,13 +10,6 @@ function M.project_files()
 	end
 end
 
-local function set_search_register(prompt_bufnr)
-	local content = require("telescope.actions.state").get_current_line()
-	local actions = require("telescope.actions")
-	vim.fn.setreg("/", content)
-	actions.select_default(prompt_bufnr)
-end
-
 local telescope_builtin = require("telescope.builtin")
 
 local opts = { noremap = true, silent = true }
@@ -86,11 +79,6 @@ require("telescope").setup({
 		},
 		current_buffer_fuzzy_find = {
 			theme = "ivy",
-			mappings = {
-				i = {
-					["<CR>"] = set_search_register,
-				},
-			},
 		},
 		git_branches = {},
 	},
