@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>fh", function()
 	end
 end, { desc = "fuzzy search vim help tags" })
 vim.keymap.set({ "n", "v" }, "<leader><leader>fw", function()
-	telescope_builtin.grep_string({ layout_strategy = "vertical" })
+	telescope_builtin.grep_string()
 end, { desc = "live grep for word under cursor" })
 vim.keymap.set("n", "<leader>gb", function()
 	telescope_builtin.git_branches({
