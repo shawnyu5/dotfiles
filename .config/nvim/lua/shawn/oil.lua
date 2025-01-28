@@ -76,7 +76,7 @@ oil.setup({
 		},
 		["<C-t>"] = {
 			"actions.select",
-			opts = { tab = true },
+			opts = { tab = true, close = true },
 			desc = "Open the entry in a new tab",
 		},
 		["<C-p>"] = "actions.preview",
@@ -96,7 +96,7 @@ oil.setup({
 		end,
 		-- This function defines what will never be shown, even when `show_hidden` is set
 		is_always_hidden = function(name, bufnr)
-			return false
+			return name == ".."
 		end,
 		-- Sort file names in a more intuitive order for humans. Is less performant,
 		-- so you may want to set to false if you work with large directories.
