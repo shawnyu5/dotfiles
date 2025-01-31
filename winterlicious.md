@@ -1,0 +1,22 @@
+# Winterlicious 2025
+
+- [Nuna Kitchen & Bar](https://www.toronto.ca/explore-enjoy/festivals-events/winterlicious/restaurants-menus/?restaurant=nunakitche#location=&lat=&lng=&zoom=)
+  - $55 dinner
+  - Peruvian
+  - Looks neat
+- [Christina's on the Danforth](https://www.toronto.ca/explore-enjoy/festivals-events/winterlicious/restaurants-menus/?restaurant=christinas1#location=&lat=&lng=&zoom=)
+  - $45 dinner
+  - Greek
+  - Looks interesting
+- [Black & Blue Restaurant](https://www.toronto.ca/explore-enjoy/festivals-events/winterlicious/restaurants-menus/?restaurant=blackbluer#location=&lat=&lng=&zoom=)
+  - American steak house
+  - No real "steak" on the menu...
+  - But good looking menu!
+- [Amal](https://www.toronto.ca/explore-enjoy/festivals-events/winterlicious/restaurants-menus/?restaurant=amal123456#location=&lat=&lng=&zoom=)
+  - $65 dinner
+  - Lebanese
+  - Would like to try some menu items
+- [Mother tongue](https://www.toronto.ca/explore-enjoy/festivals-events/winterlicious/restaurants-menus/?restaurant=mothertong#location=&lat=&lng=&zoom=)
+  - $55 dinner
+  - Cuisines: Asian, Filipino, Japanese, Korean
+  - WOULD LIKE TO TRY
