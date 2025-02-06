@@ -38,6 +38,7 @@ exec_always --no-startup-id ~/personal/remaps.sh
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id ~/.screenlayout/home_pc.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -158,10 +159,10 @@ bindsym $mod+0 workspace number $ws10
 workspace $ws1 output DP-2
 workspace $ws2 output DP-2
 workspace $ws3 output DP-2
-workspace $ws4 output DP-3
-workspace $ws5 output DP-3
-workspace $ws6 output DP-3
-workspace $ws7 output DP-3
+workspace $ws4 output DP-2
+workspace $ws5 output DP-1
+workspace $ws6 output DP-1
+workspace $ws7 output DP-1
 workspace $ws8 output HDMI-1
 workspace $ws9 output HDMI-1
 workspace $ws10 output HDMI-1
