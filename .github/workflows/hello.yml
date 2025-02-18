@@ -12,6 +12,7 @@ jobs:
       - name: Hello world
         run: |
           echo hello world
+          sleep 1000
 
   # hello2:
   #   name: hello2
