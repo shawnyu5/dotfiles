@@ -9,3 +9,9 @@ snippet func A function
 	}
 snippet fj filepath.Join
 	filepath.Join(${1})
+
+snippet errf if error, return a formatted error message
+	if err != nil {
+		return ${1:nil}, fmt.Errorf("${2:error}: %s", err)
+	}
+	${0}
