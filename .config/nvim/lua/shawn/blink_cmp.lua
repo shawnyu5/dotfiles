@@ -43,9 +43,11 @@ local config = {
 		enabled = true,
 	},
 
+	cmdline = {
+		enabled = true,
+	},
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
-		cmdline = {},
 		providers = {
 			-- TODO: this source doesnt seem to work...
 			tmux = {
