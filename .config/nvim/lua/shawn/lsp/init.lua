@@ -115,6 +115,7 @@ local servers = {
 			client.server_capabilities.rename = false
 		end,
 	},
+	ansiblels = {},
 	gopls = {
 		settings = {
 			gopls = {

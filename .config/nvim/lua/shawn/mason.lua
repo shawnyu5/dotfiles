@@ -16,6 +16,8 @@ local ensure_installed = {
 	"html-lsp",
 	"marksman",
 	"prettierd",
+	"ansible-lint",
+	"ansible-language-server",
 	-- "angular-language-server",
 	-- "jdtls",
 	"json-lsp",
