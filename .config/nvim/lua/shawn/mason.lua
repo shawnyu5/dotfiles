@@ -26,6 +26,8 @@ local ensure_installed = {
 	-- "rust-analyzer",
 	"typescript-language-server",
 	"lua-language-server",
+	"basedpyright",
+	"black",
 	"yamllint",
 	-- "taplo",
 	"stylua",
