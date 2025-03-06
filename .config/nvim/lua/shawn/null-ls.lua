@@ -11,6 +11,7 @@ null_ls.setup({
 	debug = true,
 	sources = {
 		formatting.stylua,
+		diagnostics.ansiblelint,
 		-- formatting.prettier.with({
 		-- extra_args = {
 		-- "--tab-width 3",

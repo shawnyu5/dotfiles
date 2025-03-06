@@ -115,6 +115,21 @@ local servers = {
 			client.server_capabilities.rename = false
 		end,
 	},
+	ansiblels = {},
+	basedpyright = {
+		settings = {
+			basedpyright = {
+				analysis = {
+					diagnosticMode = "workspace",
+					inlayHints = {
+						variableTypes = true,
+						callArgumentNames = true,
+						genericTypes = true,
+					},
+				},
+			},
+		},
+	},
 	gopls = {
 		settings = {
 			gopls = {
@@ -139,7 +154,11 @@ local servers = {
 	},
 	vuels = {},
 	jsonls = {},
-	marksman = {},
+	marksman = {
+		on_attach = function(_, bufnr)
+			utils.disable_formatting_on_save(bufnr)
+		end,
+	},
 	csharp_ls = {},
 	cssls = {},
 	texlab = {},
