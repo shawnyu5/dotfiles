@@ -27,6 +27,9 @@ local pluginSpec = {
 
 	{ "tpope/vim-fugitive" },
 	{
+		"mfussenegger/nvim-ansible",
+	},
+	{
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
 	},
