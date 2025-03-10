@@ -154,11 +154,7 @@ local servers = {
 	},
 	vuels = {},
 	jsonls = {},
-	marksman = {
-		on_attach = function(_, bufnr)
-			utils.disable_formatting_on_save(bufnr)
-		end,
-	},
+	marksman = {},
 	csharp_ls = {},
 	cssls = {},
 	texlab = {},
