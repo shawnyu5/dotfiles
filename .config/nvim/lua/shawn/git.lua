@@ -40,7 +40,7 @@ keymap("n", "<leader>gf", function()
 	vim.ui.input({ prompt = "Are you sure you want to force push (y/N)? " }, function(input)
 		if input == "y" then
 			vim.cmd("silent! Git commit --amend --no-edit")
-			vim.cmd("Git push --force")
+			vim.cmd("Git push --force-with-lease")
 		end
 	end)
 end, { desc = "Git force push, prompt for confirmation before force pushing" })
