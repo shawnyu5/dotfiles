@@ -127,6 +127,7 @@ local pluginSpec = {
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		event = "VeryLazy",
 	},
 	{ "anuvyklack/hydra.nvim" },
 	{ "norcalli/nvim-colorizer.lua" },
@@ -185,7 +186,10 @@ local pluginSpec = {
 		end,
 	},
 
-	{ "andweeb/presence.nvim" },
+	{
+		"andweeb/presence.nvim",
+		event = "VeryLazy",
+	},
 	{
 		"stevearc/oil.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
