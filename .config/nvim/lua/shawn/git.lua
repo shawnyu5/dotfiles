@@ -22,9 +22,7 @@ keymap("n", "<leader>gs", function()
 			initial_mode = "normal",
 		})
 	else
-		vim.notify("No git changes", {
-			level = vim.log.levels.WARN,
-		})
+		vim.notify("No git changes", vim.log.levels.WARN)
 	end
 end, { desc = "Git status" })
 keymap("n", "<leader>gc", function()
