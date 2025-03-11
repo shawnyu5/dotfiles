@@ -131,8 +131,7 @@ export PATH=$PATH:"/usr/local/go/bin:$HOME/.asdf/installs/python/3.13.1/bin"
 
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
-export JAVA_HOME="/usr/lib/jvm/default-runtime"
-# export PATH=":$PATH:$JAVA_HOME/bin" # java
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
 export JDTLS_HOME="/usr/bin/jdt/"
 export ansible_python_interpreter=/usr/bin/python3
 
