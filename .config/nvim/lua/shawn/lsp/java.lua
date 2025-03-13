@@ -7,6 +7,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			cmd = { "jdtls" },
 			root_dir = vim.fs.dirname(vim.fs.find({ ".gradlew", ".git", "mvnw" }, { upward = true })[1]),
 			on_attach = function(client, bufnr)
+				require("shawn.lsp.utils").disable_formatting_on_save(bufnr)
+
 				local jdtls = require("jdtls")
 				vim.notify("Java LSP on_attach")
 
