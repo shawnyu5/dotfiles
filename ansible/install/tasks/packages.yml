@@ -134,7 +134,7 @@
 
 - name: Link asdf tools config
   ansible.builtin.file:
-    src: "{{ personal_dir }}/.tools-versions"
-    dest: "{{ ansible_env.HOME }}/.tools-versions"
+    src: "{{ personal_dir }}/.tool-versions"
+    dest: "{{ ansible_env.HOME }}/.tool-versions"
     state: link
     force: true
