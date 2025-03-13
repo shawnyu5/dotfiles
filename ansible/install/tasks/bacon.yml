@@ -4,12 +4,12 @@
     path: "{{ ansible_env.HOME }}/.cargo/bin/bacon"
   register: binary_check
 
-- name: install bacon
-  shell: cargo install bacon
+- name: Install bacon
+  ansible.builtin.command: cargo install bacon
   when: not binary_check.stat.exists
 
-- name: link tmux conf
-  file:
+- name: Link tmux conf
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/bacon"
     dest: "{{ ansible_env.HOME }}/.config/bacon"
     state: link
