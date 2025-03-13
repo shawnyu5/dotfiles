@@ -1,13 +1,14 @@
-- name: install task worrior
+---
+- name: Install task worrior
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: task
     state: latest
 
-- name: link taskrc
+- name: Link taskrc
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.taskrc"
     dest: "{{ ansible_env.HOME }}/.taskrc"
     state: link

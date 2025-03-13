@@ -1,55 +1,55 @@
 ---
-- name: install flameshot (screen shot tool)
+- name: Install flameshot (screen shot tool)
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: flameshot
     state: latest
 
-- name: install kitty
+- name: Install kitty
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - kitty
       - picom
     state: latest
 
-- name: link kitty config
+- name: Link kitty config
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/kitty"
     dest: "{{ ansible_env.HOME }}/.config/kitty"
     state: link
     force: true
 
-- name: link i3 config
+- name: Link i3 config
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3"
     dest: "{{ ansible_env.HOME }}/.config/i3"
     state: link
     force: true
 
-- name: link i3blocks config
+- name: Link i3blocks config
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3blocks"
     dest: "{{ ansible_env.HOME }}/.config/i3blocks"
     state: link
     force: true
 
-- name: link picom config
+- name: Link picom config
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/picom"
     dest: "{{ ansible_env.HOME }}/.config/picom"
     state: link
     force: true
 
-- name: link rofi config
+- name: Link rofi config
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/rofi"
     dest: "{{ ansible_env.HOME }}/.config/rofi"
     state: link

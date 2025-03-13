@@ -1,31 +1,31 @@
 ---
-- name: install tmux
+- name: Install tmux
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - tmux
       # tmux window-rename dependency
       - python-libtmux
     state: latest
 
-- name: install tmux plugin manager
-  git:
+- name: Install tmux plugin manager
+  ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm
     dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm/"
 
-- name: link tmux conf
-  file:
+- name: Link tmux conf
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.tmux.conf"
     dest: "{{ ansible_env.HOME }}/.tmux.conf"
     state: link
 
-- name: clone tmux powerline
-  git:
+- name: Clone tmux powerline
+  ansible.builtin.git:
     repo: https://github.com/shawnyu5/tmux-powerline
     dest: "{{ ansible_env.HOME }}/.tmux/tmux-powerline/"
 
-- name: link tmux powerline config
-  file:
+- name: Link tmux powerline config
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.tmux-powerlinerc"
     dest: "{{ ansible_env.HOME }}/.tmux-powerlinerc"
     state: link

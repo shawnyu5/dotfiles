@@ -1,7 +1,10 @@
+---
 galaxy_info:
   author: Shawn Yu
   description: configures my Dot files
 
+  role_name: dotfiles
+  namespace: shawnyu
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
@@ -15,7 +18,7 @@ galaxy_info:
   # - CC-BY-4.0
   license: license (GPL-2.0-or-later, MIT, etc)
 
-  min_ansible_version: 2.1
+  min_ansible_version: 2.13.13
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:
