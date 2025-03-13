@@ -116,6 +116,7 @@ local servers = {
 		end,
 	},
 	ansiblels = {},
+	gradle_ls = {},
 	basedpyright = {
 		settings = {
 			basedpyright = {
@@ -214,9 +215,9 @@ local servers = {
 			},
 		},
 	},
-	groovyls = {
-		cmd = { "groovy-language-server" },
-	},
+	-- groovyls = {
+	--    cmd = { "groovy-language-server" },
+	-- },
 	taplo = {},
 	terraformls = {
 		filetypes = {
