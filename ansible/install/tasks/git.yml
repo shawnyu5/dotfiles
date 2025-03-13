@@ -1,40 +1,38 @@
 ---
-- name: install git
+- name: Install git
   become: true
   ignore_errors: true
   register: git
-  package:
+  ansible.builtin.package:
     name:
       - git
       - git-delta
       - github-cli
     state: latest
 
-- name: install git delta using cargo
+- name: Install git delta using cargo
   ignore_errors: true
   when: git.rc == 1
-  shell: cargo install git-delta
-
-- name: install gh cli plugins
+  ansible.builtin.command: cargo install git-delta
+- name: Install gh cli plugins
   ignore_errors: true
-  shell: |
+  ansible.builtin.shell: |
     gh extension install https://github.com/mislav/gh-branch
     gh extension install https://github.com/shawnyu5/gh-ac
     gh extension install https://github.com/seachicken/gh-poi
-
-- name: copy git-credentials
-  copy:
+- name: Copy git-credentials
+  ansible.builtin.copy:
     src: "{{ personal_dir }}/.git-credentials"
     dest: "{{ ansible_env.HOME }}/.git-credentials"
 
-- name: copy gitconfig
-  copy:
+- name: Copy gitconfig
+  ansible.builtin.copy:
     src: "{{ personal_dir }}/.gitconfig"
     dest: "{{ ansible_env.HOME }}/.gitconfig"
 
-- name: link gh config.yaml
+- name: Link gh config.yaml
   ignore_errors: true
-  file:
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/gh/config.yml"
     dest: "{{ ansible_env.HOME }}/.config/gh/config.yml"
     state: link

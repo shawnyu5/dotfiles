@@ -1,67 +1,66 @@
 ---
-- name: install neovim
+- name: Install neovim
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: neovim
     state: latest
 
-- name: install gcc
+- name: Install gcc
   become: true
-  package:
+  ansible.builtin.package:
     name: gcc
     state: latest
 
-- name: install unzip
+- name: Install unzip
   become: true
-  package:
+  ansible.builtin.package:
     name: unzip
     state: latest
 
-- name: install node
-  become: true
-  package:
-    name: nodejs
-    state: latest
+# Only coc used to depend on node. That is no longer the case.
+# - name: Install node
+#   become: true
+#   ansible.builtin.package:
+#     name: nodejs
+#     state: latest
 
-- name: install pynvim
+- name: Install pynvim
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name: python-pynvim
     state: latest
 
-- name: install ripgrep
+- name: Install ripgrep
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: ripgrep
     state: latest
 
-- name: install xclip
+- name: Install xclip
   become: true
-  package:
+  ignore_errors: true
+  ansible.builtin.package:
     name: xclip
     state: latest
 
-- name: create .config directory
-  ignore_errors: true
-  file:
+- name: Create .config directory
+  ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/.config/"
     state: directory
     mode: "0755"
 
-- name: link neovim config
-  ignore_errors: true
-  file:
+- name: Link neovim config
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.config/nvim"
     dest: "{{ ansible_env.HOME }}/.config/nvim"
     state: link
     force: true
 
-- name: link clang-format config
-  ignore_errors: true
-  file:
+- name: Link clang-format config
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.clang-format"
     dest: "{{ ansible_env.HOME }}/.clang-format"
     state: link

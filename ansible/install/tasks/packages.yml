@@ -1,117 +1,140 @@
 ---
-- name: install emojies
+- name: Install emojies
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: noto-fonts-emoji
     state: latest
 
-- name: install discord
+- name: Install discord
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: discord
     state: latest
 
-- name: install rustup
+- name: Install rustup using package manager
   ignore_errors: true
   become: true
-  package:
+  register: rustup_install
+  ansible.builtin.package:
     name: rustup
     state: latest
 
-- name: set default rust
+- name: Install rustup using install script
+  become: true
   ignore_errors: true
-  shell: rustup default stable
+  ansible.builtin.command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  when: "rustup_install.failed"
 
-- name: install font
+- name: Set default rust
+  ignore_errors: true
+  ansible.builtin.command: rustup default stable
+
+- name: Install font
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - ttf-fira-code
       - ttf-firacode-nerd
     state: latest
 
-- name: install node and NPM
+- name: Install node and NPM
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name:
       - nodejs
       - npm
     state: latest
 
-- name: install go
+- name: Install go
   ignore_errors: true
   become: true
-  package:
+  ansible.builtin.package:
     name: go
     state: latest
 
-- name: install slides (cli markdown slides tool)
-  ignore_errors: true
-  shell: go install github.com/maaslalani/slides@latest
-
-- name: install java
+- name: Install java
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name:
-      - jdk17-openjdk
-      - jre17-openjdk
+      - jdk21-openjdk
+      # NOTE: we should only need to install the JDK
+      # - jre21-openjdk
     state: latest
 
-- name: install htop
+- name: Install htop
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name: htop
     state: latest
 
-- name: install fzf
+- name: Install fzf
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name: fzf
     state: latest
 
-- name: install okular PDF viewer
+- name: Install okular PDF viewer
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name: okular
     state: latest
 
-- name: install docker
+- name: Install docker
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name:
       - docker
       - docker-compose
     state: latest
 
-- name: install gdb
+- name: Install gdb
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name: gdb
     state: latest
 
-- name: install terraform
+- name: Install terraform
   become: true
   ignore_errors: true
-  package:
-    name: ansible
+  ansible.builtin.package:
+    name: terraform
     state: latest
 
-- name: install kubernetes related packages
+- name: Install kubernetes related packages
   become: true
   ignore_errors: true
-  package:
+  ansible.builtin.package:
     name:
       - minikube
       - kubectl
       - k9s
     state: latest
+
+- name: Install asdf using package manager (arch only)
+  become: true
+  ignore_errors: true
+  register: ansible_install
+  ansible.builtin.package:
+    name: asdf
+    state: latest
+
+- name: Install asdf using go
+  when: ansible_install.failed
+  ansible.builtin.command: go install github.com/asdf-vm/asdf/cmd/asdf@latest
+
+- name: Link asdf tools config
+  ansible.builtin.file:
+    src: "{{ personal_dir }}/.tools-versions"
+    dest: "{{ ansible_env.HOME }}/.tools-versions"
+    state: link
+    force: true

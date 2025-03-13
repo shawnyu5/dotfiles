@@ -1,0 +1,24 @@
+# This file contains ignores rule violations for ansible-lint
+meta/main.yml meta-incorrect
+tasks/bacon.yml no-changed-when
+tasks/git.yml ignore-errors
+tasks/git.yml no-changed-when
+tasks/git.yml package-latest
+tasks/git.yml risky-file-permissions
+tasks/i3.yml ignore-errors
+tasks/i3.yml package-latest
+tasks/neovim.yml ignore-errors
+tasks/neovim.yml package-latest
+tasks/packages.yml ignore-errors
+tasks/packages.yml no-changed-when
+tasks/packages.yml package-latest
+tasks/packages.yml schema[tasks]
+tasks/ranger.yml ignore-errors
+tasks/ranger.yml package-latest
+tasks/task_worrior.yml ignore-errors
+tasks/task_worrior.yml package-latest
+tasks/tmux.yml latest[git]
+tasks/tmux.yml package-latest
+tasks/zsh.yml no-changed-when
+tasks/zsh.yml package-latest
+tests/test.yml syntax-check[specific]

@@ -1,38 +1,37 @@
 ---
-- name: install zsh
+- name: Install zsh
   become: true
   ignore_errors: true
   register: zsh
-  package:
+  ansible.builtin.package:
     name:
       - zsh
       - starship
     state: latest
 
-- name: install starship using cargo
+- name: Install starship using cargo
   when: zsh.rc | default(0) == 1
-  shell: cargo install starship --locked
-
-- name: link zshrc
-  file:
+  ansible.builtin.command: cargo install starship --locked
+- name: Link zshrc
+  ansible.builtin.file:
     src: "{{ personal_dir }}/.zshrc"
     dest: "{{ ansible_env.HOME }}/.zshrc"
     state: link
 
-- name: link zsh_aliases
-  file:
+- name: Link zsh_aliases
+  ansible.builtin.file:
     dest: "{{ ansible_env.HOME }}/.zsh_aliases"
     src: "{{ personal_dir }}/.zsh_aliases"
     state: link
 
-- name: link zsh_aliases_custom
-  file:
+- name: Link zsh_aliases_custom
+  ansible.builtin.file:
     dest: "{{ ansible_env.HOME }}/.zsh_aliases-custom"
     src: "{{ personal_dir }}/.zsh_aliases-custom"
     state: link
 
-- name: link starship config
-  file:
+- name: Link starship config
+  ansible.builtin.file:
     dest: "{{ ansible_env.HOME }}/.config/starship.toml"
     src: "{{ personal_dir }}/.config/starship.toml"
     state: link
