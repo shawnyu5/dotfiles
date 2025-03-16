@@ -1,0 +1,15 @@
+---
+- name: Install task worrior
+  ignore_errors: true
+  become: true
+  ansible.builtin.package:
+    name: task
+    state: latest
+
+- name: Link taskrc
+  ignore_errors: true
+  ansible.builtin.file:
+    src: "{{ personal_dir }}/.taskrc"
+    dest: "{{ ansible_env.HOME }}/.taskrc"
+    state: link
+    force: true
