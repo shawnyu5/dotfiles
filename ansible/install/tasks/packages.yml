@@ -4,7 +4,7 @@
   become: true
   ansible.builtin.package:
     name: noto-fonts-emoji
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install less
   become: true
@@ -17,7 +17,7 @@
   become: true
   ansible.builtin.package:
     name: discord
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install rustup using package manager
   ignore_errors: true
@@ -91,7 +91,7 @@
   ignore_errors: true
   ansible.builtin.package:
     name: okular
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install docker
   become: true
@@ -126,19 +126,27 @@
       - k9s
     state: latest
 
-- name: Install asdf using package manager (arch only)
-  become: true
-  ignore_errors: true
-  register: ansible_install
-  ansible.builtin.package:
-    name: asdf
-    state: latest
+# NOTE: we only need to install asdf on work laptop. It will never come from the package manager
+# - name: Install asdf using package manager (arch only)
+#   become: true
+#   ignore_errors: true
+#   register: ansible_install
+#   ansible.builtin.package:
+#     name: asdf
+#     state: latest
+
+- name: Check if asdf is installed
+  ansible.builtin.command: which asdf
+  changed_when: false
+  register: asdf_installed
 
 - name: Install asdf using go
-  when: ansible_install.failed
+  when: "system_name == work_laptop and asdf_installed.failed"
+  changed_when: "system_name == work_laptop and asdf_installed.failed"
   ansible.builtin.command: go install github.com/asdf-vm/asdf/cmd/asdf@latest
 
 - name: Link asdf tools config
+  when: "system_name == work_laptop"
   ansible.builtin.file:
     src: "{{ personal_dir }}/.tool-versions"
     dest: "{{ ansible_env.HOME }}/.tool-versions"

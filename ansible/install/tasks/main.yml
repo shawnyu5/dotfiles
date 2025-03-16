@@ -1,4 +1,12 @@
 ---
+- name: Load system_config.json
+  ansible.builtin.set_fact:
+    system_config: "{{ lookup('file', '{{ personal_dir }}/system_config.json') | from_json }}"
+
+- name: Set system name
+  ansible.builtin.set_fact:
+    system_name: "{{ system_config.system_name }}"
+
 - name: Install additional packages
   ansible.builtin.include_tasks:
     file: packages.yml
