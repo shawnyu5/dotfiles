@@ -6,6 +6,12 @@
     name: noto-fonts-emoji
     state: latest
 
+- name: Install less
+  become: true
+  ansible.builtin.package:
+    name: less
+    state: latest
+
 - name: Install discord
   ignore_errors: true
   become: true

@@ -8,8 +8,9 @@
   ansible.builtin.command: cargo install bacon
   when: not binary_check.stat.exists
 
-- name: Link tmux conf
+- name: Link bacon conf
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/bacon"
     dest: "{{ ansible_env.HOME }}/.config/bacon"
     state: link
+    force: true
