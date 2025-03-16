@@ -18,6 +18,13 @@
     name: unzip
     state: latest
 
+# For telescope fzf native finder
+- name: Install cmake
+  become: true
+  ansible.builtin.package:
+    name: cmake
+    state: latest
+
 # Only coc used to depend on node. That is no longer the case.
 # - name: Install node
 #   become: true
