@@ -29,6 +29,8 @@ _comp_options+=(globdots)		# Include hidden files.
 autoload -U colors && colors
 
 export BROWSER="google-chrome-stable"
+# This is for ansible to startup properly
+export LC_ALL="C.UTF-8";
 export GOPATH=$HOME/gopath
 
 precmd_functions=""
