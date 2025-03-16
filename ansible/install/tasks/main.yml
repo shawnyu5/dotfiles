@@ -26,9 +26,6 @@
 - name: Set up git
   ansible.builtin.include_tasks:
     file: git.yml
-- name: Set up task worrior
-  ansible.builtin.include_tasks:
-    file: task_worrior.yml
 
 - name: Set up bacon
   ansible.builtin.include_tasks:
