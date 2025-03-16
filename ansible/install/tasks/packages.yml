@@ -138,3 +138,16 @@
     dest: "{{ ansible_env.HOME }}/.tool-versions"
     state: link
     force: true
+
+- name: Install zoxide using package manager
+  register: zoxide_install
+  become: true
+  ignore_errors: true
+  ansible.builtin.package:
+    name: zoxide
+    state: latest
+
+- name: Install zoxide using script
+  become: true
+  when: zoxide_install.failed
+  ansible.builtin.command: curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
