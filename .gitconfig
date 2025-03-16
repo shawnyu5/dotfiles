@@ -5,13 +5,14 @@
 	name = shawn yu
 
 [core]
-    pager = less
+    pager = delta
 
 [interactive]
-    diffFilter = less
+   diffFilter = delta --color-only
 
 [delta]
     navigate = true  # use n and N to move between diff sections
+   dark = true
 
 [merge]
     conflictstyle = diff3
