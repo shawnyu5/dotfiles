@@ -141,12 +141,12 @@
   register: asdf_installed
 
 - name: Install asdf using go
-  when: "system_name == work_laptop and asdf_installed.failed"
-  changed_when: "system_name == work_laptop and asdf_installed.failed"
+  when: system_name == 'work_laptop' and asdf_installed.failed
+  changed_when: system_name == 'work_laptop' and asdf_installed.failed
   ansible.builtin.command: go install github.com/asdf-vm/asdf/cmd/asdf@latest
 
 - name: Link asdf tools config
-  when: "system_name == work_laptop"
+  when: "system_name == 'work_laptop'"
   ansible.builtin.file:
     src: "{{ personal_dir }}/.tool-versions"
     dest: "{{ ansible_env.HOME }}/.tool-versions"
