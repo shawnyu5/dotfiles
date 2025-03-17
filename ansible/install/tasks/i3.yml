@@ -4,7 +4,7 @@
   become: true
   ansible.builtin.package:
     name: flameshot
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install kitty
   ignore_errors: true
@@ -13,10 +13,10 @@
     name:
       - kitty
       - picom
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Link kitty config
-  ignore_errors: true
+  when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/kitty"
     dest: "{{ ansible_env.HOME }}/.config/kitty"
@@ -24,7 +24,7 @@
     force: true
 
 - name: Link i3 config
-  ignore_errors: true
+  when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3"
     dest: "{{ ansible_env.HOME }}/.config/i3"
@@ -32,7 +32,7 @@
     force: true
 
 - name: Link i3blocks config
-  ignore_errors: true
+  when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3blocks"
     dest: "{{ ansible_env.HOME }}/.config/i3blocks"
@@ -40,7 +40,7 @@
     force: true
 
 - name: Link picom config
-  ignore_errors: true
+  when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/picom"
     dest: "{{ ansible_env.HOME }}/.config/picom"
@@ -48,7 +48,7 @@
     force: true
 
 - name: Link rofi config
-  ignore_errors: true
+  when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/rofi"
     dest: "{{ ansible_env.HOME }}/.config/rofi"
