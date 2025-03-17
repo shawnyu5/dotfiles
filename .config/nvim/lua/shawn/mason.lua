@@ -18,6 +18,7 @@ local ensure_installed = {
 	"prettierd",
 	"ansible-lint",
 	"ansible-language-server",
+	"groovy-language-server",
 	-- "angular-language-server",
 	-- "jdtls",
 	"json-lsp",
