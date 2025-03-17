@@ -215,9 +215,9 @@ local servers = {
 			},
 		},
 	},
-	-- groovyls = {
-	--    cmd = { "groovy-language-server" },
-	-- },
+	groovyls = {
+		cmd = { "groovy-language-server" },
+	},
 	taplo = {},
 	terraformls = {
 		filetypes = {
