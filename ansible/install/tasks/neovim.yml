@@ -1,9 +1,11 @@
 ---
+# We only install neovim nightly on arch. This failing on other system is fine
+# On non arch systems, we can manually build from source
 - name: Install neovim
   ignore_errors: true
   become: true
   ansible.builtin.package:
-    name: neovim
+    name: neovim-nightly-bin
     state: latest
 
 - name: Install gcc
