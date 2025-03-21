@@ -27,7 +27,7 @@ alias gs="git status"
 alias gpush="git push"
 alias gpull="git pull"
 alias gm="git checkout $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
-alias gforce="git commit --amend --no-edit && git push --force"
+alias gforce="git commit --amend --no-edit && git push --force-with-lease"
 
 
 #mdp no fade by default
