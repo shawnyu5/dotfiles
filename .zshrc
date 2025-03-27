@@ -104,12 +104,12 @@ export EDITOR='nvim'
 export VISUAL="$EDITOR"
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
+# alias grep='grep --color=auto'
+# alias fgrep='fgrep --color=auto'
+# alias egrep='egrep --color=auto'
 
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
