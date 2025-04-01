@@ -47,18 +47,19 @@ local config = {
 		enabled = true,
 	},
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer" },
+		default = { "lsp", "path", "snippets", "buffer", "tmux" },
 		providers = {
-			-- TODO: this source doesnt seem to work...
 			tmux = {
 				name = "tmux",
-				module = "blink.compat.source",
+				module = "blink-cmp-tmux",
 				score_offset = -3,
 				opts = {
 					all_panes = false,
-					label = "[tmux]",
-					trigger_characters = { "." },
-					trigger_characters_ft = {}, -- { filetype = { '.' } }
+					capture_history = false,
+					-- only suggest completions from `tmux` if the `trigger_chars` are
+					-- used
+					-- triggered_only = false,
+					-- trigger_chars = { "." },
 				},
 			},
 			lsp = {
