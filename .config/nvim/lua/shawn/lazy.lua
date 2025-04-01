@@ -291,7 +291,8 @@ local pluginSpec = {
 		-- build = 'cargo build --release',
 		dependencies = {
 			"L3MON4D3/LuaSnip",
-			"andersevenrud/cmp-tmux",
+			"mgalliou/blink-cmp-tmux",
+			-- "andersevenrud/cmp-tmux",
 			-- "giuxtaposition/blink-cmp-copilot",
 			-- "zbirenbaum/copilot-cmp",
 			-- "saadparwaiz1/cmp_luasnip",
