@@ -1,6 +1,6 @@
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 1000 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 1000
+vim.o.foldlevel = 500 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 500
 vim.o.foldenable = false
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
