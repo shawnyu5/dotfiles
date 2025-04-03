@@ -257,6 +257,19 @@ local pluginSpec = {
 		version = "^4", -- Recommended
 		ft = { "rust" },
 	},
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		dependencies = {
+			{ "zbirenbaum/copilot.lua" }, -- or zbirenbaum/copilot.lua
+			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+		},
+		build = "make tiktoken", -- Only on MacOS or Linux
+		enabled = utils.get_system_config().system_name == utils.system_names.work_laptop,
+		opts = {
+			-- See Configuration section for options
+		},
+		event = "VeryLazy",
+	},
 	-- {
 	--    "simrat39/rust-tools.nvim",
 	-- },
