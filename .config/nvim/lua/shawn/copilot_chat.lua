@@ -7,12 +7,21 @@ copilot.setup({
 		vim.notify("Using selection")
 		return select.visual(source) or select.buffer(source)
 	end,
+	mappings = {
+		reset = {
+			normal = "<nop>",
+			insert = "<nop>",
+		},
+	},
 })
 
 vim.keymap.set("n", "<leader>pc", function()
 	chat.open()
 end, { desc = "Open copilot chat" })
 
-vim.keymap.set({ "n", "v" }, "<leader>pe", function()
-	chat.ask(require("CopilotChat.config.prompts").COPILOT_BASE.system_prompt)
-end, { desc = "Ask copilot to explain the current selection" })
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>pe",
+	"<Cmd>CopilotChatExplain<CR>",
+	{ desc = "Ask copilot to explain the current selection" }
+)
