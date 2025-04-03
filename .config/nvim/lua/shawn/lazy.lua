@@ -269,6 +269,9 @@ local pluginSpec = {
 			-- See Configuration section for options
 		},
 		event = "VeryLazy",
+		config = function()
+			require("shawn.copilot_chat")
+		end,
 	},
 	-- {
 	--    "simrat39/rust-tools.nvim",
