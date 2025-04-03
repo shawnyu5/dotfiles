@@ -55,8 +55,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		if vim.version().minor == 11 then
 			vim.lsp.inlay_hint.enable(ev.bufnr, {})
-		else
-			vim.lsp.inlay_hint.enable(ev.bufnr, true)
+		elseif vim.version().minor == 12 then
+			vim.lsp.inlay_hint.enable(true, {
+				bufnr = ev.bufnr,
+			})
 		end
 
 		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
