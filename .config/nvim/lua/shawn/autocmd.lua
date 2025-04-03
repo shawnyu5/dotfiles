@@ -22,7 +22,7 @@ create_autocmd({ "TextYankPost" }, {
 		if version ~= nil and version.minor == 11 then
 			require("vim.hl").on_yank({ timeout = 104 })
 		else
-			require("vim.highlight").on_yank({ timeout = 104 })
+			require("vim.hl").on_yank({ timeout = 104 })
 		end
 	end,
 })
