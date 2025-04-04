@@ -1,6 +1,6 @@
-set rtp+=~/.config/nvim/settings/
-set rtp+=~/.config/nvim/settings/print_debug
-set rtp+=~/.config/nvim/lua/shawn/print/
+" set rtp+=~/.config/nvim/settings/
+" set rtp+=~/.config/nvim/settings/print_debug
+" set rtp+=~/.config/nvim/lua/shawn/print/
 set laststatus=3
 set updatetime=800
 
@@ -8,9 +8,8 @@ set updatetime=800
 set conceallevel=2
 set termguicolors
 
-autocmd BufEnter *.hbs set ft=html
-
-set nottimeout
+" NOTE: this causes neovim to incorrectly interpret terminal codes when using `fg`
+" set nottimeout
 set ttimeoutlen=600
 set timeoutlen=900
 
@@ -42,12 +41,9 @@ set formatoptions-=cro
 
 "autocompletion while entering vim commands
 set completeopt=menu,menuone,noselect,noinsert
-" set wildmode=longest,list,full
-" set wildmenu
 
 "wait 0ms after pressing the esc key to see if there are any other key presses
 set ttimeoutlen=0
 "setting path to current directory to enable searching
 set path+=**
 set scrolloff=3
-
