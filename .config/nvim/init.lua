@@ -14,8 +14,6 @@ end
 source("~/.config/nvim/settings/maps.vim")
 source("~/.config/nvim/settings/sets.vim")
 require("shawn.lazy")
--- require("shawn.packer")
--- source("~/.config/nvim/settings/NERDtree_settings.vim")
 require("shawn.ts-context")
 require("shawn.lsp")
 require("shawn.autocmd")
