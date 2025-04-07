@@ -128,6 +128,9 @@ local pluginSpec = {
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		event = "VeryLazy",
+		config = function()
+			require("shawn.ts-context")
+		end,
 	},
 	{ "anuvyklack/hydra.nvim" },
 	{ "norcalli/nvim-colorizer.lua" },
