@@ -134,7 +134,10 @@ local pluginSpec = {
 	},
 	{ "anuvyklack/hydra.nvim" },
 	{ "norcalli/nvim-colorizer.lua" },
-	{ "akinsho/git-conflict.nvim" },
+	{
+		"akinsho/git-conflict.nvim",
+		version = "v2.1.0",
+	},
 	{
 		"folke/tokyonight.nvim",
 		branch = "main",
