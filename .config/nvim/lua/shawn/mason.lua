@@ -38,6 +38,7 @@ local ensure_installed = {
 	"terraform-ls",
 	"tflint",
 	"actionlint",
+	"gh-actions-language-server",
 }
 
 mason.setup()
