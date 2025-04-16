@@ -162,6 +162,7 @@ local servers = {
 	cssls = {},
 	texlab = {},
 	dockerls = {},
+	gh_actions_ls = {},
 	yamlls = {
 		on_attach = function(_, bufnr)
 			utils.disable_formatting_on_save(bufnr)
