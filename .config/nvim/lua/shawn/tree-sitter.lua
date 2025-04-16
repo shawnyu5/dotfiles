@@ -1,9 +1,5 @@
-local ok, _ = pcall(require, "nvim-treesitter")
-if not ok then
-	print("treesitter not installed...")
-	return
-end
--- :TSInstall javascript bash lua python cpp vim
+-- Disable Treesitter async parsing to reduce flickering until this issue is fixed: https://github.com/neovim/neovim/pull/33145
+vim.g._ts_force_sync_parsing = true
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"javascript",
