@@ -1,3 +1,6 @@
+require("shawn.lsp.java")
+require("shawn.lsp.rust")
+
 local utils = require("shawn.lsp.utils")
 local lsp_utils = require("lspconfig.util")
 
@@ -140,6 +143,3 @@ for server, config in pairs(servers) do
 	vim.lsp.enable(server)
 	vim.lsp.config(server, config)
 end
-
-require("shawn.lsp.java")
-require("shawn.lsp.rust")
