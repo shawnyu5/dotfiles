@@ -1,4 +1,3 @@
-local notify = vim.notify
 vim.notify = function(msg, ...)
 	if
 		msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
@@ -7,11 +6,10 @@ vim.notify = function(msg, ...)
 		return
 	end
 
-	notify(msg, ...)
+	vim.notify(msg, ...)
 end
 
-local utils = require("shawn.lsp.utils")
-local lsp_utils = require("lspconfig.util")
+require("shawn.lsp.servers")
 
 -- LSP Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -101,151 +99,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
-
-local function lua_ls_runtime_path()
-	local runtime_path = vim.split(package.path, ";")
-	table.insert(runtime_path, "lua/?.lua")
-	table.insert(runtime_path, "lua/?/init.lua")
-	return runtime_path
-end
-
-local servers = {
-	-- jdtls = {},
-	angularls = {
-		on_attach = function(client, _)
-			-- disable rename. Prefer tsserver's rename capabilities
-			client.server_capabilities.rename = false
-		end,
-	},
-	ansiblels = {},
-	gradle_ls = {},
-	basedpyright = {
-		settings = {
-			basedpyright = {
-				analysis = {
-					diagnosticMode = "workspace",
-					inlayHints = {
-						variableTypes = true,
-						callArgumentNames = true,
-						genericTypes = true,
-					},
-				},
-			},
-		},
-	},
-	gopls = {
-		settings = {
-			gopls = {
-				hints = {
-					assignVariableTypes = true,
-					compositeLiteralFields = true,
-					functionTypeParameters = true,
-					parameterNames = true,
-					rangeVariableTypes = true,
-				},
-				experimentalPostfixCompletions = true,
-				analyses = {
-					unusedparams = true,
-					shadow = true,
-				},
-				staticcheck = true,
-			},
-		},
-		init_options = {
-			usePlaceholders = false,
-		},
-	},
-	vuels = {},
-	jsonls = {},
-	marksman = {},
-	csharp_ls = {},
-	cssls = {},
-	texlab = {},
-	dockerls = {},
-	gh_actions_ls = {},
-	yamlls = {
-		on_attach = function(_, bufnr)
-			utils.disable_formatting_on_save(bufnr)
-		end,
-	},
-	clangd = {
-		capabilities = {
-			offsetEncoding = { "utf-16" },
-		},
-	},
-	bashls = {},
-	html = {
-		on_attach = function(_, bufnr)
-			utils.disable_formatting_on_save(bufnr)
-		end,
-		capabilities = {
-			textDocument = {
-				completion = {
-					completionItem = {
-						snippetSupport = true,
-					},
-				},
-			},
-		},
-	},
-	ts_ls = {
-		on_attach = function(_, bufnr)
-			utils.disable_formatting_on_save(bufnr)
-		end,
-	},
-	lua_ls = {
-		settings = {
-			Lua = {
-				runtime = {
-					-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-					version = "LuaJIT",
-					-- Setup your lua path
-					path = lua_ls_runtime_path(),
-				},
-				diagnostics = {
-					-- Get the language server to recognize the `vim` global
-					globals = { "vim" },
-				},
-				workspace = {
-					-- Make the server aware of Neovim runtime files
-					library = vim.api.nvim_get_runtime_file("", true),
-					checkThirdParty = false,
-				},
-				-- Do not send telemetry data containing a randomized but unique identifier
-				telemetry = {
-					enable = false,
-				},
-			},
-		},
-	},
-	groovyls = {
-		cmd = { "groovy-language-server" },
-	},
-	taplo = {},
-	terraformls = {
-		filetypes = {
-			"terraform",
-			"terrform-vars",
-			"hcl",
-		},
-	},
-	tflint = {
-		root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
-	},
-}
-
--- for loop over all servers
-for server, config in pairs(servers) do
-	config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-	config.capabilities.textDocument.foldingRange = {
-		dynamicRegistration = false,
-		lineFoldingOnly = true,
-	}
-	require("lspconfig")[server].setup(config)
-end
-
-require("shawn.lsp.java")
-require("shawn.lsp.rust")
 
 -- color settings
 vim.cmd([[
