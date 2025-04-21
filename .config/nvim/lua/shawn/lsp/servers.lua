@@ -1,3 +1,6 @@
+require("shawn.lsp.java")
+require("shawn.lsp.rust")
+
 local utils = require("shawn.lsp.utils")
 local lsp_utils = require("lspconfig.util")
 
@@ -58,6 +61,14 @@ local servers = {
 		on_attach = function(_, bufnr)
 			utils.disable_formatting_on_save(bufnr)
 		end,
+		capabilities = {
+			textDocument = {
+				foldingRange = {
+					dynamicRegistration = false,
+					lineFoldingOnly = true,
+				},
+			},
+		},
 	},
 	clangd = {
 		capabilities = {
@@ -108,7 +119,7 @@ local servers = {
 					library = {
 						vim.env.VIMRUNTIME,
 						-- Depending on the usage, you might want to add additional paths here.
-						-- "${3rd}/luv/library"
+						-- "${3rd}/luv/library",
 						-- "${3rd}/busted/library",
 					},
 					-- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
@@ -140,6 +151,3 @@ for server, config in pairs(servers) do
 	vim.lsp.enable(server)
 	vim.lsp.config(server, config)
 end
-
-require("shawn.lsp.java")
-require("shawn.lsp.rust")
