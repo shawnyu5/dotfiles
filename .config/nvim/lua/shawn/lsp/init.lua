@@ -1,3 +1,4 @@
+local notify = vim.notify
 vim.notify = function(msg, ...)
 	if
 		msg:match("warning: multiple different client offset_encodings detected for buffer, this is not supported yet")
@@ -6,7 +7,7 @@ vim.notify = function(msg, ...)
 		return
 	end
 
-	vim.notify(msg, ...)
+	notify(msg, ...)
 end
 
 require("shawn.lsp.servers")
