@@ -6,6 +6,12 @@ create_autocmd({ "BufEnter" }, {
 	command = "setlocal formatoptions-=cro",
 })
 
+vim.filetype.add({
+	pattern = {
+		[".*/meta/.*%.ya?ml"] = "yaml.ansible",
+	},
+})
+
 create_augroup("makeFileIndent", { clear = true })
 create_autocmd({ "BufEnter" }, {
 	group = "makeFileIndent",

@@ -156,7 +156,7 @@ local pluginSpec = {
 		config = function()
 			local opts = {
 				icons = {
-					enable = false,
+					enable = true,
 				},
 			}
 			require("dropbar").setup(opts)
@@ -253,6 +253,7 @@ local pluginSpec = {
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+		version = "^1.0.0",
 		event = "VeryLazy",
 		config = function()
 			require("shawn.mason")
@@ -261,6 +262,7 @@ local pluginSpec = {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		version = "^1.0.0",
 	},
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
