@@ -11,7 +11,9 @@ local servers = {
 			client.server_capabilities.rename = false
 		end,
 	},
-	ansiblels = {},
+	ansiblels = {
+		root_markers = { "ansible.cfg", ".ansible-lint", "galaxy.yml", "galaxy.yaml" },
+	},
 	gradle_ls = {},
 	basedpyright = {
 		settings = {
