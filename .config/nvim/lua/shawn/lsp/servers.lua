@@ -63,6 +63,10 @@ local servers = {
 		on_attach = function(_, bufnr)
 			utils.disable_formatting_on_save(bufnr)
 		end,
+		filetypes = {
+			"yaml",
+			"yaml.ansible",
+		},
 		capabilities = {
 			textDocument = {
 				foldingRange = {
