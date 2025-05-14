@@ -8,7 +8,8 @@ create_autocmd({ "BufEnter" }, {
 
 vim.filetype.add({
 	pattern = {
-		[".*/meta/.*%.ya?ml"] = "yaml.ansible",
+		[".*/meta/argument_specs.ya?ml"] = "yaml.ansible",
+		[".*/meta/main.ya?ml"] = "yaml.ansible",
 	},
 })
 
