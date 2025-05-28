@@ -14,6 +14,12 @@
     name: gcc
     state: latest
 
+- name: Install tree-sitter-cli
+  become: true
+  community.general.cargo:
+    name: tree-sitter-cli
+    locked: true
+
 - name: Install unzip
   become: true
   ansible.builtin.package:
