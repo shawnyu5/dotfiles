@@ -1,5 +1,5 @@
 -- Disable Treesitter async parsing to reduce flickering until this issue is fixed: https://github.com/neovim/neovim/pull/33145
--- vim.g._ts_force_sync_parsing = true
+vim.g._ts_force_sync_parsing = true
 local ts_langs = {
 	"javascript",
 	"go",
@@ -19,6 +19,10 @@ local ts_langs = {
 	"terraform",
 	"json",
 	"toml",
+	"gitcommit",
+	"git_rebase",
+	"gitignore",
+	"git_config",
 }
 require("nvim-treesitter").install(ts_langs)
 vim.api.nvim_create_autocmd("FileType", {
@@ -27,3 +31,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.treesitter.start()
 	end,
 })
+
+-- Register ansible.yaml as a YAML filetype
+vim.treesitter.language.register("yaml", { "ansible.yaml" })
