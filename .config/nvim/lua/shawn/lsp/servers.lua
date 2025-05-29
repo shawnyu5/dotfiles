@@ -153,6 +153,16 @@ local servers = {
 	},
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.foldingRange = {
+	dynamicRegistration = false,
+	lineFoldingOnly = true,
+}
+
+vim.lsp.config("*", {
+	capabilities = capabilities,
+})
+
 for server, config in pairs(servers) do
 	vim.lsp.config(server, config)
 	vim.lsp.enable(server)

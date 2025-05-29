@@ -23,6 +23,7 @@ local ts_langs = {
 	"git_rebase",
 	"gitignore",
 	"git_config",
+	"diff",
 }
 require("nvim-treesitter").install(ts_langs)
 vim.api.nvim_create_autocmd("FileType", {
