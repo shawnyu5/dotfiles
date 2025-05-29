@@ -47,11 +47,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		vim.diagnostic.config({ virtual_text = true })
-
-		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
-		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
-
 		if vim.version().minor == 11 then
 			vim.lsp.inlay_hint.enable(ev.bufnr, {})
 		elseif vim.version().minor == 12 then
