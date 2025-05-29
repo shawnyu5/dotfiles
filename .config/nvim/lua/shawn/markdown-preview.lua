@@ -14,6 +14,7 @@ vim.g.mkdp_refresh_slow = 1
 local utils = require("shawn.utils")
 local system_config = utils.get_system_config()
 vim.g.mkdp_browser = system_config.mkdp_browser_path
+-- vim.g.mkdp_markdown_css = vim.fn.expand("~/personal/gitHub_markdown.css")
 
 -- use a custom markdown style must be absolute path
 -- like '/Users/username/markdown.css' or expand('~/markdown.css')
