@@ -15,7 +15,7 @@
     state: latest
 
 - name: Install tree-sitter-cli
-  become: true
+  # become: true
   community.general.cargo:
     name: tree-sitter-cli
     locked: true
