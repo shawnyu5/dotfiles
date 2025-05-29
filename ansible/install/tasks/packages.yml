@@ -138,6 +138,7 @@
 - name: Check if asdf is installed
   ansible.builtin.command: which asdf
   changed_when: false
+  ignore_errors: true
   register: asdf_installed
 
 - name: Install asdf using go
