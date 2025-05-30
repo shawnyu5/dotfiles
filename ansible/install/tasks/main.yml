@@ -12,41 +12,41 @@
     system_name: "{{ system_config.system_name }}"
 
 - name: Install additional packages
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: packages.yml
 
 - name: Set up neovim
   tags:
     - neovim
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: neovim.yml
 
 - name: Setup ranger
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: ranger.yml
 
 - name: Set up ZSH
   tags:
     - zsh
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: zsh.yml
 
 - name: Set up tmux
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: tmux.yml
 
 - name: Install i3
   tags:
     - i3
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: i3.yml
 
 - name: Set up git
   tags:
     - git
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: git.yml
 
 - name: Set up bacon
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: bacon.yml
