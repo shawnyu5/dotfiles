@@ -18,7 +18,7 @@
 - name: Set up neovim
   tags:
     - neovim
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: neovim.yml
 
 - name: Setup ranger

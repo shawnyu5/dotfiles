@@ -14,11 +14,16 @@
     name: gcc
     state: latest
 
-- name: Install tree-sitter-cli
-  # become: true
-  community.general.cargo:
+- name: Install tree-sitter-cli using package manager
+  become: true
+  when: ansible_distribution == "Archlinux"
+  ansible.builtin.package:
     name: tree-sitter-cli
-    locked: true
+    state: latest
+
+- name: Install tree-sitter-cli using cargo
+  when: ansible_distribution != "Archlinux"
+  ansible.builtin.command: cargo install --locked tree-sitter-cli
 
 - name: Install unzip
   become: true
