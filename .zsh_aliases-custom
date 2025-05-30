@@ -47,4 +47,4 @@ function awsec {
 }
 alias wallpaper="~/personal/utils/change_wallpaper.sh"
 alias files="nautilus"
-alias suspend="i3lock -c 000000 && systemctl suspend"
+alias suspend="~/.config/i3/scripts/blur-lock && systemctl suspend"

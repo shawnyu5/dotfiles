@@ -47,7 +47,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id i3-msg 'workspace 8; exec google-chrome-stable'
 exec --no-startup-id i3-msg 'workspace 1; discord'
 exec --no-startup-id i3-msg 'workspace 6; exec kitty'
-exec_always "xautolock -detectsleep -time 5 -locker \"i3lock -c 000000 && systemctl suspend\""
+exec_always "xautolock -detectsleep -time 5 -locker \"~/.config/i3/scripts/blur-lock && systemctl suspend\""
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
