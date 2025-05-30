@@ -19,6 +19,13 @@
     name: discord
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
+- name: Install bat
+  ignore_errors: true
+  become: true
+  ansible.builtin.package:
+    name: bat
+    state: "latest"
+
 - name: Install rustup using package manager
   ignore_errors: true
   become: true

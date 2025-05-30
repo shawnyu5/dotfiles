@@ -488,7 +488,16 @@ local pluginSpec = {
 		dependencies = {
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
-				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+				build = function()
+					local have_make = vim.fn.executable("make") == 1
+					if have_make then
+						print("Using make")
+						return "make"
+					else
+						return "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+					end
+				end,
+				-- build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 			},
 			-- "nvim-telescope/telescope-frecency.nvim",
 			{
