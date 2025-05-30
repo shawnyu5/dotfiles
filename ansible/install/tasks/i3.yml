@@ -78,3 +78,22 @@
     dest: "{{ ansible_env.HOME }}/.screenlayout"
     state: link
     force: true
+
+- name: Setup systemctl service to disable USB wakeup
+  become: true
+  tags:
+    - i3
+  ansible.builtin.file:
+    src: "{{ personal_dir }}/disable-usb-wakeup.service"
+    dest: "/etc/systemd/system/disable-usb-wakeup.service"
+    state: link
+    # force: true
+
+- name: Enable disable USB wakeup service
+  tags:
+    - i3
+  become: true
+  ansible.builtin.systemd_service:
+    name: disable-usb-wakeup.service
+    enabled: true
+    state: "started"
