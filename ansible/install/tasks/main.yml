@@ -1,9 +1,13 @@
 ---
 - name: Load system_config.json
+  tags:
+    - always
   ansible.builtin.set_fact:
     system_config: "{{ lookup('file', '{{ personal_dir }}/system_config.json') | from_json }}"
 
 - name: Set system name
+  tags:
+    - always
   ansible.builtin.set_fact:
     system_name: "{{ system_config.system_name }}"
 
@@ -12,6 +16,8 @@
     file: packages.yml
 
 - name: Set up neovim
+  tags:
+    - neovim
   ansible.builtin.include_tasks:
     file: neovim.yml
 
@@ -20,6 +26,8 @@
     file: ranger.yml
 
 - name: Set up ZSH
+  tags:
+    - zsh
   ansible.builtin.include_tasks:
     file: zsh.yml
 
@@ -28,10 +36,14 @@
     file: tmux.yml
 
 - name: Install i3
+  tags:
+    - i3
   ansible.builtin.include_tasks:
     file: i3.yml
 
 - name: Set up git
+  tags:
+    - git
   ansible.builtin.include_tasks:
     file: git.yml
 
