@@ -12,6 +12,8 @@
     file: packages.yml
 
 - name: Set up neovim
+  tags:
+    - neovim
   ansible.builtin.include_tasks:
     file: neovim.yml
 
@@ -20,6 +22,8 @@
     file: ranger.yml
 
 - name: Set up ZSH
+  tags:
+    - zsh
   ansible.builtin.include_tasks:
     file: zsh.yml
 
@@ -32,6 +36,8 @@
     file: i3.yml
 
 - name: Set up git
+  tags:
+    - git
   ansible.builtin.include_tasks:
     file: git.yml
 
