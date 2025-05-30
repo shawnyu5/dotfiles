@@ -1,5 +1,7 @@
 ---
 - name: Install flameshot (screen shot tool)
+  tags:
+    - i3
   ignore_errors: true
   become: true
   ansible.builtin.package:
@@ -7,6 +9,8 @@
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install kitty
+  tags:
+    - i3
   ignore_errors: true
   become: true
   ansible.builtin.package:
@@ -16,6 +20,8 @@
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Link kitty config
+  tags:
+    - i3
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/kitty"
@@ -24,6 +30,8 @@
     force: true
 
 - name: Link i3 config
+  tags:
+    - i3
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3"
@@ -32,6 +40,8 @@
     force: true
 
 - name: Link i3blocks config
+  tags:
+    - i3
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/i3blocks"
@@ -40,6 +50,8 @@
     force: true
 
 - name: Link picom config
+  tags:
+    - i3
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/picom"
@@ -48,9 +60,21 @@
     force: true
 
 - name: Link rofi config
+  tags:
+    - i3
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/rofi"
     dest: "{{ ansible_env.HOME }}/.config/rofi"
+    state: link
+    force: true
+
+- name: Setup screen layout
+  tags:
+    - i3
+  when: system_name == "linux"
+  ansible.builtin.file:
+    src: "{{ personal_dir }}/screenlayout"
+    dest: "{{ ansible_env.HOME }}/.screenlayout"
     state: link
     force: true
