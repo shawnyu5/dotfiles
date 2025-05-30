@@ -26,12 +26,11 @@ local ts_langs = {
 	"diff",
 }
 require("nvim-treesitter").install(ts_langs)
+-- Register ansible.yaml as a YAML filetype
+vim.treesitter.language.register("yaml", { "ansible.yaml" })
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = ts_langs,
 	callback = function()
 		vim.treesitter.start()
 	end,
 })
-
--- Register ansible.yaml as a YAML filetype
-vim.treesitter.language.register("yaml", { "ansible.yaml" })
