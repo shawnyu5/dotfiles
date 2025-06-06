@@ -24,7 +24,7 @@ local ensure_installed = {
 	"json-lsp",
 	"css-lsp",
 	"yaml-language-server",
-	-- "rust-analyzer",
+	"rust-analyzer",
 	"typescript-language-server",
 	"lua-language-server",
 	"basedpyright",
