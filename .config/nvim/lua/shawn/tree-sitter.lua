@@ -25,10 +25,12 @@ local ts_langs = {
 	"git_config",
 	"diff",
 	"graphql",
+	"hcl",
 }
 require("nvim-treesitter").install(ts_langs)
 -- Register ansible.yaml as a YAML filetype
 vim.treesitter.language.register("yaml", { "ansible.yaml" })
+vim.treesitter.language.register("markdown", { "copilot-chat" })
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = ts_langs,
 	callback = function()
