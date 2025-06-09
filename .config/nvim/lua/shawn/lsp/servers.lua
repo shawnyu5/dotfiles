@@ -151,6 +151,7 @@ local servers = {
 	tflint = {
 		root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
 	},
+	graphql = {},
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

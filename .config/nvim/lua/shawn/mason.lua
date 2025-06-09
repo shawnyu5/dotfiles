@@ -30,7 +30,7 @@ local ensure_installed = {
 	"basedpyright",
 	"black",
 	"yamllint",
-	-- "taplo",
+	"taplo",
 	"stylua",
 	-- "ocaml-lsp",
 	-- "ocamlformat",
@@ -39,6 +39,7 @@ local ensure_installed = {
 	"tflint",
 	"actionlint",
 	"gh-actions-language-server",
+	"graphql-language-service-cli",
 }
 
 mason.setup()
