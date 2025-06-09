@@ -24,6 +24,7 @@ local ts_langs = {
 	"gitignore",
 	"git_config",
 	"diff",
+	"graphql",
 }
 require("nvim-treesitter").install(ts_langs)
 -- Register ansible.yaml as a YAML filetype
