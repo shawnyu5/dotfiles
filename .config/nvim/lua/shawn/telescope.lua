@@ -97,7 +97,7 @@ require("telescope").setup({
 		git_branches = {},
 	},
 	defaults = {
-		file_ignore_patterns = { ".git/" },
+		file_ignore_patterns = { ".git/", "^vendor/" },
 		path_display = { truncate = 3 },
 		layout_config = {
 			vertical = {
