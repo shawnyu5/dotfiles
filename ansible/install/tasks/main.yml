@@ -43,6 +43,7 @@
 
 - name: Set up git
   tags:
+    - always
     - git
   ansible.builtin.import_tasks:
     file: git.yml
