@@ -147,7 +147,6 @@ local pluginSpec = {
 	{
 		"folke/tokyonight.nvim",
 		branch = "main",
-		dependencies = { "itchyny/lightline.vim" },
 	},
 	{ "echasnovski/mini.indentscope" },
 	{
@@ -259,11 +258,36 @@ local pluginSpec = {
 
 	{ "aserowy/tmux.nvim" },
 	{
-		"itchyny/lightline.vim",
+		"nvim-lualine/lualine.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			{
+				"kdheepak/tabline.nvim",
+				config = function()
+					require("tabline").setup({
+						options = {
+							show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
+							show_devicons = true, -- this shows devicons in buffer section
+							show_bufnr = false, -- this appends [bufnr] to buffer section,
+							show_filename_only = true, -- shows base filename only instead of relative path in filename
+							modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
+							show_tabs_only = true, -- this shows only tabs instead of tabs + buffers
+						},
+					})
+				end,
+			},
+		},
 		config = function()
-			require("shawn.lightline")
+			require("shawn.lualine")
 		end,
-	}, -- status bar,
+	},
+
+	-- {
+	--    "itchyny/lightline.vim",
+	--    config = function()
+	--       require("shawn.lightline")
+	--    end,
+	-- },
 	{
 		"vim-test/vim-test",
 		event = "VeryLazy",
@@ -316,7 +340,6 @@ local pluginSpec = {
 	},
 	{
 		"j-hui/fidget.nvim",
-		tag = "legacy",
 	},
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "ThePrimeagen/harpoon" },

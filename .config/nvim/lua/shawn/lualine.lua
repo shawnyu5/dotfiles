@@ -1,55 +1,59 @@
-local ok, lualine = pcall(require, "lualine")
-if not ok then
-   vim.notify("lualine not installed...", vim.log.levels.WARN)
-   return
-end
+local lualine = require("lualine")
 
 --- return the current harpoon mark if it exists
 ---@return string the harpoon mark for the statusline
 local get_harpoon_status = function()
-   local harpoon_mark = require("harpoon.mark")
-   local mark_id = harpoon_mark.get_index_of(vim.fn.bufname())
+	local harpoon_mark = require("harpoon.mark")
+	local mark_id = harpoon_mark.get_index_of(vim.fn.bufname())
 
-   if not mark_id or mark_id == "" then
-      return ""
-   end
-   return "🦈 " .. mark_id
+	if not mark_id or mark_id == "" then
+		return ""
+	end
+	return "🦈 " .. mark_id
 end
 
 lualine.setup({
-   options = {
-      icons_enabled = false,
-      theme = "auto",
-      component_separators = { left = "", right = "" },
-      section_separators = { left = "", right = "" },
-      disabled_filetypes = {},
-      always_divide_middle = true,
-      globalstatus = true,
-   },
-   sections = {
-      lualine_a = { "mode" },
-      lualine_b = { "branch", "diagnostics" },
-      lualine_c = { "filename", get_harpoon_status },
-      lualine_x = { "encoding", "fileformat", "filetype" },
-      lualine_y = { "progress" },
-      lualine_z = { "location" },
-   },
-   inactive_sections = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = { "filename" },
-      lualine_x = { "location" },
-      lualine_y = {},
-      lualine_z = {},
-   },
-   -- tabline = {
-   --    lualine_a = { "tabs" },
-   --    lualine_b = { "filename" },
-   -- },
-   extensions = {},
+	options = {
+		icons_enabled = false,
+		theme = "auto",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+		disabled_filetypes = {},
+		always_divide_middle = true,
+	},
+	always_show_tabline = false,
+	globalstatus = true,
+
+	sections = {
+		lualine_a = { "mode" },
+		lualine_b = {
+			"branch",
+			"diff",
+			{
+				"diagnostics",
+				symbols = {
+					error = "❌",
+					warning = "⚠️",
+					info = "ℹ️",
+					hint = "💡",
+				},
+			},
+		},
+		lualine_c = { "filename", get_harpoon_status },
+		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_y = { "searchcount", "selectioncount" },
+		lualine_z = { "location", "lsp_status" },
+	},
+	inactive_sections = {
+		lualine_a = {},
+		lualine_b = {},
+		lualine_c = { "filename" },
+		lualine_x = { "location" },
+		lualine_y = {},
+		lualine_z = {},
+	},
+	extensions = {},
 })
-
-
 
 -- vim.opt.tabline = "%f"
 
