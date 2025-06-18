@@ -49,6 +49,12 @@ local config = {
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer", "tmux" },
 		providers = {
+			buffer = {
+				opts = {
+					-- Enable completion in `:s` commands
+					enable_in_ex_commands = true,
+				},
+			},
 			tmux = {
 				name = "tmux",
 				module = "blink-cmp-tmux",
