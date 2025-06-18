@@ -32,6 +32,7 @@
     file: zsh.yml
 
 - name: Set up tmux
+  tags: tmux
   ansible.builtin.import_tasks:
     file: tmux.yml
 
