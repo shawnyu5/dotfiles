@@ -262,20 +262,36 @@ local pluginSpec = {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			{
-				"kdheepak/tabline.nvim",
+				"crispgm/nvim-tabline",
+				dependencies = { "nvim-tree/nvim-web-devicons" }, -- optional
 				config = function()
 					require("tabline").setup({
-						options = {
-							show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
-							show_devicons = true, -- this shows devicons in buffer section
-							show_bufnr = false, -- this appends [bufnr] to buffer section,
-							show_filename_only = true, -- shows base filename only instead of relative path in filename
-							modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-							show_tabs_only = true, -- this shows only tabs instead of tabs + buffers
-						},
+						show_index = true, -- show tab index
+						show_modify = true, -- show buffer modification indicator
+						show_icon = false, -- show file extension icon
+						fnamemodify = ":t", -- file name modifier
+						modify_indicator = "[+]", -- modify indicator
+						no_name = "No name", -- no name buffer name
+						brackets = { "[", "]" }, -- file name brackets surrounding
+						inactive_tab_max_length = 0, -- max length of inactive tab titles, 0 to ignore
 					})
 				end,
 			},
+			-- {
+			--    "kdheepak/tabline.nvim",
+			--    config = function()
+			--       require("tabline").setup({
+			--          options = {
+			--             show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
+			--             show_devicons = true, -- this shows devicons in buffer section
+			--             show_bufnr = false, -- this appends [bufnr] to buffer section,
+			--             show_filename_only = true, -- shows base filename only instead of relative path in filename
+			--             modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
+			--             show_tabs_only = true, -- this shows only tabs instead of tabs + buffers
+			--          },
+			--       })
+			--    end,
+			-- },
 		},
 		config = function()
 			require("shawn.lualine")

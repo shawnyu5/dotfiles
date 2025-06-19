@@ -42,7 +42,7 @@ lualine.setup({
 		lualine_c = { "filename", get_harpoon_status },
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "searchcount", "selectioncount" },
-		lualine_z = { "location", "lsp_status" },
+		lualine_z = { "location" },
 	},
 	inactive_sections = {
 		lualine_a = {},
