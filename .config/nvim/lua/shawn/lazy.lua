@@ -259,6 +259,7 @@ local pluginSpec = {
 	{ "aserowy/tmux.nvim" },
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			{
@@ -433,13 +434,8 @@ local pluginSpec = {
 	-- },
 	{
 		"saghen/blink.cmp",
-		lazy = false, -- lazy loading handled internally
-		-- optional: provides snippets for the snippet source
-
-		-- use a release tag to download pre-built binaries
+		event = "UIEnter",
 		version = "v1.*",
-		-- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-		-- build = 'cargo build --release',
 		dependencies = {
 			"L3MON4D3/LuaSnip",
 			"mgalliou/blink-cmp-tmux",
