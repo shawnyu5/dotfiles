@@ -11,6 +11,7 @@
 - name: Install kitty
   tags:
     - i3
+    - kitty
   ignore_errors: true
   become: true
   ansible.builtin.package:
@@ -22,6 +23,7 @@
 - name: Link kitty config
   tags:
     - i3
+    - kitty
   when: system_name == 'linux'
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/kitty"
