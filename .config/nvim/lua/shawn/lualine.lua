@@ -27,7 +27,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = {
-			"branch",
+			"filename",
 			"diff",
 			{
 				"diagnostics",
@@ -39,7 +39,7 @@ lualine.setup({
 				},
 			},
 		},
-		lualine_c = { "filename", get_harpoon_status },
+		lualine_c = { "branch", get_harpoon_status },
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "searchcount", "selectioncount" },
 		lualine_z = { "location" },
