@@ -2,7 +2,6 @@ require("shawn.lsp.java")
 require("shawn.lsp.rust")
 
 local utils = require("shawn.lsp.utils")
-local lsp_utils = require("lspconfig.util")
 
 local servers = {
 	angularls = {
@@ -124,6 +123,7 @@ local servers = {
 					checkThirdParty = false,
 					library = {
 						vim.env.VIMRUNTIME,
+						"~/.local/share/nvim/lazy/plenary.nvim/",
 						-- Depending on the usage, you might want to add additional paths here.
 						-- "${3rd}/luv/library",
 						-- "${3rd}/busted/library",
@@ -149,7 +149,8 @@ local servers = {
 		},
 	},
 	tflint = {
-		root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
+		root_dir = vim.fs.root(0, { ".terraform", ".tflint.hcl" }),
+		-- root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
 	},
 	graphql = {},
 }
