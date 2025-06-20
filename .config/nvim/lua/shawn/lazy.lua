@@ -17,16 +17,17 @@ if not ok then
 	vim.notify("lazy not installed...", vim.log.levels.WARN)
 	return
 end
-local utils = require("shawn.utils")
+local Utils = require("shawn.utils")
 
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
 	{
-		dir = "~/gh.nvim/",
+		"shawnyu5/gh.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
 		opts = {},
+		dev = Utils.get_system_config().system_name == "linux",
 		-- config = function()
 		--    require("gh").setup({})
 		-- end,
@@ -462,7 +463,7 @@ local pluginSpec = {
 			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
 		},
 		build = "make tiktoken", -- Only on MacOS or Linux
-		enabled = utils.get_system_config().system_name == utils.system_names.work_laptop,
+		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
 		opts = {
 			-- See Configuration section for options
 		},
@@ -624,7 +625,7 @@ local pluginSpec = {
 		config = function()
 			require("shawn.neoscroll")
 		end,
-		enabled = utils.get_system_config().system_name ~= utils.system_names.work_laptop,
+		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 	},
 	{
 		"zbirenbaum/copilot.lua",
@@ -632,7 +633,7 @@ local pluginSpec = {
 			require("shawn.copilot")
 		end,
 		event = "InsertEnter",
-		enabled = utils.get_system_config().system_name == utils.system_names.work_laptop,
+		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
 	},
 	-- {
 	--    "nvim-telescope/telescope-file-browser.nvim",
@@ -661,4 +662,8 @@ local pluginSpec = {
 	}, -- auto close html tags,
 }
 
-lazy.setup(pluginSpec)
+lazy.setup(pluginSpec, {
+	dev = {
+		path = "~",
+	},
+})
