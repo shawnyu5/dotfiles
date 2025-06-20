@@ -22,7 +22,7 @@ local Utils = require("shawn.utils")
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
 	{
-		dir = "~/gh.nvim/",
+		"shawnyu5/gh.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
