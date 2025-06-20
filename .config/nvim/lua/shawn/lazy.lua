@@ -22,6 +22,16 @@ local utils = require("shawn.utils")
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
 	{
+		dir = "~/gh.nvim/",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {},
+		-- config = function()
+		--    require("gh").setup({})
+		-- end,
+	},
+	{
 		"folke/lazydev.nvim",
 		ft = "lua",
 	},
@@ -132,8 +142,18 @@ local pluginSpec = {
 			require("shawn.ts-context")
 		end,
 	},
-	{ "anuvyklack/hydra.nvim" },
-	{ "norcalli/nvim-colorizer.lua" },
+	{
+		"anuvyklack/hydra.nvim",
+		config = function()
+			require("shawn.hydra")
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("shawn.colorizer")
+		end,
+	},
 	{
 		"sindrets/diffview.nvim",
 	},
@@ -147,8 +167,16 @@ local pluginSpec = {
 	{
 		"folke/tokyonight.nvim",
 		branch = "main",
+		config = function()
+			require("shawn.tokyo-knight")
+		end,
 	},
-	{ "echasnovski/mini.indentscope" },
+	{
+		"echasnovski/mini.indentscope",
+		config = function()
+			require("shawn.indentscope")
+		end,
+	},
 	{
 		"Bekaboo/dropbar.nvim",
 		dependencies = { "neovim/nvim-lspconfig" },
@@ -248,15 +276,33 @@ local pluginSpec = {
 		ft = "go",
 	},
 
-	{ "j-morano/buffer_manager.nvim" },
 	{
-		"mfussenegger/nvim-dap",
-		{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+		"j-morano/buffer_manager.nvim",
+		config = function()
+			require("shawn.buffer_manager")
+		end,
+	},
+	{
+		{
+			"mfussenegger/nvim-dap",
+			config = function()
+				require("shawn.dap")
+			end,
+		},
+		{
+			"rcarriga/nvim-dap-ui",
+			dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+		},
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",
 	},
 
-	{ "aserowy/tmux.nvim" },
+	{
+		"aserowy/tmux.nvim",
+		config = function()
+			require("shawn.tmux")
+		end,
+	},
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
@@ -309,7 +355,12 @@ local pluginSpec = {
 		"vim-test/vim-test",
 		event = "VeryLazy",
 	},
-	{ "ahmedkhalf/project.nvim" },
+	{
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("shawn.project")
+		end,
+	},
 
 	{
 		"danymat/neogen",
@@ -324,6 +375,9 @@ local pluginSpec = {
 	{
 		"andweeb/presence.nvim",
 		event = "VeryLazy",
+		config = function()
+			require("shawn.presence")
+		end,
 	},
 	{
 		"stevearc/oil.nvim",
@@ -357,9 +411,17 @@ local pluginSpec = {
 	},
 	{
 		"j-hui/fidget.nvim",
+		config = function()
+			require("shawn.fidget")
+		end,
 	},
 	{ "lukas-reineke/indent-blankline.nvim" },
-	{ "ThePrimeagen/harpoon" },
+	{
+		"ThePrimeagen/harpoon",
+		config = function()
+			require("shawn.harpoon")
+		end,
+	},
 	{
 		"ThePrimeagen/refactoring.nvim",
 		dependencies = {
@@ -491,6 +553,9 @@ local pluginSpec = {
 
 	{
 		"shawnyu5/executor.nvim",
+		config = function()
+			require("shawn.executor_settings")
+		end,
 	},
 	{
 		"mzlogin/vim-markdown-toc",
