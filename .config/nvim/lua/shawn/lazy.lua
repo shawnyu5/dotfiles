@@ -28,6 +28,7 @@ local pluginSpec = {
 		},
 		opts = {},
 		dev = Utils.get_system_config().system_name == "linux",
+		event = "VeryLazy",
 		-- config = function()
 		--    require("gh").setup({})
 		-- end,
