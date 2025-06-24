@@ -1,8 +1,4 @@
-local ok, oil = pcall(require, "oil")
-if not ok then
-	vim.notify("oil not installed...", vim.log.ERROR)
-	return
-end
+local oil = require("oil")
 
 oil.setup({
 	-- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
