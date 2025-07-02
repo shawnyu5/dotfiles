@@ -8,7 +8,7 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-	debug = true,
+	debug = false,
 	sources = {
 		formatting.stylua,
 		diagnostics.ansiblelint,
@@ -20,7 +20,7 @@ null_ls.setup({
 		-- disabled_filetypes = { "html" },
 		-- }),
 		-- formatting.eslint,
-		formatting.black.with({ extra_args = { "--fast" } }),
+		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.clang_format.with({
 			disabled_filetypes = { "java" },
 		}),
