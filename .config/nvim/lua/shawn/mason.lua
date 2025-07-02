@@ -28,7 +28,7 @@ local ensure_installed = {
 	"typescript-language-server",
 	"lua-language-server",
 	"basedpyright",
-	"black",
+	"ruff",
 	"yamllint",
 	"taplo",
 	"stylua",

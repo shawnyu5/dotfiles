@@ -25,6 +25,7 @@ function M.disable_formatting_on_save(bufnr)
 	--    vim.api.nvim_del_autocmd(M.format_on_save_autocmd)
 	-- end
 
+   -- Disables conform autoformatting
 	vim.b[bufnr].disable_autoformat = true
 end
 
