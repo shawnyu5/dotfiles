@@ -21,18 +21,18 @@ local Utils = require("shawn.utils")
 
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
-	-- {
-	--    "shawnyu5/gh.nvim",
-	--    dependencies = {
-	--       "nvim-lua/plenary.nvim",
-	--    },
-	--    opts = {},
-	--    dev = Utils.get_system_config().system_name == "linux",
-	--    event = "VeryLazy",
-	--    -- config = function()
-	--    --    require("gh").setup({})
-	--    -- end,
-	-- },
+	{
+		"shawnyu5/gh.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {},
+		dev = Utils.get_system_config().system_name == "linux",
+		event = "VeryLazy",
+		-- config = function()
+		--    require("gh").setup({})
+		-- end,
+	},
 	{
 		"folke/lazydev.nvim",
 		ft = "lua",
