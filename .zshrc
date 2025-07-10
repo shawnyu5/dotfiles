@@ -203,3 +203,4 @@ eval "$(zoxide init zsh)"
 # [[ ! -r /home/shawn/.opam/opam-init/init.zsh ]] || source /home/shawn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 . "$HOME/.local/bin/env"
+eval "$(register-python-argcomplete ansible)"
