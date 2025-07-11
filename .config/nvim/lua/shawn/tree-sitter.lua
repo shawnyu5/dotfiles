@@ -32,7 +32,7 @@ require("nvim-treesitter").install(ts_langs)
 vim.treesitter.language.register("yaml", { "ansible.yaml" })
 vim.treesitter.language.register("markdown", { "copilot-chat" })
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = ts_langs,
+	pattern = vim.tbl_extend("force", ts_langs, { "ansible.yaml", "copilot-chat" }),
 	callback = function()
 		vim.treesitter.start()
 	end,
