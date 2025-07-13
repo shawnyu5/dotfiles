@@ -144,12 +144,12 @@ local pluginSpec = {
 			require("shawn.ts-context")
 		end,
 	},
-	{
-		"anuvyklack/hydra.nvim",
-		config = function()
-			require("shawn.hydra")
-		end,
-	},
+	-- {
+	--    "anuvyklack/hydra.nvim",
+	--    config = function()
+	--       require("shawn.hydra")
+	--    end,
+	-- },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
