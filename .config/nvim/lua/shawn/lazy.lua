@@ -21,6 +21,25 @@ local Utils = require("shawn.utils")
 
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
+   {
+      "dmtrKovalenko/fff.nvim",
+      -- build = "cargo build --release",
+      -- or if you are using nixos
+      -- build = "nix run .#release",
+      config = function()
+         require("shawn.fff")
+      end,
+      event = "VeryLazy",
+      -- keys = {
+         --    {
+            --       "ff", -- try it if you didn't it is a banger keybinding for a picker
+            --       function()
+               --          require("fff").find_files() -- or find_in_git_root() if you only want git files
+               --       end,
+               --       desc = "Open file picker",
+               --    },
+               -- },
+   },
 	{
 		"shawnyu5/gh.nvim",
 		dependencies = {
@@ -502,24 +521,6 @@ local pluginSpec = {
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
-			-- {
-			--    "dmtrKovalenko/fff.nvim",
-			--    build = "cargo build --release",
-			--    -- or if you are using nixos
-			--    -- build = "nix run .#release",
-			--    opts = {
-			--       -- pass here all the options
-			--    },
-			--    -- keys = {
-			--    --    {
-			--    --       "ff", -- try it if you didn't it is a banger keybinding for a picker
-			--    --       function()
-			--    --          require("fff").find_files() -- or find_in_git_root() if you only want git files
-			--    --       end,
-			--    --       desc = "Open file picker",
-			--    --    },
-			--    -- },
-			-- },
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = function()
