@@ -25,11 +25,11 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>fd", function()
 	telescope_builtin.diagnostics()
 end, opts)
-vim.keymap.set("n", "<leader>ff", function()
-	telescope_builtin.find_files({
-		hidden = true,
-	})
-end, { desc = "fuzzy find all files in pwd, including hidden files" })
+-- vim.keymap.set("n", "<leader>ff", function()
+--    telescope_builtin.find_files({
+--       hidden = true,
+--    })
+-- end, { desc = "fuzzy find all files in pwd, including hidden files" })
 vim.keymap.set("n", "<leader>fb", function()
 	telescope_builtin.buffers()
 	-- require("telescope").extensions.frecency.frecency({})
