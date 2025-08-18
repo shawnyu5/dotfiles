@@ -22,13 +22,16 @@ local Utils = require("shawn.utils")
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
    {
-      "dmtrKovalenko/fff.nvim",
-      -- build = "cargo build --release",
+      "shawnyu5/fff.nvim",
+      branch = "fix/schedule_vim_notify",
+      build = "cargo build --release",
+      dev = true,
       -- or if you are using nixos
       -- build = "nix run .#release",
       config = function()
          require("shawn.fff")
       end,
+		enabled = false,
       event = "VeryLazy",
       -- keys = {
          --    {
@@ -539,6 +542,9 @@ local pluginSpec = {
 				"crispgm/telescope-heading.nvim",
 				ft = { "markdown" },
 			},
+         {
+            "albenisolmos/telescope-oil.nvim",
+         }
 		},
 		config = function()
 			require("shawn.telescope")
