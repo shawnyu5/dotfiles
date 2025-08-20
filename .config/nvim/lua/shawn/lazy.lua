@@ -21,28 +21,28 @@ local Utils = require("shawn.utils")
 
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
-   {
-      "shawnyu5/fff.nvim",
-      branch = "fix/schedule_vim_notify",
-      build = "cargo build --release",
-      dev = true,
-      -- or if you are using nixos
-      -- build = "nix run .#release",
-      config = function()
-         require("shawn.fff")
-      end,
+	{
+		"shawnyu5/fff.nvim",
+		branch = "fix/schedule_vim_notify",
+		build = "cargo build --release",
+		dev = true,
+		-- or if you are using nixos
+		-- build = "nix run .#release",
+		config = function()
+			require("shawn.fff")
+		end,
 		enabled = false,
-      event = "VeryLazy",
-      -- keys = {
-         --    {
-            --       "ff", -- try it if you didn't it is a banger keybinding for a picker
-            --       function()
-               --          require("fff").find_files() -- or find_in_git_root() if you only want git files
-               --       end,
-               --       desc = "Open file picker",
-               --    },
-               -- },
-   },
+		event = "VeryLazy",
+		-- keys = {
+		--    {
+		--       "ff", -- try it if you didn't it is a banger keybinding for a picker
+		--       function()
+		--          require("fff").find_files() -- or find_in_git_root() if you only want git files
+		--       end,
+		--       desc = "Open file picker",
+		--    },
+		-- },
+	},
 	{
 		"shawnyu5/gh.nvim",
 		dependencies = {
@@ -542,9 +542,10 @@ local pluginSpec = {
 				"crispgm/telescope-heading.nvim",
 				ft = { "markdown" },
 			},
-         {
-            "albenisolmos/telescope-oil.nvim",
-         }
+			{
+				"albenisolmos/telescope-oil.nvim",
+				dev = true,
+			},
 		},
 		config = function()
 			require("shawn.telescope")
