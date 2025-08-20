@@ -27,9 +27,9 @@ vim.keymap.set("n", "<leader>fd", function()
 end, opts)
 
 vim.keymap.set("n", "<leader>ff", function()
-   telescope_builtin.find_files({
-      hidden = true,
-   })
+	telescope_builtin.find_files({
+		hidden = true,
+	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 
 vim.keymap.set("n", "<leader>fb", function()
@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>fc", function()
 	telescope_builtin.find_files({ cwd = "~/.config/nvim" })
 end, { desc = "fuzzy search over neovim config" })
 vim.keymap.set("n", "<leader>fr", telescope_builtin.resume, { desc = "resume last telescope search" })
-vim.keymap.set("n", "<leader>fo", require("telescope").extensions.oil.oil, { desc = "Open telescope Oil"})
+vim.keymap.set("n", "<leader>fo", require("telescope").extensions.oil.oil, { desc = "Open telescope Oil" })
 vim.keymap.set("n", "<leader>fh", function()
 	local ft = vim.bo.filetype
 	if ft == "markdown" then
@@ -109,12 +109,12 @@ require("telescope").setup({
 		},
 	},
 	extensions = {
-      oil = {
-         hidden = true,
-         debug = false,
-         no_ignore = true,
-         show_preview = true,
-      },
+		oil = {
+			hidden = true,
+			debug = false,
+			no_ignore = true,
+			show_preview = true,
+		},
 		["ui-select"] = {
 			require("telescope.themes").get_dropdown({}),
 		},
