@@ -13,9 +13,15 @@
     name: starship
     state: latest
 
+- name: Check if starship is installed
+  ansible.builtin.command: which starship
+  changed_when: false
+  ignore_errors: true
+  register: starship_installed
+
 - name: Install starship using cargo
   when: starship.failed
-  changed_when: ansible.failed
+  changed_when: ansible.failed and starship_installed.failed
   ansible.builtin.command: cargo install starship --locked
 
 - name: Link zshrc
