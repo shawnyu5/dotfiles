@@ -37,6 +37,7 @@
     file: tmux.yml
 
 - name: Install i3
+  when: system_name == 'linux'
   tags:
     - i3
   ansible.builtin.import_tasks:
