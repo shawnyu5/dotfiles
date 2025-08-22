@@ -1,11 +1,12 @@
 ---
 - name: Install tmux
   become: true
+  ignore_errors: true
   ansible.builtin.package:
     name:
       - tmux
       # tmux window-rename dependency
-      - python-libtmux
+      # - python-libtmux
     state: latest
 
 - name: Install tmux plugin manager
