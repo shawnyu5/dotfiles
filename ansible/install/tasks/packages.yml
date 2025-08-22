@@ -27,6 +27,9 @@
     state: "latest"
 
 - name: Install rustup using package manager
+  tags:
+    - zsh
+    - neovim
   ignore_errors: true
   become: true
   register: rustup_install
@@ -35,13 +38,20 @@
     state: latest
 
 - name: Install rustup using install script
+  tags:
+    - zsh
+    - neovim
   become: true
   ignore_errors: true
+  changed_when: rustup_install.failed
   ansible.builtin.command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  when: "rustup_install.failed"
+  when: rustup_install.failed
 
 - name: Set default rust
-  ignore_errors: true
+  tags:
+    - zsh
+    - neovim
+  changed_when: true
   ansible.builtin.command: rustup default stable
 
 - name: Install font
@@ -51,7 +61,7 @@
     name:
       - ttf-fira-code
       - ttf-firacode-nerd
-    state: latest
+    state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install node and NPM
   ignore_errors: true
@@ -169,7 +179,20 @@
     name: zoxide
     state: latest
 
-- name: Install zoxide using script
-  become: true
-  when: zoxide_install.failed
-  ansible.builtin.command: curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+- name: Check if zoxide is installed
+  ansible.builtin.command: which zoxide
+  changed_when: false
+  ignore_errors: true
+  register: zoxide_installed
+
+- name: Download zoxide install script
+  when: zoxide_install.failed and  zoxide_installed.failed
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh
+    dest: /tmp/zoxide_install.sh
+    mode: "0755"
+
+- name: Run zoxide install script
+  when: zoxide_install.failed and  zoxide_installed.failed
+  changed_when: zoxide_install.failed and  zoxide_installed.failed
+  ansible.builtin.shell: /tmp/zoxide_install.sh
