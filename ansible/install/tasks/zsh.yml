@@ -1,17 +1,29 @@
 ---
 - name: Install zsh
   become: true
-  ignore_errors: true
-  register: zsh
   ansible.builtin.package:
     name:
       - zsh
-      - starship
     state: latest
 
+- name: Install starship
+  become: true
+  register: starship
+  ansible.builtin.package:
+    name: starship
+    state: latest
+
+- name: Check if starship is installed
+  ansible.builtin.command: which starship
+  changed_when: false
+  ignore_errors: true
+  register: starship_installed
+
 - name: Install starship using cargo
-  when: zsh.rc | default(0) == 1
+  when: starship.failed
+  changed_when: ansible.failed and starship_installed.failed
   ansible.builtin.command: cargo install starship --locked
+
 - name: Link zshrc
   ansible.builtin.file:
     src: "{{ personal_dir }}/.zshrc"
@@ -36,7 +48,3 @@
     src: "{{ personal_dir }}/.config/starship.toml"
     state: link
     force: true
-# - name: Install zinit
-#   shell: |
-#     bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-#     zinit self-update
