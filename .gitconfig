@@ -5,10 +5,10 @@
 	name = shawn yu
 
 [core]
-    pager = less
+    pager = delta
 
 [interactive]
-    diffFilter = less
+   diffFilter = delta --color-only
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -30,3 +30,5 @@
 	directory = /home/shawn/actions-runner/_work/gh_runner_test/gh_runner_test
 	directory = /home/shawn/actions-runner/_work/gh_runner_test/gh_runner_test
 	directory = /home/shawn/actions-runner/_work/gh_runner_test/gh_runner_test
+[push]
+	default = current
