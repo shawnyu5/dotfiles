@@ -44,7 +44,7 @@
   become: true
   ignore_errors: true
   changed_when: rustup_install.failed
-  ansible.builtin.command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ansible.builtin.shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   when: rustup_install.failed
 
 - name: Set default rust
