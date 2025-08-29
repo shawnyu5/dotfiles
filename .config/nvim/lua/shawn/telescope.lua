@@ -29,6 +29,7 @@ end, opts)
 vim.keymap.set("n", "<leader>ff", function()
 	telescope_builtin.find_files({
 		hidden = true,
+		no_ignore = true,
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 

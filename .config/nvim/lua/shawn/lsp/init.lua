@@ -59,6 +59,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			})
 		end
 
+		-- vim.lsp.inline_completion.enable(not vim.lsp.inline_completion.is_enabled())
 		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 
 		local opts = { buffer = ev.buf }
