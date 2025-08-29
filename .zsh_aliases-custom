@@ -10,6 +10,7 @@ alias neofetch="neofetch --ascii_distro archlinux"
 alias goland='/mnt/c/Program\ Files/JetBrains/GoLand\ 2023.1.4/bin/goland64.exe'
 
 export TMUX_POWERLINE_PATCHED_FONT_IN_USE=false
+export GOROOT=/usr/local/go
 
 # alias awsec="ssh -i "~/.ssh/cpp555.pem" ec2-user@ec2-18-213-3-195.compute-1.amazonaws.com"
 

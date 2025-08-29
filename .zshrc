@@ -129,7 +129,7 @@ fi
 # export PATH="$PATH:/home/shawn/scripts/template-file-creation"
 export PATH="$PATH:$HOME/.local/bin/:$HOME/gopath/bin/:/opt/cuda/bin:/home/shawn/.cargo/bin"
 export PATH="$PATH:/opt/mssql-tools/bin"
-export PATH=$PATH:"/usr/local/go/bin:$HOME/.asdf/installs/python/3.13.1/bin"
+export PATH=$PATH:"/usr/local/go/bin:$HOME/.asdf/installs/python/3.13.1/bin:$HOME/.asdf/shims"
 
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
