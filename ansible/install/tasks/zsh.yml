@@ -8,6 +8,7 @@
 
 - name: Install starship
   become: true
+  ignore_errors: true
   register: starship
   ansible.builtin.package:
     name: starship
