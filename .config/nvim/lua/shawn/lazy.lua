@@ -393,22 +393,6 @@ local pluginSpec = {
 		version = "^4", -- Recommended
 		ft = { "rust" },
 	},
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" }, -- or zbirenbaum/copilot.lua
-			{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-		},
-		build = "make tiktoken", -- Only on MacOS or Linux
-		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
-		opts = {
-			-- See Configuration section for options
-		},
-		event = "VeryLazy",
-		config = function()
-			require("shawn.copilot_chat")
-		end,
-	},
 	-- {
 	--    "simrat39/rust-tools.nvim",
 	-- },
@@ -575,6 +559,25 @@ local pluginSpec = {
 		end,
 		event = "InsertEnter",
 		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
+		dependencies = {
+			{
+
+				"CopilotC-Nvim/CopilotChat.nvim",
+				dependencies = {
+					-- "github/copilot.vim",
+					{ "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+				},
+				build = "make tiktoken", -- Only on MacOS or Linux
+				enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
+				opts = {
+					-- See Configuration section for options
+				},
+				event = "VeryLazy",
+				config = function()
+					require("shawn.copilot_chat")
+				end,
+			},
+		},
 	},
 	-- {
 	--    "nvim-telescope/telescope-file-browser.nvim",
