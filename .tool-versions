@@ -6,3 +6,4 @@ k9s 0.50.9
 kubelogin 0.2.10
 kubectl 1.33.4
 terraform 1.13.1
+yq 4.47.2
