@@ -41,6 +41,7 @@ local ensure_installed = {
 	"actionlint",
 	"gh-actions-language-server",
 	"graphql-language-service-cli",
+	"protols",
 }
 
 mason.setup()
