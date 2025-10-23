@@ -3,7 +3,7 @@
   tags:
     - i3
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: flameshot
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
@@ -13,7 +13,7 @@
     - i3
     - kitty
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name:
       - kitty

@@ -1,37 +1,47 @@
 ---
 - name: Install emojies
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: noto-fonts-emoji
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install less
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: less
     state: latest
 
 - name: Install discord
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: discord
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install bat
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: bat
     state: "latest"
+
+- name: Check if rustup is installed
+  tags:
+    - zsh
+    - neovim
+  ansible.builtin.command: which rustup
+  changed_when: false
+  ignore_errors: true
+  register: rustup_installed
 
 - name: Install rustup using package manager
   tags:
     - zsh
     - neovim
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
+  when: rustup_installed.failed
   register: rustup_install
   ansible.builtin.package:
     name: rustup
@@ -41,9 +51,9 @@
   tags:
     - zsh
     - neovim
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
-  changed_when: rustup_install.failed
+  when: rustup_installed.failed
   ansible.builtin.shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   when: rustup_install.failed
 
@@ -56,7 +66,7 @@
 
 - name: Install font
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name:
       - ttf-fira-code
@@ -65,7 +75,7 @@
 
 - name: Install node and NPM
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name:
       - nodejs
@@ -74,13 +84,13 @@
 
 - name: Install go
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: go
     state: latest
 
 - name: Install java
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name:
@@ -90,28 +100,28 @@
     state: latest
 
 - name: Install htop
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: htop
     state: latest
 
 - name: Install fzf
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: fzf
     state: latest
 
 - name: Install okular PDF viewer
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: okular
     state: "{{ 'latest' if system_name == 'linux' else 'absent' }}"
 
 - name: Install docker
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name:
@@ -120,21 +130,21 @@
     state: latest
 
 - name: Install gdb
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: gdb
     state: latest
 
 - name: Install terraform
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: terraform
     state: latest
 
 - name: Install kubernetes related packages
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name:
@@ -173,7 +183,7 @@
 
 - name: Install zoxide using package manager
   register: zoxide_install
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: zoxide
