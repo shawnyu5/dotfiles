@@ -1,3 +1,4 @@
 ---
 # vars file for install
 personal_dir: "/home/{{ lookup('env', 'USER') }}/personal"
+install_package_become: "{{ ansible_system != 'Darwin' }}"
