@@ -2,7 +2,7 @@
 - name: Install git
   tags:
     - git
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   block:
     - name: Install git CLI
@@ -13,7 +13,7 @@
         state: latest
 
     - name: Install git delta using package manager
-      become: true
+      become: "{{ install_package_become }}"
       register: git_delta_install
       ansible.builtin.package:
         name: git-delta

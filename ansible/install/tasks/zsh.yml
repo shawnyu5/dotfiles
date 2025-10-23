@@ -1,13 +1,13 @@
 ---
 - name: Install zsh
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name:
       - zsh
     state: latest
 
 - name: Install starship
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   register: starship
   ansible.builtin.package:

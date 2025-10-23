@@ -3,19 +3,19 @@
 # On non arch systems, we can manually build from source
 - name: Install neovim
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: neovim-nightly-bin
     state: latest
 
 - name: Install gcc
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: gcc
     state: latest
 
 - name: Install tree-sitter-cli using package manager
-  become: true
+  become: "{{ install_package_become }}"
   when: ansible_distribution == "Archlinux"
   ansible.builtin.package:
     name: tree-sitter-cli
@@ -26,14 +26,14 @@
   ansible.builtin.command: cargo install --locked tree-sitter-cli
 
 - name: Install unzip
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: unzip
     state: latest
 
 # For telescope fzf native finder
 - name: Install cmake
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: cmake
     state: latest
@@ -46,7 +46,7 @@
 #     state: latest
 
 - name: Install pynvim
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: python-pynvim
@@ -54,13 +54,13 @@
 
 - name: Install ripgrep
   ignore_errors: true
-  become: true
+  become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: ripgrep
     state: latest
 
 - name: Install xclip
-  become: true
+  become: "{{ install_package_become }}"
   ignore_errors: true
   ansible.builtin.package:
     name: xclip
