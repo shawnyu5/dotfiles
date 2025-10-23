@@ -16,13 +16,13 @@
 
 - name: Install tree-sitter-cli using package manager
   become: "{{ install_package_become }}"
-  when: ansible_distribution == "Archlinux"
+  register: tree_sitter_cli_pkg
   ansible.builtin.package:
     name: tree-sitter-cli
     state: latest
 
 - name: Install tree-sitter-cli using cargo
-  when: ansible_distribution != "Archlinux"
+  when: tree_sitter_cli_pkg.failed
   ansible.builtin.command: cargo install --locked tree-sitter-cli
 
 - name: Install unzip
