@@ -25,6 +25,20 @@
   changed_when: ansible.failed and starship_installed.failed
   ansible.builtin.command: cargo install starship --locked
 
+- name: Install eza
+  become: "{{ install_package_become }}"
+  ignore_errors: true
+  ansible.builitin.package:
+    name: eza
+    state: latest
+
+- name: Install zoxide
+  become: "{{ install_package_become }}"
+  ignore_errors: true
+  ansible.builitin.package:
+    name: zoxide
+    state: latest
+
 - name: Link zshrc
   ansible.builtin.file:
     src: "{{ personal_dir }}/.zshrc"
