@@ -28,14 +28,14 @@
 - name: Install eza
   become: "{{ install_package_become }}"
   ignore_errors: true
-  ansible.builitin.package:
+  ansible.builtin.package:
     name: eza
     state: latest
 
 - name: Install zoxide
   become: "{{ install_package_become }}"
   ignore_errors: true
-  ansible.builitin.package:
+  ansible.builtin.package:
     name: zoxide
     state: latest
 
