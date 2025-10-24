@@ -52,3 +52,10 @@
 - name: Set up bacon
   ansible.builtin.import_tasks:
     file: bacon.yml
+
+- name: Set up MacOS
+  tags:
+    - mac
+  when: ansible_system == 'Darwin'
+  ansible.builtin.import_tasks:
+    file: mac.yml

@@ -1,0 +1,17 @@
+---
+- name: Install XCode dependencies
+  become: "{{ install_package_become }}"
+  ansible.builtin.package:
+    name:
+      - xcode-build-server
+      - xcbeautify
+      - ruby
+      - pipx
+      - rg
+      - jq
+      - coreutils
+
+- name: Install karabiner-elements
+  become: "{{ install_package_become }}"
+  ansible.builtin.package:
+    name: karabiner-elements
