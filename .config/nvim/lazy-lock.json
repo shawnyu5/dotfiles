@@ -31,6 +31,7 @@
   "neovim-session-manager": { "branch": "master", "commit": "3409dc920d40bec4c901c0a122a80bee03d6d1e1" },
   "nerdcommenter": { "branch": "master", "commit": "02a3b6455fa07b61b9440a78732f1e9b7876c991" },
   "none-ls.nvim": { "branch": "main", "commit": "a96172f673f720cd4f3572e1fcd08400ed3eb25d" },
+  "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-ansible": { "branch": "main", "commit": "bba61168b7aef735e7f950fdfece5ef6c388eacf" },
   "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
@@ -73,5 +74,6 @@
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-test": { "branch": "master", "commit": "2c264d2a5dddb3a7ec927e4359a2b619a8c13a8c" },
   "vim-you-autocorrect": { "branch": "master", "commit": "a251513305d5c883346ab75db194aa3b5378c64f" },
-  "wstrip.vim": { "branch": "master", "commit": "3d4c35c8ca462fbece58886e52679a5355f461d6" }
+  "wstrip.vim": { "branch": "master", "commit": "3d4c35c8ca462fbece58886e52679a5355f461d6" },
+  "xcodebuild.nvim": { "branch": "main", "commit": "9f834dcf2b9052ab8c354c36226cece04d49ea5e" }
 }

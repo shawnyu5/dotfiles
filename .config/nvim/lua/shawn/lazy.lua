@@ -22,6 +22,19 @@ local Utils = require("shawn.utils")
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
 	{
+		"wojciech-kulik/xcodebuild.nvim",
+		ft = "swift",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		config = function()
+			require("xcodebuild").setup({
+				-- put some options here or leave it empty to use default settings
+			})
+		end,
+	},
+	{
 		"shawnyu5/fff.nvim",
 		branch = "fix/schedule_vim_notify",
 		build = "cargo build --release",

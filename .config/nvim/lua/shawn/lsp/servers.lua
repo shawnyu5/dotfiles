@@ -5,6 +5,7 @@ local utils = require("shawn.lsp.utils")
 
 local servers = {
 	protols = {},
+	sourcekit = {},
 	angularls = {
 		on_attach = function(client, _)
 			-- disable rename. Prefer tsserver's rename capabilities
