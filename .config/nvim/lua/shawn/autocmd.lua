@@ -43,6 +43,18 @@ create_autocmd({ "BufEnter" }, {
 	end,
 })
 
+local swift_augroup = create_augroup("swift", { clear = true })
+create_autocmd({ "BufEnter" }, {
+	group = swift_augroup,
+	pattern = "*.swift",
+	callback = function()
+		vim.keymap.set("n", "<leader>fx", function()
+			local xcode_actions = require("xcodebuild.actions")
+			xcode_actions.show_picker()
+		end, {})
+	end,
+})
+
 function OrgImports()
 	local clients = vim.lsp.get_clients()
 	for _, client in pairs(clients) do
