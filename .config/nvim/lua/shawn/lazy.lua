@@ -22,6 +22,17 @@ local Utils = require("shawn.utils")
 local pluginSpec = {
 	{ "folke/lazy.nvim" },
 	{
+		"wojciech-kulik/xcodebuild.nvim",
+		ft = "swift",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		config = function()
+			require("xcodebuild").setup({})
+		end,
+	},
+	{
 		"shawnyu5/fff.nvim",
 		branch = "fix/schedule_vim_notify",
 		build = "cargo build --release",
@@ -549,7 +560,7 @@ local pluginSpec = {
 		config = function()
 			require("shawn.neoscroll")
 		end,
-		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
+		-- enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 	},
 	{
 		"zbirenbaum/copilot.lua",
