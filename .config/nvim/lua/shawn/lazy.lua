@@ -29,9 +29,7 @@ local pluginSpec = {
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
-			require("xcodebuild").setup({
-				-- put some options here or leave it empty to use default settings
-			})
+			require("xcodebuild").setup({})
 		end,
 	},
 	{
@@ -562,7 +560,7 @@ local pluginSpec = {
 		config = function()
 			require("shawn.neoscroll")
 		end,
-		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
+		-- enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 	},
 	{
 		"zbirenbaum/copilot.lua",
