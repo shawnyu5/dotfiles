@@ -3,12 +3,12 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
 	"time"
 
+	"github.com/charmbracelet/log"
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/config"
 	"github.com/go-git/go-git/v5/plumbing"
@@ -23,7 +23,7 @@ func main() {
 	ogBranchName := currentPersonalCheckedOutBranch()
 	// println(ogBranchName)
 
-	// r, err := git.PlainOpen("/tmp/personal")
+	log.Info("Cloning repo...")
 	r, err := git.PlainClone("/tmp/personal", false, &git.CloneOptions{
 		URL:           "https://github.com/shawnyu5/dotfiles",
 		ReferenceName: plumbing.ReferenceName("refs/heads/" + ogBranchName),
@@ -39,29 +39,9 @@ func main() {
 		log.Fatal("Unable to get worktree:", err)
 	}
 
-	// err = w.Checkout(&git.CheckoutOptions{
-	//    Branch: plumbing.ReferenceName("refs/heads/main"),
-	//    Create: false,
-	//    Keep:   true,
-	// })
-
-	// if err != nil {
-	//    log.Fatal("Unable to checkout to main branch:", err)
-	// }
-
-	// refs, _ := r.References()
-	// refs.ForEach(func(ref *plumbing.Reference) error {
-	//    if ref.Type() == plumbing.HashReference {
-	//       fmt.Println(ref)
-	//    }
-	//    return nil
-	// })
-
-	// return
-
 	os.Chdir("/tmp/personal")
 	for _, branch := range branches {
-		log.Printf("Syncing config from `%s` to `%s`", ogBranchName, branch)
+		log.Infof("Syncing config from `%s` to `%s`", ogBranchName, branch)
 
 		// command to checkout config files from og branch into current branch
 		checkoutFiles := exec.Command("git", "checkout", ogBranchName, ".config/nvim", ".zshrc", ".zsh_aliases", "ansible", "utils/", ".config/starship.toml", ".tmux.conf", "config_sync", ".config/gh", "work_history.md")
@@ -83,6 +63,7 @@ func main() {
 			log.Fatal("Error checking out files: ", err)
 		}
 
+		log.Info("Committing changes")
 		_, err = w.Commit(fmt.Sprintf("chore: sync config from %s", ogBranchName), &git.CommitOptions{
 			AllowEmptyCommits: false,
 			Author: &object.Signature{
@@ -95,6 +76,7 @@ func main() {
 			log.Fatal("Error committing updated config:", err)
 		}
 
+		log.Info("Pushing changes to remote")
 		err = r.Push(&git.PushOptions{
 			RemoteName: "origin",
 			Auth: &http.BasicAuth{
