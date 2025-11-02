@@ -131,6 +131,10 @@ export PATH="$PATH:$HOME/.local/bin/:$HOME/gopath/bin/:/opt/cuda/bin:/home/shawn
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="/opt/homebrew/bin:/usr/local/go/bin:$HOME/.asdf/installs/python/3.13.1/bin:$HOME/.asdf/shims":$PATH
 
+if command -v brew >/dev/null 2>&1; then
+   export PATH="$(brew --prefix ruby)/bin:$PATH"
+fi
+
 # export PATH="$PATH:/usr/local/bin/java-language-server/dist/linux/bin/"
 
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
