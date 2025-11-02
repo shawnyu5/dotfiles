@@ -512,9 +512,19 @@ local pluginSpec = {
 	}, -- rmove trailing white spaces,
 	{ "ferrine/md-img-paste.vim" }, -- auto paste images into markdown,
 	{ "shawnyu5/mdnav" }, -- opening links in markdown,
+	-- {
+	-- 	"numToStr/Comment.nvim",
+	-- 	config = function()
+	-- 		require("shawn.comment")
+	-- 	end,
+	-- },
+
 	{
 		"preservim/nerdcommenter",
 		event = "VeryLazy",
+		config = function()
+			require("shawn.nerdcommenter")
+		end,
 	},
 	{
 		"nvim-telescope/telescope.nvim",
