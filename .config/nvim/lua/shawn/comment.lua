@@ -7,7 +7,8 @@ comment.setup({
 		---Whether the cursor should stay at its position
 		sticky = true,
 		---Lines to be ignored while (un)comment
-		ignore = nil,
+		-- ignores empty lines
+		ignore = "^$",
 		---LHS of extra mappings
 		---Enable keybindings
 		---NOTE: If given `false` then the plugin won't create any mappings
@@ -39,17 +40,18 @@ end, {
 	desc = "Uncomment a single line",
 })
 
-vim.keymap.set("v", "<leader>cc", function()
-	local range = utils.CommentRange
-	-- __AUTO_GENERATED_PRINT_VAR_START__
-	print([==[(anon) range:]==], vim.inspect(range)) -- __AUTO_GENERATED_PRINT_VAR_END__
-	api.uncomment.linewise()
+local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+
+vim.keymap.set("x", "<leader>cc", function()
+	vim.api.nvim_feedkeys(esc, "nx", false)
+	api.comment.linewise(vim.fn.visualmode())
 end, {
 	desc = "Comment a block",
 })
 
-vim.keymap.set("v", "<leader>cu", function()
-	api.uncomment.blockwise()
+vim.keymap.set("x", "<leader>cu", function()
+	vim.api.nvim_feedkeys(esc, "nx", false)
+	api.uncomment.linewise(vim.fn.visualmode())
 end, {
 	desc = "Uncomment a block",
 })
