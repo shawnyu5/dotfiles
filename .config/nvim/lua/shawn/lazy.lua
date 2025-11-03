@@ -25,7 +25,8 @@ local pluginSpec = {
 		"wojciech-kulik/xcodebuild.nvim",
 		ft = "swift",
 		dependencies = {
-			"nvim-telescope/telescope.nvim",
+			-- "nvim-telescope/telescope.nvim",
+			"ibhagwan/fzf-lua",
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
@@ -528,33 +529,51 @@ local pluginSpec = {
 	--       require("shawn.nerdcommenter")
 	--    end,
 	-- },
+	-- {
+	-- 	"nvim-telescope/telescope.nvim",
+	-- 	dependencies = {
+	-- 		{
+	-- 			"nvim-telescope/telescope-fzf-native.nvim",
+	-- 			build = function()
+	-- 				local have_make = vim.fn.executable("make") == 1
+	-- 				if have_make then
+	-- 					print("Using make")
+	-- 					return "make"
+	-- 				else
+	-- 					return "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+	-- 				end
+	-- 			end,
+	-- 			-- build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+	-- 		},
+	-- 		-- "nvim-telescope/telescope-frecency.nvim",
+	-- 		{
+	-- 			"crispgm/telescope-heading.nvim",
+	-- 			ft = { "markdown" },
+	-- 		},
+	-- 		{
+	-- 			"shawnyu5/telescope-oil.nvim",
+	-- 		},
+	-- 	},
+	-- 	config = function()
+	-- 		require("shawn.telescope")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"ibhagwan/fzf-lua",
+	-- 	-- optional for icon support
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- 	-- or if using mini.icons/mini.nvim
+	-- 	-- dependencies = { "nvim-mini/mini.icons" },
+	-- 	config = function()
+	-- 		require("shawn.fzf-lua")
+	-- 	end,
+	-- },
 	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			{
-				"nvim-telescope/telescope-fzf-native.nvim",
-				build = function()
-					local have_make = vim.fn.executable("make") == 1
-					if have_make then
-						print("Using make")
-						return "make"
-					else
-						return "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
-					end
-				end,
-				-- build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
-			},
-			-- "nvim-telescope/telescope-frecency.nvim",
-			{
-				"crispgm/telescope-heading.nvim",
-				ft = { "markdown" },
-			},
-			{
-				"shawnyu5/telescope-oil.nvim",
-			},
-		},
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
 		config = function()
-			require("shawn.telescope")
+			require("shawn.snacks")
 		end,
 	},
 	{
