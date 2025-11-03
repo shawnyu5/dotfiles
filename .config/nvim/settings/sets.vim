@@ -20,6 +20,7 @@ set signcolumn=yes
 set linebreak
 
 set tabstop=3 softtabstop=3
+set winborder=single
 set shiftwidth=3
 set expandtab
 

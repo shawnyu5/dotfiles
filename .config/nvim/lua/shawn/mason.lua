@@ -41,6 +41,7 @@ local ensure_installed = {
 	"gh-actions-language-server",
 	"graphql-language-service-cli",
 	"protols",
+	"ltex-ls-plus",
 }
 
 mason.setup()
