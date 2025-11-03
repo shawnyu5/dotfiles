@@ -15,17 +15,6 @@ local servers = {
 	},
 	ansiblels = {
 		root_markers = { "ansible.cfg", ".ansible-lint", "galaxy.yml", "galaxy.yaml" },
-		settings = {
-			ansible = {
-				validation = {
-					enabled = true,
-					lint = {
-						enabled = false,
-						path = "ansible-lint",
-					},
-				},
-			},
-		},
 	},
 	gradle_ls = {},
 	basedpyright = {

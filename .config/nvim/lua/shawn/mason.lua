@@ -42,7 +42,6 @@ local ensure_installed = {
 	"graphql-language-service-cli",
 	"protols",
 	"ltex-ls-plus",
-	"hadolint",
 }
 
 mason.setup()
