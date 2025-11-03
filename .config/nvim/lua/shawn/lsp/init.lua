@@ -60,11 +60,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		-- vim.lsp.inline_completion.enable(not vim.lsp.inline_completion.is_enabled())
-		vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+		vim.lsp.handlers["textDocument/references"] = require("snacks.picker").lsp_references
+		-- vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
 
 		local opts = { buffer = ev.buf }
 		local keymap = vim.keymap.set
-		keymap("n", "gd", require("telescope.builtin").lsp_definitions, opts)
+		keymap("n", "gd", require("snacks.picker").lsp_definitions, opts)
 		keymap("n", "gD", vim.lsp.buf.declaration, opts)
 		keymap("n", "gi", vim.lsp.buf.implementation, opts)
 		keymap("n", "K", function()
@@ -75,7 +76,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
 		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
-		keymap("n", "gr", require("telescope.builtin").lsp_references, opts)
+		keymap("n", "gr", require("snacks.picker").lsp_references, opts)
 
 		vim.api.nvim_buf_create_user_command(ev.buf, "Format", function()
 			vim.lsp.buf.format({ async = false })

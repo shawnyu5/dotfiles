@@ -7,3 +7,4 @@ kubelogin 0.2.10
 kubectl 1.33.4
 terraform 1.13.1
 yq 4.47.2
+fzf 0.66.1
