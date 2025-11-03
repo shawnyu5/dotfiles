@@ -26,7 +26,7 @@ local pluginSpec = {
 		ft = "swift",
 		dependencies = {
 			-- "nvim-telescope/telescope.nvim",
-			"ibhagwan/fzf-lua",
+			"folke/snacks.nvim",
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
