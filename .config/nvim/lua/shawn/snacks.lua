@@ -214,16 +214,23 @@ Snacks.setup({
 				-- selected = " ",
 			},
 			git = {
+				-- 			added = "✅",
+				-- 			changed = "🖊️",
+				-- 			copied = "📋",
+				-- 			deleted = "🗑️",
+				-- 			renamed = "➡",
+				-- 			unmerged = "🔄",
+				-- 			untracked = "🆕",
 				enabled = true, -- show git icons
 				commit = "󰜘 ", -- used by git log
 				staged = "●", -- staged changes. always overrides the type icons
-				added = "",
-				deleted = "",
-				ignored = " ",
-				modified = "○",
-				renamed = "",
-				unmerged = " ",
-				untracked = "?",
+				added = "✅",
+				deleted = "🗑️",
+				ignored = "I",
+				modified = "🖊️",
+				renamed = "➡",
+				unmerged = "🔄 ",
+				untracked = "🆕",
 			},
 			diagnostics = {
 				Error = " ",
@@ -310,6 +317,19 @@ vim.keymap.set("n", "<leader>ff", function()
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 
+vim.keymap.set("n", "<leader>fc", function()
+	Snacks.picker.files({
+		finder = "files",
+		format = "file",
+		show_empty = true,
+		hidden = true,
+		ignored = false,
+		follow = false,
+		supports_live = true,
+		dirs = { "~/.config/nvim" },
+	})
+	-- telescope_builtin.find_files({ cwd = "~/.config/nvim" })
+end, { desc = "fuzzy search over neovim config" })
 vim.keymap.set("n", "<leader>fr", Snacks.picker.resume, { desc = "resume last picker search" })
 vim.keymap.set("n", "<leader>fd", function()
 	Snacks.picker.diagnostics()
@@ -353,6 +373,29 @@ vim.keymap.set("n", "<leader>gb", function()
 		end,
 	})
 end, { desc = "fuzzy search git branches" })
+
+vim.keymap.set("n", "<leader>gs", function()
+	require("snacks.picker").git_diff({
+		preview = "diff",
+	})
+	-- if vim.fn.system("git -C " .. vim.fn.getcwd(-1, 0) .. " status --porcelain") ~= "" then
+	-- 	require("telescope.builtin").git_status({
+	-- 		git_icons = {
+	-- 			added = "✅",
+	-- 			changed = "🖊️",
+	-- 			copied = "📋",
+	-- 			deleted = "🗑️",
+	-- 			renamed = "➡",
+	-- 			unmerged = "🔄",
+	-- 			untracked = "🆕",
+	-- 		},
+	-- 		layout_strategy = "vertical",
+	-- 		initial_mode = "normal",
+	-- 	})
+	-- else
+	-- 	vim.notify("No git changes", vim.log.levels.WARN)
+	-- end
+end, { desc = "Git status" })
 
 vim.keymap.set("n", "<leader>fh", function()
 	local ft = vim.bo.filetype
