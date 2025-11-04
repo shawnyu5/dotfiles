@@ -328,7 +328,7 @@ vim.keymap.set("n", "<leader>f/", Snacks.picker.lines, { desc = "Fuzzy find in c
 
 vim.keymap.set("n", "<leader>gb", function()
 	Snacks.picker.git_branches({
-		all = true,
+		all = false,
 		finder = "git_branches",
 		format = "git_branch",
 		preview = "git_log",
