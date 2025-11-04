@@ -33,7 +33,7 @@ Snacks.setup({
 		---@class snacks.picker.previewers.Config
 		previewers = {
 			diff = {
-				builtin = true, -- use Neovim for previewing diffs (true) or use an external tool (false)
+				builtin = false, -- use Neovim for previewing diffs (true) or use an external tool (false)
 				cmd = { "delta" }, -- example to show a diff with delta
 			},
 			git = {
@@ -375,9 +375,7 @@ vim.keymap.set("n", "<leader>gb", function()
 end, { desc = "fuzzy search git branches" })
 
 vim.keymap.set("n", "<leader>gs", function()
-	require("snacks.picker").git_diff({
-		preview = "diff",
-	})
+	require("snacks.picker").git_diff({})
 	-- if vim.fn.system("git -C " .. vim.fn.getcwd(-1, 0) .. " status --porcelain") ~= "" then
 	-- 	require("telescope.builtin").git_status({
 	-- 		git_icons = {
