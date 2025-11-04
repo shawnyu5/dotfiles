@@ -7,7 +7,10 @@ local function git_add_all()
 end
 
 keymap("n", "<leader>gs", function()
-	require("snacks.picker").git_status()
+	require("snacks.picker").git_status({
+		preview = false,
+		focus = "list",
+	})
 	-- if vim.fn.system("git -C " .. vim.fn.getcwd(-1, 0) .. " status --porcelain") ~= "" then
 	-- 	require("telescope.builtin").git_status({
 	-- 		git_icons = {
