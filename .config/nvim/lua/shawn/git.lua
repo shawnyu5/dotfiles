@@ -6,6 +6,30 @@ local function git_add_all()
 	vim.notify("git added all changes")
 end
 
+keymap("n", "<leader>gs", function()
+	require("snacks.picker").git_status({
+		preview = false,
+		focus = "list",
+	})
+	-- if vim.fn.system("git -C " .. vim.fn.getcwd(-1, 0) .. " status --porcelain") ~= "" then
+	-- 	require("telescope.builtin").git_status({
+	-- 		git_icons = {
+	-- 			added = "✅",
+	-- 			changed = "🖊️",
+	-- 			copied = "📋",
+	-- 			deleted = "🗑️",
+	-- 			renamed = "➡",
+	-- 			unmerged = "🔄",
+	-- 			untracked = "🆕",
+	-- 		},
+	-- 		layout_strategy = "vertical",
+	-- 		initial_mode = "normal",
+	-- 	})
+	-- else
+	-- 	vim.notify("No git changes", vim.log.levels.WARN)
+	-- end
+end, { desc = "Git status" })
+
 keymap("n", "<leader>gc", function()
 	vim.cmd("silent! Git commit")
 end, { desc = "Git commit" })

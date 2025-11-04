@@ -27,6 +27,7 @@
 - name: Install gh cli plugins
   tags:
     - git
+    - gh
   ignore_errors: true
   ansible.builtin.shell: |
     gh extension install https://github.com/mislav/gh-branch
@@ -51,6 +52,7 @@
 - name: Link gh config.yaml
   tags:
     - git
+    - gh
   ignore_errors: true
   ansible.builtin.file:
     src: "{{ personal_dir }}/.config/gh/config.yml"
