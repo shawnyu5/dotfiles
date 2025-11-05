@@ -375,7 +375,7 @@ vim.keymap.set("n", "<leader>gb", function()
 end, { desc = "fuzzy search git branches" })
 
 vim.keymap.set("n", "<leader>gs", function()
-	require("snacks.picker").git_diff({})
+	require("snacks.picker").git_status({})
 	-- if vim.fn.system("git -C " .. vim.fn.getcwd(-1, 0) .. " status --porcelain") ~= "" then
 	-- 	require("telescope.builtin").git_status({
 	-- 		git_icons = {
