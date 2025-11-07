@@ -1,7 +1,19 @@
 local Snacks = require("snacks")
+local Utils = require("shawn.utils")
 
 ---@type snacks.Config
 Snacks.setup({
+	gitbrowse = {
+		enabled = true,
+		what = "file",
+		open = function(url)
+			local opts = {}
+			if Utils.get_system_config().system_name == "work_laptop" then
+				opts = { cmd = { "explorer.exe" } }
+			end
+			vim.ui.open(url, opts)
+		end,
+	},
 	picker = {
 		enabled = true,
 		lsp_definitions = {
@@ -87,9 +99,8 @@ Snacks.setup({
 					["<a-p>"] = { "toggle_preview", mode = { "i", "n" } },
 					["<a-w>"] = { "cycle_win", mode = { "i", "n" } },
 					["<c-a>"] = { "select_all", mode = { "n", "i" } },
-					["<c-b>"] = { "preview_scroll_up", mode = { "i", "n" } },
-					["<c-d>"] = { "list_scroll_down", mode = { "i", "n" } },
-					["<c-f>"] = { "preview_scroll_down", mode = { "i", "n" } },
+					["<c-u>"] = { "preview_scroll_up", mode = { "i", "n" } },
+					["<c-d>"] = { "preview_scroll_down", mode = { "i", "n" } },
 					["<c-g>"] = { "toggle_live", mode = { "i", "n" } },
 					["<c-j>"] = { "list_down", mode = { "i", "n" } },
 					["<c-k>"] = { "list_up", mode = { "i", "n" } },
@@ -98,7 +109,6 @@ Snacks.setup({
 					["<c-q>"] = { "qflist", mode = { "i", "n" } },
 					["<c-x>"] = { "edit_split", mode = { "i", "n" } },
 					["<c-t>"] = { "tab", mode = { "n", "i" } },
-					["<c-u>"] = { "list_scroll_up", mode = { "i", "n" } },
 					["<c-v>"] = { "edit_vsplit", mode = { "i", "n" } },
 					["<c-r>#"] = { "insert_alt", mode = "i" },
 					["<c-r>%"] = { "insert_filename", mode = "i" },
@@ -142,9 +152,8 @@ Snacks.setup({
 					["<a-p>"] = "toggle_preview",
 					["<a-w>"] = "cycle_win",
 					["<c-a>"] = "select_all",
-					["<c-b>"] = "preview_scroll_up",
-					["<c-d>"] = "list_scroll_down",
-					["<c-f>"] = "preview_scroll_down",
+					["<c-u>"] = "preview_scroll_up",
+					["<c-d>"] = "preview_scroll_down",
 					["<c-j>"] = "list_down",
 					["<c-k>"] = "list_up",
 					["<c-n>"] = "list_down",
@@ -153,7 +162,6 @@ Snacks.setup({
 					["<c-g>"] = "print_path",
 					["<c-s>"] = "edit_split",
 					["<c-t>"] = "tab",
-					["<c-u>"] = "list_scroll_up",
 					["<c-v>"] = "edit_vsplit",
 					["<c-w>H"] = "layout_left",
 					["<c-w>J"] = "layout_bottom",
@@ -314,6 +322,7 @@ vim.keymap.set("n", "<leader>ff", function()
 		ignored = false,
 		follow = false,
 		supports_live = true,
+		exclude = { ".git/", "node_modules/", "target/", "vendor/" },
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 
@@ -328,7 +337,6 @@ vim.keymap.set("n", "<leader>fc", function()
 		supports_live = true,
 		dirs = { "~/.config/nvim" },
 	})
-	-- telescope_builtin.find_files({ cwd = "~/.config/nvim" })
 end, { desc = "fuzzy search over neovim config" })
 vim.keymap.set("n", "<leader>fr", Snacks.picker.resume, { desc = "resume last picker search" })
 vim.keymap.set("n", "<leader>fd", function()
@@ -420,3 +428,7 @@ vim.keymap.set("n", "<leader>fh", function()
 		Snacks.picker.help()
 	end
 end, { desc = "fuzzy search vim help tags" })
+
+vim.api.nvim_create_user_command("GhOpen", function()
+	Snacks.gitbrowse.open()
+end, { desc = "Open the current file on GitHub" })
