@@ -578,10 +578,6 @@ local pluginSpec = {
 	},
 	{
 		"Shatur/neovim-session-manager",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-telescope/telescope-ui-select.nvim",
-		},
 		config = function()
 			require("shawn.session_manager")
 		end,

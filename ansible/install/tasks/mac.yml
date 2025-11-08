@@ -11,6 +11,7 @@
       - jq
       - coreutils
       - swiftformat
+      - wojciech-kulik/tap/xcp
 
 - name: Install xcodeproj
   community.general.gem:
@@ -21,4 +22,3 @@
   become: "{{ install_package_become }}"
   ansible.builtin.package:
     name: karabiner-elements
-
