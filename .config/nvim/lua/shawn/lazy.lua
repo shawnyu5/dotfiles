@@ -469,12 +469,27 @@ local pluginSpec = {
 		end,
 	},
 	{
-		"iamcco/markdown-preview.nvim",
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
+		"brianhuster/live-preview.nvim",
 		ft = { "markdown" },
+		config = function()
+			require("livepreview.config").set({
+				port = 5500,
+				browser = "default",
+				dynamic_root = false,
+				sync_scroll = true,
+				picker = "vim.ui.select",
+				address = "127.0.0.1",
+			})
+		end,
 	},
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	build = function()
+	-- 		vim.fn["mkdp#util#install"]()
+	-- 	end,
+	-- 	ft = { "markdown" },
+
+	-- },
 	-- {
 	-- "toppair/peek.nvim",
 	-- build = "deno task --quiet build:fast",
