@@ -24,7 +24,6 @@ local pluginSpec = {
 	{
 		"wojciech-kulik/xcodebuild.nvim",
 		ft = "swift",
-		build = "brew install wojciech-kulik/tap/xcp",
 		dependencies = {
 			-- "nvim-telescope/telescope.nvim",
 			"folke/snacks.nvim",
