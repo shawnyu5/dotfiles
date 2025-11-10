@@ -3,6 +3,13 @@ local Utils = require("shawn.utils")
 
 ---@type snacks.Config
 Snacks.setup({
+	gh = {
+		diff = {
+			min = 10, -- minimum number of lines changed to show diff
+		},
+
+		keys = {},
+	},
 	gitbrowse = {
 		enabled = true,
 		what = "file",
@@ -22,7 +29,7 @@ Snacks.setup({
 		lsp_references = {
 			focus = "list",
 		},
-		prompt = " ",
+		prompt = "-> ",
 		sources = {},
 		focus = "input",
 		show_delay = 5000,
@@ -346,10 +353,14 @@ vim.keymap.set("n", "<leader>fb", function()
 	Snacks.picker.buffers()
 end, { desc = "fuzzy search all buffers" })
 vim.keymap.set("n", "<leader>fw", function()
-	Snacks.picker.grep()
+	Snacks.picker.grep({
+		exclude = { ".git/", "node_modules/", "target/", "vendor/" },
+	})
 end, { desc = "fuzzy search words" })
 vim.keymap.set({ "n", "x" }, "<leader><leader>fw", function()
-	Snacks.picker.grep_word()
+	Snacks.picker.grep_word({
+		focus = "list",
+	})
 end, { desc = "live grep for word under cursor" })
 
 vim.keymap.set("n", "<leader>f/", Snacks.picker.lines, { desc = "Fuzzy find in current buffer" })
@@ -432,3 +443,9 @@ end, { desc = "fuzzy search vim help tags" })
 vim.api.nvim_create_user_command("GhOpen", function()
 	Snacks.gitbrowse.open()
 end, { desc = "Open the current file on GitHub" })
+
+vim.api.nvim_create_user_command("GhPr", function()
+	Snacks.picker.gh_pr({
+		focus = "list",
+	})
+end, { desc = "Browse through Open PRs in Github" })
