@@ -74,7 +74,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				vim.lsp.buf.hover()
 			end
 		end, opts)
-		keymap("n", "<F2>", vim.lsp.buf.code_action, opts)
+		keymap({ "n", "x" }, "<F2>", vim.lsp.buf.code_action, opts)
 		keymap("n", "<leader>h", vim.diagnostic.open_float, opts)
 		keymap("n", "gr", require("snacks.picker").lsp_references, opts)
 
