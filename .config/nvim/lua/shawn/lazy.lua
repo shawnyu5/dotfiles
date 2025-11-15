@@ -387,17 +387,18 @@ local pluginSpec = {
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate", -- :MasonUpdate updates registry contents
-		version = "^1.0.0",
+		version = "v2.*",
+		-- version = "^1.0.0",
 		event = "VeryLazy",
 		config = function()
 			require("shawn.mason")
 		end,
 	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
-		version = "^1.0.0",
-	},
+	-- {
+	-- 	"williamboman/mason-lspconfig.nvim",
+	-- 	dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+	-- 	version = "^1.0.0",
+	-- },
 	{ "neovim/nvim-lspconfig" },
 	{ "mfussenegger/nvim-jdtls" },
 	{
