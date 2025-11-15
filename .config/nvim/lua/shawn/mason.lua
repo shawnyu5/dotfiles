@@ -45,7 +45,7 @@ local ensure_installed = {
 }
 
 mason.setup()
-require("mason-lspconfig").setup()
+-- require("mason-lspconfig").setup()
 
 local mr = require("mason-registry")
 for _, tool in ipairs(ensure_installed) do
