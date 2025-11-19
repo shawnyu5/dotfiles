@@ -354,6 +354,7 @@ vim.keymap.set("n", "<leader>fb", function()
 end, { desc = "fuzzy search all buffers" })
 vim.keymap.set("n", "<leader>fw", function()
 	Snacks.picker.grep({
+		hidden = true,
 		exclude = { ".git/", "node_modules/", "target/", "vendor/" },
 	})
 end, { desc = "fuzzy search words" })
