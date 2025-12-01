@@ -50,6 +50,8 @@
     file: git.yml
 
 - name: Set up bacon
+  tags:
+    - bacon
   ansible.builtin.import_tasks:
     file: bacon.yml
 
