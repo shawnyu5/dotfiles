@@ -1,12 +1,11 @@
 ---
 - name: Check if bacon has been installed
-  ansible.builtin.stat:
-    path: "{{ ansible_env.HOME }}/.cargo/bin/bacon"
-  register: binary_check
+  ansible.builtin.command: which bacon
+  register: bacon_installed
 
 - name: Install bacon
   ansible.builtin.command: cargo install bacon
-  when: not binary_check.stat.exists
+  when: bacon_installed.failed
 
 - name: Link bacon conf
   ansible.builtin.file:
