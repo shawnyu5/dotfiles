@@ -18,6 +18,7 @@ conform.setup({
 		-- Use a sub-list to run only the first available formatter
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		swift = { "swiftformat" },
+		terraform = { "tflint" },
 	},
 })
 
