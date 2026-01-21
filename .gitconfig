@@ -32,3 +32,4 @@
 	directory = /home/shawn/actions-runner/_work/gh_runner_test/gh_runner_test
 [push]
 	default = current
+	autoSetupRemote = true
