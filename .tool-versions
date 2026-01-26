@@ -11,3 +11,4 @@ fzf 0.66.1
 github-cli 2.83.2
 uv 0.9.11
 helm 3.19.4
+buildpack 0.39.1
