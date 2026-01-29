@@ -13,7 +13,7 @@ import (
 	"github.com/go-git/go-git/v5/config"
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/go-git/go-git/v5/plumbing/object"
-	"github.com/go-git/go-git/v5/plumbing/transport/http"
+	"github.com/go-git/go-git/v5/plumbing/transport/ssh"
 )
 
 func main() {
@@ -23,9 +23,15 @@ func main() {
 	ogBranchName := currentPersonalCheckedOutBranch()
 	// println(ogBranchName)
 
+	auth, err := ssh.NewPublicKeysFromFile("git", os.Getenv("HOME")+"/.ssh/id_ed25519_personal", "")
+	if err != nil {
+		log.Fatalf("failed to read SSH key: %s", err)
+	}
+
 	log.Info("Cloning repo...")
 	r, err := git.PlainClone("/tmp/personal", false, &git.CloneOptions{
-		URL:           "https://github.com/shawnyu5/dotfiles",
+		URL:           "git@github-personal:shawnyu5/personal.git",
+		Auth:          auth,
 		ReferenceName: plumbing.ReferenceName("refs/heads/" + ogBranchName),
 	})
 	if err != nil {
@@ -79,10 +85,11 @@ func main() {
 		log.Info("Pushing changes to remote")
 		err = r.Push(&git.PushOptions{
 			RemoteName: "origin",
-			Auth: &http.BasicAuth{
-				Username: "shawnyu5",
-				Password: getPAT(),
-			},
+			Auth:       auth,
+			// Auth: &http.BasicAuth{
+			// 	Username: "shawnyu5",
+			// 	Password: getPAT(),
+			// },
 			RefSpecs: []config.RefSpec{
 				config.RefSpec(fmt.Sprintf("refs/heads/%s:refs/heads/%s", branch, branch)),
 			},
