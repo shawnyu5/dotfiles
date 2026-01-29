@@ -1,8 +1,4 @@
-local ok, project_nvim = pcall(require, "project_nvim")
-if not ok then
-	print("project_nvim not installed...")
-	return
-end
+local project_nvim = require("project_nvim")
 
 project_nvim.setup({
 	-- Manual mode doesn't automatically change your root directory, so you have
