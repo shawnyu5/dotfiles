@@ -622,6 +622,14 @@ local pluginSpec = {
 		-- enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 	},
 	{
+		"folke/sidekick.nvim",
+		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
+		event = "VeryLazy",
+		config = function()
+			require("shawn.sidekick")
+		end,
+	},
+	{
 		"zbirenbaum/copilot.lua",
 		config = function()
 			require("shawn.copilot")
