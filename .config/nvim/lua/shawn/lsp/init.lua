@@ -49,6 +49,8 @@ local lspAugroup = vim.api.nvim_create_augroup("UserLspConfig", {})
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = lspAugroup,
 	callback = function(ev)
+		-- local bufnr = ev.buf
+		-- local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		vim.diagnostic.config({ virtual_text = true })
 		if vim.version().minor == 11 then
@@ -61,7 +63,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- vim.lsp.inline_completion.enable(not vim.lsp.inline_completion.is_enabled())
 		vim.lsp.handlers["textDocument/references"] = require("snacks.picker").lsp_references
-		-- vim.lsp.handlers["textDocument/references"] = require("telescope.builtin").lsp_references
+
+		-- if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlineCompletion, bufnr) then
+		-- 	vim.lsp.inline_completion.enable(true, { bufnr = bufnr })
+		-- end
 
 		local opts = { buffer = ev.buf }
 		local keymap = vim.keymap.set

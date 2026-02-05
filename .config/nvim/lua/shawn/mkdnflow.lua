@@ -40,9 +40,11 @@ mkdnflow.setup({
 	},
 	to_do = {
 		symbols = { " ", "x" },
-		update_parents = true,
-		not_started = " ",
-		complete = "x",
+		statuses = {
+			not_started = " ",
+			in_progress = "-",
+			complete = "x",
+		},
 	},
 	tables = {
 		-- let the lsp handle formatting
