@@ -7,16 +7,17 @@ local servers = {
 	protols = {},
 	ltex_plus = {},
 	sourcekit = {},
-	angularls = {
-		on_attach = function(client, _)
-			-- disable rename. Prefer tsserver's rename capabilities
-			client.server_capabilities.rename = false
-		end,
-	},
+	-- angularls = {
+	-- 	on_attach = function(client, _)
+	-- 		-- disable rename. Prefer tsserver's rename capabilities
+	-- 		client.server_capabilities.rename = false
+	-- 	end,
+	-- },
 	ansiblels = {
 		root_markers = { "ansible.cfg", ".ansible-lint", "galaxy.yml", "galaxy.yaml" },
 	},
 	gradle_ls = {},
+	copilot = {},
 	basedpyright = {
 		settings = {
 			basedpyright = {

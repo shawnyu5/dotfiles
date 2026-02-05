@@ -415,7 +415,12 @@ local pluginSpec = {
 	-- 	dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
 	-- 	version = "^1.0.0",
 	-- },
-	{ "neovim/nvim-lspconfig" },
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("shawn.lsp")
+		end,
+	},
 	{ "mfussenegger/nvim-jdtls" },
 	{
 		"mrcjkb/rustaceanvim",
@@ -620,6 +625,14 @@ local pluginSpec = {
 			require("shawn.neoscroll")
 		end,
 		-- enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
+	},
+	{
+		"folke/sidekick.nvim",
+		enabled = Utils.get_system_config().system_name == Utils.system_names.work_laptop,
+		event = "VeryLazy",
+		config = function()
+			require("shawn.sidekick")
+		end,
 	},
 	{
 		"zbirenbaum/copilot.lua",
