@@ -10,6 +10,7 @@ Snacks.setup({
 
 		keys = {},
 	},
+
 	gitbrowse = {
 		enabled = true,
 		what = "file",

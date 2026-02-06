@@ -33,56 +33,6 @@ local pluginSpec = {
 			require("xcodebuild").setup({})
 		end,
 	},
-	-- {
-	-- 	"ramilito/kubectl.nvim",
-	-- 	-- use a release tag to download pre-built binaries
-	-- 	version = "2.*",
-	-- 	-- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-	-- 	-- build = 'cargo build --release',
-	-- 	dependencies = "saghen/blink.download",
-	-- 	config = function()
-	-- 		require("kubectl").setup()
-	-- 		vim.api.nvim_create_user_command("K9s", function()
-	-- 			require("kubectl").toggle({})
-	-- 		end, {})
-	-- 	end,
-	-- 	event = "VeryLazy",
-	-- },
-
-	-- {
-	-- 	"shawnyu5/fff.nvim",
-	-- 	branch = "fix/schedule_vim_notify",
-	-- 	build = "cargo build --release",
-	-- 	dev = true,
-	-- 	-- or if you are using nixos
-	-- 	-- build = "nix run .#release",
-	-- 	config = function()
-	-- 		require("shawn.fff")
-	-- 	end,
-	-- 	enabled = false,
-	-- 	event = "VeryLazy",
-	-- 	-- keys = {
-	-- 	--    {
-	-- 	--       "ff", -- try it if you didn't it is a banger keybinding for a picker
-	-- 	--       function()
-	-- 	--          require("fff").find_files() -- or find_in_git_root() if you only want git files
-	-- 	--       end,
-	-- 	--       desc = "Open file picker",
-	-- 	--    },
-	-- 	-- },
-	-- },
-	-- {
-	--    "shawnyu5/gh.nvim",
-	--    dependencies = {
-	--       "nvim-lua/plenary.nvim",
-	--    },
-	--    opts = {},
-	--    dev = Utils.get_system_config().system_name == "linux",
-	--    event = "VeryLazy",
-	--    -- config = function()
-	--    --    require("gh").setup({})
-	--    -- end,
-	-- },
 	{
 		"folke/lazydev.nvim",
 		ft = "lua",
@@ -106,6 +56,10 @@ local pluginSpec = {
 		config = function()
 			require("shawn.ufo")
 		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		event = "VeryLazy",
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -665,7 +619,7 @@ local pluginSpec = {
 	--    "nvim-telescope/telescope-file-browser.nvim",
 	--    dependencies = { "nvim-telescope/telescope.nvim" },
 	-- },
-	{ "szw/vim-maximizer" }, -- vim maxmizer,
+	{ "szw/vim-maximizer" }, -- vim maximizer,
 	-- { "adelarsq/vim-matchit" }, -- matchit,
 	{ "tpope/vim-surround" }, -- vim surround,
 	{ "sedm0784/vim-you-autocorrect" },
