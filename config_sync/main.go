@@ -30,7 +30,7 @@ func main() {
 
 	log.Info("Cloning repo...")
 	r, err := git.PlainClone("/tmp/personal", false, &git.CloneOptions{
-		URL:           "git@github-personal:shawnyu5/dotfiles.git",
+		URL:           "git@github-personal:shawnyu5/personal.git",
 		Auth:          auth,
 		ReferenceName: plumbing.ReferenceName("refs/heads/" + ogBranchName),
 	})

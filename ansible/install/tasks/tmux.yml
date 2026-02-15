@@ -30,3 +30,14 @@
     src: "{{ personal_dir }}/.tmux-powerlinerc"
     dest: "{{ ansible_env.HOME }}/.tmux-powerlinerc"
     state: link
+
+- name: Install sesh using AUR
+  become: "{{ install_package_become }}"
+  when: "system_name == 'linux'"
+  ansible.builtin.package:
+    name: sesh-bin
+
+- name: Install sesh using Go
+  become: "{{ install_package_become }}"
+  when: "system_name not 'linux'"
+  ansible.builtin.command: go install github.com/joshmedeski/sesh/v2@latest
