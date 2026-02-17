@@ -8,6 +8,7 @@ local ensure_installed = {
 	"bash-language-server",
 	"clangd",
 	"clang-format",
+	"postgres-language-server",
 	-- "csharp-language-server",
 	"docker-compose-language-service",
 	"dockerfile-language-server",
