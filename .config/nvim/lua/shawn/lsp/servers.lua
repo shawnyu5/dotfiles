@@ -6,6 +6,7 @@ local utils = require("shawn.lsp.utils")
 local servers = {
 	protols = {},
 	ltex_plus = {},
+	postgres_lsp = {},
 	sourcekit = {},
 	-- angularls = {
 	-- 	on_attach = function(client, _)
