@@ -44,10 +44,10 @@ vim.keymap.set({ "x" }, "<leader>se", function()
 	})
 end, { desc = "Explain the selected code" })
 
-vim.keymap.set({ "x" }, "<leader>sf", function()
+vim.keymap.set({ "n" }, "<leader>sf", function()
 	require("sidekick.cli").send({
 		name = "copilot",
 		focus = true,
-		msg = "Fix this code: {selection}",
+		msg = "{file}",
 	})
-end, { desc = "Sidekick fix this" })
+end, { desc = "Send this file" })
