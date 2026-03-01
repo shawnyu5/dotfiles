@@ -364,11 +364,14 @@ local pluginSpec = {
 			require("shawn.mason")
 		end,
 	},
-	-- {
-	-- 	"williamboman/mason-lspconfig.nvim",
-	-- 	dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
-	-- 	version = "^1.0.0",
-	-- },
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		version = "^2.0.0",
+		config = function()
+			require("mason-lspconfig").setup()
+		end,
+	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -381,29 +384,6 @@ local pluginSpec = {
 		version = "^4", -- Recommended
 		ft = { "rust" },
 	},
-	-- {
-	--    "simrat39/rust-tools.nvim",
-	-- },
-	-- {
-	--    "hrsh7th/nvim-cmp",
-	--    -- event = "InsertEnter",
-	--    dependencies = {
-	--       "hrsh7th/cmp-nvim-lsp",
-	--       "hrsh7th/cmp-nvim-lua",
-	--       "hrsh7th/cmp-buffer",
-	--       "andersevenrud/cmp-tmux",
-	--       "hrsh7th/cmp-path",
-	--       "hrsh7th/cmp-cmdline",
-	--       "saadparwaiz1/cmp_luasnip",
-	--       { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
-	--       -- "zbirenbaum/copilot-cmp",
-	--       -- "quangnguyen30192/cmp-nvim-ultisnips",
-	--       "hrsh7th/cmp-nvim-lsp-signature-help",
-	--    },
-	--    config = function()
-	--       require("shawn.cmp")
-	--    end,
-	-- },
 	{
 		"saghen/blink.cmp",
 		event = "UIEnter",
@@ -458,24 +438,6 @@ local pluginSpec = {
 			})
 		end,
 	},
-	-- {
-	-- 	"iamcco/markdown-preview.nvim",
-	-- 	build = function()
-	-- 		vim.fn["mkdp#util#install"]()
-	-- 	end,
-	-- 	ft = { "markdown" },
-
-	-- },
-	-- {
-	-- "toppair/peek.nvim",
-	-- build = "deno task --quiet build:fast",
-	-- ft = { "markdown" },
-	-- event = "VeryLazy",
-	-- config = function()
-	-- require("shawn.peek")
-	-- end,
-	-- },
-
 	{
 		"shawnyu5/executor.nvim",
 		config = function()
