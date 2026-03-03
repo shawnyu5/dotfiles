@@ -48,7 +48,12 @@ local pluginSpec = {
 	},
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-lua/popup.nvim" },
-
+	{
+		"MagicDuck/grug-far.nvim",
+		config = function()
+			require("grug-far").setup({})
+		end,
+	},
 	{ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
 	{
 		"kevinhwang91/nvim-ufo",
