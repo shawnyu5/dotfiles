@@ -11,10 +11,4 @@ require("ufo").setup({
 	close_fold_kinds_for_ft = {
 		default = { "imports" },
 	},
-	provider_selector = function(bufnr, filetype, buftype)
-		if filetype == "markdown" then
-			return { "treesitter", "indent" }
-		end
-		return { "lsp", "indent" }
-	end,
 })

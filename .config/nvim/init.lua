@@ -2,7 +2,6 @@
 vim.opt.relativenumber = true
 
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 -- get rid of eob fill chars
 vim.opt.fillchars = { eob = " " }
 

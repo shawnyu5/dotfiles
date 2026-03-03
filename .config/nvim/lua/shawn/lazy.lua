@@ -48,12 +48,7 @@ local pluginSpec = {
 	},
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-lua/popup.nvim" },
-	{
-		"MagicDuck/grug-far.nvim",
-		config = function()
-			require("grug-far").setup()
-		end,
-	},
+
 	{ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
 	{
 		"kevinhwang91/nvim-ufo",
@@ -343,6 +338,8 @@ local pluginSpec = {
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{
 		"ThePrimeagen/harpoon",
+		-- branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("shawn.harpoon")
 		end,
@@ -374,7 +371,9 @@ local pluginSpec = {
 		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
 		version = "^2.0.0",
 		config = function()
-			require("mason-lspconfig").setup()
+			require("mason-lspconfig").setup({
+				automatic_enable = false,
+			})
 		end,
 	},
 	{
