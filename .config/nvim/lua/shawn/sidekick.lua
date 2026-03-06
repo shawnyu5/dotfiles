@@ -36,13 +36,6 @@ vim.keymap.set({ "x" }, "<leader>sc", function()
 end, {
 	desc = "Sidekick toggle, include current selection",
 })
-vim.keymap.set({ "x" }, "<leader>se", function()
-	require("sidekick.cli").send({
-		name = "copilot",
-		focus = true,
-		msg = "Explain this code: {selection}",
-	})
-end, { desc = "Explain the selected code" })
 
 vim.keymap.set({ "n" }, "<leader>sf", function()
 	require("sidekick.cli").send({
