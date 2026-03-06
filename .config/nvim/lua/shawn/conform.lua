@@ -9,7 +9,16 @@ conform.setup({
 		return { timeout_ms = 500, lsp_fallback = true }
 	end,
 
+	formatters = {
+		prettier = {
+			args = { "--embedded-language-formatting", "off" },
+		},
+		prettierd = {
+			args = { "--embedded-language-formatting", "off" },
+		},
+	},
 	formatters_by_ft = {
+		markdown = { "prettierd" },
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "ruff" },

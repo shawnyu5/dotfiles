@@ -51,7 +51,25 @@ local pluginSpec = {
 	{
 		"MagicDuck/grug-far.nvim",
 		config = function()
-			require("grug-far").setup({})
+			require("grug-far").setup({
+				folding = {
+					-- whether to enable folding
+					enabled = false,
+
+					-- sets foldlevel, folds with higher level will be closed.
+					-- result matche lines for each file have fold level 1
+					-- set it to 0 if you would like to have the results initially collapsed
+					-- See :h foldlevel
+					foldlevel = 1,
+
+					-- visual indicator of folds, see :h foldcolumn
+					-- set to '0' to disable
+					foldcolumn = "1",
+
+					-- whether to include file path in the fold, by default, only lines under the file path are included
+					include_file_path = false,
+				},
+			})
 		end,
 	},
 	{ "xuhdev/vim-latex-live-preview", ft = { "tex", "plaintex" } },
