@@ -83,7 +83,7 @@ create_autocmd({ "BufWritePre" }, {
 })
 
 local termina_auto_group = create_augroup("terminal_auto_group", { clear = true })
-create_autocmd({ "TermOpen" }, {
+create_autocmd({ "TermOpen", "TermEnter" }, {
 	group = termina_auto_group,
 	callback = function()
 		vim.opt_local.spell = false
