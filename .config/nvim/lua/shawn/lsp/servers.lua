@@ -112,9 +112,9 @@ local servers = {
 		},
 	},
 	ts_ls = {
-		on_attach = function(_, bufnr)
-			utils.disable_formatting_on_save(bufnr)
-		end,
+		-- on_attach = function(_, bufnr)
+		-- 	utils.disable_formatting_on_save(bufnr)
+		-- end,
 	},
 	lua_ls = {
 		on_init = function(client)
