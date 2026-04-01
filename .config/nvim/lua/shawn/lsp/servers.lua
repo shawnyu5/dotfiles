@@ -5,7 +5,7 @@ local utils = require("shawn.lsp.utils")
 
 local servers = {
 	protols = {},
-	ltex_plus = {},
+	-- ltex_plus = {},
 	postgres_lsp = {},
 	sourcekit = {},
 	-- angularls = {
@@ -60,7 +60,15 @@ local servers = {
 	},
 	vuels = {},
 	jsonls = {},
-	marksman = {},
+	marksman = {
+		on_attach = function(client, bufnr)
+			-- utils.disable_formatting_on_save(bufnr)
+			-- Use prettier for formatting markdown files
+			-- Marksman formats code in codeblock, and I cant disable this
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+		end,
+	},
 	csharp_ls = {},
 	cssls = {},
 	texlab = {},
