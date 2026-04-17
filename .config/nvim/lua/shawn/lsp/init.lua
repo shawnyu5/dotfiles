@@ -84,7 +84,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap("n", "gr", require("snacks.picker").lsp_references, opts)
 
 		vim.api.nvim_buf_create_user_command(ev.buf, "Format", function()
-			vim.lsp.buf.format({ async = false })
+			vim.lsp.buf.format({
+				async = false,
+				filter = function(client)
+					return client.name ~= "ts_ls"
+				end,
+			})
 			vim.cmd("write")
 		end, {})
 

@@ -6,7 +6,13 @@ conform.setup({
 			vim.notify("[Conform] Autoformatting is disabled for this buffer", vim.log.levels.WARN)
 			return
 		end
-		return { timeout_ms = 500, lsp_fallback = true }
+		return {
+			timeout_ms = 500,
+			lsp_fallback = true,
+			filter = function(client)
+				return client.name ~= "ts_ls"
+			end,
+		}
 	end,
 
 	formatters = {
