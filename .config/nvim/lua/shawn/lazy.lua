@@ -177,12 +177,12 @@ local pluginSpec = {
 	--       require("shawn.hydra")
 	--    end,
 	-- },
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("shawn.colorizer")
-		end,
-	},
+	-- {
+	-- 	"norcalli/nvim-colorizer.lua",
+	-- 	config = function()
+	-- 		require("shawn.colorizer")
+	-- 	end,
+	-- },
 	{
 		"sindrets/diffview.nvim",
 	},
