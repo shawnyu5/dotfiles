@@ -97,3 +97,17 @@ vim.filetype.add({
 		vugu = "html",
 	},
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "env" },
+	callback = function()
+		vim.opt_local.commentstring = "# %s"
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "css" },
+	callback = function()
+		vim.opt_local.commentstring = "/* %s */"
+	end,
+})
