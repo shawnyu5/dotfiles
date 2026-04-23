@@ -2,6 +2,7 @@ local copilot = require("CopilotChat")
 local chat = require("CopilotChat")
 
 copilot.setup({
+	model = "auto",
 	mappings = {
 		reset = {
 			normal = "<nop>",
