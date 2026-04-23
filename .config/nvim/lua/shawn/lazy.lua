@@ -76,6 +76,7 @@ local pluginSpec = {
 	{
 		"kevinhwang91/nvim-ufo",
 		dependencies = "kevinhwang91/promise-async",
+		event = "VeryLazy",
 		config = function()
 			require("shawn.ufo")
 		end,
@@ -177,12 +178,12 @@ local pluginSpec = {
 	--       require("shawn.hydra")
 	--    end,
 	-- },
-	-- {
-	-- 	"norcalli/nvim-colorizer.lua",
-	-- 	config = function()
-	-- 		require("shawn.colorizer")
-	-- 	end,
-	-- },
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("shawn.colorizer")
+		end,
+	},
 	{
 		"sindrets/diffview.nvim",
 	},
@@ -235,6 +236,7 @@ local pluginSpec = {
 		{
 			"rcarriga/nvim-dap-ui",
 			dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+			event = "VeryLazy",
 		},
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",

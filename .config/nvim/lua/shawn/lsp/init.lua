@@ -17,7 +17,7 @@ end
 require("shawn.lsp.servers")
 
 -- LSP Enable diagnostics
-vim.diagnostic.config({
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 	underline = true,
 	update_in_insert = true,
 	virtual_text = {
@@ -27,16 +27,6 @@ vim.diagnostic.config({
 	severity_sort = true,
 	signs = true,
 })
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
--- 	underline = true,
--- 	update_in_insert = true,
--- 	virtual_text = {
--- 		spacing = 4,
--- 		prefix = "●",
--- 	},
--- 	severity_sort = true,
--- 	signs = true,
--- })
 
 local signs = {
 	Error = "E ",
@@ -59,7 +49,7 @@ local lspAugroup = vim.api.nvim_create_augroup("UserLspConfig", {})
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = lspAugroup,
 	callback = function(ev)
-		local bufnr = ev.buf
+		-- local bufnr = ev.buf
 		-- local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
 		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 		vim.diagnostic.config({ virtual_text = true })
@@ -70,7 +60,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				bufnr = ev.bufnr,
 			})
 		end
-		-- require("shawn.lsp.utils").format_on_save(bufnr)
 
 		-- vim.lsp.inline_completion.enable(not vim.lsp.inline_completion.is_enabled())
 		vim.lsp.handlers["textDocument/references"] = require("snacks.picker").lsp_references
