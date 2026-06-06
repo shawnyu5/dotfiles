@@ -49,6 +49,14 @@ local pluginSpec = {
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-lua/popup.nvim" },
 	{
+		"obsidian-nvim/obsidian.nvim",
+		ft = "markdown",
+		version = "*",
+		config = function()
+			require("shawn.obsidian")
+		end,
+	},
+	{
 		"MagicDuck/grug-far.nvim",
 		config = function()
 			require("grug-far").setup({
