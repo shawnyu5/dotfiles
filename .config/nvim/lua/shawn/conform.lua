@@ -15,14 +15,6 @@ conform.setup({
 		}
 	end,
 
-	formatters = {
-		prettier = {
-			args = { "--embedded-language-formatting", "off" },
-		},
-		prettierd = {
-			args = { "--embedded-language-formatting", "off" },
-		},
-	},
 	formatters_by_ft = {
 		markdown = { "prettierd" },
 		lua = { "stylua" },

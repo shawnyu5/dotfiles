@@ -1,6 +1,5 @@
 local M = {}
 
----@deprecated
 --- Create autocmd to format on save
 --- @param bufnr buf number to format
 function M.format_on_save(bufnr)
@@ -9,7 +8,6 @@ function M.format_on_save(bufnr)
 		group = augroup,
 		callback = function()
 			vim.lsp.buf.format()
-			-- vim.lsp.buf.format({bufnr = bufnr})
 			vim.cmd("write")
 		end,
 		-- buffer = 0,
@@ -25,7 +23,7 @@ function M.disable_formatting_on_save(bufnr)
 	--    vim.api.nvim_del_autocmd(M.format_on_save_autocmd)
 	-- end
 
-   -- Disables conform autoformatting
+	-- Disables conform autoformatting
 	vim.b[bufnr].disable_autoformat = true
 end
 

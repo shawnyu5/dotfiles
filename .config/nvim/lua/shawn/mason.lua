@@ -16,6 +16,7 @@ local ensure_installed = {
 	"gopls",
 	"html-lsp",
 	"marksman",
+	"prettier",
 	"prettierd",
 	"ansible-lint",
 	"ansible-language-server",
