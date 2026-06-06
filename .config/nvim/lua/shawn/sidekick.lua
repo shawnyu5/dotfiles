@@ -3,6 +3,14 @@ local sidekick = require("sidekick")
 sidekick.setup({
 	-- add any options here
 	cli = {
+		tools = {
+			copilot = {
+				cmd = {
+					"copilot",
+					"--no-mouse",
+				},
+			},
+		},
 		mux = {
 			backend = "tmux",
 			enabled = true,
