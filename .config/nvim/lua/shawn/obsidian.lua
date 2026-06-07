@@ -1,13 +1,7 @@
----@module 'obsidian'
----@type obsidian.config
-require("obsidian").setup({
+local utils = require("shawn.utils")
+local system_config = utils.get_system_config()
+local setup = {
 	legacy_commands = false,
-	workspaces = {
-		{
-			name = "obsidian",
-			path = "~/obsidian/",
-		},
-	},
 	picker = {
 		name = "snacks.picker",
 	},
@@ -35,4 +29,16 @@ require("obsidian").setup({
 			vim.b[buf].obsidian_maps_set = true
 		end,
 	},
-})
+}
+if system_config.system_name == "linux" then
+	setup.workspaces = {
+		{
+			name = "obsidian",
+			path = "~/obsidian/",
+		},
+	}
+end
+
+---@module 'obsidian'
+---@type obsidian.config
+require("obsidian").setup(setup)
