@@ -1,13 +1,7 @@
----@module 'obsidian'
----@type obsidian.config
-require("obsidian").setup({
+local utils = require("shawn.utils")
+local system_config = utils.get_system_config()
+local setup = {
 	legacy_commands = false,
-	workspaces = {
-		{
-			name = "obsidian",
-			path = "~/obsidian/",
-		},
-	},
 	picker = {
 		name = "snacks.picker",
 	},
@@ -35,7 +29,7 @@ require("obsidian").setup({
 			vim.b[buf].obsidian_maps_set = true
 		end,
 	},
-})
+}
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("LspKillMarksmanInObsidianVault", { clear = true }),
@@ -68,3 +62,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+if system_config.system_name == "linux" then
+	setup.workspaces = {
+		{
+			name = "obsidian",
+			path = "~/obsidian/",
+		},
+	}
+end
+
+---@module 'obsidian'
+---@type obsidian.config
+require("obsidian").setup(setup)
