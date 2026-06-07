@@ -330,7 +330,7 @@ vim.keymap.set("n", "<leader>ff", function()
 		ignored = false,
 		follow = false,
 		supports_live = true,
-		exclude = { ".git/", "node_modules/", "target/", "vendor/" },
+		exclude = { ".git/", "node_modules/", "target/", "vendor/", ".obsidian", ".trash" },
 	})
 end, { desc = "fuzzy find all files in pwd, including hidden files" })
 
