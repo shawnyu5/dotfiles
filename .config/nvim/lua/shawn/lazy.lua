@@ -51,13 +51,14 @@ local pluginSpec = {
 	{
 		"obsidian-nvim/obsidian.nvim",
 		ft = "markdown",
-		version = "*",
+		-- version = "*",
 		config = function()
 			require("shawn.obsidian")
 		end,
 	},
 	{
 		"MagicDuck/grug-far.nvim",
+		cmd = { "GrugFar", "GrugFarWithin" },
 		config = function()
 			require("grug-far").setup({
 				folding = {
