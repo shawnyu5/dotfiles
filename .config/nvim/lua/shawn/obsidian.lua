@@ -41,14 +41,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		local function logMarksmanShutdown()
-			vim.notify("Marksman LSP shutdown in Obsidian vault")
+			vim.notify("[Obsidian] Marksman capabilities disabled")
 		end
 
 		-- 1. Marksman just attached. If Obsidian is already here, kill Marksman immediately.
 		if incoming_client.name == "marksman" then
 			local obsidian_active = #vim.lsp.get_clients({ bufnr = bufnr, name = "obsidian-ls" }) > 0
 			if obsidian_active then
-				vim.lsp.buf_detach_client(bufnr, incoming_client.id)
+				-- vim.lsp.buf_detach_client(bufnr, incoming_client.id)
+				incoming_client.server_capabilities.definitionProvider = false
+				incoming_client.server_capabilities.referencesProvider = false
 				logMarksmanShutdown()
 			end
 
@@ -57,6 +59,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			local active_marksman_clients = vim.lsp.get_clients({ bufnr = bufnr, name = "marksman" })
 			for _, marksman_client in ipairs(active_marksman_clients) do
 				vim.lsp.buf_detach_client(bufnr, marksman_client.id)
+				incoming_client.server_capabilities.definitionProvider = false
+				incoming_client.server_capabilities.referencesProvider = false
 				logMarksmanShutdown()
 			end
 		end
