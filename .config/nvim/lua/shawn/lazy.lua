@@ -51,7 +51,7 @@ local pluginSpec = {
 	{
 		"obsidian-nvim/obsidian.nvim",
 		ft = "markdown",
-		-- version = "*",
+		version = "*",
 		config = function()
 			require("shawn.obsidian")
 		end,
