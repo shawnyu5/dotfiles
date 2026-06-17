@@ -51,6 +51,7 @@ local pluginSpec = {
 	{
 		"obsidian-nvim/obsidian.nvim",
 		ft = "markdown",
+		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 		version = "*",
 		config = function()
 			require("shawn.obsidian")
