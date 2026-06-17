@@ -51,6 +51,7 @@ local pluginSpec = {
 	{
 		"obsidian-nvim/obsidian.nvim",
 		ft = "markdown",
+		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
 		version = "*",
 		config = function()
 			require("shawn.obsidian")
@@ -587,6 +588,21 @@ local pluginSpec = {
 		config = function()
 			require("shawn.sidekick")
 		end,
+	},
+	{
+		"olimorris/codecompanion.nvim",
+		event = "VeryLazy",
+		-- Prefer copilotChat.lua on work laptop
+		enabled = Utils.get_system_config().system_name ~= Utils.system_names.work_laptop,
+		version = "^19.0.0",
+		config = function()
+			require("shawn.codecompanion")
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"franco-ruggeri/codecompanion-spinner.nvim",
+		},
 	},
 	{
 		"zbirenbaum/copilot.lua",
