@@ -22,23 +22,19 @@ refactoring.setup({
 		},
 	},
 })
-
--- vim.keymap.set("v", "<leader>rv", require("refactoring").debug.print_var({}), { noremap = true })
-
+-- vim.keymap.set("v", "<leader>rv", require("refactoring.debug").print_var({}), { noremap = true })
 -- print debugging in visual mode
-vim.keymap.set("v", "<leader>rv", ":lua require('refactoring').debug.print_var({})<CR>", { noremap = true })
+vim.keymap.set("v", "<leader>rv", ":lua require('refactoring.debug').print_var({})<CR>", { noremap = true })
 -- print debugging in normal mode
 vim.keymap.set(
 	"n",
 	"<leader>rv",
-	":lua require('refactoring').debug.print_var({ normal = true })<CR>",
+	":lua require('refactoring.debug').print_var({ normal = true })<CR>",
 	{ noremap = true }
 )
-
 -- Cleanup function: this remap should be made in normal mode
-vim.api.nvim_set_keymap("n", "<leader>rc", ":lua require('refactoring').debug.cleanup({})<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>rf", ":lua require('refactoring').debug.printf({})<CR>", { noremap = true })
-
+vim.api.nvim_set_keymap("n", "<leader>rc", ":lua require('refactoring.debug').cleanup({})<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>rf", ":lua require('refactoring.debug').printf({})<CR>", { noremap = true })
 vim.keymap.set({ "n", "x" }, "<leader>rr", function()
 	refactoring.select_refactor()
 end)
