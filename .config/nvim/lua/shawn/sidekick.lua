@@ -8,6 +8,7 @@ sidekick.setup({
 				cmd = {
 					"copilot",
 					"--no-mouse",
+					"--mouse",
 				},
 			},
 		},
