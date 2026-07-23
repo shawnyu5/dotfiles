@@ -156,6 +156,7 @@ local servers = {
 	groovyls = {
 		cmd = { "groovy-language-server" },
 	},
+	kotlin_lsp = {},
 	taplo = {},
 	terraformls = {
 		filetypes = {
@@ -169,6 +170,33 @@ local servers = {
 		-- root_dir = lsp_utils.root_pattern(".terraform", ".tflint.hcl"),
 	},
 	graphql = {},
+	harper_ls = {
+		settings = {
+			["harper-ls"] = {
+				userDictPath = "",
+				workspaceDictPath = "",
+				fileDictPath = "",
+				linters = {
+					-- Ignore not correctly capitalized words in a heading
+					UseTitleCase = false,
+					-- Allow TODO, instead of TO-DO
+					ToDoHyphen = false,
+				},
+				codeActions = {
+					ForceStable = false,
+				},
+				markdown = {
+					IgnoreLinkTitle = false,
+				},
+				diagnosticSeverity = "hint",
+				isolateEnglish = false,
+				dialect = "American",
+				maxFileLength = 120000,
+				ignoredLintsPath = "",
+				excludePatterns = {},
+			},
+		},
+	},
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
