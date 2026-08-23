@@ -2,6 +2,9 @@ local utils = require("shawn.utils")
 local system_config = utils.get_system_config()
 local setup = {
 	legacy_commands = false,
+	-- Prefer render-markdown.nvim UI
+	ui = { enable = false },
+
 	picker = {
 		name = "snacks.picker",
 	},
@@ -21,7 +24,7 @@ local setup = {
 			-- vim.keymap.set("n", "<leader>ff", "<cmd>Obsidian quick_switch<CR>", key_opts)
 
 			key_opts.desc = "Obsidian: Live Grep Text Content"
-			vim.keymap.set("n", "<leader>fg", "<cmd>Obsidian search<CR>", key_opts)
+			vim.keymap.set("n", "<leader>fw", "<cmd>Obsidian search<CR>", key_opts)
 
 			key_opts.desc = "Obsidian: Open in editor"
 			vim.keymap.set("n", "<leader>m", "<cmd>Obsidian open<CR>", key_opts)
@@ -41,7 +44,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		local function logMarksmanShutdown()
-			vim.notify("[Obsidian] Marksman capabilities disabled")
+			vim.notify("[Obsidian] Marksman LSP shutdown")
 		end
 
 		-- 1. Marksman just attached. If Obsidian is already here, kill Marksman immediately.
@@ -49,8 +52,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			local obsidian_active = #vim.lsp.get_clients({ bufnr = bufnr, name = "obsidian-ls" }) > 0
 			if obsidian_active then
 				-- vim.lsp.buf_detach_client(bufnr, incoming_client.id)
-				incoming_client.server_capabilities.definitionProvider = false
-				incoming_client.server_capabilities.referencesProvider = false
+				incoming_client.stop()
+				--         incoming_client.server_capabilities.definitionProvider = false
+				-- incoming_client.server_capabilities.referencesProvider = false
 				logMarksmanShutdown()
 			end
 
@@ -59,8 +63,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			local active_marksman_clients = vim.lsp.get_clients({ bufnr = bufnr, name = "marksman" })
 			for _, marksman_client in ipairs(active_marksman_clients) do
 				vim.lsp.buf_detach_client(bufnr, marksman_client.id)
-				incoming_client.server_capabilities.definitionProvider = false
-				incoming_client.server_capabilities.referencesProvider = false
+				incoming_client.stop()
+				-- incoming_client.server_capabilities.definitionProvider = false
+				-- incoming_client.server_capabilities.referencesProvider = false
 				logMarksmanShutdown()
 			end
 		end
