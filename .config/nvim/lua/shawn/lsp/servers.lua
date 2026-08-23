@@ -73,6 +73,7 @@ local servers = {
 	cssls = {},
 	texlab = {},
 	dockerls = {},
+	docker_compose_language_service = {},
 	gh_actions_ls = {},
 	yamlls = {
 		on_attach = function(_, bufnr)
