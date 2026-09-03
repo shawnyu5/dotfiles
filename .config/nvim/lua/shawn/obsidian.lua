@@ -8,6 +8,11 @@ local setup = {
 	picker = {
 		name = "snacks.picker",
 	},
+	checkbox = {
+		enabled = true,
+		create_new = true,
+		order = { " ", "x" },
+	},
 	callbacks = {
 		enter_note = function()
 			local buf = vim.api.nvim_get_current_buf()
