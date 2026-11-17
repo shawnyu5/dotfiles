@@ -14,6 +14,7 @@ local ensure_installed = {
 	"dockerfile-language-server",
 	"gitlint",
 	"gopls",
+	"golangci-lint-langserver",
 	"html-lsp",
 	"marksman",
 	"prettier",
@@ -45,6 +46,7 @@ local ensure_installed = {
 	"protols",
 	-- "ltex-ls-plus",
 	"harper-ls",
+	"tsp-server",
 }
 
 mason.setup()
