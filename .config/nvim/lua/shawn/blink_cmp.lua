@@ -47,7 +47,10 @@ local config = {
 		enabled = true,
 	},
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer", "tmux" },
+		default = { "lsp", "path", "snippets", "buffer", "git", "tmux" },
+		per_filetype = {
+			git = { "gitcommit", "octo" },
+		},
 		providers = {
 			buffer = {
 				opts = {
@@ -84,6 +87,13 @@ local config = {
 				fallbacks = {},
 				score_offset = 0, -- Boost/penalize the score of the items
 				override = nil, -- Override the source's functions
+			},
+			git = {
+				name = "git",
+				module = "cmp_git.blink",
+				opts = {
+					-- cmp-git options go here
+				},
 			},
 		},
 	},

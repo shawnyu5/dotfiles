@@ -24,12 +24,9 @@ local pluginSpec = {
 	{
 		"pwntester/octo.nvim",
 		cmd = "Octo",
-		opts = {
-			-- or "fzf-lua" or "snacks" or "default"
-			picker = "snacks",
-			-- bare Octo command opens picker of commands
-			enable_builtin = true,
-		},
+		config = function()
+			require("shawn.octo")
+		end,
 		keys = {
 			{
 				"<leader>op",
@@ -475,6 +472,7 @@ local pluginSpec = {
 		dependencies = {
 			"L3MON4D3/LuaSnip",
 			"mgalliou/blink-cmp-tmux",
+			"petertriho/cmp-git",
 			-- "andersevenrud/cmp-tmux",
 			-- "giuxtaposition/blink-cmp-copilot",
 			-- "zbirenbaum/copilot-cmp",
