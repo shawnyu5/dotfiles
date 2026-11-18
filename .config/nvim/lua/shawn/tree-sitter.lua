@@ -28,6 +28,7 @@ local ts_langs = {
 	"graphql",
 	"hcl",
 	"swift",
+	"typespec",
 }
 require("nvim-treesitter").install(ts_langs)
 -- Register ansible.yaml as a YAML filetype

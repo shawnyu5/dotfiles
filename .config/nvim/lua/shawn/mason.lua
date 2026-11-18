@@ -15,6 +15,7 @@ local ensure_installed = {
 	"gitlint",
 	"gopls",
 	"templ",
+	"golangci-lint-langserver",
 	"html-lsp",
 	"marksman",
 	"prettier",
@@ -46,6 +47,7 @@ local ensure_installed = {
 	"protols",
 	-- "ltex-ls-plus",
 	"harper-ls",
+	"tsp-server",
 }
 
 mason.setup()
