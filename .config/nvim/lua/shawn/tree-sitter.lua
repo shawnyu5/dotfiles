@@ -3,6 +3,7 @@ vim.g._ts_force_sync_parsing = true
 local ts_langs = {
 	"javascript",
 	"go",
+	"templ",
 	"bash",
 	"lua",
 	"python",
