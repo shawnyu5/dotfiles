@@ -58,6 +58,7 @@ local servers = {
 			usePlaceholders = false,
 		},
 	},
+	templ = {},
 	vuels = {},
 	jsonls = {},
 	marksman = {

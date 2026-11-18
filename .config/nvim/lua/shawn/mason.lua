@@ -14,6 +14,7 @@ local ensure_installed = {
 	"dockerfile-language-server",
 	"gitlint",
 	"gopls",
+	"templ",
 	"html-lsp",
 	"marksman",
 	"prettier",
