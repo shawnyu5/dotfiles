@@ -1,0 +1,7 @@
+---
+- name: Link zellij config
+  ansible.builtin.file:
+    src: "{{ personal_dir }}/.config/zellij"
+    dest: "{{ ansible_env.HOME }}/.config/zellij"
+    state: link
+    force: true
