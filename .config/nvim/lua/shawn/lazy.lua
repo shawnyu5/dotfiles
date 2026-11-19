@@ -386,7 +386,49 @@ local pluginSpec = {
 			require("shawn.oil")
 		end,
 	},
-	{ "windwp/nvim-autopairs" },
+	{
+		"saghen/blink.pairs",
+		dependencies = "saghen/blink.lib",
+		event = "VeryLazy",
+		version = "*",
+		build = function()
+			require("blink.pairs").download():pwait(60000)
+		end,
+		--- @module 'blink.pairs'
+		--- @type blink.pairs.Config
+		opts = {
+			mappings = {
+				-- you can call require("blink.pairs.mappings").enable()
+				-- and require("blink.pairs.mappings").disable()
+				-- to enable/disable mappings at runtime
+				enabled = false,
+				cmdline = false,
+			},
+			highlights = {
+				enabled = true,
+				-- requires require('vim._core.ui2').enable({}), otherwise has no effect
+				cmdline = true,
+				-- set to { 'BlinkPairs' } to disable rainbow highlighting
+				groups = { "BlinkPairsOrange", "BlinkPairsPurple", "BlinkPairsBlue" },
+				unmatched_group = "BlinkPairsUnmatched",
+
+				-- highlights matching pairs under the cursor
+				matchparen = {
+					-- optionally only for the given token types, e.g. 'delimiter'
+					enabled = true,
+					-- known issue where typing won't update matchparen highlight, disabled by default
+					cmdline = false,
+					-- also include pairs not on top of the cursor, but surrounding the cursor
+					-- optionally only for the given token types, which must be a subset of `enabled`,
+					-- if defined
+					include_surrounding = true,
+					group = "BlinkPairsMatchParen",
+					priority = 250,
+				},
+			},
+		},
+	},
+	-- { "windwp/nvim-autopairs" },
 	-- {
 	--    "SirVer/ultisnips",
 	--    event = "InsertEnter",
